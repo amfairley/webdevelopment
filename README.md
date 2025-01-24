@@ -1,2 +1,2 @@
 # webdevelopment
-Django backed web development note repository
+Django backed web development note repository.
