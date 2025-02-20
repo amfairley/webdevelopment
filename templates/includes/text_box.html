@@ -1,0 +1,11 @@
+{% load static %}
+
+{% block extra_css %}
+    <!--Text box css file-->
+    <link rel="stylesheet" href="{% static 'css/text_box.css' %}">
+{% endblock extra_css %}
+
+<div  id="{% block text_section_id %}{% endblock %}" class="text-box">
+    <h3>{% block text_title %}{% endblock %}</h3>
+    {% block text_content %}{% endblock %}
+</div>
