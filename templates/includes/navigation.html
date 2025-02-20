@@ -1,0 +1,74 @@
+{% load static %}
+{% block extra_css %}
+    <!--Navigation css file-->
+    <link rel="stylesheet" href="{% static 'css/navigation.css' %}">
+{% endblock extra_css %}
+<nav id="site-navigation" class="col-lg-2 d-none d-lg-block vh-100 position-fixed">
+    <div class="p-3">
+        <!--Navigation title-->
+        <h4 class="text-center">Navigation</h4>
+        <!--Navigation links-->
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <!--Dropdown link example-->
+            <li class="nav-item">
+                <span class="d-flex align-items-center">
+                    <a class="nav-link" href="#">Dropdown example</a>
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#submenu" aria-expanded="false">
+                    </button>
+                </span>
+                <ul class="collapse list-unstyled ps-3" id="submenu">
+                    <li><a class="nav-link" href="#">Web Development</a></li>
+                    <li><a class="nav-link" href="#">SEO Optimization</a></li>
+                    <li><a class="nav-link" href="#">Marketing</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Blog very long entry into</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Toggle button for small screens -->
+<button class="btn nav-menu-button d-lg-none m-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
+    ☰ Menu
+</button>
+
+<!-- Offcanvas (burger menu) for small screens -->
+<div class="offcanvas offcanvas-start offcanvas-navmenu" tabindex="-1" id="mobileSidebar">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Navigation</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <span class="d-flex align-items-center">
+                    <a class="nav-link" href="#">Dropdown example</a>
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#submenu-mob" aria-expanded="false">
+                    </button>
+                </span>
+                <ul class="collapse list-unstyled ps-3" id="submenu-mob">
+                    <li><a class="nav-link" href="#">Web Development</a></li>
+                    <li><a class="nav-link" href="#">SEO Optimization</a></li>
+                    <li><a class="nav-link" href="#">Marketing</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Blog very long entry into Technologies</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+</div>

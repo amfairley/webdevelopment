@@ -1,0 +1,131 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,400;1,300&display=swap');
+
+/* ---------- Global stylings ---------- */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+body.night-mode {
+    background-color: #1E1E1E;
+}
+
+/* ---------- Navigation bar ---------- */
+/* Bar */
+.nav-wrapper {
+    border-bottom: 0.3rem solid #001F5C;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+}
+
+body.night-mode .nav-wrapper {
+    border-bottom: 0.3rem solid #FFD700;
+}
+
+/*Website title */
+.site-logo-title {
+    font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
+    color: #001F5C;
+    font-size: 5rem;
+    margin-left: 1rem;
+    padding: 0;
+}
+
+body.night-mode .site-logo-title {
+    color:#FFD700;
+}
+
+/* ----------- Day/Night ----------- */
+/* Dropdown button */
+.day-night-toggle-sun {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+.day-night-toggle-moon {
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
+
+#day-night-toggle {
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+}
+
+#day-mode-toggle-dropdown {
+    background-color: #001F5C;
+    color: #f5f5f5;
+}
+
+body.night-mode #day-mode-toggle-dropdown {
+    background-color: #FFD700;
+    color: #1E1E1E;
+}
+
+/* Dropdown menu */
+.day-mode-dropdown-menu {
+    background-color: #f5f5f5;
+    text-align: center;
+    border: 1px solid #001F5C;
+}
+
+body.night-mode  .day-mode-dropdown-menu {
+    background-color: #1E1E1E;
+    text-align: center;
+    border: 1px solid #FFD700;
+}
+
+.day-mode-dropdown-menu a {
+    color: #001F5C;
+}
+
+.day-mode-dropdown-menu a:hover {
+    font-weight: bolder;
+}
+
+body.night-mode .day-mode-dropdown-menu a:hover {
+    font-weight: bolder;
+    background-color: inherit;
+}
+
+.day-mode-dropdown-menu a:active {
+    font-weight: bolder;
+    background-color: inherit;
+    color: inherit;
+}
+
+body.night-mode .day-mode-dropdown-menu a:active {
+    font-weight: bolder;
+    background-color: inherit;
+    color: inherit;
+}
+
+body.night-mode .day-mode-dropdown-menu a{
+    color: #FFD700 !important;
+}
+
+/* Active dropdown */
+.day-night-dropdown.active {
+    background-color: #001F5C;
+    color: #f5f5f5 !important;
+}
+
+body.night-mode .day-night-dropdown.active {
+    background-color: #FFD700 !important;
+    color: #1E1E1E !important;
+}
+
+/* ---------- Media Queries ---------- */
+@media (max-width: 992px) {
+    /* Move day/night toggle under header */
+    #day-night-toggle {
+        top: 7rem;
+    }
+}

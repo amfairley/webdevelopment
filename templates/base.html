@@ -22,15 +22,14 @@
         {% block corecss %}
             <!--Bootstrap link-->
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-            <!--Static CSS file-->
+            <!--Static CSS files-->
             <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
             <!--Favicon-->
             <link rel="apple-touch-icon" sizes="180x180" href="{{ MEDIA_URL }}favicon/apple-touch-icon.png">
             <link rel="icon" type="image/png" sizes="32x32" href="{{ MEDIA_URL }}favicon/favicon-32x32.png">
             <link rel="icon" type="image/png" sizes="16x16" href="{{ MEDIA_URL }}favicon/favicon-16x16.png">
             <link rel="manifest" href="{{ MEDIA_URL }}favicon/site.webmanifest">
-        {% endblock %}
-        {% block extra_css %}
+            {% block extra_css %}{% endblock %}
         {% endblock %}
         <!-- JavaScript blocks -->
         {% block corejs %}
@@ -43,8 +42,6 @@
             <!-- <script src="https://js.stripe.com/v3/"></script> -->
             <!-- JQuery -->
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <!-- Base JavaScript link-->
-            <script src="{% static 'js/base.js' %}" defer></script>
         {% endblock %}
         {% block extra_js %}
         {% endblock %}
@@ -59,8 +56,35 @@
         </script>  -->
     </head>
     <body>
-        {% block content %}
-        {% endblock %}
-    </body>
+        <header>
+            <!--Top navigation bar-->
+            <nav class="nav-wrapper">
+                <a href="{% url 'homepage' %}" class="site-logo-title" aria-label="Go to WebDevGrad homepage">
+                    Web_Dev_Grad
+                </a>
+                <!--Day/night toggle-->
+                <div class="dropdown" id="day-night-toggle">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="day-mode-toggle-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-sun day-night-toggle-sun"></i>/<i class="fa-solid fa-moon day-night-toggle-moon"></i>
+                    </button>
+                    <ul class="dropdown-menu day-mode-dropdown-menu" aria-labelledby="day-mode-toggle-dropdown">
+                        <li><a class="dropdown-item day-night-dropdown" href="#" id="day-mode"><i class="fa-solid fa-sun"></i></a></li>
+                        <li><a class="dropdown-item day-night-dropdown" href="#" id="night-mode"><i class="fa-solid fa-moon"></i></a></li>
+                    </ul>
+                </div>  
+            </nav>
+               
+            <!--Navigation bar-->
+            {% include "includes/navigation.html" %}
+        </header>
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+        <footer>
 
+        </footer>
+        <!-- Base JavaScript link-->
+        <script src="{% static 'js/base.js' %}" defer></script>
+    </body>
 </html>

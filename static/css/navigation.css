@@ -1,0 +1,87 @@
+/* ---------- Desktop ----------*/
+#site-navigation {
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+    color: #001F5C;
+    background-color: #f5f5f5;
+    max-width: 200px;
+    border-right: 0.3rem solid #001F5C;    
+}
+
+body.night-mode #site-navigation {
+    color: #FFD700;
+    background-color: #1E1E1E;
+    border-right: 0.3rem solid #FFD700;
+}
+
+.nav-link {
+    color: #001080;
+}
+
+body.night-mode .nav-link {
+    color: #D4D4D4;
+}
+
+.nav-link:hover {
+    color: #0000FF;
+}
+
+body.night-mode .nav-link:hover {
+    color: #569CD6;
+}
+
+.nav-menu-button {
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+    color: #f5f5f5;
+    background-color: #001F5C;
+    border: 2px solid #f5f5f5;
+}
+
+body.night-mode .nav-menu-button {
+    color: #1E1E1E;
+    background-color: #FFD700;
+    border: 2px solid #1E1E1E;
+}
+
+.navigation-drop-down::after {
+    margin-left: auto;
+    margin-right: auto;
+    color:#001F5C;
+}
+
+body.night-mode .navigation-drop-down::after {
+    margin-left: auto;
+    margin-right: auto;
+    color:#D4D4D4;
+}
+
+.nav-menu-button:hover {
+    border: 2px solid #001F5C;
+}
+
+body.night-mode .nav-menu-button:hover {
+    border: 2px solid #FFD700;
+    background-color: #1E1E1E;
+    color: #FFD700;
+}
+
+/* ---------- Mobile ---------- */
+.offcanvas-navmenu {
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+    color: #001F5C;
+    background-color: #f5f5f5;
+    max-width: 200px;
+    border-right: 0.3rem solid #001F5C;    
+}
+
+body.night-mode .offcanvas-navmenu {
+    color: #FFD700;
+    background-color: #1E1E1E;
+    border-right: 0.3rem solid #FFD700;
+}
+
+/* ---------- Media Queries ---------- */
+@media (min-width: 992px) {
+    main {
+        padding-left: max(17%, 167px);
+    }
+}
