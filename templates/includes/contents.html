@@ -1,0 +1,14 @@
+{% load static %}
+
+{% block extra_css %}
+    <!--Navigation css file-->
+    <link rel="stylesheet" href="{% static 'css/contents.css' %}">
+{% endblock extra_css %}
+
+<div class="contents-box">
+    <h3>Contents</h3>
+    <ol>
+        {% block contents_items %}
+        {% endblock %}
+    </ol>
+</div>
