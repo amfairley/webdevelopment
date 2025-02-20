@@ -82,6 +82,6 @@ body.night-mode .offcanvas-navmenu {
 /* ---------- Media Queries ---------- */
 @media (min-width: 992px) {
     main {
-        padding-left: max(17%, 167px);
+        padding-left: clamp(167px, 17%, 200px);
     }
 }
