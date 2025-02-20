@@ -15,6 +15,17 @@ body.night-mode {
     background-color: #1E1E1E;
 }
 
+h2 {
+    font-family: "Poppins", "Arial", "Helvetica", sans-serif;
+    color: #001F5C;
+    text-align: center;
+    margin: 1rem auto;
+}
+
+body.night-mode h2 {
+    color: #FFD700;
+}
+
 /* ---------- Navigation bar ---------- */
 /* Bar */
 .nav-wrapper {
