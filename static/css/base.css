@@ -140,3 +140,19 @@ body.night-mode .day-night-dropdown.active {
         top: 7rem;
     }
 }
+
+@media (max-width: 400px) {
+    /* Reduce site title size */
+    .site-logo-title {
+        font-size: 4rem;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 310px) {
+    /* Reduce site title size */
+    .site-logo-title {
+        font-size: 3rem;
+        margin: 0 auto;
+    }
+}
