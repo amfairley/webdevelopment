@@ -1,6 +1,6 @@
 .contents-box {
     max-width: min(95%, 1500px);
-    margin: 0 auto;
+    margin: 0 auto 1rem auto;
     padding: 1rem;
     border: 1px solid #001F5C;
     border-radius: 1rem;
