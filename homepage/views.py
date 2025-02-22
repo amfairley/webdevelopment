@@ -12,3 +12,15 @@ def index(request):
         'homepage/index.html',
         context
     )
+
+
+def example(request):
+    '''Return an example homepage'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'homepage/example/example.html',
+        context
+    )

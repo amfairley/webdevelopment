@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <h2 class="test">Example page</h2>
+    <!-- <img src="{{ MEDIA_URL }}nunisi-site-logo.png" alt="Nunisi Forest Hotel and Spa Logo" loading="lazy"> -->
+    {% include 'homepage/example/example_contents.html' %}
+    {% include 'homepage/example/example_section_one.html' %}
+{% endblock %}

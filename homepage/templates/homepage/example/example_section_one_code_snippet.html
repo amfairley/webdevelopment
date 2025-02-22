@@ -1,0 +1,26 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}example-code-snippet{% endblock %}
+
+<!--File name-->
+{% block code_snippet_file_name %}
+    settings.py
+{% endblock %}
+
+<!--Code content-->
+{% block code_snippet_content %}
+    <p>code snippet
+        <span class="keyword">Keyword</span>
+        <span class="string">String</span>
+        <span class="comment">Comment</span>
+        <span class="function">Function</span>
+        <span class="variable">Variable</span>
+        <span class="constant">Constant</span>
+        <span class="classes">Class</span>
+        <span class="operator">Operator</span>
+        <span class="error">Error</span>
+        <span class="warning">Warning</span>
+    </p>
+{% endblock %}

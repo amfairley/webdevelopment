@@ -1,0 +1,19 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}section_one{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Section 1{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+<p>This is an example of a short paragraph</p>
+<h4>This is a smaller heading</h4>
+<p>This is a longer paragraph including a <span class="title" title="hover over">Hover over</span> and then continuing.</p>
+<p>This new paragraph contains a <a class="text-link" href="#">link</a>.</p>
+<p>Here is a code snippet block:</p>
+{% include 'homepage/example/example_section_one_code_snippet.html' %}
+{% include 'homepage/example/example_troubleshooting_one.html' %}
+{% endblock %}
