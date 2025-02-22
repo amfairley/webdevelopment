@@ -37,4 +37,19 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         setSelectedMode("<i class='fa-solid fa-sun'></i>");
     }
+
+    // Make navigation bar sticky when scrolled down
+    const nav = document.getElementById("site-navigation");
+    // Use height of top bar (6rem)
+    const offset = 6 * parseFloat(
+        getComputedStyle(document.documentElement).fontSize
+    );
+    // Function to add sticky class when scrolled
+    window.onscroll = function () {
+        if (window.scrollY > offset) {
+            nav.classList.add("sticky");
+        } else {
+            nav.classList.remove("sticky");
+        }
+    };
 });
