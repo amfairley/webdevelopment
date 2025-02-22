@@ -33,6 +33,7 @@ body.night-mode h2 {
     height: 6rem;
     display: flex;
     align-items: center;
+    padding-top: 0.3rem;
 }
 
 body.night-mode .nav-wrapper {
@@ -40,6 +41,10 @@ body.night-mode .nav-wrapper {
 }
 
 /*Website title */
+.nav-wrapper h1 {
+    margin: 0;
+}
+
 .site-logo-title {
     font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
     color: #001F5C;
@@ -131,6 +136,46 @@ body.night-mode .day-mode-dropdown-menu a{
 body.night-mode .day-night-dropdown.active {
     background-color: #FFD700 !important;
     color: #1E1E1E !important;
+}
+
+/* ---------- Site footer ----------*/
+/* Body size and fixed footer */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.site-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 4rem;
+    background-color: #001F5C;
+    text-align: center;
+    position: relative;
+}
+
+body.night-mode .site-footer {
+    background-color: #FFD700;
+}
+
+.site-footer a {
+    margin: 0;
+}
+
+#github-link {
+    font-size: 2rem;
+    color: #F5f5f5;
+}
+
+body.night-mode #github-link {
+    color: #1E1E1E;
 }
 
 /* ---------- Media Queries ---------- */

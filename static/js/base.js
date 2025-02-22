@@ -40,16 +40,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Make navigation bar sticky when scrolled down
     const nav = document.getElementById("site-navigation");
+    const footer = document.querySelector("footer");
     // Use height of top bar (6rem)
-    const offset = 6 * parseFloat(
+    const topOffset = 6 * parseFloat(
         getComputedStyle(document.documentElement).fontSize
     );
-    // Function to add sticky class when scrolled
+    const footerHeight = 4 * parseFloat(
+        getComputedStyle(document.documentElement).fontSize
+    );
+    
+    // Function to add sticky when scroling down
     window.onscroll = function () {
-        if (window.scrollY > offset) {
+        if (window.scrollY > topOffset) {
             nav.classList.add("sticky");
         } else {
             nav.classList.remove("sticky");
+        }
+        // Add offset for footer
+        if (
+            window.innerHeight + window.scrollY >= 
+            document.body.offsetHeight - footerHeight
+        ) {
+            nav.classList.add("footer");
+        } else {
+            nav.classList.remove("footer");
         }
     };
 });

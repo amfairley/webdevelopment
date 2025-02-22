@@ -59,9 +59,11 @@
         <header>
             <!--Top navigation bar-->
             <nav class="nav-wrapper">
-                <a href="{% url 'homepage' %}" class="site-logo-title" aria-label="Go to WebDevGrad homepage">
-                    Web_Dev_Grad
-                </a>
+                <h1>
+                    <a href="{% url 'homepage' %}" class="site-logo-title" aria-label="Go to WebDevGrad homepage">
+                        Web_Dev_Grad
+                    </a>
+                </h1>
                 <!--Day/night toggle-->
                 <div class="dropdown" id="day-night-toggle">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="day-mode-toggle-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
@@ -81,8 +83,8 @@
             {% block content %}
             {% endblock %}
         </main>
-        <footer>
-
+        <footer class="site-footer">
+            <a href="https://github.com/amfairley" target="_blank" rel="noopener" aria-label="Go to developer's github page" id="github-link"><i class="fa-brands fa-github"></i></a>
         </footer>
         <!-- Base JavaScript link-->
         <script src="{% static 'js/base.js' %}" defer></script>
