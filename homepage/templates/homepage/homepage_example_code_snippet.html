@@ -1,0 +1,26 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}example-code-snippet{% endblock %}
+
+<!--File name-->
+{% block code_snippet_file_name %}
+    The filename to be edited will be shown here
+{% endblock %}
+
+<!--Code content-->
+{% block code_snippet_content %}
+    <p>Different elements or components of the syntax will be highlighted in the following colours:<br>
+        <span class="keyword">Keyword</span><br>
+        <span class="string">String</span><br>
+        <span class="comment">Comment</span><br>
+        <span class="function">Function</span><br>
+        <span class="variable">Variable</span><br>
+        <span class="constant">Constant</span><br>
+        <span class="classes">Class</span><br>
+        <span class="operator">Operator</span><br>
+        <span class="error">Error</span><br>
+        <span class="warning">Warning</span>
+    </p>
+{% endblock %}

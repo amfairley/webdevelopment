@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <!--Homepage CSS file-->
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+    <h2 class="test">Welcome to <span class="title-site">WEB_DEV_GRAD</span>!</h2>
+    
+    {% include 'homepage/homepage_introduction.html' %}
+
+{% endblock %}
