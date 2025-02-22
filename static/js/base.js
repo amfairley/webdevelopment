@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const topOffset = 6 * parseFloat(
         getComputedStyle(document.documentElement).fontSize
     );
-    const footerHeight = 4 * parseFloat(
+    const footerHeight = 0.1 * parseFloat(
         getComputedStyle(document.documentElement).fontSize
     );
     
