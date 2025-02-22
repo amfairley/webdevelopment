@@ -1,0 +1,17 @@
+{% load static %}
+
+{% block extra_css %}
+    <!--Contents css file-->
+    <link rel="stylesheet" href="{% static 'css/code_snippet.css' %}">
+{% endblock extra_css %}
+
+<!--ID cannot be blank so include ID's for every codeblock-->
+<div id="{% block code_snippet_id %}{% endblock %}" class="code-snippet-container">
+    <div class="code-snippet-header">
+        <p>{% block code_snippet_file_name %}{% endblock %}</p>
+    </div>
+    <div class="code-snippet-content">
+        {% block code_snippet_content %}
+        {% endblock %}
+    </div>
+</div>
