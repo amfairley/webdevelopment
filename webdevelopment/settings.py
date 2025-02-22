@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Custom apps
     'homepage',
+    'intro_to_full_stack',
 ]
 
 MIDDLEWARE = [
