@@ -1,1 +1,16 @@
-<h2>Intro to full stack</h2>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <!--Into to full stack file-->
+    <link rel="stylesheet" href="{% static 'css/intro_to_full_stack.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+    <h2 class="test">Introduction To Full Stack Programming</h2>
+    
+    {% include 'intro_to_full_stack/contents.html' %}
+    {% include 'intro_to_full_stack/section_one.html' %}
+    {% include 'intro_to_full_stack/section_two.html' %}
+
+{% endblock %}

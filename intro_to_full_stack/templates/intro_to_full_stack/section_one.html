@@ -1,0 +1,74 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}delaritive_and_imperative{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Declarative and Imperative Programming{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        <span class="title" title="Too Long; Didn’t Read. A quick summary of what follows.">TL;DR</span>:
+        Declarative programming describes what should happen 
+        (<span class="title" title="Hyper-Text Markup Language">HTML</span>,
+        <span class="title" title="Cascading Style Sheets">CSS</span>, 
+        <span class="title" title="Structured Query Language">SQL</span>), 
+        while imperative programming 
+        defines how it happens (JavaScript, Python). Declarative code is like ordering a pizza—just say what you want. 
+        Imperative code is like making the pizza—following a recipe step by step.
+    </p>
+    <p>
+        Software development follows different 
+        <span class="title" title="A methodology or way to approach programming.">paradigms</span>, 
+        two of the most fundamental being declarative programming and imperative programming. These approaches shape 
+        how developers write code, structure logic, and solve problems. While declarative programming focuses on what 
+        should happen, imperative programming is concerned with how it happens.
+    </p>
+    <p>
+        Declarative programming is all about specifying the desired outcome without worrying about the exact steps 
+        needed to achieve it. Common examples include 
+        <span class="title" title="Hyper-Text Markup Language">HTML</span>,
+        <span class="title" title="Cascading Style Sheets">CSS</span>, 
+        and 
+        <span class="title" title="Structured Query Language">SQL</span>,
+         where the developer provides high-level 
+        instructions that another system interprets. For instance, writing 
+        <span class="written-code">&lt;h1&gt;Hello&lt;/h1&gt</span> 
+        in 
+        <span class="title" title="Hyper-Text Markup Language">HTML</span> 
+        tells the browser to display a heading, but the underlying details of rendering it are abstracted away. 
+        Similarly, a 
+        <span class="title" title="Structured Query Language">SQL</span>
+        query like 
+        <span class="written-code">SELECT * FROM users</span> 
+        retrieves data without specifying how the database should process the request.
+    </p>
+    <p>
+        Imperative programming, on the other hand, requires step-by-step instructions to achieve a result. Languages 
+        like JavaScript and Python follow this 
+        <span class="title" title="A methodology or way to approach programming.">paradigm</span>, 
+        executing sequenced instructions 
+        (<span class="title" title="Steps in a recipe.">algorithms</span>) 
+        and using mutable data 
+        (<span class="title" title="The ingredients in a recipe.">variables</span>) 
+        that change over time. Unlike declarative programming, imperative code includes logic and decision-making 
+        within its instructions, explicitly defining how a task is performed.
+    </p>
+    <p>
+        A restaurant analogy helps illustrate the difference. When ordering a pizza, a customer simply states what they 
+        want—the desired outcome—without specifying the steps required to make it. This represents declarative 
+        programming, where users are shielded from implementation details. However, in the kitchen, the chef must 
+        follow a detailed recipe, adding ingredients in a specific order to achieve the final dish. This step-by-step 
+        process mirrors imperative programming, where the focus is on how the result is produced.
+    </p>
+    <p>
+        Both 
+        <span class="title" title="A methodology or way to approach programming.">paradigms</span>
+        play essential roles in software development. Declarative programming simplifies code by focusing on outcomes, 
+        while imperative programming provides full control over execution. Most modern applications blend both 
+        approaches, leveraging their strengths depending on the task at hand.
+    </p>
+
+{% endblock %}
