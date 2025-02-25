@@ -31,15 +31,6 @@ body.night-mode .text-box p {
     color: #D4D4D4;
 }
 
-/* Span for title */
-.text-box .title {
-    font-weight: bolder;
-}
-
-.text-box .title:hover {
-    cursor: default;
-}
-
 /* Span for links */
 .text-box .text-link {
     color: #0000FF;

@@ -26,6 +26,20 @@ body.night-mode h2 {
     color: #FFD700;
 }
 
+dfn {
+    font-style: normal;
+    font-weight: bolder;
+}
+
+dfn:hover {
+    cursor: default;
+}
+
+code {
+    font-family: "JetBrains Mono", "Courier New", monospace;
+    color: inherit;
+}
+
 /* ---------- Navigation bar ---------- */
 /* Bar */
 .nav-wrapper {
