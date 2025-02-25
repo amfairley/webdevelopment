@@ -5,41 +5,43 @@
 {% block text_section_id %}homepage_introduction{% endblock %}
 
 <!--Section title-->
-{% block text_title %}{% endblock %}
+{% block text_title %}What is this website all about?{% endblock %}
 
 <!--Section content-->
 {% block text_content %}
     <p>
-        This is my personal online repository—a growing collection of notes, insights, and practical examples documenting everything 
-        I’ve learned on my path to becoming a web developer. 
-        Here, I break down web development concepts, languages, and best practices in a way that makes sense to me, 
-        drawing from a mix of structured courses, bootcamps, YouTube tutorials, and hands-on experimentation.
+        This is my personal online repository—a growing collection of notes, insights, and practical examples 
+        documenting everything I’ve learned on my path to becoming a web developer. Here, I break down web development 
+        concepts, languages, and best practices in a way that makes sense to me, drawing from a mix of structured 
+        courses, bootcamps, YouTube tutorials, and hands-on experimentation.
     </p>
     <p>
-        With a background in Django and Flask, experience with frontend frameworks, and an understanding of programming paradigms 
-        like object-oriented and functional programming, I aim to create a resource that not only helps me reinforce my own learning 
-        but also provides guidance for others who may be on a similar journey.
+        With a background in Django and Flask, experience with frontend frameworks, and an understanding of programming 
+        paradigms like object-oriented and functional programming, I aim to create a resource that not only helps me 
+        reinforce my own learning but also provides guidance for others who may be on a similar journey.
     </p>
-
     <p>
-        Whether you're just starting out or refining your skills, I hope you'll find useful hints, tips, and explanations throughout 
-        these pages—born from both my successes and the many bugs and roadblocks I’ve encountered along the way.
+        Whether you're just starting out or refining your skills, I hope you'll find useful hints, tips, and 
+        explanations throughout these pages—born from both my successes and the many bugs and roadblocks I’ve 
+        encountered along the way.
     </p>
     <h4>Site Layout</h4>
     <p>
-        I have endeavoured to make the layout of this site as user friendly and intuitive as possible, 
-        categorising concepts and technologies into their own sections on the navigation bar and 
-        links between them are provided where needed, looking like <a class="text-link" href="#">this</a>. 
-        Key terms will look <span class="title" title="Definition">like this</span> and will display their definition when hovered over 
-        with a mouse. Most of the provided code snippet examples will also have this functionality without the text decoration.
+        I have endeavoured to make the layout of this site as user friendly and intuitive as possible, categorising 
+        concepts and technologies into their own sections on the navigation bar and links between them are provided 
+        where needed, looking like 
+        <a class="text-link" href="#">this</a>.
+        Key terms will look 
+        <dfn title="The definition will be displayed like this.">like this</dfn>
+        and will display their definition when hovered over with a mouse.
     </p>
     <p>Code snippets throughout the site will look like:</p>
 
     {% include 'homepage/homepage_example_code_snippet.html' %}
     <p>
-        I have designed these code snippet boxes so that the text does not automatically wrap, 
-        as this would make the code harder to decipher. So on smaller screens you will have to scroll left and right to see the 
-        whole line of code.
+        I have designed these code snippet boxes so that the text does not automatically wrap, as this would make the 
+        code harder to decipher. So on smaller screens you will have to scroll left and right to see the whole line of 
+        code.
     </p>
     {% include 'homepage/homepage_example_troubleshooting.html' %}
 {% endblock %}

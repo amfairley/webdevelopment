@@ -58,14 +58,14 @@
     <body>
         <header>
             <!--Top navigation bar-->
-            <nav class="nav-wrapper">
+            <header class="nav-wrapper">
                 <h1>
                     <a href="{% url 'homepage' %}" class="site-logo-title" aria-label="Go to WebDevGrad homepage">
                         Web_Dev_Grad
                     </a>
                 </h1>
                 <!--Day/night toggle-->
-                <div class="dropdown" id="day-night-toggle">
+                <nav class="dropdown" id="day-night-toggle">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="day-mode-toggle-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-sun day-night-toggle-sun"></i>/<i class="fa-solid fa-moon day-night-toggle-moon"></i>
                     </button>
@@ -73,8 +73,8 @@
                         <li><a class="dropdown-item day-night-dropdown" href="#" id="day-mode"><i class="fa-solid fa-sun"></i></a></li>
                         <li><a class="dropdown-item day-night-dropdown" href="#" id="night-mode"><i class="fa-solid fa-moon"></i></a></li>
                     </ul>
-                </div>  
-            </nav>
+                </nav>  
+            </header>
                
             <!--Navigation bar-->
             {% include "includes/navigation.html" %}
@@ -88,5 +88,7 @@
         </footer>
         <!-- Base JavaScript link-->
         <script src="{% static 'js/base.js' %}" defer></script>
+        {% block post_load_js %}
+        {% endblock %}
     </body>
 </html>

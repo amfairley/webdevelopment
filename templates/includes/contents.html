@@ -5,10 +5,12 @@
     <link rel="stylesheet" href="{% static 'css/contents.css' %}">
 {% endblock extra_css %}
 
-<div class="contents-box">
-    <h3>Contents</h3>
-    <ol>
-        {% block contents_items %}
-        {% endblock %}
-    </ol>
-</div>
+<nav class="table-of-contents" aria-label="Table of Contents">
+    <div class="contents-box">
+        <h3>Contents</h3>
+        <ol>
+            {% block contents_items %}
+            {% endblock %}
+        </ol>
+    </div>
+</nav>

@@ -3,15 +3,32 @@
 {% block extra_css %}
     <!--Contents css file-->
     <link rel="stylesheet" href="{% static 'css/code_snippet.css' %}">
+    <!-- Highlight.js default mode -->
+    <!--https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css-->
+    <link rel="stylesheet" href="" id="highlightjscdn">
+    <!-- Highlight.js dark mode -->
+    <!--https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css-->
 {% endblock extra_css %}
 
+{% block extra_js %}
+    <!-- Highlight.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+{% endblock %}
+
 <!--ID cannot be blank so include ID's for every codeblock-->
-<div id="{% block code_snippet_id %}{% endblock %}" class="code-snippet-container">
-    <div class="code-snippet-header">
+<section id="{% block code_snippet_id %}{% endblock %}" class="code-snippet-container">
+    <header class="code-snippet-header">
         <p>{% block code_snippet_file_name %}{% endblock %}</p>
-    </div>
+    </header>
     <div class="code-snippet-content">
         {% block code_snippet_content %}
         {% endblock %}
     </div>
-</div>
+</section>
+
+{% block post_load_js %}
+    <script>
+        // Initialize highlight.js on all code blocks
+        hljs.highlightAll();
+  </script>
+{% endblock %}

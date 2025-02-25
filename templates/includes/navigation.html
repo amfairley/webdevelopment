@@ -21,7 +21,7 @@
             <li class="nav-item">
                 <span class="d-flex align-items-center">
                     <a class="nav-link" href="#">Dropdown example</a>
-                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#submenu" aria-expanded="false">
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#submenu" aria-expanded="false" aria-controls="submenu">
                     </button>
                 </span>
                 <ul class="collapse list-unstyled ps-3" id="submenu">
@@ -46,7 +46,7 @@
 </button>
 
 <!-- Offcanvas (burger menu) for small screens -->
-<div class="offcanvas offcanvas-start offcanvas-navmenu" tabindex="-1" id="mobileSidebar">
+<nav class="offcanvas offcanvas-start offcanvas-navmenu" tabindex="-1" id="mobileSidebar">
     <div class="offcanvas-header">
         <h5 class="offcanvas-title">Navigation</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
@@ -59,7 +59,7 @@
             <li class="nav-item">
                 <span class="d-flex align-items-center">
                     <a class="nav-link" href="#">Dropdown example</a>
-                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#submenu-mob" aria-expanded="false">
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#submenu-mob" aria-expanded="false" aria-controls="submenu-mob">
                     </button>
                 </span>
                 <ul class="collapse list-unstyled ps-3" id="submenu-mob">
@@ -76,4 +76,4 @@
             </li>
         </ul>
     </div>
-</div>
+</nav>
