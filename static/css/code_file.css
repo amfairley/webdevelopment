@@ -1,5 +1,5 @@
 /*---------- Container ---------- */
-.code-snippet-container {
+.code-file-container {
     width: 90%;
     margin: 0.5rem auto;
     border: 1px solid #0057D8;
@@ -9,32 +9,48 @@
     overflow-x: auto;
 }
 
-body.night-mode .code-snippet-container {
+body.night-mode .code-file-container {
     border-color: #569CD6;
     background-color: #1E1E1E;
     color: #D4D4D4;
 }
 
-.code-snippet-container pre{
+.code-file-header {
+    width: 100%;
     margin: 0;
-    border-radius: 1rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid #0057D8;
+    font-weight: bolder;
 }
 
-/* .code-snippet-content p {
+.code-file-header p {
+    margin: 0;
+}
+
+body.night-mode .code-file-header {
+    border-color: #569CD6;
+}
+
+.code-file-container pre{
+    margin: 0;
+    border-radius: 0 0 1rem 1rem;
+}
+
+/* .code-file-content p {
     white-space: nowrap;
     padding: 0;
     margin: 0;
 } */
 
 /*---------- Text ---------- */
-.code-snippet-container h1,
-.code-snippet-container h2,
-.code-snippet-container h3,
-.code-snippet-container h4,
-.code-snippet-container h5,
-.code-snippet-container h6,
-.code-snippet-container p,
-.code-snippet-container span {
+.code-file-container h1,
+.code-file-container h2,
+.code-file-container h3,
+.code-file-container h4,
+.code-file-container h5,
+.code-file-container h6,
+.code-file-container p,
+.code-file-container span {
     font-family: "JetBrains Mono", "Courier New", monospace;
 }
 

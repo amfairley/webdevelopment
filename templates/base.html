@@ -29,6 +29,12 @@
             <link rel="icon" type="image/png" sizes="32x32" href="{{ MEDIA_URL }}favicon/favicon-32x32.png">
             <link rel="icon" type="image/png" sizes="16x16" href="{{ MEDIA_URL }}favicon/favicon-16x16.png">
             <link rel="manifest" href="{{ MEDIA_URL }}favicon/site.webmanifest">
+            <!-- Highlight.js link-->
+            <!-- Highlight.js default mode -->
+            <!--https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css-->
+            <link rel="stylesheet" href="" id="highlightjscdn">
+            <!-- Highlight.js dark mode -->
+            <!--https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css-->
             {% block extra_css %}{% endblock %}
         {% endblock %}
         <!-- JavaScript blocks -->
@@ -88,6 +94,8 @@
         </footer>
         <!-- Base JavaScript link-->
         <script src="{% static 'js/base.js' %}" defer></script>
+        <!--Hightlight js initialisation-->
+        <script>hljs.highlightAll();</script>
         {% block post_load_js %}
         {% endblock %}
     </body>
