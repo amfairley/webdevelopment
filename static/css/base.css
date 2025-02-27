@@ -35,6 +35,17 @@ dfn:hover {
     cursor: default;
 }
 
+abbr {
+    font-style: normal;
+    font-weight: bolder;
+    text-decoration: none !important;
+}
+
+abbr:hover {
+    cursor: default;
+}
+
+
 code {
     font-family: "JetBrains Mono", "Courier New", monospace;
     color: inherit;
