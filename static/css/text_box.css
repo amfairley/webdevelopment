@@ -31,6 +31,15 @@ body.night-mode .text-box p {
     color: #D4D4D4;
 }
 
+.text-box ul {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #4D4D4C;
+}
+
+body.night-mode .text-box ul {
+    color: #D4D4D4;
+}
+
 /* Span for links */
 .text-box .text-link {
     color: #0000FF;
