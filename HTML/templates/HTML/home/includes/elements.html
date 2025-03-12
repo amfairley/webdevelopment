@@ -1,0 +1,43 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-home-elements{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Elements{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        HTML elements use 
+        <dfn title="HTML syntax for marking the start and end of a specific section">tags</dfn>
+         to structure and define your content on a webpage by instructing the browser on how different parts of the page
+         should be interpreted and displayed. By using tags, developers can specify headings, paragraphs, links, images,
+         and other elements that make up a webpage's content and layout. Without tags, a webpage would appear as plain, 
+        unformatted text, lacking the structure needed for readability and functionality.
+    </p>
+    <p>
+        Most HTML elements use both an opening and a closing tag. The opening tag signals the beginning of an element, 
+         while the closing tag marks its end. The browser reads these tags and applies the appropriate formatting or 
+         behaviour to the enclosed content. For example, a paragraph element is written as 
+    </p>
+        {% include 'HTML/home/includes/code_snippets/elements_paragraph.html' %}
+    <p>
+        Where 
+        <code class="written-code">&lt;p&gt;</code>
+         is the opening tag and 
+        <code class="written-code">&lt;/p&gt;</code>
+         is the closing tag. However, some elements are self-closing, meaning they don't require a separate closing tag.
+         These elements typically represent standalone content, such as images or line breaks. For example, the 
+        <code class="written-code">&lt;img&gt;</code>
+         tag, used to display images, is written as 
+    </p>
+        {% include 'HTML/home/includes/code_snippets/elements_img.html' %}
+    <p>
+        and the line break tag, is simply 
+        <code class="written-code">&lt;br&gt;</code>.
+         Older versions of HTML required a slash (/) before the closing of self-closing elements (like &lt;br/&gt;), 
+        but this is no longer necessary in modern HTML.
+    </p>
+{% endblock %}

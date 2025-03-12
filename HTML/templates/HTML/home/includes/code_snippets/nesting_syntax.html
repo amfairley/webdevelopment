@@ -1,0 +1,17 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code_snippet_html_home_nesting_syntax{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="html">&lt;a&gt;
+    Start of content A 
+        &lt;b&gt;content B&lt;/b&gt;
+    end of content A.
+&lt;/a&gt;
+</code></pre>
+{% endblock %}

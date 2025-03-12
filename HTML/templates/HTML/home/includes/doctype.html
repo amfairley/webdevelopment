@@ -1,0 +1,32 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-home-doctype{% endblock %}
+
+<!--Section title-->
+{% block text_title %}DOCTYPE{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Every HTML document begins with
+    </p>
+    {% include 'HTML/home/includes/code_snippets/doctype.html' %}
+    <p>
+        This lets the browser know which version of HTML the document is written in, making sure that the page is 
+        rendered properly in your browser. In particular, 
+        <code class="written-code">&lt;!DOCTYPE html&gt;</code>
+         is used to define the document as an HTML5 document, the latest version of the HyperText Markup Language.
+    </p>
+    <p>
+        This declaration is important because it triggers "standards mode" in modern web browsers, where they follow 
+        current web standards. Without it, browsers might switch to "quirks mode," where older rendering behaviours are 
+        used, potentially causing layout issues or inconsistent display across different browsers.
+    </p>
+    <p>
+        This may look concise to those of you familiar with older versions of HTML such as HTML 4.01 which required an 
+        additional Document Type Definition, which is not required for HTML5, making it a cleaner and more 
+        straightforward DOCTYPE declaration. 
+    </p>
+{% endblock %}

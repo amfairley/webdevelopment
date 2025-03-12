@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: HTML{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>HTML</h2>
+
+    {% include 'HTML/home/includes/contents.html' %}
+    {% include 'HTML/home/includes/introduction.html' %}
+    {% include 'HTML/home/includes/elements.html' %}
+    {% include 'HTML/home/includes/nesting.html' %}
+    {% include 'HTML/home/includes/attributes.html' %}
+    {% include 'HTML/home/includes/doctype.html' %}
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-home-nesting{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Nesting{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        HTML elements can be placed inside, or nested within, one another. The general syntax of nesting an element b 
+        inside an element a is:
+    </p>
+        {% include 'HTML/home/includes/code_snippets/nesting_syntax.html' %}
+    <p>
+        A good example of where this seems obvious is if you want to highlight a word or phrase in a paragraph by 
+        making it bold, whilst leaving the rest of the paragraph as normal. To achieve this you can start the paragraph 
+        element until you get up to the word that you want to bold, start the 
+        <code class="written-code">&lt;em&gt;</code>
+         element, write the word, end the 
+        <code class="written-code">&lt;/em&gt;</code>
+         element and then continue the rest of the paragraph. This will look like:
+    </p>
+        {% include 'HTML/home/includes/code_examples/nesting_example.html' %}
+{% endblock %}

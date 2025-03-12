@@ -1,0 +1,38 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-home-attributes{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Attributes{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Elements in HTML can have attributes that provide additional information about the element, affecting its 7
+        behavior or appearance. Attributes are placed within the opening tag of an element and typically consist of a 
+        name and a value. This syntax is generally:
+    </p>
+        {% include 'HTML/home/includes/code_snippets/attributes_syntax.html' %}
+    <p>
+        These may seem confusing at first, but they give an extra layer of functionality to our elements such as:
+    </p>
+    <ul>
+        <li>
+            Describe properties of an element that aren't visible in the content but are essential for 
+            functionality. For example an src attribute for an 
+            <code class="written-code">&lt;img&gt;</code>
+                tag specifies the image file path and an alt attribute giving a description of the image for screen 
+                readers:
+                {% include 'HTML/home/includes/code_snippets/attributes_img_example.html' %}
+        </li>
+        <li>
+            Modifying the behaviour of an element. For example giving an 
+            <dfn title="Hyperlink">anchor element</dfn>
+                a destination by providing a href attribute and ensuring that it opens in a new tab by using the target
+                attribute:
+            {% include 'HTML/home/includes/code_snippets/attributes_a_example.html' %}
+        </li>
+    </ul>
+{% endblock %}

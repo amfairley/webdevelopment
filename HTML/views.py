@@ -9,6 +9,6 @@ def HTML_home(request):
     }
     return render(
         request,
-        'HTML/home.html',
+        'HTML/home/home.html',
         context
     )

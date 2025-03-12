@@ -1,0 +1,48 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-home-introduction{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Introduction To HTML{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        <abbr title="HyperText Markup Language">HTML</abbr>
+         is the foundational language of the web, used to structure and display content on webpages. The web document 
+        structure is defined through elements such as headings, paragraphs, lists, links, images, and more. 
+    </p>
+    <p>
+        HTML forms the backbone of web development, combined with 
+        <dfn title="Cascading Style Sheets">CSS</dfn>
+        (for styling) and JavaScript (for interactivity). Web browsers interpret HTML documents to render them as 
+        visible web pages. The combination of these languages has enabled the explosive growth of the internet, 
+        transforming how information is shared, communicated, and accessed worldwide.
+    </p>
+    <p>
+        In this section on HTML I will outline typical elements, 
+        <dfn title="To give meaning to">Semantic</dfn>
+         HTML elements that describe their purpose such as 
+        <code class="html">&lt;article&gt;</code>
+         or 
+        <code class="html">&lt;header&gt;</code>
+        , and examples, culminating in a usable HTML page template that will help you hit the ground running with 
+        building your own webpage.
+    </p>
+    <p>
+        Browsers interpret elements in a document as instructions for displaying content. These elements define 
+        structure and formatting, such as marking text as a heading, paragraph, bold, list, or table. Despite the 
+        complexity of modern web applications, they are still built on this fundamental structure and even web pages 
+        created in 1991 remain fully functional in today's browsers.
+    </p>
+    <p>
+        HTML documents are plain text files saved with a .html extension and consist of elements and 
+        <dfn title="Variables that provide additional information about an element’s behaviour or appearance">attributes</dfn>.
+         They can be edited with any text editor and run in any browser. For all things HTML and for a full description 
+         of things that I barely scratch the surface of on this site, I highly recommend the 
+        <a class="text-link" href="https://www.w3schools.com/html/default.asp" aria-label="Go to the W3Schools webpage" target="_blank" rel="noopener noreferrer">W3Schools</a>
+         HTML documentation.
+    </p>
+{% endblock %}
