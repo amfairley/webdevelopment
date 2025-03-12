@@ -32,7 +32,7 @@
             <!-- Highlight.js link-->
             <!-- Highlight.js default mode -->
             <!--https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css-->
-            <link rel="stylesheet" href="" id="highlightjscdn">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css" id="highlightjscdn">
             <!-- Highlight.js dark mode -->
             <!--https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css-->
             {% block extra_css %}{% endblock %}
@@ -48,6 +48,8 @@
             <!-- <script src="https://js.stripe.com/v3/"></script> -->
             <!-- JQuery -->
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <!-- Highlight.js library -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
         {% endblock %}
         {% block extra_js %}
         {% endblock %}
@@ -62,7 +64,7 @@
         </script>  -->
     </head>
     <body>
-        <header>
+        <div>
             <!--Top navigation bar-->
             <header class="nav-wrapper">
                 <h1>
@@ -84,7 +86,7 @@
                
             <!--Navigation bar-->
             {% include "includes/navigation.html" %}
-        </header>
+        </div>
         <main>
             {% block content %}
             {% endblock %}
