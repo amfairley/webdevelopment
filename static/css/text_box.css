@@ -11,6 +11,10 @@ body.night-mode .text-box {
     border: 1px solid #FFD700;
 }
 
+.text-box h4 {
+    font-size: 1.5rem;
+}
+
 .text-box h3,
 .text-box h4 {
     font-family: "Poppins", "Arial", "Helvetica", sans-serif;
@@ -47,4 +51,46 @@ body.night-mode .text-box ul {
 
 body.night-mode .text-box .text-link {
     color: #569CD6;
+}
+
+/* Written code */
+.written-code {
+    font-variant-ligatures: none;
+}
+
+/* Tables */
+.text-box table {
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #4D4D4C;
+}
+
+body.night-mode .text-box table {
+    color: #D4D4D4;
+}
+
+.text-box table th,
+.text-box table td {
+  border: 1px solid #001F5C;
+  padding: 8px;
+  text-align: left;
+}
+
+body.night-mode .text-box table th,
+body.night-mode .text-box table td {
+    border-color: #FFD700;
+}
+
+/* ---------- Media Queries ---------- */
+@media (max-width: 500px) {
+    /* Make table rows equal */
+    .text-box table {
+        table-layout: fixed;
+        width: 100%;
+    }
+    .text-box table th,
+    .text-box table td {
+        width: 50%;
+    }
 }
