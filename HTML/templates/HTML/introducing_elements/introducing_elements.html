@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: HTML - Introducing Elements{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Introducing Elements</h2>
+
+    {% include 'HTML/introducing_elements/includes/contents.html' %}
+    {% include 'HTML/introducing_elements/includes/types_of_elements.html' %}
+    {% include 'HTML/introducing_elements/includes/the_head_element.html' %}
+    {% include 'HTML/introducing_elements/includes/the_body_element.html' %}
+    {% include 'HTML/introducing_elements/includes/comments.html' %}
+{% endblock %}

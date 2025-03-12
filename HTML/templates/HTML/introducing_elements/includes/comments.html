@@ -1,0 +1,20 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-introducing-elements-comments{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Comments{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Comments in code are amazing. They are little snippets of ideas, descriptions or reminders that the computer 
+        does not read and are purely there for informing us; the developers. With HTML, I tend to put descriptive 
+        comments above each section describing what's inside or to highlight particular points of interest. In HTML 
+        comments are added by wrapping your comment in 
+        <code class="written-code">&lt;!-&#8203;- -&#8203;-&gt;</code>
+    </p>
+    {% include 'HTML/introducing_elements/includes/code_snippets/comments.html' %}
+{% endblock %}

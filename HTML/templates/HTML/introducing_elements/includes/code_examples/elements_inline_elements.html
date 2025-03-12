@@ -1,0 +1,23 @@
+{% extends 'includes/code_example.html' %}
+{% load static %}
+
+{% block code_file_id %}HTML-introducing-elements-inline-elements{% endblock %}
+
+{% block code_example_content %}
+<pre><code class="html">&lt;p&gt;
+    This sentence has a word in
+        &lt;i&gt;italics&lt;i&gt;
+    .
+&lt;/p&gt;
+&lt;p&gt;
+    There is a 
+        &lt;strong&gt;bold&lt;/strong&gt;
+    word in this sentence.
+&lt;/p&gt;
+</code></pre>
+{% endblock %}
+
+{% block code_result_content %}
+<p>This sentence has a word in <i>italics</i>.</p>
+<p>There is a <strong>bold</strong> word in this sentence.</p>  
+{% endblock %}

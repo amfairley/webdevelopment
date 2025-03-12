@@ -1,0 +1,27 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-introducing-elements-body{% endblock %}
+
+<!--Section title-->
+{% block text_title %}The Body Element{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The 
+        <code class="written-code">&lt;body&gt;&lt;/body&gt;</code>
+        element in an HTML document contains all the content that is visible to users, such as text, images, videos, 
+        links, and interactive elements. It is the main section of a webpage, where browsers render the content 
+        according to the structure defined by HTML elements.
+    </p>
+    <p>
+        Its purpose is to display the core content of the page, ensuring that users can read, interact with, and 
+        navigate the website. Everything inside the
+        <code class="written-code">&lt;body&gt;&lt;/body&gt;</code>
+        is what appears on the screen, while other elements like 
+        <code class="written-code">&lt;head&gt;&lt;/head&gt;</code>
+        provide metadata and resources to support the page's functionality.
+    </p>
+{% endblock %}

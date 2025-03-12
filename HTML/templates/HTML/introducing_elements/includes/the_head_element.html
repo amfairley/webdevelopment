@@ -1,0 +1,104 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-introducing-elements-head{% endblock %}
+
+<!--Section title-->
+{% block text_title %}The Head Element{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The 
+        <code class="written-code">&lt;head&gt;</code>
+        element is the first child of the HTML element and its purpose is to structure and enhance a page in a way that 
+        is not directly displayed to users. It provides essential information for browsers and external services to 
+        properly interpret, style, and optimise the webpage. A common element to see here is the 
+        <code class="written-code">&lt;meta&gt;</code>
+        element (it has no closing tag), which can take have multiple attributes that to achieve different desired 
+        effects.
+    </p>
+    <!--Meta element attribute table-->
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Attribute
+                </th>
+                <th>
+                    Description
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <code class="written-code">&lt;meta charset="utf-8"&gt;</code>
+                </td>
+                <td>
+                    The charset attribute specifies the character encoding for the website. A typical value is utf-8, 
+                    the Universal Character Set which can represent characters from most languages, symbols, and 
+                    emojis. Other value options are available if UTF-8 does not meet your needs and can be seen 
+                    <a class="text-link" href="https://www.w3schools.com/html/html_charset.asp" aria-label="Go to W3Schools page on character sets" target="_blank" rel="noopener noreferrer">here</a>.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">&lt;meta name="" content=""&gt;</code>
+                </td>
+                <td>
+                    The name attribute is used to specify the type or category of the meta information contained in the 
+                    element. It helps browsers, search engines, and other tools understand the kind of data that the 
+                    meta tag is providing. The following content attribute defines the data for the name attribute.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code>
+                </td>
+                <td>
+                    The viewport meta attribute is essential for making responsive websites that change size depending 
+                    on what device you are seeing them on, it sets the viewport (what the user can see) to the size of 
+                    the device and loading is a scale of 1 (no zoom).
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">&lt;meta name="keywords" content="Web Development, Full Stack Development, HTML"&gt;</code>
+                </td>
+                <td>
+                    The keywords meta attribute provides search engines with a list of keywords relevant to the page's 
+                    content listed in the content attribute. It assists in the SEO process by giving search engines 
+                    more context about the content of the page, though search engines now rely more on actual content 
+                    rather than this meta tag alone.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">&lt;meta name="description" content="A website about HTML"&gt;</code>
+                </td>
+                <td>
+                    The description meta attribute provides a brief description of the webpage's content in the content 
+                    attribute, which is often shown in search engine results beneath the page title.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">&lt;meta name="author" content="A M Fairley"&gt;</code>
+                </td>
+                <td>
+                    The author meta attribute identifies the author of the webpage, which is nice in portfolio websites.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        There is also the 
+        <code class="written-code">&lt;title&gt;&lt;/title&gt;</code> 
+        element where you can, well, title your page. This will appear at the top of the browser in the browser tab for 
+        your website. Also added in the head element are links to style sheets for your webpage, JavaScript files, 
+        links to external libraries, and other meta data that will be discussed later when we cover these sections.
+    </p>
+    {% include 'HTML/introducing_elements/includes/code_snippets/head_title.html' %}
+{% endblock %}

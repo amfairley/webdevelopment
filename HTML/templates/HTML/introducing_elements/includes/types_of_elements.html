@@ -1,0 +1,46 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-introducing-elements-types{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Types Of Elements{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <h4>Structural Elements</h4>
+    <p>
+        HTML structural elements are used once per page and include the
+        <code class="written-code">&lt;html&gt;</code>,
+        <code class="written-code">&lt;head&gt;</code>,
+        and 
+        <code class="written-code">&lt;body&gt;</code>
+        elements. Written on a page this would look like:
+    </p>
+        {% include 'HTML/introducing_elements/includes/code_snippets/elements_structural_elements.html' %}
+    <h4>Block Elements</h4>
+    <p>
+        Block elements create a space below them when used. Examples of these are 
+        <code class="written-code">&lt;p&gt;</code>
+        or
+        <code class="written-code">&lt;h1&gt;</code>.
+    </p>
+        {% include 'HTML/introducing_elements/includes/code_examples/elements_block_elements.html' %}
+    <h4>Inline Elements</h4>
+    <p>
+        Inline elements do not create a line break below them. An example of this is
+        <code class="written-code">&lt;em&gt;</code>
+        which will put emphasis on the content but not create a line break, making it useful inside a paragraph without 
+        splitting up the flow of the text.
+    </p>
+    {% include 'HTML/introducing_elements/includes/code_examples/elements_inline_elements.html' %}
+    <h4>Neutral Elements</h4>
+    <p>
+        Neutral elements Do not mean anything by themselves but identify structural areas of the page allowing for a 
+        clearer layout or to style containers of elements such as 
+        <code class="written-code">&lt;div&gt;&lt;/div&gt;</code>
+        or
+        <code class="written-code">&lt;span&gt;&lt;/span&gt;</code>.
+    </p>
+{% endblock %}
