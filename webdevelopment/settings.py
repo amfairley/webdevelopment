@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     # Custom apps
     'homepage',
     'intro_to_full_stack',
+    'HTML',
 ]
 
 MIDDLEWARE = [
