@@ -80,6 +80,7 @@ body.night-mode .result-example-header {
 .code-example-container p,
 .code-example-container span {
     font-family: "JetBrains Mono", "Courier New", monospace;
+    font-variant-ligatures: none;
 }
 
 @media (max-width: 991px) {
