@@ -11,11 +11,24 @@
         <h4 class="text-center">Navigation</h4>
         <!--Navigation links-->
         <ul class="nav flex-column">
+            <!--Homepage-->
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'homepage' %}">Home</a>
             </li>
+            <!--Intro to Fullstack-->
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'intro_to_full_stack' %}">Introduction to Full Stack</a>
+            </li>
+            <!--HTML-->
+            <li class="nav-item">
+                <span class="d-flex align-items-center">
+                    <a class="nav-link" href="{% url 'HTML_home' %}">HTML</a>
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#html-submenu" aria-expanded="false" aria-controls="html-submenu">
+                    </button>
+                </span>
+                <ul class="collapse list-unstyled ps-3" id="html-submenu">
+                    <li><a class="nav-link" href="{% url 'HTML_home' %}">HTML Home</a></li>
+                </ul>
             </li>
             <!--Dropdown link example-->
             <li class="nav-item">

@@ -6,14 +6,12 @@
 {% endblock extra_css %}
 
 {% block extra_js %}
-    <!-- Highlight.js library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
 {% endblock %}
 
 <!--ID cannot be blank so include ID's for every codeblock-->
-<section id="{% block code_snippet_id %}{% endblock %}" class="code-snippet-container">
+<div id="{% block code_snippet_id %}{% endblock %}" class="code-snippet-container">
     <div class="code-snippet-content">
         {% block code_snippet_content %}
         {% endblock %}
     </div>
-</section>
+</div>
