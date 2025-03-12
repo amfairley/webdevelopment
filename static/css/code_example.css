@@ -1,0 +1,105 @@
+/*---------- Container ---------- */
+.code-example-container {
+    width: 90%;
+    margin: 0.5rem auto;
+    border: 1px solid #0057D8;
+    border-radius: 1rem;
+    background-color: #FFFFFF;
+    color: #333333;
+    overflow-x: auto;
+}
+
+body.night-mode .code-example-container {
+    border-color: #569CD6;
+    background-color: #1E1E1E;
+    color: #D4D4D4;
+}
+
+/* Code and result sections*/
+.code-example,
+.result-example {
+    padding: 0;
+}
+
+.code-example {
+    border-right: 1px solid #0057D8;
+}
+
+body.night-mode .code-example {
+    border-color: #569CD6;
+}
+
+.code-example-header,
+.result-example-header {
+    width: 100%;
+    height: 2.5rem;
+    margin: 0;
+    padding: 0.5rem;
+    border-bottom: 1px solid #0057D8;
+    font-weight: bolder;
+    text-align: center;
+}
+
+body.night-mode .code-example-header,
+body.night-mode .result-example-header {
+    border-color: #569CD6;
+}
+
+.code-example-header p,
+.result-example-header p {
+    margin: 0;
+}
+
+.code-example-container pre{
+    margin: 0;
+    border-radius: 0 0 0 1rem;
+    height: 100%;
+}
+
+.code-example-container pre code{
+    height: 100%;
+}
+
+.code-example-content {
+    height: calc(100% - 2.5rem);
+}
+
+.code-result-content {
+    padding: 0.5rem;
+    margin: 0;
+    height: fit-content;
+}
+
+/*---------- Text ---------- */
+.code-example-container h1,
+.code-example-container h2,
+.code-example-container h3,
+.code-example-container h4,
+.code-example-container h5,
+.code-example-container h6,
+.code-example-container p,
+.code-example-container span {
+    font-family: "JetBrains Mono", "Courier New", monospace;
+}
+
+@media (max-width: 991px) {
+    /* Resize code content */
+    .code-example-content {
+        height: fit-content;
+    }
+
+    /* Remove curved border from code */
+    .code-example-container pre{
+        border-radius: 0;
+    }
+
+    /* Line between code and result */
+    .result-example-header {
+        border-top: 2px solid #0057D8;
+    }
+
+    /* Remove border-right between the code and result */
+    .code-example {
+        border-right: none;
+    }
+}
