@@ -1,12 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_title %}: Intro To Full Stack{% endblock %}
+
 {% block extra_css %}
     <!--No full stack file-->
 {% endblock extra_css %}
 
 {% block content %}
-    <h2 class="test">Introduction To Full Stack Programming</h2>
+    <h2>Introduction To Full Stack Programming</h2>
     
     {% include 'intro_to_full_stack/contents.html' %}
     {% include 'intro_to_full_stack/section_one.html' %}
