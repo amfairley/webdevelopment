@@ -1,0 +1,70 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-common-elements-structural-elements{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Structural Elements{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <!--Intro-->
+    <p>
+        Structural elements define the role of text in the document structure. Headings in HTML are very important to 
+        ensure that your website is accessible and available to users. They range in size and importance from H1 down 
+        to H6. For best practices, there should only be one H1 per webpage and then then subsequent headings should 
+        follow the hierarchical order without skipping levels, for example then there should be a H2 heading following 
+        a H1 without skipping straight to H3. Although there should only be one H1 per page, there can be multiples of 
+        the other heading levels. This may seem odd at first, but it is actually quite intuitive. Imagine you are 
+        writing an essay or report; you generally have a big title at the top of it; that is your H1 heading. Then each 
+        section will have its own title, but stylistically these section titles will look the same; these are your H2 
+        titles. If a section is further split into more sections, these would be titled with smaller headings (H3), and 
+        some H2 sections would have no smaller sections at all. This may result in a contents page that looks like:
+    </p>
+    <!--Navigation layout of headers-->
+    <ul>
+        <li>
+            H1 (title)
+            <ul>
+                <li>
+                    H2 (Section 1)
+                    <ul>
+                        <li>H3 (Sub-section 1)</li>
+                        <li>
+                            H3 (Sub-section 2)
+                            <ul>
+                                <li>H4 (Sub-sub-section 1)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>H2 (Section 2)</li>
+                <li>
+                    H2 (Section 3)
+                    <ul>
+                        <li>H3 (Sub-section 1)</li>
+                        <li>
+                            H3 (Sub-section 2)
+                            <ul>
+                                <li>
+                                    H4 (Sub-sub-section 1)
+                                    <ul>
+                                        <li>
+                                            H5 (Sub-sub-sub-section 1)
+                                            <ul>
+                                                <li>H6 (Sub-sub-sub-sub-section 1)</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <!--Headers code example-->
+    {% include 'HTML/common_elements/includes/code_examples/structural_headers.html' %}
+{% endblock %}

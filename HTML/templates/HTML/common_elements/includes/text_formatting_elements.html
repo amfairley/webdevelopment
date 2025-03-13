@@ -1,0 +1,120 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-common-elements-text-formatting-elements{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Text Formatting Elements{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        These are
+        <dfn title="Does not introduce a new line">inline</dfn>
+        elements that change the appearance of text  and the typical ones are:
+    </p>
+    <!--Table of text formatting elements-->
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Element
+                </th>
+                <th>
+                    Description
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <code class="written-code">&lt;b&gt;Bold&lt;/b&gt;</code>
+                </td>
+                <td>
+                    <b>Bold</b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">&lt;i&gt;Italic&lt;/i&gt;</code>
+                </td>
+                <td>
+                    <i>Italic</i>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">&lt;u&gt;Underline&lt;/u&gt;</code>
+                </td>
+                <td>
+                    <u>Underline</u>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">&lt;s&gt;Strikethrough&lt;/s&gt;</code>
+                </td>
+                <td>
+                    <s>Strikethrough</s>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">&lt;mark&gt;Highlighted Text&lt;/mark&gt;</code>
+                </td>
+                <td>
+                    <mark>Highlighted Text</mark>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">&lt;small&gt;Smaller Text&lt;/small&gt;</code>
+                </td>
+                <td>
+                    <small>Smaller Text</small>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">&lt;sub&gt;Subscript&lt;/sub&gt;</code>
+                </td>
+                <td>
+                    <sub>Subscript</sub>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">&lt;sup&gt;Superscript&lt;/sup&gt;</code>
+                </td>
+                <td>
+                    <sup>Superscript</sup>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">&lt;q&gt;Quotation&lt;/q&gt;</code>
+                </td>
+                <td>
+                    <q>Quotation</q>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">&lt;abbr title="Explanation on hover"&gt;Abbreviation on hover&lt;/abbr&gt;</code>
+                </td>
+                <td>
+                    <abbr title="Abbreviation on Hover">AoH</abbr>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">&lt;dfn title="Explanation on hover"&gt;Definition on hover&lt;/abbr&gt;</code>
+                </td>
+                <td>
+                    <dfn title="Definition">Defined Word</dfn>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

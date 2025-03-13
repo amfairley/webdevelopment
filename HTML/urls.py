@@ -8,5 +8,10 @@ urlpatterns = [
         'introducing_elements/',
         views.HTML_introducing_elements,
         name="HTML_introducing_elements"
+    ),
+    path(
+        'common_elements/',
+        views.HTML_common_elements,
+        name="HTML_common_elements"
     )
 ]

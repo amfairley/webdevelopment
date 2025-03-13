@@ -1,0 +1,16 @@
+{% extends 'includes/code_example.html' %}
+{% load static %}
+
+{% block code_file_id %}HTML-common-elements-breaking-elements-example{% endblock %}
+
+{% block code_example_content %}
+<pre><code class="html">&lt;p&gt;This paragraph contains a &lt;br&gt; break in it.&lt;/p&gt;
+&lt;p&gt;This paragraph comes before a horizontal rule&lt;/p&gt;&lt;hr&gt;&lt;p&gt;And this paragraph comes after the horizontal rule&lt;/p&gt;
+</code></pre>
+{% endblock %}
+
+{% block code_result_content %}
+<p>This paragraph contains a <br> break in it.</p>
+<p>This paragraph comes before a horizontal rule</p><hr>
+<p>And this paragraph comes after the horizontal rule<p>
+{% endblock %}

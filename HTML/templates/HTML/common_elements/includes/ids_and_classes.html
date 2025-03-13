@@ -1,0 +1,46 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-common-elements-ids-and-classes{% endblock %}
+
+<!--Section title-->
+{% block text_title %}IDs and Classes{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You will often want to target specific elements in your HTML files. This can be to add some 
+        <a class="text-link" href="" aria-label="Link to CSS Targeting">CSS styling</a>
+        to them, add some functionality by selecting them with 
+        <a class="text-link" href="" aria-label="Link to JavaScript Targeting">JavaScript</a>,
+        or to
+        <a class="text-link" href="" aria-label="Link to Hyperlinking">hyperlink</a>
+        to that specific part of the page. There are two ways of doing this; you can assign an element an id attribute 
+        or a class attribute. 
+    </p>
+    {% include 'HTML/common_elements/includes/code_snippets/id_example.html' %}
+    <p>
+        Classes are used to group multiple elements together. For instance if you have style rules for a set of 
+        paragraphs, you can target all of these whilst leaving other paragraphs untouched by giving them the same 
+        class, so this is great to use when you are applying reusable styles across different parts of your website.
+    </p>
+    {% include 'HTML/common_elements/includes/code_snippets/class_example.html' %}
+    <p>
+        Multiple classes can be applied to the same element by putting them in a space separated list as the class 
+        attribute value.
+    </p>
+    {% include 'HTML/common_elements/includes/code_snippets/multiple_class_example.html' %}
+    <p>
+        IDs, being unique, can only take one value.
+    </p>
+    <p>
+        For best practice, IDs and classes should start with a letter, not include any spaces (as these are used for 
+        separating classes when applying multiple classes) and except from starting with one, they can have numbers, 
+        hyphens, and underscores. Technically they can also include periods but these can be confused with class 
+        selectors in CSS, and colons but these can conflict with CSS or 
+        <abbr title="eXtensible Markup Language: A language used to store data that is readable by both humans and machines">XML</abbr>.
+        For consistency I use all lower case letters with hyphens instead of spaces, and some numbering such as e
+        xample-class or example-class-2.
+    </p>
+{% endblock %}

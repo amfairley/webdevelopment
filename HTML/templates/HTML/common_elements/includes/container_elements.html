@@ -1,0 +1,64 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-common-elements-container-elements{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Container Elements{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Container elements are used for grouping and styling in HTML. These are 
+        particularly useful for breaking down your webpage into sections. They 
+        aid in styling by isolating the part that you want the style rule to 
+        apply to. For instance, if you wanted a word in a sentence to be a 
+        different colour; you would have the sentence inside a paragraph and 
+        wrap the word you want to colour in a span element. This span can then 
+        be targeted with style rules, which will be covered in the CSS section, 
+        resulting in only a colour change to the word wrapped in the span 
+        element, not the whole paragraph.
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Element
+                </th>
+                <th>
+                    Description
+                </th>
+                <th>
+                    Common Attributes
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <code class="written-code">&lt;div&gt;&lt;/div&gt;</code>
+                </td>
+                <td>
+                    A <strong>division</strong> element that encapsulates other page elements and divides a HTML into 
+                    sections. Typically used for larger sections. 
+                </td>
+                <td>
+                    IDs and classes used for styling purposes (covered just down the page). 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">&lt;span&gt;&lt;/span&gt;</code>
+                </td>
+                <td>
+                    An inline <strong>small container</strong> element that takes up the same amount of space as its 
+                    content. They are used to style or manipulate a specific portion of text.
+                </td>
+                <td>
+                    IDs and classes used for styling purposes (covered just down the page). 
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
