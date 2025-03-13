@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: HTML - Links{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Links</h2>
+    {% include 'HTML/links/includes/contents.html' %}
+    {% include 'HTML/links/includes/the_anchor_tag.html' %}
+    {% include 'HTML/links/includes/other_anchor_tag_attributes.html' %}
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-links-the-anchor-tag{% endblock %}
+
+<!--Section title-->
+{% block text_title %}The Anchor Tag{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Hyperlinks in HTML are integral to the function of the internet, linking documents and webpages together. They 
+        are created in the HTML language using anchor tags:
+    </p>
+        {% include 'HTML/links/includes/code_snippets/anchor_tag_example.html' %}
+    <p>
+        The key attribute that the anchor tags use is the 
+        <dfn title="Hyperlink Reference">href</dfn>
+        which defines where the user is directed when clicking on the link.
+    </p>
+    <p>
+        A simple hyperlink would look like:
+    </p>
+    {% include 'HTML/links/includes/code_snippets/anchor_tag_simple_example.html' %}
+    <p>
+        They generally surround text for hyperlinks in paragraphs, but you can wrap any element in an anchor tag to 
+        turn it into a link. This is especially useful for website brands, where you can wrap the image element of the 
+        logo in an anchor tag, turning that image into a hyperlink to your homepage.
+    </p>
+    <p>
+        Links, in my experience, have five main use cases:
+    </p>
+    <ol>
+        <li>
+            Absolute links that direct the user to a specific website by using the full URL. 
+            {% include 'HTML/links/includes/code_snippets/anchor_tag_simple_example_2.html' %}
+        </li>
+        <li>
+            Relative links that lead to a page within the same website without needing the full URL.
+            {% include 'HTML/links/includes/code_snippets/relative_anchor_tag_example.html' %} 
+        </li>
+        <li>
+            Relative links to elements on the same page. A good example of this is contents sections on this site that 
+            scroll to the respective part of the page when clicked. Having
+            <code class="written-code">href="#"</code>
+            would take you to the top of the current page. 
+            {% include 'HTML/links/includes/code_snippets/relative_anchor_tag_example_id.html' %}
+        </li>
+        <li>
+            Email links that open the user's chosen email client and prefill the recipient's address. However in my 
+            experience this generally opens a never-used-before email app on windows that takes a long time to load and 
+            creates a poor user experience. 
+            {% include 'HTML/links/includes/code_snippets/anchor_tag_example_email.html' %}
+        </li>
+        <li>
+            Phone call links that allow users to dial a number on mobile devices.
+            {% include 'HTML/links/includes/code_snippets/anchor_tag_example_phone.html' %}
+        </li>
+    </ol>
+{% endblock %}

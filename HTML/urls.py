@@ -28,5 +28,10 @@ urlpatterns = [
         'forms/',
         views.HTML_forms,
         name="HTML_forms"
+    ),
+    path(
+        'links/',
+        views.HTML_links,
+        name="HTML_links"
     )
 ]

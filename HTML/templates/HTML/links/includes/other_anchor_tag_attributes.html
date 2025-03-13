@@ -1,0 +1,75 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-links-other-anchor-tag-attributes{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Other Anchor Tag Attributes{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The attributes in the anchor tag provide a better and safer experiences for users of your website. For a 
+        comprehensive guide, see the
+        <a class="text-link" href="https://www.w3schools.com/tags/tag_a.asp" title="https://www.w3schools.com/tags/tag_a.asp" aria-label="Go to the W3Schools page on anchor tag attributes" target="_blank" rel="noopener noreferrer">W3Schools</a>
+        webpage for the anchor tag. Here I will cover the common ones that I have employed. 
+    </p>
+    <h4>Target</h4>
+    <p>The target attribute specifies where to open the linked document/webpage.</p>
+    <p>
+        <code class="written-code">target="_blank"</code>
+    </p>
+    <p>
+        This opens the link in a new browser tab, which is best for user experience as it keeps the current page open.
+    </p>
+    <p>
+        <code class="written-code">target="_self"</code>
+    </p>
+    <p>
+        This opens the link in the current browser tab, moving away from your webpage. This is the default setting, 
+        meaning that if you do not specify the target attribute in your opening anchor tag, it will do this.
+    </p>
+    <h4>Rel</h4>
+    <p>
+        The
+        <code class="written-code">rel=""</code>
+        attribute specifies the relationship between the current document and the linked document. The most important 
+        of these being “noopener”.
+    </p>
+    <p>
+        <code class="written-code">rel="noopener"</code>
+    </p>
+    <p>
+        This prevents malicious behaviour from the destination from impacting your site and is best used for links to 
+        social media.
+    </p>
+    <p>
+        <code class="written-code">rel="nofollow"</code>
+    </p>
+    <p>
+        Use this for links to paid links. It helps Google know what parts of your website are yours and what should 
+        appear in the searches for your webapp.
+    </p>
+    <p>
+        <code class="written-code">rel="help"</code>
+    </p>
+    <p>
+        For a help document.
+    </p>
+    <p>
+        <code class="written-code">rel="next"</code>
+        or
+        <code class="written-code">rel="prev"</code>
+    </p>
+    <p>
+        For moving between document selections.
+    </p>
+    <h4>Title</h4>
+    <p>Like a lot of other elements, the anchor tag supports the title attribute that displays some text when the mouse 
+        is hovered over it. This is good practice for external links that do not display the website on screen, so that 
+        the user can see where they will be redirected.
+    </p>
+    {% include 'HTML/links/includes/code_snippets/anchor_tag_example_title.html' %}
+
+{% endblock %}

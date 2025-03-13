@@ -72,3 +72,15 @@ def HTML_forms(request):
         'HTML/forms/forms.html',
         context
     )
+
+
+def HTML_links(request):
+    '''Return the HTML links page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'HTML/links/links.html',
+        context
+    )
