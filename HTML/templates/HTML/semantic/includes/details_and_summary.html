@@ -1,0 +1,32 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-semantic-details-and-summary{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Details and Summary{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The 
+        <code class="written-code">&lt;details&gt;&lt;/details&gt;</code>
+        element creates a small 
+        <dfn title="A self-contained, reusable user interface component that performs a specific function or displays specific content.">widget</dfn>.
+        The visible text to the user is inside a
+        <code class="written-code">&lt;summary&gt;&lt;/summary&gt;</code>
+        element and when clicked, more information drops down below it. This extra information is included as the 
+        second child of the 
+        <code class="written-code">&lt;details&gt;&lt;/details&gt;</code>
+        element and could be most things including text as a
+        <code class="written-code">&lt;p&gt;&lt;/p&gt;</code>
+        or as an image as an
+        <code class="written-code">&lt;img&gt;</code>
+        element. A use case that I have found during my web development journey has been with FAQs, so that the answer 
+        to a question is shown when clicking on it. Otherwise, I use them in my documentation to display a screenshot 
+        under some text when expanded to prevent the README.md file becoming to long when including all the images on 
+        their own.
+    </p>
+    {% include 'HTML/semantic/includes/code_examples/details_example.html' %}
+{% endblock %}

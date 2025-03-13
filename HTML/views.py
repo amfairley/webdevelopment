@@ -108,3 +108,15 @@ def HTML_buttons(request):
         'HTML/buttons/buttons.html',
         context
     )
+
+
+def HTML_semantic(request):
+    '''Return the HTML buttons page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'HTML/semantic/semantic_html.html',
+        context
+    )

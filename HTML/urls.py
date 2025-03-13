@@ -43,5 +43,10 @@ urlpatterns = [
         'buttons/',
         views.HTML_buttons,
         name="HTML_buttons"
+    ),
+    path(
+        'semantic_HTML/',
+        views.HTML_semantic,
+        name="HTML_semantic"
     )
 ]

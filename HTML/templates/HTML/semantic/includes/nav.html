@@ -1,0 +1,21 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-semantic-nav{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Nav{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The
+        <code class="written-code">&lt;nav&gt;&lt;/nav&gt;</code>
+        element highlights the navigation bar. It is commonly used as a child of the header element for site navigation 
+        and utilises lists for the site links. Only sections of major navigation blocks are suitable for the 
+        <code class="written-code">&lt;nav&gt;&lt;/nav&gt;</code>
+        element. It might look something like:
+    </p>
+    {% include 'HTML/semantic/includes/code_snippets/nav_example.html' %}
+{% endblock %}

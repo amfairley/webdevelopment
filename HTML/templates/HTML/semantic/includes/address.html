@@ -1,0 +1,19 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-semantic-address{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Address{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The
+        <code class="written-code">&lt;address&gt;&lt;/address&gt;</code>
+        element is used to encapsulate your, well, address. The key use case of this is in your footer where you can 
+        provide contact information.
+    </p>
+    {% include 'HTML/semantic/includes/code_snippets/address_example.html' %}
+{% endblock %}

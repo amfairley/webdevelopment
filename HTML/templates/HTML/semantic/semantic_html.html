@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: HTML - Semantic HTML{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Semantic HTML</h2>
+    {% include 'HTML/semantic/includes/contents.html' %}
+    {% include 'HTML/semantic/includes/what_is_semantic_html.html' %}
+    {% include 'HTML/semantic/includes/header_main_and_footer.html' %}
+    {% include 'HTML/semantic/includes/nav.html' %}
+    {% include 'HTML/semantic/includes/section.html' %}
+    {% include 'HTML/semantic/includes/article.html' %}
+    {% include 'HTML/semantic/includes/aside.html' %}
+    {% include 'HTML/semantic/includes/blockquote.html' %}
+    {% include 'HTML/semantic/includes/figure_and_figcaption.html' %}
+    {% include 'HTML/semantic/includes/picture.html' %}
+    {% include 'HTML/semantic/includes/details_and_summary.html' %}
+    {% include 'HTML/semantic/includes/address.html' %}
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-semantic-what-is-semantic-HTML{% endblock %}
+
+<!--Section title-->
+{% block text_title %}What is Semantic HTML?{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        <dfn title="Literal translation: the meaning behind something.">Semantic</dfn>
+        HTML gives meaning to the HTML elements that you choose to use. Instead of generic elements such as divs or 
+        paragraphs, you can use expressive semantic HTML elements that convey the purpose of their content and help 
+        improve your code readability, accessibility to users using things such as screen readers, and also improve your
+        <abbr title="Search Engine Optimisation">SEO</abbr>.
+    </p>
+    <p>
+        I will outline the majority of the semantic HTML elements here including their syntax and use cases that I have
+        found for them. A full list and further information on all of them can of course be found at
+        <a class="text-link" href="https://www.w3schools.com/html/html5_semantic_elements.asp" title="https://www.w3schools.com/html/html5_semantic_elements.asp" aria-label="Go to the W3Schools page on semantic HTML" target="_blank" rel="noopener noreferrer">W3Schools</a>.
+    </p>
+{% endblock %}

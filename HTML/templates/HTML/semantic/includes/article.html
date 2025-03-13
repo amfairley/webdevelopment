@@ -1,0 +1,21 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-semantic-article{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Article{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        <code class="written-code">&lt;article&gt;&lt;/article&gt;</code>
+        elements are used for independent pieces of content that makes sense on their own. They will often contain their own 
+        <code class="written-code">&lt;header&gt;&lt;/header&gt;</code>
+        and
+        <code class="written-code">&lt;section&gt;&lt;/section&gt;</code>
+        elements.
+    </p>
+    {% include 'HTML/semantic/includes/code_snippets/article_example.html' %}
+{% endblock %}

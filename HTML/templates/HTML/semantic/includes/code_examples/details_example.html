@@ -1,0 +1,20 @@
+{% extends 'includes/code_example.html' %}
+{% load static %}
+
+{% block code_file_id %}HTML-semantic-details-example{% endblock %}
+
+{% block code_example_content %}
+<pre><code class="html">&lt;details&gt;
+    &lt;summary&gt;Text to click&lt;/summary&gt;
+    &lt;p&gt;Text that appears when clicked&lt;/p&gt;
+&lt;/details&gt;
+</code></pre>
+{% endblock %}
+
+{% block code_result_content %}
+<details>
+    <summary>Text to click</summary>
+    <p>Text that appears when clicked</p>
+</details>
+{% endblock %}
+    

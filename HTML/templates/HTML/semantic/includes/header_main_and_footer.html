@@ -1,0 +1,22 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-semantic-header-main-and-footer{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Header, Main, and Footer{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        If you go to most websites, you will see that there is a header at the top of the page that highlights the 
+        website or brand name with some functionality such as a search bar or navigation links and should at least 
+        contain one heading tag from h1 to h6. Scrolling to the bottom of the page you will commonly see a footer with 
+        such things as contact information, social media links, and copywrite information. Everything between these two 
+        is the main content of the page. This means that your HTML code for your 
+        <code class="written-code">&lt;body&gt;&lt;/body&gt;</code>
+        element will, in its most basic form, look like:
+    </p>
+    {% include 'HTML/semantic/includes/code_snippets/body_example.html' %}
+{% endblock %}

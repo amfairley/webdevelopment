@@ -1,0 +1,23 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-semantic-section{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Section{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Instead of splitting your page content into 
+        <code class="written-code">&lt;div&gt;&lt;/div&gt;</code>
+        elements, use
+        <code class="written-code">&lt;section&gt;&lt;/section&gt;</code>
+        elements instead and save divs for generic containers for styling purposes. Think of a 
+        <code class="written-code">&lt;section&gt;&lt;/section&gt;</code>
+        being a subheading in a contents page that groups other elements such as titles, paragraphs and images into, 
+        well, one section. They are expected to contain a header of some kind within them, so if your content does not 
+        contain a header, it may not qualify as a section.        
+    </p>
+{% endblock %}

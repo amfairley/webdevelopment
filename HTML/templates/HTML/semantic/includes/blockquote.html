@@ -1,0 +1,17 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-semantic-blockquote{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Blockquote{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Blockquotes are used for longer quotes that require their own paragraph. These would work well in newspaper 
+        articles or textbooks when highlighting key phrases or information.
+    </p>
+    {% include 'HTML/semantic/includes/code_examples/blockquote_example.html' %}
+{% endblock %}

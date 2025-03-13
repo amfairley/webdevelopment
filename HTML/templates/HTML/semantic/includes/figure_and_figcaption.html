@@ -1,0 +1,27 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-semantic-figure-and-figcaption{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Figure and Figcaption{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The 
+        <code class="written-code">&lt;figure&gt;&lt;/figure&gt;</code>
+        semantic HTML element groups media or visual content along with its caption or explanatory content to clearly 
+        associate that media with related content. It includes the media, usually an
+        <code class="written-code">&lt;img&gt;</code>
+        element, but could also be a
+        <code class="written-code">&lt;video&gt;&lt;/video&gt;</code>
+        or an 
+        <code class="written-code">&lt;audio&gt;&lt;/audio&gt;</code>
+        element. It will often then have a descriptive
+        <code class="written-code">&lt;figcaption&gt;&lt;/figcaption&gt;</code>
+        element.
+    </p>
+    {% include 'HTML/semantic/includes/code_snippets/figure_example.html' %}
+{% endblock %}
