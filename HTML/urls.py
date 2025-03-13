@@ -18,5 +18,10 @@ urlpatterns = [
         'lists/',
         views.HTML_lists,
         name="HTML_lists"
+    ),
+    path(
+        'tables/',
+        views.HTML_tables,
+        name="HTML_tables"
     )
 ]

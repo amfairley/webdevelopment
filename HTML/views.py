@@ -48,3 +48,15 @@ def HTML_lists(request):
         'HTML/lists/lists.html',
         context
     )
+
+
+def HTML_tables(request):
+    '''Return the HTML tabless page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'HTML/tables/tables.html',
+        context
+    )

@@ -1,0 +1,53 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-tables{% endblock %}
+
+<!--Section title-->
+{% block text_title %}All About HTML Tables{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        HTML tables are used to display data in a structured, grid-like format. A table consists of rows and columns, 
+        with various elements that define its structure and presentation. The outermost element of is the 
+        <code class="written-code">&lt;table&gt;&lt;/table&gt;</code>
+        element. Then the table is split between the table head
+        <code class="written-code">&lt;thead&gt;&lt;/thead&gt;</code>
+        and table body
+        <code class="written-code">&lt;tbody&gt;&lt;/tbody&gt;</code>.
+        The table head is the row at the top defining the contents of the table and the table body is all the data that 
+        is inside the table. These elements are further broken down into specific table row 
+        <code class="written-code">&lt;tr&gt;&lt;/tr&gt;</code>
+        elements. In this row, you can add the specific table headers 
+        <code class="written-code">&lt;th&gt;&lt;/th&gt;</code>
+        for the table head the table data
+        <code class="written-code">&lt;td&gt;&lt;/td&gt;</code>
+        for the table body.
+    </p>
+    <p>
+        A table will generally only have one row within the header, whereas there may be multiple rows within the body 
+        of the table. Just make sure that the amount of 
+        <code class="written-code">&lt;td&gt;&lt;/td&gt;</code>
+        elements in each of the rows of your table body matches the number of
+        <code class="written-code">&lt;th&gt;&lt;/th&gt;</code>
+        elements in your table header row.
+    </p>
+    <p>
+        Some tables would include a footer 
+        <code class="written-code">&lt;tfoot&gt;&lt;/tfoot&gt;</code>
+        that has its own row and data points to summarise the table. Similarly, tables may need a title, added with the 
+        <code class="written-code">&lt;caption&gt;&lt;/caption&gt;</code>
+        element as the first child of the table element.
+    </p>
+    {% include 'HTML/tables/includes/code_examples/table_example.html' %}
+    <p>
+        Table data can be spread over multiple rows or columns using the
+        <code class="written-code">&lt;colspan&gt;&lt;/colspan&gt;</code>
+        and
+        <code class="written-code">&lt;rowspan&gt;&lt;/rowspan&gt;</code>
+        elements to match your needs
+    </p>
+    {% include 'HTML/tables/includes/code_snippets/colspan_example.html' %}
+{% endblock %}

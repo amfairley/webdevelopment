@@ -1,0 +1,70 @@
+{% extends 'includes/code_example.html' %}
+{% load static %}
+
+{% block code_file_id %}HTML-tables-table-example{% endblock %}
+
+{% block code_example_content %}
+<pre><code class="html">&lt;table&gt;
+    &lt;caption&gt;Table Caption&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Heading One&lt;/th&gt;
+            &lt;th&gt;Heading Two&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Row 1 value 1&lt;/td&gt;
+            &lt;td&gt;Row 1 value 2&lt;/td&gt;
+        &lt;tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Row 2 value 1&lt;/td&gt;
+            &lt;td&gt;Row 2 value 2&lt;/td&gt;
+        &lt;tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Row 3 value 1&lt;/td&gt;
+            &lt;td&gt;Row 3 value 2&lt;/td&gt;
+        &lt;tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Footer Summation 1&lt;/td&gt;
+            &lt;td&gt;Footer Summation 2&lt;/td&gt;
+        &lt;tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;
+</code></pre>
+{% endblock %}
+
+{% block code_result_content %}
+<table>
+    <caption>Table Caption</caption>
+    <thead>
+        <tr>
+            <th>Heading one</th>
+            <th>Heading two</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Row 1 value 1</td>
+            <td>Row 1 value 2</td>
+        </tr>
+        <tr>
+            <td>Row 2 value 1</td>
+            <td>Row 2 value 2</td>
+        </tr>
+        <tr>
+            <td>Row 3 value 1</td>
+            <td>Row 3 value 2</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>Footer summation 1</td>
+            <td>Footer summation 2</td>
+        </tr>
+    </tfoot>
+</table>
+{% endblock %}
+    
