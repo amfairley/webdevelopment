@@ -1,0 +1,17 @@
+{% extends 'includes/code_example.html' %}
+{% load static %}
+
+{% block code_file_id %}HTML-forms-check-boxes{% endblock %}
+
+{% block code_example_content %}
+<pre><code class="html">&lt;input type="checkbox" name="age" value="1-10"&gt; 1-10
+&lt;input type="checkbox" name="age" value="10-18"&gt; 10-18
+&lt;input type="checkbox" name="age" value="18+" checked&gt; 18+
+</code></pre>
+{% endblock %}
+
+{% block code_result_content %}
+<input type="checkbox" name="age" value="1-10"> 1-10
+<input type="checkbox" name="age" value="10-18"> 10-18
+<input type="checkbox" name="age" value="18+" checked> 18+
+{% endblock %}

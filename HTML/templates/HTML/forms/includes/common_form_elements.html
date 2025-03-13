@@ -1,0 +1,103 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-forms-common-form-elements{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Common Form Elements{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        To build an effective form, it is important to use the right input elements, and the are many to choose from in 
+        HTML. A full list of them can be found
+        <a class="text-link" href="https://www.w3schools.com/TAgs/att_input_type.asp" aria-label="Go to the W3School page on HTML form inputs" target="_blank" rel="noopener noreffer">here</a>.
+    </p>
+    <p>
+        Most of them exist as different values that you can assign to the type attribute of the 
+        <code class="written-code">&lt;input&gt;</code>
+        element. Please note that the input element is
+        <dfn title="No closing tag">self closing</dfn>.
+        Listed here are a few useful ones with examples:
+    </p>
+    <!--Text Input-->
+    <h4>Text Input</h4>
+    <p>
+        Used for entering short text values, it provides a text input field, accepts letters, numbers, special 
+        characters.
+    </p>
+    {% include 'HTML/forms/includes/code_examples/input_text_input.html' %}
+    <!--Password-->
+    <h4>Password Field</h4>
+    <p>
+        Hides characters entered by the user by replacing any entered characters with *.
+    </p>
+    {% include 'HTML/forms/includes/code_examples/input_password_field.html' %}
+    <!--Email-->
+    <h4>Email Input</h4>
+    <p>
+        Automatically validates email format to check that the entered value at least looks like a valid email address.
+    </p>
+    {% include 'HTML/forms/includes/code_examples/input_email_input.html' %}
+    <!--Search-->
+    <h4>Search Input</h4>
+    <p>
+        Similar to text input but has an X that comes up when a query is entered. This X clears the entered data (as 
+        does pressing esc).
+    </p>
+    {% include 'HTML/forms/includes/code_examples/input_search_input.html' %}
+    <!--Number-->
+    <h4>Number Input</h4>
+    <p>
+        For number inputs, with an up/down arrow to help users pick a value. Use the min and max attributes to define 
+        the minimum and maximum values respectively.
+    </p>
+    {% include 'HTML/forms/includes/code_examples/input_number_input.html' %}
+    <!--Range-->
+    <h4>Range Input</h4>
+    <p>
+        A slider that can be controlled with arrow keys, also uses the min and max attributes.
+    </p>
+    {% include 'HTML/forms/includes/code_examples/input_range_input.html' %}
+    <!--Radio-->
+    <h4>Radio Buttons</h4>
+    <p>
+        Allows users to select one option from multiple choices. The radio group is defined by giving each of the 
+        buttons the same name attribute. 
+    </p>
+    {% include 'HTML/forms/includes/code_examples/input_radio_buttons.html' %}
+    <!---->
+    <h4>Check Boxes</h4>
+    <p>
+        Lets users select one or multiple options. The value attribute dictates what is sent to the server in the 
+        value: input pair. To have an option pre-checked, add the checked attribute.
+    </p>
+    {% include 'HTML/forms/includes/code_examples/input_check_boxes.html' %}
+    <!--Date-->
+    <h4>Date Selector</h4>
+    <p>
+        Creates an input field that shows a date-picker when clicked.
+    </p>
+    {% include 'HTML/forms/includes/code_examples/input_date_selector.html' %}
+    <!--Select-->
+    <h4>Select</h4>
+    <p>
+        Select is its own element rather than a value for the type attribute of an input element and has a closing tag 
+        associated with it. Within the element, there are option elements for each choice available to the user. Select 
+        creates a drop-down menu for the user to pick an option from. Add the selected attribute to have that option 
+        selected by default.
+    </p>
+    {% include 'HTML/forms/includes/code_examples/input_select.html' %}
+    <!--Textarea-->
+    <h4>Textarea</h4>
+    <p>
+        Textarea is also its own element rather than a value for the type attribute of an input element and has a 
+        closing tag associated with it. It gives the user an area to enter more text. It can have attributes of rows 
+        and cols to format the height and width respectively and you can give the placeholder attribute a value to fill 
+        it with placeholder text or prepopulate it with text by typing it between the
+        <code class="written-code">&lt;textarea&gt;&lt;/textarea&gt;</code>
+        tags.
+    </p>
+    {% include 'HTML/forms/includes/code_examples/input_textarea.html' %}                           
+{% endblock %}

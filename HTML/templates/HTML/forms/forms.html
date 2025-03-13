@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: HTML - Forms{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Forms</h2>
+    {% include 'HTML/forms/includes/contents.html' %}
+    {% include 'HTML/forms/includes/understanding_forms_in_html.html' %}
+    {% include 'HTML/forms/includes/html_form_structure.html' %}
+    {% include 'HTML/forms/includes/get_and_post.html' %}
+    {% include 'HTML/forms/includes/common_form_elements.html' %}
+    {% include 'HTML/forms/includes/form_validation.html' %}
+{% endblock %}

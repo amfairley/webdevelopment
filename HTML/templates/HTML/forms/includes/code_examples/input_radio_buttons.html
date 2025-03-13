@@ -1,0 +1,15 @@
+{% extends 'includes/code_example.html' %}
+{% load static %}
+
+{% block code_file_id %}HTML-forms-input-radio-buttons{% endblock %}
+
+{% block code_example_content %}
+<pre><code class="html">&lt;input type="radio" name="subscribe" value="yes"&gt; Yes
+&lt;input type="radio" name="subscribe" value="no"&gt; No
+</code></pre>
+{% endblock %}
+
+{% block code_result_content %}
+<input type="radio" name="subscribe" value="yes"> Yes
+<input type="radio" name="subscribe" value="no"> No
+{% endblock %}

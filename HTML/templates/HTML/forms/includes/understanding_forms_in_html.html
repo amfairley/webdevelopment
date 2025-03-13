@@ -1,0 +1,23 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-forms-understanding-forms-in-HTML{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Understanding Forms in HTML{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        HTML forms are an essential part of web development, enabling users to interact with a webpage by entering and 
+        submitting data. They provide a structured way to collect input, which can then be processed by a server or a 
+        script on the client side. Forms are widely used for various purposes, such as user registration, login pages, 
+        search bars, contact forms, feedback collection, and e-commerce checkouts.
+    </p>
+    <p>
+        When a user submits a form, the data that they entered into the input fields is sent to a specified 
+        destination, typically a server-side script that processes and stores the information. Forms rely on various 
+        HTML elements, such as text fields, checkboxes, radio buttons, and submit buttons, to collect input efficiently.
+    </p>
+{% endblock %}

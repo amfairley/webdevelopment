@@ -1,0 +1,21 @@
+{% extends 'includes/code_example.html' %}
+{% load static %}
+
+{% block code_file_id %}HTML-forms-input-textarea{% endblock %}
+
+{% block code_example_content %}
+<pre><code class="html">&lt;textarea name="placeholder" rows="4" cols="30" placeholder="placeholder text"&lt;
+&lt;/textarea&lt;
+&lt;textarea name="prepopulated" rows="4" cols="30"&lt;
+Prepopulated with text
+&lt;/textarea&lt;
+</code></pre>
+{% endblock %}
+
+{% block code_result_content %}
+<textarea name="placeholder" rows="4" cols="30" placeholder="placeholder text">
+</textarea>
+<textarea name="prepopulated" rows="4" cols="30">
+Prepopulated with text
+</textarea>
+{% endblock %}

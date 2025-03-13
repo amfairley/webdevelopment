@@ -1,0 +1,32 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-forms-GET-and-POST{% endblock %}
+
+<!--Section title-->
+{% block text_title %}GET and POST{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+<p>
+    The method attribute in the
+    <code class="written-code">&lt;form&gt;</code>
+    element determines how the form data is sent to the server. There are two main options: GET and POST. 
+</p>
+<p>
+    A GET method sends form data as query parameters in the URL (e.g., example.com/search?q=HTML+Forms) which is best 
+    used for search forms, filters, or retrieving data. As these appear in the URL, they can be bookmarked and shared 
+    easily and are 
+    <dfn title="The browser stores a copy of webpage's resources allowing it to load it quicker next time">cached</dfn>
+    by browsers, improving performance. However don't use them for passwords or sensitive data, so as to prevent these 
+    from being exposed in the URL.
+</p> 
+<p>
+    A POST method sends form data in the 
+    <dfn title="Part of the HTTP request sent to a server">request body</dfn>,
+    making it invisible in the URL. It is commonly used for login forms, registration, payments, and contact forms. It 
+    is more secure than GET as the data is not stored in browser history and can handle large amounts of data. However 
+    it cannot be bookmarked or cached by browsers.
+</p>
+{% endblock %}

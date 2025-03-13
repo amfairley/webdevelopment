@@ -23,5 +23,10 @@ urlpatterns = [
         'tables/',
         views.HTML_tables,
         name="HTML_tables"
+    ),
+    path(
+        'forms/',
+        views.HTML_forms,
+        name="HTML_forms"
     )
 ]

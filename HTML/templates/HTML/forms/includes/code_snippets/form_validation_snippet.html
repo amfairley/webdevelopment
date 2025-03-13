@@ -1,0 +1,15 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code_snippet_html_forms_form_validation{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="html">&lt;input type="text" name="username" required minlength="3" maxlength="15"&gt;
+&lt;input type="email" name="email" required&gt;
+&lt;input type="password" name="password" required pattern=".{6,}"&gt;
+</code></pre>
+{% endblock %}

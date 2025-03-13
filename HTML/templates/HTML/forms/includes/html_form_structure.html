@@ -1,0 +1,125 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-forms-HTML-form-structure{% endblock %}
+
+<!--Section title-->
+{% block text_title %}HTML Form Structure{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Every HTML form is enclosed within 
+        <code class="written-code">&lt;form&gt;&lt;/form&gt;</code>
+        tags and consists of at least one input field allowing users to enter information. A basic form structure 
+        includes:
+    </p>
+    <ul>
+        <li>
+            A
+            <code class="written-code">&lt;form&gt;&lt;/form&gt;</code>
+            element to define the form.
+        </li>
+        <li>
+            Input fields where the user can input data. These are explored later on this page
+            <a class="text-link" href="#HTML-forms-common-form-elements">here</a>. 
+        </li>
+        <li>
+            <code class="written-code">&lt;label&gt;&lt;/label&gt;</code>
+            elements that quite simply, attach a label to the input field to highlight to the user what they should 
+            enter. Think of an “Email:” text to the side of where you enter your email when logging into a website. 
+            This can go either before or after their respective input fields depending on whether you want the label 
+            to appear to the left or right.
+        </li>
+        <li>
+            A submit button 
+            (<code class="written-code">&lt;button type="submit"&gt;&lt;button&gt;</code>
+            or
+            <code class="written-code">&lt;input type="submit"&gt;</code>)
+            to send the form data.
+        </li>
+    </ul>
+    <p>
+        Together these may look like this:
+    </p>
+    <!--Form example-->
+    {% include 'HTML/forms/includes/code_examples/basic_form_example.html' %}
+    <p>
+        The attributes for the elements seen above are:
+    </p>
+    <ul>
+        <li>
+            &lt;form action="/submit-form" method="POST"&gt;&lt;/form&gt;
+            <ul>
+                <li>
+                    action: specifies the URL where form data should be sent after submission. If omitted, the form 
+                    submits to the current page.
+                </li>
+                <li>
+                    method: defines how the form data is transmitted (GET or POST—explained later).
+                </li>
+            </ul>
+        </li>
+        <li>
+            &lt;label for="name"&gt;&lt;/label&gt;
+            <ul>
+                <li>
+                    for: the value put here will match the id attribute of an input so that we can match up the labels 
+                    and inputs. In this example this label is for the input with 
+                    <code class="written-code">id = "name"</code>.
+                </li>
+            </ul>
+        </li>
+        <li>
+            &lt;input type="text" id="name" name="name" required&gt;
+            <ul>
+                <li>
+                    type: the input type attribute lets us specify what type of input is used, for example some text, 
+                    an email, or a number among lots of others.
+                </li>
+                <li>
+                    id: IDs in HTML allow us to pick out a specific element. In forms they let us match that element up 
+                    with the label. The id here matches the 
+                    <code class="written-code">for</code>
+                    attribute in the preceding label, assigning the label and input together.
+                </li>
+                <li>
+                    name: this attribute is like id, but assigns a unique identifier to the input field so that the 
+                    form can be processed correctly. When submitted, the data sent to the server is in pairs made up of 
+                    this name value and the data entered by the user, for example for an email input you would probably 
+                    want to put the name attribute equal to “email” so that the data the server receives would look like
+                    <code class="written-code">email: example_email@domain.com</code>.
+                </li>
+                <li>
+                    required: an attribute preventing the form from submitting without a value entered here. This is a 
+                    form of form validation which is explored further down the page
+                    <a class="text-link" href="#HTML-forms-form-validation">here</a>.
+                </li>
+            </ul>
+        </li>
+        <li>
+            &lt;textarea id="message" name="message" rows="4"&gt;
+            <ul>
+                <li>
+                    The textarea is another input type providing a larger area for the user to type in, useful when you 
+                    are expecting a long answer such as getting a review from a user or in a complaints form.
+                </li>
+                <li>
+                    row: this is a textarea specific attribute detailing how many rows the element will take up in the 
+                    browser.
+                </li>
+            </ul>
+        </li>
+        <li>
+            &lt;button type="submit"&gt;
+            <ul>
+                <li>
+                    type: for HTML buttons their functions can be set via the type attribute. In this case the button 
+                    will submit the form. HTML buttons are explored more 
+                    <a class="text-link" href="#">here</a>.
+                </li>
+            </ul>
+        </li>
+    </ul>
+{% endblock %}

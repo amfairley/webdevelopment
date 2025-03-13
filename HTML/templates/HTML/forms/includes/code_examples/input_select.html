@@ -1,0 +1,19 @@
+{% extends 'includes/code_example.html' %}
+{% load static %}
+
+{% block code_file_id %}HTML-forms-input-select{% endblock %}
+
+{% block code_example_content %}
+<pre><code class="html">&lt;select name="country"&gt;
+    &lt;option value="us" selected&gt;United States&lt;/option&gt;
+    &lt;option value="uk"&gt;United Kingdom&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+{% endblock %}
+
+{% block code_result_content %}
+<select name="country">
+    <option value="us" selected>United States</option>
+    <option value="uk">United Kingdom</option>
+</select>
+{% endblock %}

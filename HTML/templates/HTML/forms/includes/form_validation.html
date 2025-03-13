@@ -1,0 +1,30 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-forms-form-validation{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Form Validation{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Forms should validate user input to ensure data is correct before submission. HTML provides some built-in 
+        validation using attributes like required, minlength, maxlength, and pattern.
+    </p>
+    {% include 'HTML/forms/includes/code_snippets/form_validation_snippet.html' %}
+    <ul>
+        <li>
+            required: ensures the field is not empty.
+        </li>
+        <li>
+            minlength & maxlength: sets character limits.
+        </li>
+        <li>
+            pattern: uses
+            <dfn title="REGular EXpression: a sequence of characters that define a search pattern e.g. must have a capital letter or number">regex</dfn>
+            to enforce specific formats.
+        </li>
+    </ul>
+{% endblock %}

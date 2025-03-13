@@ -51,12 +51,24 @@ def HTML_lists(request):
 
 
 def HTML_tables(request):
-    '''Return the HTML tabless page'''
+    '''Return the HTML tables page'''
     context = {
         'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
         'HTML/tables/tables.html',
+        context
+    )
+
+
+def HTML_forms(request):
+    '''Return the HTML forms page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'HTML/forms/forms.html',
         context
     )
