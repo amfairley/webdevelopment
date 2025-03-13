@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: HTML - Media{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Media</h2>
+    {% include 'HTML/media/includes/contents.html' %}
+    {% include 'HTML/media/includes/images.html' %}
+    {% include 'HTML/media/includes/video.html' %}
+    {% include 'HTML/media/includes/audio.html' %}
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-media-audio{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Audio{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Since the closure of myspace, audio on your website is generally considered a poor user experience, especially 
+        if it is set to play automatically. However, there may be some instances where you would need to include some 
+        audio and in these instances you can use the 
+        <code class="written-code">&lt;audio&gt;&lt;/audio&gt;</code>
+        element.
+    </p>
+    <p>
+        The syntax for this is an
+        <code class="written-code">&lt;audio&gt;&lt;/audio&gt;</code>
+        element with children or a child of self closing
+        <code class="written-code">&lt;source&gt;</code>
+        element(s).
+    </p>
+    {% include 'HTML/media/includes/code_snippets/audio_example.html' %}
+    <ul>
+        <li>
+            The 
+            <code class="written-code">controls</code>
+            attribute, like in the video element, allows the controls of the audio play to be accessible to your users.
+        </li>
+        <li>
+            Since not all browsers support all audio types, you can provide multiple audio files so that you can be 
+            sure at least one will work. These have a 
+            <code class="written-code">src</code>
+            attribute like images, linking to the location of the audio file and a 
+            <code class="written-code">type</code>
+            attribute that specifies the audio filetype.
+        </li>
+        <li>
+            The description under the sources is what is displayed if the browser cannot display the audio. This can be 
+            a message, an image or even a link.
+        </li>
+    </ul>
+{% endblock %}

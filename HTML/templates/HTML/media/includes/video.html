@@ -1,0 +1,50 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-media-video{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Video{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Unlike the 
+        <code class="written-code">&lt;img&gt;</code>
+        element, the 
+        <code class="written-code">&lt;video&gt;&lt;/video&gt;</code>
+        element is not self closing. A general video element might look like:
+    </p>
+    {% include 'HTML/media/includes/code_snippets/video_example.html' %}
+    <ul>
+        <li>
+            <code class="written-code">src="url.mp4"</code>
+            describes the source of the video in the same way that src in the image element would.
+        </li>
+        <li>
+            <code class="written-code">width="320" height="240" </code>
+            describe the size of the video window, but is best done through linking with an external styling sheet so 
+            can be mostly ignored.
+        </li>
+        <li>
+            <code class="written-code">controls</code>
+            allows your video to have the general controls that we would expect including play/pause, volume, and full 
+            screen mode.
+        </li>
+        <li>
+            <code class="written-code">autoplay</code>
+            makes your video autoplay when the page loads. This generally provides a poor user experience, however may 
+            have some niche use cases. Just don't include this attribute to make it not autoplay.
+        </li>
+        <li>
+            <code class="written-code">loop</code>
+            makes your video start from the beginning when it reaches the end. Again, this may have some niche use 
+            cases.
+        </li>
+        <li>
+            The description of the video goes between the opening and closing video tags. This is picked up by screen 
+            readers and will also show if the video cannot be loaded.
+        </li>
+    </ul>
+{% endblock %}

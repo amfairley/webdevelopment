@@ -1,0 +1,13 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code_snippet_html_media_video_example{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="html">&lt;video src="url.mp4" width="320" height="240" controls autoplay loop&gt;Text to be displayed if video cannot be loaded&lt;/video&gt;
+</code></pre>
+{% endblock %}

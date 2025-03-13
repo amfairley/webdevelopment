@@ -33,5 +33,10 @@ urlpatterns = [
         'links/',
         views.HTML_links,
         name="HTML_links"
+    ),
+    path(
+        'media/',
+        views.HTML_media,
+        name="HTML_media"
     )
 ]

@@ -1,0 +1,54 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-media-images{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Images{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        For many images on your website, you may wish to use stock photos or images that you have come across on the 
+        internet. In my case, I have either used personal images that I have the rights to or have sourced some images 
+        from free stock photo websites. It is best to credit the photographers if you use other people's work. The 
+        websites that I have used most to populate my sites with images have been
+        <a class="text-link" href="https://www.pexels.com/" title="https://www.pexels.com/" aria-label="Go to the pexels website" target="_blank" rel="noopener noreferrer">Pexels</a>
+        and
+        <a class="text-link" href="https://www.stockvault.net/" title="https://www.stockvault.net/" aria-label="Go to the stock vault website" target="_blank" rel="noopener noreferrer">Stockvault</a>.
+    </p>
+    <p>
+        After downloading your images, it is good to have them in a web friendly format. Some image formats have large 
+        file sizes and can take a long time to load, creating a frustrating experience for your users. So unless you 
+        intend to recreate the internet experience of the early 2000s, you should convert your images into web friendly 
+        formats such as .webp. For this, I have found that
+        <a class="text-link" href="https://cloudconvert.com/" title="https://cloudconvert.com/" aria-label="Go to the cloud convert website" target="_blank" rel="noopener noreferrer">Cloud Convert</a>
+        works wonderfully.
+    </p>
+    <p>
+        Image elements are self-closing and generally follow the form of:
+    </p>
+    {% include 'HTML/media/includes/code_snippets/images_img.html' %}
+    <ul>
+        <li>
+            <code class="written-code">src="filename.webp"</code>
+            defines the source of the image; where to get it from. If it is saved in your project, this would be the 
+            file path of the image. If it is stored online on some image sharing website such as 
+            <a class="text-link" href="https://imgur.com/" title="https://imgur.com/" aria-label="Go to Imgur" target="_blank" rel="noopener noreferrer">Imgur</a>,    
+            you would need to put the url for the direct link here.
+        </li>
+        <li>
+            <code class="written-code">alt="description"</code>
+            is the written description of the image. This serves 2 purposes. Firstly if, for any reason, the image 
+            fails to load, this text will be displayed instead so that the user can read what the image would have been.
+            Secondly, this is used by screen readers to describe the image to users with visual impairments, allowing 
+            you to create a truly accessible experience for your users.
+        </li>
+        <li>
+            <code class="written-code">width="200" height="200"</code>
+            specifies the height and width of your image. This is best done through linking with an external styling 
+            sheet so can be mostly ignored.
+        </li>
+    </ul>
+{% endblock %}

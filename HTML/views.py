@@ -84,3 +84,15 @@ def HTML_links(request):
         'HTML/links/links.html',
         context
     )
+
+
+def HTML_media(request):
+    '''Return the HTML media page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'HTML/media/media.html',
+        context
+    )
