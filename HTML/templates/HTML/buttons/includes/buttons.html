@@ -1,0 +1,49 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-buttones{% endblock %}
+
+<!--Section title-->
+{% block text_title %}All About HTML Buttons{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Buttons in HTML are essential interactive elements that enable users to submit forms, trigger actions, and 
+        navigate between pages. Buttons can be created using the 
+        <code class="written-code">&lt;button&gt;&lt;/button&gt;</code>
+        element or the 
+        <code class="written-code">&lt;input&gt;</code>
+        element with specific types. They can be styled and customized to enhance user experience. 
+    </p>
+    <p>
+        The standard
+        <code class="written-code">&lt;button&gt;&lt;/button&gt;</code>
+        element creates a clickable button that can contain text, images, or other elements.
+    </p>
+    {% include 'HTML/buttons/includes/code_examples/standard_button.html' %}
+    <p>
+        Within forms you can add a button to submit them in two different ways.
+    </p>
+    {% include 'HTML/buttons/includes/code_snippets/submit_button.html' %}
+    <p>
+        Or a button to reset the form entirely.
+    </p>
+    {% include 'HTML/buttons/includes/code_snippets/reset_button.html' %}
+    <p>
+        The common button attributes are:
+    </p>
+    <ul>
+        <li>
+            <code class="written-code">type</code>
+            defines the button's behaviour and can take the values of button, submit, or reset.
+        </li>
+        <li>
+            <code class="written-code">disabled</code>
+            makes a button be disabled by default. This can be useful when combining with JavaScript to enable the 
+            button once certain criteria have been met.
+            {% include 'HTML/buttons/includes/code_snippets/disabled_button.html' %}
+        </li>
+    </ul>
+{% endblock %}

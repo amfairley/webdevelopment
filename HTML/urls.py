@@ -38,5 +38,10 @@ urlpatterns = [
         'media/',
         views.HTML_media,
         name="HTML_media"
+    ),
+    path(
+        'buttons/',
+        views.HTML_buttons,
+        name="HTML_buttons"
     )
 ]

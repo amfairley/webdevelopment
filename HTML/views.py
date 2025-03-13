@@ -96,3 +96,15 @@ def HTML_media(request):
         'HTML/media/media.html',
         context
     )
+
+
+def HTML_buttons(request):
+    '''Return the HTML buttons page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'HTML/buttons/buttons.html',
+        context
+    )
