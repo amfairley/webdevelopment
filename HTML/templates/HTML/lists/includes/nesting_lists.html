@@ -1,0 +1,22 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-lists-nesting-lists{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Nesting Lists{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Lists can be nested within lists to create sub categories. This is very easily done, you just need to create a new 
+        <code class="written-code">&lt;ul&gt;&lt;/ul&gt;</code>
+        or
+        <code class="written-code">&lt;ol&gt;&lt;/ol&gt;</code>
+        within the list item element
+        <code class="written-code">&lt;li&gt;&lt;/li&gt;</code>
+        of a list.
+    </p>
+    {% include 'HTML/lists/includes/code_examples/nested_list_example.html' %}
+{% endblock %}

@@ -36,3 +36,15 @@ def HTML_common_elements(request):
         'HTML/common_elements/common_elements.html',
         context
     )
+
+
+def HTML_lists(request):
+    '''Return the HTML lists page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'HTML/lists/lists.html',
+        context
+    )

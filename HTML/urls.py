@@ -13,5 +13,10 @@ urlpatterns = [
         'common_elements/',
         views.HTML_common_elements,
         name="HTML_common_elements"
+    ),
+    path(
+        'lists/',
+        views.HTML_lists,
+        name="HTML_lists"
     )
 ]

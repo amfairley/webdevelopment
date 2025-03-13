@@ -1,0 +1,32 @@
+{% extends 'includes/code_example.html' %}
+{% load static %}
+
+{% block code_file_id %}HTML-lists-lists-overview-nested-list-example{% endblock %}
+
+{% block code_example_content %}
+<pre><code class="html">&lt;ul&gt;
+    &lt;li&gt;First item in a list&lt;/li&gt;
+    &lt;li&gt;Second item in a list
+        &lt;ol&gt;
+            &lt;li&gt;First item in a nested list&lt;/li&gt;
+            &lt;li&gt;Second item in a nested list&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Third item in a list&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+{% endblock %}
+
+{% block code_result_content %}
+    <ul>
+        <li>First item in a list</li>
+        <li>Second item in a list
+            <ol>
+                <li>First item in a nested list</li>
+                <li>Second item in a nested list</li>
+            </ol>
+        </li>
+        <li>Third item in a list</li>
+    </ul>
+{% endblock %}
+    

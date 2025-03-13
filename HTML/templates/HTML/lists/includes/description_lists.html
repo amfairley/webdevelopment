@@ -1,0 +1,26 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-lists-description-lists{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Description Lists{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Along with unordered and ordered lists, there are also description lists 
+        <code class="written-code">&lt;dl&gt;&lt;/dl&gt;</code>
+        that has a pair Description Terms 
+        <code class="written-code">&lt;dt&gt;&lt;/dt&gt;</code>
+        and Description Data 
+        <code class="written-code">&lt;dd&gt;&lt;/dd&gt;</code>
+        instead of list items 
+        <code class="written-code">&lt;li&gt;&lt;/li&gt;</code>.
+        This works very well for things like glossaries or even FAQs if you were to set the questions as the 
+        Description Term and answers as Description Data. Description lists do not have bullet points or numbers 
+        associated with them.
+    </p>
+    {% include 'HTML/lists/includes/code_examples/description_list_example.html' %}
+{% endblock %}

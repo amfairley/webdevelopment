@@ -1,0 +1,20 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-lists-lists-overview{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Lists Overview{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Lists are very important in HTML and, although they may not look like it, many navigation bars in websites are 
+        actually lists. Lists can be broken down into two main types; unordered lists (ul) and ordered lists (ol). 
+        Unordered lists are just bullet points, whereas ordered lists are numbered. Nested inside these are list item 
+        <code class="written-code">&lt;li&gt;&lt;/li&gt;</code>
+        elements that make up the rest of the list.
+    </p>
+    {% include 'HTML/lists/includes/code_examples/list_example.html' %}
+{% endblock %}

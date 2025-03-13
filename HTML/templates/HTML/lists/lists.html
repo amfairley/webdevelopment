@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: HTML - Lists{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Lists</h2>
+    {% include 'HTML/lists/includes/contents.html' %}
+    {% include 'HTML/lists/includes/lists_overview.html' %}
+    {% include 'HTML/lists/includes/description_lists.html' %}
+    {% include 'HTML/lists/includes/nesting_lists.html' %}
+{% endblock %}
