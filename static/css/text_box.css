@@ -35,12 +35,14 @@ body.night-mode .text-box p {
     color: #D4D4D4;
 }
 
-.text-box ul {
+.text-box ul,
+.text-box ol {
     font-family: 'Roboto', Arial, sans-serif;
     color: #4D4D4C;
 }
 
-body.night-mode .text-box ul {
+body.night-mode .text-box ul,
+body.night-mode .text-box ol {
     color: #D4D4D4;
 }
 
