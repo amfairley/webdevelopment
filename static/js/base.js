@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     dayButton.addEventListener("click", function () {
         document.body.classList.remove("night-mode");
         document.body.classList.add("day-mode");
+        localStorage.setItem("theme", "day"); // Save preference
         setSelectedMode("<i class='fa-solid fa-sun'></i>");
         hightlightJsCDN.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css');
     });
@@ -34,15 +35,22 @@ document.addEventListener("DOMContentLoaded", function () {
     nightButton.addEventListener("click", function () {
         document.body.classList.remove("day-mode");
         document.body.classList.add("night-mode");
+        localStorage.setItem("theme", "night"); // Save preference
         setSelectedMode("<i class='fa-solid fa-moon'></i>");
         hightlightJsCDN.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css');
     });
 
-    // Initialize with the default selected mode
-    if (document.body.classList.contains("night-mode")) {
+    // Initialize each page with the chosen mode
+    const storedTheme = localStorage.getItem("theme");
+
+    if (storedTheme === "night") {
+        document.body.classList.add("night-mode");
+        document.body.classList.remove("day-mode");
         setSelectedMode("<i class='fa-solid fa-moon'></i>");
         hightlightJsCDN.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css');
     } else {
+        document.body.classList.add("day-mode");
+        document.body.classList.remove("night-mode");
         setSelectedMode("<i class='fa-solid fa-sun'></i>");
         hightlightJsCDN.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css');
     }
