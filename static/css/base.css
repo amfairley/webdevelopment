@@ -51,6 +51,16 @@ code {
     color: inherit;
 }
 
+kbd {
+    color: #f5f5f5;
+    background-color: #001F5C;
+}
+
+body.night-mode kbd {
+    color: #1E1E1E;
+    background-color: #FFD700;
+}
+
 /* ---------- Navigation bar ---------- */
 /* Bar */
 .nav-wrapper {
