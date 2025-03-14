@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: HTML - Example{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>HTML Example</h2>
+    {% include 'HTML/example/includes/example.html' %}
+{% endblock %}

@@ -132,3 +132,15 @@ def HTML_accessibility(request):
         'HTML/accessibility/accessibility.html',
         context
     )
+
+
+def HTML_example(request):
+    '''Return the HTML example page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'HTML/example/example.html',
+        context
+    )

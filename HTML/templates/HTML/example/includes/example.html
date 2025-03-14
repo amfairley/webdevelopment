@@ -1,0 +1,16 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-example{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Workable HTML Example{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Here is an example layout of a basic HTML file that should get you up and going with your first project.
+    </p>
+    {% include 'HTML/example/includes/code_snippets/html_example.html' %}
+{% endblock %}

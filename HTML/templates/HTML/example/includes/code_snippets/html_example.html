@@ -1,0 +1,66 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code_snippet_html_example{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt; &lt;!-- Optional but recommended --&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; &lt;!-- Good for responsive design --&gt;
+        &lt;meta name="keywords" content=""&gt;
+        &lt;meta name="description" content=""&gt;
+        &lt;meta name="author" content=""&gt;
+        &lt;title&gt;Page Title&lt;/title&gt; &lt;!-- Edit a title for the page --&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;header&gt;
+            &lt;h1&gt;Brand Name&lt;/h1&gt;
+            &lt;nav&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href=""&gt;Navigation link 1&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=""&gt;Navigation link 2&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;
+        &lt;/header&gt;
+        &lt;main&gt;
+            &lt;section&gt;
+                &lt;article&gt;
+                    &lt;h2&gt;Article title&lt;/h2&gt;
+                    &lt;p&gt;Article text&lt;/p&gt;
+                    &lt;blockquote&gt;Some quote&lt;/blockquote&gt;
+                    &lt;figure&gt;
+                        &lt;img src="example.jpg" alt="Description of the image."&gt;
+                        &lt;figcaption&gt;A caption under the image that the user can read&lt;/figcaption&gt;
+                    &lt;/figure&gt;
+                &lt;/article&gt;
+            &lt;/section&gt;
+            &lt;section&gt;
+                &lt;h2&gt;Section title&lt;/h2&gt;
+                &lt;details&gt;
+                    &lt;summary&gt;In this section I will show a picture&lt;/summary&gt;
+                    &lt;p&gt;Not here though, just below this widget.&lt;/p&gt;
+                &lt;/details&gt;
+                &lt;picture&gt;
+                    &lt;source srcset="image.webp" type="image/webp"&gt;
+                    &lt;source srcset="image.jpg" type="image/jpeg"&gt;
+                    &lt;img src="fallback.jpg" alt="Description of image"&gt;
+                &lt;/picture&gt;
+            &lt;/section&gt;
+        &lt;/main&gt;
+        &lt;footer&gt;
+            &lt;address&gt;
+                Address line 1&lt;br&gt;
+                Address line 2&lt;br&gt;
+                &lt;a href=”InstagramURL” title=”InstagramURL” aria-label=”Go to our Instagram page (opens in new tab) target=”_blank” rel="noopener noreferrer"&gt;Instagram&lt;/a&gt; 
+            &lt;/address&gt;
+        &lt;/footer&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+{% endblock %}

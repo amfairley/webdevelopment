@@ -53,5 +53,10 @@ urlpatterns = [
         'accessibility/',
         views.HTML_accessibility,
         name="HTML_accessibility"
+    ),
+    path(
+        'example/',
+        views.HTML_example,
+        name="HTML_example"
     )
 ]
