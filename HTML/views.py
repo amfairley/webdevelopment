@@ -111,12 +111,24 @@ def HTML_buttons(request):
 
 
 def HTML_semantic(request):
-    '''Return the HTML buttons page'''
+    '''Return the HTML semantics page'''
     context = {
         'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
         'HTML/semantic/semantic_html.html',
+        context
+    )
+
+
+def HTML_accessibility(request):
+    '''Return the HTML accessibility page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'HTML/accessibility/accessibility.html',
         context
     )

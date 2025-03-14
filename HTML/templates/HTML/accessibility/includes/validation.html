@@ -1,0 +1,33 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-accessibility-validation{% endblock %}
+
+<!--Section title-->
+{% block text_title %}HTML Validation{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You will want to validate the HTML code that you have written to ensure that it complies with the standards set 
+        by
+        <abbr title="World Wide Web Consortium">W3C</abbr>.
+        IT is important to make sure that your syntax is correct, so that things like cross-browser compatibility and 
+        <abbr title="Search Engine Optimisation">SEO</abbr>
+        are up to snuff so that your website can be found and enjoyed by more users. I use the 
+        <a class="text-link" href="https://validator.w3.org/nu/#l218c60" title="https://validator.w3.org/nu/#l218c60" aria-label="Go to the W3C HTML validator" target="_blank" rel="noopener noreferrer">W3C HTML validator</a>.
+        Whilst your site is still in development you can pick “text input” from the <strong>Check by</strong> dropdown 
+        and copy and paste your code into the textarea before clicking <strong>check</strong>.
+    </p>
+    <p>
+        For websites created using 
+        <dfn title="A python based full stack web framework">Flask</dfn>
+        or
+        <dfn title="Another python based full stack web framework">Django</dfn>
+        you may have some templating language in your HTML files that will result in errors. To get around this and to 
+        ensure that all of your HTML is up to scratch, run your website locally then right click in the browser and 
+        select <strong>view page source</strong> or <kbd><kbd>Ctrl</kbd> + <kbd>U</kbd></kbd> in Google Chrome. This will open a 
+        new tab with all of the HTML and then you can simply copy and paste this into the validator.
+    </p>
+{% endblock %}

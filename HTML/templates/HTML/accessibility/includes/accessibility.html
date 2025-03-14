@@ -1,0 +1,46 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}HTML-accessibility-accessibility{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Accessibility in HTML{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Providing accessibility in our HTML allows our websites to be enjoyed by more users. This can come from making 
+        sure that our colour schemes do not clash so that they can be seen well by colour blind users or that our 
+        images have an alt description on them so that they can be read by screen readers for visually impaired users.
+    </p>
+    <p>
+        Alt attributes have been covered in the 
+        <a class="text-link" href="{% url 'HTML_media' %}#HTML-media-images">HTML media section</a>
+        and colour schemes fall under the purview of the
+        <a class="text-link" href="#">CSS accessibility</a>
+        guidelines.
+    </p>
+    <p>
+        The remaining HTML attribute to consider is the
+        <abbr title="Accessible Rich Internet Applications">ARIA</abbr> 
+        label. ARIA labels attach a label to an element that has a purpose or behaviour. For instance labelling links
+        with what they do.
+    </p>
+    {% include 'HTML/accessibility/includes/code_snippets/aria_example.html' %}
+    <p>
+        The aria-labelledby attribute is used in HTML to explicitly associate a label or multiple labels with an 
+        element, helping assistive technologies like screen readers convey the right information to users. The value of 
+        aria-labelledby should be a space-separated list of element IDs. These elements listed will contain the text 
+        content to be used as the label.
+    </p>
+    <p>
+        Screen readers will read the combined text content of the referenced elements, in order, as the accessible name 
+        for the element with aria-labelledby. In the example below, assistive technology will read: “Main Title 
+        Subtitle” as the accessible name for the
+        <code class="written-code">div</code>
+        as these are the contents of the elements with ids "heading-one" and "heading-two". 
+    </p>
+    {% include 'HTML/accessibility/includes/code_snippets/aria_labelled_example.html' %}
+
+{% endblock %}

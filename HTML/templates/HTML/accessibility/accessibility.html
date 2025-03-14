@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: HTML - Accessibility{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Accessibility and Validation</h2>
+    {% include 'HTML/accessibility/includes/contents.html' %}
+    {% include 'HTML/accessibility/includes/accessibility.html' %}
+    {% include 'HTML/accessibility/includes/validation.html' %}
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code_snippet_aria_labelled_example{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="html">&lt;div aria-labelledby="heading-one heading-two"&gt;
+    &lt;h1 id="heading-one"&gt;Main Title&lt;/h1&gt;
+    &lt;h2 id="heading-two"&gt;Subtitle&lt;/h2&gt;
+    &lt;p&gt;This section contains detailed information.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+{% endblock %}
