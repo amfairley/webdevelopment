@@ -2,7 +2,7 @@
 {% load static %}
 
 <!--Section ID to link in contents-->
-{% block text_section_id %}HTML-common-elements-ids-and-classes{% endblock %}
+{% block text_section_id %}HTML-home-ids-and-classes{% endblock %}
 
 <!--Section title-->
 {% block text_title %}IDs and Classes{% endblock %}
@@ -19,18 +19,18 @@
         to that specific part of the page. There are two ways of doing this; you can assign an element an id attribute 
         or a class attribute. 
     </p>
-    {% include 'HTML/common_elements/includes/code_snippets/id_example.html' %}
+    {% include 'HTML/home/includes/code_snippets/id_example.html' %}
     <p>
         Classes are used to group multiple elements together. For instance if you have style rules for a set of 
         paragraphs, you can target all of these whilst leaving other paragraphs untouched by giving them the same 
         class, so this is great to use when you are applying reusable styles across different parts of your website.
     </p>
-    {% include 'HTML/common_elements/includes/code_snippets/class_example.html' %}
+    {% include 'HTML/home/includes/code_snippets/class_example.html' %}
     <p>
         Multiple classes can be applied to the same element by putting them in a space separated list as the class 
         attribute value.
     </p>
-    {% include 'HTML/common_elements/includes/code_snippets/multiple_class_example.html' %}
+    {% include 'HTML/home/includes/code_snippets/multiple_class_example.html' %}
     <p>
         IDs, being unique, can only take one value.
     </p>
