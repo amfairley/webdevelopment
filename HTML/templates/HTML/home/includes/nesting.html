@@ -25,4 +25,21 @@
          element and then continue the rest of the paragraph. This will look like:
     </p>
         {% include 'HTML/home/includes/code_examples/nesting_example.html' %}
+
+    <p>
+        Elements that are nested immediately inside of another element have the relationship of a parent and child. In 
+        the above example the
+        <code class="written-code">&lt;em&gt;&lt;/em&gt;</code>
+        element is the child of the
+        <code class="written-code">&lt;p&gt;&lt;/p&gt;</code>
+        element. If there were other child elements of the 
+        <code class="written-code">&lt;p&gt;&lt;/p&gt;</code>
+        element, these would be sibling elements to the 
+        <code class="written-code">&lt;em&gt;&lt;/em&gt;</code>
+        element. If the 
+        <code class="written-code">&lt;em&gt;&lt;/em&gt;</code>
+        element had any child elements of it's own, these would be grandchild elements of the 
+        <code class="written-code">&lt;p&gt;&lt;/p&gt;</code>
+        element. See, HTML is all about building a big happy family.
+    </p>
 {% endblock %}
