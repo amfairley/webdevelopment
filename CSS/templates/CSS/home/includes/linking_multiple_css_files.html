@@ -1,0 +1,18 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-home-linking-multiple-css-files{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Linking Multiple CSS Files{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        <code class="written-code">@import</code>
+        is used to import one stylesheet into another. This allows a chain of CSS files and you can use it to import 
+        CSS rules from the web to your website such as a cool new font from Google Fonts, explained further 
+        <a class="text-link" href="#" aria-label="Go to the CSS Google Fonts section">here</a>.
+    </p>
+{% endblock %}

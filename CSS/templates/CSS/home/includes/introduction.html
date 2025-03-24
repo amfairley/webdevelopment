@@ -1,0 +1,22 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-home-introduction{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Introduction To CSS{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        HTML provides the structure of a webpage, but it's not enough to create visually appealing, user-friendly sites 
+        because HTML was designed for content, not design. The appearance is handled with CSS (Cascading Style Sheets) 
+        which allows us to separate content, in the form of HTML, from presentation, in the form of CSS. This clear 
+        delineation and separation of function makes websites easier to design and maintain.
+    </p>
+    <p>
+        CSS is used to describe how HTML elements look including the colour and size of elements, their layout and how 
+        they change depending on your screen size.
+    </p>
+{% endblock %}

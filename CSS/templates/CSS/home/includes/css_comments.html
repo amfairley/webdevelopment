@@ -1,0 +1,18 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-home-css-comments{% endblock %}
+
+<!--Section title-->
+{% block text_title %}CSS Comments{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Like HTML, you can put comments in CSS code that are only there for humans to read and will not be read by the 
+        browser. The sytanx for this is:
+    </p>
+    {% include 'CSS/home/includes/code_snippets/css_comment_example.html' %}
+    {% include 'CSS/home/includes/code_snippets/css_multi_line_comment_example.html' %}
+{% endblock %}

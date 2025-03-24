@@ -1,0 +1,42 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-selectors-pseudo-classes{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Pseudo Classes{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Pseudo classes specify a certain state of the selected element, giving you a little bit of functionality. 
+        Having your cursor change to a hand when you move it over a link or seeing the colours and border of a button 
+        change for the split second you click it are examples of pseudo classes. They take the syntax of a colon and a 
+        value after the selector. 
+    </p>
+    <ul>
+        <li>
+            <p>
+                <code class="written-code">:focus</code>
+                is used to set the style of an element when it is focused, be it by clicking it with a mouse, tabbing 
+                to it with the keyboard, or touching it with your finger on a touchscreen.
+            </p>
+            {% include 'CSS/selectors/includes/code_snippets/pseudo_focus.html' %}
+        </li>
+        <li>
+            <p>
+                <code class="written-code">:active</code>
+                is used to set the style of an element when it is actively being clicked down on.
+            </p>
+            {% include 'CSS/selectors/includes/code_snippets/pseudo_active.html' %}
+        </li>
+        <li>
+            <p>
+                <code class="written-code">:hover</code>
+                is used to style the element when the cursor is hovered over it.
+            </p>
+            {% include 'CSS/selectors/includes/code_snippets/pseudo_hover.html' %}
+        </li>
+    </ul>
+{% endblock %}

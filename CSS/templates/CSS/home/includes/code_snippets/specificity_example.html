@@ -1,0 +1,21 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code_snippet_css_specificity{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="css">p {
+    color: green !important;
+    font-size: large;
+}
+p {
+    color: blue;
+    font-size: small;
+}
+</code></pre>
+{% endblock %}
+    

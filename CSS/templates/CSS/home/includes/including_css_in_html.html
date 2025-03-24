@@ -1,0 +1,38 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-home-including-css-in-html{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Including CSS in HTML{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        CSS rules are often saved as an external .css file which can apply to the whole website, or just some pages, 
+        depending on how you link them. Without a CSS file, they can styled inline directly in the HTML with style 
+        attribute.
+    </p>
+    {% include 'CSS/home/includes/code_snippets/including_css_inline.html' %}
+    <p>
+        The makes the HTML code very cumbersome and is only useful in some niche scenarios.
+    </p>
+    <p>
+        Alternatively the style rules can be defined within a
+        <code class="written-code">&lt;style&gt;&lt;/style&gt;</code>
+        element inside the 
+        <code class="written-code">&lt;head&gt;&lt;/head&gt;</code>
+        element. This is known as internal styling.
+    </p>
+    {% include 'CSS/home/includes/code_snippets/including_css_internal.html' %}
+    <p>
+        The best way to include styling rules is externally from their own .css file, often saved under 
+        static/css/base.css or similar. This is then linked in the 
+        <code class="written-code">&lt;head&gt;&lt;/head&gt;</code>
+        element in a self closing
+        <code class="written-code">&lt;link&gt;&lt;/link&gt;</code>
+        element.
+    </p>
+    {% include 'CSS/home/includes/code_snippets/including_css_external.html' %}
+{% endblock %}

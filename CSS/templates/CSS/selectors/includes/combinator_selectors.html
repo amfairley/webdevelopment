@@ -1,0 +1,61 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-selectors-combinator-selectors{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Combinator Selectors{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can also select elements based on the relationship between them. Chaining selectors is the “AND” select and 
+        applies to elements that meet all the criteria. The syntax is a period (.) between the selectors with no 
+        spacing. For instance if you had a rule that gave all elements with the class of green-text the colour of green,
+        but you also want any level 2 heading with the colour of green-text to have a 23pt font size you would create
+        a rule like:
+    </p>
+    {% include 'CSS/selectors/includes/code_snippets/chaining_selector.html' %}
+    <p>
+        Use multiple selectors for an “OR” selection and applies to all of the selectors. The syntax is to have a comma 
+        and a space between each selector.
+    </p>
+    {% include 'CSS/selectors/includes/code_snippets/multiple_selector.html' %}
+    <p>
+        A cleaner variation of the above would be to put each selector on a new line.
+    </p>
+    {% include 'CSS/selectors/includes/code_snippets/multiple_selector_2.html' %}
+    <p>
+        Child selectors target specific elements that are the child elements of others by using a greater than (&gt;) 
+        between the selectors. This could be done with types such as all paragraph elements that are child elements of 
+        divs.
+    </p>
+    {% include 'CSS/selectors/includes/code_snippets/child_selector.html' %}
+    <p>
+        Or with classes or IDs such as all divs that are children of the element with id "main_element".
+    </p>
+    {% include 'CSS/selectors/includes/code_snippets/child_selector_2.html' %}
+    <p>
+        Similarly you can select all descendants, not just children by just putting a space between the selectors. This 
+        example will target paragraph decendants of h1 elements even if they are nested inside other elements under the 
+        h1.
+    </p>
+    {% include 'CSS/selectors/includes/code_snippets/descendant_selector.html' %}
+    <p>
+        To target elements that are both the children of the same element (sibling elements) the syntax is 
+        first_selector~sibling. For example for all h2 siblings of a h1 element:
+    </p>
+    {% include 'CSS/selectors/includes/code_snippets/sibling_selector.html' %}
+    <p>
+        You can also select only the next sibling when reading through the code. This can be done by using the + sign. 
+        The following would only target the next h2 element on the same layer as the h1 element:
+    </p>
+    {% include 'CSS/selectors/includes/code_snippets/sibling_selector_2.html' %}
+    <p>
+        You can double up the element types to create a niche scenario where you want all but the first of the siblings 
+        to be targeted. The following would apply the rule to every div on the same level except the first div child on 
+        that level.
+    </p>
+    {% include 'CSS/selectors/includes/code_snippets/sibling_selector_3.html' %}
+{% endblock %}

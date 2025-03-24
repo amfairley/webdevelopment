@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: CSS - Selectors{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Selectors</h2>
+
+    {% include 'CSS/selectors/includes/contents.html' %}
+    {% include 'CSS/selectors/includes/what_are_selectors.html' %}
+    {% include 'CSS/selectors/includes/simple_selectors.html' %}
+    {% include 'CSS/selectors/includes/attribute_selectors.html' %}
+    {% include 'CSS/selectors/includes/combinator_selectors.html' %}
+    {% include 'CSS/selectors/includes/pseudo_classes.html' %}
+    {% include 'CSS/selectors/includes/pseudo_elements.html' %}
+    {% include 'CSS/selectors/includes/inherit.html' %}
+{% endblock %}

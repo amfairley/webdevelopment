@@ -1,0 +1,33 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-home-css-syntax{% endblock %}
+
+<!--Section title-->
+{% block text_title %}CSS Syntax{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Each “block” of CSS that we write is referred to as a CSS Rule. These rules are made up of a selector and one 
+        or more declarations.
+    </p>
+    <p>
+        The selector tells us what part of the website the rule applies to and the declarations tell us what changes to 
+        apply to that part. The declarations are grouped inside curly brackets and are made up of a property: value 
+        pair separated by semi-colons. 
+    </p>
+    <p>
+        The general syntax of a rule is the selector on one line with a space before the opening curly bracket, then 
+        go down a line and tab once in to put your first declaration property: value pair ending the line with a 
+        semi-colon. If there is a second declaration property: value pair, go to the next line and tab to the same 
+        indent level and repeat the process. When finished with your declarations, go down another line and close the 
+        curly bracket on the same indent level as the selector.
+    </p>
+    <p>
+        As an example, the following CSS rule selects a paragraph element, p, and adds the declaration of making it 
+        bold and green. 
+    </p>
+    {% include 'CSS/home/includes/code_snippets/css_syntax_example.html' %}
+{% endblock %}

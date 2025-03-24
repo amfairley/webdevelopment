@@ -1,1 +1,21 @@
-<h1>CSS home</h1>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: CSS{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>CSS</h2>
+
+    {% include 'CSS/home/includes/contents.html' %}
+    {% include 'CSS/home/includes/introduction.html' %}
+    {% include 'CSS/home/includes/css_syntax.html' %}
+    {% include 'CSS/home/includes/including_css_in_html.html' %}
+    {% include 'CSS/home/includes/linking_multiple_css_files.html' %}
+    {% include 'CSS/home/includes/css_comments.html' %}
+    {% include 'CSS/home/includes/specificity.html' %}
+    {% include 'CSS/home/includes/colours.html' %}
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-selectors-inherit{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Inherit{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Inherit is value that a lot of CSS properties can take which essentially means just use the same rule as the 
+        parent elements. For example, a paragraph with the color property set to inherit will have the same font colour 
+        as its parent element.
+    </p>
+    {% include 'CSS/selectors/includes/code_snippets/inherit.html' %}
+{% endblock %}

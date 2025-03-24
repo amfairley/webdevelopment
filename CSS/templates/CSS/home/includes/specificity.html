@@ -1,0 +1,33 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-home-specificity{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Specificity{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        CSS specificity determines which styles are applied to an element when multiple rules target the same element. 
+        The browser uses a hierarchy to decide which declaration takes precedence; from lowest specificity of type 
+        selectors, through class selectors, up to ID selectors. More on selectors can be found 
+        <a class="text-link" href="#" aria-label="Go to the CSS selectors section">here</a>.
+    </p>
+    <p>
+        When two selectors have the same specificity, CSS is read from top to bottom, so the latter declaration in the 
+        stylesheet will override the former. However, you can force a style to override all others by using the 
+        <code class="written-code">!important</code> 
+        declaration, like so:
+    </p>
+    {% include 'CSS/home/includes/code_snippets/specificity_example.html' %}
+    <p>
+        Even though the declaration for the blue paragraphs comes second, it does not overwrite the 
+        <code class="written-code">!important</code> 
+        green rule. However, the font-size does not have the 
+        <code class="written-code">!important</code>, 
+        so the browser would take this second declaration over the former, so you would end up with a blue paragraph 
+        with small font.
+    </p>
+{% endblock %}

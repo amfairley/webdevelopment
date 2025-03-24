@@ -41,6 +41,18 @@
                     <li><a class="nav-link" href="{% url 'HTML_example' %}">Example HTML File</a></li>
                 </ul>
             </li>
+            <!--CSS-->
+            <li class="nav-item">
+                <span class="d-flex align-items-center">
+                    <a class="nav-link" href="{% url 'CSS_home' %}">CSS</a>
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#css-submenu" aria-expanded="false" aria-controls="css-submenu">
+                    </button>
+                </span>
+                <ul class="collapse list-unstyled ps-3" id="css-submenu">
+                    <li><a class="nav-link" href="{% url 'CSS_home' %}">CSS Home</a></li>
+                    <li><a class="nav-link" href="{% url 'CSS_selectors' %}">Selectors</a></li>
+                </ul>
+            </li>
             <!--Dropdown link example-->
             <li class="nav-item">
                 <span class="d-flex align-items-center">

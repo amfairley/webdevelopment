@@ -1,0 +1,92 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-selectors-pseudo-elements{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Pseudo Elements{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        I found understanding pseudo elements to be slightly confusing, but they are incredibly powerful. They are 
+        used to style specific parts of a HTML element without adding extra HTML. A easy case to understand is if you 
+        wanted to just style the first letter of a paragraph. Instead of wrapping that letter in a 
+        <code class="written-code">&lt;span&gt;&lt;/span&gt;</code>
+        element with a given ID or class and then using that ID or class selector to target it, you can just use 
+        p::first-letter. The syntax for pseudo elements is a double colon.
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Pseudo Element
+                </th>
+                <th>
+                    Description
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <code class="written-code">::before</code>
+                </td>
+                <td>
+                    Inserts content before the element's content.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">::after</code>
+                </td>
+                <td>
+                    Inserts content after the element's content.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">::first-letter</code>
+                </td>
+                <td>
+                    Styles the first letter of a block of text.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">::first-line</code>
+                </td>
+                <td>
+                    Styles the first line of a block of text.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">::selection</code>
+                </td>
+                <td>
+                    Styles the portion of the text selected by the user.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">::marker</code>
+                </td>
+                <td>
+                    Styles the marker (bullet point or number) of a list item (<code class="written-code">&lt;li&gt;</code>).
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">::placeholde</code>
+                </td>
+                <td>
+                    Styles the placeholder text inside a <code class="written-code">&lt;input&gt;</code> or <code class="written-code">&lt;textarea&gt;</code>.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
+
+

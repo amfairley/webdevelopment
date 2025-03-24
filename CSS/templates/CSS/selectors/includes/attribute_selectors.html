@@ -1,0 +1,27 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-selectors-attribute-selectors{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Attribute Selectors{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can also select your elements based on the attributes given to them. You can specify what attribute you are 
+        targeting by defining it within square brackets. For instance your external links are likely to be anchor tags 
+        with 
+        <code class="written-code">target="_blank"</code>
+        for them to open in a new tab. In order to target these but not internal links (that will not have a target 
+        attribute) you could use:
+    </p>
+    {% include 'CSS/selectors/includes/code_snippets/attribute_selector.html' %}
+    <p>
+        You can also target elements what have a specific value for their attribute by putting the element type before 
+        the square brackets and adding the value to the attribute inside the square brackets. Note that there is no 
+        space between the HTML element type and the opening square bracket of the attribute. 
+    </p>
+    {% include 'CSS/selectors/includes/code_snippets/attribute_selector_2.html' %}
+{% endblock %}
