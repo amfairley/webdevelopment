@@ -24,4 +24,5 @@ urlpatterns = [
     path('', include('homepage.urls')),
     path('intro_to_full_stack/', include('intro_to_full_stack.urls')),
     path('HTML/', include('HTML.urls')),
+    path('CSS/', include('CSS.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
