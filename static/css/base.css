@@ -32,7 +32,7 @@ dfn {
 }
 
 dfn:hover {
-    cursor: default;
+    cursor: help;
 }
 
 abbr {
