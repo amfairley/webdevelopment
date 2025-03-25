@@ -1,0 +1,115 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-display-and-positioning-vertical-align{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Vertical Align{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <!--Introduction-->
+    <p>
+        The vertical-align CSS property is used to align inline or inline-block elements vertically relative to their 
+        surrounding elements. It's particularly useful in situations where you want to fine-tune the positioning of 
+        elements that are in-line with text or other elements. Here are common scenarios where you can use 
+        vertical-align.
+    </p>
+    <!--Aligning Text and Inline Elements-->
+    <h4>Aligning Text and Inline Elements</h4>
+    <p>
+        The most common use of vertical-align is to align inline elements, such as images, with text. By default, 
+        inline elements are aligned to the baseline of the parent element, but you can adjust their position relative 
+        to the text.
+    </p>
+    {% include 'CSS/display_and_positioning/includes/code_snippets/vertical_align_inline.html' %}
+    <p>
+        In this example, the image will be aligned vertically in the middle of the surrounding text.
+    </p>
+    <!--Aligning Inline-Block Elements-->
+    <h4>Aligning Inline-Block Elements</h4>
+    <p>
+        If you have inline-block elements (such as 
+        <code class="written-code">&lt;button&gt;</code>,
+        <code class="written-code">&lt;div&gt;</code>,
+        or
+        <code class="written-code">&lt;img&gt;</code>)
+        and you want to control their vertical alignment relative to other inline-block elements or text, you can use 
+        vertical-align.
+    </p>
+    {% include 'CSS/display_and_positioning/includes/code_snippets/vertical_align_inline_block.html' %}
+    <p>
+        In this example:
+        <ul>
+            <li>Item 1 will align at the top of the line height.</li>
+            <li>Item 2 will align at the bottom of the line height.</li>
+        </ul>
+    </p>
+    <!--Centering an Inline Element Vertically-->
+    <h4>Centering an Inline Element Vertically</h4>
+    <p>
+        If you want to centre an inline element vertically within a line height, you can use vertical-align: middle; or 
+        adjust other values like top or bottom.
+    </p>
+    {% include 'CSS/display_and_positioning/includes/code_snippets/vertical_align_inline_vertically.html' %}
+    <p>
+        In this case, the span containing "centred text" will be aligned vertically in the middle of the line height, 
+        creating the effect of vertical centring.
+    </p>
+    <!--Align Table Cells-->
+    <h4>Align Table Cells</h4>
+    <p>
+        <code class="written-code">vertical-align</code>
+        is frequently used in table layouts to control how content is aligned within table cells 
+        (<code class="written-code">&lt;td&gt;</code>
+        or 
+        <code class="written-code">&lt;th&gt;</code>).
+        By default, content is aligned at the bottom of a table cell, but you can change it to top, middle, or bottom 
+        using vertical-align.
+    </p>
+    {% include 'CSS/display_and_positioning/includes/code_snippets/vertical_align_tables.html' %}
+    <p>
+        This will control the alignment of the content inside each cell relative to the height of the cell.
+    </p>
+    <!--Common Vertical Align Values-->
+    <h4>Common Vertical Align Values</h4>
+    <ul>
+        <li>
+            <code class="written-code">baseline</code>
+            aligns the element to the baseline of the parent.
+        </li>
+        <li>
+            <code class="written-code">top</code>
+            aligns the element to the top of the parent.
+        </li>
+        <li>
+            <code class="written-code">middle</code>
+            aligns the element to the middle of the line height.
+        </li>
+        <li>
+            <code class="written-code">bottom</code>
+            aligns the element to the bottom of the parent.
+        </li>
+        <li>
+            <code class="written-code">text-top</code>
+            aligns the top of the element with the top of the parent's font.
+        </li>
+        <li>
+            <code class="written-code">text-bottom</code>
+            aligns the bottom of the element with the bottom of the parent's font.
+        </li>
+    </ul>
+    <!--When Not to Use Vertical Align-->
+    <h4>When Not to Use Vertical Align</h4>
+    <p>
+        Flexbox and Grid Layouts: These layout systems provide more flexible and robust alignment controls, so 
+        vertical-align is not usually necessary.
+    </p>
+    <p>
+        Block-level Elements: vertical-align only works with inline or inline-block elements, so it won't have an 
+        effect on block-level elements like 
+        <code class="written-code">&lt;div&gt;</code>
+        by default.
+    </p>
+{% endblock %}

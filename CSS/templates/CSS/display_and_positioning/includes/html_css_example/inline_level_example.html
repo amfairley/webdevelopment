@@ -1,0 +1,25 @@
+{% extends 'includes/html_css_example.html' %}
+{% load static %}
+
+{% block code_file_id %}CSS-display-and-positioning-inline-level-example{% endblock %}
+
+{% block html_css_code_result_content %}
+<p>
+    This is an inline <span>element</span> inside a paragraph.
+</p>
+{% endblock %}
+
+{% block html_code_example_content %}
+<pre><code class="html">&lt;p&gt;
+    This is an inline &lt;span&gt;element&lt;/span&gt; inside a paragraph.
+&lt;/p&gt;
+</code></pre>
+{% endblock %}
+
+{% block css_code_example_content %}
+<pre><code class="css">/*This is set by default*/
+span {
+    display:inline;
+}
+</code></pre>
+{% endblock %}

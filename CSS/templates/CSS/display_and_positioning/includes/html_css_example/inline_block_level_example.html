@@ -1,0 +1,22 @@
+{% extends 'includes/html_css_example.html' %}
+{% load static %}
+
+{% block code_file_id %}CSS-display-and-positioning-inline-block-level-example{% endblock %}
+
+{% block html_css_code_result_content %}
+<div class="inline-div">Div1</div><div class="inline-div">Div2</div><div class="inline-div">Div3</div>
+{% endblock %}
+
+{% block html_code_example_content %}
+<pre><code class="html">&lt;div class="inline-div"&gt;Div1&lt;/div&gt;&lt;div class="inline-div"&gt;Div2&lt;/div&gt;&lt;div class="inline-div"&gt;Div3&lt;/div&gt;
+</code></pre>
+{% endblock %}
+
+{% block css_code_example_content %}
+<pre><code class="css">.inline-div {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+</code></pre>
+{% endblock %}

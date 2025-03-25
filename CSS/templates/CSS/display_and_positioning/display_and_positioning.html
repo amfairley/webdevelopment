@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: CSS - Display and Positioning{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/css/display_and_positioning.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Display and Positioning</h2>
+
+    {% include 'CSS/display_and_positioning/includes/contents.html' %}
+    {% include 'CSS/display_and_positioning/includes/introduction.html' %}
+    {% include 'CSS/display_and_positioning/includes/display.html' %}
+    {% include 'CSS/display_and_positioning/includes/positioning.html' %}
+    {% include 'CSS/display_and_positioning/includes/vertical_align.html' %}
+
+
+{% endblock %}

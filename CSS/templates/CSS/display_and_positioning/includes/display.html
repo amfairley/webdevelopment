@@ -1,0 +1,91 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-display-and-positioning-display{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Display{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <!--Introduction-->
+    <p>
+        The display property in CSS defines how an element should be displayed on the page. It determines whether an 
+        element behaves as a block-level element, an inline element, or something else entirely. The display property 
+        can be used to control the layout of an element and its interaction with neighbouring elements. The values that 
+        the display property can take are block, inline, inline-block, or none.
+    </p>
+    <!--Block level elements-->
+    <h4>Block-Level Elements</h4>
+    <p>
+        Block-level elements create a box that extends the full width of their parent container. These elements start 
+        on a new line and occupy the full width of their container. Common examples of block-level elements include 
+        <code class="written-code">&lt;div&gt;</code>,
+        <code class="written-code">&lt;p&gt;</code>,
+        <code class="written-code">&lt;h1&gt;</code>,
+        <code class="written-code">&lt;ul&gt;</code>,
+        and
+        <code class="written-code">&lt;section&gt;</code>.
+        The primary characteristic of block-level elements is that they push other elements below them, occupying the 
+        full horizontal space available.
+    </p>
+    {% include 'CSS/display_and_positioning/includes/html_css_example/block_level_example.html' %}
+    <p>
+        In the code above, the 
+        <code class="written-code">&lt;div&gt;</code>
+        element will create a block that spans the entire width of its parent element and thus the second
+        <code class="written-code">&lt;div&gt;</code>
+        will appear on the next line. To set an element as a block if it is not one by default use
+        <code class="written-code">display: block;</code>.
+    </p>
+    <p>
+        Block-level elements prevent other elements from appearing in the same horizontal space. This is one of the key 
+        differences between block-level elements and inline elements, which allow multiple elements to coexist on the 
+        same line.
+    </p>
+    <!--Inline level elements-->
+    <h4>Inline Elements</h4>
+    <p>
+        Inline elements, on the other hand, do not start on a new line. They only take up as much width as necessary 
+        and allow other inline elements to sit next to them horizontally. Examples of inline elements include 
+        <code class="written-code">&lt;span&gt;</code>,
+        <code class="written-code">&lt;a&gt;</code>,
+        <code class="written-code">&lt;strong&gt;</code>,
+        and
+        <code class="written-code">&lt;em&gt;</code>.
+    </p>
+    {% include 'CSS/display_and_positioning/includes/html_css_example/inline_level_example.html' %}
+    <p>
+        In this case, the 
+        <code class="written-code">&lt;span&gt;</code>
+        element will not start on a new line but will instead flow within the paragraph, taking up only as much space 
+        as required. To set an element as inline if it is not one by default use 
+        <code class="written-code">display: inline;</code>.
+    </p>
+    <!--Inline block elements-->
+    <h4>Inline-Block Elements</h4>
+    <p>
+        <code class="written-code">inline-block</code>
+        is a hybrid between block and inline elements. It allows the element to behave like a block-level element but 
+        remain inline with other elements. The element retains its block-level behaviour (it can have width and height),
+        but it will stay on the same line as other elements.
+    </p>
+    {% include 'CSS/display_and_positioning/includes/html_css_example/inline_block_level_example.html' %}
+    <p>
+        Here, all three 
+        <code class="written-code">&lt;div&gt;</code>
+        elements are aligned horizontally, but each retains block-like properties, such as having specific width and 
+        height. To set an element as an inline-block if it is not one by default use
+        <code class="written-code">display: inline-block;</code>.
+    </p>
+    <!--None-->
+    <h4>None</h4>
+    <p>
+        To completely remove an element from the page, set the display to none. This is useful in conjunction with 
+        <a class="text-link" href="" aria-label="Go to the media queries section">media queries</a> 
+        to remove an element under or above a certain screen size. To set an element as inline if it is not one by 
+        default use:
+        <code class="written-code">display: none;</code>.
+    </p>
+{% endblock %}

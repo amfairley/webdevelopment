@@ -1,0 +1,147 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-display-and-positioning-positioning{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Positioning{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <!--Introduction-->
+    <p>
+        Positioning properties in CSS allow you to control the position of an element relative to its normal position 
+        or to other elements on the page. These properties give you fine-grained control over where and how elements 
+        are placed, making it an essential part of layout design.
+    </p>
+    <!--Static-->
+    <h4>Static</h4>
+    <p>
+        By default, all elements have a position value of static. This means they are positioned according to the 
+        normal document flow. Elements with position: static will not be affected by the top, right, bottom, or left 
+        properties. They are placed where they would normally appear in the document, with no changes in their position.
+    </p>
+    {% include 'CSS/display_and_positioning/includes/code_snippets/position_static.html' %}
+    <p>
+        In most cases, you don't need to explicitly declare position: static; since it's the default value. Elements 
+        with 
+        <code class="written-code">position: static;</code>
+        will simply flow in the document, stacking one on top of the other.
+    </p>
+    <!--Relative-->
+    <h4>Relative</h4>
+    <p>
+        When you set an element's position to relative, it remains in the normal flow of the document, but you can 
+        offset it from its normal position using the top, bottom, left, and right properties. The offset values move 
+        the element relative to where it would normally appear from these sides, without affecting the positioning of 
+        other elements.
+    </p>
+    {% include 'CSS/display_and_positioning/includes/code_snippets/position_relative.html' %}
+    <p>
+        In this case, 
+        <code class="written-code">.box2</code>
+        will be moved 100px to the right (from the left) and 50px up (from the bottom) from its default position. It 
+        still occupies space in the document, so other elements will not overlap it. If you have some boxes one under 
+        the other, you can make one of the boxes appear to the right of the box above you would have to:
+        <ul>
+            <li>
+                Make
+                <code class="written-code">display: relative;</code>
+            </li>
+            <li>
+                Make
+                <code class="written-code">top:</code>
+                the negative of the height of the box to moves it up fully
+            </li>
+            <li>
+                Make
+                <code class="written-code">left:</code>
+                the width of the first box it has to go next to, so it is shifted from the left fully             
+            </li>
+        </ul>
+    </p>
+    <!--Absolute-->
+    <h4>Absolute</h4>
+    <p>
+        With 
+        <code class="written-code">position: absolute;</code>
+        an element is removed from the normal document flow. It is positioned relative to its closest positioned 
+        ancestor (an element with position: relative, absolute, or fixed), or the initial containing block (usually 
+        the 
+        <code class="written-code">&lt;html&gt;</code>
+        or
+        <code class="written-code">&lt;body&gt;</code>
+        element) if no positioned ancestor exists. Elements with position: absolute don't affect the layout of other 
+        elements, and they are free to be placed anywhere within their containing element using the top, bottom, left, 
+        and right properties.
+    </p>
+    {% include 'CSS/display_and_positioning/includes/code_snippets/position_absolute.html' %}
+    <p>
+        In this example (where 
+        <code class="written-code">.box</code>
+        is a child of 
+        <code class="written-code">.container</code>), 
+        <code class="written-code">.box</code>
+        will be positioned 20px down and 30px from the left of the 
+        <code class="written-code">.container</code>
+        element. Since the 
+        <code class="written-code">.box</code>
+        is absolutely positioned, it will not affect the layout of other elements, and its position is determined by 
+        its closest positioned ancestor 
+        (<code class="written-code">.container</code>).
+        It is worth noting that
+        <code class="written-code">.container</code> 
+        has 
+        <code class="written-code">position: relative;</code>
+        so that it is the closest positioned relative of
+        <code class="written-code">.box</code>.
+    </p>
+    <!--Fixed-->
+    <h4>Fixed</h4>
+    <p>
+        The 
+        <code class="written-code">position: fixed;</code>
+        declaration positions an element relative to the viewport, meaning it will remain in a fixed position on the 
+        screen even when the user scrolls. This is often used for elements such as sticky navigation bars that should 
+        stay in place as the user scrolls down the page or for “scroll-to-top” buttons.
+    </p>
+    {% include 'CSS/display_and_positioning/includes/code_snippets/position_fixed.html' %}
+    <p>
+        In this case, the header element will stay at the top of the page, even when the user scrolls down.
+    </p>
+    <!--Sticky-->
+    <h4>Sticky</h4>
+    <p>
+        <code class="written-code">position: sticky;</code>
+        is a relatively new CSS feature that combines the behaviour of both relative and fixed positioning. An element 
+        with 
+        <code class="written-code">position: sticky;</code>
+        behaves like a relatively positioned element until the user scrolls past it, at which point it becomes fixed to 
+        the viewport. It “sticks” to a specific position once the user scrolls past the defined threshold. 
+    </p>
+    <p>
+        It works very well for a 
+        <code class="written-code">&lt;nav&gt;</code>
+        element to stay in its normal flow until the user scrolls down, at which point it will stick to the top of the 
+        viewport. This is especially useful for navigation bars that you want to remain visible but not block content 
+        when they are out of view.
+    </p>
+    {% include 'CSS/display_and_positioning/includes/code_snippets/position_sticky.html' %}
+    <!--Offset-->
+    <h4>Offset</h4>
+    <p>
+        Offset properties (top, right, bottom, and left) allow you to move an element away from its default position or 
+        from a position relative to a parent element.
+    </p>
+    <ul>
+        <li>top: Moves an element down from its original position.</li>
+        <li>bottom: Moves an element up from the bottom of its container.</li>
+        <li>left: Moves an element away from the left edge of its container.</li>
+        <li>right: Moves an element away from the right edge of its container.</li>
+    </ul>
+    <p>
+        These properties are often used in combination with position: relative, absolute, fixed, or sticky to precisely 
+        position elements on the page.
+    </p>
+{% endblock %}
