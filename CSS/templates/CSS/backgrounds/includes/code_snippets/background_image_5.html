@@ -1,0 +1,18 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code_snippet_css_backgrounds_background_image_5{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="css">#example-div {
+	background-image: url('image.jpg');
+	background-color: blue; /* Fallback colour in case image does not load */
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+</code></pre>
+{% endblock %}

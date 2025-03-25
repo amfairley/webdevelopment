@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: CSS - Backgrounds{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/css/box_model.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Backgrounds</h2>
+
+    {% include 'CSS/backgrounds/includes/contents.html' %}
+    {% include 'CSS/backgrounds/includes/backgrounds_in_web_design.html' %}
+    {% include 'CSS/backgrounds/includes/background_colour.html' %}
+    {% include 'CSS/backgrounds/includes/background_image.html' %}
+    {% include 'CSS/backgrounds/includes/background_image_behaviour.html' %}
+    {% include 'CSS/backgrounds/includes/background_shorthand.html' %}
+
+{% endblock %}

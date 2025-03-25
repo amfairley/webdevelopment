@@ -72,3 +72,15 @@ def CSS_grids(request):
         'CSS/grids/grids.html',
         context
     )
+
+
+def CSS_backgrounds(request):
+    '''Return the CSS backgrounds page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'CSS/backgrounds/backgrounds.html',
+        context
+    )

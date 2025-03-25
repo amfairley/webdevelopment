@@ -1,0 +1,36 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-backgrounds-background-image-behaviour{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Background Image Behaviour{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Have you noticed how sometimes on websites when you scroll down, the background image scrolls too? This can be 
+        achieved with the 
+        <code class="written-code">background-attachment</code>
+        property. The values it can take are:
+    </p>
+    <ul>
+        <li>
+            <code class="written-code">scroll</code>
+            The background moves with the content. This is the default value.
+        </li>
+        <li>
+            <code class="written-code">fixed</code>
+            The background stays fixed in place as content scrolls.
+        </li>
+        <li>
+            <code class="written-code">local</code>
+            The background scrolls with the element's content, not the page.
+        </li>
+    </ul>
+    <p>
+        The fixed setting is often used to create parallax scrolling effects, where content moves over a stationary 
+        background.
+    </p>
+{% endblock %}

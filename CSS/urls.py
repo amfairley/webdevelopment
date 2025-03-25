@@ -13,4 +13,5 @@ urlpatterns = [
     ),
     path('flexbox/', views.CSS_flexbox, name="CSS_flexbox"),
     path('grids/', views.CSS_grids, name="CSS_grids"),
+    path('backgrounds/', views.CSS_backgrounds, name="CSS_backgrounds"),
 ]

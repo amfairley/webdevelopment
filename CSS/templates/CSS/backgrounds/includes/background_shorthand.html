@@ -1,0 +1,44 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-backgrounds-background-shorthand{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Background Shorthand{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Instead of writing each background property separately, you can use shorthand notation to define it all under 
+        one background parameter.
+    </p>
+    {% include 'CSS/backgrounds/includes/code_snippets/background_shorthand.html' %}
+    <p>
+        This single line sets:
+    </p>
+    <ul>
+        <li>
+            <code class="written-code">background-color: #FFF</code>
+        </li>
+        <li>
+            <code class="written-code">background-image: 'image.jpg'</code>
+        </li>
+        <li>
+            <code class="written-code">background-repeat: no-repeat</code>
+        </li>
+        <li>
+            <code class="written-code">background-position: center</code>
+        </li>
+        <li>
+            <code class="written-code">background-size: cover</code>
+        </li>
+        <li>
+            <code class="written-code">background-attachment: fixed</code>
+        </li>
+    </ul>
+    <p>
+        The order of shorthand values doesn't matter unless two properties share the same space, like 
+        background-position and background-size, in which case they're separated by a /.
+    </p>
+{% endblock %}

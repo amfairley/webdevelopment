@@ -1,0 +1,75 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-backgrounds-background-image{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Background Image{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The 
+        <code class="written-code">background-image</code>
+        property allows you to set an image as the background of an element by supplying the image url.
+    </p>
+    {% include 'CSS/backgrounds/includes/code_snippets/background_image_1.html' %}
+    <p>
+        You can include multiple background images by separating each with a comma.
+    </p>
+    {% include 'CSS/backgrounds/includes/code_snippets/background_image_2.html' %}
+    <p>
+        Other than a saved image, you can also use gradients for background images.
+    </p>
+    {% include 'CSS/backgrounds/includes/code_snippets/background_image_3.html' %}
+    <p>
+        Always pair 
+        <code class="written-code">background-image</code>
+        declarations with a 
+        <code class="written-code">background-color</code>
+        declaration to act as a fall-back in case the image does not load.
+    </p>
+    <p>
+        With the image or colour scheme chosen for the background, you can define how it will repeat with the 
+        <code class="written-code">background-repeat</code>
+        property. This can take the values of 
+        <code class="written-code">repeat</code>, 
+        <code class="written-code">repeat-x</code>, 
+        <code class="written-code">repeat-y</code>, 
+        or 
+        <code class="written-code">no-repeat</code>.
+        I generally set this to no-repeat for my needs.
+    </p>
+    <p>
+        The size of the background image can be set with 
+        <code class="written-code">background-size</code>.
+        It can be set to 
+        <code class="written-code">auto</code>,
+        which keeps the image at its original size,
+        <code class="written-code">cover</code>,
+        which scales the image to fully cover the background area (and may crop parts), or 
+        <code class="written-code">contain</code>
+        to scale the image to fully fit within the area (which may leave empty space). Alternatively you can provide 
+        actual sizes using pixels or percentages.
+    </p>
+    {% include 'CSS/backgrounds/includes/code_snippets/background_image_4.html' %}
+    <p>
+        Finally you can use the 
+        <code class="written-code">background-position</code>
+        property to define the starting position of the background image within the element with values of 
+        <code class="written-code">left</code>,
+        <code class="written-code">right</code>,
+        <code class="written-code">top</code>,
+        <code class="written-code">bottom</code>,
+        or 
+        <code class="written-code">center</code>
+        and combinations of these such as 
+        <code class="written-code">top left</code>.
+    </p>
+    <p>
+        For example you could have a background rule for a div looking like:
+    </p>
+    {% include 'CSS/backgrounds/includes/code_snippets/background_image_5.html' %}
+
+{% endblock %}
