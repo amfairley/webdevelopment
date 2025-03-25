@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: CSS - Visibility and Z-Positioning{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Visability and Z-Positioning</h2>
+
+    {% include 'CSS/visibility_and_z_positioning/includes/contents.html' %}
+    {% include 'CSS/visibility_and_z_positioning/includes/visibility.html' %}
+    {% include 'CSS/visibility_and_z_positioning/includes/z_positioning.html' %}
+
+{% endblock %}

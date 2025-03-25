@@ -1,0 +1,23 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-visability-and-z-positioning-visibility{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Visibility{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Visibility is a parameter that you can set in CSS to make an element invisible on the page, hiding the content but making it still take up space on the page.
+        <br>
+        <code class="written-code">visability: hidden;</code>
+        <br>
+        This differs from
+        <br>
+        <code class="written-code">display: hidden;</code>
+        <br>
+        which removes the element entirely from the page.
+    </p>
+{% endblock %}

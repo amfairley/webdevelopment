@@ -84,3 +84,15 @@ def CSS_backgrounds(request):
         'CSS/backgrounds/backgrounds.html',
         context
     )
+
+
+def CSS_visibility_and_z_positioning(request):
+    '''Return the CSS visibility and z positioning page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'CSS/visibility_and_z_positioning/visibility_and_z_positioning.html',
+        context
+    )

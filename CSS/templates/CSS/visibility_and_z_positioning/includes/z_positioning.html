@@ -1,0 +1,32 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-visability-and-z-positioning-z-positioning{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Z-Positioning{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Z-Positioning is how the browser handles what elements appear in front of others. It is very similar to moving 
+        around clipart or shapes in Microsoft Word using the bring-to-front or send-to-back transformations. These are 
+        set using the 
+        <code class="written-code">z-index</code>
+        parameter with a number for the value. The higher number, the more “on-top” it is. So with two elements taking 
+        up the same space, the user will only see the one with the higher z-index value.
+    </p>
+    <p>
+        A great use case for this is a modal, which is a pop up box that appears on the screen. You may want the 
+        background to dimmed slightly and not clickable by the user until the modal has been dealt with, either by 
+        confirming or logging in, etc. To achieve this you can have a black 
+        <code class="written-code">div</code>
+        element that takes up 100% of the height and width of the webpage with a opacity of 0.5 so that it is slightly 
+        see through. This would make everything behind it appear darker. Give it a high 
+        <code class="written-code">z-index</code>
+        value of, say, 900 so that it is always on top of the background things. Then give your modal a z-index value 
+        of 901 or greater so that it always on top of this black 
+        <code class="written-code">div</code>.
+    </p>
+{% endblock %}
