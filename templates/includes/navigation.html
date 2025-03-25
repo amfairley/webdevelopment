@@ -27,7 +27,7 @@
             <li class="nav-item">
                 <span class="d-flex align-items-center">
                     <a class="nav-link" href="{% url 'HTML_home' %}">HTML</a>
-                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#html-submenu" aria-expanded="false" aria-controls="html-submenu">
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#html-submenu" aria-expanded="false" aria-controls="html-submenu" aria-label="Open the HTML dropdown section">
                     </button>
                 </span>
                 <!--
@@ -53,7 +53,7 @@
             <li class="nav-item">
                 <span class="d-flex align-items-center">
                     <a class="nav-link" href="{% url 'CSS_home' %}">CSS</a>
-                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#css-submenu" aria-expanded="false" aria-controls="css-submenu">
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#css-submenu" aria-expanded="false" aria-controls="css-submenu" aria-label="Open the CSS dropdown section">
                     </button>
                 </span>
                 <ul class="collapse list-unstyled ps-3 {% if '/CSS' in request.path %}show{% endif %}" id="css-submenu">
@@ -66,7 +66,7 @@
             <li class="nav-item">
                 <span class="d-flex align-items-center">
                     <a class="nav-link" href="#">Dropdown example</a>
-                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#submenu" aria-expanded="false" aria-controls="submenu">
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#submenu" aria-expanded="false" aria-controls="submenu" aria-label="Open the Example dropdown section">
                     </button>
                 </span>
                 <ul class="collapse list-unstyled ps-3" id="submenu">
@@ -86,7 +86,7 @@
 </nav>
 
 <!-- Toggle button for small screens -->
-<button class="btn nav-menu-button d-lg-none m-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
+<button class="btn nav-menu-button d-lg-none m-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar" aria-label="Open the Mobile Navigation Bar">
     ☰ Menu
 </button>
 
@@ -94,7 +94,7 @@
 <nav class="offcanvas offcanvas-start offcanvas-navmenu" tabindex="-1" id="mobileSidebar">
     <div class="offcanvas-header">
         <h5 class="offcanvas-title">Navigation</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close the Mobile Navigation Bar"></button>
     </div>
     <div class="offcanvas-body">
         <ul class="nav flex-column">
@@ -104,7 +104,7 @@
             <li class="nav-item">
                 <span class="d-flex align-items-center">
                     <a class="nav-link" href="#">Dropdown example</a>
-                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#submenu-mob" aria-expanded="false" aria-controls="submenu-mob">
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#submenu-mob" aria-expanded="false" aria-controls="submenu-mob" aria-label="Open the mobile example dropdown section">
                     </button>
                 </span>
                 <ul class="collapse list-unstyled ps-3" id="submenu-mob">
