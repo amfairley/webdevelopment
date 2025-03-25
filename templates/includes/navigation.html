@@ -13,11 +13,15 @@
         <ul class="nav flex-column">
             <!--Homepage-->
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'homepage' %}">Home</a>
+                <!--
+                    Check the current page and add active class to it
+                    {percent if request.resolver_match.url_name == 'HTML_home' percent}active{percent endif percent}
+                -->
+                <a class="nav-link {% if request.resolver_match.url_name == 'homepage' %}active{% endif %}" href="{% url 'homepage' %}">Home</a>
             </li>
             <!--Intro to Fullstack-->
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'intro_to_full_stack' %}">Introduction to Full Stack</a>
+                <a class="nav-link {% if request.resolver_match.url_name == 'intro_to_full_stack' %}active{% endif %}" href="{% url 'intro_to_full_stack' %}">Introduction to Full Stack</a>
             </li>
             <!--HTML-->
             <li class="nav-item">
@@ -26,19 +30,23 @@
                     <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#html-submenu" aria-expanded="false" aria-controls="html-submenu">
                     </button>
                 </span>
-                <ul class="collapse list-unstyled ps-3" id="html-submenu">
-                    <li><a class="nav-link" href="{% url 'HTML_home' %}">HTML Home</a></li>
-                    <li><a class="nav-link" href="{% url 'HTML_introducing_elements' %}">Introducing Elements</a></li>
-                    <li><a class="nav-link" href="{% url 'HTML_common_elements' %}">Common Elements</a></li>
-                    <li><a class="nav-link" href="{% url 'HTML_lists' %}">Lists</a></li>
-                    <li><a class="nav-link" href="{% url 'HTML_tables' %}">Tables</a></li>
-                    <li><a class="nav-link" href="{% url 'HTML_forms' %}">Forms</a></li>
-                    <li><a class="nav-link" href="{% url 'HTML_links' %}">Links</a></li>
-                    <li><a class="nav-link" href="{% url 'HTML_media' %}">Media</a></li>
-                    <li><a class="nav-link" href="{% url 'HTML_buttons' %}">Buttons</a></li>
-                    <li><a class="nav-link" href="{% url 'HTML_semantic' %}">Semantic HTML</a></li>
-                    <li><a class="nav-link" href="{% url 'HTML_accessibility' %}">Accessibility and Validation</a></li>
-                    <li><a class="nav-link" href="{% url 'HTML_example' %}">Example HTML File</a></li>
+                <!--
+                    Checking the current page to keep dropdown open
+                    percent if '/HTML' in request.path percent}show{percent endif percent}
+                -->
+                <ul class="collapse list-unstyled ps-3 {% if '/HTML' in request.path %}show{% endif %}" id="html-submenu">
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'HTML_home' %}active{% endif %}" href="{% url 'HTML_home' %}">HTML Home</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'HTML_introducing_elements' %}active{% endif %}" href="{% url 'HTML_introducing_elements' %}">Introducing Elements</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'HTML_common_elements' %}active{% endif %}" href="{% url 'HTML_common_elements' %}">Common Elements</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'HTML_lists' %}active{% endif %}" href="{% url 'HTML_lists' %}">Lists</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'HTML_tables' %}active{% endif %}" href="{% url 'HTML_tables' %}">Tables</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'HTML_forms' %}active{% endif %}" href="{% url 'HTML_forms' %}">Forms</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'HTML_links' %}active{% endif %}" href="{% url 'HTML_links' %}">Links</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'HTML_media' %}active{% endif %}" href="{% url 'HTML_media' %}">Media</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'HTML_buttons' %}active{% endif %}" href="{% url 'HTML_buttons' %}">Buttons</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'HTML_semantic' %}active{% endif %}" href="{% url 'HTML_semantic' %}">Semantic HTML</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'HTML_accessibility' %}active{% endif %}" href="{% url 'HTML_accessibility' %}">Accessibility and Validation</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'HTML_example' %}active{% endif %}" href="{% url 'HTML_example' %}">Example HTML File</a></li>
                 </ul>
             </li>
             <!--CSS-->
@@ -48,10 +56,10 @@
                     <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#css-submenu" aria-expanded="false" aria-controls="css-submenu">
                     </button>
                 </span>
-                <ul class="collapse list-unstyled ps-3" id="css-submenu">
-                    <li><a class="nav-link" href="{% url 'CSS_home' %}">CSS Home</a></li>
-                    <li><a class="nav-link" href="{% url 'CSS_selectors' %}">Selectors</a></li>
-                    <li><a class="nav-link" href="{% url 'CSS_box_model' %}">CSS Box Model</a></li>
+                <ul class="collapse list-unstyled ps-3 {% if '/CSS' in request.path %}show{% endif %}" id="css-submenu">
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_home' %}active{% endif %}" href="{% url 'CSS_home' %}">CSS Home</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_selectors' %}active{% endif %}" href="{% url 'CSS_selectors' %}">Selectors</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_box_model' %}active{% endif %}" href="{% url 'CSS_box_model' %}">CSS Box Model</a></li>
                 </ul>
             </li>
             <!--Dropdown link example-->
