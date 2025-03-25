@@ -1,0 +1,25 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-grids-grid-gaps{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Grid Gaps{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        To create space between grid items, the 
+        <code class="written-code">column-gap</code>
+        and 
+        <code class="written-code">row-gap</code> 
+        properties (or the shorthand 
+        <code class="written-code">gap</code>)
+        can be used.
+    </p>
+    {% include 'CSS/grids/includes/code_snippets/grid_gaps.html' %}
+    <p>
+        This sets a 10px gap between columns and a 20px gap between rows.
+    </p>
+{% endblock %}

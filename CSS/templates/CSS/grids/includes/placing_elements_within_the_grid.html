@@ -1,0 +1,36 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-grids-placing-elements-within-the-grid{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Placing Elements Within the Grid{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Grid items can be positioned within the grid using the 
+        <code class="written-code">grid-row-start</code>,
+        <code class="written-code">grid-row-end</code>,
+        <code class="written-code">grid-column-start</code>,
+        and
+        <code class="written-code">grid-column-end</code>
+        properties.
+    </p>
+    {% include 'CSS/grids/includes/code_snippets/placing_element_1.html' %}
+    <p>
+        This positions the item starting from the first row line to the third, and from the second column line to the 
+        fourth. A shorthand notation combines these properties.
+    </p>
+    {% include 'CSS/grids/includes/code_snippets/placing_element_2.html' %}
+    <p>
+        Additionally, the 
+        <code class="written-code">span</code>
+        keyword allows an item to span multiple rows or columns.
+    </p>
+    {% include 'CSS/grids/includes/code_snippets/placing_element_3.html' %}
+    <p>
+        This makes the item span across two columns.
+    </p>
+{% endblock %}

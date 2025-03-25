@@ -1,0 +1,22 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-grids-minimum-and-maximum-sizes{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Minimum and Maximum Sizes{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The 
+        <code class="written-code">minmax()</code>
+        function allows you to set a range for column or row sizes, specifying a minimum and maximum value.
+    </p>
+    {% include 'CSS/grids/includes/code_snippets/min_max.html' %}
+    <p>
+        In this case, the middle column will be at least 100px wide but can expand up to 500px, depending on the 
+        available space.
+    </p>
+{% endblock %}

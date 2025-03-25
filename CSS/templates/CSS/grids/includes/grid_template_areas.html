@@ -1,0 +1,24 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-grids-grid-template-areas{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Grid Template Areas{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Grid template areas provide a visual way to define the layout by assigning names to different sections of the 
+        grid. For example in a 3x3 grid.
+    </p>
+    {% include 'CSS/grids/includes/code_snippets/template_area_1.html' %}
+    <p>
+        In this setup, the grid is divided into areas named header, left, main, right, and footer. Items can then be 
+        placed in these areas using the 
+        <code class="written-code">grid-area</code>
+        property.
+    </p>
+    {% include 'CSS/grids/includes/code_snippets/template_area_2.html' %}
+{% endblock %}

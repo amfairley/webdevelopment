@@ -1,0 +1,18 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code_snippet_css_grid_layout{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="css">.container {
+    display: grid;
+    width: 500px;
+    grid-template-columns: 200px 300px;
+    grid-template-rows: 10% 20% 600px;
+}
+</code></pre>
+{% endblock %}

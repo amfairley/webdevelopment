@@ -11,4 +11,6 @@ urlpatterns = [
         views.CSS_display_and_positioning,
         name="CSS_display_and_positioning"
     ),
+    path('flexbox/', views.CSS_flexbox, name="CSS_flexbox"),
+    path('grids/', views.CSS_grids, name="CSS_grids"),
 ]

@@ -1,0 +1,40 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-grids-setting-up-a-grid-layout{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Setting up a Grid Layout{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        To implement a grid layout, you first need to designate a container as a grid by setting its display property 
+        to grid. This transforms the container into a grid context for its direct children, known as grid items. 
+        Alternatively, using 
+        <code class="written-code">display: inline-grid;</code>
+        allows the grid container to behave like an inline element while still providing grid layout capabilities.
+    </p>
+    {% include 'CSS/grids/includes/code_snippets/grid_layout.html' %}
+    <p>
+        In this example, the 
+        <code class="written-code">.container</code>
+        is set as a grid with specified column and row sizes. The 
+        <code class="written-code">grid-template-columns</code>
+        property defines two columns with widths of 200px and 300px, respectively. The 
+        <code class="written-code">grid-template-rows</code>
+        property sets three rows with heights of 10%, 20%, and 600px.
+    </p>
+    <p>
+        CSS Grid provides a shorthand property, 
+        <code class="written-code">grid-template</code>,
+        to define both row and column sizes simultaneously. The syntax for this shorthand is as follows:
+    </p>
+    {% include 'CSS/grids/includes/code_snippets/grid_template_1.html' %}
+    {% include 'CSS/grids/includes/code_snippets/grid_template_2.html' %}
+    <p>
+        Here, the first part (200px 300px) defines the row sizes, and the second part (20% 10% 70%) specifies the 
+        column sizes.
+    </p>
+{% endblock %}

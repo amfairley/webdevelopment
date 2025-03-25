@@ -48,3 +48,27 @@ def CSS_display_and_positioning(request):
         'CSS/display_and_positioning/display_and_positioning.html',
         context
     )
+
+
+def CSS_flexbox(request):
+    '''Return the CSS flexbox page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'CSS/flexbox/flexbox.html',
+        context
+    )
+
+
+def CSS_grids(request):
+    '''Return the CSS grids page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'CSS/grids/grids.html',
+        context
+    )

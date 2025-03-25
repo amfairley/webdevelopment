@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: CSS - Grids{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Grids</h2>
+
+    {% include 'CSS/grids/includes/contents.html' %}
+    {% include 'CSS/grids/includes/introduction.html' %}
+    {% include 'CSS/grids/includes/setting_up_a_grid_layout.html' %}
+    {% include 'CSS/grids/includes/fractional_units.html' %}
+    {% include 'CSS/grids/includes/minimum_and_maximum_sizes.html' %}
+    {% include 'CSS/grids/includes/grid_gaps.html' %}
+    {% include 'CSS/grids/includes/placing_elements_within_the_grid.html' %}
+    {% include 'CSS/grids/includes/grid_template_areas.html' %}
+
+{% endblock %}
