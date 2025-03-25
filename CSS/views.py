@@ -96,3 +96,15 @@ def CSS_visibility_and_z_positioning(request):
         'CSS/visibility_and_z_positioning/visibility_and_z_positioning.html',
         context
     )
+
+
+def CSS_cursor(request):
+    '''Return the CSS cursor page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'CSS/cursor/cursor.html',
+        context
+    )

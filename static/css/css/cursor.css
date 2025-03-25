@@ -1,0 +1,81 @@
+/* Boxes container */
+#hover-container {
+    margin: 1rem auto;
+    border: 1px solid #001F5C;
+    border-radius: 1rem;
+    padding: 1rem;
+    max-width: 1000px;
+    gap: 1rem;
+}
+
+body.night-mode #hover-container {
+    border-color: #FFD700;
+}
+
+/* Hover boxes */
+.cursor-hover {
+    aspect-ratio: 1/1;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #001F5C;
+    max-height: 16rem;
+    max-width: 16rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+}
+
+body.night-mode .cursor-hover {
+    border-color: #FFD700;
+}
+
+/* Hover effects */
+#default-hover:hover {
+    cursor: default;
+}
+
+#pointer-hover:hover {
+    cursor: pointer;
+}
+
+#text-hover:hover {
+    cursor: text;
+}
+
+#move-hover:hover {
+    cursor: move;
+}
+
+#grab-hover:hover {
+    cursor: grab;
+}
+
+#grabbing-hover:hover {
+    cursor: grabbing;
+}
+
+#crosshair-hover:hover {
+    cursor: crosshair;
+}
+
+#not-allowed-hover:hover {
+    cursor: not-allowed;
+}
+
+#wait-hover:hover {
+    cursor: wait;
+}
+
+#help-hover:hover {
+    cursor: help;
+}
+
+#progress-hover:hover {
+    cursor: progress;
+}
+
+#none-hover:hover {
+    cursor: none;
+}

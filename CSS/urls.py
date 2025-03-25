@@ -19,4 +19,5 @@ urlpatterns = [
         views.CSS_visibility_and_z_positioning,
         name="CSS_visibility_and_z_positioning"
     ),
+    path('cursor/', views.CSS_cursor, name="CSS_cursor"),
 ]
