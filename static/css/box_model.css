@@ -1,0 +1,116 @@
+/* The Box Model Image */
+#box-model-container {
+    font-family: 'Roboto', Arial, sans-serif;
+    height: fit-content;
+    width: fit-content;
+    margin: 1rem auto;
+}
+
+/* Margin */
+#box-model-margin {
+    height: 17rem;
+    width: 17rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #001F5C;
+    position: relative;
+}
+
+body.night-mode #box-model-margin {
+    background-color: #FFD700;
+}
+
+#box-model-margin-text {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #f5f5f5;
+}
+
+body.night-mode #box-model-margin-text {
+    color: #1E1E1E;
+}
+
+/* Border */
+#box-model-border {
+    height: 13rem;
+    width: 13rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    position: relative;
+}
+
+body.night-mode #box-model-border {
+    background-color: #1E1E1E;
+}
+
+#box-model-border-text {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #001F5C;
+}
+
+body.night-mode #box-model-border-text {
+    color: #FFD700;
+}
+
+/* Padding */
+#box-model-padding {
+    height: 9rem;
+    width: 9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #001F5C;
+    position: relative;
+}
+
+body.night-mode #box-model-padding {
+    background-color: #FFD700;
+}
+
+#box-model-padding-text {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #f5f5f5;
+}
+
+body.night-mode #box-model-padding-text {
+    color: #1E1E1E;
+}
+
+/* Content */
+#box-model-content {
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    position: relative;
+}
+
+body.night-mode #box-model-content {
+    background-color: #1E1E1E;
+}
+
+#box-model-content-text {
+    position: absolute;
+    text-align: center;
+    color: #001F5C;
+}
+
+body.night-mode #box-model-content-text {
+    color: #FFD700;
+}

@@ -1,0 +1,31 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-box-model-margin{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Margin{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The margin is the outermost layer of the box model. It represents the space between the element's border and 
+        the surrounding elements. Margins can be set individually for each side.
+    </p>
+    {% include 'CSS/box_model/includes/code_snippets/margin_1.html' %}
+    <p>
+        You can also use shorthand to set all four margins at once following the top, right, bottom, left rule.
+    </p>
+    {% include 'CSS/box_model/includes/code_snippets/margin_2.html' %}
+    <p>
+        A very useful thing to do with margins is to set the left and right margins to auto resulting in the content 
+        of that container being centred.
+    </p>
+    {% include 'CSS/box_model/includes/code_snippets/margin_3.html' %}
+    <p>
+        Each browser has a default margin rule. To not get caught out on different browsers, add the following rule to 
+        the top of your CSS file to set all margins to 0 before you apply your individual rules.
+    </p>
+    {% include 'CSS/box_model/includes/code_snippets/margin_4.html' %}
+{% endblock %}

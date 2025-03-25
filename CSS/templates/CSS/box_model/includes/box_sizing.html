@@ -1,0 +1,31 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-box-model-box-sizing{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Box-Sizing{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        One downside of the box model is that the border thickness and padding affect the dimensions of a box; 
+        by default the width and height properties only apply to the content area of the box, not including padding or 
+         (mentioned in the 
+        <a class="text-link" href="#CSS-box-model-content" aria-label="CSS box model content section">content</a>
+        section). To include padding and borders in the width and height calculations, you can use the 
+        <code class="written-code">box-sizing</code>
+        property. This is useful if you have a set space for an element to fit in and do not want to manually calculate 
+        the width including the left and right padding and borders. This is a very useful rule to put at the top of 
+        your CSS page.
+    </p>
+    {% include 'CSS/box_model/includes/code_snippets/box_sizing.html' %}
+    <p>
+        This ensures that the width and height include the padding and border, making it easier to manage layout sizes.
+    </p>
+    <p>
+        The default value is 
+        <code class="written-code">box-sizing: content-box;</code>.
+    </p>
+{% endblock %}

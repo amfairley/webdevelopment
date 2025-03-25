@@ -1,0 +1,42 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-box-model-overflow{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Overflow{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The overflow property controls how content is handled when it overflows the bounds of its container. These are 
+        the possible values.
+        <ul>
+            <li>
+                <code class="written-code">hidden</code>:
+                Content is clipped and hidden.
+            </li>
+            <li>
+                <code class="written-code">scroll</code>:
+                A scrollbar is added, allowing users to scroll through the content.
+            </li>
+            <li>
+                <code class="written-code">visible</code>:
+                Content overflows the box and is visible outside of it (default behaviour).
+            </li>
+        </ul>
+    </p>
+    {% include 'CSS/box_model/includes/code_snippets/overflow.html' %}
+    <p>
+        You can add a scroll bar for your overflow in only the x or y position with these values:
+        <ul>
+            <li>
+                <code class="written-code">overflow: x;</code>
+            </li>
+            <li>
+                <code class="written-code">overflow: y;</code>
+            </li>
+        </ul>
+    </p>
+{% endblock %}

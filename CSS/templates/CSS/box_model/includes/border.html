@@ -1,0 +1,85 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-box-model-border{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Border{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The border is the outer edge that encloses the content and padding. It can be customized with different 
+        thicknesses, styles, and colours. The border style is defined in three parts: thickness, style, and colour.
+    </p>
+    <p>
+        The thickness of the border can be specified in pixels or with predefined keywords like thin, medium, or thick 
+        and uses the parameter of border-width.
+    </p>
+    <p>
+        To apply a uniform thickness:
+    </p>
+    {% include 'CSS/box_model/includes/code_snippets/border_1.html' %}
+    <p>
+        You can also apply an uneven border thickness following the similar top, right, bottom, left rule as the 
+        padding:
+    </p>
+    {% include 'CSS/box_model/includes/code_snippets/border_2.html' %}
+    <p>
+        These can also be applied separately, which is good for instances where you do not want all borders and so can 
+        leave out the ones you do not need.
+    </p>
+    {% include 'CSS/box_model/includes/code_snippets/border_3.html' %}
+    <p>
+        <code class="written-code">border-style</code>
+        determines the appearance of the border. There are several styles you can use which are all outlined 
+        <a 
+            class="text-link"
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-style#values"
+            title="Mozilla developers: border-style"
+            aria-label="Go to the Mozilla delevopers page for border styles"
+            target="_blank"
+            rel="noopener noreferrer"
+        >here</a> 
+        on the Mozilla developers page on them. The value I use the most is 
+        <code class="wrriten-code">solid</code>.
+    </p>
+    {% include 'CSS/box_model/includes/code_snippets/border_4.html' %}
+    <p>
+        <code class="written-code">border-color</code>
+        can be set separately from the style and thickness and can take any colour value described in the 
+        <a class="text-link" href="" aria-label="Go to the colour theory section">colour theory</a>
+        section. These can either be set all at once or separately.
+    </p>
+    {% include 'CSS/box_model/includes/code_snippets/border_5.html' %}
+    {% include 'CSS/box_model/includes/code_snippets/border_6.html' %}
+    <p>
+        These rules can be combined with the following shorthand.
+    </p>
+    {% include 'CSS/box_model/includes/code_snippets/border_7.html' %}
+    <p>
+        Such as:
+    </p>
+    {% include 'CSS/box_model/includes/code_snippets/border_8.html' %}
+    <p>
+        Or for the separate sides of border-top, border-right, border-bottom, or border-left:
+    </p>
+    {% include 'CSS/box_model/includes/code_snippets/border_9.html' %}
+    <p>
+        CSS also allows you to use an image as the border. The border-image property lets you apply an image that is 
+        divided into nine sections: the four corners, the edges, and the centre. The corners are placed at the corners 
+        of the border, and the edges can be stretched or repeated.
+    </p>
+    {% include 'CSS/box_model/includes/code_snippets/border_10.html' %}
+    <p>
+        In this case, the image is sliced 30px from each side and is repeated along the edges.
+    </p>
+    <p>
+        By default, borders are square, but you can use the border-radius property to make the corners rounded. The
+        following applies a 5px radius to all four corners. To create circles or more complex shapes, you can use 
+        different values for each corner. The values are applied clockwise starting from the top-left corner. For a 
+        perfect circle, the element must have equal height and width, and the border radius should be 50%.
+    </p>
+    {% include 'CSS/box_model/includes/code_snippets/border_11.html' %}
+{% endblock %}

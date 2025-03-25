@@ -1,0 +1,58 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-box-model-padding{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Padding{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Padding is the space between the content and the border, providing a buffer between the two. Think of padding 
+        as the cushioning around the artwork in a frame. By adding padding, you ensure that the content doesn't touch 
+        the border directly, giving it some room to breathe.
+    </p>
+    <p>
+        You can apply padding evenly on all sides:
+    </p>
+    {% include 'CSS/box_model/includes/code_snippets/padding_1.html' %}
+    <p>
+        Or you can apply different padding to each side, you can use the following shorthand: 
+    </p>
+    {% include 'CSS/box_model/includes/code_snippets/padding_2.html' %}
+    {% include 'CSS/box_model/includes/code_snippets/padding_3.html' %}
+    <p>
+        In this case, the padding values represent the following:
+        <ul>
+            <li>
+                10px: padding on the top
+            </li>
+            <li>
+                20px: padding on the right
+            </li>
+            <li>
+                15px: padding on the bottom
+            </li>
+            <li>
+                25px: padding on the left
+            </li>
+        </ul>
+    </p>
+    <p>
+        Alternatively, if the top and bottom padding are the same or the left and right padding are the same, you can
+        use the following syntax:
+    </p>
+    {% include 'CSS/box_model/includes/code_snippets/padding_4.html' %}
+    {% include 'CSS/box_model/includes/code_snippets/padding_5.html' %}
+    <p>
+        This would apply 10px of padding to the top and bottom, and 20px of padding to the left and right. 
+    </p>
+    <p>
+        Each browser has a default padding rule. To not get caught out on different browsers, add the following rule to 
+        the top of your CSS file to set all padding to 0 before you apply your individual rules.
+    </p>
+    {% include 'CSS/box_model/includes/code_snippets/padding_6.html' %}
+
+{% endblock %}

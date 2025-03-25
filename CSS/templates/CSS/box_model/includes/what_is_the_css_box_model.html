@@ -1,0 +1,70 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-box-model-what-is-the-css-box-model{% endblock %}
+
+<!--Section title-->
+{% block text_title %}What is the CSS Box Model?{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The CSS box model is a fundamental concept in web design and acts as the building blocks of web layouts. It 
+        defines the structure of every HTML element and how it is rendered in a browser, determining the layout, 
+        spacing, and sizing of elements. Understanding how it works is essential for creating clean, responsive, and 
+        well-organized web pages. 
+    </p>
+    <p>
+        The box model is made up of 4 sections. Working from the inside out, these are the content, padding, border, 
+        and margin. Each of these are defined by a width and a height.
+    </p>
+    <!--Box model diagram-->
+    <div id="box-model-container">
+        <div id="box-model-margin">
+            <p id="box-model-margin-text">Margin</p>
+            <div id="box-model-border">
+                <p id="box-model-border-text">Border</p>
+                <div id="box-model-padding">
+                    <p id="box-model-padding-text">Padding</p>
+                    <div id="box-model-content">
+                        <p id="box-model-content-text">Content</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>
+        I find that a helpful analogy to explain the CSS box model is to think of it as a wall of paintings in a frame; 
+        those fancy paintings with 
+        <dfn title="The often monotone border around a painting, separating it from the frame">matting</dfn> 
+        around the painting. The content of the box is the artwork, the padding is the space between the artwork and 
+        the frame, the border is the frame itself, and the margin is the space between the frames on the wall. 
+    </p>
+    <p>
+        To look at each in more detail:
+        <ul>
+            <li>
+                Content: This is the actual content of the element, like text, images, or other media. It represents 
+                the "artwork" in our analogy. The content area is where the primary visual elements of the page are 
+                rendered.
+            </li>
+            <li>
+                Padding: The padding is the space between the content and the border, akin to the space between the 
+                artwork and the frame (the matting). It provides breathing room for the content, ensuring it doesn't 
+                touch the border directly. Padding can be applied uniformly on all sides or adjusted individually on 
+                each side.
+            </li>
+            <li>
+                Border: The border is the visible boundary surrounding the padding, much like the frame that holds the 
+                painting. Borders can vary in width, style, and colour. They can also be styled with different effects, 
+                such as being dashed, dotted, or solid lines.
+            </li>
+            <li>
+                Margin: The margin is the space outside the border that separates one element from others on the page. 
+                It can be thought of as the space between the frame and the surrounding elements. Like padding, margins 
+                can be set uniformly or adjusted individually on each side.
+            </li>
+        </ul>
+    </p>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-box-model-vertical-spacing{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Vertical Spacing{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        When multiple elements are stacked vertically, the vertical spacing between them is determined by their 
+        margins. The gap between two adjacent elements is the larger of the two elements' margins. This means that if 
+        one element has a margin of 10px and another has a margin of 20px, the space between them will be 20px, not 
+        30px. The margin of the element with the larger margin "wins," and the smaller margin will be ignored.
+    </p>
+    {% include 'CSS/box_model/includes/code_snippets/vertical_spacing.html' %}
+    <p>
+        In this case, the gap between element1 and element2 will be 20px, as 20px is the larger margin.
+    </p>
+{% endblock %}

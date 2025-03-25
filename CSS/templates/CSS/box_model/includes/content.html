@@ -1,0 +1,23 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-box-model-content{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Content{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The content area is the core of the box model, and its size is defined by the width and height properties. 
+        These properties define the dimensions of the content, excluding padding, borders, and margins.
+    </p>
+    {% include 'CSS/box_model/includes/code_snippets/content_sizing.html' %}
+    <p>
+        In the example above, the 
+        <code class="written-code">&lt;p&gt;</code>
+        tag will have a content area of 100px by 100px. However, if padding, borders, or margins are applied, they will 
+        affect the total space the element occupies.
+    </p>
+{% endblock %}

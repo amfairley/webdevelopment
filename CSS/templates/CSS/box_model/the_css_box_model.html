@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: CSS - Box Model{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/box_model.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>The CSS Box Model</h2>
+
+    {% include 'CSS/box_model/includes/contents.html' %}
+    {% include 'CSS/box_model/includes/what_is_the_css_box_model.html' %}
+    {% include 'CSS/box_model/includes/vertical_spacing.html' %}
+    {% include 'CSS/box_model/includes/content.html' %}
+    {% include 'CSS/box_model/includes/padding.html' %}
+    {% include 'CSS/box_model/includes/border.html' %}
+    {% include 'CSS/box_model/includes/margin.html' %}
+    {% include 'CSS/box_model/includes/overflow.html' %}
+    {% include 'CSS/box_model/includes/box_sizing.html' %}
+{% endblock %}
