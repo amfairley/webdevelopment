@@ -37,7 +37,6 @@ body.night-mode .code-example {
     padding: 0.5rem;
     border-bottom: 1px solid #0057D8;
     font-weight: bolder;
-    text-align: center;
 }
 
 body.night-mode .code-example-header,
