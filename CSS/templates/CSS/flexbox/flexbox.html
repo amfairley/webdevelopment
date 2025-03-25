@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: CSS - Flexbox{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Flexbox</h2>
+
+    {% include 'CSS/flexbox/includes/contents.html' %}
+    {% include 'CSS/flexbox/includes/introduction.html' %}
+    {% include 'CSS/flexbox/includes/flexbox_display.html' %}
+    {% include 'CSS/flexbox/includes/main_concepts.html' %}
+    {% include 'CSS/flexbox/includes/grow_shrink_and_basis.html' %}
+    {% include 'CSS/flexbox/includes/flex_wrap.html' %}
+    {% include 'CSS/flexbox/includes/align_content.html' %}
+    {% include 'CSS/flexbox/includes/flex_flow.html' %}
+    {% include 'CSS/flexbox/includes/advanced_flexbox_layouts.html' %}
+{% endblock %}

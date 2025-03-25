@@ -1,0 +1,29 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-flexbox-introduction{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Introduction{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The CSS Flexible Box Layout, or Flexbox, is a powerful layout system designed to help web developers create 
+        complex layouts with ease. Flexbox provides a more efficient way to align and distribute space among items 
+        within a container, even when their sizes are unknown or dynamic. 
+    </p>
+    <p>
+        The Flexbox layout model is based on the idea of distributing space along a main axis and a cross axis within a 
+        container. It offers a much more dynamic and flexible approach compared to traditional layout techniques like 
+        using floats or positioning. Flexbox allows elements to adjust their sizes and positions according to the 
+        available space in a container, making it ideal for building complex layouts that adapt to different screen 
+        sizes.
+    </p>
+    <p>
+        To use Flexbox, you need to define a flex container, which is the parent element, and the flex items, which 
+        are its child elements. The key to Flexbox's power lies in how the container and its items interact with each 
+        other, adjusting according to the container's dimensions and the defined properties.
+    </p>
+{% endblock %}

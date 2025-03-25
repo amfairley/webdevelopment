@@ -1,0 +1,43 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-flexbox-align-content{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Align Content{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The align-content property is used when there are multiple rows of flex items in the container. It controls how 
+        the rows are aligned along the cross axis.
+    </p>
+    <ul>
+        <li>
+            <code class="written-code">flex-start</code>
+            aligns the rows at the top of the container.
+        </li>
+        <li>
+            <code class="written-code">flex-end</code>
+            aligns the rows at the bottom of the container.
+        </li>
+        <li>
+            <code class="written-code">center</code>
+            centres the rows within the container.
+        </li>
+        <li>
+            <code class="written-code">space-between</code>
+            distributes space evenly between rows, but not at the top or bottom.
+        </li>
+        <li>
+            <code class="written-code">space-around</code>
+            distributes space evenly around rows.
+        </li>
+        <li>
+            <code class="written-code">stretch</code>
+            stretches the rows to fill the container.
+        </li>
+    </ul>
+    {% include 'CSS/flexbox/includes/code_snippets/align_content.html' %}
+{% endblock %}

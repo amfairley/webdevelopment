@@ -1,0 +1,28 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-flexbox-flex-flow{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Flex-flow{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The 
+        <code class="written-code">flex-flow</code>
+        property is a shorthand for 
+        <code class="written-code">flex-direction</code>
+        and
+        <code class="written-code">flex-wrap</code>.
+        It allows you to set both properties in one line, making it easier to control both the direction and wrapping 
+        behavior of the flex container.
+    </p>
+    {% include 'CSS/flexbox/includes/code_snippets/flex_flow.html' %}
+    <p>
+        In this example, 
+        <code class="written-code">flex-flow: row wrap;</code>
+        sets the flex direction to row (horizontal) and enables wrapping for the flex items.
+    </p>
+{% endblock %}

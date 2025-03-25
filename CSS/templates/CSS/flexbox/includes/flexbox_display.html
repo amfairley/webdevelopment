@@ -1,0 +1,29 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-flexbox-flexbox-display{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Flexbox Display{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The first step in creating a Flexbox layout is applying the 
+        <code class="written-code">display: flex;</code>
+        declaration to a container. This makes the container a flex container, and all its direct child elements 
+        automatically become flex items. Once you have a flex container, you can use various properties to manipulate 
+        the layout of the flex items.
+    </p>
+    {% include 'CSS/flexbox/includes/code_snippets/display_flex.html' %}
+    <p>
+        Alternatively, you can use 
+        <code class="written-code">display: inline-flex;</code>,
+        which makes the container behave like an inline element while still having the properties of a flex container. 
+        This means that the flex container will behave like an inline element and sit in the document flow next to 
+        other inline elements, but its children will be flex items.
+    </p>
+    {% include 'CSS/flexbox/includes/code_snippets/display_inline_flex.html' %}
+
+{% endblock %}

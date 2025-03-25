@@ -1,0 +1,33 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-flexbox-flex-wrap{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Flex-wrap{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The 
+        <code class="written-code">flex-wrap</code>
+        property controls whether flex items should wrap onto multiple lines when they exceed the container's width 
+        (or height, depending on the flex direction). By default, flex items will try to fit into one line.
+    </p>
+    <ul>
+        <li>
+            <code class="written-code">wrap</code>
+            items will wrap onto the next line if they don't fit in the container.
+        </li>
+        <li>
+            <code class="written-code">nowrap</code>
+            items will stay on a single line, even if they overflow. This is the default.
+        </li>
+        <li>
+            <code class="written-code">wrap-reverse</code>
+            items will wrap onto the next line in reverse order.
+        </li>
+    </ul>
+    {% include 'CSS/flexbox/includes/code_snippets/flex_wrap.html' %}
+{% endblock %}

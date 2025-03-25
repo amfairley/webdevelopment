@@ -1,0 +1,55 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-flexbox-grow-shrink-and-basis{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Grow, Shrink, and Basis{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Flexbox provides three important properties for controlling how flex items grow or shrink to fit the container; 
+        <code class="written-code">flex-grow</code>,
+        <code class="written-code">flex-shrink</code>,
+        and
+        <code class="written-code">flex-basis</code>.
+    </p>
+    <p>
+        The 
+        <code class="written-code">flex-grow</code>
+        property specifies how much a flex item should grow relative to the other items in the container. The value is 
+        a unitless number that acts as a proportion, with a higher number indicating more growth. If all items have a 
+        flex-grow of 1, they will share the available space equally.
+    </p>
+    {% include 'CSS/flexbox/includes/code_snippets/flex_grow.html' %}
+    <p>
+        The 
+        <code class="written-code">flex-shrink</code>
+        property specifies how much a flex item should shrink when there is not enough space in the container. Like
+        <code class="written-code">flex-grow</code>,
+        the value is a unitless number, with a higher number indicating more shrinkage.
+    </p>
+    {% include 'CSS/flexbox/includes/code_snippets/flex_shrink.html' %}
+    <p>
+        The 
+        <code class="written-code">flex-basis</code>
+        property defines the initial size of a flex item before any growing or shrinking occurs. It can be set to a 
+        specific length (such as px, %, em, etc.) or auto (which means the item's size is based on its content).
+    </p>
+    {% include 'CSS/flexbox/includes/code_snippets/flex_basis.html' %}
+    <p>
+        You can combine 
+        <code class="written-code">flex-grow</code>,
+        <code class="written-code">flex-shrink</code>,
+        and
+        <code class="written-code">flex-basis</code>
+        into a single shorthand property called 
+        <code class="written-code">flex</code>.
+        The shorthand allows you to specify the three properties in one line.
+    </p>
+    <p>
+        This means the item will grow at a rate of 1, will not shrink (0), and will start with a width of 200px.
+    </p>
+{% endblock %}
