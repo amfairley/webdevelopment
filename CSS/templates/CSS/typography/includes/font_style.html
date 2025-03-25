@@ -1,0 +1,19 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-typography-font-style{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Font Style{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Adding italics to your font is done with the 
+        <code class="written-code">font-style</code>
+        parameter. It can take values of normal (which is the default), italic (the designed italic font with 
+        different letter shapes) or oblique (just slants the font and mimics italic if no italic option is available).
+    </p>
+    {% include 'CSS/typography/includes/code_snippets/font_style.html' %}
+{% endblock %}

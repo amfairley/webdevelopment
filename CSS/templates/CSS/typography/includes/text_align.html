@@ -1,0 +1,22 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-typography-text-align{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Text Align{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Aligning your text takes the same values as if you were to do it in Microsoft Word with the same results 
+        (<i class="fa-solid fa-align-left"></i> <i class="fa-solid fa-align-center"></i> 
+        <i class="fa-solid fa-align-right"></i>	<i class="fa-solid fa-align-justify"></i>). These value are 
+        <code class="written-code">left</code>,
+        <code class="written-code">right</code>,
+        <code class="written-code">center</code>,
+        <code class="written-code">justify</code>.
+    </p>
+    {% include 'CSS/typography/includes/code_snippets/text_align.html' %}
+{% endblock %}

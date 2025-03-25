@@ -108,3 +108,15 @@ def CSS_cursor(request):
         'CSS/cursor/cursor.html',
         context
     )
+
+
+def CSS_typography(request):
+    '''Return the CSS typography page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'CSS/typography/typography.html',
+        context
+    )

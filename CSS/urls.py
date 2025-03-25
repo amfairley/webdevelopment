@@ -20,4 +20,9 @@ urlpatterns = [
         name="CSS_visibility_and_z_positioning"
     ),
     path('cursor/', views.CSS_cursor, name="CSS_cursor"),
+    path(
+        'typography/',
+        views.CSS_typography,
+        name="CSS_typography"
+    ),
 ]

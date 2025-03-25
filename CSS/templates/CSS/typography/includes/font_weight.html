@@ -1,0 +1,50 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-typography-font-weight{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Font Weight{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        How bold your font looks depends on its 
+        <code class="written-code">font-weight</code>
+        ranging numerically from 100 at the lightest to 900 at the boldest in steps of 100 (e.g. 150 is not a valid 
+        value). Some of these also correspond to keyword values but these may not be available for all fonts.
+    </p>
+    <!--Table of font weights-->
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Keyword
+                </th>
+                <th>
+                    Corresponding font-weight
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    normal
+                </td>
+                <td>
+                    400
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    bold
+                </td>
+                <td>
+                    700
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    {% include 'CSS/typography/includes/code_snippets/font_weight.html' %}
+{% endblock %}

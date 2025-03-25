@@ -1,0 +1,21 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-typography-color{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Color{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The 
+        <code class="written-code">color</code>
+        declaration determines the colour of your text. It can be applied to your text or paragraphs by targeting them 
+        directly or to a parent container such as a 
+        <code class="written-code">div</code>.
+        This is because the default value is inherit, so the paragraph will inherit the colour rule from its parent.
+    </p>
+    {% include 'CSS/typography/includes/code_snippets/color.html' %}
+{% endblock %}

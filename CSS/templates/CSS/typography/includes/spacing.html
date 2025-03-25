@@ -1,0 +1,21 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-typography-spacing{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Spacing{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can also define the spacing between the letters, words, and lines in your font and the properties take the 
+        same values as the 
+        <a class="text-link" href="#CSS-typography-font-size" aria-label="Go to the font-size section">font-size</a>
+        property.
+    </p>
+    {% include 'CSS/typography/includes/code_snippets/spacing_1.html' %}
+    {% include 'CSS/typography/includes/code_snippets/spacing_2.html' %}
+    {% include 'CSS/typography/includes/code_snippets/spacing_3.html' %}
+{% endblock %}

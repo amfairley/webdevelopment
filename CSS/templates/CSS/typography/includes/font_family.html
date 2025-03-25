@@ -1,0 +1,34 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-typography-font-family{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Font Family{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The font family is the typeface and for all the examples we will be applying them to a paragraph with the ID of 
+        font-example. This is how you change the typeface of an elements. The syntax for changing the font family is:
+    </p>
+    {% include 'CSS/typography/includes/code_snippets/font_family.html' %}
+    <p>
+        The font-family property takes values as a comma separated list of font families. If a font family has 
+        multiple words in it, such as Times New Roman, these are to wrapped in single quotation marks. If the font 
+        family is only one word, such as Arial, it does not need to be wrapped in single quotation marks. It takes a 
+        list of typefaces so that if the primary one is unavailable to the browser it will fall back to the secondary 
+        and then the tertiary in that order. 
+    </p>
+    <p>
+        For 
+        <dfn title="Typefaces without the extra flourish (called serifs) on the letters">sans-serif</dfn>
+        typefaces, I include these 3 back up font families:
+        <code class="written-code">Arial, Helvetica, sans-serif</code>.
+    </p>
+    <p>
+        For serif typefaces, I include these 3 back up font families:
+        <code class="written-code">Georgia, "Times New Roman", serif</code>.
+    </p>
+{% endblock %}

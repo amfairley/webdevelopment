@@ -1,0 +1,76 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-typography-google-fonts{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Google Fonts{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        All the standard typefaces are already included and able to be implemented on many browsers, but you can add 
+        extra ones to meet the brand of your website. I generally rely on 
+        <a 
+            class="text-link"
+            href="https://fonts.google.com/"
+            title="Google Fonts"
+            aria-label="Go to the Google Fonts"
+            target="_blank"
+            rel="noopener noreferrer"
+        >Google Fonts</a>
+        for my extra typefaces because it is free, open source, and they have a huge selection to choose from.
+    </p>
+    <p>
+        The easiest way to add them to your project is to 
+        <code class="written-cde">@import</code>
+        them at the top of your CSS file. You can also download the fonts or link them in the HTML header if you are 
+        not using a CSS file (not recommended).
+    </p>
+    <ul>
+        <li>
+            Go to google fonts and pick a font such as Roboto, this will direct you to the individual font page 
+            <a 
+                class="text-link"
+                href="https://fonts.google.com/specimen/Roboto"
+                title="Google Fonts: Roboto"
+                aria-label="Go to the Roboto font page on Google Fonts"
+                target="_blank"
+                rel="noopener noreferrer"
+            >here</a>.
+            Here you can play around testing how the font will look at different weights and sizes.
+        </li>
+        <li>
+            If the font looks good to you, click on the blue “Get font” button towards the top right of the page, this 
+            will direct you to the selection page. This lists all your currently selected fonts. If you want more than 
+            one in your project, go and add others and come back to this page.
+        </li>
+        <li>
+            Click the blue “&lt;&gt; Get embed code” to take you to the embed page. Here the page is split into two 
+            columns.
+            <ul>
+                <li>
+                    In the left column, you can select which styles you want to have. If you don't need some of the 
+                    weights you can unselect or only select “one value”.
+                </li>
+                <li>
+                    In the right-hand column make sure “Web” at the top is selected and then toggle “@import” instead 
+                    of “&lt;link&gt;”. “&lt;link&gt;” is for linking in the head of your HTML file, whereas “@import” 
+                    is for linking in your CSS file.
+                </li>
+                <li>
+                    Copy the first code snippet from @import to the ; (leaving out the &lt;style&gt; element) and paste 
+                    it into the top of your CSS file. For Roboto with one value of “Roman” for the italic options and a 
+                    font weight of 400, this would be: 
+                    <code class="written-code">@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');</code>.
+                </li>
+                <li>
+                    Now you can access the Roboto font family (at weight 400 and non-italics) in your project. 
+                    Selecting “full-axis” instead of “one values” will just result in a longer @import detailing all 
+                    the options.
+                </li>
+            </ul>
+        </li>
+    </ul>
+{% endblock %}

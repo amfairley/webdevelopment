@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: CSS - Typography{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Typography</h2>
+
+    {% include 'CSS/typography/includes/contents.html' %}
+    {% include 'CSS/typography/includes/typeface_vs_fonts.html' %}
+    {% include 'CSS/typography/includes/font_family.html' %}
+    {% include 'CSS/typography/includes/google_fonts.html' %}
+    {% include 'CSS/typography/includes/downloading_fonts.html' %}
+    {% include 'CSS/typography/includes/color.html' %}
+    {% include 'CSS/typography/includes/font_size.html' %}
+    {% include 'CSS/typography/includes/font_weight.html' %}
+    {% include 'CSS/typography/includes/font_style.html' %}
+    {% include 'CSS/typography/includes/text_align.html' %}
+    {% include 'CSS/typography/includes/text_transform.html' %}
+    {% include 'CSS/typography/includes/spacing.html' %}
+    {% include 'CSS/typography/includes/text_decoration.html' %}
+    {% include 'CSS/typography/includes/complete_example.html' %}
+
+{% endblock %}

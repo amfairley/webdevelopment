@@ -1,0 +1,25 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code_snippet_css_typography_example{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="css">#font-example {
+	font-family: Roboto, Arial, sans-serif;
+	color: navy;
+	font-size: 2rem;
+	font-weight: 700;
+	font-style: oblique;
+	text-align: justify;
+	text-transform: uppercase;
+	text-decoration: underline solid red 1px;
+	letter-spacing: 0.2rem;
+	word-spacing: 0.5rem;
+	line-height: 1rem;
+}
+</code></pre>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-typography-complete-example{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Complete Example{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        A complete rule for some text may look something like:
+    </p>
+    {% include 'CSS/typography/includes/code_snippets/example.html' %}
+{% endblock %}

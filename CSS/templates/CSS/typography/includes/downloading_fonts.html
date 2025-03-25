@@ -1,0 +1,65 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-typography-downloading-fonts{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Downloading Fonts{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        If you did want to download the font, which would be good to ensure that the fonts display correctly if Google 
+        Fonts were ever to go down (or if you want to create your own typeface or download from another service) the 
+        process would look like:
+    </p>
+    <ul>
+        <li>
+            Download the fonts files.
+        </li>
+        <li>
+            Convert the font files to multiple filetypes, as different browsers will have different compatibility. I 
+            recommend 
+            <a 
+                class="text-link"
+                href="https://cloudconvert.com/ttf-converter"
+                title="Cloud Convert"
+                aria-label="Go to Cloud Convert"
+                target="_blank"
+                rel="noopener noreferrer"
+            >CloudConvert</a>
+            to do this. Ideally you would have the following file formats:
+            <ul>
+                <li>
+                    >OTF (OpenType Font)
+                </li>
+                <li>
+                    >TTF (TrueType Font)
+                </li>
+                <li>
+                    >WOFF (Web Open Font Format)
+                </li>
+                <li>
+                    >WOFF2 (Web Open Font Format 2)
+                </li>
+            </ul>
+        </li>
+        <li>
+            Save these in a file in your project such as static/fonts.
+        </li>
+        <li>
+            Use 
+            <code class="written-code">@font-face</code>
+            to load these into CSS, you will need to do this for each font you have. The syntax for this is:
+            {% include 'CSS/typography/includes/code_snippets/font_face.html' %}
+        </li>
+        <li>
+            Whatever name you define as your font-family is how you will access this font in your CSS.
+        </li>
+        <li>
+            Each of the urls are the relative filepath from the CSS file to the specific format file. For example you 
+            might have to go a folder or two up to start to get to the root level before getting to static/fonts.
+        </li>
+    </ul>
+{% endblock %}

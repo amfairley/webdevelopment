@@ -1,0 +1,20 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-typography-text-transform{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Text Transform{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Text-transform allows you define the text to be all uppercase, lowercase, or to capitalise the first letter of 
+        each word with the respective values: 
+        <code class="written-code">uppercase</code>,
+        <code class="written-code">lowercase</code>,
+        <code class="written-code">capitalize</code>.
+    </p>
+    {% include 'CSS/typography/includes/code_snippets/text_transform.html' %}
+{% endblock %}

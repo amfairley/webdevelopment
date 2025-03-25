@@ -1,0 +1,61 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-typography-font-size{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Font Size{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        How big or small you want your font to look will depend on the defined font-size, these can be defined in 
+        various ways, some of which I have outlined outlined  
+        <a class="text-link" href="" aria-label="Go to the web design sizes page">here</a>.
+        The rule for this syntax is:
+    </p>
+    {% include 'CSS/typography/includes/code_snippets/font_size.html' %}
+    <p>
+        The 
+        <code class="written-code">font-size</code>
+        property can take many size values. It can take pt and px values, which I would not recommend as they can be 
+        inconsistent across browsers and are not responsive. em and rem are much better (rem being the best option) as 
+        they change depending on the browser or user-defined font settings and are responsive.
+    </p>
+    <p>
+        It can also take some keyword values:
+    </p>
+    <ul>
+        <li>
+            <code class="written-code">xx-small</code>
+        </li>
+        <li>
+            <code class="written-code">x-small</code>
+        </li>
+        <li>
+            <code class="written-code">small</code>
+        </li>
+        <li>
+            <code class="written-code">medium</code>
+        </li>
+        <li>
+            <code class="written-code">large</code>
+        </li>
+        <li>
+            <code class="written-code">x-large</code>
+        </li>
+        <li>
+            <code class="written-code">xx-large</code>
+        </li>
+        <li>
+            <code class="written-code">xxx-large</code>
+        </li>
+        <li>
+            <code class="written-code">smaller</code>
+        </li>
+        <li>
+            <code class="written-code">larger</code>
+        </li>
+    </ul>
+{% endblock %}
