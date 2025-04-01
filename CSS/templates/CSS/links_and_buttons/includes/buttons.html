@@ -1,0 +1,23 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-links-and-buttons-buttons{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Buttons{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        I feel that the bare minimum effect for a 3D button would be to remove the shadow of a button when pressed, 
+        move the button down 5px to make it appear pressed when pressed, and make the cursor a pointer when hovered.
+    </p>
+    {% include 'CSS/links_and_buttons/includes/code_snippets/button.html' %}
+    <p>
+        One new property here is the 
+        <code class="written-code">box-shadow</code>,
+        which takes two values; the x-offset and y-offset to create a shadow around the box to create a 3-dimensional 
+        effect. 
+    </p>
+{% endblock %}

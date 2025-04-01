@@ -1,0 +1,29 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code_snippet_css_links_and_buttons_button{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="css">button {
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0px 5px;
+}
+
+button:hover {
+    cursor:pointer
+}
+
+button:active {
+    margin-top: 5px;
+    color: black;
+    box-shadow: 0px 0px;
+}
+</code></pre>
+{% endblock %}

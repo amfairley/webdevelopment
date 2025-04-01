@@ -25,4 +25,9 @@ urlpatterns = [
         views.CSS_typography,
         name="CSS_typography"
     ),
+    path(
+        'links_and_buttons/',
+        views.CSS_links_and_buttons,
+        name="CSS_links_and_buttons"
+    ),
 ]

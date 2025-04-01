@@ -1,0 +1,24 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-links-and-buttons-resetting-the-default{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Resetting the Default{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        By default, anchor tags are underlined and blue which may not match our website theme. As such, one of the 
+        first CSS rules I include is:
+    </p>
+    {% include 'CSS/links_and_buttons/includes/code_snippets/default.html' %}
+    <p>
+        This removes the underline by setting text-decoration to none, makes it the same colour as the parent element 
+        by setting color to inherit and removes any outline when it is focussed by setting outline to none. This makes 
+        the links now indistinguishable from other text on your website but lets us define them as we use them 
+        depending on their purpose without having to change these rules over and over. For example a link in a 
+        navigation bar might be different colours or font than an external link in a paragraph. 
+    </p>
+{% endblock %}

@@ -120,3 +120,15 @@ def CSS_typography(request):
         'CSS/typography/typography.html',
         context
     )
+
+
+def CSS_links_and_buttons(request):
+    '''Return the CSS links_and_buttons page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'CSS/links_and_buttons/links_and_buttons.html',
+        context
+    )

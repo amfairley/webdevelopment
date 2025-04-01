@@ -1,0 +1,75 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-links-and-buttons-link-states{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Link States{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Links can be customised depending on their state. These can be seen when using links on the web. Have you ever 
+        clicked a blue link, only to go back to the page and see it is now purple? This is because there is a rule for 
+        the 
+        <code class="written-code">:visited</code>
+        link state to highlight to the user that the link has already been clicked. These states are 
+        <a 
+            class="text-link"
+            href="{% url 'CSS_selectors' %}#CSS-selectors-pseudo-classes"
+            aria-label="Go to the pseudo classes section"
+            title="Go to the pseudo classes section"
+        >
+            pseudo classes
+        </a>
+        and the selectors for them follow the syntax of:
+    </p>
+    {% include 'CSS/links_and_buttons/includes/code_snippets/link_state.html' %}
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Pseudo-class
+                </th>
+                <th>
+                    Description
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <code class="written-code">:link</code>
+                </td>
+                <td>
+                    Styles an unvisited link.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">:visited</code>
+                </td>
+                <td>
+                    Styles a visited link.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">:hover</code>
+                </td>
+                <td>
+                    Styles the link when the mouse is hovering over it.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">:active</code>
+                </td>
+                <td>
+                    Styles the link at the moment it is being clicked.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

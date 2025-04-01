@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: CSS - Links and Buttons{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Links and Buttons</h2>
+
+    {% include 'CSS/links_and_buttons/includes/contents.html' %}
+    {% include 'CSS/links_and_buttons/includes/what_should_a_link_look_like.html' %}
+    {% include 'CSS/links_and_buttons/includes/resetting_the_default.html' %}
+    {% include 'CSS/links_and_buttons/includes/link_states.html' %}
+    {% include 'CSS/links_and_buttons/includes/buttons.html' %}
+{% endblock %}
