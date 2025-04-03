@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: CSS - Forms{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Forms</h2>
+
+    {% include 'CSS/forms/includes/contents.html' %}
+    {% include 'CSS/forms/includes/css_forms_and_pseudo_classes.html' %}
+    {% include 'CSS/forms/includes/pseudo_classes_for_form_elements.html' %}
+    {% include 'CSS/forms/includes/combining_pseudo_classes_with_other_css_selectors.html' %}
+
+{% endblock %}

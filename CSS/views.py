@@ -144,3 +144,15 @@ def CSS_lists(request):
         'CSS/lists/lists.html',
         context
     )
+
+
+def CSS_forms(request):
+    '''Return the CSS forms page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'CSS/forms/forms.html',
+        context
+    )

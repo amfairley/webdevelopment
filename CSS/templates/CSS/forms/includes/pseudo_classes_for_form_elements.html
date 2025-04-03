@@ -1,0 +1,124 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-forms-pseudo-classes-for-form-elements{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Pseudo Classes for Form Elements{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <!--:disabled-->
+    <h4>:disabled</h4>
+    <p>
+        The 
+        <code class="written-code">:disabled</code>
+        pseudo-class is used to target form elements that are currently disabled. Disabled form elements are typically 
+        unclickable and cannot be interacted with by the user. This pseudo-class can be used to style form elements 
+        like buttons, inputs, select menus, and text areas when they are disabled.
+    </p>
+    {% include 'CSS/forms/includes/code_snippets/pseudo_class_disabled.html' %}
+    <p>
+        In this example, the background colour of a disabled input field is changed to light gray, and the text colour
+        is set to dark gray, giving the user a visual indication that the field cannot be interacted with.
+    </p>
+
+    <!--:enabled-->
+    <h4>:enabled</h4>
+    <p>
+        The 
+        <code class="written-code">:enabled</code>
+        pseudo-class targets form elements that are enabled. This is essentially the opposite of 
+        <code class="written-code">:disabled</code>
+        and allows for styling enabled form fields. It's often used in conjunction with 
+        <code class="written-code">:disabled</code>
+        to apply different styles based on the enabled or disabled state of form elements.
+    </p>
+    {% include 'CSS/forms/includes/code_snippets/pseudo_class_enabled.html' %}
+    <p>
+        This CSS rule ensures that when the input field is enabled, it has a white background and black text, providing 
+        clear feedback to the user.
+    </p>
+
+    <!--:checked-->
+    <h4>:checked</h4>
+    <p>
+        The 
+        <code class="written-code">:checked</code>
+        pseudo-class is used to style elements like checkboxes or radio buttons that are currently selected or checked. 
+        This is particularly useful when you want to change the appearance of a form element based on whether it is 
+        selected or not.
+    </p>
+    {% include 'CSS/forms/includes/code_snippets/pseudo_class_checked.html' %}
+    <p>
+        Here, when a checkbox or radio button is checked, its border colour changes to blue and its background colour 
+        changes to light blue, providing clear visual feedback that the element is selected.
+    </p>
+
+    <!--:required-->
+    <h4>:required</h4>
+    <p>
+        The 
+        <code class="written-code">:required</code>
+        pseudo-class targets form elements that are marked as required. These are fields that must be filled out before 
+        the form can be submitted. The 
+        <code class="written-code">:required</code> pseudo-class allows you to apply specific styles to these fields to 
+        draw attention to their importance.
+    </p>
+    {% include 'CSS/forms/includes/code_snippets/pseudo_class_required.html' %}
+    <p>
+        This CSS rule gives required input fields a red border, making them stand out so that users are aware that they 
+        must fill out these fields before submitting the form.
+    </p>
+
+    <!--:optional-->
+    <h4>:optional</h4>
+    <p>
+        The 
+        <code class="written-code">:optional</code>
+        pseudo-class targets form fields that are not required. These are fields where the user has the option to leave 
+        them blank. You can use this pseudo-class to style optional fields differently from required ones, giving users 
+        a visual cue about the non-mandatory nature of the field.
+    </p>
+    {% include 'CSS/forms/includes/code_snippets/pseudo_class_optional.html' %}
+    <p>
+        In this example, optional input fields are given a gray border, providing a subtle distinction between 
+        required and optional fields.
+    </p>
+
+    <!--:valid-->
+    <h4>:valid</h4>
+    <p>
+        The 
+        <code class="written-code">:valid</code>
+        pseudo-class targets form elements that have valid input according to their constraints. For instance, an input 
+        field that requires a specific type of data (like an email address or a number) will be considered valid if the 
+        user enters data that conforms to these rules. This pseudo-class can be used to style fields that are correctly 
+        filled out.
+    </p>
+    {% include 'CSS/forms/includes/code_snippets/pseudo_class_valid.html' %}
+    <p>
+        Here, valid input fields are highlighted with a light green background, providing positive feedback that the 
+        entered data is correct.
+    </p>
+
+    <!--:invalid-->
+    <h4>:invalid</h4>
+    <p>
+        The 
+        <code class="written-code">:invalid</code>
+        pseudo-class targets form fields that have invalid input. This is useful for highlighting fields that have not 
+        been filled out correctly or do not meet the specified validation criteria. It's commonly used with 
+        <code class="written-code">input</code>,
+        <code class="written-code">select</code>,
+        and 
+        <code class="written-code">textarea</code>
+        elements.
+    </p>
+    {% include 'CSS/forms/includes/code_snippets/pseudo_class_invalid.html' %}
+    <p>
+        In this case, any input field that contains invalid data will have a pink background, drawing attention to the 
+        error and prompting the user to correct their input.
+    </p>
+{% endblock %}

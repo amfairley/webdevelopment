@@ -1,0 +1,30 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-forms-combining-pseudo-classes-with-other-css-selectors{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Combining Pseudo Classes With Other CSS Selectors{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Pseudo-classes can also be combined with other CSS selectors to achieve more specific styling. For example, you 
+        might want to apply a style to only required text inputs, or only to checked checkboxes. You can do that by 
+        targeting them with the
+        <a 
+            class="text-link"
+            href="{% url 'CSS_selectors' %}#CSS-selectors-attribute-selectors"
+            aria-label="Go to the attribute selector section"
+            title="Go to the attribute selector section"
+        > 
+            attribute selector.
+        </a>
+        Here's an example that targets only required text input fields that are valid:
+    </p>
+    {% include 'CSS/forms/includes/code_snippets/attribute.html' %}
+    <p>
+        This CSS rule ensures that only required text input fields that have valid input will have a green border.
+    </p>
+{% endblock %}
