@@ -30,4 +30,5 @@ urlpatterns = [
         views.CSS_links_and_buttons,
         name="CSS_links_and_buttons"
     ),
+    path('lists/', views.CSS_lists, name="CSS_lists"),
 ]

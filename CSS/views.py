@@ -132,3 +132,15 @@ def CSS_links_and_buttons(request):
         'CSS/links_and_buttons/links_and_buttons.html',
         context
     )
+
+
+def CSS_lists(request):
+    '''Return the CSS lists page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'CSS/lists/lists.html',
+        context
+    )

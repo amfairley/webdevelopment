@@ -1,0 +1,50 @@
+{% extends 'includes/html_css_example.html' %}
+{% load static %}
+
+{% block code_file_id %}CSS-lists-list-style-position-example{% endblock %}
+
+{% block html_css_code_result_content %}
+    <ul style="list-style-position: outside">
+        <li style="border: 1px solid black">First thing in outside position list.</li>
+        <li style="border: 1px solid black">Second thing in outside position list.</li>
+        <li style="border: 1px solid black">Third thing in outside position list.</li>
+    </ul>
+
+    <ul style="list-style-position: inside">
+        <li style="border: 1px solid black">First thing in inside position list.</li>
+        <li style="border: 1px solid black">Second thing in inside position list.</li>
+        <li style="border: 1px solid black">Third thing in inside position list.</li>
+    </ul>
+{% endblock %}
+
+{% block html_code_example_content %}
+<pre><code class="html">&lt;ul id="outside-position-list"&gt;
+    &lt;li&gt;First thing in outside position list.&lt;/li&gt;
+    &lt;li&gt;Second thing in outside position list.&lt;/li&gt;
+    &lt;li&gt;Third thing in outside position list.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul id="inside-position-list"&gt;
+    &lt;li&gt;First thing in inside position list.&lt;/li&gt;
+    &lt;li&gt;Second thing in inside position list.&lt;/li&gt;
+    &lt;li&gt;Third thing in inside position list.&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+{% endblock %}
+
+{% block css_code_example_content %}
+<pre><code class="css">#oustide-position-list {
+  /* The list-style-positon is outside by default so no need to set it */
+}
+
+#inside-position-list {
+  list-style-position: inside;
+}
+
+/* Put a border around the list items to show how the bullet points react */
+#oustide-position-list li
+#inside-position-list li {
+  border: 1px solid black;
+}
+</code></pre>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-lists-list-style-position{% endblock %}
+
+<!--Section title-->
+{% block text_title %}List Style Position{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        <code class="written-code">list-style-position</code>
+        specifies where the bullet or image appears in relation to the list item content. This can take one of two 
+        values:
+    </p>
+    <ul>
+        <li>
+            <code class="written-code">outside</code>:
+            This is the default value, the bullet point appears outside the content block and the text aligns normally.
+        </li>
+        <li>
+            <code class="written-code">inside</code>:
+            The bullet point appears inside the content block, so the text is indented along with the bullet point.
+        </li>
+    </ul>
+    <p>
+        This allows you greater choices when styling your list items by choosing whether or not the bullet points are
+        included.
+    </p>
+    {% include 'CSS/lists/includes/html_css_example/list_style_position.html' %}
+{% endblock %}

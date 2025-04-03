@@ -1,0 +1,20 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-lists-list-style-shorthand{% endblock %}
+
+<!--Section title-->
+{% block text_title %}List Style Shorthand{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can combine all list styles into a single shorthand property with the following syntax:
+        <code class="written-code">list-style: [type] [position] [image];</code>.
+    </p>
+    {% include 'CSS/lists/includes/code_snippets/shorthand.html' %}
+    <p>
+        If any value is omitted, the default will be used for that property.
+    </p>
+{% endblock %}

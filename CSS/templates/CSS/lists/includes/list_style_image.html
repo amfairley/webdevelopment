@@ -1,0 +1,20 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-lists-list-style-image{% endblock %}
+
+<!--Section title-->
+{% block text_title %}List Style Image{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        <code class="written-code">list-style-image</code>
+        allows you to replace the standard bullet with a custom image by providing the URL. 
+        <code class="written-code">list-style-image</code>
+        takes priority but if the image cannot be located, the browser will fallback to the 
+        <code class="written-code">list-style-type</code>.
+    </p>
+    {% include 'CSS/lists/includes/code_snippets/list_style_image.html' %}
+{% endblock %}

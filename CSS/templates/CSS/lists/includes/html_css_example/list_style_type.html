@@ -1,0 +1,61 @@
+{% extends 'includes/html_css_example.html' %}
+{% load static %}
+
+{% block code_file_id %}CSS-lists-list-style-type-example{% endblock %}
+
+{% block html_css_code_result_content %}
+    <ul style="list-style-type: square">
+        <li>First thing in square point list.</li>
+        <li>Second thing in square point list.</li>
+        <li>Third thing in square point list.</li>
+    </ul>
+
+    <ol style="list-style-type: upper-alpha">
+        <li>First thing in capital letter point list.</li>
+        <li>Second thing in capital letter point list.</li>
+        <li>Third thing in capital letter point list.</li>
+    </ol>
+
+    <ul style="list-style-type: none">
+        <li>First thing in no point list.</li>
+        <li>Second thing in no point list.</li>
+        <li>Third thing in no point list.</li>
+    </ul>
+{% endblock %}
+
+{% block html_code_example_content %}
+<pre><code class="html">&lt;ul id="square-point-list"&gt;
+    &lt;li&gt;First thing in square point list.&lt;/li&gt;
+    &lt;li&gt;Second thing in square point list.&lt;/li&gt;
+    &lt;li&gt;Third thing in square point list.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol id="capital-letter-list"&gt;
+    &lt;li&gt;First thing in capital letter point list.&lt;/li&gt;
+    &lt;li&gt;Second thing in capital letter point list.&lt;/li&gt;
+    &lt;li&gt;Third thing in capital letter point list.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul id="no-bullet-point-list"&gt;
+    &lt;li&gt;First thing in no point list.&lt;/li&gt;
+    &lt;li&gt;Second thing in no point list.&lt;/li&gt;
+    &lt;li&gt;Third thing in no point list.&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+{% endblock %}
+
+{% block css_code_example_content %}
+<pre><code class="css">#square-point-list {
+    list-style-type: square;
+}
+
+#capital-letter-list {
+    list-style-type: upper-alpha;
+}
+
+#no-bullet-point-list {
+    list-style-type: none;
+}
+</code></pre>
+{% endblock %}
+    

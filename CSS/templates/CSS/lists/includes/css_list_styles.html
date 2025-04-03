@@ -1,0 +1,33 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-lists-css-list-styles{% endblock %}
+
+<!--Section title-->
+{% block text_title %}CSS List Styles{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        CSS provides a set of properties to control the appearance of 
+        <a 
+            class="text-link"
+            href="{% url 'HTML_lists' %}"
+            aria-label="Go to the HTML page on lists"
+            title="Go to the HTML page on lists"
+        >
+            lists
+        </a>
+        (<code class="written-code">&lt;ul&gt;</code>,
+        <code class="written-code">&lt;ol&gt;</code>,
+        <code class="written-code">&lt;li&gt;</code>,)
+        making it easy to customize bullets, positions, and even replace bullet points with images. These are done 
+        using the
+        <code class="written-code">list-style-type</code>,
+        <code class="written-code">list-style-image</code>,
+        and
+        <code class="written-code">list-style-position</code>
+        properties.
+    </p>
+{% endblock %}

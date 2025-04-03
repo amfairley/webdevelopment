@@ -1,0 +1,102 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-lists-list-style-type{% endblock %}
+
+<!--Section title-->
+{% block text_title %}List Style Type{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        <code class="written-code">list-style-type</code> defines the bullet or numbering style for list items. These 
+        are the common values.
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Value
+                </th>
+                <th>
+                    Description
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <code class="written-code">disc</code>
+                </td>
+                <td>
+                    Default solid circle used in 
+                    <code class="written-code">&lt;ul&gt;</code>.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">circle</code>
+                </td>
+                <td>
+                    A hollow circle.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">square</code>
+                </td>
+                <td>
+                    A solid square.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">decimal</code>
+                </td>
+                <td>
+                    The standard numbers used in
+                    <code class="written-code">&lt;ol&gt;</code>.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">decimal-leading-zero</code>
+                </td>
+                <td>
+                    Numbers with leading zeros such as 01,02,03.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">low-roman</code>
+                    or
+                    <code class="written-code">upper-roman</code>
+                </td>
+                <td>
+                    Roman numerals in the form of i, ii, iii or I, II, III.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">lower-alpha</code>
+                    or
+                    <code class="written-code">upper-alpha</code>
+                </td>
+                <td>
+                    Lower or upper case letters such as a, b, c or A, B, C.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">none</code>
+                </td>
+                <td>
+                    No bullet point or number displayed.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>The following example gives an idea of the syntax for styling the lists.</p>
+    {% include 'CSS/lists/includes/html_css_example/list_style_type.html' %}
+{% endblock %}
