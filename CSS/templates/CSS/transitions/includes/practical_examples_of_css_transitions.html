@@ -1,0 +1,31 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-transitions-practical-examples-of-css-transitions{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Practical Examples of CSS Transitions{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <h4>
+        Hover Effects on Buttons
+    </h4>
+    {% include 'CSS/transitions/includes/code_snippets/example_button.html' %}
+    <p>
+        In this example, when the button is hovered, the 
+        <code class="written-code">background-color</code>
+        changes smoothly over 0.3 seconds, and the button scales up using the 
+        <code class="written-code">transform</code>
+        property.
+    </p>
+    <h4>
+        Image Hover Effects
+    </h4>
+    {% include 'CSS/transitions/includes/code_snippets/example_image.html' %}
+    <p>
+        Here, the opacity of the image changes from fully visible (1) to 50% opacity (0.5) when the image is hovered 
+        over, creating a fade-out effect.
+    </p>
+{% endblock %}

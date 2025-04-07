@@ -1,0 +1,24 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-transitions-combining-multiple-transitions{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Combining Multiple Transitions{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can combine multiple transitions into a single rule by separating each transition with a comma. This is 
+        useful when you want to apply different transitions to multiple properties.
+    </p>
+    {% include 'CSS/transitions/includes/code_snippets/multiple.html' %}
+    <p>
+        In this example the 
+        <code class="written-code">background-color</code>
+        transitions with a duration of 1 second and uses the ease-in timing function. The 
+        <code class="written-code">transform</code>
+        property transitions with a duration of 0.5 seconds and uses the ease-out timing function.
+    </p>
+{% endblock %}

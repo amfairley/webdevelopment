@@ -1,0 +1,53 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-transitions-the-transition-timing-function{% endblock %}
+
+<!--Section title-->
+{% block text_title %}The Transition Timing Function{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The 
+        <code class="written-code">transition-timing-function</code>
+        property controls the acceleration curve of the transition. This property defines how the transition progresses 
+        over time, allowing for effects like easing in and out, or maintaining a constant pace. Common values for 
+        <code class="written-code">transition-timing-function</code>
+        include:
+    </p>
+    <ul>
+        <li>
+            <code class="written-code">linear</code>:
+            The transition occurs at a constant speed.
+        </li>
+        <li>
+            <code class="written-code">ease</code>:
+            The transition starts slow, speeds up, and then slows down at the end.
+        </li>
+        <li>
+            <code class="written-code">ease-in</code>:
+            The transition starts slowly and speeds up toward the end.
+        </li>
+        <li>
+            <code class="written-code">ease-out</code>:
+            The transition starts quickly and slows down toward the end.
+        </li>
+        <li>
+            <code class="written-code">ease-in-out</code>:
+            The transition starts slow, speeds up in the middle, and slows down at the end.
+        </li>
+    </ul>
+    {% include 'CSS/transitions/includes/code_snippets/timing_function_1.html' %}
+    <p>
+        This specifies that the transition will start slow, speed up, and then slow down as it completes. If you wish 
+        to use a cubic
+        <dfn title="Create your own custom timing function">Bezier curve</dfn>,
+        you can use the following format:
+    </p>
+    {% include 'CSS/transitions/includes/code_snippets/timing_function_2.html' %}
+    <p>
+        This specifies a custom easing curve, which can result in unique transition effects.
+    </p>
+{% endblock %}

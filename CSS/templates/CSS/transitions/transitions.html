@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: CSS - Transitions{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Transitions</h2>
+
+    {% include 'CSS/transitions/includes/contents.html' %}
+    {% include 'CSS/transitions/includes/introduction.html' %}
+    {% include 'CSS/transitions/includes/the_transition_property.html' %}
+    {% include 'CSS/transitions/includes/the_transition_duration.html' %}
+    {% include 'CSS/transitions/includes/the_transition_timing_function.html' %}
+    {% include 'CSS/transitions/includes/the_transition_delay.html' %}
+    {% include 'CSS/transitions/includes/combining_multiple_transitions.html' %}
+    {% include 'CSS/transitions/includes/practical_examples_of_css_transitions.html' %}
+
+{% endblock %}

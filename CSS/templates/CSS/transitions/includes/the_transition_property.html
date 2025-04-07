@@ -1,0 +1,57 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-transitions-the-transition-property{% endblock %}
+
+<!--Section title-->
+{% block text_title %}The Transition Property{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The 
+        <code class="written-code">transition-property</code>
+        defines which CSS property will be the target of the transition. This property indicates which CSS property 
+        should undergo the animated transition. It can be a single property or a comma-separated list of properties if 
+        you want to transition multiple properties at once.
+    </p>
+    <p>
+        Commonly transitioned properties include:
+    </p>
+    <ul>
+        <li>
+            <code class="written-code">background-color</code>
+        </li>
+        <li>
+            <code class="written-code">height</code>
+        </li>
+        <li>
+            <code class="written-code">width</code>
+        </li>
+        <li>
+            <code class="written-code">opacity</code>
+        </li>
+        <li>
+            <code class="written-code">transform</code>
+        </li>
+        <li>
+            <code class="written-code">color</code>
+        </li>
+    </ul>
+    {% include 'CSS/transitions/includes/code_snippets/transition_property_1.html' %}
+    <p>
+        This specifies that only the 
+        <code class="written-code">background-color</code>
+        property will transition when its value changes. You can also apply transitions to multiple properties 
+        simultaneously. For example:
+    </p>
+    {% include 'CSS/transitions/includes/code_snippets/transition_property_2.html' %}
+    <p>
+        In this case, both the 
+        <code class="written-code">background-color</code>
+        and 
+        <code class="written-code">transform</code>
+        properties will transition when triggered.
+    </p>
+{% endblock %}

@@ -156,3 +156,15 @@ def CSS_forms(request):
         'CSS/forms/forms.html',
         context
     )
+
+
+def CSS_transitions(request):
+    '''Return the CSS transitions page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'CSS/transitions/transitions.html',
+        context
+    )

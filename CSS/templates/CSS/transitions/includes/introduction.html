@@ -1,0 +1,48 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-transitions-introduction{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Introduction{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        CSS transitions offer a smooth way to animate the change of an element's properties over a specified duration. 
+        By using transitions, web developers can enhance user experience by providing subtle, interactive effects that 
+        trigger when a user interacts with an element or when a property changes. This feature allows for visual 
+        continuity and an enhanced feel of interactivity on websites. I will describe the different aspects of CSS 
+        transitions, covering the main properties, syntax, and examples. A CSS transition is a way to create animated 
+        changes in CSS property values when an element's state changes. For instance, when a user hovers over a button, 
+        the background colour may change smoothly from one colour to another. Transitions can be applied to many CSS 
+        properties, such as color, height, width, position, opacity, and many more.
+    </p>
+    <p>
+        CSS transitions consist of a few key components:
+    </p>
+    <ul>
+        <li>
+            <code class="written-code">transition-property</code>:
+            Specifies which property you want to transition.
+        </li>
+        <li>
+            <code class="written-code">transition-duration</code>:
+            Defines how long the transition will take.
+        </li>
+        <li>
+            <code class="written-code">transition-timing-function</code>:
+            Determines the speed curve of the transition, essentially controlling how the transition behaves over time.
+        </li>
+        <li>
+            <code class="written-code">transition-delay</code>:
+            Specifies a delay before the transition starts.
+        </li>
+    </ul>
+    <p>
+        These four properties can be combined into one declaration with the following syntax:
+    </p>
+    {% include 'CSS/transitions/includes/code_snippets/shorthand.html' %}
+
+{% endblock %}

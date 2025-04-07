@@ -1,0 +1,35 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-transitions-the-transition-delay{% endblock %}
+
+<!--Section title-->
+{% block text_title %}The Transition Delay{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The 
+        <code class="written-code">transition-delay</code>
+        property defines how much time should pass before the transition begins. The delay can be specified in seconds 
+        (s) or milliseconds (ms). This allows you to introduce a delay before the transition starts, creating a 
+        staggered effect for multiple elements or animations.
+    </p>
+    {% include 'CSS/transitions/includes/code_snippets/transition_delay_1.html' %}
+    <p>
+        Here, the transition will start 0.5 seconds after the change occurs.
+    </p>
+    <p>
+        If you are transitioning multiple properties and want different delays for each, you can specify them 
+        individually.
+    </p>
+    {% include 'CSS/transitions/includes/code_snippets/transition_delay_2.html' %}
+    <p>
+        In this case, the 
+        <code class="written-code">background-color</code>
+        will start transitioning after 0.5 seconds, while the 
+        <code class="written-code">transform</code>
+        transition will start after 0.2 seconds.
+    </p>
+{% endblock %}

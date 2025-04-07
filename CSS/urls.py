@@ -32,4 +32,9 @@ urlpatterns = [
     ),
     path('lists/', views.CSS_lists, name="CSS_lists"),
     path('forms/', views.CSS_forms, name="CSS_forms"),
+    path(
+        'transitions/',
+        views.CSS_transitions,
+        name="CSS_transitions"
+    ),
 ]
