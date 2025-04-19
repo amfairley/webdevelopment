@@ -1,0 +1,90 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-responsive-design-media-queries{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Media Queries{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Media queries are the cornerstone of responsive web design. They allow you to apply different styles based on 
+        various device characteristics, such as screen width, height, resolution, and orientation. Media queries can be 
+        used to optimise the layout for different screen sizes, ensuring that users have a pleasant experience 
+        regardless of the device they're using. 
+    </p>
+    <p>
+        A basic syntax for a media query looks like this:
+    </p>
+    {% include 'CSS/responsive_design/includes/code_snippets/syntax.html' %}
+    <p>
+        Here, 
+        <code class="written-code">@media</code>
+        specifies that the following styles should only apply when the specified condition is true. In this case, the 
+        condition is that the viewport width is less than or equal to 480px. The 
+        <code class="written-code">only screen</code>
+        part is used to prevent older browsers from applying styles.
+    </p>
+    <p>
+        Media queries can also target different ranges, such as minimum and maximum widths, heights, and more. This 
+        allows you to define multiple breakpoints to ensure your website adjusts to various screen sizes:
+    </p>
+    <ul>
+        <li>
+            <code class="written-code">min-width</code>:
+            Applies styles for screen widths greater than or equal to the specified value.
+        </li>
+        <li>
+            <code class="written-code">max-width</code>:
+            Applies styles for screen widths less than or equal to the specified value.
+        </li>
+        <li>
+            <code class="written-code">min-height</code>:
+            Applies styles for screen heights greater than or equal to the specified value.
+        </li>
+        <li>
+            <code class="written-code">max-height</code>:
+            Applies styles for screen heights less than or equal to the specified value.
+        </li>
+        <li>
+            <code class="written-code">min-resolution</code>:
+            Triggers styles on screens with a resolution at or above a threshold. Units can be 
+            <dfn title="Dots per inch">dpi</dfn>,
+            <dfn title="Dots per pixel unit">dppx</dfn>
+            or
+            <dfn title="Dots per centimeter">dpcm</dfn>.
+        </li>
+        <li>
+            <code class="written-code">max-resolution</code>:
+            Triggers styles on screens with a resolution at or below a threshold.
+        </li>
+        <li>
+            <code class="written-code">resolution</code>:
+            Targets a specific resolution.
+        </li>
+        <li>
+            <code class="written-code">min-aspect-ratio</code>:
+            Triggers styles on screens at or above a specific aspect-ratio.
+        </li>
+        <li>
+            <code class="written-code">max-aspect-ratio</code>:
+            Triggers styles on screens at or below a specific aspect-ratio.
+        </li>
+        <li>
+            <code class="written-code">aspect-ratio</code>:
+            Targets a specific aspect ratio (e.g. 16/9).
+        </li>
+    </ul>
+    {% include 'CSS/responsive_design/includes/code_snippets/media_queries.html' %}
+    <p>
+        You can use comma-separated lists within media queries to apply multiple conditions, similar to an "OR" 
+        condition. This allows you to apply styles for any of the listed conditions.
+    </p>
+    {% include 'CSS/responsive_design/includes/code_snippets/comma_list.html' %}
+    <p>
+        This media query will apply styles for devices with a width of 480px or less OR a height of 600px or less. If 
+        either condition is true, the styles will be applied.
+    </p>
+{% endblock %}

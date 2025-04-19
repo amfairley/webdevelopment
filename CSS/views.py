@@ -168,3 +168,15 @@ def CSS_transitions(request):
         'CSS/transitions/transitions.html',
         context
     )
+
+
+def CSS_responsive_design(request):
+    '''Return the CSS responsive design page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'CSS/responsive_design/responsive_design.html',
+        context
+    )

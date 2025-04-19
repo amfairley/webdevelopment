@@ -37,4 +37,9 @@ urlpatterns = [
         views.CSS_transitions,
         name="CSS_transitions"
     ),
+    path(
+        'responsive_design/',
+        views.CSS_responsive_design,
+        name="CSS_responsive_design"
+    ),
 ]

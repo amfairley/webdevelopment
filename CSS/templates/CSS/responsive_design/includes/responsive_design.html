@@ -1,0 +1,63 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-responsive-design-responsive-design{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Responsive Design{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        In modern web development, creating responsive designs that adapt to different devices is crucial for providing 
+        an optimal user experience. Media queries are a powerful tool for implementing responsive design. They allow 
+        developers to apply CSS styles conditionally based on certain criteria, such as the viewport's dimensions, 
+        screen resolution, or device capabilities.
+    </p>
+    <p>
+        Before diving into media queries, it's important to understand the units em and rem, which are commonly used in 
+        responsive design, these are discussed in detail 
+        <a 
+            class="text-link"
+            href=""
+            title="Sizes guide"
+            aria-label="Go to the wed design page on sizes."
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            here
+        </a>
+        on the web design sizes guide.
+    </p>
+    <p>
+        Using em can create flexible layouts because the font size is based on the parent element's size. However, it 
+        can lead to unexpected scaling if there is no consistent base font size, making it challenging to maintain the 
+        desired layout on different devices.
+    </p>
+    <p>
+        To ensure that your website is responsive on mobile devices, it is important to include the viewport meta tag in 
+        the 
+        <code class="written-code">&lt;head&gt;</code>
+        section of your HTML. The viewport meta tag controls the layout of the page on mobile browsers, determining how 
+        the page's dimensions are calculated and how the content is scaled.
+    </p>
+    <p>
+        <code class="written-code">&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code>
+    </p>
+    <ul>
+        <li>
+            <code class="written-code">width=device-width</code>:
+            This tells the browser to set the viewport width to the width of the device's screen, ensuring that the 
+            layout fits within the screen without requiring horizontal scrolling.
+        </li>
+        <li>
+            <code class="written-code">initial-scale=1</code>:
+            This sets the initial zoom level when the page is loaded, ensuring that it is displayed at its natural size.
+        </li>
+    </ul>
+    <p>
+        By using this meta tag, you can ensure that your website is responsive and that it scales appropriately on 
+        devices with different screen sizes.
+    </p>
+{% endblock %}

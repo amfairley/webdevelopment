@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: CSS - Responsive Design{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Responsive Design</h2>
+
+    {% include 'CSS/responsive_design/includes/contents.html' %}
+    {% include 'CSS/responsive_design/includes/responsive_design.html' %}
+    {% include 'CSS/responsive_design/includes/media_queries.html' %}
+
+{% endblock %}

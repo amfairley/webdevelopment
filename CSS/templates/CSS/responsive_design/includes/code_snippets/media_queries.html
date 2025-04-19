@@ -1,0 +1,60 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-responsive-design-media-queries{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="css">/* For screens 600px or smaller */
+    @media only screen and (max-width: 600px) {
+        body {
+            font-size: 14px;
+        }
+    }
+    
+/* For screens larger than 600px */
+@media only screen and (min-width: 601px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+/* Target screen size within width limits */
+@media (min-width: 600px) and (max-width: 1024px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+/* For screens with a height of at least 800px */
+@media only screen and (min-height: 800px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+/* For screens with a height of 600px or less */
+@media only screen and (max-height: 600px) {
+    body {
+        background-color: lightgreen;
+    }
+}
+
+/* Target screen size within height limits */
+@media (min-height: 600px) and (max-height: 1024px) {
+    body {
+        background-color: yellow;
+    }
+}
+
+/* Target high resolution retina displays */
+@media (min-resolution: 192dpi) {
+    .logo {
+        background-image: url('logo@2x.png');
+    }
+}
+</code></pre>
+{% endblock %}
