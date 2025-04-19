@@ -1,0 +1,58 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-bootstrap-what-is-bootstrap{% endblock %}
+
+<!--Section title-->
+{% block text_title %}What is Bootstrap?{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        <a 
+            class="text-link"
+            href="https://getbootstrap.com/"
+            title="Bootstrap"
+            aria-label="Go to the Bootstrap website"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Bootstrap
+        </a>
+        is one of the most popular CSS libraries out there. It's a toolkit full of ready-to-use styles and components 
+        that help you build websites faster and with less fuss. Instead of writing all your styles from scratch, 
+        Bootstrap gives you a solid foundation to work with: things like a responsive grid system, buttons, forms, 
+        navbars, modals, and more, all wrapped up in clean, mobile-friendly design.
+    </p>
+    <p>
+        Developers use libraries like Bootstrap because they save time, especially when you're building something 
+        quickly or don't want to reinvent the wheel for common UI elements. With Bootstrap, you can get a 
+        decent-looking site up and running in no time. That said, there are a few trade-offs. If you rely too heavily 
+        on the default styles, your site might end up looking a bit “samey,” and the library itself can add a bit of 
+        bloat to your code if you're not careful. Still, it's a great place to start, especially for beginners. There 
+        are lots of other CSS frameworks out there, but Bootstrap is one of the most well-known and beginner-friendly.
+    </p>
+    <p>
+        To get it to work, you essentially link your project to a collection of Bootstrap CSS rules and JavaScript 
+        scripts allowing you to link them by just adding the class names to your elements in HTML.
+    </p>
+    <p>
+        Whenever you want to add any feature, component, or functionality, just look at the examples listed in 
+        Bootstraps own 
+        <a 
+            class="text-link"
+            href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+            title="Bootstrap Documentation"
+            aria-label="Go to the Bootstrap Documentation site"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            documentation.
+        </a>
+        On this page I will just go over some of the basics to get you started and explain some uses of the Bootstrap 
+        grid system. Including components such as navigation bars, dropdown menus, progress bars, and many others (and 
+        customising them) is explained very well in the documentation with excellent examples to suit almost all of 
+        your needs, so I will not waste our time by going over them in less detail here.
+    </p>
+{% endblock %}

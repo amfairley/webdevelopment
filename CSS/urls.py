@@ -42,4 +42,9 @@ urlpatterns = [
         views.CSS_responsive_design,
         name="CSS_responsive_design"
     ),
+    path(
+        'bootstrap/',
+        views.CSS_bootstrap,
+        name="CSS_bootstrap"
+    ),
 ]

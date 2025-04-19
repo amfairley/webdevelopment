@@ -1,0 +1,69 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-bootstrap-bootstrap-grids{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Bootstrap Grids{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Bootstrap uses its own 
+        <a 
+            class="text-link"
+            href="{% url 'CSS_grids' %}"
+            aria-label="Go to the CSS grid page"
+            title="Go to the CSS grid page"
+        > 
+            grid
+        </a>
+        system for page layout and breaks down the page into 12 columns. For something that takes up the full width of 
+        the page, you would need the
+        <code class="written-code">col-12</code>
+        class.
+        For two things to each take up half the width, you can have two elements with 
+        <code class="written-code">col-6</code>
+        classes next to each other.
+    </p>
+    <p>
+        The syntax for this is that there needs to be an external 
+        <code class="written-code">container</code>
+        class element. This then contains 
+        <code class="written-code">row</code>
+        class elements. Inside these
+        <code class="written-code">row</code>
+        class elements you can have your 
+        <code class="written-code">col</code>
+        class elements.
+    </p>
+    {% include 'CSS/bootstrap/includes/code_snippets/syntax.html' %}
+    <p>
+        If the 
+        <code class="written-code">col</code>
+        class elements inside your 
+        <code class="written-code">row</code>
+        class element does not add up to 12, Bootstrap will not complain and leave the remaining empty space on the 
+        right by default. If they add up to more than 12, Bootstrap will put them on the next line (row) down. For 
+        instance 2 
+        <code class="written-code">col-4</code>s
+        and a
+        <code class="written-code">col-6</code>
+        will result in the 
+        <code class="written-code">col-4</code>s
+        on the same line with an empty 
+        <code class="written-code">col-4</code>
+        space on the right and half of the next line taken up by the 
+        <code class="written-code">col-6</code>.
+    </p>
+    <p>
+        If you want Bootstrap to handle sizing more fluidly, you can use .col without a number (like 
+        <code class="written-code">&lt;div class="col"&gt;</code>),
+        and it will automatically divide the 
+        <code class="written-code">row</code>
+        evenly based on how many 
+        <code class="written-code">col</code>
+        class elements are in it.
+    </p>
+{% endblock %}

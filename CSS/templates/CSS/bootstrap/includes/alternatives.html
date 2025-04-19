@@ -1,0 +1,30 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-bootstrap-alternatives{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Alternatives{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        There are plenty of CSS libraries out there, although I find Bootstrap to be the easiest to get to grips with 
+        and the most customisable. Another one I like is 
+            <a 
+            class="text-link"
+            href="https://materializecss.com/"
+            title="Go to MaterializeCSS"
+            aria-label="Go to the MaterializeCSS"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            MaterializeCSS
+        </a>.
+        I actually prefer the components provided by Materialize, however their library is not as extensive as 
+        Bootstrap yet. It is best practice not to use more than one Library, as some of their classes may be repeated 
+        across them resulting in some errors across your site. However you could copy and download each of the 
+        component classes separately and join them in one file, but this may be a bit extreme for simple websites.
+    </p>
+{% endblock %}

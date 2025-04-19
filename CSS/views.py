@@ -180,3 +180,15 @@ def CSS_responsive_design(request):
         'CSS/responsive_design/responsive_design.html',
         context
     )
+
+
+def CSS_bootstrap(request):
+    '''Return the CSS bootstrap page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'CSS/bootstrap/bootstrap.html',
+        context
+    )

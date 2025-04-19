@@ -1,0 +1,18 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code_snippet_css_bootstrap_hidden_items_3{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="html">&lt;!-- Thing A for large screens --&gt;
+&lt;div class="col-6 d-none d-lg-block"&gt;Thing A&lt;/div&gt;
+&lt;!-- Thing B (always visible, adjusts size) --&gt;
+&lt;div class="col-12 col-lg-6"&gt;Thing B&lt;/div&gt;
+&lt;!-- Thing A for small screens --&gt;
+&lt;div class="col-12 d-block d-lg-none"&gt;Thing A&lt;/div&gt;
+</code></pre>
+{% endblock %}

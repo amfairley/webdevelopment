@@ -1,0 +1,32 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-bootstrap-hidden-items{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Hidden Items{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        One aspect of responsive design you may want to include is to make some elements disappear on smaller or larger 
+        screens and only appear above or below a certain screen size. I have used this to change the order of elements 
+        when the screen size changes. For instance if I have thing A next to thing B on larger screens but on smaller 
+        screens I want thing A underneath thing B, my HTML will look like 
+        Thing A (hide small screens, show on big ,col-6), Thing B (col-12 col-lg-6), 
+        Thing A (show on small screens, hide on big, col-12). This is done by setting the display (d) to none.
+    </p>
+    <p>
+        Hiding on smaller screens, showing on large:
+    </p>
+    {% include 'CSS/bootstrap/includes/code_snippets/hidden_items_1.html' %}
+    <p>
+        Showing on smaller screens, hiding on large:
+    </p>
+    {% include 'CSS/bootstrap/includes/code_snippets/hidden_items_2.html' %}
+    <p>
+        For my full “Thing A, Thing B” example:
+    </p>
+    {% include 'CSS/bootstrap/includes/code_snippets/hidden_items_3.html' %}
+{% endblock %}

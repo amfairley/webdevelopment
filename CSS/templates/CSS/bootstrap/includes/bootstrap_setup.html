@@ -1,0 +1,62 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-bootstrap-bootstrap-setup{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Bootstrap Setup{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Bootstrap's quick start 
+        <a 
+            class="text-link"
+            href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+            title="Bootstrap Quickstart Guide"
+            aria-label="Go to the Bootstrap quickstart guide"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            guide
+        </a>
+        is great. It gives an example HTML file you can copy and paste and change to your requirements. The key parts 
+        you can't skip over are:
+        <ul>
+            <li>
+                Include 
+                <code class="written-code">
+                    &lt;meta name="viewport"&gt;
+                </code>
+                in your
+                <code class="written-code">
+                    &lt;head&gt;
+                </code>
+                element.
+            </li>
+            <li>
+                Link the CSS
+                <dfn title="Content Delivery Network">CDN</dfn>
+                in your 
+                <code class="written-code">
+                    &lt;head&gt;
+                </code>
+                element.
+            </li>
+            <li>
+                Link the JS
+                <dfn title="Content Delivery Network">CDN</dfn>
+                in your 
+                <code class="written-code">
+                    &lt;head&gt;
+                </code>
+                element or the bottom of your
+                <code class="written-code">
+                    &lt;body&gt;
+                </code>
+                element.
+            </li>
+        </ul>
+    </p>
+{% endblock %}

@@ -1,0 +1,89 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-bootstrap-responsive-design{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Responsive Design{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can set 
+        <code class="written-code">col</code>
+        classes based on screen size so that your website responds dynamically to different screen sizes. Desktop 
+        screens may be large enough to have two sections next to each other, but this may look squashed up on a mobile 
+        screen so it would be better to have them on separate rows. To do this the syntax is to put a size between 
+        “col” and the number like:
+    </p>
+    {% include 'CSS/bootstrap/includes/code_snippets/responsive_design.html' %}
+    <p>
+        These work on the “x and above” philosophy. So in the above example, the div will take up a whole width 
+        (12 columns) on small sizes and above. When the screen size gets to 992px (large), the div will then take up 
+        half of the width (6 columns).
+    </p>
+    <p>
+        The options for these sizes are:
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Keyword
+                </th>
+                <th>
+                    Size
+                </th>
+                <th>
+                    Pixel Size
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code class="written-code">col-</code></td>
+                <td>Extra small (default)</td>
+                <td>&lt;576px</td>
+            </tr>
+            <tr>
+                <td><code class="written-code">col-sm-</code></td>
+                <td>Small</td>
+                <td>&ge;576px</td>
+            </tr>
+            <tr>
+                <td><code class="written-code">col-md-</code></td>
+                <td>Medium</td>
+                <td>&ge;768px</td>
+            </tr>
+            <tr>
+                <td><code class="written-code">col-lg-</code></td>
+                <td>Large</td>
+                <td>&ge;992px</td>
+            </tr>
+            <tr>
+                <td><code class="written-code">col-xl-</code></td>
+                <td>Extra Large</td>
+                <td>&ge;1200px</td>
+            </tr>
+            <tr>
+                <td><code class="written-code">col-xxl-</code></td>
+                <td>Extra Extra Large</td>
+                <td>&ge;1400px</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        The pixel sizes of these keywords is good know so that you can create 
+        <a 
+            class="text-link"
+            href="{% url 'CSS_responsive_design' %}#CSS-responsive-design-media-queries"
+            aria-label="Go to the CSS media queries section"
+            title="Go to the CSS media queries section"
+        > 
+            media queries
+        </a>
+        for other aspects of your website to change at the same break points.
+    </p>
+    
+{% endblock %}

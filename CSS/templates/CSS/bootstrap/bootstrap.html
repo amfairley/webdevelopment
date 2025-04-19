@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: CSS - Bootstrap{% endblock %}
+
+{% block extra_css %}
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Bootstrap</h2>
+
+    {% include 'CSS/bootstrap/includes/contents.html' %}
+    {% include 'CSS/bootstrap/includes/what_is_bootstrap.html' %}
+    {% include 'CSS/bootstrap/includes/bootstrap_setup.html' %}
+    {% include 'CSS/bootstrap/includes/bootstrap_grids.html' %}
+    {% include 'CSS/bootstrap/includes/responsive_design.html' %}
+    {% include 'CSS/bootstrap/includes/hidden_items.html' %}
+    {% include 'CSS/bootstrap/includes/alternatives.html' %}
+
+{% endblock %}
