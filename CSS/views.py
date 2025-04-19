@@ -192,3 +192,15 @@ def CSS_bootstrap(request):
         'CSS/bootstrap/bootstrap.html',
         context
     )
+
+
+def CSS_css_validation(request):
+    '''Return the CSS validation page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'CSS/css_validation/css_validation.html',
+        context
+    )

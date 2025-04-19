@@ -47,4 +47,9 @@ urlpatterns = [
         views.CSS_bootstrap,
         name="CSS_bootstrap"
     ),
+    path(
+        'css_validation/',
+        views.CSS_css_validation,
+        name="CSS_css_validation"
+    ),
 ]

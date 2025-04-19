@@ -1,0 +1,59 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}CSS-css-validation{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Validation{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can validate your CSS code to ensure that it is up to scratch with the 
+        <a 
+            class="text-link"
+            href="https://jigsaw.w3.org/css-validator/"
+            title="Go to the W3C Jigsaw CSS validator"
+            aria-label="Go to the W3C Jigsaw CSS validator"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            W3C Jigsaw CSS validator.
+        </a>
+    </p>
+    <p>
+        More importantly you can test the accessibility of your website using the 
+        <a 
+            class="text-link"
+            href="https://wave.webaim.org/"
+            title="Go to the wave validator"
+            aria-label="Go to the wave validator"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            wave
+        </a>
+        validator
+        (sometimes linking to this website fails to work, if that is the case, Google "wave validator" and click the 
+        top link).
+        For hosted websites you can just type in your url. For websites in development you can get the 
+        Google Chrome extension 
+        <a 
+            class="text-link"
+            href="https://wave.webaim.org/extension/"
+            title="Wave Google Chrome Extension"
+            aria-label="Wave Google Chrome Extension"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            here
+        </a>
+        (this link may also not work, either search the Chrome extension store or find a link on the wave validator 
+        website after getting to it through Google).
+        Then just host your website locally and click on the extension. It will highlight any errors in the 
+        accessibility of your CSS and HTML in the “Summary” section. Going to the “Details” section will allow you to 
+        go through them one by one highlighting each part that requires fixing. This includes aria-labels and colour 
+        contrasts. 
+    </p>
+{% endblock %}
