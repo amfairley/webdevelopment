@@ -3,5 +3,9 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.intro_to_full_stack, name="intro_to_full_stack"),
+    path(
+        'programming_and_the_web/',
+        views.full_stack_programming_and_the_web,
+        name="full_stack_programming_and_the_web"
+    ),
 ]

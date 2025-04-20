@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Full Stack - Programming and the Web{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Programming and the Web</h2>
+    
+    {% include 'intro_to_full_stack/programming_and_the_web/includes/contents.html' %}
+    {% include 'intro_to_full_stack/programming_and_the_web/includes/declarative_and_imperative_programming.html' %}
+    {% include 'intro_to_full_stack/programming_and_the_web/includes/html.html' %}
+
+{% endblock %}
