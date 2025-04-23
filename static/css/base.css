@@ -61,6 +61,17 @@ body.night-mode kbd {
     background-color: #FFD700;
 }
 
+/* In page single line terminal code */
+.bash-container code{
+    padding: 0 !important;
+}
+
+.bash-container {
+    height: fit-content;
+    line-height: 1.1rem;
+    margin: 0;
+}
+
 /* ---------- Navigation bar ---------- */
 /* Bar */
 .nav-wrapper {
