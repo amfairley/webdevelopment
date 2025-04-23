@@ -1,0 +1,11 @@
+{% load static %}
+
+{% block extra_css %}
+    <!--Troubleshooting css file-->
+    <link rel="stylesheet" href="{% static 'css/troubleshooting.css' %}">
+{% endblock extra_css %}
+
+<div  id="{% block tips_id %}{% endblock %}" class="tip-troubleshooting-box">
+    <h3><i class="fa-solid fa-star"></i>Top Tips</h3>
+    {% block tips_content %}{% endblock %}
+</div>
