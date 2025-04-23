@@ -1,0 +1,24 @@
+{% extends 'includes/top_tips.html' %}
+{% load static %}
+
+<!--ID-->
+{% block tips_id %}github-tip-workflow{% endblock %}
+{% block tips_content %}
+    <h4>A Basic Git Workflow</h4>
+    <ul>
+        <li>
+            Local repository: Where you write and edit code on your machine, for example in VSCode.
+        </li>
+        <li>
+            Staging area: Where you add your updated files, collecting them together to be pushed to the remote repository.
+        </li>
+        <li>
+            Commit: Create a snapshot of the files in the staging area including which files and changes made to be
+            added to your repository history.
+        </li>
+        <li>
+            Push to the remote repository: Transfer these changes to the remote respository hosted on GitHub to either
+            make them available to others or to act as a safe
+        </li>
+    </ul>
+{% endblock %}

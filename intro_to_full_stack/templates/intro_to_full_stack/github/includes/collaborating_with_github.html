@@ -1,0 +1,199 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-github-collaborating-with-github{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Collaborating with GitHub{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Getting started with collaboration on GitHub might seem a little intimidating, but once you understand how the 
+        different aspects of collaboration work, such as inviting teammates, making forks, creating pull requests, and 
+        handling merge conflicts, it all starts to click. Collaboration on GitHub is basically all about communicating 
+        clearly and being kind to your future self (and teammates) with clean commits and clear pull requests. Once you 
+        get into the rhythm, it becomes second nature.
+    </p>
+    <!--Adding collaborators-->
+    <h4>
+        Adding Collaborators
+    </h4>
+    <p>
+        If you're working on a small project with a few people you trust, the easiest way to collaborate is to add them 
+        directly to your repository. Here's how:
+    </p>
+    <ul>
+        <li>Go to your repo on GitHub.</li>
+        <li>Click Settings > Collaborators.</li>
+        <li>Under the “Manage access” section of the page, hit “Add people” and enter their GitHub username, full name, or email.</li>
+    </ul>
+    <p>
+        Once they accept, they'll have permission to push changes directly to the repo. 
+    </p>
+    {% include 'intro_to_full_stack/github/includes/troubleshooting/add_to_repo.html' %}
+    <p>
+        For safety, especially on bigger projects, you can protect your main branch so no one accidentally breaks anything:
+    </p>
+    <ul>
+        <li>
+            Go to Settings > Branches > Add branch ruleset
+        </li>
+    </ul>
+    <p>
+        Select your main branch and check options like Require pull request reviews before merging. This ensures that 
+        all changes go through a review process first. For more examples see the pages for 
+        <a 
+            class="text-link"
+            href="https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets"
+            title="Go to the GitHub documentation for rulesets page"
+            aria-label="Go to the GitHub documentation for rulesets page"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            rulesets
+        </a>
+        and 
+        <a 
+            class="text-link"
+            href="https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches"
+            title="Go to the GitHub documentation for protected branches page"
+            aria-label="Go to the GitHub documentation for protected branches page"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            protected branches
+        </a>
+        in the GitHub documentation.
+    </p>
+    <!--Forking a repository-->
+    <h4>
+        Forking a Repository
+    </h4>
+    <p>
+        If you don't want to give someone direct access, or if you're contributing to someone else's project, forking 
+        is the way to go. Forking creates a copy of the upstream repository under your GitHub account, so you can work 
+        on it without affecting the original project. For full information, see the 
+        <a 
+            class="text-link"
+            href="http://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks"
+            title="Go to the GitHub documentation for forks page"
+            aria-label="Go to the GitHub documentation for forks page"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            forks
+        </a>
+        section of the documentation. Outlined here is my general experience with them.
+    </p>
+    <ul>
+        <li>Click the grey “Fork” button on the top right of the repository page and select “+ Create a new fork”. This makes a copy of the repository on your GitHub profile.</li>
+        <li>Clone this forked repository (from your GitHub profile) onto your IDE in the usual way.</li>
+        <li>
+            Create a branch for your changes using
+            <ul>
+                <li>
+                    <code class="written-code">git checkout -b your-branch-name</code>
+                </li>
+            </ul>
+        </li>
+        <li>
+            Make your changes and push them
+            <ul>
+                <li>
+                    <code class="written-code">git push origin your-branch-name</code>
+                </li>
+            </ul>
+        </li>
+        <li>
+            To keep your fork updated, make sure to add the original repo as a remote.
+            <ul>
+                <li>
+                    <code class="written-code">
+                        git remote add upstream https://github.com/original-owner/repo.git
+                    </code>
+                    <code class="written-code">
+                        git pull upstream main
+                    </code>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <!--Pull Requests-->
+    <h4>
+        Pull Requests
+    </h4>
+    <p>
+        Once you've pushed a branch with your changes, GitHub usually shows a "Compare & Pull Request" button. This is 
+        where the real collaboration begins.
+    </p>
+    <p>
+        In a pull request you can:
+    </p>
+    <ul>
+        <li>Describe what you changed and why</li>
+        <li>Explain how you tested it</li>
+        <li>Link to any issues it solves (just type #issue-number from the associated Project)</li>
+        <li>Assign reviewers, so your teammates know to take a look</li>
+    </ul>
+    <p>
+        There are a couple of ways the code can be merged once it's approved:
+    </p>
+    <ul>
+        <li>Merge Commit: Keeps the history and shows all the commits.</li>
+        <li>Squash and Merge: Combines your commits into one clean entry (great for tidy repos).</li>
+    </ul>
+    <p>
+        If a reviewer requests changes, just make your edits locally and push again — GitHub will automatically update 
+        the pull request. Once your pull request is merged, don't forget to sync your main branch again wit
+        <code class="written-code">git checkout main</code>
+        and
+        <code class="written-code">git pull origin main</code>.
+    </p>
+    <!--Merge Conflicts-->
+    <h4>
+        Merge Conflicts
+    </h4>
+    <p>
+        Merge conflicts occur when two or more developers try to merge changes they have made from their forked 
+        repository to the upstream main repository but having made different changes. For instance if one developer 
+        changes <i>Functionality A</i> and merges it, but another developer is working on another aspect of 
+        <i>Functionality A</i> from the original repository, when they come to merge the same file, it will not include 
+        all the changes to <i>Functionality A</i> that the first developer made.
+    </p>
+    <p>
+        It can also occur if two developers make changes to the same line of code.
+    </p>
+    <p>
+        In the first case the second developer can:
+    </p>
+    <p>Sync your main branch:</p>
+    {% include 'intro_to_full_stack/github/includes/code_snippets/merge_1.html' %}
+    <p>Switch back to your working branch:</p>
+    {% include 'intro_to_full_stack/github/includes/code_snippets/merge_2.html' %}
+    <p>Rebase your changes:</p>
+    {% include 'intro_to_full_stack/github/includes/code_snippets/merge_3.html' %}
+    <p>
+        Git will point out the conflict. Open the file, look for the 
+        <code class="written-code">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>
+        markers, and manually resolve the conflict.
+    </p>
+    <p>
+        Once resolved:
+    </p>
+    {% include 'intro_to_full_stack/github/includes/code_snippets/merge_4.html' %}
+    <p>
+        In the second case (the same line of code is changed by 2 developers) you try to pull changes, but Git can't 
+        merge them automatically. Here's how to deal with it:
+    </p>
+    <p>
+        Look at the commit history:
+    </p>
+    {% include 'intro_to_full_stack/github/includes/code_snippets/merge_5.html' %}
+    <p>
+        If your local branch is out of sync, reset it:
+    </p>
+    {% include 'intro_to_full_stack/github/includes/code_snippets/merge_6.html' %}
+
+{% endblock %}

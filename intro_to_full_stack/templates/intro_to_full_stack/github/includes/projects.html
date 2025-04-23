@@ -1,0 +1,59 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-github-projects{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Projects{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        GitHub also provides you access to GitHub Projects, which is a great tool to help structure your development 
+        and keep tabs on what is being done and by whom. To get started, head to your repository, and click on the 
+        Projects tab. From there, you can create a new project, and I recommend starting with the "Basic Kanban" 
+        template, as it's a simple way to set up a board layout where you can easily move tasks around. The Kanban 
+        board has columns like "To Do," "In Progress," and "Done," which makes it easy to track what you're working on. 
+        You can add extra columns for specific features or tasks if you require. You can add individual tasks as cards 
+        and click and drag cards between columns as you make progress.
+    </p>
+    <p>
+        I like to add an extra field to my projects; the 
+        <a 
+            class="text-link"
+            href="https://www.marketing-logic.com/salesforce/the-moscow-method/"
+            title="Go to an explanation of the MoSCoW method"
+            aria-label="Go to an explanation of the MoSCoW method"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            MoSCoW
+        </a>
+        system to highlight whether the action is essential (Must), non-essential but very much wanted (Should), 
+        non-essential and fine to miss out if there time runs out (Could) or things to include in future (Would). To do 
+        this, from your project page click the three dots (…) towards the top right and go to “Settings”. On the left 
+        hand side you should see “Custom fields”. Go ahead and click “+ New Field” and name it MoSCoW. Now clicking on 
+        this, you can add new options so add Must, Should, Could, and Would. Then click the three dots to the right of 
+        each option to edit them with a colour that makes sense to you and a description such as “Things that must be
+        completed / included” for “Must”.
+    </p>
+    <p>
+        Now when you add a new task (using the “+ Add Item” at the bottom of a column) you can customise it fully:
+    </p>
+    <ul>
+        <li>Type out the task title</li>
+        <li>Click on the task to open it</li>
+        <li>Edit the body of the text using the three dots (…) and “Edit”</li>
+        <li>On the right hand side, assign someone to the task</li>
+        <li>Click “Convert to issue” to link it the correct repository</li>
+        <li>Add a label to indicate the type of task</li>
+        <li>Select which of the MoSCoW categories it fits under</li>
+    </ul>
+    <p>
+        When you're working and making changes, you can keep everything synced up by linking issues to commits. All you 
+        have to do is reference the issue number preceded by a # in your commit message with something like 
+        <code class="written-code">git commit -m "Fix: correct search functionality. Issue: #4"</code>
+        and GitHub will automatically link the commit to that issue. It's a neat way to stay on top of things. 
+    </p>
+{% endblock %}

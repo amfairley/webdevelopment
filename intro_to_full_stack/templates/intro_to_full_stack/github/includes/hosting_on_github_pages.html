@@ -1,0 +1,31 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-github-hosting-on-github-pages{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Hosting on GitHub Pages{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can host front-end websites built with HTML, CSS, and JavaScript for free through GitHub Pages. This is 
+        great for portfolio pieces, a project demo, or just something fun you've been working on.
+    </p>
+    <p>
+        Head to your repository on GitHub and go to Settings (on the far right of the bar at the top that has 
+        &lt;&gt;Code, Issues, Pull Requests etc. in). From there, scroll down the side menu to Code and automation, 
+        then Pages (or just search "Pages" in the settings search bar). Under the Deployment section, look for the 
+        "Source" dropdown and make sure it's set to your main branch, not "None" and click “Save”.
+    </p>
+    <p>
+        Your live website will end up at a URL that looks something like: 
+        <code class="written-code">https://your-username.github.io/your-repo-name</code>.
+        If you're just using it for a personal site or portfolio, you might even have it set up at 
+        <code class="written-code">https://your-username.github.io</code>.
+        There's also a Theme Chooser right in the GitHub Pages section. If you're in a rush or just want a clean 
+        layout, you can pick a theme to give your site a simple look without having to write any extra CSS.
+    </p>
+    {% include 'intro_to_full_stack/github/includes/troubleshooting/github_pages.html' %}
+{% endblock %}

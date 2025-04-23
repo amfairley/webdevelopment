@@ -1,0 +1,13 @@
+{% extends 'includes/troubleshooting.html' %}
+{% load static %}
+
+<!--ID-->
+{% block troubleshooting_id %}github-troubleshooting-github-pages{% endblock %}
+{% block troubleshooting_content %}
+    <p>
+        If you can't find your site's URL or it's not showing up, go back into your repository, go to “Settings” and 
+        scroll down to “GitHub Pages”. Under “Source” double-check that the dropdown is not set to “None.” Just switch 
+        it to "Main" (or whichever branch your site files are on), and you should be good to go. Give it a minute or 
+        two, refresh the page, and your site should be live.
+    </p>
+{% endblock %}

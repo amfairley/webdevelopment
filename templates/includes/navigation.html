@@ -22,7 +22,7 @@
             <!--Intro to Fullstack-->
             <li class="nav-item">
                 <span class="d-flex align-items-center">
-                    <a class="nav-link" href="{% url 'full_stack_programming_and_the_web' %}">Full Stack Programming</a>
+                    <a class="nav-link" href="{% url 'full_stack_programming_and_the_web' %}">Web Development</a>
                     <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#full-stack-submenu" aria-expanded="false" aria-controls="full-stack-submenu" aria-label="Open the full stack dropdown section">
                     </button>
                 </span>
@@ -31,7 +31,9 @@
                     percent if '/intro_to_full_stack' in request.path percent}show{percent endif percent}
                 -->
                 <ul class="collapse list-unstyled ps-3 {% if '/intro_to_full_stack' in request.path %}show{% endif %}" id="full-stack-submenu">
-                    <li><a class="nav-link {% if request.resolver_match.url_name == 'full_stack_programming_and_the_web' %}active{% endif %}" href="{% url 'full_stack_programming_and_the_web' %}">Full Stack Programming and the Web</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'full_stack_programming_and_the_web' %}active{% endif %}" href="{% url 'full_stack_programming_and_the_web' %}">Programming and the Web</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'full_stack_github' %}active{% endif %}" href="{% url 'full_stack_github' %}">GitHub</a></li>
+
                 </ul>
             </li>
             <!--HTML-->

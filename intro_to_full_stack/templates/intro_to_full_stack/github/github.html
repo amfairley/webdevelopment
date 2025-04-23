@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Web Development - GitHub{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>GitHub</h2>
+    
+    {% include 'intro_to_full_stack/github/includes/contents.html' %}
+    {% include 'intro_to_full_stack/github/includes/github_and_git.html' %}
+    {% include 'intro_to_full_stack/github/includes/setting_up_your_github_profile.html' %}
+    {% include 'intro_to_full_stack/github/includes/creating_a_repository.html' %}
+    {% include 'intro_to_full_stack/github/includes/using_a_repository.html' %}
+    {% include 'intro_to_full_stack/github/includes/git_commands.html' %}
+    {% include 'intro_to_full_stack/github/includes/git_commits.html' %}
+    {% include 'intro_to_full_stack/github/includes/projects.html' %}
+    {% include 'intro_to_full_stack/github/includes/hosting_on_github_pages.html' %}
+    {% include 'intro_to_full_stack/github/includes/collaborating_with_github.html' %}
+
+{% endblock %}

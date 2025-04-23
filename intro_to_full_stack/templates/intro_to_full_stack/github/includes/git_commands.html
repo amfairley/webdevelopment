@@ -1,0 +1,142 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-github-git-commands{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Git Commands{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        We saw above some git commands that are executed in the terminal of your 
+        <dfn title="Integrated Development Environment">IDE</dfn>
+        such as 
+        <code class="written-code">git add</code>
+        and
+        <code class="written-code">git status</code>.
+        There are many more you can find in the 
+        <a 
+            class="text-link"
+            href="https://docs.github.com/en"
+            title="Go to the GitHub Documentation"
+            aria-label="Go to the GitHub Documentation"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            GitHub documentation
+        </a>
+        but I find the following list pretty comprehensive for my learning journey.
+    </p>
+    <pre class="bash-container">
+        <code class="bash">
+            git init
+        </code>
+    </pre>
+    <p>
+        This command initializes a new Git repository in your current project folder. It sets up the .git directory 
+        that Git uses to track versions of your project. You typically use this once per project, but only if you're 
+        starting a project from scratch locally. If you're working with a project that you have cloned from GitHub 
+        using 
+        <code class="written-code">git clone</code>,
+        then git init is not necessary because the cloned repo already comes with Git initialized and configured to 
+        track the remote repository.
+    </p>
+    <pre class="bash-container">
+        <code class="bash">
+            git status
+        </code>
+    </pre>
+    <p>
+        This shows the current state of your working directory and staging area telling you which files have been 
+        modified, added or are in the staging area ready to be committed.
+    </p>
+    <pre class="bash-container">
+        <code class="bash">
+            git diff filename.ext
+        </code>
+    </pre>
+    <p>
+        This shows the line-by-line differences between your working file and the last committed version so is great 
+        for double-checking changes before staging them or finding bugs if you've accidently caused some damage to 
+        functionality.
+    </p>
+    <pre class="bash-container">
+        <code class="bash">
+            git add
+        </code>
+    </pre>
+    <p>
+        <code class="written-code">git add filepath/filename.ext</code>
+        adds the currently saved version of the file to the staging area ready to be included with the next commit. 
+        Multiple files can be added to the staging area sequentially and then uploaded in one commit. 
+        <code class="written-code">git add .</code>
+        adds all updated files at once.
+    </p>
+    <pre class="bash-container">
+        <code class="bash">
+            git commit -m "Your message here"
+        </code>
+    </pre>
+    <p>
+        This commits the files in your staging area to the remote repository including a short message to describe what 
+        has been changed or added. Clear, meaningful messages are best for this and explored below in the 
+        <a 
+            class="text-link"
+            href="#intro-to-full-stack-github-git-commits"
+            title="Go to the Git Commits section"
+            aria-label="Go to the Git Commits section"
+        >
+            Git Commits
+        </a>
+        section.
+    </p>
+    <pre class="bash-container">
+        <code class="bash">
+            git remote -v
+        </code>
+    </pre>
+    <p>
+        When working on a shared repository, this will list all of the remote repositories connected to your project 
+        and their URLs. This is used to check where your code is coming from or going to. 
+    </p>
+    <pre class="bash-container">
+        <code class="bash">
+            git push
+        </code>
+    </pre>
+    <p>
+        When working on a shared repository, this will upload your commits to the remote repository, used when you are 
+        ready to share your updates.
+    </p>
+    <pre class="bash-container">
+        <code class="bash">
+            git pull
+        </code>
+    </pre>
+    <p>
+        When working on a shared repository, this will update your local repository to the current main branch of the 
+        remote repository. For instance if multiple developers are working on the same project, you would want to do 
+        this before making changes so that you are working on the most up to date code.
+    </p>
+    <pre class="bash-container">
+        <code class="bash">
+            git log
+        </code>
+    </pre>
+    <p>
+        Shows a list of all commits made to the repository with the most recent being at the top. This is good for 
+        reviewing what has been don, by who, and when, or to find a specific commit if you need to revert changes by 
+        using the commit <dfn title="A long alphanumeric string">SHA</dfn>.
+    </p>
+    <pre class="bash-container">
+        <code class="bash">
+            git reset --hard first_6_digits_of_commit_SHA
+        </code>
+    </pre>
+    <p>
+        Used to completely reset your project to that specific snapshot. THIS WILL ERASE ALL CHANGES MADE AFTER THAT 
+        COMMIT, so be sure that you want to do this before <i>committing</i> yourself.
+    </p>
+{% endblock %}

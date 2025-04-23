@@ -1,0 +1,53 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-github-github-and-git{% endblock %}
+
+<!--Section title-->
+{% block text_title %}GitHub and Git{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        <a 
+            class="text-link"
+            href="https://github.com/"
+            title="GitHub"
+            aria-label="Go to the GitHub homepage"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            GitHub
+        </a>
+        is like a social media platform for code. It's a place where developers can share projects, collaborate, and 
+        keep track of changes. But the real engine powering all that version control is 
+        <dfn title="The version tracking software">Git</dfn>,
+        a tool that tracks every edit you make to your files and lets you roll back changes if something goes wrong. 
+        This is essentially a timeline of your project and consists of snapshots (commits) of the development journey. 
+        GitHub builds on Git by giving it a clean, user-friendly interface and making it easier to work with others 
+        online. Think of Git as your toolbox and GitHub as the shared workshop where everyone brings their tools to 
+        build something together. When you're working on a project in something like 
+        <dfn title="A free, powerful, and customizable code editor created by Microsoft">Visual Studio Code</dfn>,
+        that's your local repository and it's stored on your own computer. You can track your changes there, then move 
+        them to a staging area, and finally commit them to your remote repository on GitHub. This process is especially 
+        helpful in team environments, where a project lead can review and approve changes before they're merged into 
+        the main codebase. This helps ensure everything continues to works, sticks to best practices, and keeps bugs to 
+        a minimum which makes Git and GitHub essential for modern development.
+    </p>
+    <p>
+        Here I will go through some basics and common uses of Git and GitHub, but for further information, the 
+        documentation of GitHub is really well written and can be accessed 
+        <a 
+            class="text-link"
+            href="https://docs.github.com/en"
+            title="GitHub Documentation"
+            aria-label="Go to the GitHub documentation"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            here.
+        </a>
+    </p>
+    {% include 'intro_to_full_stack/github/includes/tips/workflow.html' %}
+{% endblock %}

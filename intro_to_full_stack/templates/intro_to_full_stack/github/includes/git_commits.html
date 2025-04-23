@@ -1,0 +1,119 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-github-git-commits{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Git Commits{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        When creating a commit, I like to start the message with a keyword followed by a colon to clearly identify what 
+        was worked on or added. Full details on how to customise commit messages can be found in the 
+        <a 
+            class="text-link"
+            href="https://github.com/git-guides/git-commit"
+            title="GitHub commit guid"
+            aria-label="Go to the GitHub commit guid"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            documentation
+        </a>
+        online. Again the keywords listed here are just my personal preference, not following a set convention.
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Keyword
+                </th>
+                <th>
+                    Use Case
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    feat:
+                </td>
+                <td>
+                    A new feature is introduced with the changes.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    fix:
+                </td>
+                <td>
+                    A bug fix has applied.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    chore:
+                </td>
+                <td>
+                    For changes that do not relate to a fix or feature and don't modify source files (for example 
+                    updating dependencies)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    refactor:
+                </td>
+                <td>
+                    For when you
+                    <dfn title="Rewording the code, generally making it more efficient, without affecting the functionality.">refactor</dfn>
+                    code that neither fixes a bug nor adds a feature.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    docs:
+                </td>
+                <td>
+                    For updates to documentation such as a README or other markdown files.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    style:
+                </td>
+                <td>
+                    For changes to stylesheets or refactoring how the code looks such as white-space, missing 
+                    semi-colons, and so on.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    test:
+                </td>
+                <td>
+                    When adding new tests or correcting previous tests.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    build:
+                </td>
+                <td>
+                    For changes that affect the whole build of your project. For example I use this when creating new
+                    Django apps.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    revert:
+                </td>
+                <td>
+                    Used in the rare cases that the project is reverted to a previous commit.
+                </td>
+            </tr>
+            <tr>
+        </tbody>
+    </table>
+{% endblock %}

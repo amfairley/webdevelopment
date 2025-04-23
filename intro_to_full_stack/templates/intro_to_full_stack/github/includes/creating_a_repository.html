@@ -1,0 +1,55 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-github-creating-a-repository{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Creating a Repository{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        A repository (or "repo" for short) is a folder for your project hosted on GitHub. It holds all your files, 
+        tracks every change you make, and lets you collaborate with others. On GitHub, creating a new repository is 
+        straightforward. 
+    </p>
+    <ul>
+        <li>
+            Once you're logged in, just click the "+" icon in the top right corner and select "New repository".
+        </li>
+        <li>
+            You'll be asked to give it a name so give it something clear and descriptive so that you (and others) know 
+            what it is at a glance. That name also becomes part of the URL if you use GitHub Pages later.
+        </li>
+        <li>
+            You can also choose whether to make the repo public or private.
+        </li>
+        <li>
+            There's an option to pick a template, which gives you a head start with some boilerplate files, but in my 
+            experience, I usually skip this step and build from scratch.
+        </li>
+        <li>
+            You will also get the option to add a 
+            <code class="written-code">.gitignore</code>
+            file (this tells Git which files to ignore — like system junk or virtual environments) and a README file, 
+            which is the key piece of documentation for your project.
+        </li>
+        <li>
+            Once you've got your settings how you like them, hit “Create repository”, and you're good to go. 
+        </li>
+    </ul>
+    <p>
+        The full, in depth process is described excellently in the GitHub documentation 
+        <a 
+            class="text-link"
+            href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository"
+            title="GitHub repository documentation"
+            aria-label="Go to the GitHub documentaion page for creating a repository"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            here.
+        </a>
+    </p>
+{% endblock %}

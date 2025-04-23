@@ -1,0 +1,41 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-github-setting-up-your-github-profile{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Setting up your GitHub Profile{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Head on over to 
+        <a 
+            class="text-link"
+            href="https://github.com/"
+            title="GitHub"
+            aria-label="Go to the GitHub homepage"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            GitHub
+        </a>
+        and follow the signup process to create your free GitHub account. If you are using this for networking rather 
+        than purely storage of code and projects, it is a good idea to create a profile 
+        <code class="written-code">README.md</code>.
+        This acts as an "about me" section that is visible to those who view your profile and would be a great place to 
+        state your interests, experience and openness to collaboration. A detailed description of this process is 
+        outlined 
+        <a 
+            class="text-link"
+            href="https://github.com/github-education-experiences/launchpad-profile-readme"
+            title="GitHub profile README.md"
+            aria-label="Find further information about creating a profile README.md file"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            here.
+        </a>
+    </p>
+{% endblock %}

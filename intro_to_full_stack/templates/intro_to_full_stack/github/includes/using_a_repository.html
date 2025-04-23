@@ -1,0 +1,51 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-github-using-a-repository{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Using a Repository{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        With a repository created, you are probably eager to start writing your code. You can find a link on your 
+        GitHub repository page. Click on the green "&lt;&gt; Code" button, then copy the link which will be in the 
+        form of
+        <code class="written-code">https://link</code>.
+        You can clone this repository in your local 
+        <dfn title="Integrated Development Environment">IDE</dfn>. I use Visual Studio Code, you can follow my guide to 
+        setting it up 
+        <a 
+            class="text-link"
+            href="#"
+            title="Go to my section on VSCode"
+            aria-label="Go to my section on VSCode"
+        >
+        here.
+        </a>
+    </p>
+    <p>
+        After you make changes to your code, you can save your files. These are now saved on your local repository 
+        (your PC) and will differ from those on your GitHub repository. Add them to the staging area using 
+        <code class="written-code">git add filepath/filename.ext</code>
+        or
+        <code class="written-code">git add .</code>
+        which adds all changed files. You can check your staging area using 
+        <code class="written-code">git status</code>.
+        This will list files you've added in green under “Changes to be committed:”. Commit these using 
+        <code class="written-code">git commit</code> to commit these changes from your staging area to your remote 
+        repository hosted on GitHub. This is the basic process for solo developer projects. For larger projects, you 
+        may need to create forks and merge requests which are covered in the 
+        <a 
+            class="text-link"
+            href="#intro-to-full-stack-github-collaborating-with-github"
+            title="Go to the collaborating with GitHub section"
+            aria-label="Go to the collaborating with GitHub section"
+        >
+        Collaborating with GitHub
+        </a>
+        section.
+    </p>
+{% endblock %}
