@@ -89,6 +89,17 @@
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_typography' %}active{% endif %}" href="{% url 'CSS_css_validation' %}">CSS Validation</a></li>
                 </ul>
             </li>
+            <!--JavaScript-->
+            <li class="nav-item">
+                <span class="d-flex align-items-center">
+                    <a class="nav-link" href="{% url 'JavaScript_home' %}">JavaScript</a>
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#javascript-submenu" aria-expanded="false" aria-controls="javascript-submenu" aria-label="Open the JavaScript dropdown section">
+                    </button>
+                </span>
+                <ul class="collapse list-unstyled ps-3 {% if '/JavaScript' in request.path %}show{% endif %}" id="javascript-submenu">
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'JavaScript_home' %}active{% endif %}" href="{% url 'JavaScript_home' %}">JavaScript Home</a></li>
+                </ul>
+            </li>
             <!--Dropdown link example-->
             <li class="nav-item">
                 <span class="d-flex align-items-center">

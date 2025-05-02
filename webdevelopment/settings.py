@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'intro_to_full_stack',
     'HTML',
     'CSS',
+    'javascript_app',
 ]
 
 MIDDLEWARE = [
