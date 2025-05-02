@@ -1,0 +1,312 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}to_do{% endblock %}
+
+<!--Section title-->
+{% block text_title %}To do list{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        This is my to do list, it's a way of keeping track of everything that I have added to the site and things left
+        to add or complete in those sections (such as working links to sections yet to be added). This is an evolving
+        list and as such will be added to as I go along and discover new sections that were previous unthought of.
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Section
+                </th>
+                <th>
+                    Topic
+                </th>
+                <th>
+                    Completed
+                </th>
+                <th>
+                    Notes
+                </th>
+            </tr>
+        </thead>
+            <!--Homepage-->
+            <tr>
+                <td rowspan="8">Homepage</td>
+                <td>Introduction</td>
+                <td class="td-check"><i class="fa-solid fa-check todo-tick"></i></td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Example Code</td>
+                <td class="td-check"><i class="fa-solid fa-check todo-tick"></i></td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Example Troubleshooting</td>
+                <td class="td-check"><i class="fa-solid fa-check todo-tick"></i></td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>To do list outline</td>
+                <td class="td-check"><i class="fa-solid fa-check todo-tick"></i></td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Contact information</td>
+                <td class="td-check"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Donations Section</td>
+                <td class="td-check"></td>
+                <td>To do during Stripe section</td>
+            </tr>
+            <tr>
+                <td>Comments Section</td>
+                <td class="td-check"></td>
+                <td>To do during Django section</td>
+            </tr>
+            <tr>
+                <td>Search Bar</td>
+                <td class="td-check"></td>
+                <td>To do during Django section</td>
+            </tr>
+            <!--Web Development-->
+            <tr>
+                <td rowspan="7">Web Development</td>
+                <td>Programming and the Web</td>
+                <td class="td-check"><i class="fa-solid fa-check todo-tick"></i></td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Pseudo Code</td>
+                <td class="td-check"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>GitHub</td>
+                <td class="td-check"></td>
+                <td>Add link to VSCode page</td>
+            </tr>
+            <tr>
+                <td>VSCode</td>
+                <td class="td-check"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Five Planes of UX</td>
+                <td class="td-check"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Colour Theory</td>
+                <td class="td-check"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Sizes</td>
+                <td class="td-check"></td>
+                <td></td>
+            </tr>
+            <!--HTML-->
+            <tr>
+                <td rowspan="12">HTML</td>
+                <td>Home</td>
+                <td class="td-check"></i></td>
+                <td>In IDs and Classes, add link to targetting in JavaScript</td>
+            </tr>
+            <tr>
+                <td>Introducing Elements</td>
+                <td class="td-check"><i class="fa-solid fa-check todo-tick"></i></td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Common Elements</td>
+                <td class="td-check"><i class="fa-solid fa-check todo-tick"></i></td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Lists</td>
+                <td class="td-check"><i class="fa-solid fa-check todo-tick"></i></td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Tables</td>
+                <td class="td-check"><i class="fa-solid fa-check todo-tick"></i></td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Forms</td>
+                <td class="td-check"><i class="fa-solid fa-check todo-tick"></i></td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Links</td>
+                <td class="td-check"><i class="fa-solid fa-check todo-tick"></i></td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Media</td>
+                <td class="td-check"><i class="fa-solid fa-check todo-tick"></i></td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Buttons</td>
+                <td class="td-check"><i class="fa-solid fa-check todo-tick"></i></td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Semantic HTML</td>
+                <td class="td-check"></td>
+                <td>
+                    <ul>
+                        <li>In picture, add a link to CSS Media queries</li>
+                        <li>Add in KBD, Code, Pre elements</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Accessibility</td>
+                <td class="td-check"></td>
+                <td>Add a link to CSS Accessibility</td>
+            </tr>
+            <tr>
+                <td>HTML Example</td>
+                <td class="td-check"><i class="fa-solid fa-check todo-tick"></i></td>
+                <td>N/A</td>
+            </tr>
+            <!--CSS-->
+            <tr>
+                <td rowspan="17">CSS</td>
+                <td>Home</td>
+                <td class="td-check"></i></td>
+                <td>
+                    <ul>
+                        <li>
+                            Linking multiple css files: Add a link to a google fonts section in the typography page
+                        </li>
+                        <li>
+                            Specificity: Link to CSS selectors
+                        </li>
+                        <li>
+                            Colours: link to colour theory
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Selectors</td>
+                <td class="td-check"><i class="fa-solid fa-check todo-tick"></i></td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>CSS Box Model</td>
+                <td class="td-check"></td>
+                <td>Border: Link to colour theory</td>
+            </tr>
+            <tr>
+                <td>Display and Positioning</td>
+                <td class="td-check"></td>
+                <td>Display: Link to media queries</td>
+            </tr>
+            <tr>
+                <td>Flexbox</td>
+                <td class="td-check"><i class="fa-solid fa-check todo-tick"></i></td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Grids</td>
+                <td class="td-check"><i class="fa-solid fa-check todo-tick"></i></td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Backgrounds</td>
+                <td class="td-check"></td>
+                <td>Background colour: Link to colour theory</td>
+            </tr>
+            <tr>
+                <td>Visibility and Z Positioning</td>
+                <td class="td-check"><i class="fa-solid fa-check todo-tick"></i></td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Cursor</td>
+                <td class="td-check"><i class="fa-solid fa-check todo-tick"></i></td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Typography</td>
+                <td class="td-check"></td>
+                <td>Font-size: link to sizes</td>
+            </tr>
+            <tr>
+                <td>Links and Buttons</td>
+                <td class="td-check"><i class="fa-solid fa-check todo-tick"></i></td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Lists</td>
+                <td class="td-check"><i class="fa-solid fa-check todo-tick"></i></td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Forms</td>
+                <td class="td-check"><i class="fa-solid fa-check todo-tick"></i></td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Transitions</td>
+                <td class="td-check"><i class="fa-solid fa-check todo-tick"></i></td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Responsive Design</td>
+                <td class="td-check"></td>
+                <td>Second paragraph: Link to sizes</td>
+            </tr>
+            <tr>
+                <td>Bootstrap</td>
+                <td class="td-check"><i class="fa-solid fa-check todo-tick"></i></td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Validation</td>
+                <td class="td-check"><i class="fa-solid fa-check todo-tick"></i></td>
+                <td>N/A</td>
+            </tr>
+            <!--JavaScript-->
+            <tr>
+                <td rowspan="1">JavaScript</td>
+                <td></td>
+                <td class="td-check"></i></td>
+                <td></td>
+            </tr>
+            <!--Python-->
+            <tr>
+                <td rowspan="1">Python</td>
+                <td></td>
+                <td class="td-check"></i></td>
+                <td></td>
+            </tr>
+            <!--Flask-->
+            <tr>
+                <td rowspan="1">Flask</td>
+                <td></td>
+                <td class="td-check"></i></td>
+                <td></td>
+            </tr>
+            <!--Django-->
+            <tr>
+                <td rowspan="1">Django</td>
+                <td></td>
+                <td class="td-check"></i></td>
+                <td></td>
+            </tr>
+        <tbody>
+
+        </tbody>
+    </table>
+
+{% endblock %}
