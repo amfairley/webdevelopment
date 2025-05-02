@@ -1,0 +1,22 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-home-asynchrony{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Asynchrony{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        JavaScript is 
+        <dfn title="Things not happening at the same time">asynchronus</dfn>
+        and as such the code does not run line by line in the order it appears like in HTML and CSS. Instead, some parts of the 
+        code may take time to finish, such as loading a file or fetching data, and JavaScript lets the rest of the code keep 
+        running while it waits. This is very important and by design. JavaScript is single-threaded, meaning it can only do one 
+        thing at a time. But websites need to stay responsive; imagine a button not working just because an image is still 
+        loading. That's where asynchronous code comes in. It allows slow tasks (like network requests, reading files, timers) 
+        to happen in the background, without freezing the whole program.
+    </p>
+{% endblock %}

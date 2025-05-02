@@ -1,0 +1,70 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-home-syntax{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Syntax{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Firstly, JavaScript files in your project should be kept in a specific folder such as assets/js or static/js.
+    </p>
+    <p>
+        You can include JavaScript directly in you HTML files by wrapping it within a 
+        <code class="written-code">&lt;script&gt;&lt;/script&gt;</code>
+        element. For most purposes this should be placed at the bottom (but still inside) the 
+        <code class="written-code">&lt;body&gt;</code>
+        element so that it is loaded last, ensuring that any elements it targets have already been loaded. Or can be 
+        included in the 
+        <code class="written-code">&lt;head&gt;</code>
+        element or linked to from an external file using 
+        <code class="written-code">&lt;script src="filepath/file.js"&gt;&lt;/script&gt;</code>.
+    </p>
+    <p>
+        Comments in JavaScript follow this syntax.
+    </p>
+    {% include 'javascript_app/home/includes/code_snippets/comments.html' %}
+    <p>
+        The key points to keep in mind whilst writing JavaScript code are:
+    </p>
+    <ul>
+        <li>
+            JavaScript is case sensitive so for example, TIME and Time in JavaScript have two different meanings
+        </li>
+        <li>
+            End each line with a semi-colon (;). This is the JavaScript equivalent of a full stop. Strictly speaking, 
+            it is not entirely necessary these days because JavaScript will automatically insert semi-colons when you 
+            run it, however this does mean that it will sort of guess and may not get it correct every time.
+        </li>
+        <li>
+            Variables and functions should be named using camel case. This means that they start with a lowercase letter
+            and instead of using spaces between each word, the next word starts with a capital letter, such as 
+            camelCaseExampleVariable. The ups and downs of the capital letters are said to resemble the humps on the 
+            back of a camel, hence the name.
+        </li>
+        <li>
+            JavaScript 
+            <dfn title="Lists">arrays</dfn>
+            are 0 order. That means if there is a list of 10 numbers. The 
+            <dfn title="position">index</dfn>
+            of the first number is 0 and the index of the last number is 9.
+        </li>
+        <li>
+            For a comprehensive guide on good code structure in JavaScript see the 
+            <a 
+                class="text-link"
+                href="https://www.crockford.com/code.html"
+                title="Go to the JavaScript code conventions website."
+                aria-label="Go to the JavaScript code conventions website."
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Code Conventions
+            </a>
+            by Douglas Crockford.
+        </li>
+    </ul>
+{% endblock %}

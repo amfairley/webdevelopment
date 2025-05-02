@@ -1,0 +1,33 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-home-running-javascript{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Running JavaScript{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can run JavaScript locally by making use of node.js. You can download is from 
+        <a 
+            class="text-link"
+            href="https://nodejs.org/en"
+            title="Go to node.js"
+            aria-label="Go to node.js"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            here
+        </a>
+        and download the version that matches your operating system. Once downloaded, open the installer and follow the 
+        instructions to install it. To check if it has installed correctly, you can run 
+        <code class="written-code">node -v</code>
+        in your terminal or git bash to check which version is installed.
+    </p>
+    <p>
+        To write your own JavaScript file, you can create a new file in VSCode or the IDE of your choice and give it 
+        the .js extension.
+    </p>
+{% endblock %}
