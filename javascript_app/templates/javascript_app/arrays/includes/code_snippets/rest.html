@@ -1,0 +1,21 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-javascript-arrays-rest{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">function listFruits(first, ...rest) {
+console.log(first);
+console.log(rest);
+}
+
+listFruits('apple', 'banana', 'cherry');
+// Outputs:
+// apple
+// ['banana', 'cherry']
+</code></pre>
+{% endblock %}

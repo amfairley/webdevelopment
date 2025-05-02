@@ -24,4 +24,9 @@ urlpatterns = [
         views.JavaScript_math,
         name="JavaScript_math"
     ),
+    path(
+        'arrays/',
+        views.JavaScript_arrays,
+        name="JavaScript_arrays"
+    ),
 ]

@@ -1,0 +1,26 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-arrays-destructuring-assignment{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Destructuring Assignment{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Destructuring assignment is a convenient way to extract values from arrays or properties from objects into 
+        separate variables, all in a single line of code.
+    </p>
+    {% include 'javascript_app/arrays/includes/code_snippets/destruc_1.html' %}
+    <p>
+        You can skip a value by leaving an empty slot.
+    </p>
+    {% include 'javascript_app/arrays/includes/code_snippets/destruc_2.html' %}
+    <p>
+        Using the rest operator, you can collect the remaining values into a new array.
+    </p>
+    {% include 'javascript_app/arrays/includes/code_snippets/destruc_3.html' %}
+
+{% endblock %}

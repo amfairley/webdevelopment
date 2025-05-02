@@ -1,0 +1,16 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-arrays-creating-arrays{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Creating Arrays{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can create arrays in several ways.
+    </p>
+    {% include 'javascript_app/arrays/includes/code_snippets/creating_arrays.html' %}
+{% endblock %}

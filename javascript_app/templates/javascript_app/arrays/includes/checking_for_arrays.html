@@ -1,0 +1,16 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-arrays-checking-for-arrays{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Checking for Arrays{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        There are three ways to check if a variable is an array.
+    </p>
+    {% include 'javascript_app/arrays/includes/code_snippets/check.html' %}
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-javascript-arrays-creating-arrays{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">// Using array literals
+let numbers = [1, 2, 3, 4];
+
+// Mixed data types
+let mixedArray = [1, 'Apple', true, [1, 2, 3], undefined];
+
+// Using the Array constructor
+let emptyArray = new Array(20); // Creates an array with 20 undefined elements
+
+// For better readability, especially with long arrays, it's common to format them with indentation:
+let myList = [
+    'apple',
+    'banana',
+    'cherry',
+];
+</code></pre>
+{% endblock %}

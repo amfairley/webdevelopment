@@ -1,0 +1,32 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-arrays-iterating-through-arrays{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Iterating Through Arrays{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        A common way to iterate through arrays is using a for loop. You can see more about 
+        <a 
+            class="text-link"
+            href="#"
+            title="Go to the for loops page."
+            aria-label="Go to the for loops page."
+        >
+            for loops
+        </a> 
+        on its own page.
+    </p>
+    {% include 'javascript_app/arrays/includes/code_snippets/iterate_1.html' %}
+    <p>
+        You can also use methods such as 
+        <code class="written-code">forEach</code>. Here 'fruit' is a temporary variable assigned to represent "thing in
+        the list" and could take any name and still work.
+    </p>
+    {% include 'javascript_app/arrays/includes/code_snippets/iterate_2.html' %}
+
+{% endblock %}

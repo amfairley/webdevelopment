@@ -60,3 +60,15 @@ def JavaScript_math(request):
         'javascript_app/math/math.html',
         context
     )
+
+
+def JavaScript_arrays(request):
+    '''Return the JavaScript arrays page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'javascript_app/arrays/arrays.html',
+        context
+    )

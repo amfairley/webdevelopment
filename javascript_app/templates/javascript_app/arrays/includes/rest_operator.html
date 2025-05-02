@@ -1,0 +1,17 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-arrays-rest-operator{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Rest Operator{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The rest operator (…rest) collects all remaining arguments into an array. This is useful when the number of 
+        arguments is unknown.
+    </p>
+    {% include 'javascript_app/arrays/includes/code_snippets/rest.html' %}
+{% endblock %}

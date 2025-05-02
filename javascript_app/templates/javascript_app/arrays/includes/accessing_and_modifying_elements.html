@@ -1,0 +1,34 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-arrays-accessing-and-modifying-elements{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Accessing and Modifying Elements{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Elements in an array are accessed using their index.
+    </p>
+    {% include 'javascript_app/arrays/includes/code_snippets/access_1.html' %}
+    <p>
+        Attempting to access an index outside the bounds of the array returns undefined.
+    </p>
+    {% include 'javascript_app/arrays/includes/code_snippets/access_2.html' %}
+    <p>
+        You can modify elements directly.
+    </p>
+    {% include 'javascript_app/arrays/includes/code_snippets/access_3.html' %}
+    <p>
+        To add a new element at the end. This works because of the mismatch between length of an array and the indices.
+        For instance a 10 item list will have a length of 10, but will go from index 1 to index 9. Therefore index 10 
+        will be an addition to the end.
+    </p>
+    {% include 'javascript_app/arrays/includes/code_snippets/access_4.html' %}
+    <p>
+    To remove an element but leave a hole in the numbering.
+    </p>
+    {% include 'javascript_app/arrays/includes/code_snippets/access_5.html' %}
+{% endblock %}
