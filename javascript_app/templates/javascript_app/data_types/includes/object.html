@@ -1,0 +1,18 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-data-types-object{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Object{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Objects are collections of key-value pairs. Objects are extremely versatile and are the foundation for most 
+        JavaScript structures (arrays, functions, etc. are also objects). Objects can be created from other objects, 
+        making a secret link between them. If an attempt to access a name fails, the secret linked object will be used.
+    </p>
+    {% include 'javascript_app/data_types/includes/code_snippets/object.html' %}
+{% endblock %}

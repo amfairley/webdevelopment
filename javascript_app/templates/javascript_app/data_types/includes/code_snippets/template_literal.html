@@ -1,0 +1,15 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-javascript-data-types-template-literal{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">let variableOne = 'Adam';
+let templateLiteral = `Hello ${variableOne}`;
+console.log(templateLiteral); // Logs 'Hello Adam' to the console.
+</code></pre>
+{% endblock %}

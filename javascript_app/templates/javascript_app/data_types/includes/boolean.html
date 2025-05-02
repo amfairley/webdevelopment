@@ -1,0 +1,28 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-data-types-boolean{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Boolean{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Booleans represent true or false values. When setting values, they do not use a capital letter (Python does, 
+        but JavaScript does not).
+    </p>
+    {% include 'javascript_app/data_types/includes/code_snippets/boolean.html' %}
+    <p>
+        Some values are falsy, meaning that they are not defined as false, but will return false in most scenarios. The
+        values that are not falsy are considered truthy. The falsy values are:
+    </p>
+    <ul>
+        <li>0</li>
+        <li>'' (empty string)</li>
+        <li>null</li>
+        <li>undefined</li>
+        <li>NaN</li>
+    </ul>
+{% endblock %}

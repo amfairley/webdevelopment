@@ -1,0 +1,296 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-data-types-operators{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Operators{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        JavaScript includes a range of operators, and understanding their precedence is crucial; they follow the 
+        <dfn title="Parentheses, Exponents, Multiplication, Division, Addition, Subtraction">PEMDAS</dfn>
+        order. These are used to join strings together or do any number of mathematical calculations.
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Operator
+                </th>
+                <th>
+                    Description
+                </th>
+                <th>
+                    Example
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <code class="written-code">=</code>
+                </td>
+                <td>
+                    Assignment.
+                </td>
+                <td>
+                    <code class="written-code">let x = 5;</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">++</code>
+                </td>
+                <td>
+                    Increment by 1.<br>
+                    X++ will return a value after logging x.
+                    ++X will return a value and then log it.
+                </td>
+                <td>
+                    <code class="written-code">x++;</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">--</code>
+                </td>
+                <td>
+                    Decrease by 1.
+                </td>
+                <td>
+                    <code class="written-code">x--;</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">+=</code>
+                </td>
+                <td>
+                    Addition assignment. It adds a value to the variable and assigns the result back to the variable.
+                </td>
+                <td>
+                    <code class="written-code">x += 3;</code><br>
+                    The value of x is now 3 more than it was.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">-=</code>
+                </td>
+                <td>
+                    Subtraction assignment.
+                </td>
+                <td>
+                    <code class="written-code">x-=3;</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">*=</code>
+                </td>
+                <td>
+                    Multiplication assignment.
+                </td>
+                <td>
+                    <code class="written-code">x*=2;</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">/=</code>
+                </td>
+                <td>
+                    Division assignment.
+                </td>
+                <td>
+                    <code class="written-code">x/=3;</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">**=</code>
+                </td>
+                <td>
+                    Exponential assignment.
+                </td>
+                <td>
+                    <code class="written-code">x**=2;</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">&=</code>
+                </td>
+                <td>
+                    Bitwise AND assignment.
+                </td>
+                <td>
+                    <code class="written-code">x&=3;</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">|=</code>
+                </td>
+                <td>
+                    Bitwise OR assignment.
+                </td>
+                <td>
+                    <code class="written-code">x|=3;</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">^=</code>
+                </td>
+                <td>
+                    Bitwise XOR assignment.
+                </td>
+                <td>
+                    <code class="written-code">x^=3;</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">&gt;&gt;=</code>
+                </td>
+                <td>
+                    Bitwise right shift assignment.
+                </td>
+                <td>
+                    <code class="written-code">x&gt;&gt;=3;</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">&lt;&lt;=</code>
+                </td>
+                <td>
+                    Bitwise left shift assignment.
+                </td>
+                <td>
+                    <code class="written-code">x&lt;&lt;=3;</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">&gt;&gt;&gt;=</code>
+                </td>
+                <td>
+                    Bitwise unsigned right shift assignment.
+                </td>
+                <td>
+                    <code class="written-code">x&gt;&gt;&gt;=3;</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">==</code>
+                </td>
+                <td>
+                    Equal to.
+                </td>
+                <td>
+                    <code class="written-code">console.log(1 == 1);</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">===</code>
+                </td>
+                <td>
+                    Equal to using comparison of data types.
+                </td>
+                <td>
+                    <code class="written-code">console.log(1 === "1");</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">!=</code>
+                </td>
+                <td>
+                    Not equal to.
+                </td>
+                <td>
+                    <code class="written-code">console.log(1 != 1);</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">!==</code>
+                </td>
+                <td>
+                    Not equal to with comparison of data types.
+                </td>
+                <td>
+                    <code class="written-code">console.log(1 !== "1");</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">&gt;</code>
+                </td>
+                <td>
+                    Greater than.
+                </td>
+                <td>
+                    <code class="written-code">console.log(2&gt;1);</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">&lt;</code>
+                </td>
+                <td>
+                    Less than.
+                </td>
+                <td>
+                    <code class="written-code">console.log(1&lt;2);</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">&gt;=</code>
+                </td>
+                <td>
+                    Greater than or equal to.
+                </td>
+                <td>
+                    <code class="written-code">console.log(2 &gt;= 1);</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">&lt;=</code>
+                </td>
+                <td>
+                    Less than or equal to.
+                </td>
+                <td>
+                    <code class="written-code">console.log(2&lt;=1;)</code>
+                </td>
+            </tr>            
+        </tbody>
+    </table>
+    <p>
+        There are also logical operators.
+    </p>
+    <ul>
+        <li>
+            <code class="written-code">A && B</code>: A and B
+        </li>
+        <li>
+            <code class="written-code">A || B></code>: A or B
+        </li>
+        <li>
+            <code class="written-code">!A</code>: Not A
+        </li>
+        <li>
+            <code class="written-code">is</code>: checks whether two objects are the same object
+        </li>
+    </ul>
+{% endblock %}

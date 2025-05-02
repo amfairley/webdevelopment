@@ -1,0 +1,82 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-data-types-number{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Number{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Number (capital N) represents any numerical value covering both integers and decimals. A weird quirk of 
+        JavaScript is that under the hood it works with double precise floating point numbers. That means a simple sum 
+        like 0.1 + 0.2 could come out as 0.30000000000004. A fix for this is scale the numbers up to integers first (
+        by multiplying by 10 in our example) and then dividing the answer by 10 at the end.
+    </p>
+    <p>
+        There are special numbers; Infinity and -Infinity which represent any number larger than 1.8x10^308 and below 
+        -1.8x10^308 respectively.
+    </p>
+    <p>
+        There is also a special number called 
+        <dfn title="Not a Number">NaN</dfn>.
+        It occurs when the browser is expecting a number but it finds a string or some other data type. A NaN cannot 
+        equal anything, even itself (NaN !== NaN). You can check your values using 
+        <code class="written-code">isNaN(value)</code> that will return true if it is not a number and false if it is a 
+        number.
+    </p>
+    <p>
+        Methods are built in functions that you can apply to your objects. In this case; these methods will apply to 
+        numbers. To set it up, define your number as a variable and then simply using dot notation to apply the number 
+        method. You may want to save these values as other variables or print them to the console.
+    </p>
+    {% include 'javascript_app/data_types/includes/code_snippets/number_methods.html' %}
+    <p>
+        These functions are global number functions so take the form of 
+        <code class="written-code">Number.isNaN(variable)</code>.
+    </p>
+    <ul>
+        <li>
+            <code class="written-code">Number.isNaN()</code>:
+            Returns true if the passed value is the special value NaN. This is not a method on number variables, it's a 
+            static method on the Number object.
+        </li>
+        <li>
+            <code class="written-code">Number.isFinite()</code>:
+            Returns true if the value is a finite number (not Infinity, -Infinity, or NaN).
+        </li>
+        <li>
+            <code class="written-code">Number.isInteger()</code>:
+            Returns true if the value is an integer.
+        </li>
+        <li>
+            <code class="written-code">Number.parseFloat()</code>:
+            Converts a value to a floating point number.
+        </li>
+        <li>
+            <code class="written-code">Number.parseInt()</code>:
+            Converts a value to an integer. Always include the radix (base), e.g. Number.parseInt("08", 10) returns 8,
+            while omitting the radix might give unpredictable results.
+        </li>
+    </ul>
+    <p>
+        The following are number methods.
+    </p>
+    <ul>
+        <li>
+            <code class="written-code">toFixed(n)</code>:
+            Returns a string representing the number with n digits after the decimal point.
+        </li>
+        <li>
+            <code class="written-code">toPrecision(n)</code>:
+            Returns a string with the number rounded to n significant digits.
+        </li>
+        <li>
+            <code class="written-code">toString()</code>:
+            Converts the number to a string. You can optionally specify a radix: 
+            <code class="written-code">10.toString(2) → "1010"</code>.
+        </li>
+    </ul>
+{% endblock %}

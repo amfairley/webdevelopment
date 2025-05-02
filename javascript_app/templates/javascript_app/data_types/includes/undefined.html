@@ -1,0 +1,16 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-data-types-undefined{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Undefined{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        undefined means a variable has been declared but no value has been assigned.
+    </p>
+    {% include 'javascript_app/data_types/includes/code_snippets/undefined.html' %}
+{% endblock %}

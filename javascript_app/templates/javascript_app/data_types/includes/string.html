@@ -1,0 +1,272 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-data-types-string{% endblock %}
+
+<!--Section title-->
+{% block text_title %}String{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Strings are sequences of characters define by single or double quotation marks such as 
+        <code class="written-code">'example string'</code> 
+        or 
+        <code class="written-code">"example string 2"</code>.
+        JavaScript considers these to be arrays of characters, so the 0 index rule will apply here, with the first 
+        character having an index value of 0.
+    </p>
+    <p>
+        Strings are 
+        <dfn title="Cannot be changed">immutable</dfn>.
+        Changing a string actually creates a new one.
+    </p>
+    <p>
+        You can embed variables into strings using template literals that use backticks and ${}.
+    </p>
+    {% include 'javascript_app/data_types/includes/code_snippets/template_literal.html' %}
+    <p>
+        Some characters will mess with your JavaScript code, such as having double quotes in a string that is defined 
+        with double quotes. To minimise these, try to use single quotes for quotations if you define your string with 
+        double quotes and vice versa. For others you can use \ as an escape character.
+    </p>
+    <ul>
+        <li>
+            <code class="written-code">\t</code>
+            tab
+        </li>
+        <li>
+            <code class="written-code">\n</code>
+            newline
+        </li>
+        <li>
+            <code class="written-code">\\</code>
+            backslash
+        </li>
+        <li>
+            <code class="written-code">\'</code>
+            single quote
+        </li>
+        <li>
+            <code class="written-code">\"</code>
+            double quote
+        </li>
+    </ul>
+    <h4>String Methods</h4>
+    <p>
+        Methods are built in functions that you can apply to your objects. In this case; these methods will apply to 
+        strings. To set it up, define your string as a variable and then simply using dot notation to apply the string 
+        method. You may want to save these values as other variables or print them to the console.
+    </p>
+    {% include 'javascript_app/data_types/includes/code_snippets/string_methods.html' %}
+    <table>
+        <thead>
+            <tr>
+                <th>String Method</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <code class="written-code">charAt()</code>
+                </td>
+                <td>
+                    Returns the character at the specified index.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">concat()</code>
+                </td>
+                <td>
+                    Joins two or more strings and returns a new string.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">endsWith()</code>
+                </td>
+                <td>
+                    Checks whether a string ends with specified string/characters (returns true/false).
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">fromCharCode()</code>
+                </td>
+                <td>
+                    Converts Unicode values to characters.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">includes()</code>
+                </td>
+                <td>
+                    Checks whether a string contains the specified string/characters.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">indexOf()</code>
+                </td>
+                <td>
+                    Returns the position of the first found occurrence of a specified value in a string, it can take a 
+                    second parameter indicating the starting index point.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">lastIndexOf()</code>
+                </td>
+                <td>
+                    Returns the position of the last found occurrence of a specified value in a string.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">length</code>
+                </td>
+                <td>
+                    Returns the length of the string.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">localeCompare()</code>
+                </td>
+                <td>
+                    Compares two strings in the current locale.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">match()</code>
+                </td>
+                <td>
+                    Searches a string for a match against a regular expression and returns the matches.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">repeat()</code>
+                </td>
+                <td>
+                    Returns a new string with a specified number of copies of an existing string.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">replace()</code>
+                </td>
+                <td>
+                    Searches a string for a specified value and returns a new string with the values replaced.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">search()</code>
+                </td>
+                <td>
+                    Searches a string for a specified value and returns the position.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">slice()</code>
+                </td>
+                <td>
+                    Extracts a part of a string and returns a new string. If an ending index is supplied, it is 
+                    excluded, so +1 to the last index you want to include.
+                    <code class="written-code">string.slice(starting index, ending index)</code>
+                    or 
+                    <code class="written-code">string.slice(starting index)</code>.
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">split()</code>
+                </td>
+                <td>
+                    Splits a string into an array of substrings.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">startsWith()</code>
+                </td>
+                <td>
+                    Checks whether a string begins with specified characters.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">substr()</code>
+                </td>
+                <td>
+                    Extracts the characters from a string, beginning at a specified start position and through the 
+                    specified number of characters.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">toLocaleLowerCase()</code>
+                </td>
+                <td>
+                    Converts a string to lowercase according to the hosts locale.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">toLocaleUpperCase()</code>
+                </td>
+                <td>
+                    Converts a string to uppercase according to hosts locale.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">toLowerCase()</code>
+                </td>
+                <td>
+                    Converts a string to lower case.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">toString()</code>
+                </td>
+                <td>
+                    Returns the value of a String object.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">toUpperCase()</code>
+                </td>
+                <td>
+                    Converts a string to upper case.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">trim()</code>
+                </td>
+                <td>
+                    Removes whitespace from both ends of a string.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">valueOf()</code>
+                </td>
+                <td>
+                    Returns the primitive value of a String object
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

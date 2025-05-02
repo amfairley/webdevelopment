@@ -24,3 +24,27 @@ def JavaScript_variables(request):
         'javascript_app/variables/variables.html',
         context
     )
+
+
+def JavaScript_scope(request):
+    '''Return the JavaScript scope page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'javascript_app/scope/scope.html',
+        context
+    )
+
+
+def JavaScript_data_types(request):
+    '''Return the JavaScript data types page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'javascript_app/data_types/data_types.html',
+        context
+    )

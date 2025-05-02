@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: JavaScript - Data Type{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Scope</h2>
+    {% include 'javascript_app/data_types/includes/contents.html' %}
+    {% include 'javascript_app/data_types/includes/data_types_in_javascript.html' %}
+    {% include 'javascript_app/data_types/includes/operators.html' %}
+    {% include 'javascript_app/data_types/includes/number.html' %}
+    {% include 'javascript_app/data_types/includes/bigint.html' %}
+    {% include 'javascript_app/data_types/includes/string.html' %}
+    {% include 'javascript_app/data_types/includes/boolean.html' %}
+    {% include 'javascript_app/data_types/includes/object.html' %}
+    {% include 'javascript_app/data_types/includes/null.html' %}
+    {% include 'javascript_app/data_types/includes/undefined.html' %}
+    {% include 'javascript_app/data_types/includes/converting_between_types.html' %}
+
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-data-types-null{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Null{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        null is an intentional absence of any value. It's often used when you want to indicate that something is 
+        intentionally "nothing."
+    </p>
+    {% include 'javascript_app/data_types/includes/code_snippets/null.html' %}
+{% endblock %}

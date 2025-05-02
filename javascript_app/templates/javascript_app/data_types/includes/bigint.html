@@ -1,0 +1,15 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-data-types-big-int{% endblock %}
+
+<!--Section title-->
+{% block text_title %}BigInt{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        BigInt represents any number &gt;= 2^53 or &lt;=2^53. These numbers cannot be mixed with Number types directly.
+    </p>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-javascript-data-types-number-methods{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">let numberVariable = 1.01;
+console.log(numberVariable.toFixed(1)); // Prints 1.0 to the console
+let numberVariableOneDecimalPlace = numberVariable.toFixed(1); // The value to 1 decimal place as a new variable
+</code></pre>
+{% endblock %}
