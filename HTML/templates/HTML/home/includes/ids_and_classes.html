@@ -11,7 +11,14 @@
 {% block text_content %}
     <p>
         You will often want to target specific elements in your HTML files. This can be to add some 
-        <a class="text-link" href="" aria-label="Link to CSS Targeting">CSS styling</a>
+        <a 
+            class="text-link"
+            href="{% url 'CSS_selectors' %}#CSS-selectors-simple-selectors"
+            title="See how to select IDs and Classes in CSS"
+            aria-label="Link to CSS Selectors"
+        >
+            CSS styling
+        </a>
         to them, add some functionality by selecting them with 
         <a class="text-link" href="" aria-label="Link to JavaScript Targeting">JavaScript</a>,
         or to
