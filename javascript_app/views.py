@@ -48,3 +48,15 @@ def JavaScript_data_types(request):
         'javascript_app/data_types/data_types.html',
         context
     )
+
+
+def JavaScript_math(request):
+    '''Return the JavaScript math page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'javascript_app/math/math.html',
+        context
+    )

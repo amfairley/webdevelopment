@@ -1,0 +1,29 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-math-math{% endblock %}
+
+<!--Section title-->
+{% block text_title %}The Math Global Object{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        In JavaScript, Math is a built in global object that provides a collection of methods for performing 
+        mathematical operations. These methods are called using the syntax 
+        <code class="written-code">Math.method()</code>.
+        Here are some of the commonly used methods:
+    </p>
+    <ul>
+        <li><code class="written-code">Math.abs(x)</code>: Returns the absolute value of x.</li>
+        <li><code class="written-code">Math.floor(x)</code>: Returns the largest integer less than or equal to x.</li>
+        <li><code class="written-code">Math.log(x)</code>: Returns the natural logarithm (base e) of x.</li>
+        <li><code class="written-code">Math.max(x1, x2, ...)</code>: Returns the largest of the numbers provided.</li>
+        <li><code class="written-code">Math.pow(base, exponent)</code>: Raises the base to the power of the exponent.</li>
+        <li><code class="written-code">Math.random()</code>: Returns a random floating-point number between 0 (inclusive) and 1 (exclusive).</li>
+        <li><code class="written-code">Math.round(x)</code>: Rounds x to the nearest integer.</li>
+        <li><code class="written-code">Math.sin(x)</code>: Returns the sine of x (x is in radians).</li>
+        <li><code class="written-code">Math.sqrt(x)</code>: Returns the square root of x.</li>
+    </ul>
+{% endblock %}

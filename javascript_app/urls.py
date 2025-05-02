@@ -19,4 +19,9 @@ urlpatterns = [
         views.JavaScript_data_types,
         name="JavaScript_data_types"
     ),
+    path(
+        'math/',
+        views.JavaScript_math,
+        name="JavaScript_math"
+    ),
 ]

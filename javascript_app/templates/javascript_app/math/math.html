@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: JavaScript - Math{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Math</h2>
+    {% include 'javascript_app/math/includes/math.html' %}
+{% endblock %}
