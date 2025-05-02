@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: JavaScript - Scope{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Scope</h2>
+    {% include 'javascript_app/scope/includes/contents.html' %}
+    {% include 'javascript_app/scope/includes/what_is_scope_in_javascript.html' %}
+    {% include 'javascript_app/scope/includes/blocks_and_scope.html' %}
+
+{% endblock %}

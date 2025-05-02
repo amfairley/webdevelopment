@@ -1,0 +1,18 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-javascript-scope-scope{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">{
+    let blockVariable = "I'm inside a block!";
+    console.log(blockVariable);  // Works fine
+}
+
+console.log(blockVariable);    // ReferenceError
+</code></pre>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-scope-what-is-scope-in-javascript{% endblock %}
+
+<!--Section title-->
+{% block text_title %}What is Scope in JavaScript?{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Scope is an important concept to understand when using JavaScript. It controls where variables can be accessed 
+        or referenced in your code and plays a big role in keeping your programs clean, modular, and bug-free.
+    </p>
+    <p>
+        When a variable is "in scope," you are allowed to reference it and work with it. When a variable is "out of 
+        scope," trying to access it will cause an error, usually a 
+        <code class="written-code">ReferenceError</code>.
+        This is JavaScript's way of saying, "I don't know what you're talking about — that variable doesn't exist here."
+    </p>
+    {% include 'javascript_app/scope/includes/code_snippets/scope.html' %}
+{% endblock %}
