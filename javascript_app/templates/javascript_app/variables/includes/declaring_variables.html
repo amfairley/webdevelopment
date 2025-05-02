@@ -1,0 +1,33 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-variables-declaring-variables{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Declaring Variables{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        There are three ways to declare variables in JavaScript. These are used the first time you mention the variable 
+        and is a way of telling JavaScript “Hey, look, here's a new variable I want you to remember.”
+    </p>
+    {% include 'javascript_app/variables/includes/code_snippets/let.html' %}
+    <p>
+        let is the main way you will be declaring your variables. The key aspect of let is that it allows you to change 
+        the value of the variable later. Think of your health points in a video game, these will need to be updated 
+        when you take damage or heal, it wouldn't be useful if the number could never change.
+    </p>
+    {% include 'javascript_app/variables/includes/code_snippets/const.html' %}
+    <p>
+        const is used for declaring a constant variable. This is one that will not be able to change later. This is 
+        good for defining variables you do not want to get accidentally changed such as settings or fixed numbers. You 
+        should prefer this by default and only use let for variables you know you want to change later.
+    </p>
+    <p>
+        Another way was
+        <code class="written-code">var</code>.
+        This was the original way to define variables but as of 2015 is outdated.
+    </p>
+{% endblock %}

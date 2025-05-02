@@ -1,0 +1,49 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-variables-naming-variables{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Naming Variables{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Whilst you can pretty much name variables whatever you want there are some rules:
+    </p>
+    <ul>
+        <li>
+            They must start with a letter, $, or `_
+        </li>
+        <li>
+            They must not start with a number
+        </li>
+        <li>
+            They are case sensitive for instance a variable of myvariable would be different than myVariable
+        </li>
+        <li>
+            For the most part, JavaScript variables should be written in camel case. This means that they start with a 
+            lowercase letter and instead of using spaces between each word, the next word starts with a capital letter, 
+            such as camelCaseExampleVariable. The ups and downs of the capital letters are said to resemble the humps 
+            on the back of a camel, hence the name.
+        </li>
+        <li>
+            Names cannot match a list of reserved JavaScript words that JavaScript already uses. These include break, 
+            return, and try. A full list can be seen 
+            <a 
+                class="text-link"
+                href="https://www.w3schools.com/js/js_reserved.asp"
+                title="Go to the W3Schools page on reserved JavaScript words."
+                aria-label="Go to the W3Schools page on reserved JavaScript words."
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                here
+            </a>
+        </li>
+        <li>
+            When naming a variable, aim for a descriptive name so that you know what it is at a glance
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: JavaScript - Variables{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Variables</h2>
+    {% include 'javascript_app/variables/includes/contents.html' %}
+    {% include 'javascript_app/variables/includes/what_are_variables.html' %}
+    {% include 'javascript_app/variables/includes/naming_variables.html' %}
+    {% include 'javascript_app/variables/includes/declaring_variables.html' %}
+    {% include 'javascript_app/variables/includes/overwriting_variables.html' %}
+
+{% endblock %}

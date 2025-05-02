@@ -12,3 +12,15 @@ def JavaScript_home(request):
         'javascript_app/home/home.html',
         context
     )
+
+
+def JavaScript_variables(request):
+    '''Return the JavaScript variable page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'javascript_app/variables/variables.html',
+        context
+    )
