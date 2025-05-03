@@ -1,0 +1,29 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-sets-characteristics-of-a-set{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Characteristics of a Set{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <ul>
+        <li>
+            Uniqueness: Each value in a set must be unique. Adding a duplicate value has no effect.
+        </li>
+        <li>
+            Sets are unordered, meaning there is no guarantee of element order.
+        </li>
+        <li>
+            Unlike arrays, sets do not support accessing elements by index.
+        </li>   
+    </ul>
+    <p>
+        To check if a value is a set, you can use the 
+        <code class="written-code">instanceof</code>
+        operator.
+    </p>
+    {% include 'javascript_app/sets/includes/code_snippets/characteristics.html' %}
+{% endblock %}

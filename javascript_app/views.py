@@ -72,3 +72,15 @@ def JavaScript_arrays(request):
         'javascript_app/arrays/arrays.html',
         context
     )
+
+
+def JavaScript_sets(request):
+    '''Return the JavaScript sets page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'javascript_app/sets/sets.html',
+        context
+    )

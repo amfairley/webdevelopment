@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: JavaScript - Sts{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Sets</h2>
+    {% include 'javascript_app/sets/includes/contents.html' %}
+    {% include 'javascript_app/sets/includes/what_is_a_set.html' %}
+    {% include 'javascript_app/sets/includes/creating_a_set.html' %}
+    {% include 'javascript_app/sets/includes/characteristics_of_a_set.html' %}
+    {% include 'javascript_app/sets/includes/set_methods.html' %}
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-sets-creating-a-set{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Creating a Set{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can create a new set by passing an iterable (like an array) to the Set constructor.
+    </p>
+    {% include 'javascript_app/sets/includes/code_snippets/creating_a_set.html' %}
+    <p>
+        This will create a set containing the numbers 1 through 5. If there are duplicate values in the iterable, they 
+        will be automatically removed. 
+    </p>
+{% endblock %}

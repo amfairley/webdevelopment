@@ -1,0 +1,42 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-sets-set-methods{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Set Methods{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        <code class="written-code">add(value)</code>:
+        Adds a new element to the set. If the value already exists, the set remains unchanged.
+    </p>
+    {% include 'javascript_app/sets/includes/code_snippets/method_add.html' %}
+    <p>
+        <code class="written-code">clear()</code>:
+        Removes all elements from the set.
+    </p>
+    {% include 'javascript_app/sets/includes/code_snippets/method_clear.html' %}
+    <p>
+        <code class="written-code">delete(value)</code>:
+        Removes a specified value from the set. Returns true if the value was present and removed, or false otherwise.
+    </p>
+    {% include 'javascript_app/sets/includes/code_snippets/method_delete.html' %}
+    <p>
+        <code class="written-code">has(value)</code>:
+        Checks if a value exists in the set. Returns true if present, false otherwise.
+    </p>
+    {% include 'javascript_app/sets/includes/code_snippets/method_has.html' %}
+    <p>
+        <code class="written-code">size</code>:
+        Returns the number of elements in the set.
+    </p>
+    {% include 'javascript_app/sets/includes/code_snippets/method_size.html' %}
+
+    <p>
+        <code class="written-code">update()</code>:
+        Adds the items of another set to this set.
+    </p>
+{% endblock %}
