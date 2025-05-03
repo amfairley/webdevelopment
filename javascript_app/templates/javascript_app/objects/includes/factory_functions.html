@@ -1,0 +1,16 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-objects-factory-functions{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Factory Functions{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Factory functions are third way of defining objects.
+    </p>
+    {% include 'javascript_app/objects/includes/code_snippets/factory.html' %}
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-objects-object-methods{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Object Methods{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        There are some useful built in methods when working with objects.
+    </p>
+    <p>
+        <code class="written-code">Object.keys(obj);</code>:
+        Returns and array of the object keys.
+    </p>
+    <p>
+        <code class="written-code">Object.entries(obj);</code>:
+        Returns and array of [key, value] pairs.
+    </p>
+    <p>
+        <code class="written-code">Object.assign()</code>:
+        Merges objects. Have the first parameter as the object you want to merge into and following parameters as 
+        objects to merge in.
+    </p>
+    <p>
+        <code class="written-code">obj.hasOwnProperty("property");</code>:
+        Returns true if the object has the property.
+    </p>
+    <p>
+        <code class="written-code">obj.valueOf();</code>:
+        Returns the primitive value of the object.
+    </p>
+    
+{% endblock %}

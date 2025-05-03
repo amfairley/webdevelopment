@@ -1,0 +1,20 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-objects-best-practice{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Best Practice{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        For best practice when creating an object remember:
+    </p>
+    <ul>
+        <li>Have properties set as _property</li>
+        <li>Use setters to set these</li>
+        <li>Use getters to return them nicely</li>
+    </ul>
+{% endblock %}

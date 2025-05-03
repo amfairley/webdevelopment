@@ -1,0 +1,45 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-objects-creating-an-object{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Creating an Object{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can create an object simply using object literal notation shown here. The general syntax is:
+    </p>
+    <ul>
+        <li>Define the object using let</li>
+        <li>Put the object name keeping to camel case notation</li>
+        <li>=</li>
+        <li>Opening curly bracket</li>
+        <li>New line per property, indented</li>
+        <li>The property name</li>
+        <li>A colon</li>
+        <li>The value e.g. a string or number</li>
+        <li>A comma at the end of the property</li>
+        <li>Continue for however many properties you have</li>
+        <li>The end curly bracket at the same indent level as the first</li>
+    </ul>
+    {% include 'javascript_app/objects/includes/code_snippets/create.html' %}
+    <p>
+        Or use an object literal, which is a type of shorthand. This method is not recommended most of the time as it 
+        is less clear to someone reading the code.
+    </p>
+    {% include 'javascript_app/objects/includes/code_snippets/create_literal.html' %}
+    <p>
+        You may want to create an empty object to fill in later, these are some ways of doing that.
+    </p>
+    {% include 'javascript_app/objects/includes/code_snippets/create_empty.html' %}
+    <p>
+        When building an object, you should consider its privacy. Only certain properties should be able to change in 
+        value. To show that a property should not be altered, place an underscore (_) before the name of a property 
+        such as
+        <code class="written-code">_name</code>.
+        
+    </p>
+{% endblock %}

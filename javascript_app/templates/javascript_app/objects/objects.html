@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: JavaScript - Objects{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Objects</h2>
+    {% include 'javascript_app/objects/includes/contents.html' %}
+    {% include 'javascript_app/objects/includes/what_are_objects.html' %}
+    {% include 'javascript_app/objects/includes/creating_an_object.html' %}
+    {% include 'javascript_app/objects/includes/constructor_functions.html' %}
+    {% include 'javascript_app/objects/includes/factory_functions.html' %}
+    {% include 'javascript_app/objects/includes/comparing_objects.html' %}
+    {% include 'javascript_app/objects/includes/accessing_object_properties.html' %}
+    {% include 'javascript_app/objects/includes/nested_objects_and_arrays.html' %}
+    {% include 'javascript_app/objects/includes/object_methods.html' %}
+    {% include 'javascript_app/objects/includes/looping.html' %}
+    {% include 'javascript_app/objects/includes/getters_and_setters.html' %}
+    {% include 'javascript_app/objects/includes/best_practice.html' %}
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-javascript-objects-create-empty{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">let obj1 = new Object();
+let obj2 = {}; // Preferred
+let obj3 = Object.create(Object.prototype);
+</code></pre>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-objects-getters-and-setters{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Getters and Setters{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Getters and setters are special methods that allow you to interact with an objects properties.
+    </p>
+    <p>
+        A getter is used to retrieve the value of a property, allowing you to define how the property should be 
+        returned. They can:
+    </p>
+    <ul>
+        <li>Perform an action on the data</li>
+        <li>Return different values using conditionals</li>
+        <li>Can use <code class="written-code">this.property</code> instead of <code class="written-code">objectName.property</code></li>
+        <li>Makes functionality easier to understand</li>
+    </ul>
+    {% include 'javascript_app/objects/includes/code_snippets/getter.html' %}
+    <p>
+        A setter allows you to assign a value to a property. It defines how a property's value should be set.
+    </p>
+    {% include 'javascript_app/objects/includes/code_snippets/setter.html' %}
+    <p>
+        Setters and getters cannot share the same name as the property: You must distinguish the internal property 
+        (commonly prefixed with an underscore) from the getter/setter. For example, if the getter is 
+        <code class="written-code">name</code>,
+        the internal property is usually named 
+        <code class="written-code">_name</code>.
+    </p>
+    <p>
+        Setters reassign values of existing properties within an object. When you assign a value using the setter, the 
+        value gets assigned to an internal property.
+    </p>
+{% endblock %}

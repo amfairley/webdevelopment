@@ -1,0 +1,21 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-javascript-objects-constructor{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">function makerFunction(name, grade, letter){
+    let madeObject = {}
+    madeObject.name = name;
+    madeObject.grade = grade;
+    madeObject.letter = letter;
+    return madeObject;
+}
+// Then call it with: 
+myObject = makerFunction(“Adam”, 100, “A”);
+</code></pre>
+{% endblock %}

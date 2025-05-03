@@ -1,0 +1,17 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-objects-constructor-functions{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Constructor Functions{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can create constructor functions that create objects for you. It is key to make the arguments passed to 
+        your maker function be defined within your object.
+    </p>
+    {% include 'javascript_app/objects/includes/code_snippets/constructor.html' %}
+{% endblock %}

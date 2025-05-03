@@ -1,0 +1,18 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-objects-what-are-objects{% endblock %}
+
+<!--Section title-->
+{% block text_title %}What are Objects?{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        JavaScript objects are a fundamental data type in JavaScript. They are essentially dictionaries; an unordered 
+        collection of name/value pairs. To decide if you need to create an object, consider whether you can fit your 
+        details into the form of: *objectName* has a(n) *propertyName*. The name of objects take the data type of 
+        strings, whereas the values can be any type including a function; which will create an object method.
+    </p>
+{% endblock %}

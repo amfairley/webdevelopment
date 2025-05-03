@@ -1,0 +1,27 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-javascript-objects-setter{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">// Setter Syntax
+set propertyName(value) {
+    this._propertyName = value; // Set the value of the internal property
+}
+
+// Setter Example
+const person = {
+    _name: 'Adam',
+    set name(newName) {
+    this._name = newName; // Sets the private _name property
+    }
+};
+
+person.name = 'Bob'; // Uses the setter to assign a new value
+console.log(person._name); // Outputs: 'Bob'
+</code></pre>
+{% endblock %}

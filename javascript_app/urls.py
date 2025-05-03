@@ -34,4 +34,9 @@ urlpatterns = [
         views.JavaScript_sets,
         name="JavaScript_sets"
     ),
+    path(
+        'objects/',
+        views.JavaScript_objects,
+        name="JavaScript_objects"
+    ),
 ]

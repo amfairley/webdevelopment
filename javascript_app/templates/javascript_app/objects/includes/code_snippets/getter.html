@@ -1,0 +1,26 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-javascript-objects-getter{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">// Getter Syntax
+get propertyName() {
+    return this._propertyName; // _propertyName is the actual property name
+}
+
+// Getter Example
+const person = {
+    _name: 'Adam',
+    get name() {
+    return this._name; // Returns the value of the private _name property
+    }
+};
+
+console.log(person.name); // Outputs: 'Adam'
+</code></pre>
+{% endblock %}

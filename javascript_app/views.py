@@ -84,3 +84,15 @@ def JavaScript_sets(request):
         'javascript_app/sets/sets.html',
         context
     )
+
+
+def JavaScript_objects(request):
+    '''Return the JavaScript objects page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'javascript_app/objects/objects.html',
+        context
+    )

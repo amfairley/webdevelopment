@@ -1,0 +1,16 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-objects-looping{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Looping{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The general syntax for looping through the values of the keys in an object is:
+    </p>
+    {% include 'javascript_app/objects/includes/code_snippets/looping.html' %}
+{% endblock %}
