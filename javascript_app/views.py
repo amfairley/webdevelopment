@@ -96,3 +96,15 @@ def JavaScript_objects(request):
         'javascript_app/objects/objects.html',
         context
     )
+
+
+def JavaScript_console(request):
+    '''Return the JavaScript console page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'javascript_app/console/console.html',
+        context
+    )

@@ -39,4 +39,9 @@ urlpatterns = [
         views.JavaScript_objects,
         name="JavaScript_objects"
     ),
+    path(
+        'console/',
+        views.JavaScript_console,
+        name="JavaScript_console"
+    ),
 ]
