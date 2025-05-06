@@ -108,3 +108,51 @@ def JavaScript_console(request):
         'javascript_app/console/console.html',
         context
     )
+
+
+def JavaScript_functions(request):
+    '''Return the JavaScript functions page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'javascript_app/functions/functions.html',
+        context
+    )
+
+
+def JavaScript_conditional_statements(request):
+    '''Return the JavaScript conditional statements page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'javascript_app/conditional_statements/conditional_statements.html',
+        context
+    )
+
+
+def JavaScript_for_loops(request):
+    '''Return the JavaScript for loops page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'javascript_app/for_loops/for_loops.html',
+        context
+    )
+
+
+def JavaScript_while_loops(request):
+    '''Return the JavaScript while loops page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'javascript_app/while_loops/while_loops.html',
+        context
+    )

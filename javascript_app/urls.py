@@ -44,4 +44,24 @@ urlpatterns = [
         views.JavaScript_console,
         name="JavaScript_console"
     ),
+    path(
+        'functions/',
+        views.JavaScript_functions,
+        name="JavaScript_functions"
+    ),
+    path(
+        'conditional_statements/',
+        views.JavaScript_conditional_statements,
+        name="JavaScript_conditional_statements"
+    ),
+    path(
+        'for_loops/',
+        views.JavaScript_for_loops,
+        name="JavaScript_for_loops"
+    ),
+    path(
+        'while_loops/',
+        views.JavaScript_while_loops,
+        name="JavaScript_while_loops"
+    ),
 ]
