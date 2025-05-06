@@ -1,0 +1,19 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-for-loops-for-in{% endblock %}
+
+<!--Section title-->
+{% block text_title %}For In{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        <code class="written-code">for...in</code>
+        is used to iterate over an object's keys (property names). It follows the syntax of defining a temporary 
+        variable to the keys in the object to iterate through (you may just see it defined as let key), then if 
+        statements checking if the object has the key including the code to execute.   
+    </p>
+    {% include 'javascript_app/for_loops/includes/code_snippets/for_in.html' %}
+{% endblock %}

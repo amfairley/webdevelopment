@@ -1,0 +1,18 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-for-loops-for-of{% endblock %}
+
+<!--Section title-->
+{% block text_title %}{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        <code class="written-code">for...of</code>
+        is a simpler way to loop over iterable data types like arrays, strings, maps, and sets and is similar to the 
+        python way of looping through iterables.
+    </p>
+    {% include 'javascript_app/for_loops/includes/code_snippets/for_of.html' %}
+{% endblock %}

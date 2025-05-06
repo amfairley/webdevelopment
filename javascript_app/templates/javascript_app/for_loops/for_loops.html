@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: JavaScript - Data Type{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>For Loops</h2>
+    {% include 'javascript_app/for_loops/includes/contents.html' %}
+    {% include 'javascript_app/for_loops/includes/how_for_loops_work.html' %}
+    {% include 'javascript_app/for_loops/includes/for_in.html' %}
+    {% include 'javascript_app/for_loops/includes/for_of.html' %}
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-javascript-for-loops-for-in{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">for (let temporaryVariable in objectName) {
+    if (objectName.hasOwnProperty(temporaryVariable)) {
+        // Code to execute
+    }
+}
+
+const person = {
+  name: "Adam",
+  age: 34,
+  job: "Engineer"
+};
+
+for (let temporaryVariable in person) {
+  if (person.hasOwnProperty(temporaryVariable)) {
+    console.log(temporaryVariable + ": " + person[temporaryVariable]);
+  }
+}
+
+// Will output name: Adam, age: 34, job: Engineer on 3 separate lines
+</code></pre>
+{% endblock %}
