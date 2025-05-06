@@ -1,0 +1,17 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-javascript-functions-args-2{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">function logArguments() {
+    console.log(arguments.length); // Logs the number of arguments passed
+}
+
+logArguments(1, 2, 3); // Outputs: 3
+</code></pre>
+{% endblock %}

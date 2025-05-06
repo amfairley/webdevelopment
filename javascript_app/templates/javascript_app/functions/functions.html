@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: JavaScript - Data Type{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Functions</h2>
+    {% include 'javascript_app/functions/includes/contents.html' %}
+    {% include 'javascript_app/functions/includes/functions_in_javascript.html' %}
+    {% include 'javascript_app/functions/includes/docstrings.html' %}
+    {% include 'javascript_app/functions/includes/defining_a_function.html' %}
+    {% include 'javascript_app/functions/includes/arguments_and_parameters.html' %}
+    {% include 'javascript_app/functions/includes/return.html' %}
+    {% include 'javascript_app/functions/includes/helper_functions.html' %}
+    {% include 'javascript_app/functions/includes/arrow_functions.html' %}
+    {% include 'javascript_app/functions/includes/arrays_and_functions.html' %}
+
+{% endblock %}

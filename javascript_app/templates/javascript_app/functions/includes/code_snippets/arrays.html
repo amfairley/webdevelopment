@@ -1,0 +1,17 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-javascript-functions-arrays{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">function addFruit(arr) {
+    arr.push('jackfruit');
+}
+addFruit(fruits);
+console.log(fruits); // 'jackfruit' is added to the fruits array
+</code></pre>
+{% endblock %}

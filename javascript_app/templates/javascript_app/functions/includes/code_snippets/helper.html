@@ -1,0 +1,21 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-javascript-functions-helper{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">outerFunction(x, y) {
+    function innerFunction(a, b) {
+        return a + b;
+    }
+
+    return innerFunction(x, y);
+}
+
+console.log(outerFunction(2, 3)); // Outputs: 5
+</code></pre>
+{% endblock %}

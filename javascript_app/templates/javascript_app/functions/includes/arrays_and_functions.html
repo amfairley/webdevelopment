@@ -1,0 +1,17 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-functions-arrays-and-functions{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Arrays and Functions{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        If you pass an array as an argument into a function, changes made within this function will affect the original 
+        array.
+    </p>
+    {% include 'javascript_app/functions/includes/code_snippets/arrays.html' %}
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-functions-return{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Return{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Functions in JavaScript can return values, which can then be used later in your program. This is useful when 
+        you need to store the result of a function for further processing or display. If no return statement is 
+        specified, the function will return undefined.
+    </p>
+    {% include 'javascript_app/functions/includes/code_snippets/return.html' %}
+{% endblock %}

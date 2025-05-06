@@ -1,0 +1,17 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-functions-helper-functions{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Helper Functions{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can define helper functions inside other functions. These "inner" functions are useful for encapsulating 
+        smaller tasks that are only needed within the parent function.
+    </p>
+    {% include 'javascript_app/functions/includes/code_snippets/helper.html' %}
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-javascript-functions-docstring{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">/**
+* This is a docstring.
+* It describes the purpose of the function and how it works.
+* List the parameters with the following syntax, specifying the data type
+* @param {number} param1 - The first parameter.
+* @param {number} param2 - The second parameter.
+* @returns {number} The result of adding both parameters.
+*/
+function add(param1, param2) {
+    return param1 + param2;
+}
+</code></pre>
+{% endblock %}

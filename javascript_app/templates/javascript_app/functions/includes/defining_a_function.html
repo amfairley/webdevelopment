@@ -1,0 +1,35 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-functions-defining-a-function{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Defining a Function{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        A function can be defined using the function keyword followed by the function name and a set of parameters in 
+        parentheses and then curly brackets to house the code block for the function. Here's the basic structure of a 
+        function.
+    </p>
+    {% include 'javascript_app/functions/includes/code_snippets/define_1.html' %}
+    <p>
+        You can assign default values to function parameters using an 
+        <code class="written-code">=</code>
+        sign. If an argument is not passed when calling the function, the default value is used instead.
+    </p>
+    {% include 'javascript_app/functions/includes/code_snippets/define_2.html' %}
+    <p>
+        You can assign a function to a variable and give it a new name. This is commonly done with anonymous functions 
+        (functions without a name):
+    </p>
+    {% include 'javascript_app/functions/includes/code_snippets/define_3.html' %}
+    <p>
+        Now, you can call the function using the 
+        <code class="written-code">addNumbers</code>
+        variable. Note that in the line where you reassign the function name, you do not need the parenthesis on the 
+        function.
+    </p>
+{% endblock %}

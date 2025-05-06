@@ -1,0 +1,25 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-functions-functions-in-javascript{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Functions in JavaScript{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Your JavaScript files will contain a series of functions, which are actions that the computer or browser will 
+        carry out. For clarity of code, each function should have one core task. More complex functions will generally 
+        be a series of smaller functions defined externally to it. By breaking down your program into smaller, 
+        manageable functions, you can keep your code organized, reusable, and easier to debug. Proper naming 
+        conventions, documentation using docstrings, and clear function definitions will help make your code more 
+        readable and maintainable. 
+    </p>
+    <p>
+        When naming functions in JavaScript, it's a common practice to use camelCase. This means the first word is 
+        lowercase, and each subsequent word starts with an uppercase letter without spaces between words. For example:
+        <code class="written-code">exampleCamelCaseFunctionName</code>.
+    </p>
+{% endblock %}

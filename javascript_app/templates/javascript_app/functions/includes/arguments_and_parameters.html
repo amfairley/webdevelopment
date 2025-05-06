@@ -1,0 +1,30 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-functions-arguments-and-parameters{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Arguments and Parameters{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Parameters are variables that are listed inside the parentheses when you define the function. They act as 
+        placeholders for the values the function will use.
+    </p>
+    <p>
+        Arguments are the actual values you pass when calling the function.
+    </p>
+    {% include 'javascript_app/functions/includes/code_snippets/args_1.html' %}
+    <p>
+        If a function is called with more arguments than defined parameters, the extra arguments are ignored. 
+        Conversely, if fewer arguments are provided, the missing parameters will be set to undefined by default.
+    </p>
+    <p>
+        You can check the number of arguments passed to a function using the 
+        <code class="written-code">arguments.length</code>
+        property, which returns the number of arguments passed, regardless of how many parameters were defined.
+    </p>
+    {% include 'javascript_app/functions/includes/code_snippets/args_2.html' %}
+{% endblock %}
