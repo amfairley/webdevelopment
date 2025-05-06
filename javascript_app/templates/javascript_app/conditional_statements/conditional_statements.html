@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: JavaScript - Conditional Statements{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Conditional Statements</h2>
+    {% include 'javascript_app/conditional_statements/includes/contents.html' %}
+    {% include 'javascript_app/conditional_statements/includes/what_are_conditional_statements.html' %}
+    {% include 'javascript_app/conditional_statements/includes/ternary_conditionals.html' %}
+    {% include 'javascript_app/conditional_statements/includes/comparison_operators.html' %}
+    {% include 'javascript_app/conditional_statements/includes/switch.html' %}
+{% endblock %}

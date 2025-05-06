@@ -1,0 +1,17 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-conditional-statements-ternary-conditionals{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Ternary Conditionals{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Ternary conditionals are shorthand versions of if/else statements. The basic syntax is
+        <code class="written-code">condition ? valueIfTrue : valueIfFalse;</code>.
+    </p>
+    {% include 'javascript_app/conditional_statements/includes/code_snippets/ternary.html' %}
+{% endblock %}

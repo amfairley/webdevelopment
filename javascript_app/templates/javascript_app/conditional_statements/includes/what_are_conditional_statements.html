@@ -1,0 +1,30 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-conditional-statements-what-are-conditional-statements{% endblock %}
+
+<!--Section title-->
+{% block text_title %}What are Conditional Statements?{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Conditional statements let your code make decisions based on logic or values. They control flow by deciding 
+        what code runs and when. They key conditionals are 
+        <code class="written-code">if</code>,
+        <code class="written-code">else if</code>,
+        and 
+        <code class="written-code">else</code>. 
+    </p>
+    {% include 'javascript_app/conditional_statements/includes/code_snippets/what_1.html' %}
+    <p>
+        You can chain multiple else if blocks, but only the first true block will run.
+    </p>
+    <p>
+        There is a shorthand for checking for truthiness (Values like 0, "", null, undefined, and NaN are all falsy. 
+        Everything else is truthy).
+    </p>
+    {% include 'javascript_app/conditional_statements/includes/code_snippets/what_2.html' %}
+
+{% endblock %}

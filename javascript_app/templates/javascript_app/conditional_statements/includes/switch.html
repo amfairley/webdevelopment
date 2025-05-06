@@ -1,0 +1,32 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-conditional-statements-switch{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Switch{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        In the case of multiple else if statements, a switch might make more sense. An example of this is checking if a 
+        percentage grade is an A, B, C, D, E etc. They follow the general structure of:
+    </p>
+    {% include 'javascript_app/conditional_statements/includes/code_snippets/switch_1.html' %}
+    <p>
+        The final option is 
+        <code class="written-code">default</code>
+        which covers the else case and it has no break clause. The break clauses make the computer take that case if it 
+        matches and skip the rest. You'll notice it starts with 
+        <code class="written-code">switch (true)</code>
+        which will evaluate the cases against.
+    </p>
+    {% include 'javascript_app/conditional_statements/includes/code_snippets/switch_2.html' %}
+    <p>
+        If you want to achieve an "or" statement in a switch, you can stack the cases above one block statement. The 
+        following will log “This is a pome fruit”.
+    </p>
+    {% include 'javascript_app/conditional_statements/includes/code_snippets/switch_3.html' %}
+
+{% endblock %}

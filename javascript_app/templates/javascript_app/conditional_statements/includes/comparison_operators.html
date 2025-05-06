@@ -1,0 +1,128 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-conditional-statements-comparison-operators{% endblock %}
+
+<!--Section title-->
+{% block text_title %}{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Symbol
+                </th>
+                <th>
+                    Meaning
+                </th>
+                <th>
+                    Example
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <code class="written-code">&lt;</code>
+                </td>
+                <td>
+                    Less than.
+                </td>
+                <td>
+                    <code class="written-code">x&lt;10;</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">&lt;=</code>
+                </td>
+                <td>
+                    Less than or equal to.
+                </td>
+                <td>
+                    <code class="written-code">x&lt;=10;</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">&gt;</code>
+                </td>
+                <td>
+                    Greater than.
+                </td>
+                <td>
+                    <code class="written-code">x&gt;5;</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">&gt;=</code>
+                </td>
+                <td>
+                    Greater than or equal to.
+                </td>
+                <td>
+                    <code class="written-code">x&gt;=6.</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">===</code>
+                </td>
+                <td>
+                    Strict equality.
+                </td>
+                <td>
+                    <code class="written-code">x==="5";</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">!==</code>
+                </td>
+                <td>
+                    Strict inequality.
+                </td>
+                <td>
+                    <code class="written-code">x!=="5";</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">&&</code>
+                </td>
+                <td>
+                    Logical AND.
+                </td>
+                <td>
+                    <code class="written-code">A&&B;</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">!</code>
+                </td>
+                <td>
+                    Logical NOT.
+                </td>
+                <td>
+                    <code class="written-code">!A</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        Always use 
+        <code class="written-code">===</code>
+        and 
+        <code class="written-code">!==</code>
+        instead of 
+        <code class="written-code">==</code>
+        or
+        <code class="written-code">!=</code>
+        to avoid type coercion bugs.
+    </p>
+{% endblock %}
