@@ -1,0 +1,22 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-javascript-nested-loops-syntax{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">outerLoop:
+for (let x = 0; x &lt; 5; x++) {
+    for (let y = 0; y &lt; 5; y++) {
+        if (y === 3) {
+            console.log("Breaking outer loop from inner loop");
+            break outerLoop; // Exits the outer loop
+        }
+        console.log(`x: ${x}, y: ${y}`);
+    }
+}
+</code></pre>
+{% endblock %}

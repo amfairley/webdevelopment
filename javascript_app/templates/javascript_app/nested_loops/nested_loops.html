@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: JavaScript - Nested Loops{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Nested Loops</h2>
+    {% include 'javascript_app/nested_loops/includes/contents.html' %}
+    {% include 'javascript_app/nested_loops/includes/basic_structure.html' %}
+    {% include 'javascript_app/nested_loops/includes/labelled_loops.html' %}
+{% endblock %}

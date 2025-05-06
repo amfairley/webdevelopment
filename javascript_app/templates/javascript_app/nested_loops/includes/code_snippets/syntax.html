@@ -1,0 +1,21 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-javascript-nested-loops-syntax{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">for (let i = 0; i &lt; 3; i++) {
+    for (let j = 0; j &lt; 2; j++) {
+        console.log(`i = ${i}, j = ${j}`);
+    }
+}
+// This will print all combinations of i and j:
+// i = 0, j = 0
+// i = 0, j = 1
+// i = 1, j = 0
+</code></pre>
+{% endblock %}

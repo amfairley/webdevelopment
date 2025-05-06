@@ -1,0 +1,18 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-nested-loops-basic-structure{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Basic Structure{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Nested loops allow you to run a loop inside another loop. This is especially useful when working with 
+        multidimensional arrays, combinations of values, or matrix-style problems. Where conventionally you use i as a 
+        temporary variable in a loop, you would use j as a temporary variable for the nested loop.
+    </p>
+    {% include 'javascript_app/nested_loops/includes/code_snippets/syntax.html' %}
+{% endblock %}

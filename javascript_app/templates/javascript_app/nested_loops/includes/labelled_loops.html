@@ -1,0 +1,23 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-nested-loops-labelled-loops{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Labelled Loops{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Normally, break or continue only affects the current (innermost) loop. But using labels, you can direct 
+        break or continue to a specific loop, even if it is the outer loop. A label is an identifier followed by a 
+        colon (:) before a loop. You can use 
+        <code class="written-code">break labelName;</code>
+        or
+        <code class="written-code">continue labelName;</code>
+        to control specific loops.
+    </p>
+    {% include 'javascript_app/nested_loops/includes/code_snippets/labelled.html' %}
+
+{% endblock %}
