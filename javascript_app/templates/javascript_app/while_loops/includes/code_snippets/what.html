@@ -1,0 +1,22 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-javascript-while-loops-what{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">while (condition) {
+    code;
+}
+
+// An example of logging numbers 1-10 as a while loop
+let i = 1;
+while (i &lt; 11) {
+    console.log(i);
+    i++;
+}
+</code></pre>
+{% endblock %}

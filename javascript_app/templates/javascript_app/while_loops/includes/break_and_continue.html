@@ -1,0 +1,22 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-while-loops-break-and-continue{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Break and Continue{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The 
+        <code class="written-code">break</code>
+        keyword exits the loop entirely, skipping any remaining iterations.
+    </p>
+    <p>
+        The 
+        <code class="written-code">continue</code>
+        keyword skips the current iteration, and jumps to the next loop cycle.
+    </p>
+{% endblock %}

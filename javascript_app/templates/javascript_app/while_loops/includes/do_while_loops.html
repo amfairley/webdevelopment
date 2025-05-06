@@ -1,0 +1,23 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-while-loops-do-while-loops{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Do While Loops{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        A 
+        <code class="written-code">do...while</code>
+        loop is a variation that guarantees at least one execution of the loop body because the condition is evaluated 
+        after the code block. The syntax for this is to put a while statement inside a do statement.
+    </p>
+    {% include 'javascript_app/while_loops/includes/code_snippets/do.html' %}
+    <p>
+        In the above example, 10 is logged once because it is executed prior to the while loop and then the condition
+        of the while loop fails.
+    </p>
+{% endblock %}

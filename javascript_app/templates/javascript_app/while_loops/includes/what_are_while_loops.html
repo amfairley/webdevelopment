@@ -1,0 +1,27 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-while-loops-what-are-while-loops{% endblock %}
+
+<!--Section title-->
+{% block text_title %}What are While Loops?{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        In JavaScript, while loops allow you to execute a block of code repeatedly as long as a specified condition 
+        evaluates to true. They're useful when the number of iterations isn't known beforehand, such as when reading 
+        user input or waiting for a certain state. They generally look like the following.
+    </p>
+    {% include 'javascript_app/while_loops/includes/code_snippets/what.html' %}
+    <p>
+        In the example above:
+    </p>
+    <ul>
+        <li>The temporary variable, i, starts at 1.</li>
+        <li>The condition i &lt; 10 is checked.</li>
+        <li>If true, it logs i and increments it by 1.</li>
+        <li>This continues until i reaches 11 (which fails the condition).</li>
+    </ul>
+{% endblock %}

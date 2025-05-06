@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: JavaScript - While Loops{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Variables</h2>
+    {% include 'javascript_app/while_loops/includes/contents.html' %}
+    {% include 'javascript_app/while_loops/includes/what_are_while_loops.html' %}
+    {% include 'javascript_app/while_loops/includes/do_while_loops.html' %}
+    {% include 'javascript_app/while_loops/includes/break_and_continue.html' %}
+
+{% endblock %}
