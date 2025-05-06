@@ -1,0 +1,19 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-try-throw{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Throw{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can create your own errors in JavaScript using the 
+        <code class="written-code">throw</code>
+        keyword.
+    </p>
+    {% include 'javascript_app/try/includes/code_snippets/throw.html' %}
+
+{% endblock %}

@@ -1,0 +1,91 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-try-errors{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Errors{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        JavaScript has several built-in error types. Each serves a specific purpose.
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Error Type
+                </th>
+                <th>
+                    Description
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <code class="written-code">Error</code>
+                </td>
+                <td>
+                    A generic error object (base class). Often used for custom errors.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">EvalError</code>
+                </td>
+                <td>
+                    Related to the 
+                    <code class="written-code">eval()</code>
+                    function and is rarely used.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">RangeError</code>
+                </td>
+                <td>
+                    A number is out of its allowable range (e.g. too many arguments).
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">SyntaxError</code>
+                </td>
+                <td>
+                    Code has invalid syntax (e.g. a missing bracket).
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">TypeError</code>
+                </td>
+                <td>
+                    A value is not of the expected type (e.g. calling something that isn't a function).
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">URIError</code>
+                </td>
+                <td>
+                    Incorrect usage of URI functions like 
+                    <code class="written-code">decodeURIComponent()</code>.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        The syntax for catching these is to use the 
+        <code class="written-code">instanceof</code>
+        keyword. Typically you would use 
+        <code class="written-code">catch(err)</code>
+        to catch the errors and then repeat “err” in your code block. This is just by convention, but make sure that 
+        whatever is the in the 
+        <code class="written-code">catch()</code>
+        parentheses matches your calling of it in the following codeblock.
+    </p>
+    {% include 'javascript_app/try/includes/code_snippets/errors.html' %}
+{% endblock %}

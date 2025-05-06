@@ -1,0 +1,21 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-try-try-catch{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Try Catch{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        JavaScript is a flexible language, but like any programming language, code can sometimes go wrong. That's where 
+        <code class="written-code">try...catch</code>
+        comes in. It helps you handle errors gracefully, without crashing your whole program.
+        <code class="written-code">try...catch</code>
+        is used to run code that might fail and provide a fallback response if an exception is thrown. The syntax is a 
+        try block of code followed by a catch block and an optional finally block that runs regardless of an error.
+    </p>
+    {% include 'javascript_app/try/includes/code_snippets/catch.html' %}
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-javascript-try-catch{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">try {
+    // Code that might throw an error
+} catch (err) {
+    if (err instanceof TypeError) {
+        console.error("TypeError caught:", err.message);
+    } else if (err instanceof SyntaxError) {
+        console.error("SyntaxError caught:", err.message);
+    } else if (err instanceof RangeError) {
+        console.error("RangeError caught:", err.message);
+    } else if (err instanceof EvalError) {
+        console.error("EvalError caught:", err.message);
+    } else if (err instanceof URIError) {
+        console.error("URIError caught:", err.message);
+    } else {
+        console.error("Generic Error caught:", err.message);
+    }
+}
+</code></pre>
+{% endblock %}

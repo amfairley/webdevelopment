@@ -1,0 +1,24 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-javascript-try-throw{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">function divide(a, b) {
+    if (b === 0) {
+        throw new Error("Division by zero is not allowed.");
+    }
+    return a / b;
+}
+
+try {
+    console.log(divide(5, 0));
+} catch (err) {
+    console.warn(err.message);
+}
+</code></pre>
+{% endblock %}

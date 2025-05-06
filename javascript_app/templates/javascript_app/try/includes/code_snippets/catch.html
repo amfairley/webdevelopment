@@ -1,0 +1,19 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-javascript-try-catch{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">try {
+    // Code that may throw an error
+} catch (error) {
+    // Code to run if an error is caught
+} finally {
+    // Code that always runs, regardless of success or error
+}
+</code></pre>
+{% endblock %}
