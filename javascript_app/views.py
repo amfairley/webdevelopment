@@ -156,3 +156,39 @@ def JavaScript_while_loops(request):
         'javascript_app/while_loops/while_loops.html',
         context
     )
+
+
+def JavaScript_try(request):
+    '''Return the JavaScript try page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'javascript_app/try/try.html',
+        context
+    )
+
+
+def JavaScript_nested_loops(request):
+    '''Return the JavaScript nested loops page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'javascript_app/nested_loops/nested_loops.html',
+        context
+    )
+
+
+def JavaScript_the_dom(request):
+    '''Return the JavaScript dom page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'javascript_app/the_dom/the_dom.html',
+        context
+    )

@@ -1,0 +1,75 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-dom{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Document Object Model{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The DOM is the Document Object Model and is essentially a family tree of the HTML elements in your webpage. At 
+        the top there will be the document, with a direct child of 
+        <code class="written-code">&lt;HTML&gt;</code>.
+        Then these will have children of their own. This is key to keep in mind when considering how you want 
+        JavaScript interactions to occur and whether they need to move up or down this family tree. And example tree is 
+        shown below but the MDN Web Docs page on the 
+        <a 
+            class="text-link"
+            href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model#what_is_a_dom_tree"
+            title="Go to the MDN page on the DOM tree."
+            aria-label="Go to the MDN page on the DOM tree"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+        Document Object Model
+        </a>
+        is very clear.
+    </p>
+    <ul>
+        <li>
+            Document
+            <ul>
+                <li>
+                    &lt;HTML&gt;
+                    <ul>
+                        <li>
+                            &lt;head&gt;
+                            <ul>
+                                <li>
+                                    &lt;title&gt;
+                                    <ul>
+                                        <li>
+                                            "My Title"
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            &lt;body&gt;
+                            <ul>
+                                <li>
+                                    &lt;h1&gt;
+                                    <ul>
+                                        <li>"A heading"</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    &lt;a&gt;
+                                    <ul>
+                                        <li>
+                                            "Link Text"
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+{% endblock %}

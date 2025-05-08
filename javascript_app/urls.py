@@ -64,4 +64,19 @@ urlpatterns = [
         views.JavaScript_while_loops,
         name="JavaScript_while_loops"
     ),
+    path(
+        'try/',
+        views.JavaScript_try,
+        name="JavaScript_try"
+    ),
+    path(
+        'nested_loops/',
+        views.JavaScript_nested_loops,
+        name="JavaScript_nested_loops"
+    ),
+    path(
+        'the_dom/',
+        views.JavaScript_the_dom,
+        name="JavaScript_the_dom"
+    ),
 ]
