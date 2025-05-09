@@ -1,0 +1,95 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-manipulating-the-dom-updating-html{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Updating HTML{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <table>
+        <thead>
+            <tr>
+                <th>Syntax</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <ol>
+                        <li>
+                            Assign your element to a variable
+                        </li>
+                        <li>
+                            Using backticks, assign your new content to a different variable<br>
+                            <code class="written-code">
+                                let html = `&lt;h1&gt;Hello!&lt;/h1&gt;`;
+
+                            </code>
+                        </li>
+                        <li>
+                            Set the innerHTML of your element variable to this new content variable<br>
+                            <code class="written-code">myELement.innerHTML = html;</code>
+                        </li>
+                    </ol>
+                </td>
+                <td>
+                    Changing HTML content.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">myElement.id = 'id name';</code>
+                </td>
+                <td>
+                    Assign an ID to a new element.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">myElement.setAttribute('class', 'className');</code>
+                </td>
+                <td>
+                    Adds a class to an element.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">myElement.classList.add('className');</code>
+                </td>
+                <td>
+                    Add another class to an element without overwriting previous ones.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">myElement.innerHTML;</code>
+                </td>
+                <td>
+                    Assign HTML content to a new element.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">document.body.appendChild(myElement);</code>
+                </td>
+                <td>
+                    Appends the new element into the body as a child.
+                </td>
+            </tr>            
+        </tbody>
+    </table>
+    <p>
+        To dynamically create and add a new element to the page, follow these four steps:
+    </p>
+    <ol>
+        <li>Create the element using <code class="written-code">document.createElement()</code></li>
+        <li>Customise the new element using the above properties</li>
+        <li>Target the existing element you want to be its parent element</li>
+        <li>Append your new element to the parent element using <code class="written-code">.appendChild()</code></li>
+    </ol>
+    {% include 'javascript_app/manipulating_the_dom/includes/code_snippets/manipulate.html' %}
+{% endblock %}

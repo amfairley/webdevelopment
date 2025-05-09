@@ -1,0 +1,28 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-manipulating-the-dom-how-to-manipulate-the-dom{% endblock %}
+
+<!--Section title-->
+{% block text_title %}How to Manipulate the DOM{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The main way that you will edit the HTML content of your webpage using JavaScript is, in it's simplest terms, a 
+        two-step process.
+    </p>
+    <ol>
+        <li>
+            Define a variable as an element on the page by targeting it. Such as
+            <code class="written-code">let variableOne = document.getElementById('element-id');</code>
+        </li>
+        <li>
+            Decide what part of it to change and assign it a new value. Such as
+            <code class="written-code">variableOne.innerHTML = '&lt;p&gt;New paragraph&lt;/p&gt;'</code>
+            or
+            <code class="written-code">variableOne.value = 5;</code>
+        </li>
+    </ol>
+{% endblock %}

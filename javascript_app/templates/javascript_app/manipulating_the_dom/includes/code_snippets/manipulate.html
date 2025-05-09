@@ -1,0 +1,31 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-javascript-manipulating-the-dom-manipulate{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">// Create a new element
+let newElement = document.createElement('h1');
+// Customise the new element
+newElement.innerText = 'Heading One';
+newElement.style.color = 'blue';
+// Target the element you want to be the parent element
+let parentElement = document.body;
+// Append the new element
+parentElement.appendChild(newElement);
+
+// In some cases you may want to make a copy of an existing element
+// Makes a copy of the targeted element
+.cloneNode()
+// Makes a copy of the targeted element including all children
+.cloneNode(true)
+// If you want to delete an element from the DOM the method is
+.remove()
+// To delete a specific child of a parent, target the parent and child as separate variables then do
+parentElement.removeChild(childElement);
+</code></pre>
+{% endblock %}

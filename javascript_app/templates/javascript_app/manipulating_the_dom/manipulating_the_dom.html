@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: JavaScript - Manipulating the DOM{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Manipulating the DOM</h2>
+    {% include 'javascript_app/manipulating_the_dom/includes/contents.html' %}
+    {% include 'javascript_app/manipulating_the_dom/includes/how_to_manipulate_the_dom.html' %}
+    {% include 'javascript_app/manipulating_the_dom/includes/html_properties.html' %}
+    {% include 'javascript_app/manipulating_the_dom/includes/updating_html.html' %}
+
+{% endblock %}

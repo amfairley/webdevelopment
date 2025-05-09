@@ -1,0 +1,121 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-manipulating-the-dom-html-properties{% endblock %}
+
+<!--Section title-->
+{% block text_title %}HTML Properties{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Here are some useful element properties that you may want to target.
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>What is returned/targeted</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <code class="written-code">tagName</code>
+                </td>
+                <td>
+                    A string representing the element tag (p, div, h1, etc)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">id</code>
+                </td>
+                <td>
+                    Values of the ID as a string
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">className</code>
+                </td>
+                <td>
+                    Value of the class as a string
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">classList</code>
+                </td>
+                <td>
+                    List of the classes in the class attribute as an array-like structure
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">attributes</code>
+                </td>
+                <td>
+                    A NamedNodeMap of all the elements attributes and their values (can be iterated through)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">clientHeight</code>
+                </td>
+                <td>
+                    Number representing inner height of the element (read only)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">clientWidth</code>
+                </td>
+                <td>
+                    Number representing inner width of the element (read only)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">innerHTML</code>
+                </td>
+                <td>
+                    Content inside the element including HTML markup
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">outerHTML</code>
+                </td>
+                <td>
+                    Same as innerHTML but includes the element as well
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">textContent</code>
+                </td>
+                <td>
+                    Inner text content
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">style</code>
+                </td>
+                <td>
+                    The style attribute of the element. This can be further specified using e.g. style.width or style.backgroundColor etc.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">hidden</code>
+                </td>
+                <td>
+                    Can set to true to hide the element or false to show it
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

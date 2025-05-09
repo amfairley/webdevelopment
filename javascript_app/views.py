@@ -204,3 +204,15 @@ def JavaScript_targeting_the_dom(request):
         'javascript_app/targeting_the_dom/targeting_the_dom.html',
         context
     )
+
+
+def JavaScript_manipulating_the_dom(request):
+    '''Return the JavaScript manipulating the dom page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'javascript_app/manipulating_the_dom/manipulating_the_dom.html',
+        context
+    )
