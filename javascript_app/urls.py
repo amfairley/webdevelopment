@@ -79,4 +79,9 @@ urlpatterns = [
         views.JavaScript_the_dom,
         name="JavaScript_the_dom"
     ),
+    path(
+        'targeting_the_dom/',
+        views.JavaScript_targeting_the_dom,
+        name="JavaScript_targeting_the_dom"
+    ),
 ]

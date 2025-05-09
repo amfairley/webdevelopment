@@ -1,0 +1,91 @@
+{% extends 'includes/html_js_example.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_file_id %}code-example-javascript-targeting-the-dom-window-history{% endblock %}
+
+<!--HTML-->
+{% block html_code_example_content %}
+<pre><code class="html">&lt;button id="window-history-example-button-id" class="site-button"&gt;
+    Press here to show your window history information.
+&lt;/button&gt;
+&lt;div&gt;
+    &lt;p>Your window history information is:&lt;/p&gt;
+    &lt;ul id="window-history-result-id">&lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+{% endblock %}
+
+<!--JS content-->
+{% block js_code_example_content %}
+<pre><code clas="javascript">// Check that the document has loaded first
+document.addEventListener('DOMContentLoaded', function () {
+    // Get the button as a variable by targeting the ID
+    const exampleButton = document.getElementById('window-history-example-button-id')
+    // Add an event listener to the button to check for a click
+    exampleButton.addEventListener('click', function() {
+        console.log("Button pressed")
+        // Add a function
+        // Get the result unordered list
+        let historyInformationList = document.getElementById('window-history-result-id');
+        // Get the history information
+        const historyInformation = window.history;
+        // Clear previous content
+        historyInformationList.innerHTML = '';
+        // Loop through the properties of the history object
+        for (let key in historyInformation) {
+            // Create a list element
+            const li = document.createElement('li');
+            // Add the information to the list element
+            li.textContent = `${key}: ${historyInformation[key]}`;
+            console.log('Pressed')
+            // Add the list element to the unordered list
+            historyInformationList.appendChild(li);
+        }
+    })
+});
+</code></pre>
+{% endblock %}
+
+<!--Example result-->
+{% block html_js_code_result_content %}
+    <button id="window-history-example-button-id" class="site-button">
+        Press here to show your window history information.
+    </button>
+    <div>
+        <p>Your window history information is:</p>
+        <ul id="window-history-result-id"></ul>
+    </div>
+{% endblock %}
+
+<!--Function JS-->
+{% block extra_js %}
+    <script>
+        // Check that the document has loaded first
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the button as a variable by targeting the ID
+            const exampleButton = document.getElementById('window-history-example-button-id')
+            // Add an event listener to the button to check for a click
+            exampleButton.addEventListener('click', function() {
+                console.log("Button pressed")
+                // Add a function
+                // Get the result unordered list
+                let historyInformationList = document.getElementById('window-history-result-id');
+                // Get the history information
+                const historyInformation = window.history;
+                // Clear previous content
+                historyInformationList.innerHTML = '';
+                // Loop through the properties of the history object
+                for (let key in historyInformation) {
+                    // Create a list element
+                    const li = document.createElement('li');
+                    // Add the information to the list element
+                    li.textContent = `${key}: ${historyInformation[key]}`;
+                    console.log('Pressed')
+                    // Add the list element to the unordered list
+                    historyInformationList.appendChild(li);
+                }
+            })
+        });
+    </script>
+{% endblock %}

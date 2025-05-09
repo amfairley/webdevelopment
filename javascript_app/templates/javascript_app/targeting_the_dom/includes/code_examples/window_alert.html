@@ -1,0 +1,51 @@
+{% extends 'includes/html_js_example.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_file_id %}code-example-javascript-targeting-the-dom-window-alert{% endblock %}
+
+<!--HTML-->
+{% block html_code_example_content %}
+<pre><code class="html">&lt;button id="window-alert-example-button-id"&gt;
+    Press here to show an example window alert.
+&lt;/button&gt;
+</code></pre>
+{% endblock %}
+
+<!--JS content-->
+{% block js_code_example_content %}
+<pre><code clas="javascript">// Check that the document has loaded first
+document.addEventListener('DOMContentLoaded', function () {
+    // Get the button as a variable by targeting the ID
+    const exampleButton = document.getElementById('window-alert-example-button-id')
+    // Add an event listener to the button to check for a click
+    exampleButton.addEventListener('click', function() {
+        // Add a function that shows the alert
+        window.alert('Button Clicked!');
+    })
+});
+</code></pre>
+{% endblock %}
+
+<!--Example result-->
+{% block html_js_code_result_content %}
+    <button id="window-alert-example-button-id" class="site-button">
+        Press here to show an example window alert.
+    </button>
+{% endblock %}
+
+<!--Function JS-->
+{% block extra_js %}
+    <script>
+        // Check that the document has loaded first
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the button as a variable by targeting the ID
+            const exampleButton = document.getElementById('window-alert-example-button-id')
+            // Add an event listener to the button to check for a click
+            exampleButton.addEventListener('click', function() {
+                // Add a function that shows the alert
+                window.alert('Button Clicked!');
+            })
+        });
+    </script>
+{% endblock %}

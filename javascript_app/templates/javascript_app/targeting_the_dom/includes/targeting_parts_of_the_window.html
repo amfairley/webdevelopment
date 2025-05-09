@@ -1,0 +1,156 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-targeting-the-dom-targeting-parts-of-the-window{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Targeting Parts of the Window{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        A major part of JavaScript is the ability to target specific parts of the DOM such as an element, class, ID, or 
+        integral browser component.
+    </p>
+    <p>
+        The term Global Window Object represents the browser window. You can access things inside it or its own 
+        <dfn title="Functions defined within the model">built-in methods</dfn>. Common ones are listed below but a 
+        <a 
+            class="text-link"
+            href="https://developer.mozilla.org/en-US/docs/Web/API/Window"
+            title="Go to the window page of Mozilla Devs website"
+            aria-label="Go to the window page of Mozilla Devs website"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            full list
+        </a>
+        is available in the MDN developer documentation.
+    </p>
+    <!--Pop ups-->
+    <h4 id="javascript-targeting-the-dom-targeting-parts-of-the-window-pop-ups">Pop-ups</h4>
+    <!--window.alert-->
+    <p>
+        <code class="written-code">
+            window.alert('message')
+        </code>
+    </p>
+    <p>
+        This window method causes a pop up to appear in the browser containing 'message'. A good use case of this for 
+        when you need to display information to the user such as an error occurring or perhaps a confirmation message 
+        when a form has been submitted or similar action completed.
+    </p>
+    {% include 'javascript_app/targeting_the_dom/includes/code_examples/window_alert.html' %}
+    <!--window.prompt-->
+    <p>
+        <code class="written-code">
+            window.prompt('Prompt text')
+        </code>
+    </p>
+    <p>
+        This window method opens up a dialogue box for the user to enter some information. It will return the string of 
+        whatever the user enters or null if it is cancelled.
+        
+    </p>
+    {% include 'javascript_app/targeting_the_dom/includes/code_examples/window_prompt.html' %}
+    <!--window.confirm-->
+    <p>
+        <code class="written-code">
+            window.confirm('Confirmation Message')
+        </code>
+    </p>
+    <p>
+        This window method opens a pop up for the user to confirm or cancel something. It returns true if confirmed or 
+        false if cancelled.
+        
+        
+    </p>
+    {% include 'javascript_app/targeting_the_dom/includes/code_examples/window_confirm.html' %}
+    <!--Window Dimension-->
+    <h4 id="javascript-targeting-the-dom-targeting-parts-of-the-window-window-dimensions">Window Dimensions</h4>
+    <p>
+        In some cases you may want to us the window dimensions, this is the syntax for accessing it. The examples 
+        follow syntax for sections not yet covered but they follow the process of assign the value to a variable, get 
+        the element that will show the result, and set that element's content to the variable.
+    </p>
+    <!--window.inner-->
+    <p>
+        <code class="written-code">
+            window.innerWidth
+        </code>
+        and
+        <code class="written-code">
+            window.innerHeight
+        </code>
+    </p>
+    <p>
+        These return the viewport size including scroll bars but not toolbars or menus.
+    </p>
+    {% include 'javascript_app/targeting_the_dom/includes/code_examples/window_inner.html' %}
+    <!--window.outer-->
+    <p>
+        <code class="written-code">
+            window.outerWidth
+        </code>
+        and
+        <code class="written-code">
+            window.outerHeight
+        </code>
+    </p>
+    <p>
+        These return the total window size including browser interfaces such as menus
+    </p>
+    {% include 'javascript_app/targeting_the_dom/includes/code_examples/window_outer.html' %}
+    <!--URL and Navigation-->
+    <h4 id="javascript-targeting-the-dom-targeting-parts-of-the-window-url-and-navigation">URL and Navigation</h4>
+    <p>
+        It's handy on occasion to be able to get the data from the URL for confirmation or browser manipulation.
+    </p>
+    <!--window.location-->
+    <p>
+        <code class="written-code">
+            window.location
+        </code>
+    </p>
+    <p>
+        This gives full access to the URL info as a location object. You can use 
+        <code class="written-code">window.location.href</code>
+        to get the full URL from the current page along with 
+        <code class="written-code">hostname</code>,
+        <code class="written-code">pathname</code>,
+        <code class="written-code">protocol</code>,
+        <code class="written-code">search</code>
+        etc. to get different specific information.
+    </p>
+    {% include 'javascript_app/targeting_the_dom/includes/code_examples/window_location.html' %}
+    <!--window.history-->
+    <p>
+        <code class="written-code">
+            window.history
+        </code>
+    </p>
+    <p>
+        This represents the session history of the browser tab.	You can use 
+        <code class="written-code">window.history.back</code>
+        or
+        <code class="written-code">window.history.forward</code>
+        to move the page back or forward one just like the back and forward buttons in your browser. Due to security 
+        concerns, you cannot get a list of your URL history through JavaScript.
+    </p>
+    {% include 'javascript_app/targeting_the_dom/includes/code_examples/window_history.html' %}
+    <!--Data Storage-->
+    <h4 id="javascript-targeting-the-dom-targeting-parts-of-the-window-data-storage">Data Storage</h4>
+    <!--window.localStorage-->
+    <p>
+        <code class="written-code">
+            window.localStorage
+        </code>
+    </p>
+    <p>
+        This stores key, value pairs in the browser that stay there after the page is closed. These are used mainly for 
+        user preferences. In fact, I use them on this website for the light/dark mode toggle. Otherwise going to a new 
+        page would reset it to light mode. My code for this functionality is:
+    </p>
+    {% include 'javascript_app/targeting_the_dom/includes/code_snippets/local_storage.html' %}
+{% endblock %}

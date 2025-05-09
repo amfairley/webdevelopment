@@ -1,0 +1,105 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-javascript-targeting-the-dom-local-storage{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">// Make sure that the document has loaded
+document.addEventListener("DOMContentLoaded", function () {
+    // Get the day/night select buttons from the dropdown
+    const dayButton = document.getElementById("day-mode");
+    const nightButton = document.getElementById("night-mode");
+    // Get the dropdown itself
+    const modeToggleButton = document.getElementById(
+        "day-mode-toggle-dropdown"
+    );
+
+    // Highlight JS CDN links (this changes the day/night mode of the code examples)
+    const hightlightJsCDN = document.getElementById('highlightjscdn');
+
+    // Create a function to set the initial mode
+    function setSelectedMode(mode) {
+        // If the mode has the value of the fontawesome sun icon passed into it
+        if (mode === "&lt;i class='fa-solid fa-sun'&gt;&lt;/i&gt;") {
+            // Add the active class to the day button
+            dayButton.classList.add("active");
+            // Remove the active class from the night button
+            nightButton.classList.remove("active");
+            // Set the toggle button to show the day mode
+            modeToggleButton.html = "&lt;i class='fa-solid fa-sun'&gt;&lt;/i&gt;";
+            // Update the day/night mode of the code examples
+            hightlightJsCDN.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css');
+        // Otherwise if function is run without the fontawesome sun icon
+        } else {
+            // Add active class to the night button
+            nightButton.classList.add("active");
+            // Remove active class from the day button
+            dayButton.classList.remove("active");
+            // Change the drop down button to show a mood
+            modeToggleButton.html = "&lt;i class='fa-solid fa-moon'&gt;&lt;/i&gt;";
+            // Update the day/night mode of the code examples
+            hightlightJsCDN.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css');
+        }
+    }
+
+    // Event listeners for changing modes
+    // If the day mode button is clicked
+    dayButton.addEventListener("click", function () {
+        // Remove night-mode class from the body element
+        document.body.classList.remove("night-mode");
+        // Add day-mode class to the body element
+        document.body.classList.add("day-mode");
+        // Save the preference as the key:value of theme: day
+        localStorage.setItem("theme", "day");
+        // Run the setSelectedMode function with the fontawesome sun icon
+        setSelectedMode("&lt;i class='fa-solid fa-sun'&gt;&lt;/i&gt;");
+        // Update the day/night mode of the code examples
+        hightlightJsCDN.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css');
+    });
+
+    // If the night mode button is clicked
+    nightButton.addEventListener("click", function () {
+        // Remove day-mode class from the body element
+        document.body.classList.remove("day-mode");
+        // Add night-mode class to the body element
+        document.body.classList.add("night-mode");
+        // Save the preference as the key:value of theme: night
+        localStorage.setItem("theme", "night");
+        // Run the setSelectedMode function with the fontawesome oon icon
+        setSelectedMode("&lt;i class='fa-solid fa-moon'&gt;&lt;/i&gt;");
+        // Update the day/night mode of the code examples
+        hightlightJsCDN.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css');
+    });
+
+    // Initialize each page with the chosen mode
+    // Use localstorage to get the value from the key "theme"
+    const storedTheme = localStorage.getItem("theme");
+
+    // If the value is night
+    if (storedTheme === "night") {
+        // Add night-mode class to the body
+        document.body.classList.add("night-mode");
+        // Remove day-mode class from the body
+        document.body.classList.remove("day-mode");
+        // Run setSelectedMode with the fontawesome moon icon
+        setSelectedMode("&lt;i class='fa-solid fa-moon'&gt;&lt;/i&gt;");
+        // Update the day/night mode of the code examples
+        hightlightJsCDN.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css');
+    } else {
+        // If the value is not night
+        // Add day-mode class to the body
+        document.body.classList.add("day-mode");
+        // Remove night-mode class from the body
+        document.body.classList.remove("night-mode");
+        // Run setSelectedMode with the fontawesome sun icon
+        setSelectedMode("&lt;i class='fa-solid fa-sun'&gt;&lt;/i&gt;");
+        // Update the day/night mode of the code examples
+        hightlightJsCDN.setAttribute('href', 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css');
+    }
+});
+</code></pre>
+{% endblock %}

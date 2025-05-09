@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: JavaScript - Targeting The DOM{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Targeting the DOM</h2>
+    {% include 'javascript_app/targeting_the_dom/includes/contents.html' %}
+    {% include 'javascript_app/targeting_the_dom/includes/targeting_parts_of_the_window.html' %}
+    {% include 'javascript_app/targeting_the_dom/includes/targeting_parts_of_the_document.html' %}
+
+{% endblock %}

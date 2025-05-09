@@ -1,0 +1,75 @@
+{% extends 'includes/html_js_example.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_file_id %}code-example-javascript-targeting-the-dom-window-location{% endblock %}
+
+<!--HTML-->
+{% block html_code_example_content %}
+<pre><code class="html">&lt;button id="window-location-example-button-id" class="site-button"&gt;
+    Press here to show the URL information.
+&lt;/button&gt;
+&lt;div&gt;
+    &lt;p>The full URL information is: &lt;span id="window-location-full-result-id"&gt;?&lt;/span&gt;.&lt;/p&gt;&lt;br&gt;
+    &lt;p>The current page is: &lt;span id="window-location-current-result-id"&gt;?&lt;/span&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+{% endblock %}
+
+<!--JS content-->
+{% block js_code_example_content %}
+<pre><code clas="javascript">// Check that the document has loaded first
+document.addEventListener('DOMContentLoaded', function () {
+    // Get the button as a variable by targeting the ID
+    const exampleButton = document.getElementById('window-location-example-button-id');
+    // Add an event listener to the button to check for a click
+    exampleButton.addEventListener('click', function() {
+        // Add a function
+        // Get the result spans
+        let fullInformationResultSpan = document.getElementById('window-location-full-result-id');
+        let currentPageResultSpan = document.getElementById('window-location-current-result-id');
+        // Get the URL information
+        const fullInformation = window.location;
+        const currentPage = window.location.href;
+        // Set the contents of the result spans to the height and width results
+        fullInformationResultSpan.innerHTML = fullInformation;
+        currentPageResultSpan.innerHTML = currentPage;
+    })
+});
+</code></pre>
+{% endblock %}
+
+<!--Example result-->
+{% block html_js_code_result_content %}
+    <button id="window-location-example-button-id" class="site-button">
+        Press here to show the URL information.
+    </button>
+    <div>
+        <p>The full URL information is: <span id="window-location-full-result-id">?</span>.</p><br>
+        <p>The current page is: <span id="window-location-current-result-id">?</span>.</p>
+    </div>
+{% endblock %}
+
+<!--Function JS-->
+{% block extra_js %}
+    <script>
+        // Check that the document has loaded first
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the button as a variable by targeting the ID
+            const exampleButton = document.getElementById('window-location-example-button-id');
+            // Add an event listener to the button to check for a click
+            exampleButton.addEventListener('click', function() {
+                // Add a function
+                // Get the result spans
+                let fullInformationResultSpan = document.getElementById('window-location-full-result-id');
+                let currentPageResultSpan = document.getElementById('window-location-current-result-id');
+                // Get the URL information
+                const fullInformation = window.location;
+                const currentPage = window.location.href;
+                // Set the contents of the result spans to location results
+                fullInformationResultSpan.innerHTML = fullInformation;
+                currentPageResultSpan.innerHTML = currentPage;
+            })
+        });
+    </script>
+{% endblock %}

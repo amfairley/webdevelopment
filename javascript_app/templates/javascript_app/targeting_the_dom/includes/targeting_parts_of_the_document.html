@@ -1,0 +1,124 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-targeting-the-dom-targeting-parts-of-the-document{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Targeting Parts of the Document{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <!--Getting Elements of The Document-->
+    <h4 id="javascript-targeting-the-dom-targeting-parts-of-the-document-getting-elements-of-the-document">Getting Elements of the Document</h4>
+    <p>
+        Similarly, the document is also an object and can has methods associated with them. A 
+        <a 
+            class="text-link"
+            href="https://developer.mozilla.org/en-US/docs/Web/API/Document"
+            title="Go to the full list of document object methods on Mozilla Devs"
+            aria-label="Go to the full list of document object methods on Mozilla Devs"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            full list
+        </a>
+        can be found in the MDN developer documentation.
+    </p>
+    <p>
+        For major elements such as the
+        <code class="written-code">&lt;head&gt;</code>
+        and
+        <code class="written-code">&lt;body&gt;</code>
+        elements, you can target them directly, along with some others.
+    </p>
+    {% include 'javascript_app/targeting_the_dom/includes/code_snippets/head_body.html' %}
+    <p>
+        For other element tags you need the following syntax for, in this example, paragraphs. To target other elements,
+        replace p with their tag. This returns all of the elements with that tag name as a 
+        <dfn title="An array-like object, similar to a list but with less functionality">HTMLCollection</dfn>.
+    </p>
+    {% include 'javascript_app/targeting_the_dom/includes/code_snippets/tag.html' %}
+    <p>
+        To target elements by their class names and return them as a HTML collection, use the following syntax. This is 
+        one of the most used methods along with targeting the ID of an element, as it gives you precise control over 
+        what is affected on your page.
+    </p>
+    {% include 'javascript_app/targeting_the_dom/includes/code_snippets/class.html' %}
+    <p>
+        To target an element based on its ID, use the following syntax. If the ID cannot be found, it will return null.
+    </p>
+    {% include 'javascript_app/targeting_the_dom/includes/code_snippets/id.html' %}
+    {% include 'javascript_app/targeting_the_dom/includes/troubleshooting/id_class.html' %}
+    <p>
+        You can also select elements based on CSS selectors. This returns the first element of whatever is in the 
+        brackets. This uses CSS selectors using CSS syntax for selecting elements inside quotation marks, so valid 
+        values are:
+    </p>
+    <ul>
+        <li>'#id-name'</li>
+        <li>'.class-name'</li>
+        <li>'tag-name' (e.g. 'h1' or 'p')</li>
+        <li>Any other valid CSS selector such as 'div > p'</li>
+    </ul>
+    {% include 'javascript_app/targeting_the_dom/includes/code_snippets/query_selector.html' %}
+    <p>
+        To return all elements that match the given criteria as a 
+        <dfn title="A collection similar to an array">NodeList</dfn> use the following. This is useful for when you 
+        want to loop through it or affect all of one type (class, tag, etc.).
+    </p>
+    {% include 'javascript_app/targeting_the_dom/includes/code_snippets/query_selector_all.html' %}
+    <!--Aspects of the Elements-->
+    <h4 id="javascript-targeting-the-dom-targeting-parts-of-the-document-aspects-of-the-elements">Aspects of the Elements</h4>
+    <p>
+        Now we know how to target specific elements, we can target their contents and information about them using dot 
+        notation.
+    </p>
+    {% include 'javascript_app/targeting_the_dom/includes/code_snippets/inner_text.html' %}
+    <p>
+        Returns the text value. Remember, JavaScript uses dot notation to link methods together, so to return the text 
+        of the first h1 element, you could use 
+        <code class="written-code">document.querySelector('h1').innerText</code>.
+    </p>
+    {% include 'javascript_app/targeting_the_dom/includes/code_snippets/value.html' %}
+    <p>
+        Returns the value of, for instance, form elements. It reflects what the user has entered rather than the text 
+        of the HTML element (like 
+        <code class="written-code">.innerText</code>
+        does).
+    </p>
+    {% include 'javascript_app/targeting_the_dom/includes/code_snippets/inner_html.html' %}
+    <p>
+        Returns the HTML content of the element including any nested HTML tags.
+    </p>
+    {% include 'javascript_app/targeting_the_dom/includes/code_snippets/item.html' %}
+    <p>
+        If you targeted a collection, such as by using 
+        <code class="written-code">.getElementsByClassName()</code>, you can use this to target a specific item in that 
+        list, which will returns the item at the specified index (starting at 0).
+    </p>
+    {% include 'javascript_app/targeting_the_dom/includes/code_snippets/length.html' %}
+    <p>
+        Returns the amount of items in the list.
+    </p>
+    {% include 'javascript_app/targeting_the_dom/includes/code_snippets/named_item.html' %}
+    <p>
+        Returns the element with the specific ID or name if it exists in the collection.
+    </p>
+    <!--Parents and Children-->
+    <h4 id="javascript-targeting-the-dom-targeting-parts-of-the-document-parents-and-children">Parents and Children</h4>
+    <p>
+        Once you have an element set to a variable you can access others via their relative position in the DOM family
+        tree.
+    </p>
+    <ul>
+        <li><code class="written-code">variable.parentNode;</code> Get the elements parent. document.parentNode returns null because it is the root node</li>
+        <li><code class="written-code">variable.children;</code> Get the elements children. If there are no children; it returns null</li>
+        <li><code class="written-code">variable.children[0];</code> Get the first child</li>
+        <li><code class="written-code">variable.firstElementChild;</code> Same as above</li>
+        <li><code class="written-code">variable.lastElementChild;</code> Returns the last child</li>
+        <li><code class="written-code">variable.nextElementSibling;</code> Get the next element of the same nest level</li>
+        <li><code class="written-code">variable.previousElementSibling;</code> Get the previous element of the same nest level</li>
+        <li><code class="written-code">variable.parentElement;</code> Get the parent element</li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% load static %}
+
+{% block extra_css %}
+    <!--Code file css file-->
+    <link rel="stylesheet" href="{% static 'css/html_js_example.css' %}">
+{% endblock extra_css %}
+
+{% block extra_js %}
+{% endblock %}
+
+<!--ID cannot be blank so include ID's for every codeblock-->
+<div id="{% block code_file_id %}{% endblock %}">
+    <div class="html-js-code-example-container row d-flex align-items-stretch">
+
+        <!--HTML-->
+        <div class="html-code-example col-12">
+            <header class="html-code-example-header">
+                <p>HTML</p>
+            </header>
+            <div class="html-code-example-content">
+                {% block html_code_example_content %}
+                {% endblock %}
+            </div>
+        </div>
+        <!--JavaScript-->
+        <div class="js-code-example col-12">
+            <header class="js-code-example-header">
+                <p>JavaScript</p>
+            </header>
+            <div class="js-code-example-content">
+                {% block js_code_example_content %}
+                {% endblock %}
+            </div>
+        </div>
+        <!--Result-->
+        <div class="html-js-result-example col-12">
+            <header class="html-js-result-example-header">
+                <p>Result</p>
+            </header>
+            <div class="html-js-code-result-content">
+                {% block html_js_code_result_content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,75 @@
+{% extends 'includes/html_js_example.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_file_id %}code-example-javascript-targeting-the-dom-window-outer{% endblock %}
+
+<!--HTML-->
+{% block html_code_example_content %}
+<pre><code class="html">&lt;button id="window-outer-example-button-id" class="site-button"&gt;
+    Press here to show the window outer heights and width.
+&lt;/button&gt;
+&lt;div&gt;
+    &lt;p>The window outer width is:&lt;span id="window-outer-width-result-id"&gt;&lt;/span&gt;.&lt;/p&gt;&lt;br&gt;
+    &lt;p>The window outer height is:&lt;span id="window-outer-height-result-id"&gt;&lt;/span&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+{% endblock %}
+
+<!--JS content-->
+{% block js_code_example_content %}
+<pre><code clas="javascript">// Check that the document has loaded first
+document.addEventListener('DOMContentLoaded', function () {
+    // Get the button as a variable by targeting the ID
+    const exampleButton = document.getElementById('window-outer-example-button-id');
+    // Add an event listener to the button to check for a click
+    exampleButton.addEventListener('click', function() {
+        // Add a function
+        // Get the result spans
+        let outerWidthResultSpan = document.getElementById('window-outer-width-result-id');
+        let outerHeightResultSpan = document.getElementById('window-outer-height-result-id');
+        // Get the height and width
+        const outerWindowWidth = window.outerWidth;
+        const outerWindowHeight = window.outerHeight;
+        // Set the contents of the result spans to the height and width results
+        outerWidthResultSpan.innerHTML = outerWindowWidth;
+        outerHeightResultSpan.innerHTML = outerWindowHeight;
+    })
+});
+</code></pre>
+{% endblock %}
+
+<!--Example result-->
+{% block html_js_code_result_content %}
+    <button id="window-outer-example-button-id" class="site-button">
+        Press here to show the window outer heights and width.
+    </button>
+    <div>
+        <p>The window outer width is: <span id="window-outer-width-result-id">?</span> pixels.</p><br>
+        <p>The window outer height is: <span id="window-outer-height-result-id">?</span> pixels.</p>
+    </div>
+{% endblock %}
+
+<!--Function JS-->
+{% block extra_js %}
+    <script>
+        // Check that the document has loaded first
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the button as a variable by targeting the ID
+            const exampleButton = document.getElementById('window-outer-example-button-id');
+            // Add an event listener to the button to check for a click
+            exampleButton.addEventListener('click', function() {
+                // Add a function
+                // Get the result spans
+                let outerWidthResultSpan = document.getElementById('window-outer-width-result-id');
+                let outerHeightResultSpan = document.getElementById('window-outer-height-result-id');
+                // Get the height and width
+                const outerWindowWidth = window.outerWidth;
+                const outerWindowHeight = window.outerHeight;
+                // Set the contents of the result spans to the height and width results
+                outerWidthResultSpan.innerHTML = outerWindowWidth;
+                outerHeightResultSpan.innerHTML = outerWindowHeight;
+            })
+        });
+    </script>
+{% endblock %}

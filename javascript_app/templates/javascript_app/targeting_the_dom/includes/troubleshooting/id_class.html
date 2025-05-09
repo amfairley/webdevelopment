@@ -1,0 +1,15 @@
+{% extends 'includes/troubleshooting.html' %}
+{% load static %}
+
+<!--ID-->
+{% block troubleshooting_id %}troubleshooting-javascript-targeting-the-dom-id-class{% endblock %}
+{% block troubleshooting_content %}
+    <ul>
+        <li>
+            If you are failing to target the class or ID, double check the 's' in 
+            <code class="written-code">getElementsByClassName()</code>
+            or the lack of 's' in 
+            <code class="written-code">getElementById()</code>.
+        </li>
+    </ul>
+{% endblock %}

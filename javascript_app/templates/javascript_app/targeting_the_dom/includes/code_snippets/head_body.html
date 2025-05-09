@@ -1,0 +1,30 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-javascript-targeting-the-dom-head-body{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">// Get the head element
+document.head
+// Get the body element
+document.body
+// Get the HTML element (root of the document)
+document.documentElement
+// Get the title element inside the head element
+document.title
+// Get a HTMLCollection of all form elements
+document.forms
+// Get a HTMLCollection of all img elements
+document.images
+// Get a HTMLCollection of all anchor elements
+document.links
+// Get a HTMLCollection of all script elements
+document.scripts
+// Get a StyleSheetList of all linked CSS stylesheets 
+document.styleSheets
+</code></pre>
+{% endblock %}
