@@ -1,0 +1,25 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-javascript-events-submit-form{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="html">&lt;!--HTML--&gt;
+&lt;button id="myButton"&gt;Click me!&lt;/button&gt;
+</code></pre>
+<br>
+<pre><code class="javascript">// JavaScript
+document.getElementById('myButton').addEventListener('click', function(event) {
+  // Log the event type to the console ("click")
+  console.log('Event type:', event.type);
+  // Log the element clicked to the console
+  console.log('Element clicked:', this);
+  // Change the text in the button
+  this.textContent = 'Clicked!';
+});
+</code></pre>
+{% endblock %}

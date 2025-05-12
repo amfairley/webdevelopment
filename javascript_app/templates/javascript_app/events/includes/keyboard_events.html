@@ -1,0 +1,157 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-events-keyboard-events{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Keyboard Events{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Syntax
+                </th>
+                <th>
+                    Event it tracks
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <code class="written-code">onkeydown</code>
+                </td>
+                <td>
+                    When a user has pressed a key.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">onkeyup</code>
+                </td>
+                <td>
+                    When a user releases the key press.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">oncontextmenu</code>
+                </td>
+                <td>
+                    When a user right clicks on the element.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">For the following, do event.X</td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">altKey</code>
+                </td>
+                <td>
+                    Returns whether the "alt" key was pressed when the key event was triggered
+                </td>
+            </tr>
+                <tr>
+                <td>
+                    <code class="written-code">charCode</code>
+                </td>
+                <td>
+                    Returns the Unicode character code of the key that triggered the event.
+                </td>
+            </tr>
+                <tr>
+                <td>
+                    <code class="written-code">code</code>
+                </td>
+                <td>
+                    Returns the code of the key that triggered the event.
+                </td>
+            </tr>
+                <tr>
+                <td>
+                    <code class="written-code">ctrlKey</code>
+                </td>
+                <td>
+                    Returns whether the “ctrl” key was pressed when the key event was triggered.
+                </td>
+            </tr>
+                <tr>
+                <td>
+                    <code class="written-code">getModifierState()</code>
+                </td>
+                <td>
+                    Returns true if the specified key is activated.
+                </td>
+            </tr>
+            </tr>
+                <tr>
+                <td>
+                    <code class="written-code">isComposing</code>
+                </td>
+                <td>
+                    Returns whether the state of the event is composing or not.
+                </td>
+            </tr>
+            </tr>
+                <tr>
+                <td>
+                    <code class="written-code">key</code>
+                </td>
+                <td>
+                    Returns the key value of the key represented by the event.
+                </td>
+            </tr>
+            </tr>
+                <tr>
+                <td>
+                    <code class="written-code">keyCode</code>
+                </td>
+                <td>
+                    Returns the Unicode character code of the key that triggered the <code class="written-code">onkeydown</code> or <code class="written-code">onkeyup</code> event.
+                </td>
+            </tr>
+            </tr>
+                <tr>
+                <td>
+                    <code class="written-code">location</code>
+                </td>
+                <td>
+                    Returns the location of a key on the keyboard or device.
+                </td>
+            </tr>
+            </tr>
+                <tr>
+                <td>
+                    <code class="written-code">metaKey</code>
+                </td>
+                <td>
+                    Returns whether the "meta" key was pressed when the key event was triggered.
+                </td>
+            </tr>
+            </tr>
+                <tr>
+                <td>
+                    <code class="written-code">repeat</code>
+                </td>
+                <td>
+                    Returns whether a key is being held down repeatedly, or not.
+                </td>
+            </tr>
+            </tr>
+                <tr>
+                <td>
+                    <code class="written-code">shiftKey</code>
+                </td>
+                <td>
+                    Returns whether the "Shift" key was pressed when the key event was triggered.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    {% include 'javascript_app/events/includes/code_snippets/keyboard_event.html' %}
+{% endblock %}

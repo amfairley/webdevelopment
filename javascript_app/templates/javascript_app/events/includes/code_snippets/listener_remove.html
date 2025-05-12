@@ -1,0 +1,22 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-javascript-events-listener-remove{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">// Define the function
+function logClick() {
+    console.log("Clicked");
+    button.removeEventListener("click", logClick);
+}
+
+// Assign the element to a variable
+const button = document.getElementById("myBtn");
+// Remove the function from the element based on the event
+button.addEventListener("click", logClick);
+</code></pre>
+{% endblock %}

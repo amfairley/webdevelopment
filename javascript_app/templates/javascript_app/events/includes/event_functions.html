@@ -1,0 +1,34 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-events-event-functions{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Event Functions{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Functions that you assign to events should include:
+    </p>
+    <ul>
+        <li>Which event was or will be fired and what caused/will cause it to be fired?</li>
+        <li>What do I want to happen in response to this event?</li>
+        <li>Which element or elements is the response going to affect, or what will it do for the user?</li>
+        <li>What information do I need to be able to handle the event correctly?</li>
+        <li>Where can I get the information needed? (event, element, document)</li>
+    </ul>
+    <p>
+        Inside the event function, the event is accessibly by the keyword event and the element is accessible by the 
+        keyword 
+        <code class="written-code">this</code>.
+        You can set up functions like:
+    </p>
+    <ul>
+        <li>Define a variable as an element from HTML using variable.onclick = function {}</li>
+        <li>Assign the .onlick property to a function by name	function functionName() {}</li>
+        <li>variable.onclick = functionName;</li>
+    </ul>
+    {% include 'javascript_app/events/includes/code_snippets/event_function.html' %}
+{% endblock %}

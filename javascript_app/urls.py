@@ -89,4 +89,9 @@ urlpatterns = [
         views.JavaScript_manipulating_the_dom,
         name="JavaScript_manipulating_the_dom"
     ),
+    path(
+        'events/',
+        views.JavaScript_events,
+        name="JavaScript_events"
+    ),
 ]

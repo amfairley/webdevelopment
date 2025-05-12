@@ -1,0 +1,21 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-javascript-events-listener-example{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">// Define the function first
+function boxClicked() {
+    console.log("Box was clicked!");
+}
+
+// Get the element
+const box = document.getElementById("click-box");
+// Assign the event and function to the element
+box.addEventListener("click", boxClicked);
+</code></pre>
+{% endblock %}

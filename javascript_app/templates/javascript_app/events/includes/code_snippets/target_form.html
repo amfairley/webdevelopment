@@ -1,0 +1,20 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-javascript-events-target-form{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">// Target the element:
+let var = document.getElementbyId();
+
+// Then you can log the value
+console.log(var.value)
+
+// You can also assign it to a new value
+var.value = "newValue"
+</code></pre>
+{% endblock %}

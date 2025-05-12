@@ -1,0 +1,53 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-events-clipboard-events{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Clipboard Events{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Syntax
+                </th>
+                <th>
+                    Event it Tracks
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <code class="written-code">oncopy</code>
+                </td>
+                <td>
+                    When content is copied.
+                </td>
+            </tr>
+            <tr>
+            <tr>
+                <td>
+                    <code class="written-code">oncut</code>
+                </td>
+                <td>
+                    When content is cut.
+                </td>
+            </tr>
+            <tr>
+            <tr>
+                <td>
+                    <code class="written-code">onpaste</code>
+                </td>
+                <td>
+                    When content is pasted.
+                </td>
+            </tr>
+            <tr>
+        </tbody>
+    </table>
+{% endblock %}

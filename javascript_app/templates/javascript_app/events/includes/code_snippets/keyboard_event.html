@@ -1,0 +1,28 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-javascript-events-keyboard-event{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">// An example to check which key is pressed
+
+// Add event listener to the whole document looking for a key to be pressed
+// And running the custom function keyPressed 
+document.addEventListener('keydown', keyPressed);
+
+// Custom function keyPressed
+function keyPressed(event) {
+  // Get the key value of the key that was pressed
+  let keyPressed = event.key;
+  // Optional continuation:
+  // Get your HTML element that will display the key press
+  let keyInfoElement = document.getElementById('key-info');
+  // Display the key that was pressed
+  keyInfoElement.innerHTML = `Key pressed: ${keyPressed}`;
+}
+</code></pre>
+{% endblock %}

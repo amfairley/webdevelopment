@@ -1,0 +1,48 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-events-html-event-attributes{% endblock %}
+
+<!--Section title-->
+{% block text_title %}HTML Event Attributes{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        There are some HTML attributes that you can give to elements to link them to a custom function (which we can 
+        create later). This custom function will be triggered when the conditions of that attribute are met. The syntax 
+        for these are 
+        <code class="written-code">&lt;element attribute="custom_Function_Name"&gt;</code>.
+        These attributes include:
+    </p>
+    <ul>
+        <li><code class="written-code">onmouseover</code> hovering your cursor over the element
+        <li><code class="written-code">onmouseout</code> moving your cursor away from the element
+        <li><code class="written-code">onclick</code> for when you click on an element
+    </ul>
+    <p>
+        These are similar to the 
+        <a 
+            class="text-link"
+            href="{% url 'CSS_selectors' %}#CSS-selectors-pseudo-classes"
+            title="Go to the CSS pseudo class section"
+            aria-label="Go to the CSS pseudo class section"
+        >
+            pseudo classes in CSS
+        </a>
+        such as 
+        <code class="written-code">:hover</code>
+        which allows you to add some styling when the element in hovered. But in this case instead of applying styling 
+        we will add our own function. This covers everything you could do in CSS such as changing font size or colour, 
+        but you can also do things such as displaying hidden elements, playing a sound, or validating form input prior 
+        to submission.
+    </p>
+    <p>
+        It is very important to know that:
+    </p>
+    <ul>
+        <li>When accessing the event attribute in HTML they follow the syntax of "onevent".</li>
+        <li>When accessing the same event in a JavaScript event listener they follow the syntax of "event" (omit the "on").</li>
+    </ul>
+{% endblock %}

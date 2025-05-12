@@ -1,0 +1,105 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-events-form-events{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Form Events{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Syntax
+                </th>
+                <th>
+                    Event it Tracks
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <code class="written-code">onchange</code>
+                </td>
+                <td>
+                    When the value of an input, select, or textarea changes.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">oninput</code>
+                </td>
+                <td>
+                    When the value of a form element is being modified in real-time.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">onsubmit</code>
+                </td>
+                <td>
+                    When a form is submitted.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">onreset</code>
+                </td>
+                <td>
+                    When a form is reset.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">onfocus</code>
+                </td>
+                <td>
+                    When a form element receives focus for example being clicked into.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">onblur</code>
+                </td>
+                <td>
+                    When a form element loses focus.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">oninvalid</code>
+                </td>
+                <td>
+                    When a form element fails validation.
+                </td>
+            </tr>            
+        </tbody>
+    </table>
+    <p>
+        To target form values you can do the following:
+    </p>
+    {% include 'javascript_app/events/includes/code_snippets/target_form.html' %}
+    <p>
+        To capture the submit event you can do the following. Without JavaScript, the page will reload as the data is 
+        submitted to the server, but we can stop it from refreshing with
+        <code class="written-code">event.preventDefault();</code>.
+    </p>
+    {% include 'javascript_app/events/includes/code_snippets/submit_form.html' %}
+    <p>
+        Done in a HTML file this would look like: <code class="written-code">&lt;form onsubmit="exampleFunction(event);"&gt;</code>
+        and the exampleFunction defined within a script element.
+    </p>
+    <p>
+        Every form element in HTML has a 
+        <code class="written-code">submit()</code>
+        method. In order to submit a form yourself so you do not need to depend on a user you can do whatever 
+        processing you need to and then call 
+        <code class="written-code">.submit()</code>
+        in the handler function.
+    </p>
+    {% include 'javascript_app/events/includes/code_snippets/submit_form_2.html' %}
+{% endblock %}

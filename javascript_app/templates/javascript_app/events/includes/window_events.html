@@ -1,0 +1,74 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-events-window-events{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Window Events{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Syntax
+                </th>
+                <th>
+                    Event it Tracks
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <code class="written-code">DOMContentLoaded</code>
+                </td>
+                <td>
+                    The DOM content has finished loading but external assets like images, JS files, CSS files etc have not loaded yet.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">onload</code>
+                </td>
+                <td>
+                    When the page or an element (like an image) has finished loading.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">onunload</code>
+                </td>
+                <td>
+                    When the user has left the page.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">onresize</code>
+                </td>
+                <td>
+                    When the window is resized.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">onscroll</code>
+                </td>
+                <td>
+                    When the user scrolls the page or an element.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">onbeforeunload</code>
+                </td>
+                <td>
+                    When the user is about to leave a page. This can be used to show a confirmation/warning box.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

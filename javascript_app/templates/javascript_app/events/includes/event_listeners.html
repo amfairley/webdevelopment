@@ -1,0 +1,49 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-events-event-listeners{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Event Listeners{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Event listeners are a fundamental part of creating interactive web pages using JavaScript. They allow your code 
+        to "listen" for specific actions or occurrences such as clicks, key presses, or mouse movements, and run 
+        custom logic in response. An event listener is a method that waits for a specified event to occur on a 
+        particular DOM element and then executes a block of code known as an event handler. The basic syntax follows:
+    </p>
+    {% include 'javascript_app/events/includes/code_snippets/listener_syntax.html' %}
+    <ul>
+        <li><code class="written-code">eventTarget</code>: The DOM element you're watching.</li>
+        <li><code class="written-code">'eventType'</code>: A string representing the type of event (e.g., 'click', 'keydown', 'submit', 'mouseover').</li>
+        <li><code class="written-code">eventHandlerFunction</code>: The function to run when the event is triggered.</li>
+    </ul>
+    <p>
+        While it's possible to define the handler inline (as an anonymous function), it's best practice to define your 
+        event handler as a separate, named function. This makes your code cleaner, easier to debug, and reusable.
+    </p>
+    {% include 'javascript_app/events/includes/code_snippets/listener_example.html' %}
+    <p>
+        You can remove an event listener using the 
+        <code class="written-code">.removeEventListener()</code>
+        method. This is useful for performance optimization or when the listener is no longer needed (e.g., after a 
+        one-time action). You must pass the exact same function reference used in 
+        <code class="written-code">addEventListener()</code>.
+    </p>
+    {% include 'javascript_app/events/includes/code_snippets/listener_remove.html' %}
+    <p>
+        If you have multiple elements that need the same event behaviour, use a loop to assign listeners:
+    </p>
+    {% include 'javascript_app/events/includes/code_snippets/listener_loop.html' %}
+    <p>
+        JavaScript stores events as events object which we can access specific things from:
+    </p>
+    <ul>
+        <li><code class="written-code">.target</code>: Reference the element that the event is registered to</li>
+        <li><code class="written-code">.type</code>: Access the name of the event</li>
+        <li><code class="written-code">.timestamp</code>: Access the number of ms between the document loading and the event triggering</li>
+    </ul>
+{% endblock %}

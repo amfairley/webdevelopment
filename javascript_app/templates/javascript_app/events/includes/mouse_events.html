@@ -1,0 +1,129 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-events-mouse-events{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Mouse Events{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Syntax
+                </th>
+                <th>
+                    Event it tracks
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <code class="written-code">onclick</code>
+                </td>
+                <td>
+                    When a user clicks on the element.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">ondblclick</code>
+                </td>
+                <td>
+                    When a user double clicks on the element.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">oncontextmenu</code>
+                </td>
+                <td>
+                    When a user right clicks on the element.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">onmousedown</code>
+                </td>
+                <td>
+                    When the user presses the mouse click over an element.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">onmouseup</code>
+                </td>
+                <td>
+                    When a user releases the mouse click over an element.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">onmouseover</code> or <code class="written-code">onmouseenter</code>
+                </td>
+                <td>
+                    Moving the cursor over an element (onmouseenter does not have event bubbling).
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">onmouseout</code> or <code class="written-code">onmouseleave</code>
+                </td>
+                <td>
+                    Moving the cursor off of an element (onmouseleave does not have event bubbling).
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">onmousemove</code>
+                </td>
+                <td>
+                    Fires continuously as the mouse moves within an element. It does not trigger when the mouse enters 
+                    or leaves but only when it moves and will fire many times while the mouse is moving.
+                </td>
+            </tr>    
+        </tbody>
+    </table>
+    <p>
+        The button property of a mouse event returns an integer that represents which mouse button was pressed when the event was triggered. 
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Mouse Button</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td>Left mouse button</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Middle mouse button</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Right mouse button</td>
+            </tr>            
+        </tbody>
+    </table>
+    <p>
+        You can use this to confirm which mouse button was pressed e.g. 
+        <code class="written-code">if (event.button == 1) {}</code>
+    </p>
+    <p>
+        <code class="written-code">clientX</code>
+        and 
+        <code class="written-code">clientY</code>
+        are properties of the mouse event object that provide the horizontal (clientX) and vertical (clientY) 
+        coordinates of the mouse pointer when the event was triggered. They return the position of the mouse relative 
+        to the viewport (the visible part of the web page). This means the origin (0, 0) is at the top-left corner of 
+        the viewport.
+    </p>
+{% endblock %}

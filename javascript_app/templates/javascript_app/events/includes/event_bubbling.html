@@ -1,0 +1,30 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-events-event-bubbling{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Event Bubbling{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Event bubbling is where an event is triggered on an element and it doesn't just stay there, it "bubbles up" the 
+        DOM tree, triggering any matching event handlers on parent elements too (unless you explicitly stop it).
+    </p>
+    <p>
+        <code class="written-code">onmouseover</code>
+        does bubble. This means if you have a parent element and child elements inside it, and your mouse moves from 
+        the parent to a child, the onmouseover event will fire again for the child (and potentially also for the parent).
+        This can lead to multiple, repeated triggers as the mouse moves within nested elements.
+    </p>
+    <p>
+        <code class="written-code">onmouseenter</code>
+        does not bubble. It only fires once when the mouse pointer enters the element it's attached to, even if it then 
+        moves over child elements. It behaves more like the CSS 
+        <code class="written-code">:hover</code> 
+        pseudo-class. This makes it useful when you only want a single event to occur when the user enters a certain 
+        area.
+    </p>
+{% endblock %}

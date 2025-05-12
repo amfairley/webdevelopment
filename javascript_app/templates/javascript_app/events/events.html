@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: JavaScript - Events{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>For Loops</h2>
+    {% include 'javascript_app/events/includes/contents.html' %}
+    {% include 'javascript_app/events/includes/what_are_events.html' %}
+    {% include 'javascript_app/events/includes/html_event_attributes.html' %}
+    {% include 'javascript_app/events/includes/mouse_events.html' %}
+    {% include 'javascript_app/events/includes/keyboard_events.html' %}
+    {% include 'javascript_app/events/includes/form_events.html' %}
+    {% include 'javascript_app/events/includes/window_events.html' %}
+    {% include 'javascript_app/events/includes/clipboard_events.html' %}
+    {% include 'javascript_app/events/includes/event_bubbling.html' %}
+    {% include 'javascript_app/events/includes/event_functions.html' %}
+    {% include 'javascript_app/events/includes/event_listeners.html' %}
+{% endblock %}
