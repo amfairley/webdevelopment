@@ -1,0 +1,147 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-jquery-element-selection{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Element Selection{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Syntax
+                </th>
+                <th>
+                    What it selects
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <code class="written-code">$</code>
+                </td>
+                <td>
+                    The shorthand for jQuery, so jQuery("a") works equally well.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">$("a")</code>
+                </td>
+                <td>
+                    All anchor elements.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">$(":header")</code>
+                </td>
+                <td>
+                    All headers.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">$("a:first")</code>
+                </td>
+                <td>
+                    The first anchor tag.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">$("a:last")</code>
+                </td>
+                <td>
+                    The last anchor tag.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">$(".className")</code>
+                </td>
+                <td>
+                    Use dot notation to select a class,
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">$("#id")</code>
+                </td>
+                <td>
+                    Use the hash to select an ID.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">$("p>a")</code>
+                </td>
+                <td>
+                    Select all anchor links that are direct children of a paragraph.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">$(var).parent()</code>
+                </td>
+                <td>
+                    The parent element.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">$(var).children()</code>
+                </td>
+                <td>
+                    All children 1 level down.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">$(var).children("p")</code>
+                </td>
+                <td>
+                    Returns only children that are paragraph elements.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">$(var).next()</code>
+                </td>
+                <td>
+                    The next sibling element.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">$(var).prev()</code>
+                </td>
+                <td>
+                    The previous element.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">$(var).siblings()</code>
+                </td>
+                <td>
+                    All siblings.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">$("p").filter(".intro")</code>
+                </td>
+                <td>
+                    Only paragraph elements that have the class of intro.
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+{% endblock %}

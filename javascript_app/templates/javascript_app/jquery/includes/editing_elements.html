@@ -1,0 +1,206 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-jquery-editing-elements{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Editing Elements{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Syntax
+                </th>
+                <th>
+                    What it does
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <code class="written-code">$(var).css("backgroundColor")</code>
+                </td>
+                <td>
+                    Queries a style property.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">$(var).css("backgroundColor", "red")</code>
+                </td>
+                <td>
+                    Changes a property style in-line.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">$(var).html()</code>
+                </td>
+                <td>
+                    Gets the HTML of the variable.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">$(var).html("&lt;h1&gt;Hi!&lt;/h1&gt;")</code>
+                </td>
+                <td>
+                    Replaces the HTML of a variable.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">$(var).text("new text")</code>
+                </td>
+                <td>
+                    Add new text to a variable.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">$(var).append(var2)</code>
+                </td>
+                <td>
+                    Append something to the bottom of a variable.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">$(var).remove()</code>
+                </td>
+                <td>
+                    Remove a variable.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">$(var).empty()</code>
+                </td>
+                <td>
+                    Deletes contents of a variable.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">$(var).addClass("className")</code>
+                </td>
+                <td>
+                    Adds a class, this is the better way of changing CSS.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">$(var).removeClass("className")</code>
+                </td>
+                <td>
+                    Remove a class.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">$(var).toggleClass("className")</code>
+                </td>
+                <td>
+                    Toggles a class on and off.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Events - Own Page
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">$(var).on("click", function() {})</code>
+                </td>
+                <td>
+                    On click event.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">.mouseenter</code> and <code class="written-code">.onmouseleave</code>
+                </td>
+                <td>
+                    Mouse hover events.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Transitions - Own page
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">.hide()</code> and <code class="written-code">.show()</code>
+                </td>
+                <td>
+                    Hides and shows elements. The durations can be fast, medium, slow or number of ms.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">.toggle()</code>
+                </td>
+                <td>
+                    Works like an on/off button.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">.slideDown()</code>, <code class="written-code">.slideUp()</code>, <code class="written-code">.slideToggle()</code>
+                </td>
+                <td>
+                    Slide reveal.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">.fadeIn()</code>, <code class="written-code">.fadeOut()</code>, <code class="written-code">.fadeToggle()</code>
+                </td>
+                <td>
+                    Fade reveals.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">.fadeTo()</code>
+                </td>
+                <td>
+                    Makes an element transparent. It takes 2 parameters;  the speed in ms and opacity (0=hidden).
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Method Chaining - Own Page
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">$(var).addClass("1").removeClass("2")</code>
+                </td>
+                <td>
+                    You can chain methods and events like this.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    This - Own Page
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">$('p').click(function() {$(this).slideToggle('slow');});</code>
+                </td>
+                <td>
+                    You can use the keyword this so you do not need to keep repeating the variable.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

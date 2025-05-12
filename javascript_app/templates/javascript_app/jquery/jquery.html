@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: JavaScript - JQuery{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>JQuery</h2>
+    {% include 'javascript_app/jquery/includes/contents.html' %}
+    {% include 'javascript_app/jquery/includes/what_is_jquery.html' %}
+    {% include 'javascript_app/jquery/includes/setting_up_jquery.html' %}
+    {% include 'javascript_app/jquery/includes/element_selection.html' %}
+    {% include 'javascript_app/jquery/includes/editing_elements.html' %}
+{% endblock %}

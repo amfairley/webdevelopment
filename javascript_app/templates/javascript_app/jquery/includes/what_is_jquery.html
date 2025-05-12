@@ -1,0 +1,42 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-jquery-what-is-jquery{% endblock %}
+
+<!--Section title-->
+{% block text_title %}What is jQuery?{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        jQuery is a fast, small, and feature-rich JavaScript library that simplifies things like HTML document 
+        traversal and manipulation, event handling, animation, and Ajax interactions for rapid web development. With 
+        jQuery, you can achieve many common tasks in web development with fewer lines of code and better cross-browser 
+        compatibility, making it a popular tool among developers. At its core, jQuery provides a simple and consistent 
+        API that makes it easier to work with JavaScript across different browsers. It enables developers to write less 
+        code and do more with less effort. The main features of jQuery include:
+    </p>
+    <ul>
+        <li>DOM Manipulation: Easily select and modify elements, including content and attributes.</li>
+        <li>Event Handling: Simplifies event handling, such as clicks, mouse movements, and keyboard actions.</li>
+        <li>Animations and Effects: Provides a wide range of built-in methods for animations like fading, sliding, and custom effects.</li>
+        <li>AJAX Support: Simplifies making asynchronous requests to servers without reloading the page.</li>
+        <li>Cross-Browser Compatibility: Ensures your code works across all major browsers, reducing the need to write browser-specific code.</li>
+    </ul>
+    <p>
+        Although vanilla JavaScript can accomplish the same tasks, jQuery offers several benefits that have made it a 
+        popular choice for developers:
+    </p>
+    <ul>
+        <li>Simplicity: jQuery's syntax is concise and easy to understand, making it quick to learn and implement.</li>
+        <li>Cross-Browser Compatibility: jQuery takes care of the complexities of cross-browser compatibility, which can be time-consuming and error-prone with vanilla JavaScript.</li>
+        <li>Wide Range of Plugins: jQuery has a vast ecosystem of plugins that extend its functionality, allowing developers to add features quickly.</li>
+        <li>Community Support: Being one of the most widely used JavaScript libraries, jQuery has a large community that provides tutorials, documentation, and support.</li>
+    </ul>
+    <p>
+        Despite newer JavaScript frameworks like React, Vue, and Angular gaining traction in recent years, jQuery still 
+        remains relevant, especially for simple websites, legacy projects, or when you need a fast and straightforward 
+        solution.
+    </p>
+{% endblock %}

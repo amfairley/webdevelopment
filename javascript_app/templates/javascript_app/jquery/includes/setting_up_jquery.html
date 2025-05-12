@@ -1,0 +1,48 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-jquery-setting-up-jquery{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Setting up jQuery{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can download JQuery from 
+        <a 
+            class="text-link"
+            href="https://jquery.com/download/"
+            title="Go to the download jquery page"
+            aria-label="Go to the download jquery page"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            here
+        </a>
+        and then do one of the following:
+    </p>
+    <ul>
+        <li>Link the JQuery file in your HTML with<code class="written-code">&lt;script src="path/to/jquery.min.js"&gt;&lt;/script&gt;</code></li>
+        <li>Install with npm in your terminal with <code class="written-code">npm instal jquery</code></li>
+        <li>Link to the CDN in your head element with <code class="written-code">&lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;</code></li>
+    </ul>
+    <p>
+        With the second option, you will need to import jQuery at the top of your JavaScript files:
+    </p>
+    {% include 'javascript_app/jquery/includes/code_snippets/import.html' %}
+    <p>
+        It is important to remember that it is considered bad practice to run jQuery code before the HTML page is fully 
+        loaded. Running jQuery code before the DOM is ready can lead to errors or unexpected behavior because the 
+        elements you're trying to interact with might not be available yet. To ensure that your jQuery code runs after 
+        the document has loaded, use the following structure:
+    </p>
+    {% include 'javascript_app/jquery/includes/code_snippets/load.html' %}
+    <p>
+        This ensures that the code inside the 
+        <code class="written-code">$(document).ready()</code>
+        function will only execute after the DOM is fully loaded, preventing issues where jQuery tries to interact with 
+        elements that haven't been rendered yet.
+    </p>
+{% endblock %}

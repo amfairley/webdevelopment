@@ -94,4 +94,9 @@ urlpatterns = [
         views.JavaScript_events,
         name="JavaScript_events"
     ),
+    path(
+        'jquery/',
+        views.JavaScript_jquery,
+        name="JavaScript_jquery"
+    ),
 ]

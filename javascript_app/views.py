@@ -228,3 +228,15 @@ def JavaScript_events(request):
         'javascript_app/events/events.html',
         context
     )
+
+
+def JavaScript_jquery(request):
+    '''Return the JavaScript jquery page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'javascript_app/jquery/jquery.html',
+        context
+    )
