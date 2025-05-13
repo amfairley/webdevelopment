@@ -252,3 +252,15 @@ def JavaScript_debugging(request):
         'javascript_app/debugging/debugging.html',
         context
     )
+
+
+def JavaScript_validation(request):
+    '''Return the JavaScript validation page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'javascript_app/validation/validation.html',
+        context
+    )

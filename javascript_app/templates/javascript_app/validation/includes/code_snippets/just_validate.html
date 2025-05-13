@@ -1,0 +1,29 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-javascript-validation-just-validate{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">// An example of just-validate being used
+// Import it at the top of your file
+import JustValidate from 'just-validate';
+
+// Define a validator
+const validator = new JustValidate('#my-form');
+
+// Add customisation to the validator
+validator
+  .addField('#email', [
+    {
+      rule: 'required',
+    },
+    {
+      rule: 'email',
+    },
+  ]);
+</code></pre>
+{% endblock %}

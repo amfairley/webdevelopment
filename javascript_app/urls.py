@@ -104,4 +104,9 @@ urlpatterns = [
         views.JavaScript_debugging,
         name="JavaScript_debugging"
     ),
+    path(
+        'validation/',
+        views.JavaScript_validation,
+        name="JavaScript_validation"
+    ),
 ]

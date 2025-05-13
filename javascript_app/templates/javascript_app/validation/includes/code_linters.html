@@ -1,0 +1,38 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-validation-code-linters{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Code Linters{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        <a 
+            class="text-link"
+            href="https://www.jslint.com/"
+            title="Go to JSLint"
+            aria-label="Go to JSLint"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            JSLint
+        </a>
+        is one of the earliest JavaScript linters. A linter is a tool that checks your code for common mistakes, bad 
+        practices, and syntax issues before the code even runs.
+    </p>
+    <p>
+        What does a linter do?
+    </p>
+    <ul>
+        <li>Identifies typos, unused variables, and undeclared variables</li>
+        <li>Enforces consistent code style (like spacing and semicolons)</li>
+        <li>Encourages best practices to prevent potential bugs</li>
+        <li>Can be integrated into your code editor or build proces</li>
+    </ul>
+    <p>
+        Popular modern alternatives include ESLint and JSHint, but JSLint laid the groundwork for them.
+    </p>
+{% endblock %}

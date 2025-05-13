@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: JavaScript - Validation{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Validation</h2>
+    {% include 'javascript_app/validation/includes/contents.html' %}
+    {% include 'javascript_app/validation/includes/javascript_validation.html' %}
+    {% include 'javascript_app/validation/includes/code_linters.html' %}
+    {% include 'javascript_app/validation/includes/validation_libraries.html' %}
+
+{% endblock %}

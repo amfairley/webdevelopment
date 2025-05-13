@@ -1,0 +1,39 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-validation-validation-libraries{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Validation Libraries{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        While you can write your own validation logic in plain JavaScript, using a library saves time and reduces the 
+        chance of errors. 
+    </p>
+    <p>
+        <a 
+            class="text-link"
+            href="https://www.npmjs.com/package/just-validate"
+            title="Go to the just validation documentation"
+            aria-label="Go to the just validation documentation"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            just-validate 
+        </a>
+        is a lightweight and flexible library for client-side form validation. It's easy to set up and supports 
+        features like:
+    </p>
+    <ul>
+        <li>Real-time validation</li>
+        <li>Custom error messages</li>
+        <li>Async validation (e.g., checking username availability)</li>
+    </ul>
+    <p>
+        You can install it using npm: <code class="written-code">npm install just-validate</code>.
+    </p>
+    {% include 'javascript_app/validation/includes/code_snippets/just_validate.html' %}
+{% endblock %}
