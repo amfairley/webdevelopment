@@ -1,0 +1,45 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}javascript-debuggin-debugging{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Debugging{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Debugging is an essential part of developing with JavaScript, and modern browsers provide powerful tools to 
+        help track down bugs and fix issues efficiently. Here's how to make the most of the debugging features 
+        available in browser DevTools (usually opened with <kbd>F12</kbd> or Right Click → Inspect → Console/Debugger).
+    </p>
+    <p>
+        You can insert the 
+        <code class="written-code">debugger</code>
+        statement directly into your JavaScript code. When the browser executes this line, it will pause script 
+        execution and open the Sources (Debugger) tab automatically. While paused, you can inspect variables, step 
+        through code line by line, and observe the state of your application at that exact point.
+    </p>
+    {% include 'javascript_app/debugging/includes/code_snippets/debug_1.html' %}
+    <p>
+        You can also use breakpoints in your code. These are a way to manually tell the browser, "pause here."
+    </p>
+    <ul>
+        <li>Open the Sources panel in DevTools.</li>
+        <li>Locate your script in the left-hand file tree.</li>
+        <li>Click on the line number where you want the execution to pause.</li>
+        <li>A blue marker will appear, indicating the breakpoint.</li>
+    </ul>
+    <p>
+        When code execution reaches that line, it will pause just like it would with the 
+        <code class="written-code">debugger</code> keyword. Once the execution is paused, you have several control 
+        options:
+    </p>
+    <ul>
+        <li>Step over (<kbd>F10</kbd>): Executes the current line and moves to the next one without going into function calls.</li>
+        <li>Step into (<kbd>F11</kbd>): If the current line contains a function, it enters into that function to debug inside it.</li>
+        <li>Step out (<kbd><kbd>Shift</kbd>+<kbd>F11</kbd></kbd>): If you're inside a function, this finishes it and returns to the parent scope.</li>
+        <li>Resume (<kbd>F8</kbd>): Continues execution until the next breakpoint or debugger.</li>
+    </ul>
+{% endblock %}

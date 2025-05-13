@@ -99,4 +99,9 @@ urlpatterns = [
         views.JavaScript_jquery,
         name="JavaScript_jquery"
     ),
+    path(
+        'debugging/',
+        views.JavaScript_debugging,
+        name="JavaScript_debugging"
+    ),
 ]

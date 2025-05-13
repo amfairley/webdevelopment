@@ -240,3 +240,15 @@ def JavaScript_jquery(request):
         'javascript_app/jquery/jquery.html',
         context
     )
+
+
+def JavaScript_debugging(request):
+    '''Return the JavaScript debugging page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'javascript_app/debugging/debugging.html',
+        context
+    )
