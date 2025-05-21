@@ -1,0 +1,30 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-home-running-python-code{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Running Python Code{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        To run a Python script, you need to use the command line (also called the terminal or shell) when in the 
+        correct directory and use the following command.
+    </p>
+    {% include 'python_app/home/includes/code_snippets/run.html' %}
+    <p>
+        If your program gets stuck in a loop or takes too long to run, you can forcefully stop it by pressing 
+        <kbd>Ctrl + C</kbd>.
+        This sends an interrupt signal to Python and cancels the script. It's especially useful when you are stuck in 
+        an infinite loop or your program is waiting for an input that never comes.
+    </p>
+    <p>
+        Sometimes you need to pause your program and take a look around to check variable values, understand the flow, 
+        or find a bug. That's where breakpoints come in. A breakpoint is an intentional pause in your code that tells 
+        the interpreter to stop where it is. This allows you to examine variable values, step through code line-by-line 
+        or detect logic errors.
+    </p>
+    {% include 'python_app/home/includes/troubleshooting/run_troubleshooting.html' %}
+{% endblock %}

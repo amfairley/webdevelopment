@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'HTML',
     'CSS',
     'javascript_app',
+    'python_app',
 ]
 
 MIDDLEWARE = [

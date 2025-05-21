@@ -1,0 +1,37 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-home-libraries{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Libraries{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        One of Python's biggest strengths is its vast ecosystem of libraries, which are reusable chunks of code that 
+        provide tools and functions for everything from math and web development to machine learning and data analysis. 
+        Python comes with a standard library that includes modules like 
+        <code class="written-code">math</code>,
+        <code class="written-code">datetime</code>,
+        <code class="written-code">os</code>,
+        and 
+        <code class="written-code">random</code>,
+        which are available without installing anything extra. You can browse the full list of 
+        <a 
+            class="text-link"
+            href="https://docs.python.org/3/library/index.html"
+            title="Check out the full list of Python libraries"
+            aria-label="Check out the full list of Python libraries"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            built-in libraries
+        </a>
+        in the official Python documentation. For additional functionality, you can install external libraries using 
+        Python's package manager, pip. For example, to install the popular requests library, you would run 
+        <code class="written-code">pip install requests</code>
+        in your terminal. 
+    </p>
+{% endblock %}

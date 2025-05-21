@@ -1,0 +1,31 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-home-object-oriented-programming{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Object Oriented Programming{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        In Python, everything is an object, even functions and numbers. This makes the language powerful and flexible, 
+        especially for advanced topics like functional programming and 
+        <dfn title="object-oriented programming">OOP</dfn>.
+    </p>
+    <p>
+        Object-Oriented Programming in Python revolves around the concept of classes and objects. A class is like a 
+        blueprint for creating objects—instances that contain both data (attributes) and behaviors (methods). Python 
+        allows developers to define their own data types by creating classes, encapsulating related logic and data 
+        together in a clean, reusable way. Key OOP principles such as encapsulation, inheritance, and polymorphism are 
+        fully supported in Python, enabling developers to build complex applications that are modular, maintainable, 
+        and scalable.
+    </p>
+    <p>
+        Because everything in Python is an object, even classes themselves are instances of a special class called 
+        <code class="written-code">type</code>,
+        allowing for dynamic behavior and introspection. This object model underpins much of Python's flexibility and 
+        makes it easy to extend or customize language behavior using techniques like metaprogramming and decorators.
+    </p>
+{% endblock %}

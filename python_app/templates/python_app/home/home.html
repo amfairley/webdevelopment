@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Python - Home{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Python</h2>
+    {% include 'python_app/home/includes/contents.html' %}
+    {% include 'python_app/home/includes/what_is_python.html' %}
+    {% include 'python_app/home/includes/installing_and_setting_up.html' %}
+    {% include 'python_app/home/includes/writing.html' %}
+    {% include 'python_app/home/includes/file_layout.html' %}
+    {% include 'python_app/home/includes/running_python_code.html' %}
+    {% include 'python_app/home/includes/libraries.html' %}
+    {% include 'python_app/home/includes/object_oriented_programming.html' %}
+
+{% endblock %}

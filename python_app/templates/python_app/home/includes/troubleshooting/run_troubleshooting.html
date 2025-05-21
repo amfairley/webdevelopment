@@ -1,0 +1,15 @@
+{% extends 'includes/troubleshooting.html' %}
+{% load static %}
+
+<!--ID-->
+{% block troubleshooting_id %}python-home-run-troubleshooting{% endblock %}
+{% block troubleshooting_content %}
+    <p>
+        If 
+        <code class="written-code">python filename.py</code>
+        does not work, it might be because 
+        <code class="written-code">python</code>
+        is pointing to Python2 in your system. If that is the case, try
+        <code class="written-code">python3 filename.py</code>
+    </p>
+{% endblock %}

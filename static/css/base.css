@@ -61,6 +61,16 @@ body.night-mode kbd {
     background-color: #FFD700;
 }
 
+.site-button {
+    background-color: #f5f5f5;
+    color: #001F5C;
+}
+
+body.night-mode .site-button {
+    background-color: #FFD700;
+    color: #1E1E1E;
+}
+
 /* In page single line terminal code */
 .bash-container code{
     padding: 0 !important;

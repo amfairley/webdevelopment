@@ -1,0 +1,31 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-home-main{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python"># Filename: my_script.py
+
+def main():
+    # Step 1: Write pseudocode
+    # Step 2: Translate it into real code
+    result1 = func1()
+    result2 = func2(result1)
+    print(result2)
+
+def func1():
+    # Performs a specific task, e.g., gets user input
+    return "Hello"
+
+def func2(input_str):
+    # Manipulates or processes the result from func1
+    return input_str + ", world!"
+
+if __name__ == "__main__":
+    main()
+</code></pre>
+{% endblock %}

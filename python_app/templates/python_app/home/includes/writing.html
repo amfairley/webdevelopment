@@ -1,0 +1,55 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-home-writing{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Writing{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Before jumping into writing actual code, it's helpful to outline your logic using 
+        <a 
+            class="text-link"
+            href="#"
+            title="Go to the page about pseudocode"
+            aria-label="Go to the page about pseudocode"
+        >
+            pseudocode
+        </a>.
+        This is plain-language writing that describes what your code is supposed to do, step by step. This helps you 
+        focus on the logic first, and worry about the syntax later.
+    </p>
+    <p>
+        Comments start with a hash/pound/hashtag # symbol in Python. They're ignored by the interpreter but help you 
+        and others understand what your code is doing.
+    </p>
+    {% include 'python_app/home/includes/code_snippets/comment.html' %}
+    <p>
+        Indents matter a lot in Python. Whereas JavaScript define blocks of code with curly brackets, Python uses 
+        indentation. Stick to four spaces or 1 tab per indent level and pick one (spaces or tabs) and keep to it.
+    </p>
+    {% include 'python_app/home/includes/code_snippets/indent.html' %}
+    <p>
+        <a 
+            class="text-link"
+            href="https://peps.python.org/pep-0008/"
+            title="Go to the pep8 docs"
+            aria-label="Go to the pep8 docs"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            PEP8 
+        </a>
+        is the official Python style guide and should be adhered to for best practice and to ensure that your code runs 
+        flawlessly. Some basic rules are:
+    </p>
+    <ul>
+        <li>Use lowercase_with_underscores for function and variable names.</li>
+        <li>Use CapitalizedWords for class names.</li>
+        <li>Keep lines under 79 characters long.</li>
+        <li>Add a blank line between functions for readability.</li>
+    </ul>
+{% endblock %}

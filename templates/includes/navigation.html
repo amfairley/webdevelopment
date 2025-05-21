@@ -121,6 +121,17 @@
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'JavaScript_validation' %}active{% endif %}" href="{% url 'JavaScript_validation' %}">Validation</a></li>
                 </ul>
             </li>
+            <!--JavaScript-->
+            <li class="nav-item">
+                <span class="d-flex align-items-center">
+                    <a class="nav-link" href="{% url 'python_home' %}">Python</a>
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#python-submenu" aria-expanded="false" aria-controls="python-submenu" aria-label="Open the Python dropdown section">
+                    </button>
+                </span>
+                <ul class="collapse list-unstyled ps-3 {% if '/Python' in request.path %}show{% endif %}" id="python-submenu">
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'python_home' %}active{% endif %}" href="{% url 'python_home' %}">Python Home</a></li>
+                </ul>
+            </li>
             <!--Dropdown link example-->
             <li class="nav-item">
                 <span class="d-flex align-items-center">

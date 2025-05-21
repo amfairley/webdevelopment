@@ -1,0 +1,83 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-home-installing-and-setting-up{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Installing and Setting Up{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can install and set up Python on your machine for free. To check if you already have it installed, you can 
+        open your terminal and type:
+    </p>
+    {% include 'python_app/home/includes/code_snippets/set_up_1.html' %}
+    <p>
+        or
+    </p>
+    {% include 'python_app/home/includes/code_snippets/set_up_2.html' %}
+    <p>
+        If you have Python installed, you will see something like 
+        <code class="written-code">Python 3.x.x</code>.
+    </p>
+    <p>
+        Otherwise, download the latest version of Python for your operating system from the 
+        <a 
+            class="text-link"
+            href="https://www.python.org/downloads/"
+            title="Go to the download page of the Python website"
+            aria-label="Go to the download page of the Python website"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Python website
+        </a>
+        and clicking on the big yellow Download Python 3.X.X button.
+    </p>
+    <p>
+        For a windows machine, run through the installation wizard, ensuring that you check the box that says 
+        "Add Python to PATH". Once this has completed, you can check that it has installed correctly from your terminal 
+        again using:
+    </p>
+    {% include 'python_app/home/includes/code_snippets/set_up_3.html' %}
+    <p>
+        or
+    </p>
+    {% include 'python_app/home/includes/code_snippets/set_up_4.html' %}
+    <p>
+        For other operating systems, see the 
+        <a 
+            class="text-link"
+            href="https://wiki.python.org/moin/BeginnersGuide/Download"
+            title="Go to the beginner download page of the Python website"
+            aria-label="Go to the beginner download page of the Python website"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            beginner download
+        </a>
+        Python guide.
+    </p>
+    <p>
+        With Python installed, you will need 
+        <dfn title ="The Python Package manager. It is a recursive acronym of 'Pip Installs Packages'.">pip</dfn>.
+        This is usually installed automatically when you set up Python but you can check from your terminal using:
+    </p>
+    {% include 'python_app/home/includes/code_snippets/set_up_5.html' %}
+    <p>
+        If it is not installed you can download 
+        <a 
+            class="text-link"
+            href="https://pip.pypa.io/en/stable/installation/"
+            title="Go to the pip installation website"
+            aria-label="Go to the pip installation website"
+            target="_blank"
+            rel="noopener noreferrer"
+        >        
+            get-pip.py
+        </a>
+        from the pip installation documentation and run the file.
+    </p>
+{% endblock %}
