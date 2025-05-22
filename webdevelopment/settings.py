@@ -35,7 +35,7 @@ else:
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    'https://webdevgrad-3277133ed051.herokuapp.com/'
+    'webdevgrad-3277133ed051.herokuapp.com/'
 ]
 
 
