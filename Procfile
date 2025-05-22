@@ -1,0 +1,1 @@
+web: gunicorn webdevelopment.wsgi:application

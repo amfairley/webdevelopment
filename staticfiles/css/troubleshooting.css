@@ -1,0 +1,45 @@
+.tip-troubleshooting-box {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid #FF8C00;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background-color: #EAEAEA;
+    margin-bottom: 0.5rem;
+}
+
+body.night-mode .tip-troubleshooting-box {
+    border-color: #FF8800;
+    background-color: #2A2A2A;
+}
+
+.tip-troubleshooting-box h3 {
+    font-family: "Poppins", "Arial", "Helvetica", sans-serif;
+    color: #4D4D4C;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+body.night-mode .tip-troubleshooting-box h3 {
+    color: #D4D4D4;
+}
+
+.tip-troubleshooting-box .fa-star,
+.tip-troubleshooting-box .fa-lightbulb {
+    color: #FFD700;
+    margin-right: 0.5rem;
+}
+
+body.night-mode .tip-troubleshooting-box .fa-lightbulb {
+    color: #FFDD44;
+}
+
+.tip-troubleshooting-box ul {
+    color: #333333;
+    font-family: 'Roboto', Arial, sans-serif;
+    list-style: square;
+}
+
+body.night-mode .tip-troubleshooting-box ul {
+    color: #BBBBBB;
+}

@@ -1,0 +1,121 @@
+/*---------- Container ---------- */
+.code-snippet-container {
+    width: 90%;
+    margin: 0.5rem auto;
+    border: 1px solid #0057D8;
+    border-radius: 1rem;
+    background-color: #FFFFFF;
+    color: #333333;
+    overflow-x: auto;
+}
+
+body.night-mode .code-snippet-container {
+    border-color: #569CD6;
+    background-color: #1E1E1E;
+    color: #D4D4D4;
+}
+
+.code-snippet-container pre{
+    margin: 0;
+    border-radius: 1rem;
+}
+
+/* .code-snippet-content p {
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+} */
+
+/*---------- Text ---------- */
+.code-snippet-container h1,
+.code-snippet-container h2,
+.code-snippet-container h3,
+.code-snippet-container h4,
+.code-snippet-container h5,
+.code-snippet-container h6,
+.code-snippet-container p,
+.code-snippet-container span {
+    font-family: "JetBrains Mono", "Courier New", monospace;
+    font-variant-ligatures: none;
+}
+
+/*---------- Keywords ----------*/
+/* .code-snippet-container .keyword {
+    color: #0000FF;
+}
+
+body.night-mode .code-snippet-container .keyword {
+    color: #569CD6;
+}
+
+.code-snippet-container .string {
+    color: #A31515;
+}
+
+body.night-mode .code-snippet-container .string {
+    color: #CE9178;
+}
+
+.code-snippet-container .comment {
+    color: #008000;
+}
+
+body.night-mode .code-snippet-container .comment {
+    color: #6A9955;
+}
+
+.code-snippet-container .function {
+    color: #795E26;
+}
+
+body.night-mode .code-snippet-container .function {
+    color: #DCDCAA;
+}
+
+.code-snippet-container .variable {
+    color: #001080;
+}
+
+body.night-mode .code-snippet-container .variable {
+    color: #9CDCFE;
+}
+
+.code-snippet-container .constant {
+    color: #098658;
+}
+
+body.night-mode .code-snippet-container .constant {
+    color: #B5CEA8;
+}
+
+.code-snippet-container .classes {
+    color: #267F99;
+}
+
+body.night-mode .code-snippet-container .classes {
+    color: #4EC9B0;
+}
+
+.code-snippet-container .operator {
+    color: #333A3F;
+}
+
+body.night-mode .code-snippet-container .operator {
+    color: #D4D4D4;
+}
+
+.code-snippet-container .error {
+    color: #B00000;
+}
+
+body.night-mode .code-snippet-container .error {
+    color: #F44747;
+}
+
+.code-snippet-container .warning {
+    color: #C13500;
+}
+
+body.night-mode .code-snippet-container .warning {
+    color: #FF8800;
+} */

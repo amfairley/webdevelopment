@@ -1,0 +1,103 @@
+/*---------- Container ---------- */
+.html-js-code-example-container {
+    width: 90%;
+    margin: 0.5rem auto;
+    border: 1px solid #0057D8;
+    border-radius: 1rem;
+    background-color: #FFFFFF;
+    color: #333333;
+    overflow-x: auto;
+}
+
+body.night-mode .html-js-code-example-container {
+    border-color: #569CD6;
+    background-color: #1E1E1E;
+    color: #D4D4D4;
+}
+
+/* Code and result sections*/
+.html-code-example,
+.js-code-example,
+.html-js-result-example {
+    padding: 0;
+}
+
+/* Headers */
+.html-code-example-header,
+.js-code-example-header,
+.html-js-result-example-header {
+    width: 100%;
+    height: 2.5rem;
+    margin: 0;
+    padding: 0.5rem;
+    border-bottom: 1px solid #0057D8;
+    font-weight: bolder;
+}
+
+
+body.night-mode .html-code-example-header,
+body.night-mode .js-code-example-header,
+body.night-mode .html-js-result-example-header {
+    border-color: #569CD6;
+}
+
+/* Section titles */
+.html-code-example-header p,
+.js-code-example-header p,
+.html-js-result-example-header p {
+    margin: 0;
+    text-align: center !important;
+}
+
+/* HTML box */
+.html-code-example {
+    border-bottom: 1px solid #0057D8;
+}
+
+body.night-mode .html-code-example {
+    border-color: #569CD6;
+}
+
+/* JavaScript box */
+.js-code-example {
+    border-bottom: 1px solid #0057D8;
+}
+
+body.night-mode .js-code-example {
+    border-color: #569CD6;
+}
+
+/* Code */
+.html-js-code-example-container pre{
+    margin: 0;
+    height: 100%;
+}
+
+.html-js-code-example-container pre code{
+    height: 100%;
+}
+
+.html-code-example-content,
+.js-code-example-content {
+    height: calc(100% - 2.5rem);
+}
+
+.html-js-code-result-content {
+    padding: 0.5rem;
+    margin: 0;
+    height: fit-content;
+}
+
+/*---------- Text ---------- */
+.html-js-code-example-container h1,
+.html-js-code-example-container h2,
+.html-js-code-example-container h3,
+.html-js-code-example-container h4,
+.html-js-code-example-container h5,
+.html-js-code-example-container h6,
+.html-js-code-example-container p,
+.html-js-code-example-container span {
+    font-family: "JetBrains Mono", "Courier New", monospace;
+    font-variant-ligatures: none;
+    text-align: left;
+}
