@@ -1,0 +1,38 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-variables-advanced-variable-usage{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Advanced Variable Usage{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Python variables can reference mutable or immutable objects. Immutable objects cannot be altered after creation 
+        and include:
+    </p>
+    <ul>
+        <li>Integers</li>
+        <li>Floats</li>
+        <li>Strings</li>
+        <li>Tuples</li>
+    </ul>
+    {% include 'python_app/variables/includes/code_snippets/immutable.html' %}
+    <p>
+        Mutable types can be modified in place and include:
+    </p>
+    <ul>
+        <li>Lists</li>
+        <li>Dictionaries</li>
+        <li>Sets</li>
+    </ul>
+    {% include 'python_app/variables/includes/code_snippets/mutable.html' %}
+    <p>
+        Assigning one variable to another creates an alias, meaning both variables reference the same object. In the 
+        following example, modifying b also affects a because they reference the same list object.
+    </p>
+    {% include 'python_app/variables/includes/code_snippets/alias.html' %}
+
+{% endblock %}

@@ -8,4 +8,9 @@ urlpatterns = [
         views.python_home,
         name="python_home"
     ),
+    path(
+        'variables/',
+        views.python_variables,
+        name="python_variables"
+    ),
 ]

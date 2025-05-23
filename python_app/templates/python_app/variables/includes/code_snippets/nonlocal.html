@@ -1,0 +1,19 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-variables-nonlocal{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">def outer_function():
+    x = 5
+    def inner_function():
+        nonlocal x
+        x = 10
+    inner_function()
+    print(x)  # Outputs: 10
+</code></pre>
+{% endblock %}

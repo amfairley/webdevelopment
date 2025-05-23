@@ -1,0 +1,16 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-variables-alias{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">a = [1, 2, 3]
+b = a
+b.append(4)
+print(a)  # Outputs: [1, 2, 3, 4]
+</code></pre>
+{% endblock %}

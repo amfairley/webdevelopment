@@ -130,6 +130,7 @@
                 </span>
                 <ul class="collapse list-unstyled ps-3 {% if '/Python' in request.path %}show{% endif %}" id="python-submenu">
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'python_home' %}active{% endif %}" href="{% url 'python_home' %}">Python Home</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'python_variables' %}active{% endif %}" href="{% url 'python_variables' %}">Variables</a></li>
                 </ul>
             </li>
             <!--Dropdown link example-->
@@ -287,6 +288,7 @@
                 </span>
                 <ul class="collapse list-unstyled ps-3 {% if '/Python' in request.path %}show{% endif %}" id="python-submenu">
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'python_home' %}active{% endif %}" href="{% url 'python_home' %}">Python Home</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'python_variables' %}active{% endif %}" href="{% url 'python_variables' %}">Variables</a></li>
                 </ul>
             </li>
         </ul>

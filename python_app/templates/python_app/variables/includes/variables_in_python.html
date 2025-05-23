@@ -1,0 +1,25 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-variables-variables-in-python{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Variables in Python{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        In Python, a variable is a symbolic name that refers to an object or value stored in memory. This allows you to 
+        assign descriptive names to data, making it easier to manipulate and reuse values throughout your code. You 
+        can create a Python variable by assigning a value using the syntax:
+    </p>
+    {% include 'python_app/variables/includes/code_snippets/syntax.html' %}
+    <p>
+        Python uses the equal sign (=) as the assignment operator. The variable name is placed on the left side of the 
+        =, and the value to be assigned is on the right. Python variables are dynamically typed, meaning you don't need 
+        to declare their type explicitly. You can reassign a variable to a different value or type by just reassigning 
+        it.
+    </p>
+    {% include 'python_app/variables/includes/code_snippets/reassign.html' %}
+{% endblock %}

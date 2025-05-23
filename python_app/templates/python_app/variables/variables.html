@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Python - Variables{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Variables</h2>
+    {% include 'python_app/variables/includes/contents.html' %}
+    {% include 'python_app/variables/includes/variables_in_python.html' %}
+    {% include 'python_app/variables/includes/naming_rules.html' %}
+    {% include 'python_app/variables/includes/assigning_multiple_variables.html' %}
+    {% include 'python_app/variables/includes/accessing_variables.html' %}
+    {% include 'python_app/variables/includes/advanced_variable_usage.html' %}
+
+{% endblock %}

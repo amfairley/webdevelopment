@@ -1,0 +1,51 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-variables-naming-rules{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Naming Rules{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Consistent and descriptive variable names enhance code readability and maintainability. Python follows specific 
+        conventions, primarily outlined in the
+        <a
+            class="text-link"
+            href="https://peps.python.org/pep-0008/"
+            title="Go to the PEP 8 documentation"
+            aria-label="Go to the PEP 8 documentation"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            PEP 8
+        </a>
+        official style guide for Python code. 
+    </p>
+    <p>
+        Unlike JavaScript that uses CamelCase for everything by convention, Python uses snake_case for variables, which 
+        uses underscores to separate words in the variable and uses CamelCase for 
+        <a 
+            class="text-link"
+            href="#"
+            title="Go to the page on Python classes"
+            aria-label="Go to the page on Python classes"
+        >
+            classes.
+        </a>
+    </p>
+    <p>
+        All caps are generally used for constants; variables that you will not change.
+    </p>
+    <p>
+        When naming variables in Python, follow these rules:
+    </p>
+    <ul>
+        <li>Start with a letter or underscore: Variable names must begin with a letter (a-z, A-Z) or an underscore (_).</li>
+        <li>Follow with letters, digits, or underscores: After the first character, variable names can include letters, digits (0-9), and underscores.</li>
+        <li>Names are case-sensitive: Variable names are case-sensitive (My_variable and my_variable are different).</li>
+        <li>Avoid reserved words: Do not use Python keywords (e.g., if, else, for) as variable names.</li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-variables-accessing-variables{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Accessing Variables{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Once a variable is assigned, you can access its value by referencing its name.
+    </p>
+    {% include 'python_app/variables/includes/code_snippets/access.html' %}
+    <p>
+        Variables in Python have different scopes:
+    </p>
+    <ul>
+        <li>Local Scope: Variables defined within a function are local to that function.</li>
+        <li>Global Scope: Variables defined outside functions are global and accessible throughout the module.</li>
+        <li>Nonlocal Scope: Variables defined in enclosing functions can be accessed using the nonlocal keyword.</li>
+    </ul>
+    {% include 'python_app/variables/includes/code_snippets/nonlocal.html' %}
+    <p>
+        Use the global keyword to modify global variables inside functions.
+    </p>
+    {% include 'python_app/variables/includes/code_snippets/global.html' %}
+    <p>
+        Look out for variable shadowing, where a variable in a local scope has the same name as a variable in an outer 
+        scope. The local variable "shadows" the outer one. In the following example, the global variable x is shadowed 
+        by the local variable x inside 
+        <code class="written-code">my_function</code>.
+        When used inside the function, it essentially reassigns x to the new value. But outside the function it keeps 
+        its original or most recent assignment.
+    </p>
+    {% include 'python_app/variables/includes/code_snippets/shadow.html' %}
+
+{% endblock %}
