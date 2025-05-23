@@ -1,0 +1,18 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-dictionaries-looping-through-a-dictionary{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Looping Through a Dictionary{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can loop through a dictionary using the syntax of 
+        <code class="written-code">for key, value in dictionary.items(): loop through key:value tuples</code>
+        as the for x in dictionary goes through each key.
+    </p>
+    {% include 'python_app/dictionaries/includes/code_snippets/for.html' %}
+{% endblock %}

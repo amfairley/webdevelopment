@@ -84,3 +84,15 @@ def python_tuples(request):
         'python_app/tuples/tuples.html',
         context
     )
+
+
+def python_dictionaries(request):
+    '''Return the Python dictionaries page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'python_app/dictionaries/dictionaries.html',
+        context
+    )

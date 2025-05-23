@@ -38,4 +38,9 @@ urlpatterns = [
         views.python_tuples,
         name="python_tuples"
     ),
+    path(
+        'dictionaries/',
+        views.python_dictionaries,
+        name="python_dictionaries"
+    ),
 ]

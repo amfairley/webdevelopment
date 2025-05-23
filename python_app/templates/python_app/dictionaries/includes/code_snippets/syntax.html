@@ -1,0 +1,24 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-dictionaries-syntax{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python"># Creating an empty dictionary
+empty_dictionary = {}
+
+# Creating a simple dictionary
+simple_dictionary = {
+	'name': 'Adam',
+	'occupation: 'Engineer',
+	'age': 34,
+}
+
+# Adding a new key and value
+simple_dictionary.update({'location':'Europe'})
+</code></pre>
+{% endblock %}

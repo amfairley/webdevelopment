@@ -1,0 +1,18 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-dictionaries-values{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python"># Return the value of the passed key
+simple_dictionary['occupation']
+#Overwriting an existing key value
+simple_dictionary['occupation'] = 'Software Engineer'
+# Return the key or a default value e.g. 'Key not found'
+simple_dictionary.get(key, 'Key not found')
+</code></pre>
+{% endblock %}

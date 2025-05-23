@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Python - Dictionaries{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Dictionaries</h2>
+    {% include 'python_app/dictionaries/includes/contents.html' %}
+    {% include 'python_app/dictionaries/includes/introduction_to_dictionaries.html' %}
+    {% include 'python_app/dictionaries/includes/accessing_values_in_a_dictionary.html' %}
+    {% include 'python_app/dictionaries/includes/combining_lists_into_dictionaries.html' %}
+    {% include 'python_app/dictionaries/includes/looping_through_a_dictionary.html' %}
+    {% include 'python_app/dictionaries/includes/dictionary_comprehension.html' %}
+    {% include 'python_app/dictionaries/includes/dictionary_methods.html' %}
+{% endblock %}

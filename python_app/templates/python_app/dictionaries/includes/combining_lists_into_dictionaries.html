@@ -1,0 +1,23 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-dictionaries-combining-lists-into-dictionaries{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Combining Lists into Dictionaries{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can think of a dictionary as two connected lists, one for the keys and the other for the values and as 
+        such you can actually combine two lists into a dictionary with the following syntax.
+    </p>
+    {% include 'python_app/dictionaries/includes/code_snippets/combine.html' %}
+    <ul>
+        <li>This takes lists 1 and 2 and 'zips' them together in a dictionary.</li>
+        <li>It puts list1 as the keys.</li>
+        <li>It puts list2 as the values.</li>
+        <li>This is the general syntax, but the 'for key, value' uses temporary variables, so to be more descriptive this could for example be 'for name, age' when combining lists of names and respective ages.</li>
+    </ul>
+{% endblock %}

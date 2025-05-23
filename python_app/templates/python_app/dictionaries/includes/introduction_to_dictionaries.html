@@ -1,0 +1,33 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-dictionaries-introduction-to-dictionaries{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Introduction to Dictionaries{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Dictionaries in Python are unordered collections of key: value pairs. They are similar in that regard to 
+        <a 
+            class="text-link"
+            href="{% url 'JavaScript_objects' %}"
+            title="Go to the JavaScript object page"
+            aria-label="Go to the JavaScript object page"
+        >
+            JavaScript Objects
+        </a>
+        and they follow the syntax of:
+    </p>
+    <ul>
+        <li>Being enclosed by (starting and ending with) curly brackets: {}</li>
+        <li>A dictionary is defined by assigning a variable to the curly brackets</li>
+        <li>Each key:value pair is separated by a comma: ,</li>
+        <li>They key can be either a string or a number</li>
+        <li>Values can be any data type</li>
+        <li>New keys and corresponding values can be added to an existing dictionary by using the .update method and passing a dictionary of the new key:value pairs as the argument</li>
+    </ul>
+    {% include 'python_app/dictionaries/includes/code_snippets/syntax.html' %}
+{% endblock %}

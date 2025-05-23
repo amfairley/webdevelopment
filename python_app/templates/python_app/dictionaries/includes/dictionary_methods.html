@@ -1,0 +1,25 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-dictionaries-dictionary-methods{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Dictionary Methods{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <ul>
+        <li><code class="written-code">clear()</code>: Removes all elements from a dictionary.</li>
+        <li><code class="written-code">copy()</code>: Returns a copy of a dictionary.</li>
+        <li><code class="written-code">fromkeys()</code>: Returns a new dictionary with the specified keys and values.</li>
+        <li><code class="written-code">get(keyname, value)</code>: Returns the value of a specified keyname. Returns none if not found or value if put in an optional value.</li>
+        <li><code class="written-code">items()</code>: List containing tuples for each key:value pair.</li>
+        <li><code class="written-code">keys()</code>: List of keys.</li>
+        <li><code class="written-code">pop()</code>: Remove the specified key:value pair.</li>
+        <li><code class="written-code">popitem()</code>: Removes last inserted key:value pair.</li>
+        <li><code class="written-code">setdefault()</code>: Returns value of specified key. If it does not exist, insert the key with the specified value.</li>
+        <li><code class="written-code">update()</code>: Update the dictionary with the specified key:value pairs.</li>
+        <li><code class="written-code">values()</code>: Return a list of values in the dictionary.</li>
+    </ul>
+{% endblock %}

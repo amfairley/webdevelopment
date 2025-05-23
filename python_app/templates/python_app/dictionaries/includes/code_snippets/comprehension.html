@@ -1,0 +1,22 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-dictionaries-comprehension{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">var = { tempvar_key : tempvar_value for tempvar in (list, dict,ect)}
+
+# An example for making a dictionary of cubed numbers:
+# Non-comprehension
+cubes = {}
+for n in (2, 4, 6):
+    cubes[n] = n**3
+
+# Dictionary comprehension
+cubes = {n: n**3 for n in (2, 4, 6)}
+</code></pre>
+{% endblock %}

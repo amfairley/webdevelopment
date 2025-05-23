@@ -1,0 +1,17 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-dictionaries-dictionary-comprehension{% endblock %}
+
+<!--Section title-->
+{% block text_title %}{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Like with functions, there is shorthand for creating Python dictionaries as a result of a function. The general 
+        syntax for this is
+    </p>
+    {% include 'python_app/dictionaries/includes/code_snippets/comprehension.html' %}
+{% endblock %}

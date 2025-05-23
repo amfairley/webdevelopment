@@ -1,0 +1,32 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-dictionaries-accessing-values-in-a-dictionary{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Accessing Values in a Dictionary{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can access values in a dictionary by the following syntax: 
+        <code class="written-code">dictionary[key]</code>.
+        This can be used to overwrite the existing key values of a dictionary by assigning it a new value. However if 
+        the key is not found it will return a 
+        <code class="written-code">KeyError</code>.
+        In order to avoid this you can use the 
+        <code class="written-code">.get</code>
+        method and define a default value to be returned in this case. 
+    </p>
+    {% include 'python_app/dictionaries/includes/code_snippets/values.html' %}
+    <p>
+        You can also return aspects of the dictionary as iterables using the following methods:
+    </p>
+    <ul>
+        <li><code class="written-code">list(dictionary)</code>: Shows all keys as a list</li>
+        <li><code class="written-code">dictionary.keys()</code>: Returns a dict_keys object</li>
+        <li><code class="written-code">dictionary.values()</code>: Returns a dict_values object</li>
+        <li><code class="written-code">dictionary.items()</code>: Returns a dict_list object as tuples of key, value</li>
+    </ul>
+{% endblock %}

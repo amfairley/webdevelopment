@@ -1,0 +1,14 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-dictionaries-combine{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python"># Combining lists into a dictionary
+joint_dictionary = {key:value for key, value in zip(list1, list2)}
+</code></pre>
+{% endblock %}
