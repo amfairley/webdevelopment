@@ -1,0 +1,37 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-booleans-boolean-operators{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Boolean Operators{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Python provides three primary Boolean operators: and, or, and not.
+    </p>
+    <p>
+        And returns True if both operands are True.
+    </p>
+    {% include 'python_app/booleans/includes/code_snippets/and_1.html' %}
+    <p>
+        The and operator returns the first falsy value or the last value if all are truthy.
+    </p>
+    {% include 'python_app/booleans/includes/code_snippets/and_2.html' %}
+    <p>
+        or returns True if at least one operand is True.
+    </p>
+    {% include 'python_app/booleans/includes/code_snippets/or_1.html' %}
+    <p>
+        Similar to and, the or operator returns the first truthy value or the last value if all are falsy.
+    </p>
+    {% include 'python_app/booleans/includes/code_snippets/or_2.html' %}
+    <p>
+        not returns the opposite Boolean value of the operand. The not operator always returns a Boolean value, 
+        inverting the truthiness of its operand.
+    </p>
+    {% include 'python_app/booleans/includes/code_snippets/not.html' %}
+
+{% endblock %}

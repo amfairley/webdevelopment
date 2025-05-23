@@ -1,0 +1,19 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-booleans-is{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">#  Here, a and b reference the same list object, while c is a separate object with the same content.
+a = [1, 2, 3]
+b = a
+c = [1, 2, 3]
+print(a is b)   # Output: True
+print(a is c)   # Output: False
+print(a == c)   # Output: True
+</code></pre>
+{% endblock %}

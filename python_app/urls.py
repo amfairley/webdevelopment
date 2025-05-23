@@ -23,4 +23,9 @@ urlpatterns = [
         views.python_strings,
         name="python_strings"
     ),
+    path(
+        'booleans/',
+        views.python_booleans,
+        name="python_booleans"
+    ),
 ]

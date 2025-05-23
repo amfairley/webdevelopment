@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Python - Booleans{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Booleans</h2>
+    {% include 'python_app/booleans/includes/contents.html' %}
+    {% include 'python_app/booleans/includes/booleans_in_python.html' %}
+    {% include 'python_app/booleans/includes/boolean_operators.html' %}
+    {% include 'python_app/booleans/includes/identity_operators.html' %}
+    {% include 'python_app/booleans/includes/membership_operators.html' %}
+{% endblock %}

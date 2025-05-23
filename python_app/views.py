@@ -48,3 +48,15 @@ def python_strings(request):
         'python_app/strings/strings.html',
         context
     )
+
+
+def python_booleans(request):
+    '''Return the Python booleans page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'python_app/booleans/booleans.html',
+        context
+    )

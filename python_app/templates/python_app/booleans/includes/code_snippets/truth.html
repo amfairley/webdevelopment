@@ -1,0 +1,16 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-booleans-truth{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">print(bool(0))        # Output: False
+print(bool(1))        # Output: True
+print(bool(""))       # Output: False
+print(bool("Python")) # Output: True
+</code></pre>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-booleans-identity-operators{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Identity Operators{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Python's identity operators check whether two variables reference the same object in memory:
+    </p>
+    <ul>
+        <li><code class="written-code">is</code>: Returns True if both variables point to the same object.</li>
+        <li><code class="written-code">is not</code>: Returns True if variables point to different objects.</li>
+    </ul>
+    {% include 'python_app/booleans/includes/code_snippets/is.html' %}
+    <p>
+        True and False are singletons in Python, meaning there's only one instance of each in a Python program. 
+        Therefore, using is with Boolean values is valid.
+    </p>
+    {% include 'python_app/booleans/includes/code_snippets/single.html' %}
+    <p>
+        However, for general truth value testing, it's recommended to use == or simply rely on the truthiness of the 
+        value.
+    </p>
+    {% include 'python_app/booleans/includes/code_snippets/truth_test.html' %}
+
+{% endblock %}

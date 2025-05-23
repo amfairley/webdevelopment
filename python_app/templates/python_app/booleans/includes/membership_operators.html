@@ -1,0 +1,21 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-booleans-membership-operators{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Membership Operators{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Membership operators check for membership within sequences like lists, tuples, strings, etc.:
+    </p>
+    <ul>
+        <li><code class="written-code">in</code>: Returns True if the specified value is present.</li>
+        <li><code class="written-code">not in</code>: Returns True if the specified value is absent.</li>
+    </ul>
+    {% include 'python_app/booleans/includes/code_snippets/membership.html' %}
+
+{% endblock %}

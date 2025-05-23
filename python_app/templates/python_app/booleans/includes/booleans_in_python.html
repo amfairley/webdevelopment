@@ -1,0 +1,28 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-booleans-booleans-in-python{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Booleans in Python{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Python's Boolean data type has two values: True or False. These use capital letters, unlike lowercase letters 
+        in JavaScript. These are used to represent the truth value of expressions and are integral to control flow in 
+        Python programs. You can evaluate expressions to return Boolean values such as: 
+    </p>
+    {% include 'python_app/booleans/includes/code_snippets/true.html' %}
+    <p>
+        Additionally, you can use the 
+        <code class="written-code">bool()</code>
+        function to determine the truth value of an object:
+    </p>
+    {% include 'python_app/booleans/includes/code_snippets/truth.html' %}
+    <p>
+        In Python, values like 0, None, '', [], and {} are considered False, while most other values are considered 
+        True.
+    </p>
+{% endblock %}
