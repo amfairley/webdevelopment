@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Python - Data Types{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Data Types</h2>
+    {% include 'python_app/data_types/includes/contents.html' %}
+    {% include 'python_app/data_types/includes/types.html' %}
+    {% include 'python_app/data_types/includes/conversion.html' %}
+    {% include 'python_app/data_types/includes/operators.html' %}
+{% endblock %}

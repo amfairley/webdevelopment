@@ -1,0 +1,109 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-data-types-types{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Types{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Data in python can take the following types:
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Data Type
+                </th>
+                <th>
+                    Description
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <code class="written-code">
+                        int
+                    </code>
+                </td>
+                <td>
+                    An integer.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">
+                        float
+                    </code>
+                </td>
+                <td>
+                    A floating point number (e.g. a decimal).
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">
+                        list
+                    </code>
+                </td>
+                <td>
+                    A list of items comma separated inside square brackets.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">
+                        tuple
+                    </code>
+                </td>
+                <td>
+                    A special type of list that cannot be changed.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">
+                        str
+                    </code>
+                </td>
+                <td>
+                    A series of characters and can be treated like a list of characters.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">
+                        bool
+                    </code>
+                </td>
+                <td>
+                    A Boolean value that is either true or false.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">
+                        dict
+                    </code>
+                </td>
+                <td>
+                    A dictionary of key: value pairs.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">
+                        set
+                    </code>
+                </td>
+                <td>
+                    An unordered selection of unique items defined with curly brackets.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

@@ -24,3 +24,15 @@ def python_variables(request):
         'python_app/variables/variables.html',
         context
     )
+
+
+def python_data_types(request):
+    '''Return the Python data types page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'python_app/data_types/data_types.html',
+        context
+    )

@@ -13,4 +13,9 @@ urlpatterns = [
         views.python_variables,
         name="python_variables"
     ),
+    path(
+        'data_types/',
+        views.python_data_types,
+        name="python_data_types"
+    ),
 ]

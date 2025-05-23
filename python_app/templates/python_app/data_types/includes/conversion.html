@@ -1,0 +1,119 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-data-types-conversion{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Conversion{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Python provides some built in functions in order to convert between data types.
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Function
+                </th>
+                <th>
+                    Description
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <code class="written-code">
+                        int()
+                    </code>
+                </td>
+                <td>
+                    Converts to an integer.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">
+                        float()
+                    </code>
+                </td>
+                <td>
+                    Converts to a float.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">
+                        hex()
+                    </code>
+                </td>
+                <td>
+                    Converts a number to a hexadecimal string.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">
+                        oct()
+                    </code>
+                </td>
+                <td>
+                    Converts a number to an octal string.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">
+                        tuple()
+                    </code>
+                </td>
+                <td>
+                    Converts to a tuple.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">
+                        set()
+                    </code>
+                </td>
+                <td>
+                    Converts to a set.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">
+                        list()
+                    </code>
+                </td>
+                <td>
+                    Converts an iterable to a list.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">
+                        dict()
+                    </code>
+                </td>
+                <td>
+                    Converts a list or tuple of key-value pairs into a dictionary.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">
+                        str()
+                    </code>
+                </td>
+                <td>
+                    Converts a number into a string.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
