@@ -1,0 +1,24 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-strings-accessing-and-slicing-strings{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Accessing and Slicing Strings{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Strings in Python can be though of as a list of characters. Like in JavaScript, Python is zero index, so the 
+        first letter in a string will have the index of 0 and the index of the last letter is the length of the string 
+        minus 1.
+    </p>
+    {% include 'python_app/strings/includes/code_snippets/access.html' %}
+    <p>
+        The length of a string can be determined using 
+        <code class="written-code">len()</code>.
+    </p>
+    {% include 'python_app/strings/includes/code_snippets/len.html' %}
+
+{% endblock %}

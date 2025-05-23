@@ -1,0 +1,14 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-strings-format{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">def favourite_song_statement(song, artist):
+    return "My favourite song is {} by {}.".format(song, artist)
+</code></pre>
+{% endblock %}

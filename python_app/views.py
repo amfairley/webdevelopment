@@ -36,3 +36,15 @@ def python_data_types(request):
         'python_app/data_types/data_types.html',
         context
     )
+
+
+def python_strings(request):
+    '''Return the Python strings page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'python_app/strings/strings.html',
+        context
+    )

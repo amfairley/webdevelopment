@@ -1,0 +1,15 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-strings-literal{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">name = "Adam"
+age = 34
+print(f"{name} is {age} years old.")  # Output: Adam is 34 years old.
+</code></pre>
+{% endblock %}

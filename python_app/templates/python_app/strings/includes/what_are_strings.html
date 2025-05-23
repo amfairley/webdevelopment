@@ -1,0 +1,19 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-strings-what-are-strings{% endblock %}
+
+<!--Section title-->
+{% block text_title %}What are Strings?{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        In Python, a string is a sequence of Unicode characters enclosed within single ('), double ("), or triple 
+        quotes (''' or """). Triple quotes are particularly useful for multi-line strings. Strings are immutable, 
+        meaning once created, their contents cannot be changed. However, you can create new strings based on existing 
+        ones.
+    </p>
+    {% include 'python_app/strings/includes/code_snippets/quotes.html' %}
+{% endblock %}

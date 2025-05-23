@@ -1,0 +1,74 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-strings-common-string-methods{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Common String Methods{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Methods in Python also follow dot notation so will take the syntax of 
+        <code class="written-code">variable.method(parameter)</code>.
+    </p>
+    <!--Case Conversion-->
+    <h4 id="python-strings-common-string-methods-case-conversion">Case Conversion</h4>
+    <ul>
+        <li><code class="written-code">lower()</code>: Converts to lowercase.</li>
+        <li><code class="written-code">upper()</code>: Converts to uppercase.</li>
+        <li><code class="written-code">capitalize()</code>: Capitalises the first character.</li>
+        <li><code class="written-code">title()</code>: Capitalizes the first character of each word.</li>
+        <li><code class="written-code">swapcase()</code>: Swaps case of each character.</li>
+    </ul>
+    <!--Searching and Replacing-->
+    <h4 id="python-strings-common-string-methods-searching-and-replacing">Searching and Replacing</h4>
+    <ul>
+        <li><code class="written-code">count()</code>: Returns the amount of times a specified value occurs.</li>
+        <li><code class="written-code">endswith()</code>: Returns True if the string ends with a given suffix.</li>
+        <li><code class="written-code">find(sub)</code>: Returns the lowest index of substring sub; returns -1 if not found.</li>
+        <li><code class="written-code">rfind(sub)</code>: Returns the highest index of substring sub; returns -1 if not found.</li>
+        <li><code class="written-code">index(sub)</code>: Like find(), but raises a ValueError if sub is not found.</li>
+        <li><code class="written-code">replace(old, new)</code>: Replaces occurrences of old with new.</li>
+    </ul>
+    <!--Trimming and Padding-->
+    <h4 id="python-strings-common-string-methods-trimming-and-padding">Trimming and Padding</h4>
+    <ul>
+        <li><code class="written-code">expandstabs()</code>: Sets the tab size in spaces of the string.</li>
+        <li><code class="written-code">strip()</code>: Removes leading and trailing whitespace.</li>
+        <li><code class="written-code">lstrip()</code>: Removes leading whitespace.</li>
+        <li><code class="written-code">rstrip()</code>: Removes trailing whitespace.</li>
+        <li><code class="written-code">center(width, fillchar)</code>: Centers string in a field of given width, padded with fillchar.</li>
+        <li><code class="written-code">ljust(width, fillchar)</code>: Left-justifies string.</li>
+        <li><code class="written-code">rjust(width, fillchar)</code>: Right-justifies string.</li>
+    </ul>
+    <!--Splitting and Joining-->
+    <h4 id="python-strings-common-string-methods-splitting-and-joining">Splitting and Joining</h4>
+    <ul>
+        <li><code class="written-code">partition()</code>: Returns a tuple where the string is parted into two strings and the separator.</li>
+        <li><code class="written-code">split("delimiter")</code>: Splits string into a list using a given delimiter. By default it uses a space.</li>
+        <li><code class="written-code">rpartition()</code>: Returns a tuple where the string is parted into three parts.</li>
+        <li><code class="written-code">rsplit(sep)</code>: Splits string from the right.</li>
+        <li><code class="written-code">splitlines()</code>: Splits string at line breaks.</li>
+        <li><code class="written-code">'delimiter'.join(iterable)</code>: Joins elements of iterable with a given delimiter.</li>
+
+    </ul>
+    <!--Validation Methods-->
+    <h4 id="python-strings-common-string-methods-validation-methods">Validation Methods</h4>
+    <ul>
+        <li><code class="written-code">isalnum()</code>: Checks if all characters are alphanumeric.</li>
+        <li><code class="written-code">isalpha()</code>: Checks if all characters are alphabetic.</li>
+        <li><code class="written-code">isdigit()</code>: Checks if all characters are digits.</li>
+        <li><code class="written-code">islower()</code>: Checks if all characters are lowercase.</li>
+        <li><code class="written-code">isupper()</code>: Checks if all characters are uppercase.</li>
+        <li><code class="written-code">isspace()</code>: Checks if all characters are whitespace.</li>
+        <li><code class="written-code">istitle()</code>: Checks if string is titlecased.</li>
+    </ul>
+    <!--Encoding and Decoding-->
+    <h4 id="python-strings-common-string-methods-encoding-and-decoding">Encoding and Decoding</h4>
+    <ul>
+        <li><code class="written-code">encode(encoding)</code>: Encodes string using specified encoding.</li>
+        <li><code class="written-code">decode(encoding)</code>: Decodes bytes to string using specified encoding.</li>
+    </ul>
+{% endblock %}

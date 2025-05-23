@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Python - Strings{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Strings</h2>
+    {% include 'python_app/strings/includes/contents.html' %}
+    {% include 'python_app/strings/includes/what_are_strings.html' %}
+    {% include 'python_app/strings/includes/concatenation_and_formatting.html' %}
+    {% include 'python_app/strings/includes/accessing_and_slicing_strings.html' %}
+    {% include 'python_app/strings/includes/common_string_methods.html' %}
+{% endblock %}

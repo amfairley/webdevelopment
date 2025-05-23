@@ -1,0 +1,17 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-strings-access{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">text = "Python"
+print(text[0])    # Output: 'P'
+print(text[-1])   # Output: 'n'
+print(text[len(text)-1]) # Output: 'n'
+print(text[1:4])  # Output: 'yth'
+</code></pre>
+{% endblock %}

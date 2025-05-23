@@ -1,0 +1,35 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-strings-concatenation-and-formatting{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Concatenation and Formatting{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can 
+        <dfn title="To join together">concatenate</dfn>
+        strings using the + operator.
+    </p>
+    {% include 'python_app/strings/includes/code_snippets/concatenate.html' %}
+    <p>
+        Introduced in Python 3.6, formatted string literals (f-strings) allow embedding expressions inside string 
+        literals. The syntax is to put an f outside the opening quotation mark of a string and to insert variables into 
+        the string wrapped in curly brackets.
+    </p>
+    {% include 'python_app/strings/includes/code_snippets/literal.html' %}
+    <p>
+        You can include special characters in a string such as quotation marks by preceding them with the escape 
+        character \.
+    </p>
+    <p>
+        You can also use the string method 
+        <code class="written-code">.format()</code>.
+        It takes parameters as arguments and includes them in a string.
+    </p>
+    {% include 'python_app/strings/includes/code_snippets/format.html' %}
+
+{% endblock %}
