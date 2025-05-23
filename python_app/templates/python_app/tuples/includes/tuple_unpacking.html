@@ -1,0 +1,18 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-tuples-tuple-unpacking{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Tuple Unpacking{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can assign each value of a tuple to a variable in one line by putting comma separated variables equal to 
+        the tuple. This will assign the 1st variable to the 1st value in the tuple, 2nd variable to the second value, 
+        etc. Underscores (_) can also be used to ignore/skip values you do not want to assign to variables.
+    </p>
+    {% include 'python_app/tuples/includes/code_snippets/unpack.html' %}
+{% endblock %}

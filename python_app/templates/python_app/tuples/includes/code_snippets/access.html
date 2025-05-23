@@ -1,0 +1,15 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-tuples-access{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">colors = ("red", "green", "blue")
+print(colors[1])  # Output: green
+print(colors[:2])  # Output: ('red', 'green')
+</code></pre>
+{% endblock %}

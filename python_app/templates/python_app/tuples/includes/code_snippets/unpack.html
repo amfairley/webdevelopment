@@ -1,0 +1,20 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-tuples-unpack{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">person = ("Adam", 34)
+name, age = person
+print(name)  # Adam
+print(age)   # 34
+You can also use _ to ignore values:
+name, _, job = ("Bob", 25, “Director”)
+print(name)  # Bob
+print(job)   # Director
+</code></pre>
+{% endblock %}

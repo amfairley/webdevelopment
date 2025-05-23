@@ -33,4 +33,9 @@ urlpatterns = [
         views.python_lists,
         name="python_lists"
     ),
+    path(
+        'tuples/',
+        views.python_tuples,
+        name="python_tuples"
+    ),
 ]

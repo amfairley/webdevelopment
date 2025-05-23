@@ -1,0 +1,20 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-tuples-tuple-methods{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Tuple Methods{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Tuples have only two built-in methods.
+    </p>
+    <ul>
+        <li><code class="written-code">.count(x)</code>: Returns the number of times x appears.</li>
+        <li><code class="written-code">.index(x)</code>: Returns the first index of x.</li>
+    </ul>
+    {% include 'python_app/tuples/includes/code_snippets/methods.html' %}
+{% endblock %}

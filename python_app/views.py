@@ -72,3 +72,15 @@ def python_lists(request):
         'python_app/lists/lists.html',
         context
     )
+
+
+def python_tuples(request):
+    '''Return the Python tuples page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'python_app/tuples/tuples.html',
+        context
+    )

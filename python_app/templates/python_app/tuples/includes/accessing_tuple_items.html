@@ -1,0 +1,18 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-tuples-accessing-tuple-items{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Accessing Tuple Items{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Tuples are 0 indexed and ordered, which differs them from JavaScript sets. Slicing like you would on a list 
+        also works for tuples.
+    </p>
+    {% include 'python_app/tuples/includes/code_snippets/access.html' %}
+
+{% endblock %}

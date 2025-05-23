@@ -1,0 +1,17 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-tuples-nesting{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Nesting{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Tuples can hold other tuples, lists, or mixed types. While the tuple is immutable, mutable elements inside it 
+        (like lists) can still be changed:
+    </p>
+    {% include 'python_app/tuples/includes/code_snippets/nest.html' %}
+{% endblock %}

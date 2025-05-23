@@ -1,0 +1,19 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-tuples-creating-tuples{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Creating Tuples{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Tuples are defined using parentheses () instead of square brackets []. Although you can also omit the 
+        parentheses but this makes the code less clear. If you only have 1 item in your tuple, you still need to 
+        include a comma.
+    </p>
+    {% include 'python_app/tuples/includes/code_snippets/define.html' %}
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-tuples-nest{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">nested = (1, [2, 3], ("a", "b"))
+print(nested[1][0]) # Output: a
+nested[1][0] = 99
+print(nested[1][0]) # Output: 99
+</code></pre>
+{% endblock %}

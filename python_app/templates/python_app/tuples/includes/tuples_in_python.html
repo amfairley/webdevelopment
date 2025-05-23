@@ -1,0 +1,19 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-tuples-tuples-in-python{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Tuples in Python{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        A tuple is a built-in data type used to store multiple items in a single, ordered, and immutable collection. 
+        Tuples are like lists, but with the one big difference of not being able to be changed after creation. This 
+        makes tuples safer than lists and use up less memory than lists. This makes them great for data integrity where 
+        the data shouldn't be modified, like geographic coordinates or RGB values. Another key aspect of tuples is that 
+        they are hashable and can be used as keys in dictionaries or stored in sets.
+    </p>
+{% endblock %}
