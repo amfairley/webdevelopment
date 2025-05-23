@@ -1,0 +1,37 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-sets-sets{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Sets in Python{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        In Python, a set is an unordered collection of unique elements, meaning it automatically removes duplicate data,
+        which makes sets especially useful for tasks like removing deduplication.  Converting a list to a set and back 
+        again is a quick way to remove duplicate values. 
+    </p>
+    {% include 'python_app/sets/includes/code_snippets/convert.html' %}
+    <p>
+        Sets are defined using curly braces ({}) or the 
+        <code class="written-code">set()</code>
+        constructor, and they support a variety of mathematical operations for combining sets.
+    </p>
+    <ul>
+        <li><code class="written-code">set1.union(set2)</code> Returns all elements from set 1 and 2, removing duplicates.</li>
+        <li><code class="written-code">set1.intersection(set2)</code> Returns elements that are present in both sets.</li>
+        <li><code class="written-code">set1 - set2 or set1.difference(set2)</code> Returns elements in set1 that are not in set2.</li>
+        <li><code class="written-code">set1.symmetric_difference(set2)</code> Returns elements that are in either set, but not in both.</li>
+    </ul>
+    <p>
+        Sets are also efficient for membership testing (x in my_set), typically faster than lists due to their 
+        underlying hash table implementation. However, since sets are unordered, they don't support indexing or slicing.
+        In recent versions of Python, sets can only contain immutable (hashable) types, so items like tuples can be 
+        added, but lists and dictionaries cannot. Python also provides a frozenset type, which is an immutable version 
+        of a set, useful when you need a set that itself can be used as a key in another dictionary or added to another 
+        set.
+    </p>
+{% endblock %}

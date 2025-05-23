@@ -43,4 +43,9 @@ urlpatterns = [
         views.python_dictionaries,
         name="python_dictionaries"
     ),
+    path(
+        'sets/',
+        views.python_sets,
+        name="python_sets"
+    ),
 ]

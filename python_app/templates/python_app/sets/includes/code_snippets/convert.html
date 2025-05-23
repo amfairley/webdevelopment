@@ -1,0 +1,15 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-sets-convert
+{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python"># Convert a list to a set and then back to a list to remove duplicates
+(list(set(my_list)))
+</code></pre>
+{% endblock %}

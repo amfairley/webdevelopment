@@ -96,3 +96,15 @@ def python_dictionaries(request):
         'python_app/dictionaries/dictionaries.html',
         context
     )
+
+
+def python_sets(request):
+    '''Return the Python sets page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'python_app/sets/sets.html',
+        context
+    )
