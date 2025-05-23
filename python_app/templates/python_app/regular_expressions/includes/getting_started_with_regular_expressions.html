@@ -1,0 +1,26 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-regular-expressions-getting-started-with-regular-expressions{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Getting Started with Regular Expressions{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        <dfn title="Regular Expressions">Regex</dfn>
+        powerful tools for matching patterns in text. In Python, the 
+        <code class="written-code">re</code>
+        module provides everything you need to search, extract, and manipulate strings using regex patterns. In order 
+        to do this, the first thing you will need to do in your Python file is to import the re module.
+    </p>
+    {% include 'python_app/regular_expressions/includes/code_snippets/import.html' %}
+    <p>
+        When writing regular expressions in your code, it is convention to use raw strings (r””) as this will prevent 
+        Python from treating backslashes as escape characters.
+    </p>
+    {% include 'python_app/regular_expressions/includes/code_snippets/raw.html' %}
+
+{% endblock %}

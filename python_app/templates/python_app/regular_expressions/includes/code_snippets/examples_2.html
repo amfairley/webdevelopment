@@ -1,0 +1,31 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-regular-expressions-examples-2{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">import re
+
+password = "P@ssw0rd!"
+
+pattern = r"""
+^                       # Start of string
+(?=.*[a-z])             # At least one lowercase letter
+(?=.*[A-Z])             # At least one uppercase letter
+(?=.*\d)                # At least one digit
+(?=.*[@$!%*?&])         # At least one special character
+[A-Za-z\d@$!%*?&]{8,}   # Only these characters, at least 8 total
+$                       # End of string
+"""
+
+# Use re.VERBOSE to allow comments/whitespace in the pattern
+if re.match(pattern, password, re.VERBOSE):
+    print("Valid password")
+else:
+    print("Invalid password")
+</code></pre>
+{% endblock %}

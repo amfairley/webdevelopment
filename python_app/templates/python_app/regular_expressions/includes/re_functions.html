@@ -1,0 +1,56 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-regular-expressions-re-functions{% endblock %}
+
+<!--Section title-->
+{% block text_title %}re Functions{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Optional flags can be added as an extra parameters in most re functions (all except re.escape() and re.purge()) e.g.
+    </p>
+    {% include 'python_app/regular_expressions/includes/code_snippets/flags.html' %}
+    <ul>
+        <li><code class="written-code">re.IGNORECASE</code> or <code class="written-code">re.I</code>:	Makes the pattern case-insensitive. Example: re.search(r"hello", "HELLO", re.I).</li>
+        <li><code class="written-code">re.MULTILINE</code> or <code class="written-code">re.M</code>:	^ and $ match the start and end of each line (not just the whole string).</li>
+        <li><code class="written-code">re.DOTALL</code> or <code class="written-code">re.S</code>:	Makes the . character match any character including newline (\n).</li>
+        <li><code class="written-code">re.VERBOSE</code> or <code class="written-code">re.X</code>:	Allows you to write multi-line regex with comments and spacing for readability.</li>
+        <li><code class="written-code">re.ASCII</code> or <code class="written-code">re.A</code>:	Makes \w, \d, and \s match only ASCII characters, rather than Unicode.</li>
+        <li><code class="written-code">re.LOCALE</code>:	Deprecated and rarely used; was used for locale-aware matching of character classes (\w, etc.).</li>
+    </ul>
+    <code class="written-code">re.search()</code>
+    <p>
+        Searches for a pattern anywhere in the string and returns the first match.
+    </p>
+    {% include 'python_app/regular_expressions/includes/code_snippets/search.html' %}
+    <code class="written-code">re.match()</code>
+    <p>
+        Like 
+        <code class="written-code">re.search()</code>,
+        but it only matches if the pattern is at the beginning of the string.
+    </p>
+    {% include 'python_app/regular_expressions/includes/code_snippets/match.html' %}
+    <code class="written-code">re.fullmatch()</code>
+    <p>
+        Matches the entire string against the pattern.
+    </p>
+    {% include 'python_app/regular_expressions/includes/code_snippets/full_match.html' %}
+    <code class="written-code">re.findall()</code>
+    <p>
+        Returns a list of all non-overlapping matches in the string.
+    </p>
+    {% include 'python_app/regular_expressions/includes/code_snippets/findall.html' %}
+    <code class="written-code">re.split()</code>
+    <p>
+        Splits a string at each match of the pattern.
+    </p>
+    {% include 'python_app/regular_expressions/includes/code_snippets/split.html' %}
+    <code class="written-code">re.sub()</code>
+    <p>
+        Replaces all matches of the pattern with a replacement string.
+    </p>
+    {% include 'python_app/regular_expressions/includes/code_snippets/sub.html' %}
+{% endblock %}

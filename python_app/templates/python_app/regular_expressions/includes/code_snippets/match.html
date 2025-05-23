@@ -1,0 +1,13 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-regular-expressions-match{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">match = re.match(r"\d+", "123abc")  # Match found
+</code></pre>
+{% endblock %}

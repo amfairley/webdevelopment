@@ -1,0 +1,14 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-regular-expressions-sub{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">cleaned = re.sub(r"\d+", "[number]", "Room 101 and Room 202")
+print(cleaned)  # Output: Room [number] and Room [number]
+</code></pre>
+{% endblock %}

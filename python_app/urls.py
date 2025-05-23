@@ -48,4 +48,9 @@ urlpatterns = [
         views.python_sets,
         name="python_sets"
     ),
+    path(
+        'regular_expressions/',
+        views.python_regular_expressions,
+        name="python_regular_expressions"
+    ),
 ]

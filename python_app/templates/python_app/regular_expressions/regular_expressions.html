@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Python - Regular Expressions{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Regular Expressions</h2>
+    {% include 'python_app/regular_expressions/includes/contents.html' %}
+    {% include 'python_app/regular_expressions/includes/getting_started_with_regular_expressions.html' %}
+    {% include 'python_app/regular_expressions/includes/basic_characters.html' %}
+    {% include 'python_app/regular_expressions/includes/anchors.html' %}
+    {% include 'python_app/regular_expressions/includes/character_sets.html' %}
+    {% include 'python_app/regular_expressions/includes/special_sequences.html' %}
+    {% include 'python_app/regular_expressions/includes/grouping_and_capturing.html' %}
+    {% include 'python_app/regular_expressions/includes/re_functions.html' %}
+    {% include 'python_app/regular_expressions/includes/examples.html' %}
+{% endblock %}

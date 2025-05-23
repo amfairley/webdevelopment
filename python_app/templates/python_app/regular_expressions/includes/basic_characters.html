@@ -1,0 +1,19 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-regular-expressions-basic-characters{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Basic Characters{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <ul>
+        <li>. - Matches any character except a newline.</li>
+        <li>* - Matches zero or more repetitions of the previous character or group.</li>
+        <li>+ - Matches one or more repetitions.</li>
+        <li>? - Matches zero or one repetition.</li>
+        <li>{m} - Matches exactly m repetitions.</li>
+    </ul>
+{% endblock %}

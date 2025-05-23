@@ -1,0 +1,14 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-regular-expressions-examples{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Examples{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    {% include 'python_app/regular_expressions/includes/code_snippets/examples_1.html' %}
+    {% include 'python_app/regular_expressions/includes/code_snippets/examples_2.html' %}
+{% endblock %}

@@ -108,3 +108,15 @@ def python_sets(request):
         'python_app/sets/sets.html',
         context
     )
+
+
+def python_regular_expressions(request):
+    '''Return the Python regular expressions page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'python_app/regular_expressions/regular_expressions.html',
+        context
+    )

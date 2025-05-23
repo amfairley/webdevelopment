@@ -1,0 +1,21 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-regular-expressions-character-sets{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Character Sets{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <ul>
+        <li>[] - Syntax for matching a set of characters.</li>
+        <li>[a-z] - Any lowercase letter.</li>
+        <li>[A-Z] - Any uppercase letter.</li>
+        <li>[a-zA-Z] - Any letter, upper or lower case.</li>
+        <li>[a-zA-Z0-9_] - Any alphanumeric character or underscore.</li>
+        <li>[^@] - Any character except @ (the ^ inside [] means "not").</li>
+        <li>{m,n} - Matches between m and n repetitions.</li>
+    </ul>
+{% endblock %}

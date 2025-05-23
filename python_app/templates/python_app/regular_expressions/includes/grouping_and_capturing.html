@@ -1,0 +1,17 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-regular-expressions-grouping-and-capturing{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Grouping and Capturing{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <ul>
+        <li>() - Groups expressions and captures the match. Captured matches can be accessed in a results list.</li>
+        <li>(com|edu) - Matches either 'com' or 'edu'.</li>
+        <li>(?:...) - Non-capturing group: groups expressions without capturing them in the result list. Useful for grouping without cluttering your match results.</li>
+    </ul>
+{% endblock %}

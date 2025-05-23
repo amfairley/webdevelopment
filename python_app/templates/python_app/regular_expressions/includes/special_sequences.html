@@ -1,0 +1,20 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-regular-expressions-special-sequences{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Special Sequences{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <ul>
+        <li>\d - Matches a digit (0-9).</li>
+        <li>\D - Matches any non-digit.</li>
+        <li>\s - Matches any whitespace character (space, tab, newline).</li>
+        <li>\S - Matches any non-whitespace character.</li>
+        <li>\w - Matches alphanumeric characters and underscore.</li>
+        <li>\W - Matches anything not alphanumeric or underscore.</li>
+    </ul>
+{% endblock %}

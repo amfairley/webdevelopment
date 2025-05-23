@@ -1,0 +1,73 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-regular-expressions-examples-1{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">import re
+
+# . Matches any character except newline
+re.search(r"a.c", "abc")       # Matches "abc" because "." matches "b"
+
+# * Zero or more of the preceding character/group
+re.search(r"lo*l", "lol")      # Matches "lol", "loll", "loooool" etc.
+
+# + One or more of the preceding character/group
+re.search(r"go+d", "good")     # Matches "good", "goood", but not "gd"
+
+# ? Zero or one of the preceding character/group
+re.search(r"colou?r", "color") # Matches both "color" and "colour"
+
+# {m} Exactly m repetitions
+re.search(r"a{3}", "aaabc")    # Matches "aaa"
+
+# ^ Start of string
+re.match(r"^Hello", "Hello world")  # Matches "Hello" only if it's at the beginning
+
+# $ End of string
+re.search(r"world$", "Hello world") # Matches "world" only if it's at the end
+
+# [] Any one of the characters inside the brackets
+re.search(r"[aeiou]", "cat")         # Matches the first vowel, "a"
+
+# [a-z] Any lowercase letter
+re.search(r"[a-z]", "ABCd")          # Matches "d"
+
+# [A-Z] Any uppercase letter
+re.search(r"[A-Z]", "abcD")          # Matches "D"
+
+# [a-zA-Z] Any letter (upper or lower case)
+re.search(r"[a-zA-Z]", "123ABC")     # Matches "A"
+
+# [a-zA-Z0-9_] Alphanumeric or underscore
+re.search(r"[a-zA-Z0-9_]", "#$a@")   # Matches "a"
+
+# [^@] Any character except @
+re.search(r"[^@]+", "hello@world")   # Matches "hello"
+
+# {m,n} Between m and n repetitions of the preceding character/group
+re.search(r"\d{2,4}", "Year 2025")   # Matches 2 to 4 digits, e.g. "2025"
+
+# \d Any digit (0-9)
+re.search(r"\d", "abc123")          # Matches "1"
+
+# \D Any non-digit
+re.search(r"\D", "123abc")          # Matches "a"
+
+# \s Whitespace (space, tab, newline)
+re.search(r"\s", "Hello world")     # Matches the space between "Hello" and "world"
+
+# \S Non-whitespace
+re.search(r"\S", "   abc")          # Matches "a"
+
+# \w Alphanumeric character or underscore
+re.search(r"\w", "!@#hello")        # Matches "h"
+
+# \W Non-alphanumeric character
+re.search(r"\W", "abc!")            # Matches "!"
+</code></pre>
+{% endblock %}
