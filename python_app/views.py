@@ -60,3 +60,15 @@ def python_booleans(request):
         'python_app/booleans/booleans.html',
         context
     )
+
+
+def python_lists(request):
+    '''Return the Python lists page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'python_app/lists/lists.html',
+        context
+    )

@@ -1,0 +1,26 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-lists-comprehension
+{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">old_list = [values etc]
+new_list = []
+
+# Non-list comprehension
+for temp_var in old_list:
+	if conditional
+		new_list.append(temp_var)
+
+# List comprehension
+new_list = [ temp_var for temp_var in old_list if conditional]
+
+#The conditional isn't always required however.
+squares = [x**2 for x in range(5)]	# Makes a list of the squares of the numbers 0-4 (0, 1, 4, 9, 16)
+</code></pre>
+{% endblock %}

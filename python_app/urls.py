@@ -28,4 +28,9 @@ urlpatterns = [
         views.python_booleans,
         name="python_booleans"
     ),
+    path(
+        'lists/',
+        views.python_lists,
+        name="python_lists"
+    ),
 ]

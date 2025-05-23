@@ -1,0 +1,37 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-lists-what-are-lists{% endblock %}
+
+<!--Section title-->
+{% block text_title %}What are Lists?{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Python lists are a versatile and common data types. You can store a sequence of elements (numbers, strings, or 
+        even other lists) in order and manipulate them easily.
+    </p>
+    <p>
+        Lists are defined with square brackets and the elements are separated by commas.
+    </p>
+    {% include 'python_app/lists/includes/code_snippets/define.html' %}
+    <p>
+        You can also create an empty list by not putting any values between the square brackets. This is useful for 
+        when you need to create a list within a function; define an empty list beforehand and then sequentially add to 
+        it within the function.
+    </p>
+    {% include 'python_app/lists/includes/code_snippets/empty.html' %}
+    <p>
+        You can also use 
+        <code class="written-code">range()</code>
+        to create a range object. It takes up to three arguments and has the syntax of 
+        <code class="written-code">range(start, stop+1, step)</code>. 
+        Use 
+        <code class="written-code">list()</code>
+        to convert this range object into a list.
+    </p>
+    {% include 'python_app/lists/includes/code_snippets/range.html' %}
+
+{% endblock %}

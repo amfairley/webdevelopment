@@ -1,0 +1,19 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-lists-segment{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">myList[1:3]     # Gets elements at index 1 and 2
+myList[:2]      # First two elements
+myList[-2:]     # Last two elements
+myList[:-1]     # All except the last
+myList[:-n]     # All except the last 'n' values
+myList[1:]      # All except the first
+len(myList)	    # Returns the length of the list
+</code></pre>
+{% endblock %}

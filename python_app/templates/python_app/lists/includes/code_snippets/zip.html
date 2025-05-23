@@ -1,0 +1,18 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-lists-zip{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">list1 = [1, 2, 3]
+list2 = ['a', 'b', 'c']
+zipped = list(zip(list1, list2))  # [(1, 'a'), (2, 'b'), (3, 'c')]
+
+# Accessing 2D elements
+print(zipped[0][1])  # Output: 'a'
+</code></pre>
+{% endblock %}

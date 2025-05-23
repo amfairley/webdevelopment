@@ -1,0 +1,24 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-lists-joining-lists{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Joining Lists{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can use + to join two or most lists together. This joining is known as concatenation.
+    </p>
+    {% include 'python_app/lists/includes/code_snippets/concat.html' %}
+    <p>
+        You can also 
+        <code class="written-code">zip()</code>
+        two lists together to create a two dimensional list (a list of lists). You can access the elements using 
+        <code class="written-code">listName[Index of outer list][Index of inner list]</code>.
+    </p>
+    {% include 'python_app/lists/includes/code_snippets/zip.html' %}
+
+{% endblock %}

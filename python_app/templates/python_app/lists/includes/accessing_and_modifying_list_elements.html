@@ -1,0 +1,27 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-lists-accessing-and-modifying-list-elements{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Accessing and Modifying List Elements{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Lists are 0 index, meaning that the first item in the list has an index (position) of 0 and the last item has 
+        the index of 1 less than the length of the list. You can also count from the other end with negative numbers, 
+        with an index of -1 being the last item in the list. You can access the elements using the syntax:
+    </p>
+    {% include 'python_app/lists/includes/code_snippets/index.html' %}
+    <p>
+        And can update/overwrite the values like:
+    </p>
+    {% include 'python_app/lists/includes/code_snippets/update.html' %}
+    <p>
+        Using : you can select a segment of a list in the following ways.
+    </p>
+    {% include 'python_app/lists/includes/code_snippets/segment.html' %}
+
+{% endblock %}

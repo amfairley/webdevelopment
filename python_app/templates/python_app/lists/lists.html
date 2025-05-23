@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Python - Lists{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Lists</h2>
+    {% include 'python_app/lists/includes/contents.html' %}
+    {% include 'python_app/lists/includes/what_are_lists.html' %}
+    {% include 'python_app/lists/includes/accessing_and_modifying_list_elements.html' %}
+    {% include 'python_app/lists/includes/joining_lists.html' %}
+    {% include 'python_app/lists/includes/copying_lists.html' %}
+    {% include 'python_app/lists/includes/looping_through_a_list.html' %}
+    {% include 'python_app/lists/includes/list_methods.html' %}
+{% endblock %}

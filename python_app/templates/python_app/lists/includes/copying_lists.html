@@ -1,0 +1,18 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-lists-copying-lists{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Copying Lists{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        There are two ways of copying lists; using the 
+        <code class="written-code">.copy()</code>
+        list method or accessing a list passing : instead of indices.
+    </p>
+    {% include 'python_app/lists/includes/code_snippets/copy.html' %}
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-lists-looping-through-a-list{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Looping Through a List{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        One thing you can do with lists is loop through them and apply a function to each item in the list. The syntax 
+        for this is.
+    </p>
+    {% include 'python_app/lists/includes/code_snippets/loop.html' %}
+    <p>
+        A more succinct way of looping through a list is list comprehension. The general syntax for this is:
+    </p>
+    {% include 'python_app/lists/includes/code_snippets/comprehension.html' %}
+
+{% endblock %}

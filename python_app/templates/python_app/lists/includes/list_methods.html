@@ -1,0 +1,30 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-lists-list-methods{% endblock %}
+
+<!--Section title-->
+{% block text_title %}List Methods{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The syntax for accessing list methods is 
+        <code class="written-code">list.method(input)</code>.
+    </p>
+    <ul>
+        <li><code class="written-code">.append()</code>: Adds an item to the end of a list.</li>
+        <li><code class="written-code">.copy()</code>: Return a copy of a list.</li>
+        <li><code class="written-code">.extend(list)</code>: Add another list to the end of the first.</li>
+        <li><code class="written-code">.index(x, start, end)</code>: Returns index of a value searched between index values.</li>
+        <li><code class="written-code">.insert(i, x)</code>: Insert an item at a given index. i is the index to insert before.</li>
+        <li><code class="written-code">.remove()</code>: Removes a value from the list. It removes the first value it comes to that matches.</li>
+        <li><code class="written-code">.clear()</code>: Removes all items from the list.</li>
+        <li><code class="written-code">.count()</code>: Counts the number of occurrences of a given value in a list.</li>
+        <li><code class="written-code">.insert(position, element)</code>: Inserts an element into a list at a certain position.</li>
+        <li><code class="written-code">.pop()</code>: Removes and returns the element at a specified index. If no index is given, it removes and returns the last item.</li>
+        <li><code class="written-code">.sort()</code> or <code class="written-code">sorted(list_name)</code>: Sorts a list. It can use an argument of reverse = True to make it back to front. You can also use a key. E.g. To sort by length of item in reverse order: <code class="written-code">.sort(key = len, reverse= True)</code></li>
+        <li><code class="written-code">",".join(list)</code>: Joins the list together into a string with "," between each entry.</li>
+    </ul>
+{% endblock %}
