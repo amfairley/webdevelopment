@@ -1,0 +1,99 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-unit-testing-runtime-errors{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Runtime Errors{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Exception
+                </th>
+                <th>
+                    Description
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    SyntaxError
+                </td>
+                <td>
+                    Code is not syntactically correct
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    NameError
+                </td>
+                <td>
+                    Variable not defined
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    TypeError
+                </td>
+                <td>
+                    Invalid type operation (e.g., modifying a tuple)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    IndexError
+                </td>
+                <td>
+                    List index out of range
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    KeyError
+                </td>
+                <td>
+                    Dictionary key doesn't exist
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    FileNotFoundError
+                </td>
+                <td>
+                    File does not exist
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ZeroDivisionError
+                </td>
+                <td>
+                    Dividing by zero
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    AssertionError
+                </td>
+                <td>
+                    Assertion failed
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ValueError
+                </td>
+                <td>
+                    Wrong number/type of values
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

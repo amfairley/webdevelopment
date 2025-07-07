@@ -1,0 +1,52 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-unit-testing-pytest{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Pytest{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        <a 
+            class="text-link"
+            href="https://docs.pytest.org/en/stable/"
+            title="Go to Pytest"
+            aria-label="Go to Pytest"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Pytest
+        </a>
+        is a Python testing framework that automates running your tests. Install it with:
+    </p>
+    {% include 'python_app/unit_testing/includes/code_snippets/install.html' %}
+    <p>
+        Then you can write a test similar to
+    </p>
+    {% include 'python_app/unit_testing/includes/code_snippets/example_test.html' %}
+    <p>
+        This test will pass if 
+        <code class="written-code">function_to_test(3)</code>
+        returns 6, and fail otherwise, raising an 
+        <code class="written-code">AssertionError</code>.
+        You can run your test from the terminal with:
+    </p>
+    {% include 'python_app/unit_testing/includes/code_snippets/run_test.html' %}
+    <p>
+        Pytest will search for all functions in that file starting with test_ and run them.
+    </p>
+    <p>
+        The assert statement checks if a condition is True. If it's not, it raises an AssertionError.
+    </p>
+    {% include 'python_app/unit_testing/includes/code_snippets/assert.html' %}
+    <p>
+        Sometimes, you want to handle failed assertions manually with try and except keywords. This method can be 
+        useful when debugging or logging failures, though it's more common to let pytest handle assertions 
+        automatically.
+    </p>
+    {% include 'python_app/unit_testing/includes/code_snippets/manual_assert.html' %}
+
+{% endblock %}

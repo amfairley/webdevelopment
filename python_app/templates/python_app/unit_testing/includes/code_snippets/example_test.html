@@ -1,0 +1,16 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-unit-testing-example-test{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python"># In test_file.py
+from file_to_test import function_to_test
+def test_function_to_test():
+    assert function_to_test(3) == 6
+</code></pre>
+{% endblock %}

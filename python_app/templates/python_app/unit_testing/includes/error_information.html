@@ -1,0 +1,18 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-unit-testing-error-information{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Error Information{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can get extra information from your error using the errorName as e syntax. Here 'e' is used similar to the 
+        this keyword where it will refer to the error.
+    </p>
+    {% include 'python_app/unit_testing/includes/code_snippets/e.html' %}
+
+{% endblock %}

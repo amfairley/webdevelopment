@@ -1,0 +1,31 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-unit-testing-handling-exceptions{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Handling Exceptions{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Use try/except blocks to catch and handle exceptions without crashing your program.
+    </p>
+    {% include 'python_app/unit_testing/includes/code_snippets/try_1.html' %}
+    <p>
+        Full Structure: try, except, else, finally.
+    </p>
+    {% include 'python_app/unit_testing/includes/code_snippets/try_2.html' %}
+    <ul>
+        <li>try: Run this block</li>
+        <li>except: Handle an error if one happens</li>
+        <li>else: Runs if no exception occurred</li>
+        <li>finally: Always runs, useful for cleanup</li>
+    </ul>
+    <p>
+        You can use exception handling inside a loop for repeated attempts:
+    </p>
+    {% include 'python_app/unit_testing/includes/code_snippets/try_3.html' %}
+
+{% endblock %}

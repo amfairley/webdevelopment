@@ -1,0 +1,24 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-unit-testing-errors{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Errors{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Errors in Python are called exceptions. They're all subclasses of the built-in class 
+        <code class="written-code">BaseException</code>.
+    </p>
+    <p>
+        There are two main kinds of errors; syntax errors and runtime errors.
+    </p>
+    <ul>
+        <li>Syntax Errors: Raised before the program runs and arise from incorrectly written code.</li>
+        <li>Runtime Errors: Raised while the program is running.</li>
+    </ul>
+
+{% endblock %}

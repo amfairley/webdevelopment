@@ -1,0 +1,15 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-unit-testing-ignoring-errors{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Ignoring Errors{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+
+    {% include 'python_app/unit_testing/includes/code_snippets/ignore.html' %}
+
+{% endblock %}

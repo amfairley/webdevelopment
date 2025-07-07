@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Python - Unit Testing{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Unit Testing</h2>
+    {% include 'python_app/unit_testing/includes/contents.html' %}
+    {% include 'python_app/unit_testing/includes/what_is_unit_testing.html' %}
+    {% include 'python_app/unit_testing/includes/pytest.html' %}
+    {% include 'python_app/unit_testing/includes/errors.html' %}
+    {% include 'python_app/unit_testing/includes/runtime_errors.html' %}
+    {% include 'python_app/unit_testing/includes/raising_your_own_errors.html' %}
+    {% include 'python_app/unit_testing/includes/handling_exceptions.html' %}
+    {% include 'python_app/unit_testing/includes/ignoring_errors.html' %}
+    {% include 'python_app/unit_testing/includes/error_information.html' %}
+
+{% endblock %}

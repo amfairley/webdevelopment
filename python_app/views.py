@@ -288,3 +288,15 @@ def python_classes(request):
         'python_app/classes/classes.html',
         context
     )
+
+
+def python_unit_testing(request):
+    '''Return the Python unit testing page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'python_app/unit_testing/unit_testing.html',
+        context
+    )

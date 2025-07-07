@@ -1,0 +1,17 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-unit-testing-manual-assert{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">def test_func():
+    try:
+        assert function_to_test(3) == 6
+    except AssertionError:
+        print("Test failed: output did not match expected value")
+</code></pre>
+{% endblock %}

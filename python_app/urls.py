@@ -123,4 +123,9 @@ urlpatterns = [
         views.python_classes,
         name="python_classes"
     ),
+    path(
+        'unit_testing/',
+        views.python_unit_testing,
+        name="python_unit_testing"
+    ),
 ]
