@@ -1,0 +1,22 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-json-working-with-json{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Working with JSON{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        <dfn title="JavaScript Object Notation">JSON</dfn> is a lightweight, human-readable format for storing and 
+        exchanging data. The built-in JSON module makes it simple to read and write JSON files. Set it up with:
+    </p>
+    <p>
+        <code class="written-code">import json</code>
+    </p>
+    <p>
+        With JSON, JSON objects become Python dictionaries, JSON arrays become Python lists.
+    </p>
+{% endblock %}

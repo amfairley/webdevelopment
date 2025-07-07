@@ -1,0 +1,17 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-json-handling-unicode-and-encoding{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Handling Unicode and Encoding{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        If your data includes non-ASCII characters:
+    </p>
+    {% include 'python_app/json/includes/code_snippets/unicode.html' %}
+
+{% endblock %}

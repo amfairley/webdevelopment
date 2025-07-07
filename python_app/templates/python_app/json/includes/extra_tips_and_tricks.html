@@ -1,0 +1,31 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-json-extra-tips-and-tricks{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Extra Tips and Tricks{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <!--Pretty printing-->
+    <h4 id="python-json-extra-tips-and-tricks-pretty-printing-json">
+        Pretty Printing JSON
+    </h4>
+    {% include 'python_app/json/includes/code_snippets/pretty.html' %}
+
+    <!--Converting JSON Strings-->
+    <h4 id="python-json-extra-tips-and-tricks-converting-json-strings">
+        Converting JSON Strings
+    </h4>
+    <p>
+        From string to Python object:
+    </p>
+    {% include 'python_app/json/includes/code_snippets/string_1.html' %}
+    <p>
+        From Python object to JSON string:
+    </p>
+    {% include 'python_app/json/includes/code_snippets/string_2.html' %}
+
+{% endblock %}

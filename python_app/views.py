@@ -216,3 +216,15 @@ def python_csv(request):
         'python_app/csv/csv.html',
         context
     )
+
+
+def python_json(request):
+    '''Return the Python json page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'python_app/json/json.html',
+        context
+    )

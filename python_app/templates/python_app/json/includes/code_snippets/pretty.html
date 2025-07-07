@@ -1,0 +1,15 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-json-pretty{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">with open('output.json', 'w') as f:
+    json.dump(to_save, f, indent=4)
+# Makes the file human-readable with 4-space indentation.
+</code></pre>
+{% endblock %}

@@ -93,4 +93,9 @@ urlpatterns = [
         views.python_csv,
         name="python_csv"
     ),
+    path(
+        'json/',
+        views.python_json,
+        name="python_json"
+    ),
 ]

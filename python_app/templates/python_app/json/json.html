@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Python - JSON{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>JSON</h2>
+    {% include 'python_app/json/includes/contents.html' %}
+    {% include 'python_app/json/includes/working_with_json.html' %}
+    {% include 'python_app/json/includes/reading_json_files.html' %}
+    {% include 'python_app/json/includes/writing_json_files.html' %}
+    {% include 'python_app/json/includes/extra_tips_and_tricks.html' %}
+    {% include 'python_app/json/includes/handling_unicode_and_encoding.html' %}
+    {% include 'python_app/json/includes/common_errors.html' %}
+    {% include 'python_app/json/includes/python_to_json_type_mapping.html' %}
+
+{% endblock %}

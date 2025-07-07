@@ -1,0 +1,61 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-json-common-errors{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Common Errors{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Error
+                </th>
+                <th>
+                    Meaning
+                </th>
+                <th>
+                    Fix
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <code class="written-code">JSONDecodeError</code>
+                </td>
+                <td>
+                    JSON file is not properly formatted
+                </td>
+                <td>
+                    Use a linter like 
+                    <a 
+                        class="text-link"
+                        href="https://jsonlint.com/"
+                        title="JSON Linter"
+                        aria-label="Go to the JSON Linter"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        JSON lint
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">TypeError: Object of type X is not JSON serializable</code>
+                </td>
+                <td>
+                    You're trying to save an unsupported object (e.g., a datetime or set)
+                </td>
+                <td>
+                    Convert to a supported type like string or list first
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

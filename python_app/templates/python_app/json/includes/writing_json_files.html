@@ -1,0 +1,18 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-json-writing-json-files{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Writing JSON Files{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Convert Python objects to JSON and write them to a file. 
+        <code class="written-code">json.dump()</code> writes a Python object directly to a JSON file.
+    </p>
+    {% include 'python_app/json/includes/code_snippets/write.html' %}
+
+{% endblock %}

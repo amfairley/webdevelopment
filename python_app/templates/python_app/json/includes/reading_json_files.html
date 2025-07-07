@@ -1,0 +1,22 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-json-reading-json-files{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Reading JSON Files{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Load a JSON file into a Python variable:
+    </p>
+    {% include 'python_app/json/includes/code_snippets/load.html' %}
+    <p>
+        Here is an example of reading a JSON file.
+    </p>
+    {% include 'python_app/json/includes/code_snippets/json_example.html' %}
+    {% include 'python_app/json/includes/code_snippets/load_example.html' %}
+
+{% endblock %}

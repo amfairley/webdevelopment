@@ -1,0 +1,74 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-json-python-to-json-type-mapping{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Python to JSON Type Mapping{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Python Type
+                </th>
+                <th>
+                    JSON Equivalent
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    dict
+                </td>
+                <td>
+                    Object
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    list
+                </td>
+                <td>
+                    Array
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    str
+                </td>
+                <td>
+                    String
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    int, float
+                </td>
+                <td>
+                    Number
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    True/False
+                </td>
+                <td>
+                    true/false
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    None
+                </td>
+                <td>
+                    null
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
