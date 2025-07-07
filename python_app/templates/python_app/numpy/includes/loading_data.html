@@ -1,0 +1,15 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-numpy-loading-data{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Loading Data{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+
+    {% include 'python_app/numpy/includes/code_snippets/load.html' %}
+
+{% endblock %}

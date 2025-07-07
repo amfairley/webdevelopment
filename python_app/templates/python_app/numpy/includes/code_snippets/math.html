@@ -1,0 +1,23 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-numpy-math{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">array1 + array2        # Element-wise addition
+array1 * array2        # Element-wise multiplication
+array1 ** 2            # Element-wise exponentiation
+np.sin(array1)         # Apply sin to every element
+np.min(array1)         # Smallest value
+np.max(array1)         # Largest value
+np.sum(array1)         # Total sum
+
+np.min(array1, axis=0)  # Min per column
+np.min(array1, axis=1)  # Min per row
+np.sum(array1, axis=1)  # Row sums
+</code></pre>
+{% endblock %}

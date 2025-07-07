@@ -1,0 +1,22 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-numpy-initial{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">np.zeros((2, 3))                # All 0s
+np.ones((2, 3))                 # All 1s
+np.full((2, 3), 7)              # All 7s
+np.full_like(a, 4)             # Same shape as a, filled with 4s
+np.full(a.shape, 4)            # Same as above
+
+np.random.rand(3, 4)           # Random floats (0–1), shape NOT a tuple
+np.random.random_sample(a.shape)  # Random floats with same shape as a
+np.random.randint(0, 10, size=(2, 3))  # Random ints from 0 to 9
+np.identity(4)                 # 4x4 identity matrix
+</code></pre>
+{% endblock %}

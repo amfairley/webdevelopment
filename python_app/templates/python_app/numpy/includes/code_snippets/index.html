@@ -1,0 +1,24 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-numpy-index{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">array[1, 5]              # Value at row 2, column 6
+array[0, :]              # All columns in row 1
+array[:, 2]              # All rows in column 3
+array[0, 1:6:2]          # Row 1, columns 2 to 6 with step 2
+
+array[1, 5] = 15         # Set a single value
+array[:, 2] = 5          # Set entire column to 5
+array[:, 2] = [1, 2]     # Set column with multiple values
+
+# 3D array indexing: outer → middle → inner
+array[[1, 2, 8]]         # Select specific elements from a 1D array
+array[[0,1,2,3], [1,2,3,4]]  # Index specific pairs
+</code></pre>
+{% endblock %}

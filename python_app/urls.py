@@ -83,4 +83,9 @@ urlpatterns = [
         views.python_pandas,
         name="python_pandas"
     ),
+    path(
+        'numpy/',
+        views.python_numpy,
+        name="python_numpy"
+    ),
 ]

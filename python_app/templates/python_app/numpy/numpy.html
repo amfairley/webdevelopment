@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Python - Numpy{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Numpy</h2>
+    {% include 'python_app/numpy/includes/contents.html' %}
+    {% include 'python_app/numpy/includes/what_is_numpy.html' %}
+    {% include 'python_app/numpy/includes/arrays_and_dimensions.html' %}
+    {% include 'python_app/numpy/includes/loading_data.html' %}
+    {% include 'python_app/numpy/includes/initialising_arrays.html' %}
+    {% include 'python_app/numpy/includes/math_with_arrays.html' %}
+    {% include 'python_app/numpy/includes/array_attributes_and_info.html' %}
+    {% include 'python_app/numpy/includes/reshaping_and_stacking.html' %}
+    {% include 'python_app/numpy/includes/indexing_and_slicing.html' %}
+    {% include 'python_app/numpy/includes/boolean_masking.html' %}
+    {% include 'python_app/numpy/includes/binomial_distribution.html' %}
+
+
+{% endblock %}

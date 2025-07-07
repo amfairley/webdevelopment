@@ -1,0 +1,14 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-numpy-load{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">data = np.genfromtxt('filename.txt', delimiter=',')  # Loads as float by default
+data2 = data.astype('int32')                         # Converts to int
+</code></pre>
+{% endblock %}

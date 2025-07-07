@@ -1,0 +1,18 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-numpy-reshape{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">new_array = array.reshape((8, 1))     # Change shape (e.g., from (2,4) to (8,1))
+
+v1 = np.array([1, 2, 3, 4])
+v2 = np.array([5, 6, 7, 8])
+np.vstack([v1, v2])    # Stack vertically
+np.hstack([v1, v2])    # Stack horizontally
+</code></pre>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-numpy-create{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">a = np.array([1, 2, 4])                    # 1D array
+a = np.array([[1, 2, 4], [5, 6, 7]])       # 2D array
+a = np.array([1, 2, 4], dtype='int16')     # 1D array with specified data type
+</code></pre>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-numpy-binomial-distribution{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Binomial Distribution{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        For experiments with two outcomes (e.g., coin flips). Example: Flip a coin 10 times, repeat 1000 experiments.
+    </p>
+    {% include 'python_app/numpy/includes/code_snippets/binomial.html' %}
+    <ul>
+        <li>n: Number of trials per experiment</li>
+        <li>p: Probability of success (e.g., 0.5 for heads)</li>
+        <li>size: Number of experiments</li>
+    </ul>
+{% endblock %}

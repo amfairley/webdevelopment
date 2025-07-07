@@ -192,3 +192,15 @@ def python_pandas(request):
         'python_app/pandas/pandas.html',
         context
     )
+
+
+def python_numpy(request):
+    '''Return the Python numpy page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'python_app/numpy/numpy.html',
+        context
+    )

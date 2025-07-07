@@ -1,0 +1,24 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-numpy-arrays-and-dimensions{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Arrays and Dimensions{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Create arrays with:
+    </p>
+    {% include 'python_app/numpy/includes/code_snippets/create.html' %}
+    <p>
+        Dimension explained:
+    </p>
+    <ul>
+        <li>(4,) → 1D array with 4 elements</li>
+        <li>(2, 3) → 2D array: 2 rows, 3 columns</li>
+        <li>(4, 3, 2) → 3D array</li>
+    </ul>
+{% endblock %}

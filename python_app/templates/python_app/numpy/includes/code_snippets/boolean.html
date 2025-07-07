@@ -1,0 +1,16 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-numpy-boolean{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">data2 > 50                    # Boolean array (True/False)
+data2[data2 > 50]             # Extract elements > 50
+np.any(data2 > 50, axis=0)    # Are ANY values > 50 in each column?
+np.all(data2 > 50, axis=0)    # Are ALL values > 50 in each column?
+</code></pre>
+{% endblock %}
