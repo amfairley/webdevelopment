@@ -1,0 +1,28 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-functions-decorators{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">def decorator_function(func):
+    def wrapper():
+        print("Before the function call")
+        func()
+        print("After the function call")
+    return wrapper
+
+@decorator_function
+def say_hello():
+    print("Hello!")
+
+say_hello() 
+# Output:
+# Before the function call
+# Hello!
+# After the function call
+</code></pre>
+{% endblock %}

@@ -53,4 +53,9 @@ urlpatterns = [
         views.python_regular_expressions,
         name="python_regular_expressions"
     ),
+    path(
+        'functions/',
+        views.python_functions,
+        name="python_functions"
+    ),
 ]

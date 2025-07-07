@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Python - Functions{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Functions</h2>
+    {% include 'python_app/functions/includes/contents.html' %}
+    {% include 'python_app/functions/includes/defining_and_calling_functions.html' %}
+    {% include 'python_app/functions/includes/parameters_and_arguments.html' %}
+    {% include 'python_app/functions/includes/docstrings.html' %}
+    {% include 'python_app/functions/includes/returning_values.html' %}
+    {% include 'python_app/functions/includes/assigning_functions_to_variables.html' %}
+    {% include 'python_app/functions/includes/decorators.html' %}
+    {% include 'python_app/functions/includes/built_in_functions.html' %}
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-functions-docstrings{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Docstrings{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Docstrings are string literals that appear right after the function definition, used to document the function's 
+        purpose. These will often be showed when you hover over calling a function later, describing the purpose of the 
+        function to the developer. You can also access a function's docstring using the 
+        <code class="written-code">__doc__</code>
+        attribute.
+    </p>
+    {% include 'python_app/functions/includes/code_snippets/docstrings.html' %}
+{% endblock %}

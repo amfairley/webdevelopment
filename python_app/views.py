@@ -120,3 +120,15 @@ def python_regular_expressions(request):
         'python_app/regular_expressions/regular_expressions.html',
         context
     )
+
+
+def python_functions(request):
+    '''Return the Python functions page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'python_app/functions/functions.html',
+        context
+    )

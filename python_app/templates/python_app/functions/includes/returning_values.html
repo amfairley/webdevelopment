@@ -1,0 +1,17 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-functions-returning-values{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Returning Values{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Functions can return values using the return statement and can return multiple values as a tuple. This is 
+        important because you can assign variables to the output returned by these functions.
+    </p>
+    {% include 'python_app/functions/includes/code_snippets/return.html' %}
+{% endblock %}

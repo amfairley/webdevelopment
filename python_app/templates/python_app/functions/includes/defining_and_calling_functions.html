@@ -1,0 +1,22 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-functions-defining-and-calling-functions{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Defining and Calling Functions{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Functions are fundamental building blocks in Python, enabling code reuse, modularity, and clarity. In Python, 
+        functions are defined using the 
+        <code class="written-code">def</code>
+        keyword, followed by the function name and parentheses. Convention states that 2 blank lines should be put 
+        between functions to make it clearer.
+    </p>
+    {% include 'python_app/functions/includes/code_snippets/define.html' %}
+    <p>To execute the function, call it by its name followed by parentheses.</p>
+    <p><code class="written-code">functions_name()</code></p>
+{% endblock %}

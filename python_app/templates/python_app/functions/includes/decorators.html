@@ -1,0 +1,22 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-functions-decorators{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Decorators{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Decorators are functions that modify the behaviour of other functions without changing their code. 
+    </p>
+    {% include 'python_app/functions/includes/code_snippets/decorators.html' %}
+    <p>
+        The 
+        <code class="written-code">@decorator_function</code>
+        syntax is a shorthand for 
+        <code class="written-code">say_hello = decorator_function(say_hello)</code>. 
+    </p>
+{% endblock %}

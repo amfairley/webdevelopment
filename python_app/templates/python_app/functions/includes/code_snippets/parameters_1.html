@@ -1,0 +1,18 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-functions-parameters-1{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python"># Define a function with parameters in parentheses
+def greet(name, message):
+    print(f"{message}, {name}!")
+
+# Call a function with arguments that relate to the defined parameters
+greet("Adam", "Hello")
+</code></pre>
+{% endblock %}

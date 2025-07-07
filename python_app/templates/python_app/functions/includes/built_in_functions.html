@@ -1,0 +1,38 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-functions-built-in-functions{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Built-in Functions{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Python provides several built-in functions to assist with various tasks:
+    </p>
+    <ul>
+        <li><code class="written-code">type()</code> returns the type of an object.</li>
+    </ul>
+    {% include 'python_app/functions/includes/code_snippets/built_in_1.html' %}
+    <ul>
+        <li><code class="written-code">print()</code> outputs data to the console.</li>
+    </ul>
+    {% include 'python_app/functions/includes/code_snippets/built_in_2.html' %}
+    <ul>
+        <li><code class="written-code">pprint()</code> from the pprint module provides a "pretty-print" of data structures, making them more readable. You will need to import it in your files though.</li>
+    </ul>
+    {% include 'python_app/functions/includes/code_snippets/built_in_3.html' %}
+    <ul>
+        <li>
+            <code class="written-code">raise SystemExit</code>
+            is a way to intentionally stop your Python program. It is similar to calling 
+            <code class="written-code">exit()</code>
+            or
+            <code class="written-code">sys.exit()</code>.
+            You might use it when something unrecoverable happens, or to end a script early. It can also help when 
+            testing or debugging, allowing you to stop the script once a certain condition is met.
+        </li>
+    </ul>
+{% endblock %}
