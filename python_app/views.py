@@ -264,3 +264,15 @@ def python_loops(request):
         'python_app/loops/loops.html',
         context
     )
+
+
+def python_conditionals(request):
+    '''Return the Python conditionals page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'python_app/conditionals/conditionals.html',
+        context
+    )

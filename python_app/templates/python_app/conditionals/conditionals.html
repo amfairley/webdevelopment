@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Python - Conditionals{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Conditionals</h2>
+    {% include 'python_app/conditionals/includes/contents.html' %}
+    {% include 'python_app/conditionals/includes/conditionals_in_python.html' %}
+    {% include 'python_app/conditionals/includes/if.html' %}
+    {% include 'python_app/conditionals/includes/multiple_conditions.html' %}
+    {% include 'python_app/conditionals/includes/truthy_and_falsy.html' %}
+    {% include 'python_app/conditionals/includes/walrus_operator.html' %}
+    {% include 'python_app/conditionals/includes/elif_and_else.html' %}
+
+{% endblock %}

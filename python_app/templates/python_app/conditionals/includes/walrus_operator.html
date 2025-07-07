@@ -1,0 +1,19 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-conditionals-walrus-operator{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Walrus Operator{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The walrus operator 
+        <code class="written-code">:=</code>
+        allows you to assign a variable within an if statement. This can make your code more concise and efficient. 
+        Instead of writing two lines (one to calculate len() and one to check it) we do both in one go.
+    </p>
+    {% include 'python_app/conditionals/includes/code_snippets/walrus.html' %}
+{% endblock %}

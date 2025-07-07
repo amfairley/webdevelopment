@@ -1,0 +1,32 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-conditionals-if{% endblock %}
+
+<!--Section title-->
+{% block text_title %}If{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The simplest form of a conditional in Python looks like this:
+    </p>
+    {% include 'python_app/conditionals/includes/code_snippets/if_1.html' %}
+    <p>
+        This tells Python: "If the value of age is 18 or more, then print the message."
+    </p>
+    <p>
+        Indentation matters in Python, the code block that belongs to the if statement must be indented.
+    </p>
+    <p>
+        Sometimes you want to check if a certain item exists within a larger group, like a character in a string or an 
+        item in a list.
+    </p>
+    {% include 'python_app/conditionals/includes/code_snippets/if_2.html' %}
+    <p>
+        This works with other iterables too:
+    </p>
+    {% include 'python_app/conditionals/includes/code_snippets/if_3.html' %}
+
+{% endblock %}

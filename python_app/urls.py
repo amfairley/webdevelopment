@@ -113,4 +113,9 @@ urlpatterns = [
         views.python_loops,
         name="python_loops"
     ),
+    path(
+        'conditionals/',
+        views.python_conditionals,
+        name="python_conditionals"
+    ),
 ]

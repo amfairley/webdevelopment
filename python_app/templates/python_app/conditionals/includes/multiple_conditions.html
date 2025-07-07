@@ -1,0 +1,24 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-conditionals-multiple-conditions{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Multiple Conditions{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can combine conditions using logical operators such as
+    </p>
+    <ul>
+        <li>and</li>
+        <li>or</li>
+        <li>not</li>
+    </ul>
+    {% include 'python_app/conditionals/includes/code_snippets/multiple.html' %}
+    <p>
+        This only prints if both conditions are true. Use "or" if you want it to run when either condition is true.
+    </p>
+{% endblock %}

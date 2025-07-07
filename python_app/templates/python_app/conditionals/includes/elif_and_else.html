@@ -1,0 +1,16 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-conditionals-elif-and-else{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Elif and Else{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Elif (else if) and else let you expand your logic beyond a single if.
+    </p>
+    {% include 'python_app/conditionals/includes/code_snippets/elif.html' %}
+{% endblock %}

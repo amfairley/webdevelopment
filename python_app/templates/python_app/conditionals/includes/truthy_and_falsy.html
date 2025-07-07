@@ -1,0 +1,28 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-conditionals-truthy-and-falsy{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Truthy and Falsy{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        In Python, certain values are considered falsy such as empty strings, lists, dictionaries, None types etc and 
+        targeting this can lead to writing compact code.
+    </p>
+    {% include 'python_app/conditionals/includes/code_snippets/truthy_1.html' %}
+    <p>
+        If name is an empty string (""), the if block won't run.
+    </p>
+    <p>
+        But you can also check whether a variable is empty or false using 
+        <code class="written-code">not</code>.
+    </p>
+    {% include 'python_app/conditionals/includes/code_snippets/truthy_2.html' %}
+    <p>
+        This is useful for input validation and defaults.
+    </p>
+{% endblock %}

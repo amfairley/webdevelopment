@@ -1,0 +1,15 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-conditionals-multiple{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">text = "hello world"
+if "hello" in text and "world" in text:
+    print("Both words are present!")
+</code></pre>
+{% endblock %}
