@@ -1,0 +1,17 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-scope-local-scope{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Local Scope{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        A variable defined inside a function is local to that function. It only exists during the function's execution.
+    </p>
+    {% include 'python_app/scope/includes/code_snippets/local.html' %}
+
+{% endblock %}

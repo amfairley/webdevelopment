@@ -240,3 +240,15 @@ def python_pillow(request):
         'python_app/pillow/pillow.html',
         context
     )
+
+
+def python_scope(request):
+    '''Return the Python scope page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'python_app/scope/scope.html',
+        context
+    )

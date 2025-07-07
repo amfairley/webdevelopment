@@ -1,0 +1,27 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-scope-example{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">var = "global"
+
+def outer():
+    var = "enclosing"
+    
+    def inner():
+        nonlocal var
+        var = "modified enclosing"
+        print("Inner:", var)
+    
+    inner()
+    print("Outer:", var)
+
+outer()
+print("Global:", var)
+</code></pre>
+{% endblock %}

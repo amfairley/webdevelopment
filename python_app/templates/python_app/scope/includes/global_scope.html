@@ -1,0 +1,22 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-scope-global-scope{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Global Scope{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        A variable defined outside of all functions is in the global scope. It can be accessed inside functions but 
+        cannot be changed unless explicitly declared as global.
+    </p>
+    {% include 'python_app/scope/includes/code_snippets/global_1.html' %}
+    <p>
+        Modifying a global variable inside a function:
+    </p>
+    {% include 'python_app/scope/includes/code_snippets/global_2.html' %}
+
+{% endblock %}

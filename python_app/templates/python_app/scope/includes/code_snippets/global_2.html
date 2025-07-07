@@ -1,0 +1,20 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-scope-global-2{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">var1 = 5
+
+def change_var():
+    global var1
+    var1 = 10  # Modifies global var1
+
+change_var()
+print(var1)  # Output: 10
+</code></pre>
+{% endblock %}

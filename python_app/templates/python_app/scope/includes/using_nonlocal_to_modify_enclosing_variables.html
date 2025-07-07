@@ -1,0 +1,17 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-scope-using-nonlocal-to-modify-enclosing-variables{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Using Nonlocal to Modify Enclosing Variables{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        If you want to modify a variable in the enclosing (non-global) scope from a nested function, use nonlocal.
+    </p>
+    {% include 'python_app/scope/includes/code_snippets/modify.html' %}
+
+{% endblock %}

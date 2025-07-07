@@ -1,0 +1,24 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-scope-modify{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">def outer():
+    count = 0
+
+    def inner():
+        nonlocal count
+        count += 1
+        print("Count:", count)
+
+    inner()
+    inner()
+
+outer()
+</code></pre>
+{% endblock %}

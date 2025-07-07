@@ -1,0 +1,18 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-scope-enclosing-scope{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Enclosing Scope{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Also called Nonlocal scope, this applies to nested functions. Variables defined in the outer (enclosing) 
+        function are accessible to inner functions, but are not global.
+    </p>
+    {% include 'python_app/scope/includes/code_snippets/enclosing.html' %}
+
+{% endblock %}

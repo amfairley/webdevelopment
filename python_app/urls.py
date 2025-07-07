@@ -103,4 +103,9 @@ urlpatterns = [
         views.python_pillow,
         name="python_pillow"
     ),
+    path(
+        'scope/',
+        views.python_scope,
+        name="python_scope"
+    ),
 ]

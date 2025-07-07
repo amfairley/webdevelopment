@@ -1,0 +1,28 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-scope-scope-in-python{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Scope in Python{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        In Python, scope determines where a variable can be accessed or modified. Scope follows the LEGB Rule, which 
+        stands for:
+    </p>
+    <p>
+        Local → Enclosing → Global → Built-in
+    </p>
+    <p>
+        When Python encounters a variable, it searches in this order:
+    </p>
+    <ol>
+        <li>Local — inside the current function</li>
+        <li>Enclosing — in any outer functions</li>
+        <li>Global — at the top level of the script/module</li>
+        <li>Built-in — names like len(), sum(), etc.</li>
+    </ol>
+{% endblock %}

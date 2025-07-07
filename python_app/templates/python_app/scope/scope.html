@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Python - Scope{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Scope</h2>
+    {% include 'python_app/scope/includes/contents.html' %}
+    {% include 'python_app/scope/includes/scope_in_python.html' %}
+    {% include 'python_app/scope/includes/global_scope.html' %}
+    {% include 'python_app/scope/includes/local_scope.html' %}
+    {% include 'python_app/scope/includes/enclosing_scope.html' %}
+    {% include 'python_app/scope/includes/using_nonlocal_to_modify_enclosing_variables.html' %}
+    {% include 'python_app/scope/includes/example_all_in_one.html' %}
+{% endblock %}
