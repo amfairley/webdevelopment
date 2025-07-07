@@ -1,0 +1,33 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-os-the-sys-module{% endblock %}
+
+<!--Section title-->
+{% block text_title %}The SYS Module{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Sometimes you'll want to interact with command-line arguments or exit a script early. That's where the sys 
+        module helps.
+    </p>
+    {% include 'python_app/os/includes/code_snippets/sys_1.html' %}
+    <p>
+        For example, if you run this in the terminal:
+    </p>
+    {% include 'python_app/os/includes/code_snippets/sys_2.html' %}
+    <ul>
+        <li>sys.argv[0] is "script.py"</li>
+        <li>sys.argv[1] is "myfile.txt"</li>
+    </ul>
+    <p>
+        You can use 
+        <code class="written-code">sys.exit()</code>
+        to stop the program if something goes wrong. The following stops the program and prints the message to the 
+        terminal.
+    </p>
+    {% include 'python_app/os/includes/code_snippets/sys_2.html' %}
+
+{% endblock %}

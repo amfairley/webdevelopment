@@ -63,4 +63,9 @@ urlpatterns = [
         views.python_input,
         name="python_input"
     ),
+    path(
+        'os/',
+        views.python_os,
+        name="python_os"
+    ),
 ]

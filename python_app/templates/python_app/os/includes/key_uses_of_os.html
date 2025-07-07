@@ -1,0 +1,58 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-os-key-uses-of-os{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Key Uses of OS{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <!-- CWD -->
+    <h4>
+        Getting Your Current Working Directory
+    </h4>
+    <p>
+        To find out where your Python script is running:
+    </p>
+    {% include 'python_app/os/includes/code_snippets/directory.html' %}
+    <p>
+        This returns the <dfn title="current working directory">CWD</dfn> which is the default location for reading or 
+        saving files unless you change it.
+    </p>
+    <!-- Files and Folders -->
+    <h4>
+        Listing Files and Folders in a Directory
+    </h4>
+    <p>
+        You can use 
+        <code class="written-code">os.listdir()</code>
+        with any valid path to list its contents.
+    </p>
+    {% include 'python_app/os/includes/code_snippets/list.html' %}
+    <!-- Joining -->
+    <h4>
+        Joining Paths the Right Way
+    </h4>
+    <p>
+        Instead of manually typing folder paths (which can cause problems on different systems), use 
+        <code class="written-code">os.path.join()</code>. This ensures your code works on Windows, macOS, and Linux.
+    </p>
+    {% include 'python_app/os/includes/code_snippets/join.html' %}
+    <!-- Split -->
+    <h4>
+        Splitting Paths and Filenames
+    </h4>
+    <p>
+        You can break a full path into directory and file parts with:
+    </p>
+    {% include 'python_app/os/includes/code_snippets/split_1.html' %}
+    <p>
+        Then, to separate the filename from its extension:
+    </p>
+    {% include 'python_app/os/includes/code_snippets/split_2.html' %}
+    <p>
+        This is useful when renaming files or filtering for .txt or .jpg.
+    </p>
+{% endblock %}

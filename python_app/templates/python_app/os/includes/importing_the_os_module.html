@@ -1,0 +1,15 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-os-importing-the-os-module{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Importing the OS Module{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    Before using any features, you need to import the module:
+    {% include 'python_app/os/includes/code_snippets/import.html' %}
+
+{% endblock %}

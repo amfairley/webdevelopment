@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Python - OS{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>OS</h2>
+    {% include 'python_app/os/includes/contents.html' %}
+    {% include 'python_app/os/includes/working_with_os.html' %}
+    {% include 'python_app/os/includes/importing_the_os_module.html' %}
+    {% include 'python_app/os/includes/key_uses_of_os.html' %}
+    {% include 'python_app/os/includes/the_sys_module.html' %}
+
+{% endblock %}

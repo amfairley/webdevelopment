@@ -144,3 +144,15 @@ def python_input(request):
         'python_app/input/input.html',
         context
     )
+
+
+def python_os(request):
+    '''Return the Python OS page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'python_app/os/os.html',
+        context
+    )
