@@ -1,0 +1,80 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-math-the-random-module{% endblock %}
+
+<!--Section title-->
+{% block text_title %}The Random Module{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The random module is perfect for generating random numbers, selecting random items, and even shuffling data. 
+    </p>
+    <p>
+        <code class="written-code">import random</code>
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Function
+                </th>
+                <th>
+                    Description
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <code class="written-code">random.randint(a, b)</code>
+                </td>
+                <td>
+                    Returns a random integer between a and b (inclusive)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">random.randrange(n)</code>
+                </td>
+                <td>
+                    Returns a random integer from 0 up to (but not including) n
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">random.random()</code>
+                </td>
+                <td>
+                    Returns a random float between 0.0 and 1.0
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">random.choice(sequence)</code>
+                </td>
+                <td>
+                    Picks a random element from a list, tuple, or string
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">random.shuffle(list)</code>
+                </td>
+                <td>
+                    Randomly shuffles the elements of a list (in-place)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">random.uniform(a, b)</code>
+                </td>
+                <td>
+                    Returns a random float between a and b
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

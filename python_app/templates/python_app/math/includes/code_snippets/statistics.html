@@ -1,0 +1,19 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-math-statistics{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">import statistics
+
+data = [10, 15, 20, 25, 30]
+print(statistics.mean(data))     # Average (mean)
+print(statistics.median(data))   # Middle value
+print(statistics.mode(data))     # Most common value
+print(statistics.stdev(data))    # Standard deviation
+</code></pre>
+{% endblock %}

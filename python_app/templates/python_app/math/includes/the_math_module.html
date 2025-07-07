@@ -1,0 +1,167 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-math-the-math-module{% endblock %}
+
+<!--Section title-->
+{% block text_title %}The Math Module{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The math module in Python provides access to a wide range of mathematical functions and constants. It's 
+        extremely useful when working with more advanced numerical calculations beyond basic arithmetic. Before using 
+        any functions from the module, you need to import it at the top of your script:
+    </p>
+    <p>
+        <code class="written-code">import math</code>
+    </p>
+    <p>
+        Then you can access the functions and constants. Some of the most useful are:   
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Function or Constant
+                </th>
+                <th>
+                    Description
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>
+                    <code class="written-code">math.pi</code>
+                </td>
+                <td>
+                    The value of π (3.14159...)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">math.e</code>
+                </td>
+                <td>
+                    The value of Euler's number (≈2.718)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">math.sqrt(x)</code>
+                </td>
+                <td>
+                    Returns the square root of x
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">math.pow(x, y)</code>
+                </td>
+                <td>
+                    Returns x raised to the power y
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">math.floor(x)</code>
+                </td>
+                <td>
+                    Rounds down to the nearest whole number
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">math.ceil(x)</code>
+                </td>
+                <td>
+                    Rounds up to the nearest whole number
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">math.trunc(x)</code>
+                </td>
+                <td>
+                    Truncates decimal (just keeps the integer part)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">math.fabs(x)</code>
+                </td>
+                <td>
+                    Returns the absolute value (always positive)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">math.factorial(x)</code>
+                </td>
+                <td>
+                    Returns the factorial of x
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">math.log(x)</code>
+                </td>
+                <td>
+                    Returns natural logarithm (base e)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">math.log10(x)</code>
+                </td>
+                <td>
+                    Logarithm base 10
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">math.sin(x) / math.cos(x) / math.tan(x)</code>
+                </td>
+                <td>
+                    Trigonometric functions (input in radians)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">math.degrees(x)</code>
+                </td>
+                <td>
+                    Converts radians to degrees
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">math.radians(x)</code>
+                </td>
+                <td>
+                    Converts degrees to radians
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">math.isclose(a, b)</code>
+                </td>
+                <td>
+                    Checks if two numbers are close in value
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">math.gcd(a, b)</code>
+                </td>
+                <td>
+                    Finds the greatest common divisor of a and b
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

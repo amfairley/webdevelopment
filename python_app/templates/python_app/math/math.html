@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Python - Math{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Math</h2>
+    {% include 'python_app/math/includes/contents.html' %}
+    {% include 'python_app/math/includes/the_math_module.html' %}
+    {% include 'python_app/math/includes/the_statistics_module.html' %}
+    {% include 'python_app/math/includes/the_random_module.html' %}
+
+{% endblock %}

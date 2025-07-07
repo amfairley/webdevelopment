@@ -68,4 +68,9 @@ urlpatterns = [
         views.python_os,
         name="python_os"
     ),
+    path(
+        'math/',
+        views.python_math,
+        name="python_math"
+    ),
 ]

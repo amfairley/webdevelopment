@@ -1,0 +1,18 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-math-the-statistics-module{% endblock %}
+
+<!--Section title-->
+{% block text_title %}The Statistics Module{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The statistics module is another helpful library for simple data analysis. It's built into Python and offers 
+        methods to calculate averages and other statistical properties.
+    </p>
+    {% include 'python_app/math/includes/code_snippets/statistics.html' %}
+
+{% endblock %}

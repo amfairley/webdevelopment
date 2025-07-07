@@ -156,3 +156,15 @@ def python_os(request):
         'python_app/os/os.html',
         context
     )
+
+
+def python_math(request):
+    '''Return the Python math page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'python_app/math/math.html',
+        context
+    )
