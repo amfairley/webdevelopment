@@ -1,0 +1,19 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-data-and-api-requests-get{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">import requests
+
+r = requests.get("https://api.example.com/data")
+print(r.text)       # Raw response
+print(r.json())     # Parsed JSON data
+# Saving the parsed JSON data as a variable
+data = requests.get("https://api.example.com/data").json()
+</code></pre>
+{% endblock %}

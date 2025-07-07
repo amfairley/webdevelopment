@@ -1,0 +1,101 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-data-and-api-requests-common-file-formats{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Common File Formats{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Tabular data:
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Format
+                </th>
+                <th>
+                    Description
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    .csv
+                </td>
+                <td>
+                    Comma-Separated Values
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    .tsv
+                </td>
+                <td>
+                    Tab-Separated Values
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    .xlsx
+                </td>
+                <td>
+                    Excel spreadsheets
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        Non-tabular data:
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Format
+                </th>
+                <th>
+                    Description
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    .txt
+                </td>
+                <td>
+                    Plain text
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    .rtf
+                </td>
+                <td>
+                    Rich text format
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    .xml
+                </td>
+                <td>
+                    Markup-based structured data
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        Images and Binary:
+    </p>
+    <ul>
+        <li>.png, .jpg, .tif — image files</li>
+        <li>.dat — generic data files (format depends on source)</li>
+    </ul>
+{% endblock %}

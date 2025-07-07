@@ -1,0 +1,22 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-data-and-api-requests-example-google{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">import gspread
+from google.oauth2.service_account import Credentials
+
+scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
+creds = Credentials.from_service_account_file("creds.json", scopes=scope)
+client = gspread.authorize(creds)
+
+sheet = client.open("MySpreadsheet").sheet1
+data = sheet.get_all_records()
+print(data)
+</code></pre>
+{% endblock %}

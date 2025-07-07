@@ -1,0 +1,33 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-data-and-api-requests-google-sheets-as-a-data-source{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Google Sheets as a Data Source{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can use Google Sheets like a cloud-based database using the gspread library and Google Drive API.
+    </p>
+    <p>
+        Setup Steps:
+    </p>
+    <ol>
+        <li>Enable the Google Sheets API at https://console.cloud.google.com/</li>
+        <li>Download the JSON credentials and rename it creds.json</li>
+        <li>Add creds.json to your .gitignore (it contains sensitive data!)</li>
+        <li>Share your spreadsheet with the client_email in the creds file (Editor access)</li>
+    </ol>
+    <p>
+        Install required libraries:
+    </p>
+    {% include 'python_app/data_and_api_requests/includes/code_snippets/install_google.html' %}
+    <p>
+        Example usage:
+    </p>
+    {% include 'python_app/data_and_api_requests/includes/code_snippets/example_google.html' %}
+
+{% endblock %}

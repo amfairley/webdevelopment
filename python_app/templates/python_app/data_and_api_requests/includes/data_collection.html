@@ -1,0 +1,42 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-data-and-api-requests-data-collection{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Data Collection{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <ul>
+        <li>Primary	Collected by you (e.g. surveys, scraping, simulations)</li>
+        <li>Secondary	Collected by others and made public (e.g. government databases, open APIs)</li>
+    </ul>
+    <p>
+        When collecting data, ask:
+    </p>
+    <ul>
+        <li>What data is needed?</li>
+        <li>How much is enough?</li>
+        <li>Where can it be found?</li>
+        <li>Are there legal or privacy concerns?</li>
+    </ul>
+    <p>
+        Useful resources for scraping and datasets:
+    </p>
+    <ul>
+        <li>
+            <a 
+                class="text-link"
+                href="https://dataverse.harvard.edu/"
+                title="Go to the Harvard Dataverse website"
+                aria-label="Go to the Harvard Dataverse website"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Harvard Dataverse
+            </a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,117 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-data-and-api-requests-reading-data-from-files{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Reading Data from Files{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Python's built-in 
+        <code class="written-code">open()</code>
+        function helps you access file contents.
+    </p>
+    {% include 'python_app/data_and_api_requests/includes/code_snippets/open_1.html' %}
+    <ul>
+        <li>with open(...) handles file closing automatically.</li>
+        <li>'r' = read (default), 'w' = write, 'a' = append.</li>
+    </ul>
+    {% include 'python_app/data_and_api_requests/includes/code_snippets/open_2.html' %}
+    <p>
+        Writing to a file.
+    </p>
+    {% include 'python_app/data_and_api_requests/includes/code_snippets/open_3.html' %}
+    <p>
+        Reading and writing CSV Files.
+    </p>
+    {% include 'python_app/data_and_api_requests/includes/code_snippets/open_4.html' %}
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Syntax
+                </th>
+                <th>
+                    Description
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    with open('file.txt', 'w')
+                </td>
+                <td>
+                    Opens it as writable
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    with open('file.txt', 'a')
+                </td>
+                <td>
+                    A for append
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    with open('file.txt', 'r')
+                </td>
+                <td>
+                    “r” is default so no need to specify; used to read a file
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    .read()
+                </td>
+                <td>
+                    Grabs the whole document as a single string
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    .readlines()
+                </td>
+                <td>
+                    Single line at a time. It iterates through a document, first time you do it you get first line, second time second line etc.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    .readline()
+                </td>
+                <td>
+                    Read one line at a time
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    .seek()
+                </td>
+                <td>
+                    Moves to a particular point in the file
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    .write(“string”)
+                </td>
+                <td>
+                    Creates a new file with the contents of string
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    for line in filename:
+                </td>
+                <td>
+                    Iterates through the lines in the file
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

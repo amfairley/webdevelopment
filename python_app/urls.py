@@ -128,4 +128,9 @@ urlpatterns = [
         views.python_unit_testing,
         name="python_unit_testing"
     ),
+    path(
+        'data_and_api_requests/',
+        views.python_data_and_api_requests,
+        name="python_data_and_api_requests"
+    ),
 ]

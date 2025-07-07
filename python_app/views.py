@@ -300,3 +300,15 @@ def python_unit_testing(request):
         'python_app/unit_testing/unit_testing.html',
         context
     )
+
+
+def python_data_and_api_requests(request):
+    '''Return the Python data and API requests page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'python_app/data_and_api_requests/data_and_api_requests.html',
+        context
+    )

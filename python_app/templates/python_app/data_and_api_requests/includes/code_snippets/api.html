@@ -1,0 +1,15 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-data-and-api-requests-api{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">url = "https://api.census.gov/data/2020/acs/acs5?get=NAME,B08303_001E&for=state:*"
+response = requests.get(url)
+print(response.json())
+</code></pre>
+{% endblock %}

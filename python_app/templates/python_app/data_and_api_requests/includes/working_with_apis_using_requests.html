@@ -1,0 +1,33 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-data-and-api-requests-working-with-apis-using-requests{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Working with APIs Using Requests{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Python's requests library is your go-to tool for fetching web data. Install it with:
+    </p>
+    {% include 'python_app/data_and_api_requests/includes/code_snippets/request.html' %}
+    <p>
+        Make get requests with:
+    </p>
+    {% include 'python_app/data_and_api_requests/includes/code_snippets/get.html' %}
+    <p>
+        API queries:
+    </p>
+    {% include 'python_app/data_and_api_requests/includes/code_snippets/api.html' %}
+    <p>
+        API Query Structure:
+    </p>
+    <ul>
+        <li>After ? are query parameters</li>
+        <li>get=... defines which variables to retrieve</li>
+        <li>for=state:* means "for all states"</li>
+        <li>Separate multiple criteria using commas: &for=state:06,49</li>
+    </ul>
+{% endblock %}
