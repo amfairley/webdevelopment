@@ -1,0 +1,30 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-classes-class-layout{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Class Layout{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The 
+        <code class="written-code">__init__()</code>
+        method  is a special method that is called only when a new object is created. It has the arguments of self and 
+        then all the properties included in the Class.
+    </p>
+    {% include 'python_app/classes/includes/code_snippets/init.html' %}
+    <ul>
+        <li>self refers to the instance itself</li>
+        <li>name and age are parameters passed when the class is instantiated</li>
+        <li>self.name and self.age are the instance's attributes</li>
+    </ul>
+    <p>
+        A method is a function inside a class that operates on its data. It can be called on a created instance by 
+        using the syntax instance.method().
+    </p>
+    {% include 'python_app/classes/includes/code_snippets/method.html' %}
+
+{% endblock %}

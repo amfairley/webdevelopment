@@ -1,0 +1,21 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-classes-mixins{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Mixins{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        A mixin is a class that provides methods to other classes but is not a parent class in the traditional sense. 
+        They are used to avoid duplication when several classes need similar methods.
+    </p>
+    {% include 'python_app/classes/includes/code_snippets/mixins.html' %}
+    <ul>
+        <li>Mixins don't usually need an __init__() method</li>
+        <li>You include them before the main class in parentheses</li>
+    </ul>
+{% endblock %}

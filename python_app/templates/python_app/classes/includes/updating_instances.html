@@ -1,0 +1,19 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-classes-updating-instances{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Updating Instances{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can update an attribute of an instance in two ways. Either directly accessing the attribute using the 
+        syntax of 
+        <code class="written-code">instance.attribute</code>
+        and reassigning it or via a setter method that is defined inside the class.
+    </p>
+    {% include 'python_app/classes/includes/code_snippets/update.html' %}
+{% endblock %}

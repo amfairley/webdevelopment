@@ -1,0 +1,24 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-classes-getter{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    # Setter method to update the age
+    def set_age(self, new_age):
+        self.age = new_age
+
+# Getter method to return value
+def get_name(self):
+    return self.name
+</code></pre>
+{% endblock %}

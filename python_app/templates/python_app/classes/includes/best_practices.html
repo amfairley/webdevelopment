@@ -1,0 +1,18 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-classes-best-practices{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Best Practices{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <ul>
+        <li>Use CamelCase for class names (e.g., Dog, UserProfile)</li>
+        <li>Start with a capital letter</li>
+        <li>Include a docstring below the class definition to describe its purpose</li>
+    </ul>
+    {% include 'python_app/classes/includes/code_snippets/docstring.html' %}
+{% endblock %}

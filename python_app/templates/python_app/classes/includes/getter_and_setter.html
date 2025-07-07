@@ -1,0 +1,17 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-classes-getter-and-setter{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Getter and Setter{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Getter methods are functions defined inside a class to return values.
+    </p>
+
+    {% include 'python_app/classes/includes/code_snippets/getter.html' %}
+{% endblock %}

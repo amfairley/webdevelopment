@@ -1,0 +1,17 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-classes-instantiation{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Instantiation{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Instantiation is the process of creating an instance (object) from a class. The following creates a specific
+         Dog object with a name and an age using the dog class from the "Classes in Python" section.
+    </p>
+    {% include 'python_app/classes/includes/code_snippets/instant.html' %}
+{% endblock %}

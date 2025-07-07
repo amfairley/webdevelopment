@@ -1,0 +1,19 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-classes-the-str-method{% endblock %}
+
+<!--Section title-->
+{% block text_title %}The __str__() Method{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Use the 
+        <code class="written-code">__str__()</code>
+        method in your class to define how your object will be represented as a string, like when passed to 
+        <code class="written-code">print()</code>.
+    </p>
+    {% include 'python_app/classes/includes/code_snippets/str.html' %}
+{% endblock %}

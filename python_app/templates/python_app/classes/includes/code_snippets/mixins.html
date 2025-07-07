@@ -1,0 +1,21 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-classes-mixins{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">class JsonMixin:
+    """Provides JSON export functionality."""
+    def to_json(self):
+        import json
+        return json.dumps(self.__dict__)
+
+class User(JsonMixin):
+    def __init__(self, name):
+        self.name = name
+</code></pre>
+{% endblock %}

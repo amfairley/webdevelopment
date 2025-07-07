@@ -276,3 +276,15 @@ def python_conditionals(request):
         'python_app/conditionals/conditionals.html',
         context
     )
+
+
+def python_classes(request):
+    '''Return the Python classes page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'python_app/classes/classes.html',
+        context
+    )

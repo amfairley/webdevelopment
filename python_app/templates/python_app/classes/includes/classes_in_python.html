@@ -1,0 +1,23 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-classes-classes-in-python{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Classes in Python{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        In Python, classes are a fundamental part of <dfn title="Object-Oriented Programming">OOP</dfn>. They let you 
+        create custom data types that combine data (attributes) and functions (methods) into reusable blueprints for 
+        your program.
+    </p>
+    <p>
+        Essentially, a class is a blueprint for a data type, letting you invent your own types and bundle the data and 
+        behaviour into a single, reusable structure. For example, you could make a class called Dog, and every 
+        individual dog in your program would be created using that template.
+    </p>
+    {% include 'python_app/classes/includes/code_snippets/example.html' %}
+{% endblock %}

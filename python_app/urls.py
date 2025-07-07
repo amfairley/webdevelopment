@@ -118,4 +118,9 @@ urlpatterns = [
         views.python_conditionals,
         name="python_conditionals"
     ),
+    path(
+        'classes/',
+        views.python_classes,
+        name="python_classes"
+    ),
 ]

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Python - Classes{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Classes</h2>
+    {% include 'python_app/classes/includes/contents.html' %}
+    {% include 'python_app/classes/includes/classes_in_python.html' %}
+    {% include 'python_app/classes/includes/best_practices.html' %}
+    {% include 'python_app/classes/includes/class_layout.html' %}
+    {% include 'python_app/classes/includes/instantiation.html' %}
+    {% include 'python_app/classes/includes/updating_instances.html' %}
+    {% include 'python_app/classes/includes/getter_and_setter.html' %}
+    {% include 'python_app/classes/includes/the_str_method.html' %}
+    {% include 'python_app/classes/includes/inheritance.html' %}
+    {% include 'python_app/classes/includes/mixins.html' %}
+
+{% endblock %}
