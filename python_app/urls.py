@@ -108,4 +108,9 @@ urlpatterns = [
         views.python_scope,
         name="python_scope"
     ),
+    path(
+        'loops/',
+        views.python_loops,
+        name="python_loops"
+    ),
 ]

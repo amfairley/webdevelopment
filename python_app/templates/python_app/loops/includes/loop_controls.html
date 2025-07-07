@@ -1,0 +1,25 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-loops-loop-controls{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Loop Controls{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        break - exit the loop immediately
+    </p>
+    {% include 'python_app/loops/includes/code_snippets/break.html' %}
+    <p>
+        continue - skip the current iteration
+    </p>
+    {% include 'python_app/loops/includes/code_snippets/continue.html' %}
+    <p>
+        pass - placeholder that does nothing
+    </p>
+    {% include 'python_app/loops/includes/code_snippets/pass.html' %}
+
+{% endblock %}

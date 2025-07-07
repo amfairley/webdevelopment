@@ -1,0 +1,19 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-loops-for-syntax{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">for &lt;temporary_variable&gt; in &lt;collection&gt;:
+    &lt;action&gt;
+
+# Example:
+fruits = ['apple', 'banana', 'cherry']
+for fruit in fruits:
+    print(fruit)
+</code></pre>
+{% endblock %}

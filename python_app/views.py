@@ -252,3 +252,15 @@ def python_scope(request):
         'python_app/scope/scope.html',
         context
     )
+
+
+def python_loops(request):
+    '''Return the Python loops page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'python_app/loops/loops.html',
+        context
+    )

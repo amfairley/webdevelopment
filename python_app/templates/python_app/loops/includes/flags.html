@@ -1,0 +1,25 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-loops-flags{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Flags{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Flags are useful when multiple conditions control whether a loop runs. Use a flag when:
+    </p>
+    <ul>
+        <li>
+            You may exit the loop for more than one reason
+        </li>
+        <li>
+            You're writing larger programs with more conditions
+        </li>
+    </ul>
+    {% include 'python_app/loops/includes/code_snippets/flags.html' %}
+
+{% endblock %}

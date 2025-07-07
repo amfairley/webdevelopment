@@ -1,0 +1,17 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-loops-while-user-controlled{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">message = ""
+while message != "quit":
+    message = input("Type something (or 'quit'): ")
+    if message != "quit":
+        print(message)
+</code></pre>
+{% endblock %}

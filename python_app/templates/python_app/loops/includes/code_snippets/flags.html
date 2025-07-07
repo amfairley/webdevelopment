@@ -1,0 +1,20 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-loops-flags{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">flag = True
+while flag:
+    message = input("Say something (or 'quit'): ")
+
+    if message == 'quit':
+        flag = False
+    else:
+        print(message)
+</code></pre>
+{% endblock %}

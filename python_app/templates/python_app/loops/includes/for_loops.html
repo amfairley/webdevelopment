@@ -1,0 +1,43 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-loops-for-loops{% endblock %}
+
+<!--Section title-->
+{% block text_title %}For Loops{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <!--Syntax-->
+    <h4 id="python-loops-for-loops-basic-syntax">
+        Basic Syntax
+    </h4>
+    {% include 'python_app/loops/includes/code_snippets/for_syntax.html' %}
+
+    <!-- range() -->
+    <h4 id="python-loops-for-loops-range">
+        range()
+    </h4>
+    <p>
+        <code class="written-code">
+            range(n)
+        </code>
+        generates numbers from 0 to n-1.
+    </p>
+    {% include 'python_app/loops/includes/code_snippets/range.html' %}
+    <p>
+        You can also use:
+        <code class="written-code">range(start, stop, step)</code> for example, range(2, 10, 2) → 2, 4, 6, 8
+    </p>
+
+    <!-- Ignoring the loop variable -->
+    <h4 id="python-loops-for-loops-ignoring-the-loop-variable">
+        Ignoring the Loop Variable
+    </h4>
+    <p>
+        Use <code class="written-code">_</code> when the variable won't be used inside the loop.
+    </p>
+    {% include 'python_app/loops/includes/code_snippets/ignore.html' %}
+
+{% endblock %}

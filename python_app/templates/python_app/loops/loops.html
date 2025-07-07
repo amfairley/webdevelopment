@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Python - Loops{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Loops</h2>
+    {% include 'python_app/loops/includes/contents.html' %}
+    {% include 'python_app/loops/includes/for_loops.html' %}
+    {% include 'python_app/loops/includes/while_loops.html' %}
+    {% include 'python_app/loops/includes/loop_controls.html' %}
+    {% include 'python_app/loops/includes/flags.html' %}
+{% endblock %}
