@@ -1,0 +1,92 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-datetime-datetime{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Datetime{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Python also includes the Datetime library to help when you need to access and manipulate date or time 
+        information. To import is use:
+    </p>
+    <p>
+        <code class="written-code">
+            import Datetime
+        </code>
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Function
+                </th>
+                <th>
+                    Description
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <code class="written-code">datetime.now()</code>
+                </td>
+                <td>
+                    Gives the time as a datetime object in yyyy-mm-dd hh:mm:ss.ssssss
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">datetime.now().date()</code>
+                </td>
+                <td>
+                    Gives the date in yyyy-mm-dd
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">datetime.now().time()</code>
+                </td>
+                <td>
+                    Gives the time in hh:mm:ss.ssssss
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">variable.year</code>
+                </td>
+                <td>
+                    Gives the year as an integer if the variable is a datetime or date object YYYY
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">variable.strftime("%A")</code>
+                </td>
+                <td>
+                    Gives the full weekday name of a datetime or date object
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">dateutil.parser.parse("…")</code>
+                </td>
+                <td>
+                    The <code class="written-code">dateutil</code> module's parser can parse a string into a datetime object (e.g., parse("June 23, 2025")).
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        To use the dateutil parser, install it via 
+    </p>
+    {% include 'python_app/datetime/includes/code_snippets/dateutil_1.html' %}
+    <p>
+        You can then use it like:
+    </p>
+    {% include 'python_app/datetime/includes/code_snippets/dateutil_2.html' %}
+
+{% endblock %}

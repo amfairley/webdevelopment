@@ -168,3 +168,15 @@ def python_math(request):
         'python_app/math/math.html',
         context
     )
+
+
+def python_datetime(request):
+    '''Return the Python datetime page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'python_app/datetime/datetime.html',
+        context
+    )

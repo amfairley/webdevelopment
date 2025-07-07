@@ -73,4 +73,9 @@ urlpatterns = [
         views.python_math,
         name="python_math"
     ),
+    path(
+        'datetime/',
+        views.python_datetime,
+        name="python_datetime"
+    ),
 ]
