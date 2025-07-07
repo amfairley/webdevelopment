@@ -132,3 +132,15 @@ def python_functions(request):
         'python_app/functions/functions.html',
         context
     )
+
+
+def python_input(request):
+    '''Return the Python input page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'python_app/input/input.html',
+        context
+    )

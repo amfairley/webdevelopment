@@ -1,0 +1,47 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-input-input{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Input{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        When you need to get input from the user, you can use the built in input() function. To prompt the user and 
+        store their response as a string tied to a variable use the following syntax.
+    </p>
+    <p>
+        <code class="written-code">
+            variable_name = input("A question goes here?")
+        </code>
+    </p>
+    <p>
+        This will display the question in the terminal, pause the program ,and wait for the user to enter some text. 
+        Once they press <kbd>Enter</kbd>, their response is saved in the variable as a string.
+    </p>
+    <p>
+        A trick to add an input prompt that is longer than one line is to create the prompt variable, keep adding new 
+        lines to it and then use it as an argument in the 
+        <code class="written-code">input()</code>
+        function.
+    </p>
+    {% include 'python_app/input/includes/code_snippets/input_1.html' %}
+    <p>
+        Once you've captured the input, you'll often want to respond to what the user has given you. Traditionally, 
+        you'd use if/elif/else statements to make decisions, but since Python 3.10, the match statement offers a 
+        cleaner way to handle multiple conditions.
+    </p>
+    {% include 'python_app/input/includes/code_snippets/input_2.html' %}
+    <ul>
+        <li>input() collects the user's choice.</li>
+        <li>.lower() ensures the input is lowercase for consistent matching.</li>
+        <li>match checks the value of choice.</li>
+        <li>If it's "start" or "go" → run the start code.</li>
+        <li>If it's "stop" → run the stop code.</li>
+        <li>If it's "quit" → exit.</li>
+        <li>The case _: is the default (like else) and runs if nothing else matched.</li>
+    </ul>
+{% endblock %}

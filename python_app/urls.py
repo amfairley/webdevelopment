@@ -58,4 +58,9 @@ urlpatterns = [
         views.python_functions,
         name="python_functions"
     ),
+    path(
+        'input/',
+        views.python_input,
+        name="python_input"
+    ),
 ]
