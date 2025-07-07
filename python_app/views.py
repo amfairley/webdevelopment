@@ -228,3 +228,15 @@ def python_json(request):
         'python_app/json/json.html',
         context
     )
+
+
+def python_pillow(request):
+    '''Return the Python pillow page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'python_app/pillow/pillow.html',
+        context
+    )

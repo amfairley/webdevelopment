@@ -1,0 +1,14 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-pillow-open{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">img = Image.open('image.jpg')  # Open an image file
+img.show()                     # Opens the image in the default viewer
+</code></pre>
+{% endblock %}

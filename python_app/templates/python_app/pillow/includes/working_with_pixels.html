@@ -1,0 +1,17 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-pillow-working-with-pixels{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Working with Pixels{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        This only works on mutable modes like "RGB" or "RGBA".
+    </p>
+    {% include 'python_app/pillow/includes/code_snippets/pixels.html' %}
+
+{% endblock %}

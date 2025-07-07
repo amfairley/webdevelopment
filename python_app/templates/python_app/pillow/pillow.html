@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Python - Pillow{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Pillow</h2>
+    {% include 'python_app/pillow/includes/contents.html' %}
+    {% include 'python_app/pillow/includes/how_to_work_with_pillow.html' %}
+    {% include 'python_app/pillow/includes/opening_and_viewing_images.html' %}
+    {% include 'python_app/pillow/includes/getting_image_info.html' %}
+    {% include 'python_app/pillow/includes/editing_images.html' %}
+    {% include 'python_app/pillow/includes/changing_colour_modes.html' %}
+    {% include 'python_app/pillow/includes/drawing_on_images.html' %}
+    {% include 'python_app/pillow/includes/saving_images.html' %}
+    {% include 'python_app/pillow/includes/working_with_pixels.html' %}
+    {% include 'python_app/pillow/includes/common_modes.html' %}
+    {% include 'python_app/pillow/includes/example.html' %}
+
+{% endblock %}

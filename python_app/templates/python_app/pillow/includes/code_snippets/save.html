@@ -1,0 +1,14 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-pillow-save{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">img.save('new_image.jpg')                  # Saves in JPEG format
+img.save('new_image.png', 'PNG')           # Specify format if needed
+</code></pre>
+{% endblock %}

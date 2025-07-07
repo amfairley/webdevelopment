@@ -98,4 +98,9 @@ urlpatterns = [
         views.python_json,
         name="python_json"
     ),
+    path(
+        'pillow/',
+        views.python_pillow,
+        name="python_pillow"
+    ),
 ]

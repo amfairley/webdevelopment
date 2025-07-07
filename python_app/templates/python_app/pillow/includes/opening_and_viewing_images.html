@@ -1,0 +1,17 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-pillow-opening-and-viewing-images{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Opening and Viewing Images{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can open .jpg, .png, .gif, .bmp, .tiff, and more.
+    </p>
+    {% include 'python_app/pillow/includes/code_snippets/open.html' %}
+
+{% endblock %}

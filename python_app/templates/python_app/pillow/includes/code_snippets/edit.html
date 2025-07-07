@@ -1,0 +1,19 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-pillow-open{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python"># Resize:
+resized = img.resize((200, 200))
+# Crop:
+cropped = img.crop((left, top, right, bottom))  # Coordinates tuple
+# Rotate / Flip:
+rotated = img.rotate(90)      # Degrees counter-clockwise
+flipped = img.transpose(Image.FLIP_LEFT_RIGHT)
+</code></pre>
+{% endblock %}

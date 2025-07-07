@@ -1,0 +1,36 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-pillow-how-to-work-with-pillow{% endblock %}
+
+<!--Section title-->
+{% block text_title %}How to Work with Pillow{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        <a 
+            class="text-link"
+            href="https://pillow.readthedocs.io/en/stable/"
+            title="Pillow"
+            aria-label="Go to the Pillow page"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Pillow
+        </a>
+        is a powerful and user-friendly Python imaging library, letting you open, edit, create, and save images in many 
+        formats. Pillow is the actively maintained fork of the original <dfn title="Python Imaging Library">PIL</dfn>.
+    </p>
+    <p>
+        Install it with:
+    </p>
+    {% include 'python_app/pillow/includes/code_snippets/install.html' %}
+    <p>
+        Then import it at the top of your Python files.
+    </p>
+    <p>
+        <code class="written-code">from PIL import Image</code>
+    </p>
+{% endblock %}

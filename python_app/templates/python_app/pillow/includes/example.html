@@ -1,0 +1,15 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-pillow-example{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Example{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+
+    {% include 'python_app/pillow/includes/code_snippets/example.html' %}
+
+{% endblock %}

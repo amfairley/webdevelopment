@@ -1,0 +1,27 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-pillow-example{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python"># Open, Resize, Add Text, and Save
+from PIL import Image, ImageDraw, ImageFont
+
+# Open
+img = Image.open('photo.jpg')
+
+# Resize
+img = img.resize((300, 300))
+
+# Add Text
+draw = ImageDraw.Draw(img)
+draw.text((10, 10), "Sample", fill=(255, 255, 255))
+
+# Save
+img.save('photo_modified.jpg')
+</code></pre>
+{% endblock %}

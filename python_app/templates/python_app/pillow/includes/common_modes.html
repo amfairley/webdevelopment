@@ -1,0 +1,67 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-pillow-common-modes{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Common Modes{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Mode
+                </th>
+                <th>
+                    Description
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    Black and white
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    L
+                </td>
+                <td>
+                    Grayscale
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    RGB
+                </td>
+                <td>
+                    Red, Green, Blue
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    RGBA
+                </td>
+                <td>
+                    RGB with Alpha (transparency)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    CMYK
+                </td>
+                <td>
+                    Cyan, Magenta, Yellow, Black
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

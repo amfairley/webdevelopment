@@ -1,0 +1,17 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-pillow-drawing-on-images{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Drawing on Images{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can draw lines, rectangles, ellipses, and more.
+    </p>
+    {% include 'python_app/pillow/includes/code_snippets/draw.html' %}
+
+{% endblock %}

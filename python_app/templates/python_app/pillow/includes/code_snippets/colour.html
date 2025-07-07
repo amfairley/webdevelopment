@@ -1,0 +1,14 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-pillow-colour{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">gray = img.convert('L')       # Convert to grayscale
+rgba = img.convert('RGBA')    # Add alpha channel
+</code></pre>
+{% endblock %}
