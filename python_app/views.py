@@ -180,3 +180,15 @@ def python_datetime(request):
         'python_app/datetime/datetime.html',
         context
     )
+
+
+def python_pandas(request):
+    '''Return the Python pandas page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'python_app/pandas/pandas.html',
+        context
+    )

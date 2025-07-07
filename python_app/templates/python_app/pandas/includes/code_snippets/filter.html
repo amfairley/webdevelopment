@@ -1,0 +1,21 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-pandas-filter{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">df.loc[df['column name'] == 'value'] # Filter rows by value
+# Combining conditions
+df.loc[(df['col1'] == 'value1') & (df['col2'] == 'value2')]
+df.loc[(df['col1'] == 'value1') | (df['col2'] == 'value2')]
+# Sorting values
+df.sort_values('column name')
+df.sort_values('column name', ascending=False)
+df.sort_values(['col1', 'col2'])  # Sort by multiple columns
+df.sort_values(['col1', 'col2'], ascending=[True, False])
+</code></pre>
+{% endblock %}

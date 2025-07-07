@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Python - Pandas{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Pandas</h2>
+    {% include 'python_app/pandas/includes/contents.html' %}
+    {% include 'python_app/pandas/includes/what_is_pandas.html' %}
+    {% include 'python_app/pandas/includes/loading_data.html' %}
+    {% include 'python_app/pandas/includes/exploring_the_data.html' %}
+    {% include 'python_app/pandas/includes/accessing_data.html' %}
+    {% include 'python_app/pandas/includes/filtering_and_sorting.html' %}
+    {% include 'python_app/pandas/includes/creating_and_editing_columns.html' %}
+    {% include 'python_app/pandas/includes/saving_data.html' %}
+    {% include 'python_app/pandas/includes/resetting_index.html' %}
+    {% include 'python_app/pandas/includes/filtering_by_strings.html' %}
+    {% include 'python_app/pandas/includes/updating_values.html' %}
+    {% include 'python_app/pandas/includes/grouping_data.html' %}
+    {% include 'python_app/pandas/includes/tips.html' %}
+
+{% endblock %}

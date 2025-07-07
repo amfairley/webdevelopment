@@ -1,0 +1,16 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-pandas-save{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">df.to_csv('modified.csv')                        # Includes index
+df.to_csv('file.csv', index=False)               # Excludes index
+df.to_excel('file.xlsx', index=False)            # Excel file
+df.to_csv('file.txt', index=False, sep='\t')     # Tab-separated file
+</code></pre>
+{% endblock %}

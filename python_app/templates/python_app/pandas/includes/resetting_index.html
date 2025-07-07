@@ -1,0 +1,18 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-pandas-resetting-index{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Resetting Index{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        In Pandas, resetting the index refers to moving the current row labels (index) back to the default integer 
+        index (0, 1, 2, …) and optionally keeping the old index as a column.
+    </p>
+    {% include 'python_app/pandas/includes/code_snippets/reset.html' %}
+
+{% endblock %}

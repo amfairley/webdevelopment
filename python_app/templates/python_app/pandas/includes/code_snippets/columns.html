@@ -1,0 +1,21 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-pandas-columns{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python"># Creating a column
+df['new_col'] = df['col1'] + df['col2']
+df['sum'] = df.iloc[:, 4:9].sum(axis=1)  # Sum across columns 4-8
+# Drop a column:
+df.drop(columns=['col_name'], inplace=True)
+# Rearrange columns:
+df = df[['col1', 'col2', 'col4', 'col3']]
+cols = list(df.columns.values)
+df = df[cols[0:4] + [cols[-1]] + cols[4:12]]
+</code></pre>
+{% endblock %}

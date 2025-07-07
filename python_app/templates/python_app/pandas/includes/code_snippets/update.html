@@ -1,0 +1,15 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-pandas-update{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">df.loc[df['col1'] == 'Old Value', 'col1'] = 'New Value'
+df.loc[df['col1'] == 'Old Value', 'col2'] = 'New Value'
+df.loc[df['col1'] > 100, ['col2', 'col3']] = ['Value2', 'Value3']
+</code></pre>
+{% endblock %}

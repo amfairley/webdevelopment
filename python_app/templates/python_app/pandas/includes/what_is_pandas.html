@@ -1,0 +1,22 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-pandas-what-is-pandas{% endblock %}
+
+<!--Section title-->
+{% block text_title %}What is Pandas?{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Pandas is an amazing Python library designed to be used when working with data. Use it to clean, transform, 
+        analyse, or visualise data. The main data structure in pandas is a DataFrame. It is basically like a table with 
+        rows and columns. The header is first row of the CSV, excel or text file that contains the column names. To 
+        start with import pandas with:
+    </p>
+    <p>
+        <code class="written-code">import pandas as pd</code>
+    </p>
+
+{% endblock %}

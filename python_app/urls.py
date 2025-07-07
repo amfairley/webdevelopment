@@ -78,4 +78,9 @@ urlpatterns = [
         views.python_datetime,
         name="python_datetime"
     ),
+    path(
+        'pandas/',
+        views.python_pandas,
+        name="python_pandas"
+    ),
 ]

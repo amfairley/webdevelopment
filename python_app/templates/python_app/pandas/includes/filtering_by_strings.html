@@ -1,0 +1,15 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-pandas-filtering-by-strings{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Filtering by Strings{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+
+    {% include 'python_app/pandas/includes/code_snippets/filter_strings.html' %}
+
+{% endblock %}

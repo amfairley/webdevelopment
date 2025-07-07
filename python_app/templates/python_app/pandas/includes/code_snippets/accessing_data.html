@@ -1,0 +1,24 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-pandas-accessing-data{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">df['column name']	# Accessing a Column
+df.column_name        # Only works if name has no spaces
+df['column name'][0:5]    # First 5 entries of a column
+df[['col1', 'col2']]      # Multiple columns
+df.iloc[1]                # Row at index 1
+df.iloc[1:4]              # Rows 1 to 3
+df.iloc[2, 1]             # Value at 3rd row, 2nd column
+
+# Iterating over rows
+for index, row in df.iterrows():
+    print(index, row)
+    print(row['column name'])
+</code></pre>
+{% endblock %}

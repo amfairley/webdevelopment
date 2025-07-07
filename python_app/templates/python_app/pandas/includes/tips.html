@@ -1,0 +1,21 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-pandas-tips{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Tips{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+
+    <ul>
+        <li>
+            Use 
+            <code class="written-code">print(df.info())</code>
+            to get a quick overview of your DataFrame, including data types and non-null counts.
+        </li>
+    </ul>
+
+{% endblock %}
