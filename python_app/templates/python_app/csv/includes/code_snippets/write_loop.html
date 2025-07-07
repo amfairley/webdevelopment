@@ -1,0 +1,16 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-csv-write-loop{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">with open('output.csv', 'w', newline='') as file:
+    writer = csv.writer(file)
+    for key, value in some_dict.items():
+        writer.writerow([key, value])
+</code></pre>
+{% endblock %}

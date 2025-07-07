@@ -1,0 +1,17 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-csv-splitting-lines-without-csv-reader{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Splitting Lines Without csv.reader{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Sometimes, you may read raw lines and split manually.
+    </p>
+    {% include 'python_app/csv/includes/code_snippets/split.html' %}
+
+{% endblock %}

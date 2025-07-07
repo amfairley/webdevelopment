@@ -1,0 +1,20 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-csv-what-is-csv{% endblock %}
+
+<!--Section title-->
+{% block text_title %}What is CSV?{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        <dfn title="Comma-Separated Values">CSV</dfn> files are commonly used to store tabular data. Python's built-in 
+        csv module makes reading and writing CSVs easy and flexible. Set it up by first importing it.
+    </p>
+    <p>
+        <code class="written-code">import csv</code>
+    </p>
+
+{% endblock %}

@@ -88,4 +88,9 @@ urlpatterns = [
         views.python_numpy,
         name="python_numpy"
     ),
+    path(
+        'csv/',
+        views.python_csv,
+        name="python_csv"
+    ),
 ]

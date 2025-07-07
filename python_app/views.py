@@ -204,3 +204,15 @@ def python_numpy(request):
         'python_app/numpy/numpy.html',
         context
     )
+
+
+def python_csv(request):
+    '''Return the Python csv page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'python_app/csv/csv.html',
+        context
+    )

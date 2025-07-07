@@ -1,0 +1,25 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-csv-write-dict{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">big_list = [
+    {'key1': 'value1a', 'key2': 'value2a'},
+    {'key1': 'value1b', 'key2': 'value2b'},
+    # ...
+]
+
+with open('newfile.csv', 'w', newline='') as output_csv:
+    fields = ['key1', 'key2']
+    output_writer = csv.DictWriter(output_csv, fieldnames=fields)
+
+    output_writer.writeheader()  # Writes the header row
+    for item in big_list:
+        output_writer.writerow(item)
+</code></pre>
+{% endblock %}

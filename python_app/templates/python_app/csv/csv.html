@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Python - CSV{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>CSV</h2>
+    {% include 'python_app/csv/includes/contents.html' %}
+    {% include 'python_app/csv/includes/what_is_csv.html' %}
+    {% include 'python_app/csv/includes/reading_csv_files.html' %}
+    {% include 'python_app/csv/includes/save_a_specific_column_to_a_list.html' %}
+    {% include 'python_app/csv/includes/splitting_lines_without_csv_reader.html' %}
+    {% include 'python_app/csv/includes/writing_csv_files.html' %}
+    {% include 'python_app/csv/includes/summary.html' %}
+{% endblock %}

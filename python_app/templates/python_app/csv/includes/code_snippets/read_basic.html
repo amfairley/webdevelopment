@@ -1,0 +1,16 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-csv-read-basic{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">with open('file.csv', newline='') as file:
+    reader = csv.reader(file)
+    for row in reader:
+        print(row)  # Row is a list of values
+</code></pre>
+{% endblock %}

@@ -1,0 +1,100 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-csv-summary{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Summary{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Code
+                </th>
+                <th>
+                    Description
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <code class="written-code">import csv</code>
+                </td>
+                <td>
+                    Import the CSV module
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">csv.reader(file)</code>
+                </td>
+                <td>
+                    Reads rows as lists
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">csv.DictReader(file)</code>
+                </td>
+                <td>
+                    Reads rows as dictionaries using header row
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">delimiter=';'</code>
+                </td>
+                <td>
+                    Specify a different delimiter
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">csv.writer(file)</code>
+                </td>
+                <td>
+                    For writing rows (as lists)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">csv.DictWriter(file, fieldnames=[...])</code>
+                </td>
+                <td>
+                    For writing rows (as dictionaries)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">.writeheader()</code>
+                </td>
+                <td>
+                    Writes the column headers
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">.writerow({...})</code>
+                </td>
+                <td>
+                    Writes a single row
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">.split(',')</code>
+                </td>
+                <td>
+                    Splits a string into list values (manual approach)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}
