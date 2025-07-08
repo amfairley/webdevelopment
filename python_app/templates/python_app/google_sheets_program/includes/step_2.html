@@ -1,0 +1,50 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-google-sheets-program-step-2{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Step 2: Get Google Sheets API Credentials{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <ol>
+        <li>
+            Go to the Google Cloud Console
+        </li>
+        <li>
+            Create a project and enable:
+            <ul>
+                <li>
+                    Google Sheets API
+                </li>
+                <li>
+                    Google Drive API
+                </li>
+            </ul>
+        </li>
+        <li>
+            Create Service Account Credentials
+        </li>
+        <li>
+            Download the JSON credentials file
+        </li>
+        <li>
+            Move the JSON file into your project's root directory and rename it to creds.json
+        </li>
+        <li>
+            Open creds.json and copy the value of "client_email"
+        </li>
+        <li>
+            On your Google Sheet:
+            <ul>
+                <li>Click Share</li>
+                <li>Paste the copied email into the share field</li>
+                <li>Select Editor access</li>
+                <li>Untick Notify people</li>
+                <li>Click Share</li>
+            </ul>
+        </li>
+    </ol>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-google-sheets-program-step-7{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Step 7: Update the Worksheet{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Define a function to send data to a worksheet:
+    </p>
+    {% include 'python_app/google_sheets_program/includes/code_snippets/update.html' %}
+
+{% endblock %}

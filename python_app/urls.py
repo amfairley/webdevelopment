@@ -138,4 +138,9 @@ urlpatterns = [
         views.python_code_validation,
         name="python_code_validation"
     ),
+    path(
+        'google_sheets_program/',
+        views.python_google_sheets_program,
+        name="python_google_sheets_program"
+    ),
 ]

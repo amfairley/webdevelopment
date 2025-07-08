@@ -1,0 +1,31 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-google-sheets-program-sales{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">def get_sales_data():
+    """
+    Get input from the user for sales data,
+    split the string into a list, and validate it.
+    """
+    while True:
+        print("Please enter sales data from the last market.")
+        print("Data should be six numbers, separated by commas.")
+        print("Example: 10,20,30,40,50,60\n")
+
+        data_str = input("Enter your data here: ")
+
+        sales_data = data_str.split(",")
+
+        if validate_data(sales_data):
+            print("Data is valid!")
+            break
+
+    return [int(num) for num in sales_data]
+</code></pre>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-google-sheets-program-step-8{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Step 8: Tidying Up with a Main Function{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Organize your code with a 
+        <code class="written-code">main()</code>
+        function that calls everything:
+    </p>
+    {% include 'python_app/google_sheets_program/includes/code_snippets/main.html' %}
+
+{% endblock %}

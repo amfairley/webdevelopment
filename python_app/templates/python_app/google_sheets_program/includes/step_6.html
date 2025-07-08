@@ -1,0 +1,21 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-google-sheets-program-step-6{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Step 6: Get and Validate User Data{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Define a function to get e.g.  sales data:
+    </p>
+    {% include 'python_app/google_sheets_program/includes/code_snippets/sales.html' %}
+    <p>
+        Define a separate validation function:
+    </p>
+    {% include 'python_app/google_sheets_program/includes/code_snippets/validate.html' %}
+
+{% endblock %}

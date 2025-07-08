@@ -1,0 +1,18 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-google-sheets-program-step-3{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Step 3: Keep Credentials Private{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Edit your .gitignore file and add creds.json
+    </p>
+    <p>
+        This prevents the credentials from being pushed to GitHub or any version control system.
+    </p>
+{% endblock %}

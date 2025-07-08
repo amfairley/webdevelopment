@@ -1,0 +1,28 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-google-sheets-program-step-1{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Step 1: Set Up Your Workspace{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <ol>
+        <li>
+            Create a project folder
+        </li>
+        <li>
+            Inside the folder:
+            <ul>
+                <li>
+                    Create your main Python script (e.g., run.py)
+                </li>
+                <li>
+                    Create a .gitignore file (to exclude sensitive files from version control)
+                </li>
+            </ul>
+        </li>
+    </ol>
+{% endblock %}

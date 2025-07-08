@@ -1,0 +1,18 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-google-sheets-program-step-4{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Step 4: Install Required Libraries{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Open your terminal and run the following to install the libraries required to access and modify your Google 
+        Sheet.
+    </p>
+    {% include 'python_app/google_sheets_program/includes/code_snippets/libraries.html' %}
+
+{% endblock %}

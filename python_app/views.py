@@ -324,3 +324,15 @@ def python_code_validation(request):
         'python_app/code_validation/code_validation.html',
         context
     )
+
+
+def python_google_sheets_program(request):
+    '''Return the Python google sheets program page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'python_app/google_sheets_program/google_sheets_program.html',
+        context
+    )

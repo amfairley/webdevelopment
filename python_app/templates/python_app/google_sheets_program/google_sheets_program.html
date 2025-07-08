@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Python - Google Sheets Program{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Google Sheets Program</h2>
+    {% include 'python_app/google_sheets_program/includes/contents.html' %}
+    {% include 'python_app/google_sheets_program/includes/step_1.html' %}
+    {% include 'python_app/google_sheets_program/includes/step_2.html' %}
+    {% include 'python_app/google_sheets_program/includes/step_3.html' %}
+    {% include 'python_app/google_sheets_program/includes/step_4.html' %}
+    {% include 'python_app/google_sheets_program/includes/step_5.html' %}
+    {% include 'python_app/google_sheets_program/includes/step_6.html' %}
+    {% include 'python_app/google_sheets_program/includes/step_7.html' %}
+    {% include 'python_app/google_sheets_program/includes/step_8.html' %}
+
+{% endblock %}

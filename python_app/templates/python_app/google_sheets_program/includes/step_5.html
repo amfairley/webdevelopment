@@ -1,0 +1,17 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-google-sheets-program-step-5{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Step 5: Set Up Your Python File{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Start with the necessary imports
+    </p>
+    {% include 'python_app/google_sheets_program/includes/code_snippets/imports.html' %}
+
+{% endblock %}

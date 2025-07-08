@@ -1,0 +1,28 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-google-sheets-program-validate{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">def validate_data(values):
+    """
+    Validates that exactly six integers were entered.
+    Returns True if valid, False otherwise.
+    """
+    try:
+        if len(values) != 6:
+            raise ValueError(
+                f"Exactly 6 values required, you provided {len(values)}"
+            )
+        [int(value) for value in values]
+    except ValueError as e:
+        print(f"Invalid data: {e}. Please try again.\n")
+        return False
+
+    return True
+</code></pre>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-python-google-sheets-program-main{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">def main():
+    data = get_sales_data()
+    update_worksheet(data, "sales")
+
+main()
+</code></pre>
+{% endblock %}
