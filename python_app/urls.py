@@ -133,4 +133,9 @@ urlpatterns = [
         views.python_data_and_api_requests,
         name="python_data_and_api_requests"
     ),
+    path(
+        'code_validation/',
+        views.python_code_validation,
+        name="python_code_validation"
+    ),
 ]

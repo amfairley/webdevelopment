@@ -312,3 +312,15 @@ def python_data_and_api_requests(request):
         'python_app/data_and_api_requests/data_and_api_requests.html',
         context
     )
+
+
+def python_code_validation(request):
+    '''Return the Python code validation page'''
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(
+        request,
+        'python_app/code_validation/code_validation.html',
+        context
+    )

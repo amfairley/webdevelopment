@@ -1,0 +1,23 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-code-validation-isort{% endblock %}
+
+<!--Section title-->
+{% block text_title %}isort{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        isort organises the imports at the top of your Python files. It automatically sorts and groups imports 
+        alphabetically and by type (stdlib, third-party, local). Install it with:
+    </p>
+    {% include 'python_app/code_validation/includes/code_snippets/isort.html' %}
+    <p>
+        Run it from your terminal with:
+    </p>
+    <p>
+        <code class="written-code">isort your_script.py</code>
+    </p>
+{% endblock %}

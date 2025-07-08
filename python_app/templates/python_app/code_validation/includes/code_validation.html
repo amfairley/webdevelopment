@@ -1,0 +1,57 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-code-validation-code-validation{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Code Validation{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        In Python, code validation typically means checking whether your code:
+    </p>
+    <ul>
+        <li>Is correctly formatted</li>
+        <li>Follows naming conventions</li>
+        <li>Has no syntax issues</li>
+        <li>
+            Meets 
+            <a 
+                class="text-link"
+                href="https://peps.python.org/pep-0008/"
+                title="Go to the PEP8 rules page"
+                aria-label="Go to the PEP8 rules page"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                PEP8
+            </a>
+            style rules
+        </li> 
+        <li>4 spaces per indent</li>
+        <li>Snake_case for variables/functions</li>
+        <li>CamelCase for class names</li>
+        <li>Max line length of 79 or 88 characters</li>
+        <li>Two lines between functions, one line between methods, etc.</li>
+    </ul>
+    <p>
+        You can validate by copy and pasting your code into linters that check your code for any deviation from 
+        commonly accepted practices. I use the 
+        <a 
+            class="text-link"
+            href="https://pep8ci.herokuapp.com/"
+            title="Go to the CodeInstitute pep8 linter"
+            aria-label="Go to the CodeInstitute pep8 linter"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            CodeInstitute
+        </a>
+        one which is rough and ready but gets the job done.
+    </p>
+    <p>
+        Alternatively there are libraries that help keep your code organised.
+    </p>
+{% endblock %}

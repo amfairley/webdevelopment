@@ -1,0 +1,26 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-code-validation-black{% endblock %}
+
+<!--Section title-->
+{% block text_title %}black{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Black automatically rewrites your code to conform to a consistent style (PEP8 inspired). It doesn't check, it 
+        fixes your code with changes.
+    </p>
+    <p>
+        Install it with:
+    </p>
+    {% include 'python_app/code_validation/includes/code_snippets/black.html' %}
+    <p>
+        Run it from your terminal with:
+    </p>
+    <p>
+        <code class="written-code">black your_script.py</code>
+    </p>
+{% endblock %}

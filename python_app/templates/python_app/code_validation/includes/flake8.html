@@ -1,0 +1,31 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}python-code-validation-flake8{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Flake8{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Flake8 checks for:
+    </p>
+    <ul>
+        <li>PEP8 violations</li>
+        <li>Syntax errors</li>
+        <li>Unused imports</li>
+        <li>Logical issues</li>
+    </ul>
+    <p>
+        You can also configure rules in a .flake8 config file. Install flake8 with:
+    </p>
+    {% include 'python_app/code_validation/includes/code_snippets/flake8.html' %}
+    <p>
+        Then run it from your terminal with:
+    </p>
+    <p>
+        <code class="written-code">flake8 your_script.py</code>
+    </p>
+{% endblock %}
