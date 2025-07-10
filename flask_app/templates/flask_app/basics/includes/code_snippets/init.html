@@ -1,0 +1,29 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-flask-basics-init{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python"># Imports
+import os
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+if os.path.exists("env.py"):
+    import env
+
+# Create an instance of the Flask class
+app = Flask(__name__)
+app.config[“SECRET_KEY”] = os.environ.get(“SECRET_KEY”)
+app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DB_URL")
+
+# Create an instance of the SQLAlchemy class
+db= SQLAlchemy(app)
+
+# Import routes from project_name
+from project_name import routes
+</code></pre>
+{% endblock %}

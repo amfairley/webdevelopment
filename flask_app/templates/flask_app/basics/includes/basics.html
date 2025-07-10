@@ -1,0 +1,181 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}flask-basics-basics{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Step by Step{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    
+    <!--Set up repository-->
+    <h4>Step 1: Set up the Repository</h4>
+    <p>
+        Set up a repository on GitHub and then clone it. More on this can be found 
+        <a 
+            class="text-link"
+            href="{% url 'full_stack_github' %}#intro-to-full-stack-github-creating-a-repository"
+            title="Go to the GitHub section on creating repositories"
+            aria-label="Go to the GitHub section on creating repositories"
+        >
+            here
+        </a>
+        in the GitHub section of this site.
+    </p>
+
+    <!--Venv-->
+    <h4>Step 2: Set up the Virtual Environment</h4>
+    <p>
+        Create a virtual envionment from your terminal so that all of your app requirements are kept together and
+        will not create unwanted interactions with other libraries or requirements on your system as a whole.
+    </p>
+    {% include 'flask_app/basics/includes/code_snippets/venv.html' %}
+    <p>
+        You can then activate it (each time you load up your workspace) with:
+    </p>
+    {% include 'flask_app/basics/includes/code_snippets/venv_activate.html' %}
+    <p>
+        You can deactivate it at any time with:
+    </p>
+    {% include 'flask_app/basics/includes/code_snippets/venv_deactivate.html' %}
+    
+    <!--Packages-->
+    <h4>Step 3: Install Packages</h4>
+    <p>
+        Install the following packages required for the project.
+    </p>
+    {% include 'flask_app/basics/includes/code_snippets/packages.html' %}
+    <p>
+        Flask-SQLAlchemy is an extension that integrates SQLAlchemy with your Flask app, which is an
+        <dfn title="Object Relational Mapper">ORM</dfn>
+        for Python. It provides a database connection, an easy way to define models, and helper methods to query, 
+        insert, update, and delete records.
+    </p>
+    <p>
+        psycopg2 is a PostgreSQL database adapter for Python that allows your Flask app (via SQLAlchemy) to talk to a 
+        PostgreSQL database.
+    </p>
+    {% include 'flask_app/basics/includes/troubleshooting/troubleshoot_packages.html' %}
+
+    <!--env-->
+    <h4>Step 4: Create an env.py File</h4>
+    <p>
+        Create an env.py file in your root directory to house your environment variables. Create it like this.
+    </p>
+    {% include 'flask_app/basics/includes/code_snippets/env.html' %}
+
+    <!--.gitignore-->
+    <h4>Step 5: Create a .gitignore File</h4>
+    <p>
+        Make a .gitignore file in your root directory and add env.py into this file to keep your environment variables
+        from being uploaded to GitHub. 
+    </p>
+
+    <!--init-->
+    <h4>Step 6: Set up the Project Folder</h4>
+    <p>
+        Create the application its own python package by making a new folder in root directory and give it the name of 
+        your project. 
+    </p>
+    <p>
+        Create a file inside this folder named __init__.py. This file is a special Python file that initialises a 
+        Python package and is typically used to create the Flask application instance and set up configuration, 
+        extensions (like SQLAlchemy), and Blueprints.
+    </p>
+    <p>
+        Inside this file:
+        <ul>
+            <li>
+                Import os, flask, SQL modules, and an if statement to find the env.py. This if statement is important
+                because when deployed, this file is not uploaded to GitHub and will thus not be found, causing an error
+                without this statement.
+            </li>
+            <li>
+                Your app will be an instance of the Flask app, so create this, and specify the environment variables 
+                that come from your env.py file.
+            </li>
+            <li>
+                Create an instance of SQLAlchemy class and name it as db to use as your database.
+            </li>
+            <li>
+                Import the URLs (known as routes in Flask) from your project. Note we have not created these yet. This 
+                is improted after creating the instance of the database (instead of the top of the file with the other 
+                imports), as it will rely on the above variables.
+            </li>
+        </ul>
+    </p>
+    {% include 'flask_app/basics/includes/code_snippets/init.html' %}
+
+    <!--Routes-->
+    <h4>Step 7: Create the Routes</h4>
+    <p>
+        In Flask, routes define the URLs your web application will respond to, and map them to Python functions that 
+        handle the request and return a response.
+    </p>
+    <p>
+        Create a routes.py file in your project_name folder.
+    </p>
+    <p>
+        Inside this file:
+        <ul>
+            <li>
+                Import render_template, app, and your database.
+            </li>
+            <li>
+                Create a route. I have added a basic one named home that will display a base.html file when called.
+            </li>
+        </ul>
+    </p>
+    {% include 'flask_app/basics/includes/code_snippets/routes.html' %}
+
+    <!--Run-->
+    <h4>Step 8: Create a run.py file</h4>
+    <p>
+        In the root directory create a run.py file. This file will import your flask apps and run the project.
+    </p>
+    {% include 'flask_app/basics/includes/code_snippets/run.html' %}
+    <ul>
+        <li>
+            The
+            <code class="written-code">if __name__</code>"
+            snippet checks if the run.py file is being run directly and if so runs the app with the required settings.
+        </li>
+        <li>
+            <code class="written-code">host=os.environ.get("IP")</code>
+            gets the IP address from the environment variables defined in the env.py file via the __init__.py file.
+        </li>
+        <li>
+            <code class="written-code">port=int(os.environ.get("PORT"))</code>
+            gets the port number (string) and converts it to an integer for use.
+        </li>
+        <li>
+            <code class="written-code">debug=os.environ.get("DEBUG")</code>
+            tries to enable or disable debug mode based on the   environment variable.
+        </li>
+    </ul>
+
+    <!--Templates-->
+    <h4>Step 9: Create the Templates</h4>
+    <p>
+        In your project_name folder, create a folder named templates. In here create base.html. This filename is called
+        in the route defined in Step 7.
+    </p>
+    <p>
+        In base.html add some HTML boilerplate (if using VSCode you can type html:5 and press <kbd>tab</kbd>) and then
+        add something to the body.
+    </p>
+
+    <!--Run-->
+    <h4>Step 10: Run your Project</h4>
+    <p>
+        Now run your project to make sure that it works. In the terminal enter:
+    </p>
+    {% include 'flask_app/basics/includes/code_snippets/run_test.html' %}
+    <p>
+        Then you can <kdb>ctrl</kdb> + <kbd>click</kbd> on either http://127.0.0.1:5000 or http://100.127.255.249:5000
+        (or similar) to open your project in your browser. To close this, in the terminal press <kdb>ctrl</kdb> + 
+        <kbd>C</kbd>.
+    </p>
+{% endblock %}

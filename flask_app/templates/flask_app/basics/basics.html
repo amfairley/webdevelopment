@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Flask - Putting the Basics in Place{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Putting the Basics in Place</h2>
+
+    {% include 'flask_app/basics/includes/basics.html' %}
+
+{% endblock %}

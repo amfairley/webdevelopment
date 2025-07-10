@@ -1,0 +1,20 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-flask-basics-routes{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python"># Imports
+from flask import render_template
+from project_name import app, db
+
+# Routes
+@app.route("/")
+def home():
+    return render_template("base.html")
+</code></pre>
+{% endblock %}

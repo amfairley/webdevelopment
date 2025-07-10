@@ -159,6 +159,18 @@
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'python_google_sheets_program' %}active{% endif %}" href="{% url 'python_google_sheets_program' %}">Google Sheets Program</a></li>
                 </ul>
             </li>
+            <!--Flask-->
+            <li class="nav-item">
+                <span class="d-flex align-items-center">
+                    <a class="nav-link" href="{% url 'flask_home' %}">Flask</a>
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#flask-submenu" aria-expanded="false" aria-controls="flask-submenu" aria-label="Open the Flask dropdown section">
+                    </button>
+                </span>
+                <ul class="collapse list-unstyled ps-3 {% if '/Flask' in request.path %}show{% endif %}" id="flask-submenu">
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'flask_home' %}active{% endif %}" href="{% url 'flask_home' %}">Flask Home</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'flask_basics' %}active{% endif %}" href="{% url 'flask_basics' %}">Putting the Basics in Place</a></li>
+                </ul>
+            </li>
             <!--Dropdown link example-->
             <li class="nav-item">
                 <span class="d-flex align-items-center">

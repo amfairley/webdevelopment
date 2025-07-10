@@ -1,0 +1,21 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}flask-home-flask{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Flask{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Flask is a python microframework providing URL routing, Jinja2 templating, from templating, and 
+        <dfn title="Web Server Gateway Interface">WSGI</dfn>
+        compliance, which defines how a web server communicates with web applications in Python.
+    </p>
+    <p>
+        Here is a layout of how to create an app in Flask in the context of a PostgreSQL Flask members site.
+    </p>
+
+{% endblock %}

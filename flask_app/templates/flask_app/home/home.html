@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Flask{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Flask</h2>
+
+    {% include 'flask_app/home/includes/flask.html' %}
+
+{% endblock %}

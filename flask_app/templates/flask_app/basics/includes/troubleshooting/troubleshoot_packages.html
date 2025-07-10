@@ -1,0 +1,23 @@
+{% extends 'includes/troubleshooting.html' %}
+{% load static %}
+
+<!--ID-->
+{% block troubleshooting_id %}example-troubleshooting{% endblock %}
+{% block troubleshooting_content %}
+    <ul>
+        <li>
+            If there is an error with finding some packages after installing. 
+            Use the following to check it is installed:
+        </li>
+    </ul>
+    {% include 'flask_app/basics/includes/code_snippets/troubleshoot_1.html' %}
+    <ul>
+        <li>
+            If it keeps up, use 
+            <kbd>ctrl</kbd> +
+            <kbd>shift</kbd> +
+            <kbd>p</kbd>
+            and change the python interpreter to another option and back again.
+        </li>
+    </ul>
+{% endblock %}
