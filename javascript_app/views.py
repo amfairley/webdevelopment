@@ -5,7 +5,6 @@ from django.conf import settings
 def JavaScript_home(request):
     '''Return the JavaScript homepage'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -17,7 +16,6 @@ def JavaScript_home(request):
 def JavaScript_variables(request):
     '''Return the JavaScript variable page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -29,7 +27,6 @@ def JavaScript_variables(request):
 def JavaScript_scope(request):
     '''Return the JavaScript scope page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -41,7 +38,6 @@ def JavaScript_scope(request):
 def JavaScript_data_types(request):
     '''Return the JavaScript data types page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -53,7 +49,6 @@ def JavaScript_data_types(request):
 def JavaScript_math(request):
     '''Return the JavaScript math page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -65,7 +60,6 @@ def JavaScript_math(request):
 def JavaScript_arrays(request):
     '''Return the JavaScript arrays page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -77,7 +71,6 @@ def JavaScript_arrays(request):
 def JavaScript_sets(request):
     '''Return the JavaScript sets page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -89,7 +82,6 @@ def JavaScript_sets(request):
 def JavaScript_objects(request):
     '''Return the JavaScript objects page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -101,7 +93,6 @@ def JavaScript_objects(request):
 def JavaScript_console(request):
     '''Return the JavaScript console page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -113,7 +104,6 @@ def JavaScript_console(request):
 def JavaScript_functions(request):
     '''Return the JavaScript functions page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -125,7 +115,6 @@ def JavaScript_functions(request):
 def JavaScript_conditional_statements(request):
     '''Return the JavaScript conditional statements page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -137,7 +126,6 @@ def JavaScript_conditional_statements(request):
 def JavaScript_for_loops(request):
     '''Return the JavaScript for loops page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -149,7 +137,6 @@ def JavaScript_for_loops(request):
 def JavaScript_while_loops(request):
     '''Return the JavaScript while loops page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -161,7 +148,6 @@ def JavaScript_while_loops(request):
 def JavaScript_try(request):
     '''Return the JavaScript try page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -173,7 +159,6 @@ def JavaScript_try(request):
 def JavaScript_nested_loops(request):
     '''Return the JavaScript nested loops page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -185,7 +170,6 @@ def JavaScript_nested_loops(request):
 def JavaScript_the_dom(request):
     '''Return the JavaScript dom page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -197,7 +181,6 @@ def JavaScript_the_dom(request):
 def JavaScript_targeting_the_dom(request):
     '''Return the JavaScript targeting the dom page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -209,7 +192,6 @@ def JavaScript_targeting_the_dom(request):
 def JavaScript_manipulating_the_dom(request):
     '''Return the JavaScript manipulating the dom page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -221,7 +203,6 @@ def JavaScript_manipulating_the_dom(request):
 def JavaScript_events(request):
     '''Return the JavaScript events page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -233,7 +214,6 @@ def JavaScript_events(request):
 def JavaScript_jquery(request):
     '''Return the JavaScript jquery page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -245,7 +225,6 @@ def JavaScript_jquery(request):
 def JavaScript_debugging(request):
     '''Return the JavaScript debugging page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -257,7 +236,6 @@ def JavaScript_debugging(request):
 def JavaScript_validation(request):
     '''Return the JavaScript validation page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,

@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     # File storage
     'whitenoise',
     # Custom apps
+    'core',
     'homepage',
     'intro_to_full_stack',
     'HTML',
@@ -84,6 +85,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'core.context_processor.media_url'
             ],
         },
     },

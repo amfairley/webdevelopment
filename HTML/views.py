@@ -5,7 +5,6 @@ from django.conf import settings
 def HTML_home(request):
     '''Return the HTML homepage'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -17,7 +16,6 @@ def HTML_home(request):
 def HTML_introducing_elements(request):
     '''Return the HTML introducing elements page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -29,7 +27,6 @@ def HTML_introducing_elements(request):
 def HTML_common_elements(request):
     '''Return the HTML common elements page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -41,7 +38,6 @@ def HTML_common_elements(request):
 def HTML_lists(request):
     '''Return the HTML lists page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -53,7 +49,6 @@ def HTML_lists(request):
 def HTML_tables(request):
     '''Return the HTML tables page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -65,7 +60,6 @@ def HTML_tables(request):
 def HTML_forms(request):
     '''Return the HTML forms page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -77,7 +71,6 @@ def HTML_forms(request):
 def HTML_links(request):
     '''Return the HTML links page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -89,7 +82,6 @@ def HTML_links(request):
 def HTML_media(request):
     '''Return the HTML media page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -101,7 +93,6 @@ def HTML_media(request):
 def HTML_buttons(request):
     '''Return the HTML buttons page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -113,7 +104,6 @@ def HTML_buttons(request):
 def HTML_semantic(request):
     '''Return the HTML semantics page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -125,7 +115,6 @@ def HTML_semantic(request):
 def HTML_accessibility(request):
     '''Return the HTML accessibility page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -137,7 +126,6 @@ def HTML_accessibility(request):
 def HTML_example(request):
     '''Return the HTML example page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,

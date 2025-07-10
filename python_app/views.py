@@ -5,7 +5,6 @@ from django.conf import settings
 def python_home(request):
     '''Return the Python homepage'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -17,7 +16,6 @@ def python_home(request):
 def python_variables(request):
     '''Return the Python variables page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -29,7 +27,6 @@ def python_variables(request):
 def python_data_types(request):
     '''Return the Python data types page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -41,7 +38,6 @@ def python_data_types(request):
 def python_strings(request):
     '''Return the Python strings page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -53,7 +49,6 @@ def python_strings(request):
 def python_booleans(request):
     '''Return the Python booleans page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -65,7 +60,6 @@ def python_booleans(request):
 def python_lists(request):
     '''Return the Python lists page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -77,7 +71,6 @@ def python_lists(request):
 def python_tuples(request):
     '''Return the Python tuples page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -89,7 +82,6 @@ def python_tuples(request):
 def python_dictionaries(request):
     '''Return the Python dictionaries page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -101,7 +93,6 @@ def python_dictionaries(request):
 def python_sets(request):
     '''Return the Python sets page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -113,7 +104,6 @@ def python_sets(request):
 def python_regular_expressions(request):
     '''Return the Python regular expressions page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -125,7 +115,6 @@ def python_regular_expressions(request):
 def python_functions(request):
     '''Return the Python functions page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -137,7 +126,6 @@ def python_functions(request):
 def python_input(request):
     '''Return the Python input page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -149,7 +137,6 @@ def python_input(request):
 def python_os(request):
     '''Return the Python OS page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -161,7 +148,6 @@ def python_os(request):
 def python_math(request):
     '''Return the Python math page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -173,7 +159,6 @@ def python_math(request):
 def python_datetime(request):
     '''Return the Python datetime page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -185,7 +170,6 @@ def python_datetime(request):
 def python_pandas(request):
     '''Return the Python pandas page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -197,7 +181,6 @@ def python_pandas(request):
 def python_numpy(request):
     '''Return the Python numpy page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -209,7 +192,6 @@ def python_numpy(request):
 def python_csv(request):
     '''Return the Python csv page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -221,7 +203,6 @@ def python_csv(request):
 def python_json(request):
     '''Return the Python json page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -233,7 +214,6 @@ def python_json(request):
 def python_pillow(request):
     '''Return the Python pillow page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -245,7 +225,6 @@ def python_pillow(request):
 def python_scope(request):
     '''Return the Python scope page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -257,7 +236,6 @@ def python_scope(request):
 def python_loops(request):
     '''Return the Python loops page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -269,7 +247,6 @@ def python_loops(request):
 def python_conditionals(request):
     '''Return the Python conditionals page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -281,7 +258,6 @@ def python_conditionals(request):
 def python_classes(request):
     '''Return the Python classes page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -293,7 +269,6 @@ def python_classes(request):
 def python_unit_testing(request):
     '''Return the Python unit testing page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -305,7 +280,6 @@ def python_unit_testing(request):
 def python_data_and_api_requests(request):
     '''Return the Python data and API requests page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -317,7 +291,6 @@ def python_data_and_api_requests(request):
 def python_code_validation(request):
     '''Return the Python code validation page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
@@ -329,7 +302,6 @@ def python_code_validation(request):
 def python_google_sheets_program(request):
     '''Return the Python google sheets program page'''
     context = {
-        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(
         request,
