@@ -1,0 +1,77 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}flask-database-database{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Database{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <!--PostgreSQL-->
+    <h4>Step 6: Create a Database</h4>
+    <p>
+        With PostgreSQL and the PostgreSQL VSCode extenstion by Chris Kolkman installed, in your terminal: 
+    </p>
+    {% include 'flask_app/database/includes/code_snippets/postgresql.html' %}
+    <ul>
+        <li>
+            <code class="written-code">
+                psql -U postgres
+            </code>:
+            Open the psql shell as the postgres user. You will have to enter your password here too from when you set
+            up PostgreSQL on your system.
+        </li>
+        <li>
+            <code class="written-code">
+                CREATE DATABASE databasename;
+            </code>:
+            create a database named "databasename". Name this whatever makes sense for your project.
+        </li>
+            <li>
+            <code class="written-code">
+                \c databasename
+            </code>:
+            connect to your database, you should see a message something along the lines of 
+            "You are now connected to database "databasename" as user "postgres"".
+        </li>
+        <li>
+            <code class="written-code">
+                \q
+            </code>:
+            quits the psql shell, now we know we have successfully created the database.
+        </li>
+    </ul>
+
+    <!--env-->
+    <h4>Step 7: Update env.py</h4>
+    <p>
+        You can now update the DB_URL variable in env.py with your settings for your database. Use your postgres password and your database name.
+    </p>
+    {% include 'flask_app/database/includes/code_snippets/update_env.html' %}
+
+    <!--Update-->
+    <h4>Step 8: Updating the Database</h4>
+    <p>
+        Whenever you make changes to your models you will need to migrate these changes to your database. You can do this
+        by creating a file in your root directory named update_db.py and have something similar to this in it:
+    </p>
+    {% include 'flask_app/database/includes/code_snippets/update_db.html' %}
+    <p>
+        You can then run it in your terminal with
+    </p>
+    {% include 'flask_app/database/includes/code_snippets/update_db_run.html' %}
+
+    <h4>Step 9: Check the Update</h4>
+    <p>
+        You can now check that the tables are in your database within the psql shell.
+    </p>
+    {% include 'flask_app/database/includes/code_snippets/postgresql_check.html' %}
+    <ul>
+        <li>
+            <code class="written-code">\dt</code>: lists the tables in your database, you should see those defined in 
+            your models here.
+        </li>
+    </ul>
+{% endblock %}

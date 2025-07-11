@@ -22,3 +22,14 @@ def flask_basics(request):
         'flask_app/basics/basics.html',
         context
     )
+
+
+def flask_database(request):
+    '''Return the Flask creating the database page'''
+    context = {
+    }
+    return render(
+        request,
+        'flask_app/database/database.html',
+        context
+    )

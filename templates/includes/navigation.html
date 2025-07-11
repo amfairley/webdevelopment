@@ -169,6 +169,7 @@
                 <ul class="collapse list-unstyled ps-3 {% if '/Flask' in request.path %}show{% endif %}" id="flask-submenu">
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'flask_home' %}active{% endif %}" href="{% url 'flask_home' %}">Flask Home</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'flask_basics' %}active{% endif %}" href="{% url 'flask_basics' %}">Putting the Basics in Place</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'flask_database' %}active{% endif %}" href="{% url 'flask_database' %}">Creating the Database</a></li>
                 </ul>
             </li>
             <!--Dropdown link example-->

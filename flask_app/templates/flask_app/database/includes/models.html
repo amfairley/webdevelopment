@@ -1,0 +1,120 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}flask-database-models{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Models{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Models are Python classes that define the structure and behavior of your database tables using an 
+        <dfn title="Object Relational Mapper">ORM</dfn>, in this case SQLAlchemy.
+    </p>
+    <p>
+        If you think of Models like Excel spreadsheets, each Model represents a new table or sheet and within each model
+        there are class attributes that represent each column name. This is a way of Pythonically writing SQL and thus
+        highlights how SQLAlchemy will be used in this project.
+    </p>
+    
+    <!--Create-->
+    <h4>Step 1: Create models.py</h4>
+    <p>
+        In your project_name folder, create a models.py file.
+    </p>
+
+    <!--Import-->
+    <h4>Step 2: imports</h4>
+    <p>
+        Import the database (db) you created in your __init__.py file in your project_name folder.
+    </p>
+
+    <!--Model set up-->
+    <h4>Step 3: Create a Model</h4>
+    <p>
+        Create a Class of your Model. For this example I have created one named Category. Then give it class attributes.
+        In this example I have chosen id as the primary key and given examples of other class attributes. 
+    </p>
+    <p>
+        Add a 
+        <code class="written-code">def __repr__(self)</code> function that returns each table as a String. It can simple
+        or use Python table methods. Two examples are given here.
+    </p>
+    {% include 'flask_app/database/includes/code_snippets/model_example.html' %}
+
+    <!--Relational-->
+    <h4>Step 4: Relational Database</h4>
+    <p>
+        In a relational database one Model (Model 1) will have a class attribute that points to another Model (Model 2).
+        This relationship is described in Model 1 as a
+        <code class="written-code">db.relationship()</code>
+        and in Model 2 as
+        <code class="written-code">db.ForeignKey()</code>.
+    </p>
+    {% include 'flask_app/database/includes/code_snippets/relation.html' %}
+    <ul>
+        <li>
+            In the Category Model, name it something similar but not the same e.g. tasks for Task model. For the syntax
+            of
+            <code class="written-code">tasks = db.relationship("Task", backref="category", cascade="all, delete", lazy="select")</code>:
+            <ul>
+                <li>
+                    Set up the relationship with
+                    <code class="written-code">db.relationship()</code>
+                </li>
+                <li>
+                    <code class="written-code">"Task"</code> references the name of the other Model
+                </li>
+                <li>
+                    <code class="written-code">"backref="category""</code> rets up a reverse reference from the Task 
+                    model back to an instance the Category model. The name "category" (lowercase) relates to an instance
+                    of the Category Model rather than the Model itself.
+                </li>
+                <li>
+                    <code class="written-code">cascade="all, delete"</code> defines what will happen to the child object
+                    (Task) when the parent object (Category) is deleted. In this case it will also be deleted. For this 
+                    scenario; without this specified, if you try to delete a Category that still has related Tasks, 
+                    you'd likely get an integrity error, since the tasks would still reference a deleted category via 
+                    the foreign key attribute defined in Task.
+                </li>
+                <li>
+                    <code class="written-code">lazy="select"</code> Sets up lazy loading so it won't load the related 
+                    tasks from the database until you actually access the .tasks attribute. Meaning a shorter load time
+                    at the start since it will only be loaded when needed.
+                </li>
+            </ul>
+        </li>
+        <li>
+            In the Task Model define a foreign key column linking each Task to a Category with
+            <code class="written-code">category_id = db.Column(db.Integer,db.ForeignKey("category.id", ondelete="CASCADE"),nullable=False)</code>:
+            <ul>
+                <li>
+                    <code class="written-code">category_id = db.Column(...)</code>
+                    creates a column in the tasks table named category_id.
+                </li>
+                <li>
+                    <code class="written-code">db.Integer</code>
+                    sets the data type of the column as an integer.
+                </li>
+                <li>
+                    <code class="written-code">db.ForeignKey("category.id", ondelete="CASCADE")</code>
+                    makes the column a foreign key that links to another table.
+                    <ul>
+                        <li>
+                            <code class="written-code">"category.id"</code>
+                            refers to the id column of the category table (from the Category Model), telling SQLAlchemy 
+                            that this column must match a valid ID from the category table.
+                        </li>
+                        <li>
+                            <code class="written-code">ondelete="CASCADE"</code>
+                            sets up the CASCADE delete so that if a category is deleted, then all tasks with that 
+                            category_id will also be automatically deleted.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+{% endblock %}

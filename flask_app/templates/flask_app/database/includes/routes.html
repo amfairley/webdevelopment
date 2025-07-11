@@ -1,0 +1,18 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}flask-database-routes{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Routes{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <!--routes-->
+    <h4>Step 5: Update routes.py</h4>
+    <p>
+        Update routes.py to import the Models that you have created, e.g. for Category and Task:
+    </p>
+    {% include 'flask_app/database/includes/code_snippets/update_routes.html' %}
+{% endblock %}

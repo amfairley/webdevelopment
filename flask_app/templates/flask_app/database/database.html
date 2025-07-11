@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Flask - Creating the Database{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Creating the Database</h2>
+
+    {% include 'flask_app/database/includes/contents.html' %}
+    {% include 'flask_app/database/includes/models.html' %}
+    {% include 'flask_app/database/includes/routes.html' %}
+    {% include 'flask_app/database/includes/database.html' %}
+{% endblock %}

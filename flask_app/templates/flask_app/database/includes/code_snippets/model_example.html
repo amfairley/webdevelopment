@@ -1,0 +1,41 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-flask-models-model-example{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">class Category(db.Model):
+    id = db.Column(db.Integer, primary_key = True)
+    category_name=db.Column(db.String(25), unique = True, nullable = False)
+
+    # Example class attributes
+    # Primary key
+    id = db.Column(db.integer, primary_key = True)
+    # String type, max length 50, unique, cannot be Null
+    task_name = db.Column(db.String(50), unique = True, nullable = False)
+    # Text type, cannot be Null
+    task_description = db.Column(db.Text, nullable = False)
+    # Boolean typle, default value of False, cannot be NUll
+    is_urgent = db.Column(db.Boolean, default= False, nullable = False)
+    # Date type, cannot be Null
+    due_date = db.Column(db.Date, nullable = False)
+    # Integer type, is a Foreign Key referenced in Category, if it is deleted, so is the Category, cannot be Null 
+    category_id = db.Column(db.Integer, db.ForeignKey("category.id", ondelete = "CASCADE"), nullable = False)
+
+    # Simple __repr__():
+    def __repr__(self):
+        return self.category_name
+
+    # Helpful __repr__():
+    # {0}, {1}, {2} refer to the index of the the things defined inside format()
+    def __repr__(self):
+        return "#{0} - Task: {1} | Urgent: {2}".format(
+            self.id, self.task_name, self.is_urgent
+        )
+    # Output: self.id - Task: task_name | Urgent: self.is_urgent
+</code></pre>
+{% endblock %}
