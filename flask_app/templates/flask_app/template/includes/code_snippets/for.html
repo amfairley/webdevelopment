@@ -1,0 +1,19 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-flask-template-for{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="html">&lt;ul&gt;
+&#123;% for task in tasks %&#125;
+    &lt;li&gt;&#123;&#123; task.name &#125;&#125; - Due: &#123;&#123; task.due_date &#125;&#125;&lt;/li&gt;
+&#123;% else %&#125;
+    &lt;li>No tasks available.&lt;/li&gt;
+&#123;% endfor %&#125;
+&lt;/ul&gt;
+</code></pre>
+{% endblock %}

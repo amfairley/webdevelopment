@@ -1,0 +1,174 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-flask-template-base{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="html">&lt;--DOCTYPE--&gt;
+&lt;!DOCTYPE html&gt;
+
+&lt;--Language--&gt;
+&lt;html lang="en"&gt;
+
+
+&lt;head&gt;
+    &lt;!--Charset--&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;!--Viewport--&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;!--Keyword--&gt;
+    &lt;meta name="keywords" content=""&gt;
+    &lt;!--Description--&gt;
+    &lt;meta name="description" content=""&gt;
+    &lt;!--Author--&gt;
+    &lt;meta name="author" content="Web Dev Grad"&gt;
+
+    &lt;!--Favicon with a favicon folder in the static folder--&gt;
+    &lt;link rel="apple-touch-icon" sizes="180x180" href="&#123;&#123; url_for('static', filename='favicon/apple-touch-icon.png') &#125;&#125;"&gt;
+    &lt;link rel="icon" type="image/png" sizes="32x32" href="&#123;&#123; url_for('static', filename='favicon/favicon-32x32.png') &#125;&#125;"&gt;
+    &lt;link rel="icon" type="image/png" sizes="16x16" href="&#123;&#123; url_for('static', filename='favicon/favicon-16x16.png') &#125;&#125;"&gt;
+    &lt;link rel="icon" type="image/png" sizes="16x16" href="&#123;&#123; url_for('static', filename='favicon/favicon-16x16.png') &#125;&#125;"&gt;
+    &lt;link rel="icon" type="image/png" sizes="192x192" href="&#123;&#123; url_for('static', filename='favicon/android-chrome-192x192.png') &#125;&#125;"&gt;
+    &lt;link rel="icon" type="image/png" sizes="512x512" href="&#123;&#123; url_for('static', filename='favicon/android-chrome-512x512.png') &#125;&#125;"&gt;
+    &lt;link rel="manifest" href="&#123;&#123; url_for('static', filename='favicon/site.webmanifest') &#125;&#125;"&gt;
+
+    &lt;!--Fontawesome Link--&gt;
+    &lt;script src="yourlinkehere" crossorigin="anonymous"&gt;&lt;/script&gt;
+
+    &lt;!--Materialize CSS CND Link--&gt;
+    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"&gt;
+
+    &lt;!--Link to personal stylesheet--&gt;
+    &lt;link rel="stylesheet" href="&#123;&#123; url_for('static', filename='css/style.css') &#125;&#125;" type="text/css"&gt;
+
+    &lt;!--Title with block for expanding for each page--&gt;
+    &lt;title&gt;
+        Project Name&#123;% block title %&#125;&#123;% endblock %&#125;
+    &lt;/title&gt;
+
+    &lt;!--Google Analytics Tag--&gt;
+    &lt;script async src=""&gt;&lt;/script&gt;
+    &lt;script&gt;
+        window.dataLayer = window.dataLayer || [];
+        function gtag()&#123;dataLayer.push(arguments);&#125;
+        gtag('js', new Date());
+        
+        gtag('config', '', &#123; 'anonymize_ip': true &#125;);
+    &lt;/script&gt;
+
+&lt;/head&gt;
+
+
+&lt;body&gt;
+    &lt;!--Navbar for logged in user--&gt;
+    &lt;!--Check for a logged in user--&gt;
+    &#123;% if 'user_id' in session %&#125;
+    &lt;nav&gt;
+        &lt;div class="nav-wrapper"&gt;
+        &lt;a href="&#123;&#123; url_for('home')&#125;&#125;" class="" aria-label="Go to Project Name Homepage"&gt;
+            &lt;img src="&#123;&#123; url_for('static', filename='') &#125;&#125;" class="site-logo" alt="Image description"&gt;
+            &lt;h1&gt;
+            &lt;img src="&#123;&#123; url_for('static', filename='') &#125;&#125;" class="site-logo" alt="Image description"&gt;
+            &lt;/h1&gt;
+        &lt;/a&gt;
+        &lt;a href="#" data-target="mobile-demo" class="sidenav-trigger burger-menu" aria-label="Navigation menu toggle"&gt;&lt;i class="fas fa-bars"&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;ul class="right hide-on-med-and-down open-sans"&gt;
+            &lt;li&gt;&lt;a href="&#123;&#123; url_for('') &#125;&#125;" aria-label= ""&gt;Link1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="&#123;&#123; url_for('') &#125;&#125;" aria-label = ""&gt;Link2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="&#123;&#123; url_for('') &#125;&#125;" aria-label = ""&gt;Link3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="&#123;&#123; url_for('') &#125;&#125;" aria-label=""&gt;Link4&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;!-- Burger menu navbar --&gt;
+    &lt;ul class="sidenav open-sans" id="mobile-demo"&gt;
+        &lt;li&gt;&lt;a href="&#123;&#123; url_for('') &#125;&#125;" aria-label= ""&gt;Link1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="&#123;&#123; url_for('') &#125;&#125;" aria-label = ""&gt;Link2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="&#123;&#123; url_for('') &#125;&#125;" aria-label = ""&gt;Link3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="&#123;&#123; url_for('') &#125;&#125;" aria-label=""&gt;Link4&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;!--Navbar for logged out user--&gt;
+    &#123;% else %&#125;
+    &lt;nav&gt;
+        &lt;div class="nav-wrapper"&gt;
+        &lt;a href="&#123;&#123; url_for('home')&#125;&#125;" class="brand-logo dangrek-regular" aria-label=""&gt;
+            &lt;img src="&#123;&#123; url_for('static', filename='') &#125;&#125;" class="site-logo" alt=""&gt;
+            &lt;h1&gt;
+            &lt;img src="&#123;&#123; url_for('static', filename='') &#125;&#125;" class="site-logo" alt=""&gt;
+            &lt;/h1&gt;
+        &lt;/a&gt;
+        &lt;a href="#" data-target="mobile-demo" class="sidenav-trigger" aria-label="Navigation menu toggle"&gt;&lt;i class="fas fa-bars"&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;ul class="right hide-on-med-and-down open-sans"&gt;
+            &lt;li&gt;&lt;a href="&#123;&#123; url_for('') &#125;&#125;" aria-label=""&gt;Link1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="&#123;&#123; url_for('') &#125;&#125;" aria-label=""&gt;Link2&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;!--Burger menu navbar--&gt;
+    &lt;ul class="sidenav open-sans" id="mobile-demo"&gt;
+        &lt;li&gt;&lt;a href="&#123;&#123; url_for('') &#125;&#125;" aria-label=""&gt;Link1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="&#123;&#123; url_for('') &#125;&#125;" aria-label=""&gt;Link2&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &#123;% endif %&#125;
+
+    &lt;!--Main--&gt;
+    &lt;main&gt;
+        &#123;% block content %&#125;
+        &#123;% endblock %&#125;
+    &lt;/main&gt;
+
+    &lt;!--Footer--&gt;
+    &lt;footer class="page-footer"&gt;
+        &lt;div class="container"&gt;
+        &lt;div class="row valign-wrapper"&gt;
+            &lt;!--Site logo--&gt;
+            &lt;div class="col s6"&gt;
+            &lt;a href="&#123;&#123; url_for('')&#125;&#125;" class="dangrek-regular footer-logo" aria-label=""&gt;
+                &lt;img src="&#123;&#123; url_for('static', filename='') &#125;&#125;" class="site-logo" alt=""&gt;
+                &lt;img src="&#123;&#123; url_for('static', filename='') &#125;&#125;" class="site-logo" alt=""&gt;
+            &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;!--Developer details--&gt;
+            &lt;div class="col s6 roboto-regular"&gt;
+            &lt;p id="developer"&gt;Website Developer: &lt;br class="hide-on-large-only"&gt;&lt;span&gt;Web Dev Grad&lt;/span&gt;&lt;/p&gt;
+            &lt;!--Developer contact links--&gt;
+            &lt;ul id="contact-links"&gt;
+                &lt;li class="contact-link"&gt;
+                &lt;a href="" aria-label=""&gt;
+                    &lt;i class="fas fa-envelope-square"&gt;&lt;/i&gt;
+                &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="contact-link"&gt;
+                &lt;a href="" target="_blank" rel="noopener"
+                    aria-label=""&gt;
+                    &lt;i class="fab fa-linkedin"&gt;&lt;/i&gt;
+                &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="contact-link"&gt;
+                &lt;a href="" target="_blank" rel="noopener"
+                    aria-label=""&gt;
+                    &lt;i class="fab fa-github-square"&gt;&lt;/i&gt;
+                &lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+
+    &lt;!--Post Load JavaScript&gt;
+    &lt;!--Materialize CSS JavaScript CDN Link--&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"&gt;&lt;/script&gt;
+    &lt;!--Personal JavaScript link--&gt;
+    &lt;script src="&#123;&#123; url_for('static', filename='js/script.js') &#125;&#125;"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+{% endblock %}

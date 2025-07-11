@@ -33,3 +33,14 @@ def flask_database(request):
         'flask_app/database/database.html',
         context
     )
+
+
+def flask_template(request):
+    '''Return the Flask template inheritance page'''
+    context = {
+    }
+    return render(
+        request,
+        'flask_app/template/template.html',
+        context
+    )

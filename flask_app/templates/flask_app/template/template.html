@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Flask - Template Inheritance{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Template Inheritance</h2>
+
+    {% include 'flask_app/template/includes/contents.html' %}
+    {% include 'flask_app/template/includes/what_is_template_inheritance.html' %}
+    {% include 'flask_app/template/includes/base.html' %}
+    {% include 'flask_app/template/includes/jinja.html' %}
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}flask-template-what-is-template-inheritance{% endblock %}
+
+<!--Section title-->
+{% block text_title %}What is Template Inheritance?{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    
+    <p>
+        Before you can implement 
+        <dfn title="Create Read Update Delete">CRUD</dfn>
+        functionality in your Flask app, you need a user-friendly front end to interact with your data. Flask's template
+        inheritance system, powered by Jinja2, allows you to build a clean, modular HTML structure with reusable 
+        components.
+    </p>
+    <p>
+        This means that you won't have to rewrite shared code across pages such as meta data or header/footer layouts,
+        which will save a lot of time in larger projects.
+    </p>
+    <p>
+        Template inheritance like this allows you to create a base HTML template that contains common layout elements 
+         and then extend that base template in other pages. This keeps your code 
+         <dfn title="Don't Repeat Yourself">DRY</dfn>, making maintenance easier.
+    </p>
+{% endblock %}

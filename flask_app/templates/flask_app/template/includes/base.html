@@ -1,0 +1,65 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}flask-template-base{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Base.html{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    
+    <p>
+        Inside your project_name folder, create a folder named templates. Inside here, make your base.html file.
+    </p>
+    <p>
+        Also in your project_name folder, create a folder named static and inside here create a css folder with 
+        style.css inside.
+    </p>
+    <p>
+        In your base.html file you want to create your website with all the things that will be reused on every page of
+        your app. These may include:
+    </p>
+    <ol>
+        <li>
+            Meta data for your website
+        </li>
+        <li>
+            External links to CDNs such as Bootstrap or Materialize
+        </li>
+        <li>
+            External links to JQuery
+        </li>
+        <li>
+            Links for your favicon
+        </li>
+        <li>
+            Links to your fontawesome account
+        </li>
+        <li>
+            The title of your website
+        </li>
+        <li>
+            Any analytics
+        </li>
+        <li>
+            The body element
+        </li>
+        <li>
+            The navigation bar
+        </li>
+        <li>
+            A main element
+        </li>
+        <li>
+            A footer
+        </li>
+        <li>
+            Any post load JavaScript
+        </li>
+    </ol>
+    {% include 'flask_app/template/includes/code_snippets/base.html' %}
+
+
+{% endblock %}

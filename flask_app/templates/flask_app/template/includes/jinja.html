@@ -1,0 +1,120 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}flask-template-jinja{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Jinja2{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Jinja2 is the templating language used in Flask, so we use Jinja2 templates to generate dynamic HTML pages. 
+        Jinja lets us write HTML mixed with special syntax to add logic, reuse code, and keep your templates clean and
+        maintainable.
+    </p>
+
+    <!--Extends-->
+    <h4 id="flask-template-jinja-extends">
+        &#123;% extends %&#125;
+    </h4>
+    <p>
+        <code class="written-code">
+            &#123;% extends 'filename.html' %&#125;
+        </code>
+        allows html files to use another as a base template and to expand upon them. For instance any page that will
+        have the head, header, and footer in will use
+        <code class="written-code">
+            &#123;% extends 'base.html' %&#125;
+        </code>
+        at the top of the file.
+    </p>
+
+    <!--Include-->
+    <h4 id="flask-template-jinja-includes">
+        &#123;% includes %&#125;
+    </h4>
+    <p>
+        Whereas
+        <code class="written-code">
+            &#123;% extends 'filename.html' %&#125;
+        </code>
+        uses a file as a base to expand upon, 
+        <code class="written-code">
+            &#123;% includes 'filename_2.html' %&#125;
+        </code>
+        draws another file into your code to use. This is phrased quite confusingly but a key example would to think
+        about your pages in sections. In the base.html, for example it would be clearer (and more modular) if it had the
+        head and main but for the header and footer just said "insert header/footer here". In this way we can make
+        header.html or footer.html as separate files that just consist of the header or footer elements. Then in 
+        base.html we would have 
+        <code class="written-code">
+            &#123;% includes 'header.html' %&#125;
+        </code>
+        and
+        <code class="written-code">
+            &#123;% includes 'footer.html' %&#125;
+        </code>
+        where we want them to be. This makes the code more readable and troubleshooting easier. Is there an issue with 
+        something in the header? Then check out header.html instead of scrolling through base.html.
+    </p>
+
+    <!--Block-->
+    <h4 id="flask-template-jinja-block">
+        &#123;% block %&#125;
+    </h4>
+    <p>
+        It's all well and good extending from a base template, but how can we add to it in our new file. This is where
+        <code class="written-code">
+            &#123;% block blockname %&#125;&#123;% endblock %&#125;
+        </code>
+        comes in. In the file we are extending from we can add in a block with a descriptive name such as
+        <code class="written-code">
+            &#123;% block title %&#125;&#123;% endblock %&#125;
+        </code>
+        in the title element. Then in the page that extends from base.html we can wrap some code in
+        <code class="written-code">
+            &#123;% block title %&#125;&#123;% endblock %&#125;
+        </code>
+        and Flask will know to insert this into that specific space in the base template.         
+    </p>
+
+    <!--if-->
+    <h4 id="flask-template-jinja-if">
+        &#123;% if %&#125;
+    </h4>
+    <p>
+        <code class="written-code">
+            &#123;% if %&#125;&#123;% else %&#125;&#123;% endif %&#125;
+        </code>
+        blocks only render if a conditions is true.
+    </p>
+
+    <!--for-->
+    <h4 id="flask-template-jinja-for">
+        &#123;% for %&#125;
+    </h4>
+    <p>
+        <code class="written-code">
+            &#123;% for %&#125;&#123;% endfor %&#125;
+        </code>
+        blocks iterate over lists of other collections such as:
+    </p>
+    {% include 'flask_app/template/includes/code_snippets/for.html' %}
+
+    <!--for-->
+    <h4 id="flask-template-jinja-url">
+        &#123;&#123; url_for() &#125;&#125;
+    </h4>
+    <p>
+        Use
+        <code class="written-code">
+            &#123;&#123; url_for('route_name') &#125;&#125;
+        </code>
+        as the href in anchor tags in order to direct users to the routes defined in your routes.py file.
+    </p>
+    <p>These routes should be updated in your routes.py file to your html files that are in your templates folder to look like:</p>
+    {% include 'flask_app/template/includes/code_snippets/routes.html' %}
+
+{% endblock %}
