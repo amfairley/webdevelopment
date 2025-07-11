@@ -8,4 +8,6 @@ urlpatterns = [
     path('database/', views.flask_database, name="flask_database"),
     path('template/', views.flask_template, name="flask_template"),
     path('create/', views.flask_create, name="flask_create"),
+    path('read/', views.flask_read, name="flask_read"),
+
 ]

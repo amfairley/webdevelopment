@@ -1,0 +1,17 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}flask-read-template{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Template{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You can now access these returned variables in your HTML using the name on the left hand side of the equals.
+    </p>
+    {% include 'flask_app/read/includes/code_snippets/template.html' %}
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-flask-read-routes{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python"># The following is defined within a route
+# Get all categories as a list ordered alphabetically by the a class attribute category_name
+categories = list(Category.query.order_by(Category.category_name).all())
+
+# Get the category with an category_name of "Category Name"
+category_name = Category.query.filter_by(category_name="Category Name").first()
+
+# Get the cateogry with the id of 1
+category_id = Category.query.filter_by(id=1).first()
+
+# Add these to the return
+return render_template(
+    "categories.html",
+    categories = categories,
+    category_name = category_name,
+    category_id = category_id
+)
+</code></pre>
+{% endblock %}

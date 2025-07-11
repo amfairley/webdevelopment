@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Flask - Read Records{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Read Records</h2>
+
+    {% include 'flask_app/read/includes/contents.html' %}
+    {% include 'flask_app/read/includes/routes.html' %}
+    {% include 'flask_app/read/includes/template.html' %}
+
+
+{% endblock %}

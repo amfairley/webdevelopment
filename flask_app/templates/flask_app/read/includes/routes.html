@@ -1,0 +1,42 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}flask-read-routes{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Routes{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        In order to read data from the database, you will need to define it in your route for your page and then call it
+        in the page using the Jinja2 templating language.
+    </p>
+    <p>
+        Ensure that you are importing the model at the top of your routes.py file and then do two things to your route:
+    </p>
+    <ol>
+        <li>
+            Either:
+            <ul>
+                <li>Assign a variable to a list of all of the instances of a Model</li>
+                <li>Assign a variable to a specific instance of a Model. When doing this,
+                    <code class="written-code">.first()</code>
+                    is required as you are only looking for one record.
+                </li>
+            </ul>
+        </li>
+        <li>
+            Add that variable to the return list
+        </li>
+    </ol>
+    {% include 'flask_app/read/includes/code_snippets/routes.html' %}
+    <p>
+        The returns look a little silly with
+        <code class="written-code">categories = categories</code>
+        etc. This is done to keep the code consistent but in reality the left hand side of that equals is the variable
+        name that is sent to your webpage in the templating language and the right hand side is the name of the variable
+        defined above within the route.
+    </p>
+{% endblock %}

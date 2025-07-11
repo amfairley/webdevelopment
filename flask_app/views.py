@@ -55,3 +55,14 @@ def flask_create(request):
         'flask_app/create/create.html',
         context
     )
+
+
+def flask_read(request):
+    '''Return the Flask read records page'''
+    context = {
+    }
+    return render(
+        request,
+        'flask_app/read/read.html',
+        context
+    )
