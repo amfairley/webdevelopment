@@ -1,0 +1,40 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}flask-create-creating-create-a-form{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Create a Form{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        In add_category.html, build a form. In this example Materialize is used.
+    </p>
+    {% include 'flask_app/create/includes/code_snippets/form.html' %}
+    <p>
+        The key points of this are:
+    </p>
+    <ul>
+        <li>
+            <code class="written-code">
+                method="POST"
+            </code>
+            which sends data when the form is submitted.
+        </li>
+        <li>
+            <code class="written-code">
+                action="&#123;&#123; url_for('add_category') &#125;&#125;"
+            </code>
+            points to the function (route) that handles the form submission. This is why we have POST in the methods in
+            our add_category route.
+        </li>
+        <li>
+            <code class="written-code">
+                name="category_name"
+            </code>
+            in the input field must match the column name (attribute name) defined in the Model.
+        </li>
+    </ul>
+{% endblock %}

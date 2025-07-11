@@ -1,0 +1,24 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-flask-create-update{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">@app.route("/add_category", methods=["GET", "POST"])
+def add_category():
+    if request.method == "POST":
+        # Create an new instance of the model with the form data
+        category = Category(category_name=request.form.get("category_name"))
+        # Add the instance to the session
+        db.session.add(category)
+        # Commit the session
+        db.session.commit()
+        # Redirect the user
+        return redirect(url_for("categories"))
+    return render_template("add_category.html")
+</code></pre>
+{% endblock %}

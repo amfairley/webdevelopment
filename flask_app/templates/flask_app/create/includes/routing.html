@@ -1,0 +1,24 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}flask-create-creating-routing{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Routing{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Create routes in your route.py file to point to the new pages.
+    </p>
+    {% include 'flask_app/create/includes/code_snippets/route.html' %}
+    <p>
+        The route for add_category has
+        <code class="written-code">methods=["GET", "POST"]</code>
+        because this page will serve 2 different purposes. The GET tells Flask to display the page when a link to the
+        page is clicked. The POST handles what will happen when a form on that page is submitted. Note that other routes
+        do not have the method set to GET because GET is the default and if there is no additional POST, specifiying
+        GET by itself is not required.
+    </p>
+{% endblock %}

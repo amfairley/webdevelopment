@@ -1,0 +1,28 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-flask-create-form{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="html">&#123;% extends "base.html" %&#125;
+
+&#123;% block content %&#125;
+    &lt;div class="row"&gt;
+        &lt;form class="col s12" method="POST" action="&#123;&#123; url_for('add_category') &#125;&#125;"&gt;
+            &lt;div class="card-panel"&gt;
+                &lt;div class="input-field"&gt;
+                    &lt;i class="fas fa-tag prefix"&gt;&lt;/i&gt;
+                    &lt;input id="category_name" name="category_name" type="text" class="validate" required&gt;
+                    &lt;label for="category_name"&gt;Category Name&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;button type="submit" class="btn"&gt;Add Category&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&#123;% endblock %&#125;
+</code></pre>
+{% endblock %}

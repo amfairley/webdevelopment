@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Flask - Create Records{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Create Records</h2>
+
+    {% include 'flask_app/create/includes/contents.html' %}
+    {% include 'flask_app/create/includes/creating_templates.html' %}
+    {% include 'flask_app/create/includes/routing.html' %}
+    {% include 'flask_app/create/includes/create_a_form.html' %}
+    {% include 'flask_app/create/includes/update.html' %}
+
+{% endblock %}

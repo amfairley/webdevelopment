@@ -44,3 +44,14 @@ def flask_template(request):
         'flask_app/template/template.html',
         context
     )
+
+
+def flask_create(request):
+    '''Return the Flask create records page'''
+    context = {
+    }
+    return render(
+        request,
+        'flask_app/create/create.html',
+        context
+    )

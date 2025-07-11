@@ -1,0 +1,35 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}flask-create-creating-update{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Update the Database{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Ensure you have all the imports you need at the top of routes.py.
+    </p>
+    {% include 'flask_app/create/includes/code_snippets/imports.html' %}
+    <p>
+        Update the add category function for in the case of POST, it will:
+    </p>
+    <ul>
+        <li>
+            Create an instance of the Category Model with the data from the form
+        </li>
+        <li>
+            Add this instance to the session
+        </li>
+        <li>
+            Commit the session
+        </li>
+        <li>
+            Redirect the user to another page
+        </li>
+    </ul>
+    {% include 'flask_app/create/includes/code_snippets/update.html' %}
+
+{% endblock %}

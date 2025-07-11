@@ -1,0 +1,25 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}flask-create-creating-templates{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Creating Templates{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Inside your templates folder create 2 templates; one to display the contents of your database table and another 
+        to add records to the table. E.g. categories.html and add_category.html.
+    </p>
+    <p>
+        Set up the template inheritance within these to your base.html file including the content block to add to.
+    </p>
+    {% include 'flask_app/create/includes/code_snippets/templates.html' %}
+    <p>
+        Then add a link to from the display page to the add page using a route that we will define shortly.
+    </p>
+    {% include 'flask_app/create/includes/code_snippets/link.html' %}
+
+{% endblock %}

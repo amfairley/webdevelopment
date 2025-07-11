@@ -7,4 +7,5 @@ urlpatterns = [
     path('basics/', views.flask_basics, name="flask_basics"),
     path('database/', views.flask_database, name="flask_database"),
     path('template/', views.flask_template, name="flask_template"),
+    path('create/', views.flask_create, name="flask_create"),
 ]
