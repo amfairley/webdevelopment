@@ -1,0 +1,13 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-flask-update-link{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="html">&#123;&#123; url_for('edit_category', category_id = category.id) &#125;&#125;
+</code></pre>
+{% endblock %}

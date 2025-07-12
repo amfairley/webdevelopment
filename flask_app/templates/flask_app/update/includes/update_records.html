@@ -1,0 +1,19 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}flask-update-update-records{% endblock %}
+
+<!--Section title-->
+{% block text_title %}{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Now we just need to handle the POST action of the form in our route in order to updat the records. Similar to 
+        the add POST action, we can get the value from the form, overwrite our current value and commit the changes
+        before redirecting the user.
+    </p>
+    {% include 'flask_app/update/includes/code_snippets/update_records.html' %}
+
+{% endblock %}

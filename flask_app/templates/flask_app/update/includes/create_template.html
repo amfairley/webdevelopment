@@ -1,0 +1,26 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}flask-update-create-template{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Create Template{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Create a template to handle the update. You can quickly do this by making a copy of the add template and 
+        renaming it to update, as the forms will be similar. The main change will be updating
+        <code class="written-code">
+            action="&#123;&#123; url_for('add_category') &#125;&#125;
+        </code>
+        to
+        <code class="written-code">
+            action="&#123;&#123; url_for('edit_category') &#125;&#125;
+        </code>.
+        Although this technically isn't necessary, as if the action attribute was not added, it would default to 
+        submitting the form to the same route that rendered the page, which in this case would be edit_category.
+    </p>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}flask-update-update-route{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Update Route{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Now we are passing a variable of
+        <code class="written-code">category_id</code>
+        when we click the link, we can update our route to handle this variable being passed. First update the URL that
+        the route passes to so that there is a different page for each instance of the Model. We use 
+        <code class="written-code">int:</code> to tell the type of the data (in this case integer for the ID number)
+        and wrap the whole value in angular brackets.
+    </p>
+    {% include 'flask_app/update/includes/code_snippets/update_url.html' %}
+    <p>
+        Now when we click on the link for the category with id of 1, we will be directed to the page of 
+        https://www.websitename.com/edit_category/1 and if we click of th elink for the category with an id of 2 we will
+        be directed to the page of https://www.websitename.com/edit_category/2.
+    </p>
+    <p>
+        Then we need to pass this
+        <code class="written-code">category_id</code>
+        variable that we defined in our href of the anchor tag to the function handling the route:
+    </p>
+    {% include 'flask_app/update/includes/code_snippets/update_function.html' %}
+    <p>
+        Finally we can get the correct cateogry in our function by querying the Category table using that id. We use
+        get_or_404 here so that the user is directed to the 404 page if they go to page that does not exist instead of
+        creating an error. Then we pass that in our render_template function so that we can access that particular
+        category on the edit_category page.
+    </p>
+    {% include 'flask_app/update/includes/code_snippets/update_route.html' %}
+
+{% endblock %}

@@ -9,5 +9,5 @@ urlpatterns = [
     path('template/', views.flask_template, name="flask_template"),
     path('create/', views.flask_create, name="flask_create"),
     path('read/', views.flask_read, name="flask_read"),
-
+    path('update/', views.flask_update, name="flask_update"),
 ]

@@ -66,3 +66,14 @@ def flask_read(request):
         'flask_app/read/read.html',
         context
     )
+
+
+def flask_update(request):
+    '''Return the Flask update records page'''
+    context = {
+    }
+    return render(
+        request,
+        'flask_app/update/update.html',
+        context
+    )

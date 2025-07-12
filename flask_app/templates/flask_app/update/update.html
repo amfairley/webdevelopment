@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Flask - Update Records{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Update Records</h2>
+
+    {% include 'flask_app/update/includes/contents.html' %}
+    {% include 'flask_app/update/includes/create_template.html' %}
+    {% include 'flask_app/update/includes/set_up_route.html' %}
+    {% include 'flask_app/update/includes/create_link.html' %}
+    {% include 'flask_app/update/includes/update_route.html' %}
+    {% include 'flask_app/update/includes/update_template.html' %}
+    {% include 'flask_app/update/includes/update_records.html' %}
+{% endblock %}

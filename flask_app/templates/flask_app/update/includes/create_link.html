@@ -1,0 +1,27 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}flask-update-create-link{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Create Link{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Create a link in the page for categories (categories.html) that will lead to the edit_category route. Make the 
+        href of the anchor tag:
+    </p>
+    {% include 'flask_app/update/includes/code_snippets/link.html' %}
+    <p>
+        This can go inside a for loop that shows all the categories using the temporary variable of category. It takes
+        an extra argument of 
+        <code class="written-code">category_id = category.id</code> to pass the information to the route of the id of 
+        the category.
+        <code class="written-code">category_id</code> is the variable that we can access in the route, whereas
+        <code class="written-code">category.id</code> is the dot notation getting the id value of the temporary category
+        variable from the for loop.
+    </p>
+
+{% endblock %}

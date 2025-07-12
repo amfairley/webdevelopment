@@ -1,0 +1,18 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}flask-update-set-up-route{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Set up Route{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Create a new route for edit_category in routes.py, concentrating on just the GET action, the default action that
+        renders the page, for now.
+    </p>
+    {% include 'flask_app/update/includes/code_snippets/set_up_route.html' %}
+
+{% endblock %}

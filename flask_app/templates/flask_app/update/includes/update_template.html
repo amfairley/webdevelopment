@@ -1,0 +1,25 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}flask-update-update-template{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Update Template{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Now our route passes all the information to render the page, we can update edit_category.html.
+    </p>
+    <p>
+        Start with the action of the form to include the category id. Remember we passed the variable category in our 
+        render_template() function, so to access the id we can use dot notation of category.id.
+    </p>
+    {% include 'flask_app/update/includes/code_snippets/update_html_1.html' %}
+    <p>
+        Then update the values of the input fields accordingly in order to pre-fill the form with the current values.
+    </p>
+    {% include 'flask_app/update/includes/code_snippets/update_html_2.html' %}
+
+{% endblock %}
