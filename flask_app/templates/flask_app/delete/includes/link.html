@@ -1,0 +1,18 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}flask-delete-link{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Link{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Create a link to delete the record in a template. This is best done in a for loop or a way that the specific
+        record identifying variable can be passed to the route. Have the href something similar to:
+    </p>
+    {% include 'flask_app/delete/includes/code_snippets/link.html' %}
+
+{% endblock %}

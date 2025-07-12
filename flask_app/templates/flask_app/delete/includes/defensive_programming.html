@@ -1,0 +1,37 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}flask-delete-defensive-programming{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Defensive Programming{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        As deletion is irreversible, it is best practice to implement some sort of defensive programming to prevent
+        accidental deletion of data.
+    </p>
+    <p>
+        One way of doing this is to make the delete button, not delete the record but to open a modal instead with 
+        a confirmation message, with the yes button linked to the delete function in the routes.
+    </p>
+    <p>
+        Another way would to be only show the delete button in the HTML file if the user is the one who created the item.
+        In this scenario, there is a Model for User, which will have the login credentials and allow users to log in with
+        a form. Then when they create items, there would be an attribute of user_id in the created item to reference back
+        to the user. This can then be checked like so:
+    </p>
+    <ul>
+        <li>
+            Have the user_id passed to the page through the route by checking the session:
+            <code class="written-code">user_id = session.get("user_id")</code>
+        </li>
+        <li>
+            Putting the delete button inside an if statement to only show if it was created by the logged in user:
+            <code class="written-code">&#123;% if user_id == toy.user_id %&#125;&#123;% endif %&#125;</code>
+        </li>
+    </ul>
+
+{% endblock %}

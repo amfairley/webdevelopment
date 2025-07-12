@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Flask - Delete Records{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Delete Records</h2>
+
+    {% include 'flask_app/delete/includes/contents.html' %}
+    {% include 'flask_app/delete/includes/delete_route.html' %}
+    {% include 'flask_app/delete/includes/link.html' %}
+    {% include 'flask_app/delete/includes/defensive_programming.html' %}
+
+{% endblock %}

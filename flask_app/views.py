@@ -77,3 +77,14 @@ def flask_update(request):
         'flask_app/update/update.html',
         context
     )
+
+
+def flask_delete(request):
+    '''Return the Flask delete records page'''
+    context = {
+    }
+    return render(
+        request,
+        'flask_app/delete/delete.html',
+        context
+    )

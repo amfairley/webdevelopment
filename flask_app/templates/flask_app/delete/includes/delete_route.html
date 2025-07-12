@@ -1,0 +1,19 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}flask-delete-delete-route{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Delete Route{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Create a route to handle the deletion of the data. We do not need a template for this, as we can put the delete
+        button wherever we like. Ensure to include an identifying variable (here we use cateogry_id) in order to query
+        the correct record for deletion. Then do the delete -> save -> redirect pathway.
+    </p>
+    {% include 'flask_app/delete/includes/code_snippets/route.html' %}
+
+{% endblock %}

@@ -10,4 +10,5 @@ urlpatterns = [
     path('create/', views.flask_create, name="flask_create"),
     path('read/', views.flask_read, name="flask_read"),
     path('update/', views.flask_update, name="flask_update"),
+    path('delete/', views.flask_delete, name="flask_delete"),
 ]
