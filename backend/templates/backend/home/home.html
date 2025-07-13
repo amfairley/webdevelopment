@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Back-end{% endblock %}
+
+{% block extra_css %}
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Back-end</h2>
+
+    {% include 'backend/home/includes/contents.html' %}
+    {% include 'backend/home/includes/what_is_the_backend.html' %}
+    {% include 'backend/home/includes/databases_and_dbms.html' %}
+    {% include 'backend/home/includes/requests_and_queries.html' %}
+    {% include 'backend/home/includes/tables_rows_and_columns.html' %}
+    {% include 'backend/home/includes/the_schema.html' %}
+    {% include 'backend/home/includes/relational_vs_nonrelational.html' %}
+
+{% endblock %}

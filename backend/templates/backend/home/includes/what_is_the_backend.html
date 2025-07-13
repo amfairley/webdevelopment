@@ -1,0 +1,37 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}backend-home-what-is-the-backend{% endblock %}
+
+<!--Section title-->
+{% block text_title %}What is the Back-end?{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The back-end of a website is where data is stored, processed, and managed. To understand back-end programming, 
+        we need to understand how data works, how it's stored, and how it's managed by systems and software. 
+    </p>
+    <p>
+        At its core, data refers to structured pieces of information that are collected and maintained. This could 
+        include user profiles, product inventories, blog posts, weather logs, or almost anything that needs to be saved 
+        for later use. The data must be kept up to date and accessible, as most applications rely on being able to 
+        quickly retrieve and process it to serve users in real time.
+    </p>
+    <p>
+        Once you start collecting and storing data in a meaningful way, you build what is called an archive. An archive,
+        in this context, is essentially a collection of data stored in a database. A well-structured archive allows for 
+        <dfn title="Create, Read, Update, Delete">CRUD</dfn> operations efficiently. 
+    </p>
+    <p>
+        Back-end programming involves writing the logic and functionality that allows users to interact with your data 
+        securely and efficiently. Whether you're building APIs, designing database schemas, or writing queries to update
+        user records, you're enabling the invisible but crucial part of a web application.
+    </p>
+    <p>
+        In essence, back-end programming makes modern web and mobile apps work, not just look good. It ensures that when 
+        someone hits "submit" or "search," something intelligent happens behind the scenes.
+    </p>
+
+{% endblock %}

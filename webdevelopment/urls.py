@@ -27,5 +27,6 @@ urlpatterns = [
     path('CSS/', include('CSS.urls')),
     path('JavaScript/', include('javascript_app.urls')),
     path('Python/', include('python_app.urls')),
+    path('Backend/', include('backend.urls')),
     path('Flask/', include('flask_app.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

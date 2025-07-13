@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'CSS',
     'javascript_app',
     'python_app',
+    'backend',
     'flask_app',
 ]
 

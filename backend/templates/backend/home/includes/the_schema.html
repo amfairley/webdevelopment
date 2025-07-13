@@ -1,0 +1,27 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}backend-home-the-schema{% endblock %}
+
+<!--Section title-->
+{% block text_title %}The Schema{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The schema defines the structure of the database. It acts like a blueprint, outlining:
+    </p>
+    <ul>
+        <li>What tables exist</li>
+        <li>What columns each table contains</li>
+        <li>The data types for each field (e.g., text, date, number)</li>
+        <li>How tables are related</li>
+    </ul>
+    <p>
+        This blueprint can be visualized in diagrams, often referred to as 
+        <dfn title="Entity-Relationship Diagrams">ERDs</dfn>,
+        and it helps developers and systems understand how the data is laid out.
+    </p>
+
+{% endblock %}

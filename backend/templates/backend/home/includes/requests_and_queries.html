@@ -1,0 +1,19 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}backend-home-requests-and-queries{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Requests and Queries{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        When a user interacts with an application by searching for a product or logging in, the application sends a 
+        request to the back-end. In the context of databases, especially when retrieving information, these requests 
+        are known as queries. A query asks the database to "give me all the products that cost less than $50" or 
+        "find the user whose email is xyz@example.com." The DBMS processes this query, looks through the database, and 
+        returns the requested data.
+    </p>
+{% endblock %}

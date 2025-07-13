@@ -159,6 +159,17 @@
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'python_google_sheets_program' %}active{% endif %}" href="{% url 'python_google_sheets_program' %}">Google Sheets Program</a></li>
                 </ul>
             </li>
+            <!--Backend-->
+            <li class="nav-item">
+                <span class="d-flex align-items-center">
+                    <a class="nav-link" href="{% url 'backend_home' %}">Back-end</a>
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#backend-submenu" aria-expanded="false" aria-controls="backend-submenu" aria-label="Open the backend dropdown section">
+                    </button>
+                </span>
+                <ul class="collapse list-unstyled ps-3 {% if '/Backend' in request.path %}show{% endif %}" id="backend-submenu">
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'backend_home' %}active{% endif %}" href="{% url 'backend_home' %}">Back-end Home</a></li>
+                </ul>
+            </li>
             <!--Flask-->
             <li class="nav-item">
                 <span class="d-flex align-items-center">

@@ -1,0 +1,31 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}backend-home-databases-and-dbms{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Databases and DBMS{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The 
+        <dfn title="Database Management System">DBMS</dfn>
+        is the software responsible for handling and organizing data in a database. Think of it as the middleman 
+        between your application and the actual data storage. The DBMS:
+    </p>
+    <ul>
+        <li>Manages how data is stored and retrieved</li>
+        <li>Handles data security and access controls</li>
+        <li>Runs continuously on a server to allow real-time interaction</li>
+        <li>Supports backups and data integrity</li>
+    </ul>
+    <p>
+        When we say a system "has a database," we're really talking about a computer (called a database server) running 
+        a DBMS. If the database system specifically manages relational data (data organized in tables with defined 
+        relationships), it's known as a 
+        <dfn title="Relational Database Management System">RDBMS</dfn>.
+    </p>
+
+{% endblock %}

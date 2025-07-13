@@ -1,0 +1,31 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}backend-home-relational-vs-nonrelational{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Relational vs Non-Relational{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Databases come in different types, with two major categories:
+    </p>
+    <ul>
+        <li>
+            Relational Databases (SQL): These use structured tables with rows and columns, and enforce relationships 
+            between data (e.g., a Users table linked to an Orders table by user ID). Examples include MySQL, PostgreSQL,
+            and SQLite.
+        </li>
+        <li>
+            Non-Relational Databases (NoSQL): These do not use tables and often store data in more flexible formats like
+            JSON, key-value pairs, or documents. They are useful for unstructured data and rapid development. Examples 
+            include MongoDB, Firebase, and Redis.
+        </li>
+    </ul>
+    <p>
+        Choosing between these depends on the project's needs, scale, and data complexity.
+    </p>
+
+{% endblock %}

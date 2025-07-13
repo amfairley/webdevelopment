@@ -1,0 +1,23 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}backend-home-tables-rows-and-columns{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Tables, Rows, and Columns{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Databases, especially relational ones, organize data using a table-based structure, which consist of tables and 
+        their rows and columns. This format allows databases to be highly organized, flexible, and efficient to search 
+        through.
+    </p>
+    <ul>
+        <li>Table: A container that holds related data (e.g., a table named Users might store all registered users).</li>
+        <li>Row: A single record in the table (e.g., one user's profile with their name, email, etc.).</li>
+        <li>Column: A specific field or attribute (e.g., email or date_of_birth) that appears in every row.</li>
+    </ul>
+
+{% endblock %}
