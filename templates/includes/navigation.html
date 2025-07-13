@@ -168,6 +168,7 @@
                 </span>
                 <ul class="collapse list-unstyled ps-3 {% if '/Backend' in request.path %}show{% endif %}" id="backend-submenu">
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'backend_home' %}active{% endif %}" href="{% url 'backend_home' %}">Back-end Home</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'backend_databases' %}active{% endif %}" href="{% url 'backend_databases' %}">Relational and Non-Relational Databases</a></li>
                 </ul>
             </li>
             <!--Flask-->

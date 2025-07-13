@@ -1,0 +1,59 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}backend-databases-comparing-terminology{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Comparing Terminology{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Relational Database
+                </th>
+                <th>
+                    MongoDB / Document DB
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Table
+                </td>
+                <td>
+                    Collection
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Row
+                </td>
+                <td>
+                    Document
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Column
+                </td>
+                <td>
+                    Field
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Relationships
+                </td>
+                <td>
+                    Linking / Embedding Docs
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

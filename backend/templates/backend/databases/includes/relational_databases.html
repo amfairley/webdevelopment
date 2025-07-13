@@ -1,0 +1,40 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}backend-databases-relational-databases{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Relational Databases{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Relational databases, also known as SQL databases, are the most commonly used type of database in traditional 
+        applications. They use a structured, table-based approach to store data.
+    </p>
+    <p>
+        They use 
+        <dfn title="Structured Query Language">SQL</dfn>,
+        which  is the standard language used to interact with relational databases. It is used for 
+        <dfn title="Create, Read, Update, Delete">CRUD</dfn> activities.
+    </p>
+    <p>
+        In relational databases, data is organized into separate tables, where each table represents a type of entity 
+        (e.g. Users, Orders, Products). Each contains a primary key (PK), which is a unique identifier for each record 
+        in a table (e.g., user_id or countryID). Relationships between tables are defined by foreign keys (FK), which 
+        act as a reference to a primary key in another table. For example an Orders table might include a user_id FK 
+        pointing to the Users table.
+    </p>
+    <p>
+        Relational databases are allow you to define clear and enforceable connections between different sets of data. 
+        For example, you can link a user to their orders or a product to its category. Using constraints and 
+        relationships like this ensures that data remains consistent and avoids duplication or orphaned records. SQL 
+        databases like PostgreSQL, MySQL, and SQLite have been around for decades, with robust tooling and strong 
+        community support. However they have a rigid schema defined in advance so changing this later can be complex 
+        and risky. As your application grows, managing deeply nested relationships or multiple joins can become 
+        difficult and performance-intensive and if your data is unpredictable or frequently changing, a relational 
+        model may slow you down.
+    </p>
+
+{% endblock %}

@@ -11,3 +11,14 @@ def backend_home(request):
         'backend/home/home.html',
         context
     )
+
+
+def backend_databases(request):
+    '''Return the realtional and non-relational databases homepage'''
+    context = {
+    }
+    return render(
+        request,
+        'backend/databases/databases.html',
+        context
+    )

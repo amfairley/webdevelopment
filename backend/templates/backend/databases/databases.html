@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Back-end - Databases{% endblock %}
+
+{% block extra_css %}
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Relational and Non-Relational Databases</h2>
+
+    {% include 'backend/databases/includes/contents.html' %}
+    {% include 'backend/databases/includes/relational_databases.html' %}
+    {% include 'backend/databases/includes/nonrelational_databases.html' %}
+    {% include 'backend/databases/includes/comparing_terminology.html' %}
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}backend-databases-nonrelational-databases{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Non-Relational Databases{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Non-relational databases, commonly referred to as NoSQL databases, were developed to address the limitations of 
+        relational databases in handling large-scale, unstructured, or rapidly evolving data.
+    </p>
+    <p>
+        They are document oriented; storing data in documents, usually in formats like JSON, BSON, or XML 
+        (e.g., MongoDB). They can be:
+    </p>
+    <ul>
+        <li>Graph Stores: Designed to handle networks of data and relationships (e.g., Neo4j).</li>
+        <li>Key/Value Stores: Each item is stored as a key with an associated value (e.g., Redis).</li>
+        <li>Time-Series Databases: Optimized for data that is indexed by time (e.g., InfluxDB).</li>
+        <li>Wide-Column Stores: Uses tables, rows, and dynamic columns (e.g., Cassandra).</li>
+        <li>Geospatial Databases: Optimized for storing and querying geographic data.</li>
+    </ul>
+    <p>
+        Collections (in MongoDB) are the equivalent of a table in a relational database. Each document is a standalone 
+        data record, roughly equivalent to a row, but more flexible. Fields in each document represent data, equivalent 
+        to columns in SQL. Every document also has a unique identifier (often an _id field in MongoDB) to allow quick 
+        access. But each document can have a different structure, making it ideal for projects where the data shape 
+        varies frequently.
+    </p>
+    <p>
+        Non-Relational Databases can be flexible, you can store documents with different fields and data types in the 
+        same collection. There's no need to pre-define a strict schema. This allows for faster development which is 
+        useful for fast-moving projects, prototyping, or applications with evolving data models. As such they are also 
+        scalable. Many NoSQL databases are built with horizontal scaling in mind, allowing data to be distributed 
+        across multiple machines easily.
+    </p>
+    <p>
+        However, Non-Relational Databases lack standardized relationships as there are no built-in foreign keys. 
+        Relationships must be handled manually through embedding (nesting documents within each other) or linking 
+        (storing references), in simple terms it is like making a lot of hyperlinked documents. This can lead to 
+        repeated data, which can create inconsistencies unless carefully managed. Because there are fewer enforced 
+        rules, it's easier to introduce errors or inconsistencies in your data structure.
+    </p>
+{% endblock %}
