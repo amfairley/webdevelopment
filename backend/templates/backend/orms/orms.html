@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Back-end - ORMs{% endblock %}
+
+{% block extra_css %}
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>ORMs</h2>
+
+    {% include 'backend/orms/includes/contents.html' %}
+    {% include 'backend/orms/includes/what_is_an_orm.html' %}
+    {% include 'backend/orms/includes/orm_libraries.html' %}
+
+{% endblock %}

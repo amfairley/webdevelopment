@@ -20,4 +20,9 @@ urlpatterns = [
         views.backend_postgresql,
         name="backend_postgresql"
     ),
+    path(
+        'orms/',
+        views.backend_orms,
+        name="backend_orms"
+    ),
 ]

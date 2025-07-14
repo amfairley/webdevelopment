@@ -55,3 +55,14 @@ def backend_postgresql(request):
         'backend/postgresql/postgresql.html',
         context
     )
+
+
+def backend_orms(request):
+    '''Return the ORMs page'''
+    context = {
+    }
+    return render(
+        request,
+        'backend/orms/orms.html',
+        context
+    )

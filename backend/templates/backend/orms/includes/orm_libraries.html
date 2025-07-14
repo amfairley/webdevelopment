@@ -1,0 +1,35 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}backend-orms-orm-libraries{% endblock %}
+
+<!--Section title-->
+{% block text_title %}ORM Libraries{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The Django ORM provides simple syntax and integrates deeply with Django's admin, forms, and views but it 
+        cannot be used outside of Django projects.
+    </p>
+    <ul>
+        <li>Tightly coupled with the Django web framework.</li>
+        <li>Provides a high-level abstraction to define models, querysets, and perform migrations.</li>
+        <li>Easy to get started with for web apps.</li>
+    </ul>
+    <p>
+        SQLAlchemy is a standalone ORM that can be used in any Python project (web or non-web). And offers three levels 
+        of abstraction:
+    </p>
+    <ul>
+        <li>Core layer: write SQL-like code using Python</li>
+        <li>ORM layer: map classes to tables</li>
+        <li>Full automation layer: manage sessions, relationships, and migrations</li>
+    </ul>
+    <p>
+        This is very powerful and flexible, raw SQL can be used it needed, and works outside of any specific framework 
+        but it can be more complex to learn. 
+    </p>
+
+{% endblock %}

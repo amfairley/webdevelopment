@@ -1,0 +1,49 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}backend-orms-what-is-an-orm{% endblock %}
+
+<!--Section title-->
+{% block text_title %}What is an ORM{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        When building applications with Python and relational databases like PostgreSQL or MySQL, developers often face 
+        a challenge: how to write clean, readable code while still working efficiently with database data. That's where 
+        <dfn title="Object Relational Mappers">ORMs</dfn>
+        come in.
+    </p>
+    <p>
+        It's a technique that allows you to interact with a database using objects instead of raw SQL queries.
+    </p>
+    <ul>
+        <li>You define classes in Python that represent your database tables.</li>
+        <li>Each object (or instance) of a class corresponds to a row in the table.</li>
+        <li>Each attribute of the object maps to a column in the table.</li>
+    </ul>
+    <p>
+        The ORM library handles the conversion (or "mapping") between your Python objects and the underlying relational 
+        database structure. This allows you to perform database operations using Python syntax without having to 
+        manually write SQL statements.
+    </p>
+    <p>
+        Using an ORM provides several benefits:
+    </p>
+    <ul>
+        <li>Readability & Maintainability: Writing queries in Python feels more natural and readable than writing raw SQL.</li>
+        <li>Fewer Errors: ORMs help avoid typos in table or column names and reduce the risk of SQL injection when used correctly.</li>
+        <li>Portability: You can switch between different types of databases (e.g., SQLite to PostgreSQL) with minimal code changes.</li>
+        <li>Rapid Development: ORMs are faster to work with, especially in early development stages or when prototyping.</li>
+    </ul>
+    <p>
+        Without an ORM:
+    </p>
+    {% include 'backend/orms/includes/code_snippets/without.html' %}
+    <p>
+        With an ORM in Python:
+    </p>
+    {% include 'backend/orms/includes/code_snippets/with.html' %}
+
+{% endblock %}
