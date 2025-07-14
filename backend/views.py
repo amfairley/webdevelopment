@@ -44,3 +44,14 @@ def backend_sql(request):
         'backend/sql/sql.html',
         context
     )
+
+
+def backend_postgresql(request):
+    '''Return the PostgreSQL page'''
+    context = {
+    }
+    return render(
+        request,
+        'backend/postgresql/postgresql.html',
+        context
+    )

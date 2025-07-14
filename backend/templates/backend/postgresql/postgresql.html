@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Back-end - PostgreSQL{% endblock %}
+
+{% block extra_css %}
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>PostgreSQL</h2>
+
+    {% include 'backend/postgresql/includes/contents.html' %}
+    {% include 'backend/postgresql/includes/what_is_postgresql.html' %}
+    {% include 'backend/postgresql/includes/psycopg2.html' %}
+
+{% endblock %}

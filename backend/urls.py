@@ -15,4 +15,9 @@ urlpatterns = [
         views.backend_sql,
         name="backend_sql"
     ),
+    path(
+        'postgresql/',
+        views.backend_postgresql,
+        name="backend_postgresql"
+    ),
 ]

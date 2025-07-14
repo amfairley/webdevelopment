@@ -1,0 +1,65 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}backend-postgresql-psycopg2{% endblock %}
+
+<!--Section title-->
+{% block text_title %}PsycoPG2{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        When working with relational databases in Python, one of the most popular libraries for PostgreSQL is psycopg2. 
+        This powerful and lightweight adapter allows you to connect to your PostgreSQL database and run SQL queries 
+        just like you would inside a SQL terminal, but using Python code instead.
+    </p>
+    <p>
+        Install it with pip:
+    </p>
+    {% include 'backend/postgresql/includes/code_snippets/install.html' %}
+    {% include 'backend/postgresql/includes/troubleshooting/psycopg2.html' %}
+    <p>
+        To write a psycopg2 script:
+    </p>
+    <ul>
+        <li>Create a Python file—for example, sql_psycopg2.py</li>
+        <li>Import the Library</li>
+        <li>Connect to the Database</li>
+        <li>
+            Create a Cursor
+            <ul>
+                <li>
+                    The cursor acts like a command centre for your queries. It's similar to how a list or array is used 
+                    to hold and manipulate data and allows you to send commands to the database and retrieve results.
+                </li>
+            </ul>
+        </li>
+    </ul>
+    {% include 'backend/postgresql/includes/code_snippets/file_1.html' %}
+    <p>
+        You can now start querying your database using SQL wrapped in Python strings. Use single quotes around the 
+        query, and double quotes around table and column names if needed (especially when using capitalized identifiers 
+        in PostgreSQL).
+    </p>
+    {% include 'backend/postgresql/includes/code_snippets/file_2.html' %}
+    <p>
+        When you want to safely insert variables into a query (e.g., user input), use placeholders to avoid SQL 
+        injection.
+    </p>
+    {% include 'backend/postgresql/includes/code_snippets/file_3.html' %}
+    <ul>
+        <li>Use %s as the placeholder (regardless of the data type).</li>
+        <li>Pass the actual value(s) as a list or tuple in the second argument.</li>
+    </ul>
+    <p>
+        After running a query, you can fetch the data returned:
+    </p>
+    {% include 'backend/postgresql/includes/code_snippets/results.html' %}
+    <p>
+        After you’re done, always close your connection. This ensures your program doesn't leave open connections that 
+        can cause memory issues or errors.
+    </p>
+    {% include 'backend/postgresql/includes/code_snippets/close.html' %}
+
+{% endblock %}
