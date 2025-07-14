@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Analytics - SEO{% endblock %}
+
+{% block extra_css %}
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>SEO</h2>
+
+    {% include 'analytics/seo/includes/contents.html' %}
+    {% include 'analytics/seo/includes/what_is_seo.html' %}
+    {% include 'analytics/seo/includes/structured_data.html' %}
+    {% include 'analytics/seo/includes/microdata.html' %}
+
+{% endblock %}

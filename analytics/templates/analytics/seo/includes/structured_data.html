@@ -1,0 +1,40 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}analytics-seo-structured-data{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Structured Data{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Structured data is a standardised format for providing information about a web page and classifying its content.
+        It helps with SEO by making search engines like Google understand your content more clearly, leading to enhanced
+        search results, such as rich snippets, which are the individual sections of structured data that show in search 
+        engine results beyond your typical title, URL, and description.
+    </p>
+    <p>
+        For structured data, see 
+        <a 
+            class="text-link"
+            href="https://schema.org/"
+            title="Go the schema.org"
+            aria-label="Go the schema.org"
+            target="_blank"
+            rel="noopener noreferrer"
+        > 
+            schema.org.
+        </a>
+        It usually takes the form of <dfn title="JavaScript Object Notation for Linked Data">JSON-LD</dfn> which is 
+        preferred by Google. This is wrapped in a:
+    </p>
+    {% include 'analytics/seo/includes/code_snippets/wrapped.html' %}
+    <p>
+        element inside, and at the end of, your head element. It lists the individual rich snippets as a dictionary. An 
+        example for a hotel website would be:
+    </p>
+    {% include 'analytics/seo/includes/code_snippets/example.html' %}
+
+{% endblock %}

@@ -11,3 +11,14 @@ def analytics_home(request):
         'analytics/home/home.html',
         context
     )
+
+
+def analytics_seo(request):
+    '''Return the analytics seo page'''
+    context = {
+    }
+    return render(
+        request,
+        'analytics/seo/seo.html',
+        context
+    )

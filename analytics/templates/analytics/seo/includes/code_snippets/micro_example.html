@@ -1,0 +1,31 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-analytics-micro-example{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="html">&lt;div itemscope itemtype="https://schema.org/Hotel"&gt;
+    &lt;h1&gt;&lt;span itemprop="name"&gt;ACME Hotel Innsbruck&lt;/span&gt;&lt;/h1&gt;
+    &lt;span itemprop="description"&gt;
+        A beautifully located business hotel right in the heart of the alps. Watch the sun rise over the scenic Inn 
+        valley while enjoying your morning coffee.
+    &lt;/span&gt;
+    &lt;div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"&gt;
+        &lt;span itemprop="streetAddress"&gt;Technikerstrasse 21&lt;/span&gt;
+        &lt;span itemprop="postalCode"&gt;6020&lt;/span&gt;
+        &lt;span itemprop="addressLocality"&gt;Innsbruck&lt;/span&gt;
+        &lt;span itemprop="addressRegion"&gt;Tyrol&lt;/span&gt;,
+        &lt;span itemprop="addressCountry"&gt;Austria&lt;/span&gt;
+    &lt;/div&gt;
+    Phone: &lt;span itemprop="telephone"&gt;+43 512 8000-0&lt;/span&gt;
+    &lt;img itemprop="photo" src="../media/hotel_front.png" alt="Front view of the hotel" /&gt;
+    Star rating: &lt;span itemprop="starRating" itemscope itemtype="https://schema.org/Rating"&gt;
+        &lt;meta itemprop="ratingValue" content="4"&gt;****&lt;/span&gt;
+    Room rates: &lt;span itemprop="priceRange"&gt;$100 - $240&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+{% endblock %}

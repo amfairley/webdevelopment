@@ -1,0 +1,32 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}analytics-seo-microdata{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Microdata{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Alternatively you can assign microdata within your HTML files. Wrap your content with a div with itemscope and 
+        itemtype. Then define an itemprop for each element inside to give more details. The values that the itemprop can
+        take depend on the itemtype. For example you can find the hotel ones 
+        <a 
+            class="text-link"
+            href="https://schema.org/Hotel"
+            title="Go the Schema Hotel page"
+            aria-label="Go the Schema Hotel page"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            here.
+        </a>
+    </p>
+    <p>
+        Example from the schema website:
+    </p>
+    {% include 'analytics/seo/includes/code_snippets/micro_example.html' %}
+
+{% endblock %}

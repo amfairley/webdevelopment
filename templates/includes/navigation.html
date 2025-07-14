@@ -203,6 +203,7 @@
                 </span>
                 <ul class="collapse list-unstyled ps-3 {% if '/Analytics' in request.path %}show{% endif %}" id="analytics-submenu">
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'analytics_home' %}active{% endif %}" href="{% url 'analytics_home' %}">Google Analytics</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'analytics_seo' %}active{% endif %}" href="{% url 'analytics_seo' %}">SEO</a></li>
                 </ul>
             </li>
             <!--Dropdown link example-->

@@ -1,0 +1,50 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-analytics-seo-example{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="html">&lt;script type="application/ld+json"&gt;
+    {
+        "@context": "https://schema.org",
+        "@type": "Hotel",
+        "name": "Hotel Name",
+        "image": "https://image_url.png",
+        "description": "Website Description.",
+        "url": "https://www.example_website.com/",
+        "telephone": "0123456789",
+        "email": "example_email@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Road name",
+            "addressLocality": "Area Name",
+            "addressCountry": "Country Code"
+        },
+        "amenityFeature": [
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "Feature",
+                "value": true
+            },
+        ],
+        "checkinTime": "14:00",
+        "checkoutTime": "12:00",
+        "starRating": {
+            "@type": "Rating",
+            "ratingValue": "4",
+            "bestRating": "5"
+        },
+        "priceRange": "$$",
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 1,
+            "longitude":1
+        }
+    }
+&lt;/script&gt;
+</code></pre>
+{% endblock %}
