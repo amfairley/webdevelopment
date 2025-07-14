@@ -1,0 +1,49 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}backend-designing-a-database-erds{% endblock %}
+
+<!--Section title-->
+{% block text_title %}ERDs{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        ERDs are used to visualise your data, they show entities (boxes), their attributes (fields inside boxes) and 
+        their relationships (lines connecting the boxes). The 3 stages to create your ERDs are:
+    </p>
+    <ol>
+        <li>
+            Conceptual Model
+            <ul>
+                <li>Focus: What data do we need?</li>
+                <li>Map out all entities, attributes, and relationships, without worrying about how or where it will be stored.</li>
+                <li>This is a high-level, abstract representation.</li>
+            </ul>
+        </li>
+        <li>
+            Logical Model
+            <ul>
+                <li>Focus: How will we structure this data in a relational database?</li>
+                <li>Choose which entities and relationships will actually become tables.</li>
+                <li>Define attributes as columns.</li>
+                <li>Set primary keys (PKs) and foreign keys (FKs) to manage relationships.</li>
+            </ul>
+        </li>
+        <li>
+            Physical Model
+            <ul>
+                <li>Focus: How will the data be stored in the actual system?</li>
+                <li>Decide which Database Management System (DBMS) (e.g., PostgreSQL, MySQL, MongoDB) you'll use.</li>
+                <li>Consider indexes, storage engines, and performance tuning for your chosen system.</li>
+            </ul>
+        </li>
+    </ol>
+    <p>
+        As you design your logical model, one of the most important techniques is normalisation. The goal of 
+        normalisation is to avoid data duplication and ensure data consistency which can be done through relationships 
+        and the use of Foreign Keys.
+    </p>
+
+{% endblock %}

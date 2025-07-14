@@ -1,0 +1,39 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}backend-designing-a-database-data-models{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Data Models{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        When creating any software application, one of the most important foundational steps is designing the database. 
+        A well-designed database ensures your app will be scalable, efficient, and easy to maintain. Poorly structured 
+        data, on the other hand, can lead to bugs, performance issues, and a lot of unnecessary headaches down the road. 
+        Before writing a single line of SQL or creating tables in your database, it's crucial to create a data model. 
+        This process culminates in an 
+        <dfn title="Entity-Relationship Diagram">ERD</dfn>
+        that visualises your application's data entities, their attributes, and how they relate to each other.
+    </p>
+    <p>
+        The benefits of using a data model include:
+    </p>
+    <ul>
+        <li>A clear blueprint for your application's structure.</li>
+        <li>Reduced errors when building or querying the database.</li>
+        <li>Easier collaboration between developers, designers, and stakeholders.</li>
+        <li>A smoother transition from planning to implementation.</li>
+    </ul>
+    <p>
+        Although it can be tempting to build your database "on the fly," especially during rapid development, this can 
+        lead to major complications such as:
+    </p>
+    <ul>
+        <li>Changing the schema later is difficult, especially when your application is already using live data.</li>
+        <li>Refactoring table structures often involves downtime, data migration, or even data loss.</li>
+        <li>Bugs and performance issues multiply when your structure isn't carefully planned.</li>
+    </ul>
+{% endblock %}

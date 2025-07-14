@@ -71,6 +71,24 @@ body.night-mode .site-button {
     color: #1E1E1E;
 }
 
+/* Images */
+.site-image-container {
+    margin: 0 auto;
+    margin-top: 1rem;
+    width: 95%;
+}
+
+.site-image {
+    width: 100%;
+    border: 1px solid #001F5C;
+    border-radius: 1rem;
+}
+
+body.night-mode .site-image {
+    border: 1px solid #FFD700;
+    filter: brightness(70%);
+}
+
 /* In page single line terminal code */
 .bash-container code{
     padding: 0 !important;

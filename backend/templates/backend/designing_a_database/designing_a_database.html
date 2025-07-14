@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Back-end - Designing a Database{% endblock %}
+
+{% block extra_css %}
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Designing a Database</h2>
+
+    {% include 'backend/designing_a_database/includes/contents.html' %}
+    {% include 'backend/designing_a_database/includes/data_models.html' %}
+    {% include 'backend/designing_a_database/includes/erds.html' %}
+    {% include 'backend/designing_a_database/includes/examples.html' %}
+
+{% endblock %}
