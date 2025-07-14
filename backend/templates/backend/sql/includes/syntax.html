@@ -1,0 +1,81 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}backend-sql-syntax{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Syntax{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        In SQL, the semicolon (;) marks the end of a query. This allows you to write multiple queries on different 
+        lines, all to be run in sequence once a semicolon is hit. For example:
+    </p>
+    {% include 'backend/sql/includes/code_snippets/semicolon.html' %}
+    <p>
+        Here's a quick overview of commonly used SQL commands and patterns:
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Task
+                </th>
+                <th>
+                    Syntax
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Query(single table)
+                </td>
+                <td>
+                    <code class="written-code">SELECT x FROM y;</code><br>
+                    <code class="written-code">SELECT x FROM y ORDER BY z;</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Query(multiple tables)
+                </td>
+                <td>
+                    <code class="written-code">SELECT x FROM y INNER JOIN z ON q;</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Alias
+                </td>
+                <td>
+                    <code class="written-code">SELECT x AS q FROM y;</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Grouping
+                </td>
+                <td>
+                    <code class="written-code">SELECT x FROM y GROUP BY z;</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Aggregates
+                </td>
+                <td>
+                    <code class="written-code">SELECT COUNT(x) FROM y;</code><br>
+                    <code class="written-code">MIN(), MAX(), SUM(), AVG(),</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        Filtering:
+    </p>
+    {% include 'backend/sql/includes/code_snippets/filtering.html' %}
+
+{% endblock %}

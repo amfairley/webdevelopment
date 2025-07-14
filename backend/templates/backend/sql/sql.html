@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Back-end - SQL{% endblock %}
+
+{% block extra_css %}
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>SQL</h2>
+
+    {% include 'backend/sql/includes/contents.html' %}
+    {% include 'backend/sql/includes/what_is_sql.html' %}
+    {% include 'backend/sql/includes/syntax.html' %}
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}backend-sql-what-is-sql{% endblock %}
+
+<!--Section title-->
+{% block text_title %}What is SQL?{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        <dfn title="Structured Query Language">SQL</dfn>
+        is a domain-specific language that is designed to work in a specific domain, database management, unlike 
+        general-purpose languages like Python or JavaScript. It's like how HTML is used only for web structure, or 
+        CSS for styling. SQL lets you create, read, update, and delete (often referred to as CRUD) data from a 
+        relational database.
+    </p>
+    <p>
+        SQL is globally standardized, but in practice, its syntax and features can vary between different DBMS like 
+        MySQL, PostgreSQL, SQLite, or Microsoft SQL Server. The core structure remains the same, but each system may 
+        add its own twists and extensions.
+    </p>
+{% endblock %}

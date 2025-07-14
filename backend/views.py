@@ -33,3 +33,14 @@ def backend_designing_a_database(request):
         'backend/designing_a_database/designing_a_database.html',
         context
     )
+
+
+def backend_sql(request):
+    '''Return the SQL page'''
+    context = {
+    }
+    return render(
+        request,
+        'backend/sql/sql.html',
+        context
+    )

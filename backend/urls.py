@@ -10,4 +10,9 @@ urlpatterns = [
         views.backend_designing_a_database,
         name="backend_designing_a_database"
     ),
+    path(
+        'sql/',
+        views.backend_sql,
+        name="backend_sql"
+    ),
 ]

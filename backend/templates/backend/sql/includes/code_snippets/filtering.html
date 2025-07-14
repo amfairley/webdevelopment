@@ -1,0 +1,19 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-backend-sql-filtering{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="sql">SELECT x FROM y WHERE z = "foobar";
+WHERE z = "foo" AND q != "bar";
+OR
+SELECT x FROM y WHERE z LIKE "_oobar";
+WHERE z BETWEEN 1 AND 100;
+IS NOT NULL;
+SELECT x FROM y WHERE z IN ("foo","bar","foobar");
+</code></pre>
+{% endblock %}
