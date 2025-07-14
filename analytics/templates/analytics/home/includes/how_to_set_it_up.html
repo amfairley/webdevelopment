@@ -1,0 +1,54 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}analytics-home-how-to-set-it-up{% endblock %}
+
+<!--Section title-->
+{% block text_title %}How to set it up{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <ul>
+        <li>
+            Go 
+            <a 
+                class="text-link"
+                href="https://analytics.google.com/analytics/web/"
+                title="Go to the Google developer analytics page"
+                aria-label="Go to the Google developer analytics page"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                here
+            </a>
+            to open the developer dashboard for analytics.
+        </li>
+        <li>If you have multiple analytics set up, you can switch between them from the name towards the top left.</li>
+        <li>To add a new website, you will need to create a new property.</li>
+        <li>
+            Click of the 
+            <code class="written-code">settings/admin</code>
+            button on the bottom left.
+        </li>
+        <li>
+            Click the blue
+            <code class="written-code">+ Create</code>
+            button and select a new property.
+        </li>
+        <li>Fill in a name for your property.</li>
+        <li>Select the industry and number of employees.</li>
+        <li>Select some of your objectives from the list.</li>
+        <li>Then select whether your project is a website or an app.</li>
+        <li>Then enter your base website URL to focus on the whole site. In some niche cases you may want to enter a longer URL to focus on, for example, just an information page on your website.</li>
+        <li>Enter a Stream Name, this is just a label for the data stream to help identify it.</li>
+        <li>Click Create and Continue</li>
+        <li>Then copy the Google tag and place it at the bottom of your head element</li>
+        <li>To make any changes, go to settings/admin -> property settings -> data collection and modification -> data streams. Here you can e.g. update the URL.</li>
+    </ul>
+    <p>
+        Example google tag:
+    </p>
+    {% include 'analytics/home/includes/code_snippets/example.html' %}
+
+{% endblock %}

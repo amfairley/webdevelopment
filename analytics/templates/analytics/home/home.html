@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Analytics - Google{% endblock %}
+
+{% block extra_css %}
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Google Analytics</h2>
+
+    {% include 'analytics/home/includes/contents.html' %}
+    {% include 'analytics/home/includes/what_is_it.html' %}
+    {% include 'analytics/home/includes/how_to_set_it_up.html' %}
+
+{% endblock %}

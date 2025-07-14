@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'python_app',
     'backend',
     'flask_app',
+    'analytics',
 ]
 
 MIDDLEWARE = [

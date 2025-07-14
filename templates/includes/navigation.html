@@ -194,6 +194,17 @@
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'flask_delete' %}active{% endif %}" href="{% url 'flask_delete' %}">Delete Records</a></li>
                 </ul>
             </li>
+            <!--Analytics-->
+            <li class="nav-item">
+                <span class="d-flex align-items-center">
+                    <a class="nav-link" href="{% url 'analytics_home' %}">Analytics</a>
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#analytics-submenu" aria-expanded="false" aria-controls="analytics-submenu" aria-label="Open the analytics dropdown section">
+                    </button>
+                </span>
+                <ul class="collapse list-unstyled ps-3 {% if '/Analytics' in request.path %}show{% endif %}" id="analytics-submenu">
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'analytics_home' %}active{% endif %}" href="{% url 'analytics_home' %}">Google Analytics</a></li>
+                </ul>
+            </li>
             <!--Dropdown link example-->
             <li class="nav-item">
                 <span class="d-flex align-items-center">
