@@ -173,6 +173,7 @@
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'backend_sql' %}active{% endif %}" href="{% url 'backend_sql' %}">SQL</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'backend_postgresql' %}active{% endif %}" href="{% url 'backend_postgresql' %}">PostgreSQL</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'backend_orms' %}active{% endif %}" href="{% url 'backend_orms' %}">ORMs</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'backend_sqlalchemy' %}active{% endif %}" href="{% url 'backend_sqlalchemy' %}">SQLAlchemy</a></li>
                 </ul>
             </li>
             <!--Flask-->

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Back-end - SQLAlchemy{% endblock %}
+
+{% block extra_css %}
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>SQLAlchemy</h2>
+
+    {% include 'backend/sqlalchemy/includes/contents.html' %}
+    {% include 'backend/sqlalchemy/includes/expression_language.html' %}
+    {% include 'backend/sqlalchemy/includes/class_based_models.html' %}
+
+{% endblock %}

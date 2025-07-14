@@ -1,0 +1,23 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-backend-sqlalchemy-connect{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">with db.connect() as connection:
+    select_query = artist_table.select() OR
+    select_query = 	artist_table.select().with_only_columns([artist_table.c.Name])
+    .c makes it look for column title OR
+    select_query = artist_table.select().where(artist_table.c.Name == "Queen") OR
+    select_query = artist_table.select().where(artist_table.c.ArtistId == 51) OR
+    select_query = album_table.select().where(album_table.c.ArtistId == 51) OR
+    select_query = track_table.select().where(track_table.c.Composer == "Queen")
+    results = connection.execute(select_query)
+    for result in results:
+        print(result)
+</code></pre>
+{% endblock %}

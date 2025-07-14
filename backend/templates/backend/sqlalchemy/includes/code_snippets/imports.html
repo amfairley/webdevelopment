@@ -1,0 +1,16 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-backend-sqlalchemy-imports{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">from sqlalchemy import (
+    create_engine, Table, Column, Float,     
+    Foreignkey, Integer, String, Metadata
+)
+</code></pre>
+{% endblock %}

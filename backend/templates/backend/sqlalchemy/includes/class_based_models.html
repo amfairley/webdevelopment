@@ -1,0 +1,32 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}backend-sqlalchemy-class-based-models{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Class Based Models{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Class based models is using SQLAlchemy at the highest level of abstraction. Each Class has a collection of 
+        methods that serve a common purpose and each method has its own purpose. If your methods try to do too much, 
+        split it into multiple methods. 
+    </p>
+    <p>
+        Here, each table in your database is represented by a Python class, and each row is an instance (object) of 
+        that class. These models let you query and manipulate data using familiar object-oriented programming 
+        techniques, making the code, more modular, easier to read and maintain, and safer and less error-prone than 
+        writing raw SQL queries.
+    </p>
+    <p>
+        A declarative base is the "parent" class that your models will inherit from. It contains metadata used to 
+        generate and reflect tables.
+    </p>
+    <p>
+        Setting Up SQLAlchemy ORM files:
+    </p>
+    {% include 'backend/sqlalchemy/includes/code_snippets/file.html' %}
+
+{% endblock %}

@@ -25,4 +25,9 @@ urlpatterns = [
         views.backend_orms,
         name="backend_orms"
     ),
+    path(
+        'sqlalchemy/',
+        views.backend_sqlalchemy,
+        name="backend_sqlalchemy"
+    ),
 ]

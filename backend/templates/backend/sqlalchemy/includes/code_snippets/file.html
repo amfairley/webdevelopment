@@ -1,0 +1,42 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-backend-sqlalchemy-file{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python"># Imports
+from sqlalchemy import create_engine, Column, Float, ForeignKey, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
+
+# Create a Declarative base
+Base = declarative_base()
+# Define tables as classes
+class Artist(Base):
+    __tablename__ = "Artist"
+    ArtistId = Column(Integer, primary_key=True)
+    Name = Column(String)
+
+class Album(Base):
+    __tablename__ = "Album"
+    AlbumId = Column(Integer, primary_key=True)
+    Title = Column(String)
+    ArtistId = Column(Integer, ForeignKey("Artist.ArtistId"))
+
+class Track(Base):
+    __tablename__ = "Track"
+    TrackId = Column(Integer, primary_key=True)
+    Name = Column(String)
+    AlbumId = Column(Integer)
+    MediaTypeId = Column(Integer)
+    GenreId = Column(Integer)
+    Composer = Column(String)
+    Milliseconds = Column(Integer)
+    Bytes = Column(Integer)
+    UnitPrice = Column(Float)
+</code></pre>
+{% endblock %}

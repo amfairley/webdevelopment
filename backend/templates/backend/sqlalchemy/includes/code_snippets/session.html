@@ -1,0 +1,46 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}code-snippet-backend-sqlalchemy-session{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python"># Create the engine:
+engine = create_engine("sqlite:///music.db")  # Or use PostgreSQL, MySQL, etc.
+
+# Set up a session:
+Session = sessionmaker(bind=engine)
+session = Session()
+
+# Create tables in the database:
+Base.metadata.create_all(engine)
+
+# With your models and session ready, you can now perform queries using clean, Pythonic syntax:
+# Query all artists
+artists = session.query(Artist)
+for artist in artists:
+    print(artist.ArtistId, artist.Name, sep=" | ")
+
+# Query only names
+for artist in session.query(Artist):
+    print(artist.Name)
+# Filters
+artist = session.query(Artist).filter_by(Name="Queen").first()
+print(artist.ArtistId, artist.Name, sep=" | ")
+artist = session.query(Artist).filter_by(ArtistId=51).first()
+print(artist.ArtistId, artist.Name, sep=" | ")
+albums = session.query(Album).filter_by(ArtistId=51)
+for album in albums:
+    print(album.AlbumId, album.Title, album.ArtistId, sep=" | ")
+tracks = session.query(Track).filter_by(Composer="Queen")
+for track in tracks:
+    print(
+        track.TrackId, track.Name, track.AlbumId, track.MediaTypeId,
+        track.GenreId, track.Composer, track.Milliseconds,
+        track.Bytes, track.UnitPrice, sep=" | "
+    )
+</code></pre>
+{% endblock %}

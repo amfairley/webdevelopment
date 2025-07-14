@@ -66,3 +66,14 @@ def backend_orms(request):
         'backend/orms/orms.html',
         context
     )
+
+
+def backend_sqlalchemy(request):
+    '''Return the SQLAlchemy page'''
+    context = {
+    }
+    return render(
+        request,
+        'backend/sqlalchemy/sqlalchemy.html',
+        context
+    )

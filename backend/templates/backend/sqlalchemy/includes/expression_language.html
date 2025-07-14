@@ -1,0 +1,46 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}backend-sqlalchemy-expression-language{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Expression Language{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Expression Language is the lowest form of abstraction in SQLAlchemy and is less concerned with punctuation than 
+        other ORMs, for example you can use double or single quotations in it.
+    </p>
+    <p>
+        Create a new file from the terminal with <code class="written-code">touch sql-expression.py</code> and add the
+        imports to the top.
+    </p>
+    {% include 'backend/sqlalchemy/includes/code_snippets/imports.html' %}
+    <p>
+        Connect to your database and assign it to a variable db.
+    </p>
+    {% include 'backend/sqlalchemy/includes/code_snippets/db.html' %}
+    <p>
+        You need to use the metadata class to make a new instance. This will contain a collection of table objects, 
+        data about those tables, and data about data in those tables.
+    </p>
+    {% include 'backend/sqlalchemy/includes/code_snippets/meta.html' %}
+    <p>
+        To run some queries, first set up your tables first e.g. for an artist. If a column is an integer and not the 
+        primary key, it needs 
+        <code class="written-code">primary_key = False</code>
+        to be set.
+    </p>
+    {% include 'backend/sqlalchemy/includes/code_snippets/table.html' %}
+    <p>
+        Connect it to the database and write queries.
+    </p>
+    {% include 'backend/sqlalchemy/includes/code_snippets/connect.html' %}
+    <p>
+        Instead of connecting directly to the database each time, you'll use a session to manage transactions.
+    </p>
+    {% include 'backend/sqlalchemy/includes/code_snippets/session.html' %}
+
+{% endblock %}
