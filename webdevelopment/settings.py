@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'backend',
     'flask_app',
     'analytics',
+    'search',
 ]
 
 MIDDLEWARE = [
@@ -166,3 +167,8 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Algolia Search
+ALGOLIA_APP_ID = os.getenv('ALGOLIA_APP_ID')
+ALGOLIA_SEARCH_KEY = os.getenv('ALGOLIA_SEARCH_KEY')
+ALGOLIA_WRITE_KEY = os.getenv('ALGOLIA_WRITE_KEY')

@@ -3,14 +3,14 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.HTML_home, name="HTML_home"),
+    path('home', views.HTML_home, name="HTML_home"),
     path(
-        'introducing_elements/',
+        'introducing-elements/',
         views.HTML_introducing_elements,
         name="HTML_introducing_elements"
     ),
     path(
-        'common_elements/',
+        'common-elements/',
         views.HTML_common_elements,
         name="HTML_common_elements"
     ),
@@ -45,7 +45,7 @@ urlpatterns = [
         name="HTML_buttons"
     ),
     path(
-        'semantic_HTML/',
+        'semantic/',
         views.HTML_semantic,
         name="HTML_semantic"
     ),

@@ -1,0 +1,18 @@
+<h1>Search results for "{{ query }}"</h1>
+
+{% if results %}
+    <ul>
+    {% for hit in results %}
+        <li>
+            <strong>{{ hit.title }}</strong><br>
+            <small>File: {{ hit.file }}</small>
+            <p>{{ hit.content|truncatewords:30 }}</p>
+            <p> {{hit.url }} </p>
+            <a href="{{ hit.url }}">Link</a>
+            <p> Section type: {{ hit.sectionType }}</p>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No results found.</p>
+{% endif %}
