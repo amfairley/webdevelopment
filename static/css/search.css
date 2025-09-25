@@ -1,0 +1,64 @@
+/* Master Block */
+.search-result-block {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Each result */
+.result-container {
+    border: 1px solid #001F5C;
+    background-color: #f5f5f5;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+
+body.night-mode .result-container {
+    border-color: #FFD700;
+    background-color: #1E1E1E;
+}
+
+.result-title {
+    font-family: "Poppins", "Arial", "Helvetica", sans-serif;
+    color: #001F5C;
+}
+
+body.night-mode .result-title {
+    color: #FFD700;
+}
+
+.result-type,
+.result-content {
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+    color: #333A3F;
+}
+
+body.night-mode .result-type,
+body.night-mode .result-content {
+    color: #F5F5F5;
+}
+
+.result-link {
+    width: 100%;
+    height: 100%;
+}
+
+/* Hover effects */
+.result-link:hover .result-title {
+  font-weight: bold;
+}
+
+.result-link:hover .result-container {
+  border-width: 3px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+body.night-mode .result-link:hover .result-container {
+  border-width: 3px;
+  box-shadow: 3px 3px 8px rgba(255, 215, 0, 0.3);
+}
+
+
+
+

@@ -1,18 +1,30 @@
-<h1>Search results for "{{ query }}"</h1>
+{% extends 'base.html' %}
+{% load static %}
 
-{% if results %}
-    <ul>
-    {% for hit in results %}
-        <li>
-            <strong>{{ hit.title }}</strong><br>
-            <small>File: {{ hit.file }}</small>
-            <p>{{ hit.content|truncatewords:30 }}</p>
-            <p> {{hit.url }} </p>
-            <a href="{{ hit.url }}">Link</a>
-            <p> Section type: {{ hit.sectionType }}</p>
-        </li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No results found.</p>
-{% endif %}
+{% block extra_title %}: Search results for "{{ query }}"{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/search.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Search results for "{{ query }}"</h2>
+    <section class="search-result-block">
+    {% if results %}
+        {% for hit in results %}
+            <a class="result-link" href="{{ hit.url }}">
+                <div class="result-container">
+                    <h3 class="result-title">{{ hit.prettyTitle }}</h3>
+                    <p class="result-type"> Section type: {{ hit.sectionType }}</p>
+                    {% if hit.content %}
+                        <p class="result-content">Content: {{ hit.content|truncatewords:30 }}</p>
+                    {% endif %}
+                </div>
+            </a>
+        {% endfor %}
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+    </section>
+{% endblock %}

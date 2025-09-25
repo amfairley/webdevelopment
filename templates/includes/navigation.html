@@ -236,6 +236,9 @@
 
 <!-- Offcanvas (burger menu) for small screens -->
 <nav class="offcanvas offcanvas-start offcanvas-navmenu" tabindex="-1" id="mobileSidebar">
+    <div class="nav-search-bar">
+        {% include 'search/search_form_small.html' %}
+    </div>
     <div class="offcanvas-header">
         <h5 class="offcanvas-title">Navigation</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close the Mobile Navigation Bar"></button>

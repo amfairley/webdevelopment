@@ -71,6 +71,24 @@ body.night-mode .site-button {
     color: #1E1E1E;
 }
 
+/* Images */
+.site-image-container {
+    margin: 0 auto;
+    margin-top: 1rem;
+    width: 95%;
+}
+
+.site-image {
+    width: 100%;
+    border: 1px solid #001F5C;
+    border-radius: 1rem;
+}
+
+body.night-mode .site-image {
+    border: 1px solid #FFD700;
+    filter: brightness(70%);
+}
+
 /* In page single line terminal code */
 .bash-container code{
     padding: 0 !important;
@@ -112,6 +130,42 @@ body.night-mode .nav-wrapper {
 body.night-mode .site-logo-title {
     color:#FFD700;
 }
+
+/* ----------- Search Bar ----------- */
+.top-search-bar {
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    right: 99px;
+}
+
+.top-search-bar {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    max-width: 100%;
+}
+
+.top-search-bar .site-search-form {
+    margin: 0 auto;
+}
+
+.top-search-bar .site-search-form-input {
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+}
+
+.top-search-bar .site-seach-form-button {
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+    border-radius: 0.5rem;
+    background-color: #001F5C;
+    color: #f5f5f5;
+}
+
+body.night-mode .top-search-bar .site-seach-form-button {
+    border-radius: 0.5rem;
+    background-color: #FFD700;
+    color: #1E1E1E;
+}
+
 
 /* ----------- Day/Night ----------- */
 /* Dropdown button */
@@ -240,7 +294,19 @@ body.night-mode #github-link {
     #day-night-toggle {
         top: 7rem;
     }
+    /* Recentre search bar */
+    .top-search-bar {
+        right: 0;
+    }
 }
+
+@media (max-width: 900px) {
+    /* Remove search bar from top */
+    .top-search-bar {
+        display: none;
+    }
+}
+
 
 @media (max-width: 400px) {
     /* Reduce site title size */

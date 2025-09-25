@@ -93,15 +93,71 @@ body.night-mode .nav-menu-button:hover {
     border-right: 0.3rem solid #001F5C;    
 }
 
+.offcanvas-header {
+    padding-bottom: 0;
+}
+
+.offcanvas-header h5{
+    width: 100%;
+    text-align: center;
+}
+
 body.night-mode .offcanvas-navmenu {
     color: #FFD700;
     background-color: #1E1E1E;
     border-right: 0.3rem solid #FFD700;
 }
 
+/* Search bar */
+.nav-search-bar {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    max-width: 100%;
+}
+
+.nav-search-bar .site-search-form {
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+.nav-search-bar .site-search-form-input {
+    max-width: 78%;
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+}
+
+.nav-search-bar .site-seach-form-button {
+    border-radius: 0.5rem;
+    background-color: #001F5C;
+    color: #f5f5f5;
+}
+
+body.night-mode .nav-search-bar .site-seach-form-button {
+    border-radius: 0.5rem;
+    background-color: #FFD700;
+    color: #1E1E1E;
+}
+
 /* ---------- Media Queries ---------- */
 @media (min-width: 992px) {
     main {
         padding-left: clamp(167px, 17%, 200px);
+    }
+}
+
+@media (min-width: 901px) {
+    /* Remove search bar from nav menu*/
+    .nav-search-bar {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    /* Style nav menu when the search basr is there*/
+    .offcanvas-header {
+        border-top: 1px solid #001F5C;
+    }
+
+    body.night-mode .offcanvas-header {
+        border-top: 1px solid #FFD700;
     }
 }

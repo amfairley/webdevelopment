@@ -48,7 +48,7 @@ async def run():
 
     # 3. List all template folders
     templates_dirs = [
-        Path(settings.BASE_DIR) / 'templates',             # main templates folder
+        # Path(settings.BASE_DIR) / 'templates',             # main templates folder
         Path(settings.BASE_DIR) / 'HTML' / 'templates',    # app1 templates
         Path(settings.BASE_DIR) / 'intro_to_full_stack' / 'templates',    # app2 templates
 
@@ -156,6 +156,16 @@ async def run():
             if pretty_title == "Home":
                 pretty_title = f"{section} Home"
 
+            # Update Html, Css, Js to HTML CSS JS
+            pretty_title = pretty_title.replace("Html", "HTML")
+            pretty_title = pretty_title.replace("Css", "CSS")
+            pretty_title = pretty_title.replace("Js", "JS")
+
+            # Add in extra keywords so that HTML returns HTML home
+            extra_keywords = []
+            if pretty_title.endswith("Home"):
+                extra_keywords.append(section) 
+
             # Skip if the title is contents and append if it is not
             if title.lower() != "contents":
                 records.append({
@@ -169,6 +179,7 @@ async def run():
                     "content": paragraphs,
                     "url": url,
                     "rankPriority": rank_priority,
+                    "keywords": extra_keywords,
                 })
                 print(f"Prepared record {object_id}: {title} ({file_path})")
                 object_id += 1
