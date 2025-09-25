@@ -101,7 +101,9 @@ async def run():
                 element_id = f"{dir_slug}-{slugify(title)}"
 
                 # Update with website name 
-                url = f"http://127.0.0.1:8000/{relative_url}#{element_id}"
+                url_local = f"http://127.0.0.1:8000/{relative_url}#{element_id}"
+                url_heroku = f"https://webdevgrad-3277133ed051.herokuapp.com/{relative_url}#{element_id}"
+
             elif relative_dir.name == "includes":
                 relative_dir = relative_dir.parent
                 relative_url = relative_dir.as_posix().replace("_", "-")
@@ -116,7 +118,9 @@ async def run():
                 element_id = f"{dir_slug}-{slugify(title)}"
 
                 # Update with website name 
-                url = f"http://127.0.0.1:8000/{relative_url}#{element_id}"
+                url_local = f"http://127.0.0.1:8000/{relative_url}#{element_id}"
+                url_heroku = f"https://webdevgrad-3277133ed051.herokuapp.com/{relative_url}#{element_id}"
+
             else:
                 relative_url = relative_dir.as_posix().replace("_", "-")
 
@@ -127,7 +131,9 @@ async def run():
                 dir_slug = relative_dir.as_posix().replace("/", "-").replace("_", "-")
                 section_type = "Topic Page"
                 element_id = "N/A"
-                url = f"http://127.0.0.1:8000/{relative_url}"
+
+                url_local = f"http://127.0.0.1:8000/{relative_url}"
+                url_heroku = f"https://webdevgrad-3277133ed051.herokuapp.com/{relative_url}"
 
             section = "Other"  # default
             for templates_path in templates_dirs:
@@ -177,7 +183,8 @@ async def run():
                     "sectionType": section_type,
                     "section": section,
                     "content": paragraphs,
-                    "url": url,
+                    "urlLocal": url_local,
+                    "urlHeroku": url_heroku,
                     "rankPriority": rank_priority,
                     "keywords": extra_keywords,
                 })
