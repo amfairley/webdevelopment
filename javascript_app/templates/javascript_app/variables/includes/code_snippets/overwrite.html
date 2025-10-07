@@ -1,0 +1,16 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}JavaScript-variables-code-snippets-overwrite{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">let ageVariable = 5;
+console.log(ageVariable); // Prints "5" to the console
+ageVariable = 6;
+console.log(ageVariable); // Prints "6" to the console
+</code></pre>
+{% endblock %}

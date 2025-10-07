@@ -1,3 +1,10 @@
+<img
+    class="algolia-logo-mobile"
+    src="https://i.imgur.com/V1bTky5.png"
+    alt="Algolia search"
+    title="Site search powered by Algolia"
+    loading="lazy"
+>
 <form class="site-search-form" action="{% url 'search' %}" method="get">
     <input class="site-search-form-input" type="text" name="q" placeholder="Search site content" value="{{ query|default:'' }}">
     <button class="site-seach-form-button" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>

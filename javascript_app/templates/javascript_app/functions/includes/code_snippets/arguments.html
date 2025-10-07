@@ -1,0 +1,17 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}JavaScript-functions-code-snippets-arguments{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">function sum(a, b) {
+    console.log(a + b);
+}
+
+sum(2, 3); // Arguments: 2, 3; Parameters: a, b
+</code></pre>
+{% endblock %}

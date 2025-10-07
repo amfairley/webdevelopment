@@ -1,0 +1,19 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}JavaScript-arrays-code-snippets-destructuring-assignment-rest{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">let [var1, var2, ...var3] = arr;
+// Assigns the first two values to var1 and var2, and the rest to var3.
+let fruits = ['apple', 'banana', 'cherry', 'date'];
+let [first, second, ...others] = fruits;
+console.log(first);  // 'apple'
+console.log(second); // 'banana'
+console.log(others); // ['cherry', 'date']
+</code></pre>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}JavaScript-debugging-code-snippets-JavaScript-debugging{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">function calculateTotal(a, b) {
+  let total = a + b;
+  debugger; // Execution pauses here
+  return total;
+}
+</code></pre>
+{% endblock %}

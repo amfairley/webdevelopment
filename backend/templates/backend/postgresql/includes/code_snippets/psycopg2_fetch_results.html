@@ -1,0 +1,21 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}backend-postgresql-code-snippets-psycopg2-fetch-results{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python"># Fetch All Results
+results = cursor.fetchall()
+
+# Fetch One Result
+result = cursor.fetchone()
+
+# Looping Through Results
+for row in results:
+    print(row)
+</code></pre>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Python-classes-code-snippets-inheritance-composition{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">class Tail:
+    def __init__(self, length):
+        self.length = length
+
+class Bird:
+    def __init__(self, name):
+        self.name = name
+        self.tail = Tail(15)
+</code></pre>
+{% endblock %}

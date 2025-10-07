@@ -2,7 +2,7 @@
 {% load static %}
 
 <!--Section ID to link in contents-->
-{% block text_section_id %}javascript-conditional-statements-what-are-conditional-statements{% endblock %}
+{% block text_section_id %}JavaScript-conditional-statements-what-are-conditional-statements{% endblock %}
 
 <!--Section title-->
 {% block text_title %}What are Conditional Statements?{% endblock %}
@@ -17,7 +17,7 @@
         and 
         <code class="written-code">else</code>. 
     </p>
-    {% include 'javascript_app/conditional_statements/includes/code_snippets/what_1.html' %}
+    {% include 'javascript_app/conditional_statements/includes/code_snippets/conditional_statements.html' %}
     <p>
         You can chain multiple else if blocks, but only the first true block will run.
     </p>
@@ -25,6 +25,6 @@
         There is a shorthand for checking for truthiness (Values like 0, "", null, undefined, and NaN are all falsy. 
         Everything else is truthy).
     </p>
-    {% include 'javascript_app/conditional_statements/includes/code_snippets/what_2.html' %}
+    {% include 'javascript_app/conditional_statements/includes/code_snippets/conditional_statement_shorthand.html' %}
 
 {% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Python-functions-code-snippets-built-in-function-pprint{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">from pprint import pprint
+
+data = {'name': Adam', 'age': 34, 'hobbies': ['hiking', 'reading']}
+
+pprint(data)
+# This will output: {'age': 30, 'hobbies': ['hiking', 'reading'], 'name': 'Adam'}
+
+</code></pre>
+{% endblock %}

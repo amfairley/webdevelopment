@@ -2,7 +2,7 @@
 {% load static %}
 
 <!--Section ID to link in contents-->
-{% block text_section_id %}python-input-input{% endblock %}
+{% block text_section_id %}Python-input-input{% endblock %}
 
 <!--Section title-->
 {% block text_title %}Input{% endblock %}
@@ -28,13 +28,13 @@
         <code class="written-code">input()</code>
         function.
     </p>
-    {% include 'python_app/input/includes/code_snippets/input_1.html' %}
+    {% include 'python_app/input/includes/code_snippets/input_prompt.html' %}
     <p>
         Once you've captured the input, you'll often want to respond to what the user has given you. Traditionally, 
         you'd use if/elif/else statements to make decisions, but since Python 3.10, the match statement offers a 
         cleaner way to handle multiple conditions.
     </p>
-    {% include 'python_app/input/includes/code_snippets/input_2.html' %}
+    {% include 'python_app/input/includes/code_snippets/input_match.html' %}
     <ul>
         <li>input() collects the user's choice.</li>
         <li>.lower() ensures the input is lowercase for consistent matching.</li>

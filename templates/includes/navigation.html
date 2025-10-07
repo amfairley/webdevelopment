@@ -80,13 +80,13 @@
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_visibility_and_z_positioning' %}active{% endif %}" href="{% url 'CSS_visibility_and_z_positioning' %}">Visibility and Z-Positioning</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_cursor' %}active{% endif %}" href="{% url 'CSS_cursor' %}">Cursor</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_typography' %}active{% endif %}" href="{% url 'CSS_typography' %}">Typography</a></li>
-                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_typography' %}active{% endif %}" href="{% url 'CSS_links_and_buttons' %}">Links and Buttons</a></li>
-                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_typography' %}active{% endif %}" href="{% url 'CSS_lists' %}">Lists</a></li>
-                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_typography' %}active{% endif %}" href="{% url 'CSS_forms' %}">Forms</a></li>
-                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_typography' %}active{% endif %}" href="{% url 'CSS_transitions' %}">Transitions</a></li>
-                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_typography' %}active{% endif %}" href="{% url 'CSS_responsive_design' %}">Responsive Design</a></li>
-                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_typography' %}active{% endif %}" href="{% url 'CSS_bootstrap' %}">Bootstrap</a></li>
-                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_typography' %}active{% endif %}" href="{% url 'CSS_css_validation' %}">CSS Validation</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_links_and_buttons' %}active{% endif %}" href="{% url 'CSS_links_and_buttons' %}">Links and Buttons</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_lists' %}active{% endif %}" href="{% url 'CSS_lists' %}">Lists</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_forms' %}active{% endif %}" href="{% url 'CSS_forms' %}">Forms</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_transitions' %}active{% endif %}" href="{% url 'CSS_transitions' %}">Transitions</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_responsive_design' %}active{% endif %}" href="{% url 'CSS_responsive_design' %}">Responsive Design</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_bootstrap' %}active{% endif %}" href="{% url 'CSS_bootstrap' %}">Bootstrap</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_css_validation' %}active{% endif %}" href="{% url 'CSS_css_validation' %}">CSS Validation</a></li>
                 </ul>
             </li>
             <!--JavaScript-->
@@ -105,7 +105,7 @@
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'JavaScript_arrays' %}active{% endif %}" href="{% url 'JavaScript_arrays' %}">Arrays</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'JavaScript_sets' %}active{% endif %}" href="{% url 'JavaScript_sets' %}">Sets</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'JavaScript_objects' %}active{% endif %}" href="{% url 'JavaScript_objects' %}">Objects</a></li>
-                    <li><a class="nav-link {% if request.resolver_match.url_name == 'JavaScript_console' %}active{% endif %}" href="{% url 'JavaScript_console' %}">Console</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'JavaScript_console_commands' %}active{% endif %}" href="{% url 'JavaScript_console_commands' %}">Console</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'JavaScript_functions' %}active{% endif %}" href="{% url 'JavaScript_functions' %}">Functions</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'JavaScript_conditional_statements' %}active{% endif %}" href="{% url 'JavaScript_conditional_statements' %}">Conditional Statements</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'JavaScript_for_loops' %}active{% endif %}" href="{% url 'JavaScript_for_loops' %}">For Loops</a></li>
@@ -166,7 +166,7 @@
                     <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#backend-submenu" aria-expanded="false" aria-controls="backend-submenu" aria-label="Open the backend dropdown section">
                     </button>
                 </span>
-                <ul class="collapse list-unstyled ps-3 {% if '/Backend' in request.path %}show{% endif %}" id="backend-submenu">
+                <ul class="collapse list-unstyled ps-3 {% if '/backend' in request.path %}show{% endif %}" id="backend-submenu">
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'backend_home' %}active{% endif %}" href="{% url 'backend_home' %}">Back-end Home</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'backend_databases' %}active{% endif %}" href="{% url 'backend_databases' %}">Relational and Non-Relational Databases</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'backend_designing_a_database' %}active{% endif %}" href="{% url 'backend_designing_a_database' %}">Designing a Database</a></li>
@@ -201,7 +201,7 @@
                     <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#analytics-submenu" aria-expanded="false" aria-controls="analytics-submenu" aria-label="Open the analytics dropdown section">
                     </button>
                 </span>
-                <ul class="collapse list-unstyled ps-3 {% if '/Analytics' in request.path %}show{% endif %}" id="analytics-submenu">
+                <ul class="collapse list-unstyled ps-3 {% if '/analytics' in request.path %}show{% endif %}" id="analytics-submenu">
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'analytics_home' %}active{% endif %}" href="{% url 'analytics_home' %}">Google Analytics</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'analytics_seo' %}active{% endif %}" href="{% url 'analytics_seo' %}">SEO</a></li>
                 </ul>
@@ -257,14 +257,14 @@
             <li class="nav-item">
                 <span class="d-flex align-items-center">
                     <a class="nav-link" href="{% url 'full_stack_programming_and_the_web' %}">Web Development</a>
-                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#full-stack-submenu" aria-expanded="false" aria-controls="full-stack-submenu" aria-label="Open the full stack dropdown section">
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#full-stack-submenu-mobile" aria-expanded="false" aria-controls="full-stack-submenu-mobile" aria-label="Open the full stack dropdown section">
                     </button>
                 </span>
                 <!--
                     Checking the current page to keep dropdown open
                     percent if '/intro_to_full_stack' in request.path percent}show{percent endif percent}
                 -->
-                <ul class="collapse list-unstyled ps-3 {% if '/intro_to_full_stack' in request.path %}show{% endif %}" id="full-stack-submenu">
+                <ul class="collapse list-unstyled ps-3 {% if '/intro_to_full_stack' in request.path %}show{% endif %}" id="full-stack-submenu-mobile">
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'full_stack_programming_and_the_web' %}active{% endif %}" href="{% url 'full_stack_programming_and_the_web' %}">Programming and the Web</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'full_stack_github' %}active{% endif %}" href="{% url 'full_stack_github' %}">GitHub</a></li>
 
@@ -274,14 +274,14 @@
             <li class="nav-item">
                 <span class="d-flex align-items-center">
                     <a class="nav-link" href="{% url 'HTML_home' %}">HTML</a>
-                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#html-submenu" aria-expanded="false" aria-controls="html-submenu" aria-label="Open the HTML dropdown section">
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#html-submenu-mobile" aria-expanded="false" aria-controls="html-submenu-mobile" aria-label="Open the HTML dropdown section">
                     </button>
                 </span>
                 <!--
                     Checking the current page to keep dropdown open
                     percent if '/HTML' in request.path percent}show{percent endif percent}
                 -->
-                <ul class="collapse list-unstyled ps-3 {% if '/HTML' in request.path %}show{% endif %}" id="html-submenu">
+                <ul class="collapse list-unstyled ps-3 {% if '/HTML' in request.path %}show{% endif %}" id="html-submenu-mobile">
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'HTML_home' %}active{% endif %}" href="{% url 'HTML_home' %}">HTML Home</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'HTML_introducing_elements' %}active{% endif %}" href="{% url 'HTML_introducing_elements' %}">Introducing Elements</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'HTML_common_elements' %}active{% endif %}" href="{% url 'HTML_common_elements' %}">Common Elements</a></li>
@@ -300,10 +300,10 @@
             <li class="nav-item">
                 <span class="d-flex align-items-center">
                     <a class="nav-link" href="{% url 'CSS_home' %}">CSS</a>
-                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#css-submenu" aria-expanded="false" aria-controls="css-submenu" aria-label="Open the CSS dropdown section">
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#css-submenu-mobile" aria-expanded="false" aria-controls="css-submenu-mobile" aria-label="Open the CSS dropdown section">
                     </button>
                 </span>
-                <ul class="collapse list-unstyled ps-3 {% if '/CSS' in request.path %}show{% endif %}" id="css-submenu">
+                <ul class="collapse list-unstyled ps-3 {% if '/CSS' in request.path %}show{% endif %}" id="css-submenu-mobile">
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_home' %}active{% endif %}" href="{% url 'CSS_home' %}">CSS Home</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_selectors' %}active{% endif %}" href="{% url 'CSS_selectors' %}">Selectors</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_box_model' %}active{% endif %}" href="{% url 'CSS_box_model' %}">CSS Box Model</a></li>
@@ -314,23 +314,23 @@
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_visibility_and_z_positioning' %}active{% endif %}" href="{% url 'CSS_visibility_and_z_positioning' %}">Visibility and Z-Positioning</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_cursor' %}active{% endif %}" href="{% url 'CSS_cursor' %}">Cursor</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_typography' %}active{% endif %}" href="{% url 'CSS_typography' %}">Typography</a></li>
-                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_typography' %}active{% endif %}" href="{% url 'CSS_links_and_buttons' %}">Links and Buttons</a></li>
-                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_typography' %}active{% endif %}" href="{% url 'CSS_lists' %}">Lists</a></li>
-                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_typography' %}active{% endif %}" href="{% url 'CSS_forms' %}">Forms</a></li>
-                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_typography' %}active{% endif %}" href="{% url 'CSS_transitions' %}">Transitions</a></li>
-                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_typography' %}active{% endif %}" href="{% url 'CSS_responsive_design' %}">Responsive Design</a></li>
-                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_typography' %}active{% endif %}" href="{% url 'CSS_bootstrap' %}">Bootstrap</a></li>
-                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_typography' %}active{% endif %}" href="{% url 'CSS_css_validation' %}">CSS Validation</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_links_and_buttons' %}active{% endif %}" href="{% url 'CSS_links_and_buttons' %}">Links and Buttons</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_lists' %}active{% endif %}" href="{% url 'CSS_lists' %}">Lists</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_forms' %}active{% endif %}" href="{% url 'CSS_forms' %}">Forms</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_transitions' %}active{% endif %}" href="{% url 'CSS_transitions' %}">Transitions</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_responsive_design' %}active{% endif %}" href="{% url 'CSS_responsive_design' %}">Responsive Design</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_bootstrap' %}active{% endif %}" href="{% url 'CSS_bootstrap' %}">Bootstrap</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_css_validation' %}active{% endif %}" href="{% url 'CSS_css_validation' %}">CSS Validation</a></li>
                 </ul>
             </li>
             <!--JavaScript-->
             <li class="nav-item">
                 <span class="d-flex align-items-center">
                     <a class="nav-link" href="{% url 'JavaScript_home' %}">JavaScript</a>
-                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#javascript-submenu" aria-expanded="false" aria-controls="javascript-submenu" aria-label="Open the JavaScript dropdown section">
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#javascript-submenu-mobile" aria-expanded="false" aria-controls="javascript-submenu-mobile" aria-label="Open the JavaScript dropdown section">
                     </button>
                 </span>
-                <ul class="collapse list-unstyled ps-3 {% if '/JavaScript' in request.path %}show{% endif %}" id="javascript-submenu">
+                <ul class="collapse list-unstyled ps-3 {% if '/JavaScript' in request.path %}show{% endif %}" id="javascript-submenu-mobile">
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'JavaScript_home' %}active{% endif %}" href="{% url 'JavaScript_home' %}">JavaScript Home</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'JavaScript_variables' %}active{% endif %}" href="{% url 'JavaScript_variables' %}">Variables</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'JavaScript_scope' %}active{% endif %}" href="{% url 'JavaScript_scope' %}">Scope</a></li>
@@ -339,7 +339,7 @@
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'JavaScript_arrays' %}active{% endif %}" href="{% url 'JavaScript_arrays' %}">Arrays</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'JavaScript_sets' %}active{% endif %}" href="{% url 'JavaScript_sets' %}">Sets</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'JavaScript_objects' %}active{% endif %}" href="{% url 'JavaScript_objects' %}">Objects</a></li>
-                    <li><a class="nav-link {% if request.resolver_match.url_name == 'JavaScript_console' %}active{% endif %}" href="{% url 'JavaScript_console' %}">Console</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'JavaScript_console_commands' %}active{% endif %}" href="{% url 'JavaScript_console_commands' %}">Console</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'JavaScript_functions' %}active{% endif %}" href="{% url 'JavaScript_functions' %}">Functions</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'JavaScript_conditional_statements' %}active{% endif %}" href="{% url 'JavaScript_conditional_statements' %}">Conditional Statements</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'JavaScript_for_loops' %}active{% endif %}" href="{% url 'JavaScript_for_loops' %}">For Loops</a></li>
@@ -359,10 +359,10 @@
             <li class="nav-item">
                 <span class="d-flex align-items-center">
                     <a class="nav-link" href="{% url 'python_home' %}">Python</a>
-                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#python-submenu" aria-expanded="false" aria-controls="python-submenu" aria-label="Open the Python dropdown section">
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#python-submenu-mobile" aria-expanded="false" aria-controls="python-submenu-mobile" aria-label="Open the Python dropdown section">
                     </button>
                 </span>
-                <ul class="collapse list-unstyled ps-3 {% if '/Python' in request.path %}show{% endif %}" id="python-submenu">
+                <ul class="collapse list-unstyled ps-3 {% if '/Python' in request.path %}show{% endif %}" id="python-submenu-mobile">
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'python_home' %}active{% endif %}" href="{% url 'python_home' %}">Python Home</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'python_variables' %}active{% endif %}" href="{% url 'python_variables' %}">Variables</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'python_data_types' %}active{% endif %}" href="{% url 'python_data_types' %}">Data Types</a></li>

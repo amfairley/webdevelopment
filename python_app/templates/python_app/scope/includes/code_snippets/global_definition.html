@@ -1,0 +1,16 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Python-scope-code-snippets-global-definition{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">var1 = "I am global"
+
+def my_func():
+    print(var1)  # Can access global variable
+</code></pre>
+{% endblock %}

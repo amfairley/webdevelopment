@@ -1,0 +1,16 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Python-unit-testing-code-snippets-try-syntax{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">try:
+    risky_code()
+except ZeroDivisionError:
+    print("You can't divide by zero!")
+</code></pre>
+{% endblock %}

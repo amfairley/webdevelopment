@@ -1,0 +1,26 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Python-classes-code-snippets-inheritance-example{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">class Animal:
+    def __init__(self, name):
+        self.name = name
+
+class Dog(Animal):
+    def __init__(self, name, breed):
+        super().__init__(name)
+        self.breed = breed
+
+# Alternative syntax
+class Dog(Animal):
+    def __init__(self, name, breed):
+        Animal.__init__(self, name)
+        self.breed = breed
+</code></pre>
+{% endblock %}

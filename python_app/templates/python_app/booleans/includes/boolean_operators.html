@@ -2,7 +2,7 @@
 {% load static %}
 
 <!--Section ID to link in contents-->
-{% block text_section_id %}python-booleans-boolean-operators{% endblock %}
+{% block text_section_id %}Python-booleans-boolean-operators{% endblock %}
 
 <!--Section title-->
 {% block text_title %}Boolean Operators{% endblock %}
@@ -15,19 +15,19 @@
     <p>
         And returns True if both operands are True.
     </p>
-    {% include 'python_app/booleans/includes/code_snippets/and_1.html' %}
+    {% include 'python_app/booleans/includes/code_snippets/and.html' %}
     <p>
         The and operator returns the first falsy value or the last value if all are truthy.
     </p>
-    {% include 'python_app/booleans/includes/code_snippets/and_2.html' %}
+    {% include 'python_app/booleans/includes/code_snippets/and_truthy.html' %}
     <p>
         or returns True if at least one operand is True.
     </p>
-    {% include 'python_app/booleans/includes/code_snippets/or_1.html' %}
+    {% include 'python_app/booleans/includes/code_snippets/or.html' %}
     <p>
         Similar to and, the or operator returns the first truthy value or the last value if all are falsy.
     </p>
-    {% include 'python_app/booleans/includes/code_snippets/or_2.html' %}
+    {% include 'python_app/booleans/includes/code_snippets/or_truthy.html' %}
     <p>
         not returns the opposite Boolean value of the operand. The not operator always returns a Boolean value, 
         inverting the truthiness of its operand.

@@ -1,0 +1,18 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}JavaScript-arrays-code-snippets-destructuring-assignment-skip{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">let [, , var1, var2] = arr;
+// Skips the first two items and assigns the third and fourth to var1 and var2.
+let numbers = [10, 20, 30, 40, 50];
+let [, , third, fourth] = numbers;
+console.log(third);  // 30
+console.log(fourth); // 40
+</code></pre>
+{% endblock %}

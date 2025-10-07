@@ -1,0 +1,76 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}JavaScript-console-commands-console-commands{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Console Commands{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        In JavaScript, the console object provides a powerful way to log messages, display data, and inspect code 
+        during development. These console commands are typically used in the browser's developer tools or in a Node.js 
+        environment to help developers debug and inspect their code. Here's a breakdown of some of the most commonly 
+        used console methods.
+    </p>
+    {% include 'javascript_app/console_commands/includes/code_snippets/console_log_syntax.html' %}
+    <p>
+        The 
+        <code class="written-code">console.log()</code>
+        method is the most basic and widely used command in JavaScript. It outputs the value of a variable or an 
+        expression to the console, making it easier to inspect values during code execution.
+    </p>
+    {% include 'javascript_app/console_commands/includes/code_snippets/console_log_example.html' %}
+    <p>
+        This method can handle multiple arguments and display them together.
+    </p>
+    {% include 'javascript_app/console_commands/includes/code_snippets/console_log_multiple_arguments.html' %}
+    <p>
+        <code class="written-code">console.table()</code>
+        is specifically designed to display an array of objects or arrays in a tabular format in the console. This is 
+        particularly useful when dealing with large sets of data, as it allows for better readability and structure.
+    </p>
+    {% include 'javascript_app/console_commands/includes/code_snippets/console_table_syntax.html' %}
+
+    {% include 'javascript_app/console_commands/includes/code_snippets/console_table_example.html' %}
+    <p>
+        This will output the array in a neat, easy-to-read table format, with each object's properties listed as 
+        columns. This makes it much easier to visually inspect data, especially for larger datasets.
+    </p>
+    <p>
+        While 
+        <code class="written-code">console.log()</code>
+        and
+        <code class="written-code">console.table()</code>
+        are the most common, there are several other useful console methods.
+    </p>
+    <ul>
+        <li>
+            <code class="written-code">console.error(variable)</code>:
+            Outputs error messages to the console which are often displayed in red for legibility.
+        </li>
+        <li>
+            <code class="written-code">console.warn(variable)</code>:
+            Displays a warning message in the console, typically shown in yellow.
+        </li>
+        <li>
+            <code class="written-code">console.info(variable)</code>:
+            Outputs informational messages to the console. Similar to 
+            <code class="written-code">console.log()</code>,
+            but it may display with a different visual style in some browsers.
+        </li>
+        <li>
+            <code class="written-code">console.assert(expression, message)</code>:
+            If the expression evaluates to false, it will display the specified message.
+        </li>
+        <li>
+            <code class="written-code">console.group()</code>
+            and
+            <code class="written-code">console.groupEnd()</code>:
+            Groups multiple console logs together, making it easier to organize and collapse logs for better 
+            readability.
+        </li>
+    </ul>
+{% endblock %}

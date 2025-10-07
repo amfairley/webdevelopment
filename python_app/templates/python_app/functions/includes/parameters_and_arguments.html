@@ -2,7 +2,7 @@
 {% load static %}
 
 <!--Section ID to link in contents-->
-{% block text_section_id %}python-functions-parameters-and-arguments{% endblock %}
+{% block text_section_id %}Python-functions-parameters-and-arguments{% endblock %}
 
 <!--Section title-->
 {% block text_title %}Parameters and Arguments{% endblock %}
@@ -13,14 +13,14 @@
         When defining functions you can add parameters, allowing you to pass data into them and then call them with 
         arguments.
     </p>
-    {% include 'python_app/functions/includes/code_snippets/parameters_1.html' %}
+    {% include 'python_app/functions/includes/code_snippets/parameters.html' %}
     <p>
         You can assign default values to parameters, making them optional during function calls.
     </p>
-    {% include 'python_app/functions/includes/code_snippets/parameters_2.html' %}
+    {% include 'python_app/functions/includes/code_snippets/parameters_default.html' %}
     <p>
         *args allows a function to accept any number of positional arguments, which are accessible as a tuple. **kwargs 
         allows a function to accept any number of keyword arguments, accessible as a dictionary.
     </p>
-    {% include 'python_app/functions/includes/code_snippets/parameters_3.html' %}
+    {% include 'python_app/functions/includes/code_snippets/parameters_args_kwargs.html' %}
 {% endblock %}

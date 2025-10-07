@@ -2,7 +2,7 @@
 {% load static %}
 
 <!--Section ID to link in contents-->
-{% block text_section_id %}javascript-functions-defining-a-function{% endblock %}
+{% block text_section_id %}JavaScript-functions-defining-a-function{% endblock %}
 
 <!--Section title-->
 {% block text_title %}Defining a Function{% endblock %}
@@ -14,18 +14,18 @@
         parentheses and then curly brackets to house the code block for the function. Here's the basic structure of a 
         function.
     </p>
-    {% include 'javascript_app/functions/includes/code_snippets/define_1.html' %}
+    {% include 'javascript_app/functions/includes/code_snippets/function_syntax.html' %}
     <p>
         You can assign default values to function parameters using an 
         <code class="written-code">=</code>
         sign. If an argument is not passed when calling the function, the default value is used instead.
     </p>
-    {% include 'javascript_app/functions/includes/code_snippets/define_2.html' %}
+    {% include 'javascript_app/functions/includes/code_snippets/default_values.html' %}
     <p>
         You can assign a function to a variable and give it a new name. This is commonly done with anonymous functions 
         (functions without a name):
     </p>
-    {% include 'javascript_app/functions/includes/code_snippets/define_3.html' %}
+    {% include 'javascript_app/functions/includes/code_snippets/assigning_a_function.html' %}
     <p>
         Now, you can call the function using the 
         <code class="written-code">addNumbers</code>

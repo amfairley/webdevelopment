@@ -2,7 +2,7 @@
 {% load static %}
 
 <!--Section ID to link in contents-->
-{% block text_section_id %}python-os-key-uses-of-os{% endblock %}
+{% block text_section_id %}Python-os-key-uses-of-os{% endblock %}
 
 <!--Section title-->
 {% block text_title %}Key Uses of OS{% endblock %}
@@ -47,11 +47,11 @@
     <p>
         You can break a full path into directory and file parts with:
     </p>
-    {% include 'python_app/os/includes/code_snippets/split_1.html' %}
+    {% include 'python_app/os/includes/code_snippets/split_directory.html' %}
     <p>
         Then, to separate the filename from its extension:
     </p>
-    {% include 'python_app/os/includes/code_snippets/split_2.html' %}
+    {% include 'python_app/os/includes/code_snippets/split_filename.html' %}
     <p>
         This is useful when renaming files or filtering for .txt or .jpg.
     </p>

@@ -1,0 +1,23 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Python-input-code-snippets-input-match{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">choice = input("Do you want to start, stop, or quit? ").lower()
+
+match choice:
+    case "start" | "go":
+        print("Starting the program...")
+    case "stop":
+        print("Stopping the program.")
+    case "quit":
+        print("Exiting. Goodbye!")
+    case _:
+        print("Invalid option. Please try again.")
+</code></pre>
+{% endblock %}

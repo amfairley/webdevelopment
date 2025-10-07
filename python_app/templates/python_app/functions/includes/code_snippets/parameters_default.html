@@ -1,0 +1,21 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Python-functions-code-snippets-parameters-default{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">def greet(name, message="Hi"):
+    print(f"{message}, {name}!")
+
+# Output: Hi, Bob!
+greet(“Bob”)
+
+#If you provide both arguments, the default is overridden
+# Output: Bye, Bob!
+greet(“Bob”, “Bye”)
+</code></pre>
+{% endblock %}

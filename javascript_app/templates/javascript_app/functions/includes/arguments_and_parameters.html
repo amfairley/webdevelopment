@@ -2,7 +2,7 @@
 {% load static %}
 
 <!--Section ID to link in contents-->
-{% block text_section_id %}javascript-functions-arguments-and-parameters{% endblock %}
+{% block text_section_id %}JavaScript-functions-arguments-and-parameters{% endblock %}
 
 <!--Section title-->
 {% block text_title %}Arguments and Parameters{% endblock %}
@@ -16,7 +16,7 @@
     <p>
         Arguments are the actual values you pass when calling the function.
     </p>
-    {% include 'javascript_app/functions/includes/code_snippets/args_1.html' %}
+    {% include 'javascript_app/functions/includes/code_snippets/arguments.html' %}
     <p>
         If a function is called with more arguments than defined parameters, the extra arguments are ignored. 
         Conversely, if fewer arguments are provided, the missing parameters will be set to undefined by default.
@@ -26,5 +26,5 @@
         <code class="written-code">arguments.length</code>
         property, which returns the number of arguments passed, regardless of how many parameters were defined.
     </p>
-    {% include 'javascript_app/functions/includes/code_snippets/args_2.html' %}
+    {% include 'javascript_app/functions/includes/code_snippets/arguments_length.html' %}
 {% endblock %}

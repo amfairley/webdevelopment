@@ -2,7 +2,7 @@
 {% load static %}
 
 <!--Section ID to link in contents-->
-{% block text_section_id %}javascript-functions-arrow-functions{% endblock %}
+{% block text_section_id %}JavaScript-functions-arrow-functions{% endblock %}
 
 <!--Section title-->
 {% block text_title %}Arrow Functions{% endblock %}
@@ -14,15 +14,15 @@
         <dfn title="ECMAScript 2015">ES6</dfn>.
         They remove the need to type the function keyword and often make your code cleaner and more concise. 
     </p>
-    {% include 'javascript_app/functions/includes/code_snippets/arrow_1.html' %}
+    {% include 'javascript_app/functions/includes/code_snippets/arrow_function_syntax.html' %}
     <p>
         0, 1, and >1 parameter arrow functions have different requirements for parentheses around the parameters.
     </p>
-    {% include 'javascript_app/functions/includes/code_snippets/arrow_2.html' %}
+    {% include 'javascript_app/functions/includes/code_snippets/arrow_function_requirements.html' %}
     <p>
         Arrow functions automatically return the value of a single expression without needing the return keyword or 
         curly braces.
     </p>
-    {% include 'javascript_app/functions/includes/code_snippets/arrow_3.html' %}
+    {% include 'javascript_app/functions/includes/code_snippets/arrow_function_example.html' %}
 
 {% endblock %}

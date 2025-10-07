@@ -22,13 +22,13 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('homepage.urls')),
-    path('intro_to_full_stack/', include('intro_to_full_stack.urls')),
+    path('intro-to-full-stack/', include('intro_to_full_stack.urls')),
     path('HTML/', include('HTML.urls')),
     path('CSS/', include('CSS.urls')),
     path('JavaScript/', include('javascript_app.urls')),
     path('Python/', include('python_app.urls')),
-    path('Backend/', include('backend.urls')),
+    path('backend/', include('backend.urls')),
     path('Flask/', include('flask_app.urls')),
-    path('Analytics/', include('analytics.urls')),
+    path('analytics/', include('analytics.urls')),
     path('search/', include('search.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

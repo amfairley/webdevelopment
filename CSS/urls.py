@@ -3,7 +3,7 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.CSS_home, name="CSS_home"),
+    path('home/', views.CSS_home, name="CSS_home"),
     path('selectors/', views.CSS_selectors, name="CSS_selectors"),
     path('box-model/', views.CSS_box_model, name="CSS_box_model"),
     path(
@@ -15,7 +15,7 @@ urlpatterns = [
     path('grids/', views.CSS_grids, name="CSS_grids"),
     path('backgrounds/', views.CSS_backgrounds, name="CSS_backgrounds"),
     path(
-        'visibility_and_z_positioning/',
+        'visibility-and-z-positioning/',
         views.CSS_visibility_and_z_positioning,
         name="CSS_visibility_and_z_positioning"
     ),
@@ -26,7 +26,7 @@ urlpatterns = [
         name="CSS_typography"
     ),
     path(
-        'links_and_buttons/',
+        'links-and-buttons/',
         views.CSS_links_and_buttons,
         name="CSS_links_and_buttons"
     ),
@@ -38,7 +38,7 @@ urlpatterns = [
         name="CSS_transitions"
     ),
     path(
-        'responsive_design/',
+        'responsive-design/',
         views.CSS_responsive_design,
         name="CSS_responsive_design"
     ),
@@ -48,7 +48,7 @@ urlpatterns = [
         name="CSS_bootstrap"
     ),
     path(
-        'css_validation/',
+        'css-validation/',
         views.CSS_css_validation,
         name="CSS_css_validation"
     ),

@@ -2,7 +2,7 @@
 {% load static %}
 
 <!--Section ID to link in contents-->
-{% block text_section_id %}python-home-installing-and-setting-up{% endblock %}
+{% block text_section_id %}Python-home-installing-and-setting-up{% endblock %}
 
 <!--Section title-->
 {% block text_title %}Installing and Setting Up{% endblock %}
@@ -13,11 +13,11 @@
         You can install and set up Python on your machine for free. To check if you already have it installed, you can 
         open your terminal and type:
     </p>
-    {% include 'python_app/home/includes/code_snippets/set_up_1.html' %}
+    {% include 'python_app/home/includes/code_snippets/python_version.html' %}
     <p>
         or
     </p>
-    {% include 'python_app/home/includes/code_snippets/set_up_2.html' %}
+    {% include 'python_app/home/includes/code_snippets/python3_version.html' %}
     <p>
         If you have Python installed, you will see something like 
         <code class="written-code">Python 3.x.x</code>.
@@ -41,11 +41,11 @@
         "Add Python to PATH". Once this has completed, you can check that it has installed correctly from your terminal 
         again using:
     </p>
-    {% include 'python_app/home/includes/code_snippets/set_up_3.html' %}
+    {% include 'python_app/home/includes/code_snippets/python_check_version.html' %}
     <p>
         or
     </p>
-    {% include 'python_app/home/includes/code_snippets/set_up_4.html' %}
+    {% include 'python_app/home/includes/code_snippets/python3_check_version.html' %}
     <p>
         For other operating systems, see the 
         <a 
@@ -65,7 +65,7 @@
         <dfn title ="The Python Package manager. It is a recursive acronym of 'Pip Installs Packages'.">pip</dfn>.
         This is usually installed automatically when you set up Python but you can check from your terminal using:
     </p>
-    {% include 'python_app/home/includes/code_snippets/set_up_5.html' %}
+    {% include 'python_app/home/includes/code_snippets/pip_version.html' %}
     <p>
         If it is not installed you can download 
         <a 

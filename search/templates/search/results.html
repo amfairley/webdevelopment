@@ -16,6 +16,8 @@
             <a class="result-link" href="{{ hit.urlLocal }}">
                 <div class="result-container">
                     <h3 class="result-title">{{ hit.prettyTitle }}</h3>
+                    <p class="result-url">{{ hit.urlLocal }}</p>
+                    <p>{{ hit.section }}</p>
                     <p class="result-type"> Section type: {{ hit.sectionType }}</p>
                     {% if hit.content %}
                         <p class="result-content">Content: {{ hit.content|truncatewords:30 }}</p>

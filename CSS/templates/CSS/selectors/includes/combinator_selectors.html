@@ -25,17 +25,17 @@
     <p>
         A cleaner variation of the above would be to put each selector on a new line.
     </p>
-    {% include 'CSS/selectors/includes/code_snippets/multiple_selector_2.html' %}
+    {% include 'CSS/selectors/includes/code_snippets/multiple_selector_clean.html' %}
     <p>
         Child selectors target specific elements that are the child elements of others by using a greater than (&gt;) 
         between the selectors. This could be done with types such as all paragraph elements that are child elements of 
         divs.
     </p>
-    {% include 'CSS/selectors/includes/code_snippets/child_selector.html' %}
+    {% include 'CSS/selectors/includes/code_snippets/child_selector_general.html' %}
     <p>
         Or with classes or IDs such as all divs that are children of the element with id "main_element".
     </p>
-    {% include 'CSS/selectors/includes/code_snippets/child_selector_2.html' %}
+    {% include 'CSS/selectors/includes/code_snippets/child_selector_specific.html' %}
     <p>
         Similarly you can select all descendants, not just children by just putting a space between the selectors. This 
         example will target paragraph decendants of h1 elements even if they are nested inside other elements under the 
@@ -51,11 +51,11 @@
         You can also select only the next sibling when reading through the code. This can be done by using the + sign. 
         The following would only target the next h2 element on the same layer as the h1 element:
     </p>
-    {% include 'CSS/selectors/includes/code_snippets/sibling_selector_2.html' %}
+    {% include 'CSS/selectors/includes/code_snippets/sibling_selector_next.html' %}
     <p>
         You can double up the element types to create a niche scenario where you want all but the first of the siblings 
         to be targeted. The following would apply the rule to every div on the same level except the first div child on 
         that level.
     </p>
-    {% include 'CSS/selectors/includes/code_snippets/sibling_selector_3.html' %}
+    {% include 'CSS/selectors/includes/code_snippets/sibling_selector_exclude_first.html' %}
 {% endblock %}

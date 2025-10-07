@@ -2,7 +2,7 @@
 {% load static %}
 
 <!--Section ID to link in contents-->
-{% block text_section_id %}javascript-conditional-statements-switch{% endblock %}
+{% block text_section_id %}JavaScript-conditional-statements-switch{% endblock %}
 
 <!--Section title-->
 {% block text_title %}Switch{% endblock %}
@@ -13,7 +13,7 @@
         In the case of multiple else if statements, a switch might make more sense. An example of this is checking if a 
         percentage grade is an A, B, C, D, E etc. They follow the general structure of:
     </p>
-    {% include 'javascript_app/conditional_statements/includes/code_snippets/switch_1.html' %}
+    {% include 'javascript_app/conditional_statements/includes/code_snippets/switch_syntax.html' %}
     <p>
         The final option is 
         <code class="written-code">default</code>
@@ -22,11 +22,11 @@
         <code class="written-code">switch (true)</code>
         which will evaluate the cases against.
     </p>
-    {% include 'javascript_app/conditional_statements/includes/code_snippets/switch_2.html' %}
+    {% include 'javascript_app/conditional_statements/includes/code_snippets/switch_example.html' %}
     <p>
         If you want to achieve an "or" statement in a switch, you can stack the cases above one block statement. The 
         following will log “This is a pome fruit”.
     </p>
-    {% include 'javascript_app/conditional_statements/includes/code_snippets/switch_3.html' %}
+    {% include 'javascript_app/conditional_statements/includes/code_snippets/switch_or_example.html' %}
 
 {% endblock %}

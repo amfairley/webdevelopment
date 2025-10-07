@@ -2,7 +2,7 @@
 {% load static %}
 
 <!--Section ID to link in contents-->
-{% block text_section_id %}python-conditionals-if{% endblock %}
+{% block text_section_id %}Python-conditionals-if{% endblock %}
 
 <!--Section title-->
 {% block text_title %}If{% endblock %}
@@ -12,7 +12,7 @@
     <p>
         The simplest form of a conditional in Python looks like this:
     </p>
-    {% include 'python_app/conditionals/includes/code_snippets/if_1.html' %}
+    {% include 'python_app/conditionals/includes/code_snippets/if_example.html' %}
     <p>
         This tells Python: "If the value of age is 18 or more, then print the message."
     </p>
@@ -23,10 +23,10 @@
         Sometimes you want to check if a certain item exists within a larger group, like a character in a string or an 
         item in a list.
     </p>
-    {% include 'python_app/conditionals/includes/code_snippets/if_2.html' %}
+    {% include 'python_app/conditionals/includes/code_snippets/if_in.html' %}
     <p>
         This works with other iterables too:
     </p>
-    {% include 'python_app/conditionals/includes/code_snippets/if_3.html' %}
+    {% include 'python_app/conditionals/includes/code_snippets/if_in_list.html' %}
 
 {% endblock %}

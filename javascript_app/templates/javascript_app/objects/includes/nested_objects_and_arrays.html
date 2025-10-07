@@ -2,7 +2,7 @@
 {% load static %}
 
 <!--Section ID to link in contents-->
-{% block text_section_id %}javascript-objects-nested-objects-and-arrays{% endblock %}
+{% block text_section_id %}JavaScript-objects-nested-objects-and-arrays{% endblock %}
 
 <!--Section title-->
 {% block text_title %}Nested Objects and Arrays{% endblock %}
@@ -15,15 +15,15 @@
         <code class="written-code">objectName : {object}</code>
         in the parent object. To access the keys: values of the nested object, use dot notation.
     </p>
-    {% include 'javascript_app/objects/includes/code_snippets/nested_1.html' %}
+    {% include 'javascript_app/objects/includes/code_snippets/access_nested_keys.html' %}
     <p>
         In the case of a nested array, this would take the form of 
         <code class="written-code">arrayName : [array]</code>
         in the parent object. To access this the indices of this use:
     </p>
-    {% include 'javascript_app/objects/includes/code_snippets/nested_2.html' %}
+    {% include 'javascript_app/objects/includes/code_snippets/access_nested_indicies.html' %}
     <p>
         If an object is nested in an array, you can access the key: value pairs using:
     </p>
-    {% include 'javascript_app/objects/includes/code_snippets/nested_3.html' %}
+    {% include 'javascript_app/objects/includes/code_snippets/nested_in_an_array.html' %}
 {% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Python-os-code-snippets-sys-exit{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">if not os.path.exists("important_file.txt"):
+    sys.exit("Error: File not found.")
+</code></pre>
+{% endblock %}

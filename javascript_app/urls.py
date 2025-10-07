@@ -3,7 +3,7 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.JavaScript_home, name="JavaScript_home"),
+    path('home/', views.JavaScript_home, name="JavaScript_home"),
     path(
         'variables/',
         views.JavaScript_variables,
@@ -15,7 +15,7 @@ urlpatterns = [
         name="JavaScript_scope"
     ),
     path(
-        'data_types/',
+        'data-types/',
         views.JavaScript_data_types,
         name="JavaScript_data_types"
     ),
@@ -40,9 +40,9 @@ urlpatterns = [
         name="JavaScript_objects"
     ),
     path(
-        'console/',
-        views.JavaScript_console,
-        name="JavaScript_console"
+        'console-commands/',
+        views.JavaScript_console_commands,
+        name="JavaScript_console_commands"
     ),
     path(
         'functions/',
@@ -50,17 +50,17 @@ urlpatterns = [
         name="JavaScript_functions"
     ),
     path(
-        'conditional_statements/',
+        'conditional-statements/',
         views.JavaScript_conditional_statements,
         name="JavaScript_conditional_statements"
     ),
     path(
-        'for_loops/',
+        'for-loops/',
         views.JavaScript_for_loops,
         name="JavaScript_for_loops"
     ),
     path(
-        'while_loops/',
+        'while-loops/',
         views.JavaScript_while_loops,
         name="JavaScript_while_loops"
     ),
@@ -70,22 +70,22 @@ urlpatterns = [
         name="JavaScript_try"
     ),
     path(
-        'nested_loops/',
+        'nested-loops/',
         views.JavaScript_nested_loops,
         name="JavaScript_nested_loops"
     ),
     path(
-        'the_dom/',
+        'the-dom/',
         views.JavaScript_the_dom,
         name="JavaScript_the_dom"
     ),
     path(
-        'targeting_the_dom/',
+        'targeting-the-dom/',
         views.JavaScript_targeting_the_dom,
         name="JavaScript_targeting_the_dom"
     ),
     path(
-        'manipulating_the_dom/',
+        'manipulating-the-dom/',
         views.JavaScript_manipulating_the_dom,
         name="JavaScript_manipulating_the_dom"
     ),

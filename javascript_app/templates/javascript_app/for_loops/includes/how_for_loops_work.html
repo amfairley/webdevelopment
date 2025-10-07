@@ -2,7 +2,7 @@
 {% load static %}
 
 <!--Section ID to link in contents-->
-{% block text_section_id %}javascript-for-loops-how-for-loops-work{% endblock %}
+{% block text_section_id %}JavaScript-for-loops-how-for-loops-work{% endblock %}
 
 <!--Section title-->
 {% block text_title %}How For Loops Work{% endblock %}
@@ -14,7 +14,7 @@
         in JavaScript. They follow three key parts; the initialising expression, condition, and incrementing expression 
         separated by semi colons within parentheses after the keyword for.
     </p>
-    {% include 'javascript_app/for_loops/includes/code_snippets/how_1.html' %}
+    {% include 'javascript_app/for_loops/includes/code_snippets/for_loops_explanation.html' %}
     <ul>
         <li>initialisingExpression: runs once at the beginning (e.g., let i = 0)</li>
         <li>condition: evaluated before each loop; if true, the loop runs</li>
@@ -29,6 +29,6 @@
         initialising expression each time. For example this would log the numbers from 1 to 10 (remember ++ means +1 
         each time).
     </li>
-    {% include 'javascript_app/for_loops/includes/code_snippets/how_2.html' %}
+    {% include 'javascript_app/for_loops/includes/code_snippets/for_loops_syntax.html' %}
 
 {% endblock %}

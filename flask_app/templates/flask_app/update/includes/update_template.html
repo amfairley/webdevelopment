@@ -2,7 +2,7 @@
 {% load static %}
 
 <!--Section ID to link in contents-->
-{% block text_section_id %}flask-update-update-template{% endblock %}
+{% block text_section_id %}Flask-update-update-template{% endblock %}
 
 <!--Section title-->
 {% block text_title %}Update Template{% endblock %}
@@ -16,10 +16,10 @@
         Start with the action of the form to include the category id. Remember we passed the variable category in our 
         render_template() function, so to access the id we can use dot notation of category.id.
     </p>
-    {% include 'flask_app/update/includes/code_snippets/update_html_1.html' %}
+    {% include 'flask_app/update/includes/code_snippets/update_html_form_action.html' %}
     <p>
         Then update the values of the input fields accordingly in order to pre-fill the form with the current values.
     </p>
-    {% include 'flask_app/update/includes/code_snippets/update_html_2.html' %}
+    {% include 'flask_app/update/includes/code_snippets/update_html_form_values.html' %}
 
 {% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}JavaScript-conditional-statements-code-snippets-switch-or-example{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">let fruit = "apple";
+
+switch (fruit) {
+    case "apple":
+    case "pear":
+        console.log("This is a pome fruit.");
+        break;
+    case "orange":
+    case "lemon":
+    case "lime":
+        console.log("This is a citrus fruit.");
+        break;
+    default:
+        console.log("Unknown fruit.");
+}
+</code></pre>
+{% endblock %}

@@ -2,7 +2,7 @@
 {% load static %}
 
 <!--Section ID to link in contents-->
-{% block text_section_id %}javascript-variables-overwriting-variables{% endblock %}
+{% block text_section_id %}JavaScript-variables-overwriting-variables{% endblock %}
 
 <!--Section title-->
 {% block text_title %}Overwriting Variables{% endblock %}
@@ -13,10 +13,10 @@
         If your variable as been declared using let, it can be overwritten in future. Which is good if you want to 
         update something such as age. To do so you just need to assign it a new value.
     </p>
-    {% include 'javascript_app/variables/includes/code_snippets/overwrite_1.html' %}
+    {% include 'javascript_app/variables/includes/code_snippets/overwrite.html' %}
     <p>
         A key aspect to keep in mind is when you reassign your variable, you can do so using it's own name which 
         relates to the previous value which may seem counterintuitive at first.
     </p>
-    {% include 'javascript_app/variables/includes/code_snippets/overwrite_2.html' %}
+    {% include 'javascript_app/variables/includes/code_snippets/overwrite_same_name.html' %}
 {% endblock %}

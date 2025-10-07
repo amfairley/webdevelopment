@@ -17,12 +17,12 @@
     <p>
         You can apply padding evenly on all sides:
     </p>
-    {% include 'CSS/box_model/includes/code_snippets/padding_1.html' %}
+    {% include 'CSS/box_model/includes/code_snippets/padding_syntax.html' %}
     <p>
         Or you can apply different padding to each side, you can use the following shorthand: 
     </p>
-    {% include 'CSS/box_model/includes/code_snippets/padding_2.html' %}
-    {% include 'CSS/box_model/includes/code_snippets/padding_3.html' %}
+    {% include 'CSS/box_model/includes/code_snippets/padding_shorthand_syntax.html' %}
+    {% include 'CSS/box_model/includes/code_snippets/padding_shorthand.html' %}
     <p>
         In this case, the padding values represent the following:
         <ul>
@@ -44,8 +44,8 @@
         Alternatively, if the top and bottom padding are the same or the left and right padding are the same, you can
         use the following syntax:
     </p>
-    {% include 'CSS/box_model/includes/code_snippets/padding_4.html' %}
-    {% include 'CSS/box_model/includes/code_snippets/padding_5.html' %}
+    {% include 'CSS/box_model/includes/code_snippets/padding_two_value_syntax.html' %}
+    {% include 'CSS/box_model/includes/code_snippets/padding_two_value.html' %}
     <p>
         This would apply 10px of padding to the top and bottom, and 20px of padding to the left and right. 
     </p>
@@ -53,6 +53,6 @@
         Each browser has a default padding rule. To not get caught out on different browsers, add the following rule to 
         the top of your CSS file to set all padding to 0 before you apply your individual rules.
     </p>
-    {% include 'CSS/box_model/includes/code_snippets/padding_6.html' %}
+    {% include 'CSS/box_model/includes/code_snippets/padding_default_rule.html' %}
 
 {% endblock %}

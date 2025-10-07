@@ -2,7 +2,7 @@
 {% load static %}
 
 <!--Section ID to link in contents-->
-{% block text_section_id %}python-os-the-sys-module{% endblock %}
+{% block text_section_id %}Python-os-the-sys-module{% endblock %}
 
 <!--Section title-->
 {% block text_title %}The SYS Module{% endblock %}
@@ -13,11 +13,11 @@
         Sometimes you'll want to interact with command-line arguments or exit a script early. That's where the sys 
         module helps.
     </p>
-    {% include 'python_app/os/includes/code_snippets/sys_1.html' %}
+    {% include 'python_app/os/includes/code_snippets/sys_syntax.html' %}
     <p>
         For example, if you run this in the terminal:
     </p>
-    {% include 'python_app/os/includes/code_snippets/sys_2.html' %}
+    {% include 'python_app/os/includes/code_snippets/sys_run.html' %}
     <ul>
         <li>sys.argv[0] is "script.py"</li>
         <li>sys.argv[1] is "myfile.txt"</li>
@@ -28,6 +28,6 @@
         to stop the program if something goes wrong. The following stops the program and prints the message to the 
         terminal.
     </p>
-    {% include 'python_app/os/includes/code_snippets/sys_2.html' %}
+    {% include 'python_app/os/includes/code_snippets/sys_exit.html' %}
 
 {% endblock %}

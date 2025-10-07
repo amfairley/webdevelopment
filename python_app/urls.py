@@ -4,7 +4,7 @@ from . import views
 
 urlpatterns = [
     path(
-        '',
+        'home/',
         views.python_home,
         name="python_home"
     ),
@@ -14,7 +14,7 @@ urlpatterns = [
         name="python_variables"
     ),
     path(
-        'data_types/',
+        'data-types/',
         views.python_data_types,
         name="python_data_types"
     ),
@@ -49,7 +49,7 @@ urlpatterns = [
         name="python_sets"
     ),
     path(
-        'regular_expressions/',
+        'regular-expressions/',
         views.python_regular_expressions,
         name="python_regular_expressions"
     ),
@@ -124,22 +124,22 @@ urlpatterns = [
         name="python_classes"
     ),
     path(
-        'unit_testing/',
+        'unit-testing/',
         views.python_unit_testing,
         name="python_unit_testing"
     ),
     path(
-        'data_and_api_requests/',
+        'data-and-api-requests/',
         views.python_data_and_api_requests,
         name="python_data_and_api_requests"
     ),
     path(
-        'code_validation/',
+        'code-validation/',
         views.python_code_validation,
         name="python_code_validation"
     ),
     path(
-        'google_sheets_program/',
+        'google-sheets-program/',
         views.python_google_sheets_program,
         name="python_google_sheets_program"
     ),

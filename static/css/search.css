@@ -28,6 +28,12 @@ body.night-mode .result-title {
     color: #FFD700;
 }
 
+.result-url {
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+    font-size: 0.75rem;
+    color: #8C8C8C;
+}
+
 .result-type,
 .result-content {
     font-family: "Montserrat", Helvetica, Arial, sans-serif;

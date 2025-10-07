@@ -169,11 +169,11 @@
         In the first case the second developer can:
     </p>
     <p>Sync your main branch:</p>
-    {% include 'intro_to_full_stack/github/includes/code_snippets/merge_1.html' %}
+    {% include 'intro_to_full_stack/github/includes/code_snippets/merge_conflict_sync.html' %}
     <p>Switch back to your working branch:</p>
-    {% include 'intro_to_full_stack/github/includes/code_snippets/merge_2.html' %}
+    {% include 'intro_to_full_stack/github/includes/code_snippets/merge_conflict_working_branch.html' %}
     <p>Rebase your changes:</p>
-    {% include 'intro_to_full_stack/github/includes/code_snippets/merge_3.html' %}
+    {% include 'intro_to_full_stack/github/includes/code_snippets/merge_conflict_rebase.html' %}
     <p>
         Git will point out the conflict. Open the file, look for the 
         <code class="written-code">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>
@@ -182,7 +182,7 @@
     <p>
         Once resolved:
     </p>
-    {% include 'intro_to_full_stack/github/includes/code_snippets/merge_4.html' %}
+    {% include 'intro_to_full_stack/github/includes/code_snippets/merge_conflict_resolved.html' %}
     <p>
         In the second case (the same line of code is changed by 2 developers) you try to pull changes, but Git can't 
         merge them automatically. Here's how to deal with it:
@@ -190,10 +190,10 @@
     <p>
         Look at the commit history:
     </p>
-    {% include 'intro_to_full_stack/github/includes/code_snippets/merge_5.html' %}
+    {% include 'intro_to_full_stack/github/includes/code_snippets/commit_history.html' %}
     <p>
         If your local branch is out of sync, reset it:
     </p>
-    {% include 'intro_to_full_stack/github/includes/code_snippets/merge_6.html' %}
+    {% include 'intro_to_full_stack/github/includes/code_snippets/merge_conflict_reset.html' %}
 
 {% endblock %}

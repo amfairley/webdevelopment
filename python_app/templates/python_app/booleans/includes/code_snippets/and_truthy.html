@@ -1,0 +1,15 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Python-booleans-code-snippets-and-truthy{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">print(0 and 5)   # Output: 0
+print(5 and 0)   # Output: 0
+print(5 and 10)  # Output: 10
+</code></pre>
+{% endblock %}

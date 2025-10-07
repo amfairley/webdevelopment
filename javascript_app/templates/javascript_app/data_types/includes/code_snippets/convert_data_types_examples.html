@@ -1,0 +1,18 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}JavaScript-data-types-code-snippets-convert-data-types-examples{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">typeof 42; // "number"
+typeof "hello"; // "string"
+typeof undefined; // "undefined"
+typeof null; // "object" (weird!)
+typeof []; // "object" (arrays are objects)
+typeof {}; // "object"
+</code></pre>
+{% endblock %}

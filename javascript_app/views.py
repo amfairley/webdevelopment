@@ -90,13 +90,13 @@ def JavaScript_objects(request):
     )
 
 
-def JavaScript_console(request):
-    '''Return the JavaScript console page'''
+def JavaScript_console_commands(request):
+    '''Return the JavaScript console commands page'''
     context = {
     }
     return render(
         request,
-        'javascript_app/console/console.html',
+        'javascript_app/console_commands/console_commands.html',
         context
     )
 

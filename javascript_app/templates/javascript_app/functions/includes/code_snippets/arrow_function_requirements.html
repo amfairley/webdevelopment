@@ -1,0 +1,15 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}JavaScript-functions-code-snippets-arrow-function-requirements{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">const functionName = () => {}; // Parentheses needed for 0 parameters
+const functionName = param1 => {}; //No parenthesis needed for 1 parameter
+const functionName = (param1, param2) => {}; // Comma separated list inside parentheses for more than 1 parameter
+</code></pre>
+{% endblock %}

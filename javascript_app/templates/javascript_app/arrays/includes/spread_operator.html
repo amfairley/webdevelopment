@@ -2,7 +2,7 @@
 {% load static %}
 
 <!--Section ID to link in contents-->
-{% block text_section_id %}javascript-arrays-spread-operator{% endblock %}
+{% block text_section_id %}JavaScript-arrays-spread-operator{% endblock %}
 
 <!--Section title-->
 {% block text_title %}Spread Operator{% endblock %}
@@ -12,15 +12,15 @@
     <p>
         The spread operator (…) allows you to expand elements of an array.
     </p>
-    {% include 'javascript_app/arrays/includes/code_snippets/spread_1.html' %}
+    {% include 'javascript_app/arrays/includes/code_snippets/spread_syntax.html' %}
     <p>
         This is particularly useful for copying arrays.
     </p>
-    {% include 'javascript_app/arrays/includes/code_snippets/spread_2.html' %}
+    {% include 'javascript_app/arrays/includes/code_snippets/spread_copy.html' %}
     <p>
         Without the spread operator, assigning one array to another would reference the same array and changing this 
         'copy' would impact the original.
     </p>
-    {% include 'javascript_app/arrays/includes/code_snippets/spread_3.html' %}
+    {% include 'javascript_app/arrays/includes/code_snippets/spread_connections.html' %}
 
 {% endblock %}

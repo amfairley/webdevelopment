@@ -1,0 +1,31 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}JavaScript-events-code-snippets-submit-form-prevent-default{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">// To capture the submit event of a form with an event listener
+
+// Assign the form to a variable
+let var = document.getElementById('formId')
+
+// Add an event listener to the form where handleSubmit is a custom function
+form.addEventListener('submit', handleSubmit);
+
+// Define the function to handle the submit
+function handleSubmit(event) {
+  event.preventDefault(); // Prevent form from submitting the traditional way
+
+  // Example: get the input value and log it
+  let name = document.getElementById('nameInput').value;
+  console.log("Form submitted! Name:", name);
+
+  // Optional: show an alert
+  alert("Hello, " + name + "! Form submitted without refreshing the page.");
+}
+</code></pre>
+{% endblock %}

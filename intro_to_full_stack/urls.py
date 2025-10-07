@@ -4,7 +4,7 @@ from . import views
 
 urlpatterns = [
     path(
-        'programming_and_the_web/',
+        'programming-and-the-web/',
         views.full_stack_programming_and_the_web,
         name="full_stack_programming_and_the_web"
     ),

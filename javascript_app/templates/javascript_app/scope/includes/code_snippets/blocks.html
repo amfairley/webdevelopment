@@ -1,0 +1,23 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}JavaScript-scope-code-snippets-blocks{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">if (condition) { 
+    // block
+}
+
+for (let i = 0; i &lt; 5; i++) { 
+    // block
+}
+
+function myFunction() { 
+    // block
+}
+</code></pre>
+{% endblock %}

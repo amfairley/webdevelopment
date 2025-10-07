@@ -1,0 +1,25 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}backend-postgresql-code-snippets-psycopg2-set-up{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python"># Import the library
+import psycopg2
+# Connect to the Database
+connection = psycopg2.connect(
+    database="your_database_name",
+    user="your_username",
+    password="your_password",
+    host="localhost",
+    port="5432"
+)
+
+# Create a Cursor
+cursor = connection.cursor()
+</code></pre>
+{% endblock %}

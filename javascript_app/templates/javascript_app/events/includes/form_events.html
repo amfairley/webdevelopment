@@ -2,7 +2,7 @@
 {% load static %}
 
 <!--Section ID to link in contents-->
-{% block text_section_id %}javascript-events-form-events{% endblock %}
+{% block text_section_id %}JavaScript-events-form-events{% endblock %}
 
 <!--Section title-->
 {% block text_title %}Form Events{% endblock %}
@@ -88,7 +88,7 @@
         submitted to the server, but we can stop it from refreshing with
         <code class="written-code">event.preventDefault();</code>.
     </p>
-    {% include 'javascript_app/events/includes/code_snippets/submit_form.html' %}
+    {% include 'javascript_app/events/includes/code_snippets/submit_form_prevent_default.html' %}
     <p>
         Done in a HTML file this would look like: <code class="written-code">&lt;form onsubmit="exampleFunction(event);"&gt;</code>
         and the exampleFunction defined within a script element.
@@ -101,5 +101,5 @@
         <code class="written-code">.submit()</code>
         in the handler function.
     </p>
-    {% include 'javascript_app/events/includes/code_snippets/submit_form_2.html' %}
+    {% include 'javascript_app/events/includes/code_snippets/submit_form.html' %}
 {% endblock %}

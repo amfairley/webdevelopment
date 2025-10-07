@@ -2,7 +2,7 @@
 {% load static %}
 
 <!--Section ID to link in contents-->
-{% block text_section_id %}python-data-and-api-requests-reading-data-from-files{% endblock %}
+{% block text_section_id %}Python-data-and-api-requests-reading-data-from-files{% endblock %}
 
 <!--Section title-->
 {% block text_title %}Reading Data from Files{% endblock %}
@@ -14,20 +14,20 @@
         <code class="written-code">open()</code>
         function helps you access file contents.
     </p>
-    {% include 'python_app/data_and_api_requests/includes/code_snippets/open_1.html' %}
+    {% include 'python_app/data_and_api_requests/includes/code_snippets/open_syntax.html' %}
     <ul>
         <li>with open(...) handles file closing automatically.</li>
         <li>'r' = read (default), 'w' = write, 'a' = append.</li>
     </ul>
-    {% include 'python_app/data_and_api_requests/includes/code_snippets/open_2.html' %}
+    {% include 'python_app/data_and_api_requests/includes/code_snippets/open_lines.html' %}
     <p>
         Writing to a file.
     </p>
-    {% include 'python_app/data_and_api_requests/includes/code_snippets/open_3.html' %}
+    {% include 'python_app/data_and_api_requests/includes/code_snippets/open_write.html' %}
     <p>
         Reading and writing CSV Files.
     </p>
-    {% include 'python_app/data_and_api_requests/includes/code_snippets/open_4.html' %}
+    {% include 'python_app/data_and_api_requests/includes/code_snippets/open_write_to_csv.html' %}
     <table>
         <thead>
             <tr>

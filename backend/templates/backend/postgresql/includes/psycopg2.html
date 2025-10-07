@@ -17,7 +17,7 @@
     <p>
         Install it with pip:
     </p>
-    {% include 'backend/postgresql/includes/code_snippets/install.html' %}
+    {% include 'backend/postgresql/includes/code_snippets/install_psycopg2.html' %}
     {% include 'backend/postgresql/includes/troubleshooting/psycopg2.html' %}
     <p>
         To write a psycopg2 script:
@@ -36,18 +36,18 @@
             </ul>
         </li>
     </ul>
-    {% include 'backend/postgresql/includes/code_snippets/file_1.html' %}
+    {% include 'backend/postgresql/includes/code_snippets/psycopg2_set_up.html' %}
     <p>
         You can now start querying your database using SQL wrapped in Python strings. Use single quotes around the 
         query, and double quotes around table and column names if needed (especially when using capitalized identifiers 
         in PostgreSQL).
     </p>
-    {% include 'backend/postgresql/includes/code_snippets/file_2.html' %}
+    {% include 'backend/postgresql/includes/code_snippets/psycopg2_query.html' %}
     <p>
         When you want to safely insert variables into a query (e.g., user input), use placeholders to avoid SQL 
         injection.
     </p>
-    {% include 'backend/postgresql/includes/code_snippets/file_3.html' %}
+    {% include 'backend/postgresql/includes/code_snippets/psycopg2_query_variables.html' %}
     <ul>
         <li>Use %s as the placeholder (regardless of the data type).</li>
         <li>Pass the actual value(s) as a list or tuple in the second argument.</li>
@@ -55,11 +55,11 @@
     <p>
         After running a query, you can fetch the data returned:
     </p>
-    {% include 'backend/postgresql/includes/code_snippets/results.html' %}
+    {% include 'backend/postgresql/includes/code_snippets/psycopg2_fetch_results.html' %}
     <p>
         After you're done, always close your connection. This ensures your program doesn't leave open connections that 
         can cause memory issues or errors.
     </p>
-    {% include 'backend/postgresql/includes/code_snippets/close.html' %}
+    {% include 'backend/postgresql/includes/code_snippets/psycopg2_close.html' %}
 
 {% endblock %}

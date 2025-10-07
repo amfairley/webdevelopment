@@ -2,7 +2,7 @@
 {% load static %}
 
 <!--Section ID to link in contents-->
-{% block text_section_id %}javascript-objects-accessing-object-properties{% endblock %}
+{% block text_section_id %}JavaScript-objects-accessing-object-properties{% endblock %}
 
 <!--Section title-->
 {% block text_title %}Accessing Object Properties{% endblock %}
@@ -13,25 +13,25 @@
         Use dot notation to find the associated value to an object property. There are two ways of doing the same 
         thing, however if your name in the object also happens to be a reserved word, you need to use [].
     </p>
-    {% include 'javascript_app/objects/includes/code_snippets/access_1.html' %}
+    {% include 'javascript_app/objects/includes/code_snippets/access_object_syntax.html' %}
     <p>
         You can assign a new key to your object using the following syntax.
     </p>
-    {% include 'javascript_app/objects/includes/code_snippets/access_2.html' %}
+    {% include 'javascript_app/objects/includes/code_snippets/assign_new_key.html' %}
     <p>
         To assign a new value to an existing key.
     </p>
-    {% include 'javascript_app/objects/includes/code_snippets/access_3.html' %}
+    {% include 'javascript_app/objects/includes/code_snippets/assign_new_value.html' %}
     <p>
         You can also add a new property to an object.
     </p>
-    {% include 'javascript_app/objects/includes/code_snippets/access_4.html' %}
+    {% include 'javascript_app/objects/includes/code_snippets/add_new_property.html' %}
     <p>
         To remove the value completely, leaving the key with an undefined value, just define it as null or undefined.
     </p>
-    {% include 'javascript_app/objects/includes/code_snippets/access_5.html' %}
+    {% include 'javascript_app/objects/includes/code_snippets/remove_a_value.html' %}
     <p>
         Or delete the property entirely with either of the following syntax.
     </p>
-    {% include 'javascript_app/objects/includes/code_snippets/access_6.html' %}
+    {% include 'javascript_app/objects/includes/code_snippets/delete_a_property.html' %}
 {% endblock %}

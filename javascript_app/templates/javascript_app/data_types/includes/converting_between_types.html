@@ -2,7 +2,7 @@
 {% load static %}
 
 <!--Section ID to link in contents-->
-{% block text_section_id %}javascript-data-types-converting-between-types{% endblock %}
+{% block text_section_id %}JavaScript-data-types-converting-between-types{% endblock %}
 
 <!--Section title-->
 {% block text_title %}Converting Between Types{% endblock %}
@@ -14,7 +14,7 @@
         main example of this is when you add numbers and strings together, it will automatically convert the number into 
         a string and concatenate them.
     </p>
-    {% include 'javascript_app/data_types/includes/code_snippets/convert_1.html' %}
+    {% include 'javascript_app/data_types/includes/code_snippets/convert_data_types.html' %}
     <p>
         It is often useful to convert between values. Perhaps you want you add a value into a string, so will need to 
         convert it from a number to a string first. Or vice versa, perhaps the user inputs a number, which will, by 
@@ -22,7 +22,7 @@
         equations. To see the type of a value you can use
         <code class="written-code">typeof</code>.
     </p>
-    {% include 'javascript_app/data_types/includes/code_snippets/convert_2.html' %}
+    {% include 'javascript_app/data_types/includes/code_snippets/convert_data_types_examples.html' %}
     <p>
         Note that a long running bug in JavaScript (that persists due to the quirks of the foundations of the language).
         That 

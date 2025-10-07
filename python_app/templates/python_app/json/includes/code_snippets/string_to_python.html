@@ -1,0 +1,14 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Python-json-code-snippets-string-to-Python{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">json_string = '{"key": "value"}'
+data = json.loads(json_string)
+</code></pre>
+{% endblock %}

@@ -13,13 +13,17 @@ django.setup()
 from bs4 import BeautifulSoup
 from algoliasearch.search.client import SearchClient
 from django.conf import settings
-from pathlib import Path
 import asyncio
 import re
 
 
 # --- helper to slugify titles for anchor IDs ---
 def slugify(value: str) -> str:
+    """
+    Converts a string into a slug suitable for use as an HTML element ID.
+    Replaces all non-alphanumeric characters with hyphens, trims extras,
+    and lowercases the result.
+    """
     value = re.sub(r'[^a-zA-Z0-9]+', '-', value).strip('-')
     return value.lower()
 
@@ -51,7 +55,12 @@ async def run():
         # Path(settings.BASE_DIR) / 'templates',             # main templates folder
         Path(settings.BASE_DIR) / 'HTML' / 'templates',    # app1 templates
         Path(settings.BASE_DIR) / 'intro_to_full_stack' / 'templates',    # app2 templates
-
+        Path(settings.BASE_DIR) / 'CSS' / 'templates',
+        Path(settings.BASE_DIR) / 'javascript_app' / 'templates',
+        Path(settings.BASE_DIR) / 'python_app' / 'templates',
+        Path(settings.BASE_DIR) / 'analytics' / 'templates',
+        Path(settings.BASE_DIR) / 'backend' / 'templates',
+        Path(settings.BASE_DIR) / 'Flask_app' / 'templates',
     ]
     print(f"Templates directories to scan: {templates_dirs}")
 
@@ -75,13 +84,26 @@ async def run():
             soup = BeautifulSoup(html, "html.parser")
             title = soup.title.string if soup.title else file_path.stem
             paragraphs = " ".join(p.get_text(strip=True) for p in soup.find_all("p"))
+            
+            ### ADDITION: collect h4 headings with IDs
+            h4_headings = [
+                {"id": h.get("id"), "text": h.get_text(strip=True)}
+                for h in soup.find_all("h4")
+                if h.get("id")
+            ]
 
             # --- build URL with anchor ID ---
             relative_path = file_path.relative_to(templates_path)
             relative_dir = relative_path.parent
 
             # Get to topic URL from includes or includes/code_snippets etc
-            if relative_dir.name in {"code_snippets", "code_examples"}:
+            if relative_dir.name in {
+                "code_snippets",
+                "code_examples",
+                "tips",
+                "troubleshooting",
+                "html_css_example",
+            }:
                 original_section = relative_dir.name
                 preserved_part = relative_dir.name.replace("_", "-")  # convert underscores to hyphens
                 relative_dir = relative_dir.parent.parent
@@ -95,8 +117,14 @@ async def run():
                 dir_slug = relative_dir.as_posix().replace("/", "-").replace("_", "-") + "-" + preserved_part
                 if original_section == "code_snippets":
                     section_type = "Code Snippet"
-                else:
+                elif original_section == "code_examples":
                     section_type = "Code Example"
+                elif original_section == "tips":
+                    section_type = "Tip"
+                elif original_section == "troubleshooting":
+                    section_type = "Troubleshooting"
+                elif original_section == "html_css_example":
+                    section_type = "HTML and CSS example"
 
                 element_id = f"{dir_slug}-{slugify(title)}"
 
@@ -148,12 +176,26 @@ async def run():
             if section not in {"HTML", "CSS"}:
                 section = section.title()
 
+            # Rename JavaScript_App section
+            if section == "Javascript_App":
+                section = "JavaScript"
+
+            if section == "Python_App":
+                section = "Python"
+
+            if section == "Flask_App":
+                section = "Flask"
+
             # Ranking based on section type
             sort_order = {
                 "Topic Page": 0,
                 "Topic Section": 1,
-                "Code Example": 2,
-                "Code Snippet": 3,
+                # Leave 2 for subsection
+                "Troubleshooting": 3,
+                "Code Example": 4,
+                "HTML and CSS example": 5,
+                "Code Snippet": 6,
+                "Tip": 7,
             }
             rank_priority = sort_order.get(section_type, 99)
 
@@ -162,10 +204,22 @@ async def run():
             if pretty_title == "Home":
                 pretty_title = f"{section} Home"
 
-            # Update Html, Css, Js to HTML CSS JS
+            # Update Pretty Title with Corrections
             pretty_title = pretty_title.replace("Html", "HTML")
             pretty_title = pretty_title.replace("Css", "CSS")
+            pretty_title = pretty_title.replace("Javascript_App", "JavaScript")
+            pretty_title = pretty_title.replace("Javascript", "JavaScript")
             pretty_title = pretty_title.replace("Js", "JS")
+            pretty_title = pretty_title.replace("Python_App", "Python")
+            pretty_title = pretty_title.replace("Flask_App", "Flask")
+
+            # Update url from x-app to X
+            url_local = url_local.replace("javascript-app", "JavaScript")
+            url_heroku = url_heroku.replace("javascript-app", "JavaScript")
+            url_local = url_local.replace("python-app", "Python")
+            url_heroku = url_heroku.replace("python-app", "Python")
+            url_local = url_local.replace("flask-app", "Flask")
+            url_heroku = url_heroku.replace("flask-app", "Flask")
 
             # Add in extra keywords so that HTML returns HTML home
             extra_keywords = []
@@ -190,6 +244,29 @@ async def run():
                 })
                 print(f"Prepared record {object_id}: {title} ({file_path})")
                 object_id += 1
+
+                # Also index each h4 heading with ID
+                for h in h4_headings:
+                    heading_element_id = h["id"]
+                    heading_url_local = f"{url_local.split('#')[0]}#{heading_element_id}"
+                    heading_url_heroku = f"{url_heroku.split('#')[0]}#{heading_element_id}"
+
+                    records.append({
+                        "objectID": object_id,
+                        "file": str(file_path.relative_to(templates_path)),
+                        "title": h["text"],
+                        "prettyTitle": h["text"],
+                        "elementID": heading_element_id,
+                        "sectionType": "Topic Subsection",
+                        "section": section,
+                        "content": "",
+                        "urlLocal": heading_url_local,
+                        "urlHeroku": heading_url_heroku,
+                        "rankPriority": 2,
+                        "keywords": [section],
+                    })
+                    print(f"Prepared subsection record {object_id}: {h['text']} ({file_path})")
+                    object_id += 1
             else:
                 print(f"Skipping file {file_path} because title is 'contents'")
 

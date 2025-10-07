@@ -2,7 +2,7 @@
 {% load static %}
 
 <!--Section ID to link in contents-->
-{% block text_section_id %}javascript-scope-blocks-and-scope{% endblock %}
+{% block text_section_id %}JavaScript-scope-blocks-and-scope{% endblock %}
 
 <!--Section title-->
 {% block text_title %}Blocks and Scope{% endblock %}
@@ -12,12 +12,12 @@
     <p>
         A block in JavaScript is any code that is wrapped in curly brackets such as:
     </p>
-    {% include 'javascript_app/scope/includes/code_snippets/block_1.html' %}
+    {% include 'javascript_app/scope/includes/code_snippets/blocks.html' %}
     <p>
         If a variable is declared inside that block, it is “in-scope”. Declaring a variable outside of any blocks is 
         known as a global variable and are said to have global scope and can be accessed anywhere in your JavaScript 
         code. Too many global variables may cause issues in your code due to scope pollution, so if you can, make some 
         of your variables block scoped.
     </p>
-    {% include 'javascript_app/scope/includes/code_snippets/block_2.html' %}
+    {% include 'javascript_app/scope/includes/code_snippets/in_scope.html' %}
 {% endblock %}

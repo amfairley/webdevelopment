@@ -2,7 +2,7 @@
 {% load static %}
 
 <!--Section ID to link in contents-->
-{% block text_section_id %}python-classes-inheritance{% endblock %}
+{% block text_section_id %}Python-classes-inheritance{% endblock %}
 
 <!--Section title-->
 {% block text_title %}Inheritance{% endblock %}
@@ -12,7 +12,7 @@
     <p>
         Inheritance is used when creating specialized classes by letting you define a new class based on an existing one.
     </p>
-    {% include 'python_app/classes/includes/code_snippets/inheritance_1.html' %}
+    {% include 'python_app/classes/includes/code_snippets/inheritance_example.html' %}
     <ul>
         <li>
             Dog inherits from Animal class Dog(Animal)
@@ -24,10 +24,10 @@
     <p>
         One class can also contain instances of other classes, this is known as composition.
     </p>
-    {% include 'python_app/classes/includes/code_snippets/inheritance_2.html' %}
+    {% include 'python_app/classes/includes/code_snippets/inheritance_composition.html' %}
     <p>
         Python supports multiple inheritance. This allows one class to combine features from more than one parent class.
     </p>
-    {% include 'python_app/classes/includes/code_snippets/inheritance_3.html' %}
+    {% include 'python_app/classes/includes/code_snippets/multiple_inheritance.html' %}
 
 {% endblock %}

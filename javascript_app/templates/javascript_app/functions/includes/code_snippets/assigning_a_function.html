@@ -1,0 +1,17 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}JavaScript-functions-code-snippets-assigning-a-function{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">functionOne(a, b) {
+    return a + b;
+};
+const addNumbers = functionOne;
+addNumbers(1, 2); // returns 3
+</code></pre>
+{% endblock %}
