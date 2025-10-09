@@ -109,6 +109,14 @@ body.night-mode .offcanvas-navmenu {
 }
 
 /* Search bar */
+.algolia-logo-mobile {
+    height: 1.75rem;
+    border-radius: 50%;
+    border: 1px solid #333A3F;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 0.5rem;
+}
 .nav-search-bar {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -152,7 +160,7 @@ body.night-mode .nav-search-bar .site-seach-form-button {
 }
 
 @media (max-width: 900px) {
-    /* Style nav menu when the search basr is there*/
+    /* Style nav menu when the search bar is there*/
     .offcanvas-header {
         border-top: 1px solid #001F5C;
     }

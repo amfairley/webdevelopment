@@ -139,6 +139,13 @@ body.night-mode .site-logo-title {
     right: 99px;
 }
 
+.algolia-logo {
+    height: 1.75rem;
+    border-radius: 50%;
+    border: 1px solid #333A3F;
+    margin-bottom: 3px;
+}
+
 .top-search-bar {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -269,6 +276,8 @@ main {
     background-color: #001F5C;
     text-align: center;
     position: relative;
+    /* Gives offset on smaller page heights */
+    top: 2rem;
 }
 
 body.night-mode .site-footer {
