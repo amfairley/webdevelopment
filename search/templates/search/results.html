@@ -13,7 +13,7 @@
     <section class="search-result-block">
     {% if results %}
         {% for hit in results %}
-            <a class="result-link" href="{{ hit.urlLocal }}">
+            <a class="result-link" href="{{ hit.urlHeroku }}">
                 <div class="result-container">
                     <h3 class="result-title">{{ hit.prettyTitle }}</h3>
                     <p class="result-url">{{ hit.urlHeroku }}</p>
