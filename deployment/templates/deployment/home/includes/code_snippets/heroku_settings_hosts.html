@@ -1,0 +1,17 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}deployment-home-code-snippets-heroku-settings-hosts{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'webdevgrad-randomlettersandnumbers.herokuapp.com'
+]
+</code></pre>
+{% endblock %}

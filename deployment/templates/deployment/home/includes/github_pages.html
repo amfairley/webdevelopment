@@ -1,0 +1,25 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}deployment-home-github-pages{% endblock %}
+
+<!--Section title-->
+{% block text_title %}GitHub Pages{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        See the 
+        <a 
+            class="text-link"
+            href="{% url 'full_stack_github' %}#intro-to-full-stack-github-hosting-on-github-pages"
+            title="Go to the GitHub pages setion"
+            aria-label="Go to the GitHub pages setion"
+        >
+            GitHub pages
+        </a>
+        section on how to deploy your static site through GitHub pages.
+    </p>
+
+{% endblock %}

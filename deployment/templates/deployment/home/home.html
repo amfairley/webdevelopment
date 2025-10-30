@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Deployment{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Deployment</h2>
+
+    {% include 'deployment/home/includes/contents.html' %}
+    {% include 'deployment/home/includes/github_pages.html' %}
+    {% include 'deployment/home/includes/heroku.html' %}
+
+{% endblock %}

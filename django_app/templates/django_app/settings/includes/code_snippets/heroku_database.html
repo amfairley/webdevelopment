@@ -1,0 +1,32 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-settings-code-snippets-heroku-database{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python"># With other imports
+import dj_database_url
+
+# Database management
+# https://docs.djangoproject.com/en/5.1/ref/settings/#databases
+if 'DATABASE_URL' in os.environ:
+    # External database
+    DATABASES = &#123;
+        'default': dj_database_url.parse(
+            os.environ['DATABASE_URL']
+        )
+    &#125;
+else:
+    # Local database
+    DATABASES = &#123;
+        'default': &#123;
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        &#125;
+    &#125; 
+</code></pre>
+{% endblock %}

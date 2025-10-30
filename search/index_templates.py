@@ -62,6 +62,7 @@ async def run():
         Path(settings.BASE_DIR) / 'backend' / 'templates',
         Path(settings.BASE_DIR) / 'flask_app' / 'templates',
         Path(settings.BASE_DIR) / 'django_app' / 'templates',
+        Path(settings.BASE_DIR) / 'deployment' / 'templates',
     ]
     print(f"Templates directories to scan: {templates_dirs}")
 

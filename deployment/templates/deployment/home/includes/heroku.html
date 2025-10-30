@@ -1,0 +1,298 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}deployment-home-heroku{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Heroku{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        <a 
+            class="text-link"
+            href="https://www.heroku.com/"
+            title="Go to Heroku"
+            aria-label="Go to Heroku"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Heroku 
+        </a>
+        is a cloud-based
+        <dfn title="Platform-as-a-Service ">PaaS</dfn>
+        that allows developers to build, run, and scale web applications without managing the underlying server 
+        infrastructure. It abstracts away the complexities of deployment, letting you focus on writing code rather than 
+        configuring servers or networking.
+    </p>
+    <p>
+        You'd use Heroku when you want an easy, reliable way to deploy and host your web applications, especially for 
+        frameworks like Django and Flask.
+    </p>
+    <!--Useful Documentation-->
+    <h4 id="deployment-home-heroku-useful-documentation">Useful Documentation</h4>
+    <p>
+        On the Heroku Dashboard you can click on "Documentation" along the footer and it will take you to the dev 
+        centre with information on getting started, reference materials, tutorials which is very handle for referring 
+        back to during your deployment.
+    </p>
+
+    <!--Dynos-->
+    <h4 id="deployment-home-heroku-dynos">Dynos</h4>
+    <p>
+        <a 
+            class="text-link"
+            href="https://devcenter.heroku.com/articles/dynos"
+            title="Go to the Dynos page on Heroku"
+            aria-label="Go to the Dynos page on Heroku"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Dynos
+        </a>
+        in Heroku are Heroku managed Linux containers. The one's that we are most interested in are the web dynos that 
+        are containers where your application code runs. Hosting on Heroku is not free and they offer tiers of Dynos to 
+        pick from. The Eco Dyno will cover most of your personal development for only $5 a month.
+    </p>
+    <p>
+        Dynos can be selected from the billing section of your account settings and set in an app from the overview page.
+    </p>
+
+    <!--Create a New App-->
+    <h4 id="deployment-home-heroku-create-a-new-app">Create a New App</h4>
+    <p>
+        To create a new app in Heroku, head to the Dashboard and click on "create new app".  Add a unique app name with 
+        no spaces (use hyphens instead of spaces) and set your correction region. Then click on "create app" and you 
+        should see this app appear on your dashboard.
+    </p>
+
+    <!--The Heroku CLI-->
+    <h4 id="deployment-home-heroku-the-heroku-cli">The Heroku CLI</h4>
+    <p>
+        The Heroku 
+        <dfn title="Command Line Interface">CLI</dfn>
+        is a command-line tool provided by Heroku that lets you manage your apps, dynos, add-ons, config variables, 
+        logs, and deployments directly from your terminal. The CLI integrates with Git so you can push your code, scale 
+        processes, view logs, run one-off commands. Using the CLI means you don't have to manage servers or 
+        infrastructure directly. It's especially convenient for Django projects as you can treat deployment almost like 
+        your git pushes. Despite it's ease of use, I usually configure my apps through the dashboard correctly and rely
+        on the CLI for troubleshooting.
+    </p>
+    <p>
+        To install the CLI, first make sure you have Git installed and your project is under version control because 
+        Heroku will use a Git-remote to receive your code. Download and install the 
+        <a 
+            class="text-link"
+            href="https://devcenter.heroku.com/articles/heroku-cli"
+            title="Go to the Heroku CLI download page"
+            aria-label="Go to the Heroku CLI download page"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Heroku CLI
+        </a>
+        for your OS. After installation, you can check that it has worked by opening your terminal and running:
+    </p>
+    {% include 'deployment/home/includes/code_snippets/heroku_version.html' %}
+    <p>
+        You can access it in your terminal by running:
+    </p>
+    {% include 'deployment/home/includes/code_snippets/heroku_login.html' %}
+    <p>
+        It will prompt you to press any button to open a browser to confirm your login so just enter your account 
+        details there to authorise it. You can then see all possible commands with:
+    </p>
+    {% include 'deployment/home/includes/code_snippets/heroku_commands.html' %}
+    <p>
+        Then further information on each command can be seen by adding the command name and appending "help".
+    </p>
+    {% include 'deployment/home/includes/code_snippets/heroku_help.html' %}
+    <p>
+        Most commands in the CLI will need to be app specific so will mostly have appended:
+    </p>
+    {% include 'deployment/home/includes/code_snippets/heroku_append_app.html' %}
+    <p>
+        Here are some common commands to use in the Heroku CLI that you will need at some point or another:
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Command
+                </th>
+                <th>
+                    Use
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <code class="written-code">heroku apps</code>
+                </td>
+                <td>
+                    Show a list of your apps
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">heroku apps:rename new_name --app old_name</code>
+                </td>
+                <td>
+                    Rename app
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">heroku logs --tail --app app_name</code>
+                </td>
+                <td>
+                    View logs for an app named app_name
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">heroku open --app app_name</code>
+                </td>
+                <td>
+                    Open the live site for an app named app_name
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!--Preparing Your Django Project-->
+    <h4 id="deployment-home-heroku-preparing-your-django-project">Preparing Your Django Project</h4>
+    <p>
+        Before deploying your Django project on Heroku, certain changes and additions will need to be made. Firstly if 
+        you have a backend, you will need to have that hosted somewhere rather than locally with SQLite. This can be 
+        done through a Heroku Postgres addon.
+    </p>
+    <!--Preparing Your Django Project: Installs-->
+    <h4 id="deployment-home-heroku-preparing-your-django-project-installs">Preparing Your Django Project: Installs</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Install Command
+                </th>
+                <th>
+                    Action
+                </th>
+                <th>
+                    Use
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <code class="written-code">pip3 install psycopg2-binary</code>
+                </td>
+                <td>
+                    Installs psycopg2
+                </td>
+                <td>
+                    Psycopg2 is a PostgreSQL adapter for Python letting Django talk to the database pythonically
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">pip3 install gunicorn</code>
+                </td>
+                <td>
+                    Install Gunicorn
+                </td>
+                <td>
+                    <dfn title="Green Unicorn">Gunicorn</dfn> is a Python WSGI HTTP server. It runs your Django 
+                    application in production and handles incoming web requests from the internet.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">pip3 install dj-database-url</code>
+                </td>
+                <td>
+                    dj-database-url
+                </td>
+                <td>
+                    Converts a database url into a usable Heroku DATABASE_URL
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <!--Preparing Your Django Project: Files-->
+    <h4 id="deployment-home-heroku-preparing-your-django-project-files">Preparing Your Django Project: Files</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    File
+                </th>
+                <th>
+                    Use
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    requirements.txt
+                </td>
+                <td>
+                    Make sure you have an up to date requirements.txt file in your root directory that lists all 
+                    dependencies so Heroku's Python backbuild knows what to install to run your webapp correctly
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Procfile
+                </td>
+                <td>
+                    Create a Procfile file in your root directory (no extension) and have one line of code in it:<br>
+                    <code class="written-code">web: gunicorn your_project_name.wsgi</code><br>
+                    This tells Heroku how to run the web process.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!--Preparing Your Django Project: settings.py-->
+    <h4 id="deployment-home-heroku-preparing-your-django-project-settingspy">Preparing Your Django Project: settings.py</h4>
+    <p>
+        Update your project settings.py file ALLOWED_HOSTS variable with the URL for your Heroku app. This can be found 
+        in the dashboard for your app, then go Settings and you can see it listed in your "Domains". It will look 
+        something like app_name5141515vsd1as6.herokuapp.com. Remember to leave out the "https://" when you add it.
+    </p>
+    {% include 'deployment/home/includes/code_snippets/heroku_settings_hosts.html' %}
+    <p>
+        If using a database, import dj_database_url at the top. dj-database-url is a small Python utility library that 
+        parses a database URL string into Django's DATABASES configuration format. It simply takes a single string like 
+        postgres://username:password@hostname:5432/dbname and turns it into the structured dictionary Django expects 
+        in settings.py. Then update your DATABASE to check if there is a Heroku DATABASE_URL to use your database URL 
+        defined in your env.py file or to use the local one if in development.
+    </p>
+    {% include 'deployment/home/includes/code_snippets/heroku_settings_database.html' %}
+
+    <!--Config Vars-->
+    <h4 id="deployment-home-heroku-config-vars">Config Vars</h4>
+    <p>
+        When your site is deployed, it will not have access to your env.py file that is only stored locally on your 
+        system. The configuration variables is where you will transfer these keys to, to be kept secure on Heroku. They 
+        are found in Settings > Config Var in your app dashboard. Click "reveal config vars" to show them. Then go 
+        through and add all of your defined variables in env.py using the exact variable name and values. Add an extra 
+        DEBUG False variable here so that DEBUG is turned off in your deployed app.
+    </p>
+
+    <!--Deploy Through GitHub-->
+    <h4 id="deployment-home-heroku-deploy-through-github">Deploy Through GitHub</h4>
+    <p>
+        Now all that is left is to deploy your app from GitHub. In your app dashboard go to "Deploy" and here you can 
+        set your deployment method to GitHub, connect your correct repository and then either set it to automatically 
+        deploy when GitHub is updated or let you manually deploy when you want instead of after each change you make. 
+        With your app set up, you can see what it looks like by scrolling to the top and clicking on "Open app". 
+    </p>
+
+{% endblock %}

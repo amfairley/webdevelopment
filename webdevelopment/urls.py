@@ -32,4 +32,5 @@ urlpatterns = [
     path('analytics/', include('analytics.urls')),
     path('search/', include('search.urls')),
     path('Django/', include('django_app.urls')),
+    path('deployment/', include('deployment.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

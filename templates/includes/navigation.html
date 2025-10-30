@@ -235,6 +235,14 @@
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'analytics_seo' %}active{% endif %}" href="{% url 'analytics_seo' %}">SEO</a></li>
                 </ul>
             </li>
+            <!--Deployment-->
+            <li class="nav-item">
+                <!--
+                    Check the current page and add active class to it
+                    {percent if request.resolver_match.url_name == 'HTML_home' percent}active{percent endif percent}
+                -->
+                <a class="nav-link {% if request.resolver_match.url_name == 'deployment_home' %}active{% endif %}" href="{% url 'deployment_home' %}">Deployment</a>
+            </li>
             <!--Dropdown link example-->
             <li class="nav-item">
                 <span class="d-flex align-items-center">

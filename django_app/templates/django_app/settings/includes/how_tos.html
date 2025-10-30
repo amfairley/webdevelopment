@@ -187,4 +187,21 @@
     </p>
     {% include 'django_app/settings/includes/code_snippets/translation_middleware.html' %}
 
+    <!--Heroku-->
+    <h4 id="Django-settings-how-tos-heroku">Heroku</h4>
+    <p>
+        Update your project settings.py file ALLOWED_HOSTS variable with the URL for your Heroku app. This can be found 
+        in the dashboard for your app, then go Settings and you can see it listed in your "Domains". It will look 
+        something like app_name5141515vsd1as6.herokuapp.com. Remember to leave out the "https://" when you add it.
+    </p>
+    {% include 'django_app/settings/includes/code_snippets/heroku_hosts.html' %}
+    <p>
+        If using a database, import dj_database_url at the top. dj-database-url is a small Python utility library that 
+        parses a database URL string into Django's DATABASES configuration format. It simply takes a single string like 
+        postgres://username:password@hostname:5432/dbname and turns it into the structured dictionary Django expects 
+        in settings.py. Then update your DATABASE to check if there is a Heroku DATABASE_URL to use your database URL 
+        defined in your env.py file or to use the local one if in development.
+    </p>
+    {% include 'django_app/settings/includes/code_snippets/heroku_database.html' %}
+
 {% endblock %}
