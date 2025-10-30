@@ -45,7 +45,6 @@ abbr:hover {
     cursor: default;
 }
 
-
 code {
     font-family: "JetBrains Mono", "Courier New", monospace;
     color: inherit;
@@ -71,6 +70,9 @@ body.night-mode .site-button {
     color: #1E1E1E;
 }
 
+img {
+    max-width: 100%;
+}
 /* Images */
 .site-image-container {
     margin: 0 auto;
