@@ -1,0 +1,16 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-search-code-snippets-algolia-search-template{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="html">&lt;form action="&#123;% url 'search' %&#125;" method="get"&gt;
+    &lt;input type="text" name="q" placeholder="Search site content" value="&#123;&#123; query|default:'' &#125;&#125;"&gt;
+    &lt;button type="submit"&gt;Search&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+{% endblock %}

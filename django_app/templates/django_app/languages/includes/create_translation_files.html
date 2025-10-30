@@ -1,0 +1,40 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-languages-create-translation-files{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Create Translation Files{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        With having trans variables in the templates you can run the translation tool to create translation files. 
+    </p>
+    {% include 'django_app/languages/includes/code_snippets/makemessages.html' %}
+    <ul>
+        <li>This will ignore the requirements.txt file, which is not utf-8 and would cause errors</li>
+        <li>It creates .po files in the folder in locale for each language e.g. in locale/en</li>
+        <li>It works by looking for the translations from views</li>
+    </ul>
+    <p>
+        The .po files will be a list of the translations. They will have:
+    </p>
+    <ul>
+        <li>A comment of the location where the gettext translation was specified</li>
+        <li>An msgid which shows what the gettext function was called on</li>
+        <li>An msgstr which shows what string will be shown for that language</li>
+    </ul>
+    {% include 'django_app/languages/includes/code_snippets/po_example.html' %}
+    <p>
+        You can now go through these files and update the msgstr strings to show what you want displayed. The benefit 
+        of doing it this way instead of automatic translation is that you can have paragraphs translated so that their 
+        message is still clear and the prose flows well rather than a disjointed word by word translation.
+    </p>
+    <p>
+        With all your translations written, you can then compile them.
+    </p>
+    {% include 'django_app/languages/includes/code_snippets/compilemessages.html' %}
+
+{% endblock %}

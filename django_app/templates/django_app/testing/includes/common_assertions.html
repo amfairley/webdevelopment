@@ -1,0 +1,29 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-testing-common-assertions{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Common Assertions{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <ul>
+        <li>
+            <code class="written-code">self.assertEqual(x, y)</code> - Check equality.
+        </li>
+        <li>
+            <code class="written-code">self.assertTrue(x)</code> / <code class="written-code">self.assertFalse(x)</code>
+        </li>
+        <li>
+            <code class="written-code">self.assertIn(x, y)</code> - Check that x is in y.
+        </li>
+        <li>
+            <code class="written-code">self.assertTemplateUsed(response, template)</code>
+        </li>
+        <li>
+            <code class="written-code">self.assertRedirects(response, url)</code>
+        </li>
+    </ul>
+{% endblock %}

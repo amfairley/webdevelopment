@@ -1,0 +1,20 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-settings-code-snippets-installed-apps{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">INSTALLED_APPS = [
+    'django.contrib.admin',          # Django's built-in admin panel  
+    'django.contrib.auth',           # Authentication system  
+    'django.contrib.contenttypes',   # Framework for handling content types  
+    'django.contrib.sessions',       # Manages user sessions  
+    'django.contrib.messages',       # Enables messaging framework  
+    'django.contrib.staticfiles',    # Handles static file management  
+]
+</code></pre>
+{% endblock %}

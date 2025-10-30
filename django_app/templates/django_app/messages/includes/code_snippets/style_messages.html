@@ -1,0 +1,22 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-messages-code-snippets-style-messages{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="HTML">&#123;% if messages %&#125;
+  &lt;div class="container mt-3"&gt;
+    &#123;% for message in messages %&#125;
+      &lt;div class="alert alert-&#123;&#123; message.tags &#125;&#125; alert-dismissible fade show" role="alert"&gt;
+        &#123;&#123; message &#125;&#125;
+        &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+      &lt;/div&gt;
+    &#123;% endfor %&#125;
+  &lt;/div&gt;
+&#123;% endif %&#125;
+</code></pre>
+{% endblock %}

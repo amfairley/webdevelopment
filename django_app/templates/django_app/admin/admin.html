@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Django - Admin{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Admin</h2>
+
+    {% include 'django_app/admin/includes/contents.html' %}
+    {% include 'django_app/admin/includes/setup.html' %}
+    {% include 'django_app/admin/includes/updating_models.html' %}
+
+{% endblock %}

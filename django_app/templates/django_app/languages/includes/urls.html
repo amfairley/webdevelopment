@@ -1,0 +1,28 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-languages-urls{% endblock %}
+
+<!--Section title-->
+{% block text_title %}URLs{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        In your project level urls.py file you can create a function to redirect the language to the default language 
+        if none is selected.
+    </p>
+    {% include 'django_app/languages/includes/code_snippets/default_language.html' %}
+    <p>
+        Then in your urlpatterns you can add in this redirect to the homepage so that the default language is 
+        selected when a user first comes to your website.
+    </p>
+    {% include 'django_app/languages/includes/code_snippets/url_patterns.html' %}
+    <p>
+        You can then add your app urls to the urlpatterns by wrapping them in i18n_patterns() to automatically insert a 
+        language code at the start of the url.
+    </p>
+    {% include 'django_app/languages/includes/code_snippets/i18n.html' %}
+
+{% endblock %}

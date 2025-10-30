@@ -1,0 +1,49 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-getting-started-with-django-installing-django{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Installing Django{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        With your virtual environment activated, install Django using:
+    </p>
+    {% include 'django_app/getting_started_with_django/includes/code_snippets/install_django.html' %}
+    <p>
+        To install a specific version, append the version number after django with ==. For example, to install Django 
+        4.2.5:
+    </p>
+    {% include 'django_app/getting_started_with_django/includes/code_snippets/install_django_version.html' %}
+    <p>
+        You can even upgrade or downgrade your version of django if required using the 
+        <code class="written-code">--upgrade django</code>
+        command specifying the version that you want to upgrade (or downgrade) to. Please note, even if you're 
+        downgrading, the command is still “--upgrade", but your version number would be a previous version than your 
+        current one, such as.
+    </p>
+    {% include 'django_app/getting_started_with_django/includes/code_snippets/upgrade_downgrade_django.html' %}
+    <p>
+        To check the currently installed version of django, run:
+    </p>
+    {% include 'django_app/getting_started_with_django/includes/code_snippets/django_version.html' %}
+    <p>
+        Don't forget to update your requirements.txt file as we have installed (or modified) a package:
+    </p>
+    {% include 'django_app/getting_started_with_django/includes/code_snippets/freeze_requirements.html' %}
+    <p>
+        With Django fully installed, we can now create our project. First, ensure you're in the desired project 
+        directory (the project directory that has the venv, README.md etc inside), then run:
+    </p>
+    {% include 'django_app/getting_started_with_django/includes/code_snippets/django_create_project.html' %}
+    <p>
+        Replace project_name with your actual project name. For example, if you're building a cupcake shop website, use:
+    </p>
+    {% include 'django_app/getting_started_with_django/includes/code_snippets/django_create_project_example.html' %}
+    <p>
+        The trailing dot (.) specifies that Django should create the project in the current directory.
+    </p>
+{% endblock %}

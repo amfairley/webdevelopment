@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Django - Languages{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Languages</h2>
+
+    {% include 'django_app/languages/includes/contents.html' %}
+    {% include 'django_app/languages/includes/django_languages.html' %}
+    {% include 'django_app/languages/includes/gnu_gettext.html' %}
+    {% include 'django_app/languages/includes/in_your_views.html' %}
+    {% include 'django_app/languages/includes/in_the_template.html' %}
+    {% include 'django_app/languages/includes/update_settingspy.html' %}
+    {% include 'django_app/languages/includes/make_a_locale_folder.html' %}
+    {% include 'django_app/languages/includes/create_translation_files.html' %}
+    {% include 'django_app/languages/includes/urls.html' %}
+    {% include 'django_app/languages/includes/language_dropdown.html' %}
+    {% include 'django_app/languages/includes/adding_a_new_translation.html' %}
+
+{% endblock %}

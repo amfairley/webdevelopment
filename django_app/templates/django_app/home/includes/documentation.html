@@ -1,0 +1,28 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-home-documentation{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Documentation{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The hints, tips, tricks, and examples provided herein are nowhere near being all-encompassing, and are instead 
+        aimed to get a novice to a slightly-more-competent-novice level. There are far more encompassing guides 
+        available out there but a must would be the 
+        <a 
+            class="text-link"
+            href="https://docs.djangoproject.com/en/5.1/"
+            title="Django documentation"
+            aria-label="Go to the Django documentation"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Django
+        </a>
+        professional documentation.
+    </p>
+{% endblock %}

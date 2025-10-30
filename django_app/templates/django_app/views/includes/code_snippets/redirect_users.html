@@ -1,0 +1,16 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-views-code-snippets-redirect-users{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">from django.shortcuts import redirect
+
+def go_home(request):
+    return redirect('home')  # where 'home' is a named URL in urls.py
+</code></pre>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-crud-code-snippets-create-view{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">from django.shortcuts import render, redirect
+from .forms import ItemForm
+
+def add_item(request):
+    if request.method == 'POST':
+        form = ItemForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('get_todo_list')  # Redirect to your list page
+    else:
+        form = ItemForm()
+    return render(request, 'todo/add_item.html', {'form': form})
+
+</code></pre>
+{% endblock %}

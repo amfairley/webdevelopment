@@ -1,0 +1,29 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-views-what-do-views-handle{% endblock %}
+
+<!--Section title-->
+{% block text_title %}What do Views Handle?{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Views in Django handle the core logic of your app. They are responsible for processing incoming HTTP requests, 
+        interacting with the database (if required), and returning an appropriate HTTP response such as a rendered HTML 
+        template, redirect, or plain text.
+    </p>
+    <p>
+        This includes:
+    </p>
+    <ul>
+        <li>Returning plain text or HTML</li>
+        <li>Rendering templates with context</li>
+        <li>Redirecting users</li>
+        <li>Processing form data</li>
+        <li>Querying or modify data in from a database</li>
+        <li>Displaying feedback messages</li>
+    </ul>
+
+{% endblock %}

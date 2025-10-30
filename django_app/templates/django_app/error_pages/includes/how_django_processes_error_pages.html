@@ -1,0 +1,49 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-error-pages-how-django-processes-error-pages{% endblock %}
+
+<!--Section title-->
+{% block text_title %}How Django Processes Error Pages{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        When something goes wrong on your site such as a missing page, a server error, or a permission problem, you 
+        will want to display error page that keep your site's styling and are on brand for your webapp. You can easily 
+        create custom templates for common HTTP error codes in Django.
+    </p>
+    <p>
+        By default, Django automatically looks in your root level templates directory for the following files:
+    </p>
+    <ul>
+        <li>templates/404.html</li>
+        <li>templates/500.html</li>
+        <li>templates/403.html</li>
+        <li>templates/400.html</li>
+    </ul>
+    <p>
+        These don't require views or URLs and Django will serve them automatically when those errors occur. Therefore, 
+        you should create your HTML files here and name then using the names given above.
+    </p>
+    <p>
+        Testing them is not possible in development so your site will need to be deployed in order to show the error 
+        pages you have created when that error is caused.
+    </p>
+    <p>
+        Note that due to the location of the error pages, there are no associated views.py files so if you need to load 
+        any information that you would normally do through a view, you will need to pass it through a context processor 
+        outlined 
+        <a 
+            class="text-link"
+            href="{% url 'django_apps' %}#Django-apps-the-core-app"
+            title="Go to the Django core app section"
+            aria-label="Go to the Django core app section"
+        >
+            here
+        </a>
+        in the core app section.
+    </p>
+
+{% endblock %}

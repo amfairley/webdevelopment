@@ -1,0 +1,18 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-messages-including-messages-in-your-views{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Including Messages in your Views{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        To access messages in your views, first import Django's message system at the top of the file and then add 
+        your messages like so:
+    </p>
+    {% include 'django_app/messages/includes/code_snippets/messages_views.html' %}
+
+{% endblock %}

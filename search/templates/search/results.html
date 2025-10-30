@@ -14,11 +14,21 @@
     {% if results %}
         {% for hit in results %}
             <a class="result-link" href="{{ hit.urlHeroku }}">
-                <div class="result-container">
-                    <h3 class="result-title">{{ hit.prettyTitle }}</h3>
-                    <p class="result-url">{{ hit.urlHeroku }}</p>
-                    <p>{{ hit.section }}</p>
+                <div class="result-container row">
+                    <!--Page title-->
+                    <div class="col-6">
+                        <h3 class="result-title">{{ hit.prettyTitle }}</h3>
+                    </div>
+                    <div class="col-6 result-section">
+                        <p>{{ hit.section }}</p>
+                    </div>
+                    <!--Page Section-->
+
+                    <!--Page URL-->
+                    <p class="result-url">{{ hit.urlLocal }}</p>
+                    <!--Section Type-->
                     <p class="result-type"> Section type: {{ hit.sectionType }}</p>
+                    <!--Page Content - 30 words-->
                     {% if hit.content %}
                         <p class="result-content">Content: {{ hit.content|truncatewords:30 }}</p>
                     {% endif %}

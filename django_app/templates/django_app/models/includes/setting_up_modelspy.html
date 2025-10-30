@@ -1,0 +1,54 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-models-setting-up-modelspy{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Setting up models.py{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Import Django's model tools to access the 
+        <code class="written-code">models.Model</code>
+        base class you'll use to define each table.
+    </p>
+    {% include 'django_app/models/includes/code_snippets/import_models.html' %}
+    <p>
+        Define a Model which you can think of like a table.
+    </p>
+    <ul>
+        <li>
+            Define a class inheriting from the models.Model base class. This provides key functionality to your model 
+            from the start including table creation with migration, query methods, integration with forms, and most 
+            importantly giving them ID values automatically in the order of instantiation.
+        </li>
+        <li>
+            Remember to define your model with a capital letter.
+        </li>
+        <li>
+            Add a docstring to describe your model.
+        </li>
+        <li>
+            Define your model fields, these will be the column titles in your table. They take the form of the column 
+            title variable before an equal sign, followed by the syntax of 
+            <code class="written-code">models.FieldClass(attributes)</code>,
+            where the FieldClasses depend on your requirements for the data (string, integer, Boolean etc) and the 
+            attributes consequently depend on the FieldClass. Example of these are outlined below.
+        </li>
+        <li>
+            Define a 
+            <code class="written-code">__str__(self):</code>
+            function that will return the Model as a string, similar to the 
+            <code class="written-code">__repr(self)__</code>
+            function in Flask. This special method changes how the item appears in admin or shell. Instead of TableName 
+            object (1), it will show the instance's name.
+        </li>
+        <li>
+            Define any other Class methods.
+        </li>
+    </ul>
+    {% include 'django_app/models/includes/code_snippets/define_a_model.html' %}
+
+{% endblock %}

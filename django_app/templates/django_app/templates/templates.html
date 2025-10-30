@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Django - Templates{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Templates</h2>
+
+    {% include 'django_app/templates/includes/contents.html' %}
+    {% include 'django_app/templates/includes/global_templates.html' %}
+    {% include 'django_app/templates/includes/base_template.html' %}
+    {% include 'django_app/templates/includes/app_templates.html' %}
+
+{% endblock %}

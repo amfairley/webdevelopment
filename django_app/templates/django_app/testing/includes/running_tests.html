@@ -1,0 +1,40 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-testing-running-tests{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Running Tests{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Use the following commands in the terminal to run the tests in your tests files.
+    </p>
+    <p>
+        To run all the tests:
+    </p>
+    {% include 'django_app/testing/includes/code_snippets/run_tests.html' %}
+    <p>
+        To run tests from a specific file, append the name of your app and the name of the test file:
+    </p>
+    {% include 'django_app/testing/includes/code_snippets/run_test_file.html' %}
+    <p>
+        To run a specific test class from a file:
+    </p>
+    {% include 'django_app/testing/includes/code_snippets/run_test_class.html' %}
+    <p>
+        To run a specific test method from a file:
+    </p>
+    {% include 'django_app/testing/includes/code_snippets/run_test_method.html' %}
+    <p>
+        The output will be displayed as a string of results with each character representing the result of a test
+        such as ".....E....F....." with the output meaning:
+    </p>
+    <ul>
+        <li>. - Passed</li>
+        <li>F - Failed</li>
+        <li>E - Error</li>
+    </ul>
+{% endblock %}

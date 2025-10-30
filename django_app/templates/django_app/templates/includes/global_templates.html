@@ -1,0 +1,103 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-templates-global-templates{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Global Templates{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You will want to keep some global templates separate from your apps so that they are accessible across your 
+        website. The main examples of this are the constant in your pages such as a header, footer, and navigation 
+        section that will be on every page. Creating them in your root directory level templates folder lets you link 
+        them to your pages and include or extend them using the Django templating language. Keywords and functionality 
+        are explained further in the 
+        <a 
+            class="text-link"
+            href="#"
+            title="Go to the Django Templating Language section"
+            aria-label="Go to the Django Templating Language section"
+        >
+            Django Templating Language
+        </a>
+        section. 
+    </p>
+    <ul>
+        <li>
+            Include: Injects the whole HTML content into your page at that specific part of your HTML file where you 
+            include it. 
+            <ul>
+                <li>
+                    <code class="written-code">&#123;% include "includes/navigation.html" %&#125;</code>
+                </li>
+            </ul>
+        </li>
+        <li>
+            Extend: Inherits the template structure of the file. This can be seen as the inverse of Include, as you 
+            will define 'blocks' in the file you extend and then define what fills them in your file that extends it.
+            <ul>
+                <li>
+                    The top of your page file that extends the base.html file will have 
+                    <code class="written-code">&#123;% extends 'base.html' %&#125;</code>
+                </li>
+                <li>
+                    In the base.html file there will be 
+                    <dfn title="Sections">blocks</dfn>
+                    you can assign with any name such as 
+                    <code class="written-code">&#123;% block blockname_1 %&#125;&#123;% endblock %&#125;</code>
+                    or 
+                    <code class="written-code">&#123;% block main_content %&#125;&#123;% endblock %&#125;</code>
+                </li>
+                <li>
+                    In your file that extends the base.html file you will have these blocks defined with HTML between 
+                    the start and end blocks that will appear in the section of that block on the base template
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <p>
+        A slightly less complicated way to look with a simple example.
+    </p>
+    <ul>
+        <li>You will have a navigation.html file that has your navigation sections</li>
+        <li>Your base template will include the navigation file and have sections (blocks) X, Y, and Z that are empty</li>
+        <li>A new template e.g. in an app will extend the base template (which also has the navigation layout in it) and define what is shown in sections (blocks) X, Y, and Z</li>
+    </ul>
+    <p>
+        This theory can be 
+        <dfn title="Forgive the pun...">extended</dfn>
+        for any reusable section of your website. For instance for code snippets in this website I have a template set 
+        up so that all I need to do is extend them and add the code so that they all keep the same layout without 
+        having to retype or copy the HTML for it each time.
+    </p>
+    <p>
+        The root level templates folder may look like:
+    </p>
+    <ul>
+        <li>
+            templates
+            <ul>
+                <li>
+                    base.html
+                </li>
+                <li>
+                    404.html
+                </li>
+                <li>
+                    includes
+                    <ul>
+                        <li>
+                            navigation.html
+                        </li>
+                        <li>
+                            code_snippet.html
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+{% endblock %}

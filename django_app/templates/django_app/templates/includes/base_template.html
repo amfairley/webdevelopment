@@ -1,0 +1,35 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-templates-base-template{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Base Template{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        There are some things that you should include in your base template, with most of them covered 
+        <a 
+            class="text-link"
+            href="{% url 'HTML_example' %}"
+            title="Go to the HTML example page"
+            aria-label="Go to the HTML example page"
+        >
+            here 
+        </a>
+        in the example HTML page.
+    </p>
+    <p>
+        For instance the head element should contain:
+    </p>
+    <ul>
+        <li>Meta data</li>
+        <li>Bootstrap links</li>
+        <li>Static CSS and JS links</li>
+        <li>Fontawesome</li>
+        <li>Favicon</li>
+    </ul>
+
+{% endblock %}

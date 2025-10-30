@@ -1,0 +1,24 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-search-code-snippets-indexer-async-function-main{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python"># This block ensures the script only runs when executed directly
+# (not when imported as a module into another script).
+if __name__ == "__main__":
+    # Import asyncio here again (even though imported earlier) so this block is self-contained.
+    import asyncio
+
+    # Print a message to indicate the script is starting execution.
+    print("Starting async indexer...")
+
+    # Run the async `run()` function inside Python's event loop.
+    # This triggers the indexing process defined above.
+    asyncio.run(run())
+</code></pre>
+{% endblock %}

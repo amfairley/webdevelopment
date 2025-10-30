@@ -1,0 +1,19 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-messages-code-snippets-messages-views{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">from django.shortcuts import redirect, render
+from django.contrib import messages
+
+def profile_update(request):
+    # some logic here...
+    messages.success(request, "Your profile has been updated successfully!")
+    return redirect('profile')
+</code></pre>
+{% endblock %}

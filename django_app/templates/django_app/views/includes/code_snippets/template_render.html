@@ -1,0 +1,16 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-views-code-snippets-template-render{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python"># todo/views.py
+from django.shortcuts import render
+def todo_list(request):
+    return render(request, 'todo/todo_list.html')
+</code></pre>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-testing-test-driven-development{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Test-Driven Development{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        <dfn title="Test Driven Development">TDD</dfn>
+        is a key mindset and methodology to get into when developing any code. In simple terms, you would write a small 
+        test to test for 1 functionality and run it. Obviously this will fail as no other code has been written. From here, 
+        write the code until the test passes. Then take that code and refactor it to be the simplest it can be whilst still 
+        passing the test. Then expand the test or add another for further functionality. This will fail, so write the code 
+        until it passes. Then refactor the new code and so on and so on. The core of this philosophy is the knowledge that 
+        everything was working "5 seconds ago" and it promotes modular and clear coding.
+    </p>
+    <p>
+        You will often see TDD described as these 3 stages:
+    </p>
+    <ul>
+        <li>Red - Write a test for the desired functionality. It fails (because the feature doesn't exist yet)</li>
+        <li>Green - Implement the code to make the test pass</li>
+        <li>Refactor - Clean up code while keeping tests green</li>
+    </ul>
+    <p>
+        Repeat this process for each feature.
+    </p>
+  
+{% endblock %}

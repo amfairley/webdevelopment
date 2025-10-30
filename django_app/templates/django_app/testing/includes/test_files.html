@@ -1,0 +1,31 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-testing-test-files{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Test Files{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        When you create a Django app, Django automatically generates a tests.py file. For larger projects, it is best 
+        to split tests into multiple files for clarity. Inside an app you can create a tests folder to put all the test 
+        files in, for most projects 3 test files will suffice per app:
+    </p>
+    <ul>
+        <li>test_views.py</li>
+        <li>test_models.py</li>
+        <li>test_forms.py</li>
+    </ul>
+    <p>
+        At the top of these files you will need to import the correct libraries and methods along with the model or 
+        form that is being tested.
+    </p>
+    {% include 'django_app/testing/includes/code_snippets/test_files.html' %}
+    <p>
+        TestCase extends Python's unittest.TestCase and includes additional Django utilities like an in-memory database 
+        and a test client for simulating HTTP requests.
+    </p>
+{% endblock %}

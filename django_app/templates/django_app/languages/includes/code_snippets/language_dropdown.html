@@ -1,0 +1,24 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-languages-code-snippets-language-dropdown{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="html">&lt;ul class="dropdown-menu" aria-labelledby="dropdownMenuButton"&gt;
+    &#123;% get_current_language  as LANGUAGE_CODE %&#125;
+    &#123;% get_available_languages  as LANGUAGES %&#125;
+    &#123;% get_language_info_list for LANGUAGES as languages %&#125;
+    &#123;% for lang in languages %&#125;
+        &lt;li&gt;
+            &lt;a class="dropdown-item" href="/&#123;&#123; lang.code &#125;&#125;/"&gt;
+                &#123;&#123; lang.name_local &#125;&#125;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &#123;% endfor %&#125;
+&lt;/ul&gt;
+</code></pre>
+{% endblock %}

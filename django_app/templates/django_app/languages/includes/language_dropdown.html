@@ -1,0 +1,18 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-languages-language-dropdown{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Language Dropdown{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You will need a way for the user to decide which language they want to use. Here is a simple language dropdown 
+        menu.
+    </p>
+    {% include 'django_app/languages/includes/code_snippets/language_dropdown.html' %}
+
+{% endblock %}

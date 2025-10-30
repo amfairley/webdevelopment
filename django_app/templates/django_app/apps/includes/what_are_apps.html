@@ -1,0 +1,18 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-apps-what-are-apps{% endblock %}
+
+<!--Section title-->
+{% block text_title %}What are Apps?{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        In Django, apps are self-contained pieces of functionality that contribute to the site and provide one key 
+        function. E.g. for a Facebook clone you might have an app for newsfeed, messaging, adding friends etc. They are 
+        a reusable, self-contained collection of code that can be passed around project to project to speed up 
+        development. They typically exist as folders in your root directory that are created when you start them.
+    </p>
+{% endblock %}

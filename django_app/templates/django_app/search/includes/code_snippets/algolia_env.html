@@ -1,0 +1,15 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-search-code-snippets-algolia-env{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">os.environ["ALGOLIA_APP_ID"] = ""
+os.environ["ALGOLIA_SEARCH_KEY"] = ""
+os.environ["ALGOLIA_WRITE_KEY"] = ""
+</code></pre>
+{% endblock %}

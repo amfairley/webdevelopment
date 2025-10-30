@@ -1,0 +1,61 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-views-functions{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Functions{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <!--Template Rendering-->
+    <h4 id="Django-views-functions-template-rendering">Template Rendering</h4>
+    <p>
+        To direct users to pages, you can define functions that are typically named after the page or template you wish 
+        to render that takes request as an argument.
+    </p>
+    <p>
+        Inside this function, you return a call to 
+        <code class="written-code">render()</code>,
+        passing in:
+    </p>
+    <ul>
+        <li>
+            The request object
+        </li>
+        <li>
+            The relative path to the template (e.g., 'appname/page_name.html')
+        </li>
+    </ul>
+    <p>
+        For example, in a to do app:
+    </p>
+    {% include 'django_app/views/includes/code_snippets/template_render.html' %}
+    <ul>
+        <li>This view will render the file located at todo/templates/todo/todo_list.html.</li>
+        <li>The file path is relative to the templates search path, not the full system path.</li>
+    </ul>
+    {% include 'django_app/views/includes/troubleshooting/troubleshoot_template_render.html' %}
+    <!--Returning Context to Templates-->
+    <h4 id="Django-views-functions-returning-context-to-templates">Returning Context to Templates</h4>
+    <p>
+        To return context in your template rendering functions, create a context dictionary of variables and then pass 
+        this context dictionary as a third parameter in the render() function behind the request object and the template
+        path. Generally, the keys defined within the context dictionary will have the same name as the values defined 
+        within the function e.g. 'products': products, but for clarity; the key on the left hand side will be the 
+        variable that you can access in the template using the Django templating language e.g. {{ products }} and the 
+        value is the Python variable defined in the function.
+    </p>
+    {% include 'django_app/views/includes/code_snippets/passing_context.html' %}
+    <!--Returning Plain Text-->
+    <h4 id="Django-views-functions-returning-plain-text">Returning Plain Text</h4>
+    {% include 'django_app/views/includes/code_snippets/return_plain_text.html' %}
+    <!--Redirecting Users-->
+    <h4 id="Django-views-functions-redirecting-users">Redirecting Users</h4>
+    {% include 'django_app/views/includes/code_snippets/redirect_users.html' %}
+    <!--After a Successful Form Submission-->
+    <h4 id="Django-views-functions-after-a-successful-form-submission">After a Successful Form Submission</h4>
+    {% include 'django_app/views/includes/code_snippets/form_submission.html' %}
+
+{% endblock %}

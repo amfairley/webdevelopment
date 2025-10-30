@@ -1,0 +1,16 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-settings-code-snippets-link-env-debug{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">if "DEVELOPMENT" in os.environ:
+    DEBUG = True
+else:
+    DEBUG = False
+</code></pre>
+{% endblock %}

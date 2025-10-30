@@ -1,0 +1,222 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-search-algolia{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Algolia{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <!--Set up an Algolia Account-->
+    <h4 id="Django-search-algolia-set-up-an-algolia-account">Set up an Algolia Account</h4>
+    <p>
+        Go to the 
+        <a
+            class="text-link"
+            href="https://www.algolia.com/"
+            title="Go to the Algolia website"
+            aria-label="Go to the Algolia website"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Algolia
+        </a>
+        website and sign up for a free account. I signed up through GitHub to keep all of my web development tools 
+        connected. You'll need to get three key pieces of information:
+    </p>
+    <ul>
+        <li>Algolia APP ID</li>
+        <li>Algolia Search Key</li>
+        <li>Aloglia Write Key</li>
+    </ul>
+    <p>
+        These can all be found when you have created you first app, go to your account dropdown in the top right-hand 
+        corner, select settings, and then "API Keys" which is under the "Teams and Access" section.
+    </p>
+
+    <!--Prepare Your Django Project-->
+    <h4 id="Django-search-algolia-prepare-your-django-project">Prepare Your Django Project</h4>
+    <p>
+        The first thing to do in you Django project is to install the Algolia Python client. This is the official 
+        Algolia Python API client you'll use for pushing and managing your indices. Also install beautiful soup 4, to 
+        parse HTML and extract text. Beautiful soup 4 is needed in my project because there is no backend database to 
+        search, so I will go through and scrape all the text from each HTML page so that they can be searched.
+    </p>
+    {% include 'django_app/search/includes/code_snippets/algolia_install.html' %}
+    <p>
+        Then add it to your requirements.
+    </p>
+    {% include 'django_app/search/includes/code_snippets/requirements.html' %}
+    <p>
+        Next, introduce your Algolia credentials securely in your project by defining them inside you env.py file.
+    </p>
+    {% include 'django_app/search/includes/code_snippets/algolia_env.html' %}
+    <p>
+        And loading them from your environment variables to your settings.py.
+    </p>
+    {% include 'django_app/search/includes/code_snippets/algolia_settings.html' %}
+
+    <!--Create an App to Handle the Search-->
+    <h4 id="Django-search-algolia-create-an-app-to-handle-the-search">Create an App to Handle the Search</h4>
+    <p>
+        To keep things modular, I created an app named search and then added it to the list of installed apps in my 
+        settings.py file.
+    </p>
+    {% include 'django_app/search/includes/code_snippets/algolia_create_app.html' %}
+    <p>
+        This app will provide 5 core things:
+    </p>
+    <ul>
+        <li>
+            A template for the search bar that can be included into my base template (I actually created two, as the 
+            search bar in my site header on larger screens has a different layout to the search bar in the burger menu 
+            on smaller screen sizes).
+        </li>
+        <li>
+            A template for a page to display the search results
+        </li>
+        <li>
+            A view to handle the search and results display
+        </li>
+        <li>
+            URLs to handle the search
+        </li>
+        <li>
+            An indexer to add records to Algolia. This is not strictly necessary for projects with backends you want to 
+            search through such as searching through products on a shop site. Algolia provides a way  for you to upload 
+            a JSON, CSV (Commaseparated value file), TSV (Tab separated value file) of your backend or even crawl your 
+            website for data.
+        </li>
+    </ul>
+
+    <!--Create an Indexer for the Templates-->
+    <h4 id="Django-search-algolia-create-an-indexer-for-the-templates">Create an Indexer for the Templates</h4>
+    <p>
+        Within your search app create a python file to index your files such as index_templates.py. The pseudo code 
+        would look like:
+    </p>
+    <ul>
+        <li>
+            Standard Imports
+        </li>
+        <li>
+            Set up Django (so that the file can run)
+        </li>
+        <li>
+            Third-party Imports
+        </li>
+        <li>
+            Helper functions
+        </li>
+        <li>
+            Create an asynchronous function to index the website
+            <ul>
+                <li>Create Algolia client variable</li>
+                <li>Select the Algolia index where the documents will be stored</li>
+                <li>Clear the index before adding new files so that there are no duplicates</li>
+                <li>Define the templates that I want to index</li>
+                <li>Initiate in the records and index the HTML files, adding them to the records</li>
+                <li>Upload the records</li>
+                <li>Close the Algolia client</li>
+                <li>Add main function to run the file from the terminal</li>
+            </ul>
+        </li>
+    </ul>
+    <p>
+        Standard Imports
+    </p>
+    {% include 'django_app/search/includes/code_snippets/indexer_imports.html' %}
+    <p>
+        Set up Django, so that the file can run from your project terminal with e.g. 
+        <code class="written-code">python search/index_templates.py</code>
+    </p>
+    {% include 'django_app/search/includes/code_snippets/indexer_django.html' %}
+    <p>
+        Third-party Imports
+    </p>
+    {% include 'django_app/search/includes/code_snippets/indexer_third_party_imports.html' %}
+    <p>
+        Helper functions. I used one helper function to 
+        <dfn title="Taking a string and turning it into a clean, URL friendly identifier">slugify</dfn>
+        my filenames and convert them to IDs so that can be tagged onto URLs correctly. This lets my code snippets and 
+        examples be able to be linked to directly on their pages rather than just the top of the page they appear on.
+    </p>
+    {% include 'django_app/search/includes/code_snippets/indexer_helper_functions.html' %}
+    <p>
+        Asynchronous function - set up. I included a lot of print statements throughout the function in order to help me 
+        debug later but these aren't strictly necessary. In the setup stage I want to define the function, create a 
+        docstring, and define my Algolia variables. 
+    </p>
+    {% include 'django_app/search/includes/code_snippets/indexer_async.html' %}
+    <p>
+        Asynchronous function. Next I defined the templates I want to index.
+    </p>
+    {% include 'django_app/search/includes/code_snippets/indexer_async_function_templates.html' %}
+    <p>
+        Asynchronous function. Initiate the records and loop through HTML files. For me this became quite complicated 
+        due to the nature of my file layout but should be easily simplified for your needs.
+    </p>
+    {% include 'django_app/search/includes/code_snippets/indexer_async_function_initiate.html' %}
+    <p>
+        Asynchronous function: Close the Algolia client.
+    </p>
+    {% include 'django_app/search/includes/code_snippets/indexer_async_function_close.html' %}
+    <p>
+        Asynchronous function: Add main function.
+    </p>
+    {% include 'django_app/search/includes/code_snippets/indexer_async_function_main.html' %}
+
+    <!--Creating the View-->
+    <h4 id="Django-search-algolia-creating-the-view">Creating the View</h4>
+    <p>
+        For your search app view, 1 view needs to be defined that takes the search query and directs to the results 
+        page. We will need a check for if there is a query and if so, connect to the Algolia client with our app ID and 
+        search key, then create and return a list of results that will be passed to the context in order to display 
+        them on the rendered results page.
+    </p>
+    {% include 'django_app/search/includes/code_snippets/algolia_view.html' %}
+
+    <!--Creating the URL-->
+    <h4 id="Django-search-algolia-creating-the-url">Creating the URL</h4>
+    <p>
+        A simple app level URL.
+    </p>
+    {% include 'django_app/search/includes/code_snippets/algolia_url.html' %}
+    <p>
+        Include it into the project level URL patterns.
+    </p>
+    {% include 'django_app/search/includes/code_snippets/algolia_url_project.html' %}
+
+    <!--Search Template-->
+    <h4 id="Django-search-algolia-search-template">Search Template</h4>
+    <p>
+        In it's simplest form, the search functionality will be a form with the action of the search URL (which will 
+        trigger the search view) and a GET method. There will need to be an input for the user to type and a submit 
+        button.
+    </p>
+    {% include 'django_app/search/includes/code_snippets/algolia_search_template.html' %}
+
+    <!--Results Template-->
+    <h4 id="Django-search-algolia-results-template">Results Template</h4>
+    <p>
+        The results page is quite simple too. We can access the variable in our view context with &#123;&#123; query &#125;&#125; 
+        and the results with &#123;&#123; results &#125;&#125;. This way we can show the user what they searched for 
+        and loop through the results in order to display the information. We use dot notation of the temporary variable 
+        in the for loop in order to access the information for each result that we defined when we appended the records 
+        in the indexer.
+    </p>
+    {% include 'django_app/search/includes/code_snippets/algolia_results_template.html' %}
+
+    <!--Tweaking Results-->
+    <h4 id="Django-search-algolia-tweaking-results">Tweaking Results</h4>
+    <p>
+        The results can be tweaked from your Algolia dashboard. Simply go to Data Sources (the cylinder with 3 segments),
+        then Indices, then click on the index. Here you can try out different searches to see what comes up. If you go 
+        to configuration from here, you can set what fields are searched by the user's query and also under ranking and 
+        sorting you can add custom rankings. This is where I rank it by rankPriority (ascending) so that the topic page 
+        is shown first in the results for this website, followed by the section and then code examples and snippets.
+    </p>
+
+{% endblock %}

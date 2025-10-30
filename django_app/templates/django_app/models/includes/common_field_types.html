@@ -1,0 +1,74 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-models-common-field-types{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Common Field Types{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Field Type
+                </th>
+                <th>
+                    Usage Example
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <code class="written-code">CharField</code>
+                </td>
+                <td>
+                    <code class="written-code">name = models.CharField(max_length=100)</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">TextField</code>
+                </td>
+                <td>
+                    <code class="written-code">description = models.TextField()</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">IntegerField</code>
+                </td>
+                <td>
+                    <code class="written-code">quantity = models.IntegerField()</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">BooleanField</code>
+                </td>
+                <td>
+                    <code class="written-code">active = models.BooleanField(default=True)</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">DateField</code>
+                </td>
+                <td>
+                    <code class="written-code">created = models.DateField(auto_now_add=True)</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">ForeignKey</code>
+                </td>
+                <td>
+                    <code class="written-code">category = models.ForeignKey(Category, on_delete=models.CASCADE)</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

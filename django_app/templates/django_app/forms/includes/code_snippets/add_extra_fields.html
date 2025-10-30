@@ -1,0 +1,24 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-forms-code-snippets-add-extra-fields{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">class EditForm(ModelForm):
+    '''Form to edit'''
+
+    # Extra field not in the model
+    unavailability_input = forms.CharField(
+        widget=forms.Textarea(
+            attrs={
+                'placeholder': 'Enter dates as YYYY-MM-DD, separated by commas'
+            }
+        ),
+        required=False,
+    )
+</code></pre>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Django - Forms{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Forms</h2>
+
+    {% include 'django_app/forms/includes/contents.html' %}
+    {% include 'django_app/forms/includes/what_are_django_forms.html' %}
+    {% include 'django_app/forms/includes/utilising_forms.html' %}
+
+{% endblock %}

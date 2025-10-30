@@ -1,0 +1,103 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-static-external-hosting-of-images-and-static-files{% endblock %}
+
+<!--Section title-->
+{% block text_title %}External Hosting of Images and Static Files{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        When your website is deployed, you will not have access to the files you stored in your media folder, 
+        so you will need somewhere to host these online. 
+    </p>
+    <!--Imgur-->
+    <h4 id="Django-static-external-hosting-of-images-and-static-files-imgur">Imgur</h4>
+    <p>
+        One option is 
+        <a 
+            class="text-link"
+            href="https://imgur.com/"
+            title="Imgur"
+            aria-label="Imgur"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Imgur
+        </a>
+        where you can create an account, upload an image privately and link the src in your project to the image URL.
+    </p>
+
+    <!--Cloudinary-->
+    <h4 id="Django-static-external-hosting-of-images-and-static-files-cloudinary">Cloudinary</h4>
+    <p>
+        Another option is 
+        <a 
+            class="text-link"
+            href="https://cloudinary.com/"
+            title="Cloudinary"
+            aria-label="Cloudinary"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Cloundinary
+        </a>,
+        another image hosting website. Create an account here and upload your images. 
+    </p>
+    <p>
+        On your Cloudinary dashboard you will be able to find your:
+    </p>
+    <ul>
+        <li>Cloud Name</li>
+        <li>API Key</li>
+        <li>API Secret</li>
+    </ul>
+    <p>
+        In your terminal, install Cloudinary:
+    </p>
+    {% include 'django_app/static/includes/code_snippets/install_cloudinary.html' %}
+    <p>
+        Then update your settings.py with:
+    </p>
+    {% include 'django_app/static/includes/code_snippets/cloudinary_settings.html' %}
+    <p>
+        Then add in the Cloudinary variables from your Cloudinary dashboard. I keep these at the top of the Static 
+        files section. For security you should define these in your env.py file and access them from there.
+    </p>
+    {% include 'django_app/static/includes/code_snippets/cloudinary_variables.html' %}
+    <p>
+        Update your MEDIA_URL to have local files in development and externally hosted images during production.
+    </p>
+    {% include 'django_app/static/includes/code_snippets/cloudinary_media.html' %}
+    <p>
+        When accessing the image sources in your website, you can copy the URL of the image in your Cloudinary 
+        dashboard, notice most of it is the same as your MEDIA_URL variable and just tack on the rest e.g.
+    </p>
+    {% include 'django_app/static/includes/code_snippets/cloudinary_source.html' %}
+
+    <!--Whitenoise-->
+    <h4 id="Django-static-external-hosting-of-images-and-static-files-whitenoise">Whitenoise</h4>
+    <p>
+        Whitenoise is perfect for storing your static files for deployment on services such as Heroku. It converts your 
+        static files to staticfiles where Heroku will look for them by default. Start by installing whitenoise from 
+        your terminal.
+    </p>
+    {% include 'django_app/static/includes/code_snippets/whitenoise_install.html' %}
+    <p>
+        Then update your settings.py file:
+    </p>
+    <ul>
+        <li>Add whitenoise to your INSTALLED_APPS</li>
+        <li>In your static files section add a STATICFILES_STORAGE variable linking to whitenoise.</li>
+        <li>Update your STATIC_ROOT variable to access staticfiles</li>
+        <li>Add whitenoise to MIDDLEWARE</li>
+    </ul>
+    {% include 'django_app/static/includes/code_snippets/whitenoise_settings.html' %}
+    <p>
+        Now when you have made changes to your static files you can go ahead and run the following in your terminal.
+    </p>
+    {% include 'django_app/static/includes/code_snippets/collectstatic.html' %}
+
+{% endblock %}

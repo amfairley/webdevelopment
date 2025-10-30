@@ -1,0 +1,88 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-templates-code-snippets-testing-edit{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">class EditRoomViewTest(TestCase):
+    '''Test the edit room view'''
+    def setUp(self):
+        '''Create objects to test the edit rooms view'''
+
+        # Create sample amenities as these are another table referenced by the room
+        self.amenity1 = Amenities.objects.create(
+            name="bed",
+            sanitised_name="Bed",
+            icon="bed-icon"
+        )
+
+        self.amenity2 = Amenities.objects.create(
+            name="wifi",
+            sanitised_name="WiFi",
+            icon="wifi-icon"
+        )
+
+        # Create a sample room to edit
+        self.room = Room.objects.create(
+            name="test_room",
+            sanitised_name="Test Room",
+            amenities=[1, 2],
+            description="A room for testing",
+            image_url=None,
+            image=None,
+            price=100.00,
+            unavailability=["2024-12-20"]
+        )
+
+        self.client = Client()
+        # Set the url using the id of the above created room
+        self.url = reverse('edit_room', args=[self.room.id])
+
+    def test_edit_room_get(self):
+        '''Test that the edit page loads correctly'''
+        response = self.client.get(self.url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'rooms/edit_room.html')
+        self.assertIn('form', response.context)
+
+    def test_edit_room_post_valid_data(self):
+        '''Test updating a room with valid data'''
+        form_data = &#123;
+            'name': "updated_room",
+            'sanitised_name': "Updated Room",
+            'amenities': [self.amenity1.id],
+            'description': "An updated description",
+            'price': 150.00,
+            'unavailability_input': "2024-12-25,2024-12-26"
+        &#125;
+        response = self.client.post(self.url, data=form_data)
+        # Expect a redirect after successful edit
+        self.assertEqual(response.status_code, 302)
+        # Reload room from DB and check updated fields
+        self.room.refresh_from_db()
+        self.assertEqual(self.room.name, "updated_room")
+        self.assertEqual(self.room.description, "An updated description")
+        self.assertEqual(self.room.price, 150.00)
+        self.assertIn("2024-12-25", self.room.unavailability)
+
+    def test_edit_room_post_invalid_data(self):
+        '''Test submitting invalid data (e.g., negative price)'''
+        form_data = &#123;
+            'name': '',
+            'sanitised_name': '',
+            'amenities': [],
+            'description': '',
+            'price': -50.00,
+            'unavailability_input': "bad-date"
+        &#125;
+        response = self.client.post(self.url, data=form_data)
+        # Expect to stay on page with form errors
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'rooms/edit_room.html')
+        self.assertFalse(response.context['form'].is_valid())
+</code></pre>
+{% endblock %}

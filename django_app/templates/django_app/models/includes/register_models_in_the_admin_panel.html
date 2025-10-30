@@ -1,0 +1,31 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-models-register-models-in-the-admin-panel{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Register Models in the Admin Panel{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        To manage your model data through the Django admin interface you must import and register each model you want 
+        to see in the admin.py file of the app.
+    </p>
+    {% include 'django_app/models/includes/code_snippets/admin_imports.html' %}
+    <p>
+        Additionally you can customise what fields appear and their order, along with whether they are read only, or if 
+        they have filters defining an admin class typically named like ModelNameAdmin.
+    </p>
+    <p>
+        Here is an example of a Room model that I created for a hotel management webapp and how that model could be 
+        seen in the admin.
+    </p>
+    {% include 'django_app/models/includes/code_snippets/example_model.html' %}
+    <p>
+        Then setting that up in the admin.py file would look like this:
+    </p>
+    {% include 'django_app/models/includes/code_snippets/admin_example.html' %}
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-static-creating-folders{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Creating Folders{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Create a folder named 'static' in your root directory with 2 child folders of css and js to keep your static 
+        files separated and easy to manage. In the static/css folder you can create your CSS files, usually starting 
+        with base.css.
+    </p>
+    <p>
+        Create a separate 'media' folder in your root directory to store any images that you will use in your website.
+    </p>
+{% endblock %}

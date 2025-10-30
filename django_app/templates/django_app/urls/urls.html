@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Django - URLs{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>URLs</h2>
+
+    {% include 'django_app/urls/includes/contents.html' %}
+    {% include 'django_app/urls/includes/urls_in_django.html' %}
+    {% include 'django_app/urls/includes/project_level.html' %}
+    {% include 'django_app/urls/includes/app_level.html' %}
+
+{% endblock %}

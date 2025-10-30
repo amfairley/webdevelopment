@@ -1,0 +1,17 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-urls-urls-in-django{% endblock %}
+
+<!--Section title-->
+{% block text_title %}URLs in Django{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        In Django, handling web page navigation is done through the URL dispatcher, which connects URLs to views using 
+        urls.py files. Each Django project includes a project-level urls.py (e.g. project_name/urls.py) and optinal 
+        app-level urls.py files in each app (like app_name/urls.py) to keep things organized.
+    </p>
+{% endblock %}

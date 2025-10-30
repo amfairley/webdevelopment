@@ -1,0 +1,28 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-settings-code-snippets-middleware{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">MIDDLEWARE = [
+	# Adds security headers (e.g., HSTS, SSL redirects)
+    'django.middleware.security.SecurityMiddleware',
+	# Enables session support using cookies
+    'django.contrib.sessions.middleware.SessionMiddleware',
+	# Adds standard behaviors (e.g., URL normalization, APPEND_SLASH)
+    'django.middleware.common.CommonMiddleware',
+	# Protects against CSRF attacks by enforcing CSRF tokens
+    'django.middleware.csrf.CsrfViewMiddleware',
+	# Associates users with requests using sessions
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+	# Enables temporary messages via Django's messaging framework
+    'django.contrib.messages.middleware.MessageMiddleware',
+	# Prevents the site from being embedded in iframes (defends against clickjacking)
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+</code></pre>
+{% endblock %}

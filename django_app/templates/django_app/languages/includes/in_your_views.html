@@ -1,0 +1,18 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-languages-in-your-views{% endblock %}
+
+<!--Section title-->
+{% block text_title %}In Your Views{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Translation can be done on a view to view basis, however for complete usability, I ended up moving all of them 
+        to the core app context processor so that they are available on all pages. 
+    </p>
+    {% include 'django_app/languages/includes/code_snippets/language_views.html' %}
+
+{% endblock %}

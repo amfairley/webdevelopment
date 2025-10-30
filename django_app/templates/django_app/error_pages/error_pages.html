@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Django - Error Pages{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Error Pages</h2>
+
+    {% include 'django_app/error_pages/includes/contents.html' %}
+    {% include 'django_app/error_pages/includes/how_django_processes_error_pages.html' %}
+    {% include 'django_app/error_pages/includes/which_error_pages.html' %}
+
+{% endblock %}

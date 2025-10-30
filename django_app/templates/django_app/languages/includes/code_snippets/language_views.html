@@ -1,0 +1,54 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-languages-code-snippets-language-views{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">from django.shortcuts import render
+from django.conf import settings
+# The general shorthand syntax is to us gettext as _
+from django.utils.translation import gettext as _
+from django.utils.translation import get_language, activate, gettext
+
+def index(request):
+    '''Return the homepage'''
+    # Translations for the page using the translate function defined below
+    trans = translate(language=get_language() or settings.LANGUAGE_CODE)
+    context = &#123;
+        'MEDIA_URL': settings.MEDIA_URL,
+        'DEBUG': settings.DEBUG,
+	    # list the variables for the page defined in translation function below
+        'hotel_name': trans['hotel_name'],
+    &#125;
+    return render(
+        request,
+        'homepage/index.html',
+        context,
+    )
+
+# Define a translate function that was called in the above request
+def translate(language):
+    '''Function to translate text'''
+    # get the current language
+    cur_language = get_language()
+    translations = &#123;&#125;  # Ensure it is defined as an empty dictionary even if activation fails
+    # Try to activate the language you pass as a parameter
+    try:
+        activate(language)
+        # Select and define translations
+        translations = &#123;
+	        #use _ to identify the strings, same as gettext() because we imported it as _
+            'hotel_name': _('Hotel Name')
+        &#125;
+
+    finally:
+        # If you cannot activate, activate the current language
+        activate(cur_language)
+    # Return translations
+    return translations
+</code></pre>
+{% endblock %}

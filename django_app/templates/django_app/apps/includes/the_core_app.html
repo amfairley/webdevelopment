@@ -1,0 +1,42 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-apps-the-core-app{% endblock %}
+
+<!--Section title-->
+{% block text_title %}The Core App{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        It is common to see an app named "core" in projects. These handle site-wide functionality that can be passed to 
+        all templates through creating 
+        <dfn title="A way of passing variables to the context of all Templates">context processors</dfn>.
+        This is especially useful for passing information from the View (through the context processor) to Templates 
+        that otherwise do not have an associated view.py file such as error pages. 
+    </p>
+    <p>
+        Create an app named core as usual:
+    </p>
+    {% include 'django_app/apps/includes/code_snippets/startapp_core.html' %}
+    <p>
+        And add "core" to the list of installed apps in the settings.py file.
+    </p>
+    <p>
+        In the core app directory, create a context_processor.py file and add things that will be passed to your 
+        templates. For example, in the one for this website I use it to add the address for the MEDIA_URL so that I can 
+        call it in the template without having to pass it through a views.py file. Be sure to register this 
+        context_processor to the context_processors listed in settings.py. These are found in the TEMPLATES variable 
+        and will be in the form of 
+        <code class="written-code">app_name.file_name.function_name</code>.
+        For the below example, adding the media_url function so my addition to the context_processors will look like 
+        <code class="wirtten-code">'core.context_processor.media_url'</code>.
+    </p>
+    {% include 'django_app/apps/includes/code_snippets/core_context_processor.html' %}
+    <p>
+        Then the vairable can be called in any Template like:
+    </p>
+    {% include 'django_app/apps/includes/code_snippets/calling_context.html' %}
+
+{% endblock %}

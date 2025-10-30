@@ -1,0 +1,85 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-messages-message-levels{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Message Levels{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Level
+                </th>
+                <th>
+                    Method
+                </th>
+                <th>
+                    Purpose
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Debug
+                </td>
+                <td>
+                    <code class="written-code">messages.debug()</code>
+                </td>
+                <td>
+                    For developers (rarely shown to users)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Info
+                </td>
+                <td>
+                    <code class="written-code">messages.info()</code>
+                </td>
+                <td>
+                    General info (“You're now logged in.”)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Success
+                </td>
+                <td>
+                    <code class="written-code">messages.success()</code>
+                </td>
+                <td>
+                    Success messages
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Warning
+                </td>
+                <td>
+                    <code class="written-code">messages.warning()</code>
+                </td>
+                <td>
+                    Cautionary messages
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Error
+                </td>
+                <td>
+                    <code class="written-code">messages.error()</code>
+                </td>
+                <td>
+                    Error messages such as "Invalid password."
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

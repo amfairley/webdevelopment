@@ -1,0 +1,24 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-models-using-modelspy{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Using models.py{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        In Django, the models.py files are where you define your database structure using Python code. It acts as an 
+        interface between your app and the database, using Django's built-in 
+        <dfn title="Object-Relational Mapping">ORM</dfn>
+        system. Each Django app has its own models.py file located inside the app folder. You define 
+        <dfn title="Models">tables</dfn>
+        as Python classes, and Django handles translating them into database tables.
+    </p>
+    <p>
+        You will use models.py whenever your app needs to store and manage data. Some websites or apps will not need 
+        anything in their models.py files.
+    </p>
+{% endblock %}

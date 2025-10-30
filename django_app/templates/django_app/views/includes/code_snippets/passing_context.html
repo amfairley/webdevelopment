@@ -1,0 +1,33 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-views-code-snippets-passing-context{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python"># views.py
+from django.shortcuts import render
+from .models import Product
+
+def product_list(request):
+    # Get instances of the Product model
+    products = Product.objects.all()
+
+    # Define another variable you want to use
+    sum_variable = 21 + 2
+
+    # Define context
+    # Here we will be able to access the instances of the product model
+    # And the variable we defined above
+    context = {
+        'products': products,
+	    'sum_variable': sum_vairable,
+    }
+
+    # Render with context
+    return render(request, 'app_name/home.html', context)
+</code></pre>
+{% endblock %}

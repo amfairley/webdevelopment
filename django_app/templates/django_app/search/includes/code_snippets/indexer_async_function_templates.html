@@ -1,0 +1,20 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-search-code-snippets-indexer-async-function-templates{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python"># List all template folders. Here I commented out the main templates folder as all the pages I wanted to search were defined within their own apps.
+# The path uses the BASE_DIR defined in the settings.py and tags on /'app_name'/'templates'
+    templates_dirs = [
+        # Path(settings.BASE_DIR) / 'templates',             # main templates folder
+        Path(settings.BASE_DIR) / 'HTML' / 'templates',    # app1 templates
+        Path(settings.BASE_DIR) / 'intro_to_full_stack' / 'templates',    # app2 templates
+    ]
+    print(f"Templates directories to scan: &#123;templates_dirs&#125;")
+</code></pre>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Django - Testing{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Testing</h2>
+
+    {% include 'django_app/testing/includes/contents.html' %}
+    {% include 'django_app/testing/includes/testing_in_django.html' %}
+    {% include 'django_app/testing/includes/test_driven_development.html' %}
+    {% include 'django_app/testing/includes/test_files.html' %}
+    {% include 'django_app/testing/includes/writing_tests.html' %}
+    {% include 'django_app/testing/includes/testing_views.html' %}
+    {% include 'django_app/testing/includes/testing_forms.html' %}
+    {% include 'django_app/testing/includes/common_assertions.html' %}
+    {% include 'django_app/testing/includes/running_tests.html' %}
+    {% include 'django_app/testing/includes/coverage.html' %}
+
+{% endblock %}

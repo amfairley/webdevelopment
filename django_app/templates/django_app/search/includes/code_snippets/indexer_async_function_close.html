@@ -1,0 +1,16 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-search-code-snippets-indexer-async-function-close{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python"># Closes the async Algolia client, freeing up network resources.
+# Uses await because closing is also asynchronous.
+    await client.close()
+    print("Algolia client closed. Indexing complete.")
+</code></pre>
+{% endblock %}

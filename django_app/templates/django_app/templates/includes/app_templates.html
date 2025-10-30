@@ -1,0 +1,37 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-templates-app-templates{% endblock %}
+
+<!--Section title-->
+{% block text_title %}App Templates{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        To set up templates in your app, ensure that you have the template folder set up like 
+        app_name/templates/app_name. Then go to your views.py file in that app to define how your project will handle 
+        requests and to direct them to the correct template.
+    </p>
+    <p>
+        This is done by defining a function typically named the same as the template you wish to direct to, talking 
+        request as an argument. Inside this function you want to return render (which you will need to import from 
+        django.shortcuts and pass it arguments of request and the string of the temple it the form of 
+        'app_name/file_name.html'). The reason you do not need to define 'app_name/templates/app_name/file_name.html' 
+        is because it is relative to the template search paths Django uses, not the actual file system path and in the 
+        TEMPLATES variable in settings.py we set 'APP_DIRS' to True letting Django know to look for templates inside 
+        app folders.
+    </p>
+    {% include 'django_app/templates/includes/code_snippets/app_view.html' %}
+    <p>
+        Then head over to your urls.py file in your app, ensure you have imported views from your app to access the 
+        above function and add the path using the syntax:
+    </p>
+    {% include 'django_app/templates/includes/code_snippets/app_url.html' %}
+    <p>
+        For example it might look like:
+    </p>
+    {% include 'django_app/templates/includes/code_snippets/app_url_example.html' %}
+
+{% endblock %}

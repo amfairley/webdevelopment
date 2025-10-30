@@ -1,0 +1,18 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-search-code-snippets-algolia-url{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.search_view, name="search"),
+]
+</code></pre>
+{% endblock %}

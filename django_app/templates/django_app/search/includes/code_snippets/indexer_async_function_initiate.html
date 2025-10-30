@@ -1,0 +1,233 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-search-code-snippets-indexer-async-function-initiate{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python"># Initiate an empty list of records
+    records = []
+    # Set the first object_id as 1
+    object_id = 1
+
+    # Loop through each templates folder and index all HTML files found
+    # For x in the above defined template_dirs. I use templates_path as the temporary variable.
+    for templates_path in templates_dirs:
+	# A check for if the folder does not exist then skip it
+        if not templates_path.exists():
+            print(f"Warning: templates directory &#123;templates_path&#125; does not exist, skipping.")
+            continue
+	
+        # For x in the templates_path
+        # .rglob walks through all folders and subfolders
+        # finds all files that end in .html
+        for file_path in templates_path.rglob("*.html"):
+            try:
+	            # Try to open it in read mode
+                with open(file_path, "r", encoding="utf-8") as f:
+		            # Read the entire file contents as a single string
+                    html = f.read()
+	        # Throw an error if it cannot be read and continue to the next
+            except Exception as e:
+                print(f"Error reading &#123;file_path&#125;: &#123;e&#125;")
+                continue
+
+            # This breaks up the long string in the variable html using the html parser into something that can be queried
+            # For instance if html had a title element you can access it with soup.title
+            soup = BeautifulSoup(html, "html.parser")
+            # Creates a title variable that takes the title element of the page and if it exists and makes it a string
+            # Otherwise it takes the filename and removes the extension (.html)
+            title = soup.title.string if soup.title else file_path.stem
+            
+            # Create a paragraphs variable
+            # Loops through each p element in the soup
+            # Gets the text and strips the element tags
+            # Concatenates them all into one long string
+            paragraphs = " ".join(p.get_text(strip=True) for p in soup.find_all("p"))
+
+            # Set up the relative paths and directories to later be used to determine URL structure 
+            # Path relative to template root
+            relative_path = file_path.relative_to(templates_path)  
+            # Parent directory of the file
+            relative_dir = relative_path.parent  
+
+            # Depending on the type of file, I want the URLs to be different
+            # For example if it is a code snippet included on a page then the URL will end with #code-snippet-id
+            # Case 1: The file is from Topic/SubTopic/includes/code_snippets or Topic/SubTopic/includes/code_examples
+            # Check if code_snippets or code_examples is in the relative directory name
+            if relative_dir.name in &#123;"code_snippets", "code_examples"&#125;:
+                # Define the original section as the relative directory name
+                original_section = relative_dir.name
+                # The following works because I set the IDs of the sections in the form of e.g.
+                # topic-subtopic-type-filename
+                # For example for my code snippet of form_validation_snippet.html
+                # HTML/forms/includes/code_snippets/ form_validation_snippet.html
+                # Has the ID
+                # HTML-forms-code-snippets-form-validation-snippet
+                # The following code converts the file path to this ID
+                # Convert underscores in the file path to hyphens for the ID as all my IDs use hyphens not underscores
+                # The preserved part is the current directory name with underscores to hyphens
+                # E.g. code-snippets
+                preserved_part = relative_dir.name.replace("_", "-")  
+                # Go up 2 levels  to get to the topic folder e.g. HTML/forms/includes/code_snippets/ gets to HTML/forms
+                relative_dir = relative_dir.parent.parent
+                # Replace any underscores with hyphens if there are in e.g. HTML/forms
+                relative_url = relative_dir.as_posix().replace("_", "-")
+
+                # A special case for the topic homepages. E.g. HTML/home
+                # This works across the site because the homepages for each section are named “home”
+                # E.g. HTML/home, CSS/home, flask_app/home
+                if relative_url.endswith("home"):
+                    # No trailing / so that IDs can be tagged on without errors
+                    # E.g. website.com/HTML/home#ID1 
+                    # Instead of the error causing: website.com/HTML/home/#ID1 
+                    relative_url = relative_url  # no slash for home pages
+                else:
+                    # For non-home pages add a slash
+                    relative_url.rstrip("/") + "/"  # Ensure only 1 slash
+
+                # Define a directory slug variable that takes the relative_dir (that we defined as jumping up 2 levels)
+                # .posix() converts it to a string with “/”
+                # Replace any slashes with hyphens and any underscores with hyphens matching my ID notations
+                # Add in an extra hyphen and then the preserved part (the original relative directory parent name)
+                # E.g. HTML-forms + - + code_snippets = HTML-forms-code-snippets
+                dir_slug = relative_dir.as_posix().replace("/", "-").replace("_", "-") + "-" + preserved_part
+
+                # Create an element_id variable that combines the directory slug with the title (which was defined as the filename minus the extension) separated by a hyphen
+                # Use the slugify helper function on the title
+                # E.g. HTML-forms-code-snippets + form-validation-snippet = HTML-forms-code-snippets-form-validation-snippet
+                element_id = f"&#123;dir_slug&#125;-&#123;slugify(title)&#125;"
+
+                # Create a URL variable built from the above variables
+                # When deployed, replace 127.0.0.1:8000 with the website URL
+                url = f"http://127.0.0.1:8000/&#123;relative_url&#125;#&#123;element_id&#125;"
+
+                # Define a section_type parameter
+                if original_section == "code_snippets":
+                    section_type = "Code Snippet"
+                else:
+                    section_type = "Code Example"
+
+                    
+                # Case 2: The file is from Topic/SubTopic/includes/
+                # Because my file set up is Topic/SubTopic/subtopic.html
+                # But each sections is included from
+                # e.g. Topic/SubTopic/includes/section1.html
+                # The logic is similar to Case 1
+
+            elif relative_dir.name == "includes":
+                relative_dir = relative_dir.parent
+                relative_url = relative_dir.as_posix().replace("_", "-")
+
+                # Special case for home pages
+                if relative_url.endswith("home"):
+                    relative_url = relative_url  # no slash for home pages
+                else:
+                    relative_url.rstrip("/") + "/"  # Ensure only 1 slash
+
+	            # Slug the directory
+                dir_slug = relative_dir.as_posix().replace("/", "-").replace("_", "-")
+
+                element_id = f"&#123;dir_slug&#125;-&#123;slugify(title)&#125;"
+
+                # Create the URL
+	            # When deployed, replace 127.0.0.1:8000 with the website URL
+                url = f"http://127.0.0.1:8000/&#123;relative_url&#125;#&#123;element_id&#125;"
+
+	            # Set the section_type
+                section_type = "Topic Section"
+
+	        # In the else case, if it is not in the includes or code_snippets etc, it will be Topic page
+            # E.g. HTML/forms/forms.html
+            else:
+                relative_url = relative_dir.as_posix().replace("_", "-")
+	            # Special case for home page
+                if relative_url.endswith("home"):
+                    relative_url = relative_url  # no slash for home pages
+                else:
+                    relative_url.rstrip("/") + "/"  # Ensure only 1 slash
+
+                dir_slug = relative_dir.as_posix().replace("/", "-").replace("_", "-")
+	            # There is no element_id for the topic page as we want the url to point to the page, not the ID of an element on it
+                element_id = "N/A"       	
+	            # Define the URL
+                # When deployed, replace 127.0.0.1:8000 with the website URL
+                url = f"http://127.0.0.1:8000/&#123;relative_url&#125;"
+	            # Set the section type variable
+                section_type = "Topic Page"
+	
+	        # Create a section name variable
+	        # Set it as “Other” as default
+            section = "Other" 
+            for templates_path in templates_dirs:
+                try:
+                    relative = file_path.relative_to(templates_path)
+	                # Set the section to the top level folder name e.g. HTML, CSS etc.
+                    section = relative.parts[0]
+                    break
+                except ValueError:
+                    continue
+
+            # Capitalize if not HTML or CSS
+            if section not in &#123;"HTML", "CSS"&#125;:
+                section = section.title()
+	
+	        # Here I created a ranking order based on the section type, so that I can give priority to the e.g. Topic page over a code snippet if you were to search “forms”
+            sort_order = &#123;
+                "Topic Page": 0,
+                "Topic Section": 1,
+                "Code Example": 2,
+                "Code Snippet": 3,
+            &#125;
+            # I set the rank_priority variable to get the sort_order based on section_type and default to 99 if not found
+            rank_priority = sort_order.get(section_type, 99)
+
+	        # I create a pretty_title variable for a user friendly version of the title
+            pretty_title = title.replace("_", " ").replace("-", " ").title()
+            # Special case for Home pages
+            if pretty_title == "Home":
+                pretty_title = f"&#123;section&#125; Home"
+
+            # Update Html, Css, Js to HTML CSS JS
+            pretty_title = pretty_title.replace("Html", "HTML")
+            pretty_title = pretty_title.replace("Css", "CSS")
+            pretty_title = pretty_title.replace("Js", "JS")
+
+            # Add in extra keywords so that HTML returns HTML home
+	        # This fixes a bug where searching e.g. HTML would not show the HTML homepage
+	        # Now the extra keywords appear in the search
+            extra_keywords = []
+	        # If the title ends with Home:
+            if pretty_title.endswith("Home"):
+	            # Add the section e.g. HTML, CSS etc into the keywords
+                extra_keywords.append(section) 
+
+            # Skip if the title is contents and append if it is not
+	        # This is because I did not want each page's contents section to be returned in a search
+            if title.lower() != "contents":
+	            # Append the dictionary to the records
+                records.append(&#123;
+                    "objectID": object_id,
+                    "file": str(file_path.relative_to(templates_path)),
+                    "title": title,
+                    "prettyTitle": pretty_title,
+                    "elementID": element_id,
+                    "sectionType": section_type,
+                    "section": section,
+                    "content": paragraphs,
+                    "url": url,
+                    "rankPriority": rank_priority,
+                    "keywords": extra_keywords,
+                &#125;)
+                print(f"Prepared record &#123;object_id&#125;: &#123;title&#125; (&#123;file_path&#125;)")
+	            # Increment the object_id for the next file
+                object_id += 1
+            else:
+                print(f"Skipping file &#123;file_path&#125; because title is 'contents'")
+
+    print(f"Total records prepared to upload: &#123;len(records)&#125;")
+</code></pre>
+{% endblock %}

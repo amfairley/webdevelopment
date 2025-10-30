@@ -1,0 +1,56 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-templates-code-snippets-testing-delete{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">class DeleteRoomViewTest(TestCase):
+    '''Test the delete room view'''
+    # Create sample amenities
+    self.amenity1 = Amenities.objects.create(
+        name="bed",
+        sanitised_name="Bed",
+        icon="bed-icon"
+    )
+
+    self.amenity2 = Amenities.objects.create(
+        name="wifi",
+        sanitised_name="WiFi",
+        icon="wifi-icon"
+    )
+
+    # Create sample room
+    self.room = Room.objects.create(
+        name="test_room",
+        sanitised_name="Test Room",
+        amenities=[1, 2],
+        description="A room for testing",
+        image_url=None,
+        image=None,
+        price=100.00,
+        unavailability=["2024-12-20"]
+    )
+    self.client = Client()
+    self.url = reverse('delete_room', args=[self.room.id])
+
+    def test_delete_room_get(self):
+        '''Test that the delete confirmation page loads correctly'''
+        response = self.client.get(self.url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'rooms/delete_room.html')
+        self.assertIn('room', response.context)
+
+    def test_delete_room_post(self):
+        '''Test that a room is deleted after confirmation'''
+        response = self.client.post(self.url)
+        # After deletion, expect redirect (e.g., back to room list)
+        self.assertEqual(response.status_code, 302)
+        # Check that the room no longer exists
+        self.assertFalse(Room.objects.filter(id=self.room.id).exists())
+
+</code></pre>
+{% endblock %}

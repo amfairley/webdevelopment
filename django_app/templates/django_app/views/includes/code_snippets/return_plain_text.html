@@ -1,0 +1,16 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-views-code-snippets-return-plain-text{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">from django.http import HttpResponse
+
+def hello_world(request):
+    return HttpResponse("Hello, world!")
+</code></pre>
+{% endblock %}

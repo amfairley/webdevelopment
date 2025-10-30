@@ -1,0 +1,31 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-search-code-snippets-indexer-async{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">async def run():
+    """
+    Reads all HTML templates in multiple folders across your project,
+    extracts titles and paragraphs, clears the Algolia index, and uploads them.
+    """
+
+    print("Starting indexer...")
+    # Create Algolia client using your app ID and WRITE key from the settings.py
+    client = SearchClient(settings.ALGOLIA_APP_ID, settings.ALGOLIA_WRITE_KEY)
+    print("Algolia client initialized.")
+
+    # Choose the index name. This will be the name of the index when it appears in your Algolia dashboard
+    index_name = 'webdevgrad_pages'
+    print(f"Index '&#123;index_name&#125;' selected.")
+
+    # Clear the index before uploading new records
+    print("Clearing existing records in the index...")
+    response = await client.clear_objects(index_name)
+    print(f"Clear index response: &#123;response&#125;")
+</code></pre>
+{% endblock %}

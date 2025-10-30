@@ -1,0 +1,11 @@
+{% extends 'includes/troubleshooting.html' %}
+{% load static %}
+
+<!--ID-->
+{% block troubleshooting_id %}Django-views-troubleshooting-troubleshoot-template-render{% endblock %}
+{% block troubleshooting_content %}
+    <p>
+        If this is not working for you, check your settings.py file for APP_DIRS = True in your TEMPLATES setting. This 
+        is what allows Django to automatically search for templates inside each app's templates/ folder.
+    </p>
+{% endblock %}

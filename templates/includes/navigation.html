@@ -194,6 +194,35 @@
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'flask_delete' %}active{% endif %}" href="{% url 'flask_delete' %}">Delete Records</a></li>
                 </ul>
             </li>
+            <!--Django-->
+            <li class="nav-item">
+                <span class="d-flex align-items-center">
+                    <a class="nav-link" href="{% url 'django_home' %}">Django</a>
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#django-submenu" aria-expanded="false" aria-controls="django-submenu" aria-label="Open the Django dropdown section">
+                    </button>
+                </span>
+                <ul class="collapse list-unstyled ps-3 {% if '/Django' in request.path %}show{% endif %}" id="django-submenu">
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_home' %}active{% endif %}" href="{% url 'django_home' %}">Django Home</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_getting_started_with_django' %}active{% endif %}" href="{% url 'django_getting_started_with_django' %}">Getting Started With Django</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_admin' %}active{% endif %}" href="{% url 'django_admin' %}">Admin</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_settings' %}active{% endif %}" href="{% url 'django_settings' %}">settings.py</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_urls' %}active{% endif %}" href="{% url 'django_urls' %}">URLs</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_apps' %}active{% endif %}" href="{% url 'django_apps' %}">Apps</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_templates' %}active{% endif %}" href="{% url 'django_templates' %}">Templates</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_views' %}active{% endif %}" href="{% url 'django_views' %}">Views</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_models' %}active{% endif %}" href="{% url 'django_models' %}">Models</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_forms' %}active{% endif %}" href="{% url 'django_forms' %}">Forms</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_templating_language' %}active{% endif %}" href="{% url 'django_templating_language' %}">Templating Language</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_error_pages' %}active{% endif %}" href="{% url 'django_error_pages' %}">Error Pages</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_crud' %}active{% endif %}" href="{% url 'django_crud' %}">CRUD</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_messages' %}active{% endif %}" href="{% url 'django_messages' %}">Messages</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_static' %}active{% endif %}" href="{% url 'django_static' %}">Static</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_testing' %}active{% endif %}" href="{% url 'django_testing' %}">Testing</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_allauth' %}active{% endif %}" href="{% url 'django_allauth' %}">AllAuth</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_search' %}active{% endif %}" href="{% url 'django_search' %}">Search</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_languages' %}active{% endif %}" href="{% url 'django_languages' %}">Languages</a></li>
+                </ul>
+            </li>
             <!--Analytics-->
             <li class="nav-item">
                 <span class="d-flex align-items-center">

@@ -1,0 +1,14 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-models-code-snippets-annotate{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">from django.db.models.functions import Lower
+ModelName.objects.annotate(lower_name=Lower('name'))
+</code></pre>
+{% endblock %}

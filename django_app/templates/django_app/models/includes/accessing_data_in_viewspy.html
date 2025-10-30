@@ -1,0 +1,460 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-models-accessing-data-in-viewspy{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Accessing Data in views.py{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        To access data from your database, you need to firstly import the Model from the database at the top of your 
+        views.py file. With this imported you can query it in many ways and assign the result of the functions to 
+        different variables to save them or pass them in the context to your template.
+    </p>
+    {% include 'django_app/models/includes/code_snippets/import_models_views.html' %}
+
+    <!--Basic Queries-->
+    <h4 id="Django-models-accessing-data-in-viewspy-basic-queries">Basic Queries</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Query Type
+                </th>
+                <th>
+                    Query Syntax
+                </th>
+                <th>
+                    Explanation
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Get all records
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.all()</code>
+                </td>
+                <td>
+                    Returns a QuerySet of all records in the model
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Get first record
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.first()</code>
+                </td>
+                <td>
+                    Returns the first object or None if no record exists
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Get last record
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.last()</code>
+                </td>
+                <td>
+                    Returns the last object or None if no record exists
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Get by ID
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.get(id=1)</code>
+                </td>
+                <td>
+                    Returns a single object, or raises an error if the record does not exist
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Filter (first match)
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.filter(name='Test').first()</code>
+                </td>
+                <td>
+                    Returns the first match based on filter or None if no match
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Filter (multiple)
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.filter(active=True)</code>
+                </td>
+                <td>
+                    Returns a QuerySet of all matching records based on the filter
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Check if the record exists
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.filter(name='Test').exists()</code>
+                </td>
+                <td>
+                    Returns a Boolean indicating if any record matches the filter
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!--Filtering and Lookups-->
+    <h4 id="Django-models-accessing-data-in-viewspy-filtering-and-lookups">Filtering and Lookups</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Lookup Type
+                </th>
+                <th>
+                    Syntax
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Exact match
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.filter(field='value')</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Case-insensitive match
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.filter(field__iexact='value')</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Partial match
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.filter(field__contains='value')</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Case-insensitive partial match
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.filter(field__icontains='value')</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Greater than
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.filter(field__gt=100)</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Greater than or equal
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.filter(field__gte=100)</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Less than
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.filter(field__lt=100)</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Less than or equal
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.filter(field__lte=100)</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    In a list
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.filter(field__in=[1, 2, 3])</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Field is null
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.filter(field__isnull=True)</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Date lookup
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.filter(date_field__year=2025)</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!--Complex Queries-->
+    <h4 id="Django-models-accessing-data-in-viewspy-complex-queries">Complex Queries</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Type
+                </th>
+                <th>
+                    Syntax
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    OR condition
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.filter(Q(price__gt=50))</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    AND condition
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.filter(Q(a=True) & Q(b=False))</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Field-to-field
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.filter(stock__lt=F('reorder_level'))</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Annotate
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.annotate(lower_name=Lower('name'))</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        The annotate() function is used to add temporary calculated fields to each object in a queryset. These annotated
+        fields can be used in templates, filters, or ordering, just like regular fields, but they exist only in memory, 
+        not in the database. For example for each object in the ModelName queryset, to add a temporary field called 
+        lower_name that contains the lowercased version of the original name field. 
+    </p>
+    {% include 'django_app/models/includes/code_snippets/annotate.html' %}
+
+    <!--Calculations-->
+    <h4 id="Django-models-accessing-data-in-viewspy-calculations">Calculations</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Calculation
+                </th>
+                <th>
+                    Syntax
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Count
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.count()</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Sum
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.aggregate(Sum('price'))</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Average
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.aggregate(Avg('score'))    </code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Max/Min
+                </td>
+                <td>
+                    <code class="written-code">aggregate(Max('value'))</code>,
+                    <code class="written-code">aggregate(Min('value'))</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!--Creating and Updating-->
+    <h4 id="Django-models-accessing-data-in-viewspy-creating-and-updating">Creating and Updating</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Action
+                </th>
+                <th>
+                    Syntax
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Create & save
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.create(name='Example', value=42)</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Manual creation
+                </td>
+                <td>
+                    <code class="written-code">obj = ModelName(name='Example')</code><br>
+                    <code class="written-code">obj.save()</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Update existing object
+                </td>
+                <td>
+                    <code class="written-code">obj = ModelName.objects.get(id=1)</code><br>
+                    <code class="written-code">obj.name = 'New'</code><br>
+                    <code class="written-code">obj.save()</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Bulk update
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.filter(active=False).update(active=True)</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!--Deleting-->
+    <h4 id="Django-models-accessing-data-in-viewspy-deleting">Deleting</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Action
+                </th>
+                <th>
+                    Syntax
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Delete one
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.get(id=1).delete()</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Delete many
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.filter(status='archived').delete()</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!--Ordering and Slicing-->
+    <h4 id="Django-models-accessing-data-in-viewspy-ordering-and-slicing">Ordering and Slicing</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Action
+                </th>
+                <th>
+                    Syntax
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Order ascending
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.order_by('name')</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Order descending
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.order_by('-created_at')</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Limit results
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.all()[:5]</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Offset + limit (pagination)
+                </td>
+                <td>
+                    <code class="written-code">ModelName.objects.all()[5:10]</code>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

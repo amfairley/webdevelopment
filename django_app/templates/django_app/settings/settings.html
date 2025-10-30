@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Django - settings.py{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>settings.py</h2>
+
+    {% include 'django_app/settings/includes/contents.html' %}
+    {% include 'django_app/settings/includes/what_is_it_for.html' %}
+    {% include 'django_app/settings/includes/layout_of_the_settings_file.html' %}
+    {% include 'django_app/settings/includes/how_tos.html' %}
+
+{% endblock %}

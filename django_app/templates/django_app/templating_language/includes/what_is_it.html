@@ -1,0 +1,18 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-templating-language-what-is-it{% endblock %}
+
+<!--Section title-->
+{% block text_title %}What is it?{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Django's templating language is a lightweight, secure, and Python-like syntax used to build dynamic HTML pages. 
+        It lets you insert variables, loop through data, use conditionals, and call filters directly in your templates 
+        using the context passed from the view. It avoids direct Python code in templates for security and separation 
+        of concerns, making your views responsible for logic and templates focused on presentation.
+    </p>
+{% endblock %}

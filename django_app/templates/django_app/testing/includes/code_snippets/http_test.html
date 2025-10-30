@@ -1,0 +1,20 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-templates-code-snippets-http-test{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">def test_available_rooms_renders_correctly(self):
+    '''Test the correct template is used and works'''
+    # Simulates a browser GET request to /rooms/available (defined in the setUp)
+    response = self.client.get(self.url)
+    # Confirms the page loads correctly (code 200)
+    self.assertEqual(response.status_code, 200)
+    # Confirms the correct template was used
+    self.assertTemplateUsed(response, 'rooms/available_rooms.html')
+</code></pre>
+{% endblock %}

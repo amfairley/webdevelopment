@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Django - Apps{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Apps</h2>
+
+    {% include 'django_app/apps/includes/contents.html' %}
+    {% include 'django_app/apps/includes/what_are_apps.html' %}
+    {% include 'django_app/apps/includes/creating_an_app.html' %}
+    {% include 'django_app/apps/includes/the_core_app.html' %}
+
+{% endblock %}

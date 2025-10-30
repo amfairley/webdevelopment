@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Django - AllAuth{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>AllAuth</h2>
+
+    {% include 'django_app/allauth/includes/contents.html' %}
+    {% include 'django_app/allauth/includes/what_is_django_allauth.html' %}
+    {% include 'django_app/allauth/includes/set_up.html' %}
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-messages-enabling-messages{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Enabling Messages{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Django's message framework is included by default, so you just need to confirm these apps and middleware are in 
+        your settings.py:
+    </p>
+    {% include 'django_app/messages/includes/code_snippets/enable_messages.html' %}
+    <p>
+        You can overwrite the default values like so:
+    </p>
+    {% include 'django_app/messages/includes/code_snippets/overwrite_messages.html' %}
+    <p>
+        You can even make custom ones like:
+    </p>
+    {% include 'django_app/messages/includes/code_snippets/custom_messages.html' %}
+
+{% endblock %}

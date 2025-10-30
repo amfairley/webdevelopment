@@ -1,0 +1,28 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-languages-gnu-gettext{% endblock %}
+
+<!--Section title-->
+{% block text_title %}GNU Gettext{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Download the 
+        <a 
+            class="text-link"
+            href="https://mlocati.github.io/articles/gettext-iconv-windows.html"
+            title="Go to the GNU Gettext download page"
+            aria-label="Go to the GNU Gettext download page"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            precompiled binary installer
+        </a>
+        to start. Ensure you download the correct version such as the 64 bit static and it should be installed to 
+        C:\Program Files\gettext-iconv.
+    </p>
+
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-templates-code-snippets-testing-create{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">class AddRoomViewTest(TestCase):
+    '''Test the add room view'''
+    def setUp(self):
+        '''Create objects to test the add rooms view'''
+        # Create sample amenities which is a separate table that the rooms reference
+        self.amenity1 = Amenities.objects.create(
+            name="bed",
+            sanitised_name="Bed",
+            icon="bed-icon"
+        )
+        self.amenity2 = Amenities.objects.create(
+            name="wifi",
+            sanitised_name="WiFi",
+            icon="wifi-icon"
+        )
+        self.client = Client()
+
+    def test_add_room_valid_data(self):
+        """Test adding a room with valid data."""
+        # Create valid data
+        form_data = {
+            'name': "new_room",
+            'sanitised_name': "New Room",
+            'amenities': [1, 2],
+            'description': "A new room description",
+            'price': 10.00,
+        }
+	    # Simulate a post request at the URL resolved by reverse('add_room') with the data
+        response = self.client.post(reverse('add_room'), data=form_data)
+	    # Check that the data was processed and that the user was redirected (code 302)
+        self.assertEqual(response.status_code, 302)
+	    # Check that a Room object now exists
+        self.assertTrue(Room.objects.exists())
+
+    def test_add_room_invalid_data(self):
+        """Test adding a room with invalid data."""
+        # Invalid data
+        form_data = {
+            'name': '',
+            'description': '',
+            'amenities': [],
+            'price': -10.00,
+        }
+	    # Simulate a post request at the URL resolved by reverse('add_room') with the data
+        response = self.client.post(reverse('add_room'), data=form_data)
+	    # Check that the response is 200 as the page is reloaded with error messages
+        self.assertEqual(response.status_code, 200)
+	    # Confirm that the current template was reloaded instead of the user redirected in the case of successful submission
+        self.assertTemplateUsed(response, 'rooms/add_room.html')
+	    # Ensures there is a form in the context so that errors can be shown
+        self.assertIn('form', response.context)
+	    # Confirm that the form is invalid
+        self.assertFalse(response.context['form'].is_valid())
+</code></pre>
+{% endblock %}

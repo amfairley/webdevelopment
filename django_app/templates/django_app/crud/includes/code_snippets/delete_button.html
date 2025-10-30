@@ -1,0 +1,13 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-crud-code-snippets-delete-button{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="html">&lt;a href="&#123;% url 'delete' item.id %&#125;"&gt;Confrim&lt;/a&gt;
+</code></pre>
+{% endblock %}

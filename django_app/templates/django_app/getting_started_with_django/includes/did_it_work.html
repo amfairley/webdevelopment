@@ -1,0 +1,54 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-getting-started-with-django-did-it-work{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Did it Work?{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Good question, you've made a change to your files by starting the project and it doesn't look like any errors 
+        occurred, but how can we check that everything is working as expecting? First look at the file explorer for 
+        your project, you should notice a couple of new things. A manage.py file should be there and a folder with your 
+        project name containing the following:
+    </p>
+    <ul>
+        <li>__init__.py - Marks this directory as a package for import.</li>
+        <li>settings.py - Contains global settings, including debug mode, database configuration, and template locations.</li>
+        <li>urls.py - Manages URL routing</li>
+        <li>wsgi.py - Handles communication between the web server and your Django application.</li>
+    </ul>
+    <p>
+        For me, this looked like:
+    </p>
+    <img src="https://i.imgur.com/K0uIQtV.png">
+    <p>
+        For due diligence, in the terminal try running the website with: 
+    </p>
+    {% include 'django_app/getting_started_with_django/includes/code_snippets/runserver.html' %}
+    <p>
+        You should see something like:
+    </p>
+    {% include 'django_app/getting_started_with_django/includes/code_snippets/working_code_snippet.html' %}
+    <p>
+        If you see the something similar to the above, that's good news. We can ignore the part about migrations for 
+        now, as we will address that in a coming step. The main points to note are the web address for the development 
+        server and how to quit the server. Either copy the web address in it's entirety and paste into your web browser 
+        or <kbd>ctrl+click</kbd> it to open your site. If everything has gone to plan you should see the following:
+    </p>
+    <img src="https://i.imgur.com/wIuQAES.png">
+    <p>
+        Now if you look back in your terminal on VSCode you might see:
+    </p>
+    {% include 'django_app/getting_started_with_django/includes/code_snippets/favicon_error.html' %}
+    <p>
+        It's not great to see an error this early on, but this is entirely normal. Django is just reminding us that it 
+        cannot find a favicon, but we haven't tried to add one yet so there's none to be found.
+    </p>
+    <p>
+        To close the server running your website, just use the keyboard shortcut <kbd>CTRL+C</kbd> inside your terminal.
+    </p>
+{% endblock %}

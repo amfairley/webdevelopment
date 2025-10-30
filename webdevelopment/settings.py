@@ -62,6 +62,7 @@ INSTALLED_APPS = [
     'flask_app',
     'analytics',
     'search',
+    'django_app',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,16 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-models-code-snippets-admin-imports{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">from django.contrib import admin
+from .models import ModelName
+
+admin.site.register(ModelName)
+</code></pre>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-search-code-snippets-algolia-results-template{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="html">&lt;h2&gt;Search results for "&#123;&#123; query &#125;&#125;"&lt;/h2&gt;
+    &lt;section&gt;
+        &#123;% if results %&#125;
+            &#123;% for hit in results %&#125;
+        &lt;!-- Link to the page --&gt;
+                &lt;a href="&#123;&#123; hit.url &#125;&#125;"&gt;
+                    &lt;div&gt;
+            &lt;!-- Display the user friendly title  and section type--&gt;
+                        &lt;h3&gt;&#123;&#123; hit.prettyTitle &#125;&#125;&lt;/h3&gt;
+                        &lt;p&gt; Section type: &#123;&#123; hit.sectionType &#125;&#125;&lt;/p&gt;
+            &lt;!-- Check if there is any content to display --&gt;
+                        &#123;% if hit.content %&#125;
+            &lt;!-- Show the content which is a combination of the paragraphs but limit it to 30 words --&gt;
+                            &lt;p&gt;Content: &#123;&#123; hit.content|truncatewords:30 &#125;&#125;&lt;/p&gt;
+                        &#123;% endif %&#125;
+                    &lt;/div&gt;
+                &lt;/a&gt;
+            &#123;% endfor %&#125;
+        &#123;% else %&#125;
+            &lt;p&gt;No results found.&lt;/p&gt;
+        &#123;% endif %&#125;
+    &lt;/section&gt;
+</code></pre>
+{% endblock %}

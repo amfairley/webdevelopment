@@ -1,0 +1,23 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-forms-what-are-django-forms{% endblock %}
+
+<!--Section title-->
+{% block text_title %}What are Django Forms?{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Django's forms handle HTML form rendering, validation, and data processing. You can create two types.
+    </p>
+    <ul>
+        <li>Forms - manually define fields (for custom inputs).</li>
+        <li>ModelForms - automatically generate a form from a model.</li>
+    </ul>
+    <p>
+        Django forms integrate with views and templates to simplify capturing user input, validating it, and saving it 
+        to the database.
+    </p>
+{% endblock %}

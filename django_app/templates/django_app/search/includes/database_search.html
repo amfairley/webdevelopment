@@ -1,0 +1,27 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-search-database-search{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Database Search{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        A general search of an attached data base is simple to put up. Use a form or button to query a database either 
+        with user input or a dropdown menu, then return the queried items and loop through them on a HTML results page 
+        all covered in the 
+        <a 
+            class="text-link"
+            href="{% url 'django_crud' %}"
+            title="Go the CRUD section"
+            aria-label="Go the CRUD section"
+        >
+            CRUD
+        </a>
+        section.
+    </p>
+
+{% endblock %}

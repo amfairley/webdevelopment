@@ -1,0 +1,49 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-crud-create{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Create{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Creating a record in Django usually involves a form, a view to handle the form submission, and a template for 
+        the user interface.
+    </p>
+    <p>
+        <strong>Step 1:</strong>
+        Add a “Create” Button or Link
+    </p>
+    <p>
+        In an exisiting template, provide a way to go to a "create new item" page:
+    </p>
+    {% include 'django_app/crud/includes/code_snippets/create_button.html' %}
+    <p>
+        <strong>Step 2:</strong>
+        Create a Template for Adding Items
+    </p>
+    <p>
+        In add_item.html:
+    </p>
+    {% include 'django_app/crud/includes/code_snippets/create_form.html' %}
+    <p>
+        <strong>Step 3:</strong>
+        Define the view
+    </p>
+    <p>
+        In views.py:
+    </p>
+    {% include 'django_app/crud/includes/code_snippets/create_view.html' %}
+    <p>
+        <strong>Step 4:</strong>
+        Add the url
+    </p>
+    <p>
+        In urls.py:
+    </p>
+    {% include 'django_app/crud/includes/code_snippets/create_url.html' %}
+
+{% endblock %}

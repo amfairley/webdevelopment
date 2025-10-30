@@ -1,0 +1,18 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-models-run-migrations{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Run Migrations{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        After setting up models, Django needs to convert them into actual database tables. You do this using migrations.
+        This will need to be done if you were to update a Model by adding or removing column names. However doing this 
+        will not delete existing instances of your Model, so don't worry about that.
+    </p>
+    {% include 'django_app/models/includes/code_snippets/migrate_models.html' %}
+{% endblock %}

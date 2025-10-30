@@ -1,0 +1,26 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-templates-code-snippets-testing-valid-post{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">def test_available_rooms_valid_data(self):
+    '''Test valid data'''
+    # Set up data
+    valid_data = &#123;
+        'mobile-check_in_date': date.today(),
+        'mobile-check_out_date': date.today() + timedelta(days=2),
+        'mobile-adults': 2,
+    &#125;
+	# Define the response passing the valid data
+    response = self.client.post(self.url, valid_data)
+	# Ensure that the response is 200
+    self.assertEqual(response.status_code, 200)
+	# Check that the view took the input values and output the valid_rooms variable to the context
+    self.assertIn('valid_rooms', response.context)
+</code></pre>
+{% endblock %}

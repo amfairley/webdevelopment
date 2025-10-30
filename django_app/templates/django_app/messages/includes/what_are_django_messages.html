@@ -1,0 +1,25 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-messages-what-are-django-messages{% endblock %}
+
+<!--Section title-->
+{% block text_title %}What are Django Messages?{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The messages framework lets you store short, one-time notifications (like “Your profile was updated!”) that are 
+        shown to users after an action. These may be for:
+    </p>
+    <ul>
+        <li>A successful form submission</li>
+        <li>A failed login attempt</li>
+        <li>A warning or error</li>
+    </ul>
+    <p>
+        They're stored temporarily (in the session or request) and automatically cleared once displayed.
+    </p>
+
+{% endblock %}

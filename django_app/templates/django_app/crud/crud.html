@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Django - CRUD{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>CRUD</h2>
+
+    {% include 'django_app/crud/includes/contents.html' %}
+    {% include 'django_app/crud/includes/create.html' %}
+    {% include 'django_app/crud/includes/read.html' %}
+    {% include 'django_app/crud/includes/update.html' %}
+    {% include 'django_app/crud/includes/delete.html' %}
+
+{% endblock %}

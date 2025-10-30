@@ -1,0 +1,16 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-models-code-snippets-migrate-models{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="bash">python manage.py makemigrations --dry-run
+python manage.py makemigrations
+python manage.py showmigrations
+python manage.py migrate
+</code></pre>
+{% endblock %}

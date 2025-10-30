@@ -1,0 +1,32 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-forms-code-snippets-form-view{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">from .forms import FormName
+    
+def add_item(request):
+	# Add the if to check if the request method is POST
+    if request.method == 'POST':
+	    # Define the form using the information submitted
+        form = FormName(request.POST)
+	    # Check that the form is valid, then save it and redirect         
+        if form.is_valid():
+            form.save()
+            return redirect('view_function_2')  # Redirect after saving to another view
+
+	# For the case of GET (e.g. page loading)
+    else:
+	# Define the form in order to acces it with templating language
+        form = FormName()
+
+    # Add the form to the context, form is defined in POST and GET so in either option there will be a form variable to add
+    context = {'form': form}
+    return render(request, 'todo/add_item.html', context)
+</code></pre>
+{% endblock %}

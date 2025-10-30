@@ -1,0 +1,24 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-testing-writing-tests{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Writing Tests{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Each test is:
+    </p>
+    <ul>
+        <li>A class that inherits from TestCase</li>
+        <li>Methods that start with test_</li>
+        <li>Define any variables inside the method that you require</li>
+        <li>Assert that specific things happen (if True, the test will pass)</li>
+    </ul>
+
+    {% include 'django_app/testing/includes/code_snippets/writing_tests.html' %}
+  
+{% endblock %}

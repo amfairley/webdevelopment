@@ -1,0 +1,23 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-settings-code-snippets-internationalization{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python"># Internationalization
+# https://docs.djangoproject.com/en/5.1/topics/i18n/
+
+# Sets default language for your site
+LANGUAGE_CODE = 'en-us'
+# Se the default time zone for your project
+TIME_ZONE = 'UTC'
+# USE_INTERNATIONALIZATION. If True, enables Django's translation system
+USE_I18N = True
+# Enables Django's time zone support
+USE_TZ = True
+</code></pre>
+{% endblock %}

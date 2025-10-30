@@ -1,0 +1,31 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-testing-testing-in-django{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Testing in Django{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Testing is essential for building reliable, maintainable Django applications. It ensures that your code behaves 
+        as expected, prevents regressions, and supports refactoring with confidence. Django provides a powerful test 
+        framework built on Python's unittest library, plus features for testing views, models, forms, and integration 
+        workflows.
+    </p>
+    <p>
+         The 3 types of tests in Django are:
+    </p>
+    <ul>
+        <li>Unit tests - Test a single piece of functionality in isolation (e.g., a model method).</li>
+        <li>Integration tests - Check that multiple components (e.g., model + form + view) work together.</li>
+        <li>Functional tests - Simulate user interactions (e.g., submitting forms in the browser).</li>
+    </ul>
+    <p>
+        When writing tests, start by thinking about the functionality to add. Write small, focused tests for each piece 
+        of behaviour.
+    </p>
+  
+{% endblock %}

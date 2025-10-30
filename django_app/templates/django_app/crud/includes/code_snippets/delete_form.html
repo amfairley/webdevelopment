@@ -1,0 +1,13 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-crud-code-snippets-delete-form{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="html">&lt;form method="post" action="&#123;% url 'delete_item' item.id %&#125;"&gt;
+</code></pre>
+{% endblock %}

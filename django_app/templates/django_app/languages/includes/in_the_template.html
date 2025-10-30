@@ -1,0 +1,25 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-languages-in-the-template{% endblock %}
+
+<!--Section title-->
+{% block text_title %}In the Template{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        At the top of the page have:
+    </p>
+    {% include 'django_app/languages/includes/code_snippets/language_template_load.html' %}
+    <p>
+        Then you can call the templating language translate to automatically translate something (not recommended).
+    </p>
+    {% include 'django_app/languages/includes/code_snippets/language_template_direct_translate.html' %}
+    <p>
+        Or just pass the variable you have defined.
+    </p>
+    {% include 'django_app/languages/includes/code_snippets/language_template_pass_variable.html' %}
+
+{% endblock %}

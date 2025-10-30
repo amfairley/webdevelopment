@@ -1,0 +1,23 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-static-code-snippets-cloudinary-settings{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python"># Add required cloudinary imports
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
+# Add cloudinary to installed apps
+INSTALLED_APPS  [
+    "cloudinary",
+    "cloudinary_storage",
+]
+
+</code></pre>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Django - Messages{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Messages</h2>
+
+    {% include 'django_app/messages/includes/contents.html' %}
+    {% include 'django_app/messages/includes/what_are_django_messages.html' %}
+    {% include 'django_app/messages/includes/enabling_messages.html' %}
+    {% include 'django_app/messages/includes/including_messages_in_your_views.html' %}
+    {% include 'django_app/messages/includes/message_levels.html' %}
+    {% include 'django_app/messages/includes/display_messages_in_your_templates.html' %}
+    {% include 'django_app/messages/includes/style_messages.html' %}
+
+{% endblock %}

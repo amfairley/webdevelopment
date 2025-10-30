@@ -1,0 +1,61 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-getting-started-with-django-migrations{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Migrations{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Making a full-stack website can be complex and making small changes in one place, if not correctly implemented,
+        can spell disaster across the back-end of the website affect functionality and user experience. To streamline 
+        this, Django implements migrations to manage changes to a database schema. In future you will need to implement
+        them when changing models so that they are applied correctly to the database. When doing so, Django stores the 
+        changes and lets you apply them seamlessly to the database without data loss. For now the big change that we 
+        have made is creating our project, so we will need to run the initial migrations and I propose the following 
+        series of commands to ensure that we mitigate errors and keep to best practices:
+    </p>
+    {% include 'django_app/getting_started_with_django/includes/code_snippets/showmigrations.html' %}
+    <p>
+        This a list of all migration files for each app, indicating which have been applied ([X]) and which are pending 
+        ([ ]).
+    </p>
+    <p>
+        An example for the initial migration would look like:
+    </p>
+    {% include 'django_app/getting_started_with_django/includes/code_snippets/showmigrations_example.html' %}
+    <p>
+        Then do:
+    </p>
+    {% include 'django_app/getting_started_with_django/includes/code_snippets/makemigrations_dry_run.html' %}
+    <p>
+        The appended --dry-run lets us simulate the migration creation without actually generating files, so we can see 
+        changes and check that no errors will occur. For the initial migration there should be no changes detected.
+    </p>
+    <p>
+        Next up is:
+    </p>
+    {% include 'django_app/getting_started_with_django/includes/code_snippets/makemigrations.html' %}
+    <p>
+        This creates migration files based on model changes, but does not apply them to the database yet.
+    </p>
+    {% include 'django_app/getting_started_with_django/includes/code_snippets/migrate_plan.html' %}
+    <p>
+        Shows a list pending migrations for apps describing what will be applied, helping us review changes before 
+        execution. This would look something like:
+    </p>
+    {% include 'django_app/getting_started_with_django/includes/code_snippets/migrate_plan_example.html' %}
+    <p>
+        Then finally:
+    </p>
+    {% include 'django_app/getting_started_with_django/includes/code_snippets/migrate.html' %}
+    <p>
+        This applies all pending migrations, updating the database schema according to the migration files. This looks 
+        like:
+    </p>
+    {% include 'django_app/getting_started_with_django/includes/code_snippets/migrate_example.html' %}
+
+{% endblock %}

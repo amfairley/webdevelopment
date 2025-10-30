@@ -1,0 +1,55 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-search-code-snippets-algolia-view{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">from django.shortcuts import render
+# Import settings to access our APP ID and search keys
+from django.conf import settings
+# Import the synchronous Algolia search client to connect to our index
+from algoliasearch.search.client import SearchClientSync
+
+def search_view(request):
+    # Extract the query parameter 'q' from the GET request.
+    # request.GET is a dictionary-like object for URL query params (?q=html).
+    # If 'q' is missing, default to an empty string ("").
+    query = request.GET.get("q", "")
+    # Initialise the results list
+    results = []
+
+	# Run the search if there is a query
+    if query:
+
+        try:
+            # Initialize Algolia client with the APP ID and the search key
+            client = SearchClientSync(settings.ALGOLIA_APP_ID, settings.ALGOLIA_SEARCH_KEY)
+
+            # Perform the search
+            # First argument is the index name ("webdevgrad_pages").
+            # Second is a dictionary of search parameters (here: just the query string).
+            res = client.search_single_index(
+                "webdevgrad_pages",
+                &#123;
+                    "query": query,
+                &#125;
+            )
+
+            # Get the hits (results)
+            results = res.hits
+
+        except Exception as e:
+            # Optional: log error for debugging
+            print("Algolia search error:", e)
+
+    # Render the results page passing query as a variable query and results as a variable results
+    return render(request, "search/results.html", &#123;
+        "query": query,
+        "results": results,
+    &#125;)
+</code></pre>
+{% endblock %}

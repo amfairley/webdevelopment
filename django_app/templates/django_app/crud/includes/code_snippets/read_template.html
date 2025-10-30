@@ -1,0 +1,24 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-crud-code-snippets-read-template{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="html">&lt;h1&gt;My To-Do List&lt;/h1&gt;
+&lt;ul&gt;
+    &#123;% for item in items %&#125;
+        &lt;li&gt;&#123;&#123; item.name &#125;&#125; - &#123;% if item.done %&#125;Done&#123;% else %&#125;Pending&#123;% endif %&#125;
+            &lt;a href="&#123;% url 'edit' item.id %&#125;"&gt;Edit&lt;/a&gt;
+            &lt;a href="&#123;% url 'delete' item.id %&#125;"&gt;Delete&lt;/a&gt;
+        &lt;/li&gt;
+    &#123;% empty %&#125;
+        &lt;li&gt;No items found.&lt;/li&gt;
+    &#123;% endfor %&#125;
+&lt;/ul&gt;
+&lt;a href="&#123;% url 'add' %&#125;"&gt;Add a new item&lt;/a&gt;
+</code></pre>
+{% endblock %}

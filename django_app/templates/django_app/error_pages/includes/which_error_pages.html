@@ -1,0 +1,26 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-error-pages-which-error-pages{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Which Error Pages{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Error pages to keep in mind for your website are:
+    </p>
+    <ul>
+        <li>404 - Page not found (user visits a non existent URL).</li>
+        <li>500 - Server error (uncaught exceptions in your code).</li>
+        <li>403 - Forbidden (user doesn't have permission to access a page).</li>
+        <li>400 - Bad request (malformed input or invalid request).</li>
+    </ul>
+    <p>
+        You can also create others (401 unauthorized, 502 gateway errors), but the above four are the most used in 
+        Django projects.
+    </p>
+
+{% endblock %}

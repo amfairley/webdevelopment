@@ -1,0 +1,22 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-search-code-snippets-indexer-third-party-imports{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python"># Library for parsing HTML and extracting data
+from bs4 import BeautifulSoup
+# Algolia client for pushing records to search index
+from algoliasearch.search.client import SearchClient
+# Access Django settings to retrieve the security keys
+from django.conf import settings
+# Library for writing asynchronous code which is used with the async Algolia client
+import asyncio
+# Regex module, used in slugify helper
+import re
+</code></pre>
+{% endblock %}

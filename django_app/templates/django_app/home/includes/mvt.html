@@ -1,0 +1,57 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-home-mvt{% endblock %}
+
+<!--Section title-->
+{% block text_title %}MVT{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        At the heart of Django lies the
+        <dfn title="Model-View-Template">MVT</dfn>
+        architecture. This setup promotes code reusability, separation of concerns, and a structured way to handle data 
+        and user interactions. By keeping these layers distinct, it prevents the mixing of SQL, Python, and front-end 
+        code in one file, keeping the code looking clean but letting a team of developers of differing disciplines to 
+        collaborate effectively.
+    </p>
+    <!--Model-->
+    <p>
+        The 
+        <dfn title="Blueprint for your data in the database">Model</dfn>
+        is the foundation of the MVT architecture, responsible for managing data and interacting with the database. 
+        Models define the structure of your data using Django's 
+        <dfn title="Object-Relational Mapping">ORM</dfn>,
+        allowing developers to work with objects 
+        <dfn title="Using Python">Pythonically</dfn>
+        instead of using raw SQL. This 
+        <dfn title="Provide simpler interaction systems to complex implementations">abstraction</dfn>
+        not only simplifies database operations but also enhances code reusability and maintainability. 
+    </p>
+    <!--View-->
+    <p>
+        The 
+        <dfn title="The go between for the users and database">View</dfn>
+        serves as the intermediary layer, acting as the controller in the traditional 
+        <dfn title="Model View Controller. Django uses Model View Template which is a variation of this.">MVC</dfn>
+        architecture. It processes incoming requests from users, applies necessary logic, and interacts with the model 
+        to fetch or modify data. Views then prepare this data and pass it to templates for rendering in the form of 
+        <dfn title="Values, variables, and data passed from the View to the Template">context</dfn>.
+        This is where most of your application's logic resides; validating user input, handling form submissions, and 
+        determining what information is displayed to the user. For example, a view might filter products based on a 
+        user's search query or display a list of results in reverse price order. 
+    </p>
+    <!--Template-->
+    <p>
+        The 
+        <dfn title="The front end that the user interacts with.">Template</dfn>
+        the presentation layer, responsible for rendering dynamic content and defining how data is displayed to the 
+        user. Templates use 
+        <dfn title="A way of embedding pythonic logic in Templates.">Django's Template Language</dfn>
+        or alternatives like Jinja2 to create visually appealing and user-friendly pages. They receive context data 
+        from views and use tags, filters, and variables to render this data dynamically. Templates are strictly focused 
+        on the presentation and avoid back-end logic, ensuring a clean separation from models and views. 
+    </p>
+{% endblock %}

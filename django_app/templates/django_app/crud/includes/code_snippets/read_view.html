@@ -1,0 +1,23 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-crud-code-snippets-read-view{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">from django.shortcuts import render
+from .models import Item
+
+def get_todo_list(request):
+	# Fetch all the items
+    items = Item.objects.all()  # Fetch all items
+	# Add to context
+	context = {
+		'items': items,
+}
+    return render(request, 'todo/todo_list.html', context)
+</code></pre>
+{% endblock %}

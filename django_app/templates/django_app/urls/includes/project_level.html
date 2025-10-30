@@ -1,0 +1,30 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-urls-project-level{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Project Level{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The project level urls.py file (project_name/urls.py) acts as the main router for your entire Django site. It 
+        doesn't handle individual pages directly but instead includes each app's URL configuration.
+    </p>
+    {% include 'django_app/urls/includes/code_snippets/project_level_urls.html' %}
+    <p>
+        The line 
+        <code class="written-code">path('HTML/', include(app_name.urls'))</code>
+        tells Django that "For any URL that starts with /app_name/, check app_name/urls.py for further routing." This 
+        allows you to keep your build modular by letting each app manage its own URL patterns.
+    </p>
+    <p>
+        It is important that the first parameter is given an name ending with a forward slash. This will appear in the 
+        URL and giving it a '/' allows subsequent child pages to be amended easily.
+    </p>
+    <p>
+        The admin path is the default /admin route for the admin login.
+    </p>
+{% endblock %}

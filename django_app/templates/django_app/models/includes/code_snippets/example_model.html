@@ -1,0 +1,49 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-models-code-snippets-example-model{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">from django.db import models
+
+class Room(models.Model):
+    '''Room model'''
+	# Name field for querying: max length of 254 characters, cannot be Null or blank
+    name = models.CharField(max_length=254, null=False, blank=False)
+	# Sanitised name field for display on the website: max length of 254 characters, cannot be Null of blank
+    sanitised_name = models.CharField(max_length=254, null=False, blank=False)
+	# Amenities field that is a list of amenities that the room has to offer, it cannot be Null of blank
+    amenities = models.JSONField(default=list, null=False, blank=False)
+	# A text description field: it has a defined default, so no need to say it cannot be Null of blank
+    description = models.TextField(
+        default='Room Description',
+    )
+	# An image url field to add in the url attributes of img elements: max length of 1024 characters as these can be long. This can be Null or blank as it is not required.
+    image_url = models.URLField(max_length=1024, null=True, blank=True)
+	# Image field to have an actual image saved in the database. It is not required so it can be Null or blank    
+    image = models.ImageField(null=True, blank=True)
+	# The price to two decimal places, so uses DecimalField: limited to a maximum of 6 digits, 2 decimal places and it cannot be Null of False
+    price = models.DecimalField(
+        max_digits=6,
+        decimal_places=2,
+        null=False,
+        blank=False
+    )
+    # Unavailability field which is a list of already booked dates: uses a JSONField as a list, it cannot be Null but it can be blank if the room has not been booked yet
+    unavailability = models.JSONField(default=list, null=False, blank=True)
+
+    # __str__(self) function
+    def __str__(self):
+        '''Returns the room name'''
+        return self.name
+
+    # A sanitised name method to display the sanitised name when called
+    def get_sanitised_name(self):
+        '''Returns the sanitised room name'''
+        return self.sanitised_name
+</code></pre>
+{% endblock %}

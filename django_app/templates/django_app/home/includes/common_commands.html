@@ -1,0 +1,114 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-home-common-commands{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Common Commands{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Here is a selection of common commands used when building projects in Django to act as a reference. These will
+        all be explored fully in subsequent sections.
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Code
+                </th>
+                <th>
+                    Use
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <code class="written-code">python -m venv venv</code>
+                </td>
+                <td>
+                    Create a virtual environment
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">.\venv\Scripts\activate</code>
+                </td>
+                <td>
+                    Activate the virtual environment
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">deactivate</code>
+                </td>
+                <td>
+                    Deactivate the virtual environment
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">pip3 install django</code>
+                </td>
+                <td>
+                    Install Django
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">django-admin startproject project_name .</code>
+                </td>
+                <td>
+                    Start a project named project_name
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">pip3 freeze --local > requirements.txt</code>
+                </td>
+                <td>
+                    Freeze requirements to a file named requirements.txt
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">python manage.py runserver</code>
+                </td>
+                <td>
+                    Run the project locally
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">python manage.py showmigrations</code><br>
+                    <code class="written-code">python manage.py makemigrations --dry-run</code><br>
+                    <code class="written-code">python manage.py makemigrations</code><br>
+                    <code class="written-code">python manage.py migrate --plan</code><br>
+                    <code class="written-code">python manage.py migrate</code>
+                </td>
+                <td>
+                    Migration flow
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">python manage.py createsuperuser</code>
+                </td>
+                <td>
+                    Create a superuser
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code class="written-code">python manage.py startapp app_name</code>
+                </td>
+                <td>
+                    Create an app named app_name
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

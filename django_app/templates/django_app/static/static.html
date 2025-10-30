@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Django - Static{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Static</h2>
+
+    {% include 'django_app/static/includes/contents.html' %}
+    {% include 'django_app/static/includes/creating_folders.html' %}
+    {% include 'django_app/static/includes/updating_settingspy.html' %}
+    {% include 'django_app/static/includes/external_hosting_of_images_and_static_files.html' %}
+
+{% endblock %}

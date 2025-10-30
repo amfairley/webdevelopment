@@ -1,0 +1,18 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-views-code-snippets-form-submission{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">from django.http import HttpResponseRedirect
+
+def submit_form(request):
+    if request.method == 'POST':
+        # process form data...
+        return HttpResponseRedirect('/thanks/')
+</code></pre>
+{% endblock %}

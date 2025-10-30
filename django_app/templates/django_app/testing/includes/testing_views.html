@@ -1,0 +1,68 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-testing-testing-views{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Testing Views{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        It is worth noting that the tests run with an empty database so if your tests require specific instances they 
+        need to be defined in your tests.
+    </p>
+
+    <!--setUp-->
+    <h4 id="Django-testing-testing-views-setup">setUp</h4>
+    <p>
+        Defining a setUp function inside the test class provides a set of instructions that runs before each of the 
+        following test method, so is good for setting common variables. 
+    </p>
+    {% include 'django_app/testing/includes/code_snippets/setup.html' %}
+
+    <!--Check HTTP Response and Template-->
+    <h4 id="Django-testing-testing-views-check-http-response-and-template">Check HTTP Response and Template</h4>
+    <p>
+        The goal of this test is usually to check that the page renders the correct template and loads correctly.
+    </p>
+    {% include 'django_app/testing/includes/code_snippets/http_test.html' %}
+
+    <!--Testing the Context (Read)-->
+    <h4 id="Django-testing-testing-views-testing-the-context">Testing the Context (Read)</h4>
+    <p>
+        It is important that everything that you need in the template is passed in the context of your view. To check 
+        that all of these are handled correctly:
+    </p>
+    {% include 'django_app/testing/includes/code_snippets/testing_context.html' %}
+
+    <!--Testing Valid POST Data-->
+    <h4 id="Django-testing-testing-views-testing-valid-post-data">Testing Valid POST Data</h4>
+    <p>
+        In views that have code in the case of a POST method, you should write a test to check that a valid POST 
+        submission works.
+    </p>
+    {% include 'django_app/testing/includes/code_snippets/testing_valid_post.html' %}
+
+    <!--Testing Invalid POST Data-->
+    <h4 id="Django-testing-testing-views-testing-invalid-post-data">Testing Invalid POST Data</h4>
+    <p>
+        As important as testing that the POST data is valid is to check that the correct responses are given when 
+        invalid data is submitted.
+    </p>
+    {% include 'django_app/testing/includes/code_snippets/testing_invalid_post.html' %}
+
+    <!--Testing Create-->
+    <h4 id="Django-testing-testing-views-testing-create">Testing Create</h4>
+    {% include 'django_app/testing/includes/code_snippets/testing_create.html' %}
+
+    <!--Testing Edit-->
+    <h4 id="Django-testing-testing-views-testing-edit">Testing Edit</h4>
+    {% include 'django_app/testing/includes/code_snippets/testing_edit.html' %}
+
+    <!--Testing Delete-->
+    <h4 id="Django-testing-testing-views-testing-delete">Testing Delete</h4>
+    {% include 'django_app/testing/includes/code_snippets/testing_delete.html' %}
+
+{% endblock %}

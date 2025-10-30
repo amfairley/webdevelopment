@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Django - Getting Started{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Getting Started with Django</h2>
+
+    {% include 'django_app/getting_started_with_django/includes/contents.html' %}
+    {% include 'django_app/getting_started_with_django/includes/virtual_environment.html' %}
+    {% include 'django_app/getting_started_with_django/includes/installing_django.html' %}
+    {% include 'django_app/getting_started_with_django/includes/did_it_work.html' %}
+    {% include 'django_app/getting_started_with_django/includes/migrations.html' %}
+    {% include 'django_app/getting_started_with_django/includes/creating_a_superuser.html' %}
+    {% include 'django_app/getting_started_with_django/includes/common_gitignore_files.html' %}
+
+{% endblock %}

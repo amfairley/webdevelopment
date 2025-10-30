@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Django - Templating Language{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Templating Language</h2>
+
+    {% include 'django_app/templating_language/includes/contents.html' %}
+    {% include 'django_app/templating_language/includes/what_is_it.html' %}
+    {% include 'django_app/templating_language/includes/syntax.html' %}
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'includes/troubleshooting.html' %}
+{% load static %}
+
+<!--ID-->
+{% block troubleshooting_id %}Django-forms-troubleshooting-troubleshoot-form{% endblock %}
+{% block troubleshooting_content %}
+    <p>
+        If a form is not working, check that the first thing inside the form element in your HTML page is &#123;% csrf_token %&#125;.
+    </p>
+{% endblock %}

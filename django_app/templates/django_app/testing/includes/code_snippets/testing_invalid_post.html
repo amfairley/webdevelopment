@@ -1,0 +1,22 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-templates-code-snippets-testing-invalid-post{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">def test_available_room_invalid_data(self):
+    '''Test invalid data'''
+	# Set up the invalid data
+    invalid_data = &#123;'mobile-check_in_date': 'invalid-date'&#125;
+	# Pass the invalid data to the response
+    response = self.client.post(self.url, invalid_data)
+    # Check that the page is still loaded as the error is displayed to the user instead of crashing
+    self.assertEqual(response.status_code, 200)
+    # Confirm that the form is invalid
+    self.assertFalse(response.context['booking_form'].is_valid())
+</code></pre>
+{% endblock %}

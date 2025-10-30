@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Django - Search{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Search</h2>
+
+    {% include 'django_app/search/includes/contents.html' %}
+    {% include 'django_app/search/includes/database_search.html' %}
+    {% include 'django_app/search/includes/algolia.html' %}
+
+{% endblock %}

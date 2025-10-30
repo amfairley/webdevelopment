@@ -1,0 +1,72 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-crud-update{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Update{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Updating records in Django involves:
+    </p>
+    <ul>
+        <li>Retrieving an existing database object</li>
+        <li>Populating a form with its current data</li>
+        <li>Saving changes back to the database</li>
+    </ul>
+    <p>
+        This process is commonly used for features like editing items in a Model instance, updating user profiles, or 
+        managing content in a web app.
+    </p>
+    <p>
+        <strong>Step 1:</strong>
+        Add an Edit Button in Your Template
+    </p>
+    <p>
+        To let users access an edit page, add a button or link in your template that points to the edit view. Pass the 
+        object's ID in the URL so Django knows which record to edit:
+    </p>
+    {% include 'django_app/crud/includes/code_snippets/update_link.html' %}
+    <p>
+        <strong>Step 2:</strong>
+        Create an Edit Template
+    </p>
+    <p>
+        The edit template is usually similar to your create template, but this form is populated with the current data 
+        of the record (handled in the view).
+    </p>
+    {% include 'django_app/crud/includes/code_snippets/update_template.html' %}
+    <p>
+        You don't need to specify a form action attribute. By default, the form posts to the current URL (which is what 
+        we want for editing).
+    </p>
+    <p>
+        <strong>Step 3:</strong>
+        Define the Edit View
+    </p>
+    <p>
+        In views.py, create a function-based view that retrieves the object to edit, pre-populates a form with its 
+        current data, and handles the submission of updated values.
+    </p>
+    {% include 'django_app/crud/includes/code_snippets/update_view.html' %}
+    <ul>
+        <li>get_object_or_404() retrieves the item by its ID or returns a 404 error if not found.</li>
+        <li>instance=item tells the form to pre-fill with the existing item's data.</li>
+        <li>If the form is valid on POST, form.save() updates the record in the database.</li>
+        <li>On success, we redirect to another page (often the item list or detail page).</li>
+    </ul>
+    <p>
+        <strong>Step 4:</strong>
+        Update urls.py
+    </p>
+    <p>
+        In your app's urls.py, define a path for the edit page.
+    </p>
+    {% include 'django_app/crud/includes/code_snippets/update_url.html' %}
+    <p>
+        This matches URLs like /edit/3/ to edit the item with ID 3.
+    </p>
+{% endblock %}

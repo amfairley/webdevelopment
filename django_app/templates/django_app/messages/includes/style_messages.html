@@ -1,0 +1,17 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-messages-style-messages{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Style Messages{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        If you're using Bootstrap, Django's default tags match up nicely.
+    </p>
+    {% include 'django_app/messages/includes/code_snippets/style_messages.html' %}
+
+{% endblock %}

@@ -1,0 +1,190 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-settings-how-tos{% endblock %}
+
+<!--Section title-->
+{% block text_title %}How Tos{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <!--env.py-->
+    <h4 id="Django-settings-how-tos-linking-your-env-file">Linking Your env.py File</h4>
+    <p>
+        Clearly any sensitive information such as secret keys should not be kept in your online repository, especially 
+        if it is made public. Therefore, linking your settings.py file to your env.py file is imperative to keep good 
+        practices and a high level of security to your site. Information on setting up your env.py file can be found 
+        <a 
+            class="text-link"
+            href="#"
+            title="Go to the env.py page"
+            aria-label="Go to the env.py page"
+        >
+            here.
+        </a>
+    </p>
+    <p>
+        Update the settings.py file imports to include:
+    </p>
+    {% include 'django_app/settings/includes/code_snippets/link_env_imports.html' %}
+    <p>
+        We used this built in python module to define the environmental variables in our env.py file and will need it 
+        in our settings.py file to retrieve them. To keep to good practices, add this below the other imports at the 
+        top of the settings.py file.
+    </p>
+    <p>
+        Then under the other imports make a check for the env.py file and if found import it. The if statement is used 
+        so that when we deploy, Django will obviously not have access to our local file which would result in an error 
+        if we did not include this check for it first.
+    </p>
+    {% include 'django_app/settings/includes/code_snippets/link_env_check.html' %}
+    <p>
+        Then update your SECURITY_KEY, getting the value defined in your env.py file.
+    </p>
+    {% include 'django_app/settings/includes/code_snippets/link_env_security_key.html' %}
+    <p>
+        This makes it look for the value of SECRET_KEY in the env.py file. The second instance of SECRET_KEY in this 
+        line refers to the name you have given to the variable in your env.py file because the os.getenv function it 
+        will look through your env.py file for the variable that matches whatever is used as the argument. For example 
+        if you named it something else like PASSCODE, your updated settings.py SECRET_KEY will look like:
+    </p>
+    {% include 'django_app/settings/includes/code_snippets/link_env_security_key_passcode.html' %}
+    <p>
+        Update your debug DEBUG.
+    </p>
+    {% include 'django_app/settings/includes/code_snippets/link_env_debug.html' %}
+    <p>
+        This check allows the Django to launch in debug mode when working locally with access to your env.py file 
+        providing you a better time of debugging and then automatically switch to DEBUG = False when deployed, 
+        providing the user with the best user experience.
+    </p>
+
+    <!--Apps-->
+    <h4 id="Django-settings-how-tos-adding-apps">Adding Apps</h4>
+    <p>
+        When you have created an app, add it to the list of INSTALLED_APPs like so:
+    </p>
+    {% include 'django_app/settings/includes/code_snippets/adding_apps.html' %}
+
+    <!--AllAuth-->
+    <h4 id="Django-settings-how-tos-allauth">AllAuth</h4>
+    <p>
+        Django 
+        <dfn title="A library that provides amazing functionality to authentication and user account configuration">allauth</dfn>
+        requires significant changes/additions to your settings.py file depending on the functionality that you want to 
+        introduce.
+    </p>
+
+    <!--Context Processors-->
+    <h4 id="Django-settings-how-tos-context-processors">Context Processors</h4>
+    <p>
+        Context Processors are used to inject additional variables into every template context and can be registered by 
+        appending it to the context_processors key of the OPTIONS dictionary of the TEMPLATES dictionary with the 
+        syntax of 
+        <code class="written-code">app_name.file_name.function_name</code>.
+        Such as 
+        <a 
+            class="text-link"
+            href="{% url 'django_apps' %}#Django-apps-the-core-app"
+            title="Go to the Core App context processor section"
+            aria-label="Go to the Core App context processor section"
+        >
+            here
+        </a>
+        where I add the media_url function to add the variable MEDIA_URL to each template by appending 
+        <code class="written-code">'core.context_processor.media_url'</code>.
+    </p>
+    {% include 'django_app/settings/includes/code_snippets/updating_context_processors.html' %}
+    
+    <!--Enable Messages-->
+    <h4 id="Django-settings-how-tos-enable-messages">Enable Messages</h4>
+    <p>
+        These are included by default so no changes should be required here.
+    </p>
+    {% include 'django_app/settings/includes/code_snippets/enable_messages.html' %}
+    <p>
+        You can overwrite the default values like so:
+    </p>
+    {% include 'django_app/settings/includes/code_snippets/overwrite_default_messages.html' %}
+    <p>
+        Or even make custom messages:
+    </p>
+    {% include 'django_app/settings/includes/code_snippets/custom_messages.html' %}
+
+    <!--Static and Media Files-->
+    <h4 id="Django-settings-how-tos-static-and-media-files">Static and Media Files</h4>
+    <p>
+        To ensure that Django can find your CSS, JS, and media files, you will need to make sure that the paths are 
+        defined in settings.py correctly. This can be done under the Static files section.
+    </p>
+    {% include 'django_app/settings/includes/code_snippets/static_media.html' %}
+
+    <!--Cloudinary-->
+    <h4 id="Django-settings-how-tos-cloudinary">Cloudinary</h4>
+    <p>
+        Add required cloudinary imports.
+    </p>
+    {% include 'django_app/settings/includes/code_snippets/cloudinary_imports.html' %}
+    <p>
+        Add cloudinary to installed apps.
+    </p>
+    {% include 'django_app/settings/includes/code_snippets/cloudinary_apps.html' %}
+    <p>
+        Add in the Cloudinary variables from your Cloudinary dashboard. I keep these at the top of the Static files 
+        section. For security you should define these in your env.py file and access them from there.
+    </p>
+    {% include 'django_app/settings/includes/code_snippets/cloudinary_variables.html' %}
+    <p>
+        Update your MEDIA_URL to have local files in development and externally hosted images during production.
+    </p>
+    {% include 'django_app/settings/includes/code_snippets/cloudinary_media.html' %}
+
+    <!--Whitenoise-->
+    <h4 id="Django-settings-how-tos-whitenoise">Whitenoise</h4>
+    <ul>
+        <li>Add whitenoise to your INSTALLED_APPS</li>
+        <li>In your static files section add a STATICFILES_STORAGE variable linking to whitenoise.</li>
+        <li>Update your STATIC_ROOT variable to access staticfiles</li>
+        <li>Add whitenoise to MIDDLEWARE</li>
+    </ul>
+    {% include 'django_app/settings/includes/code_snippets/whitenoise.html' %}
+
+    <!--Whitenoise-->
+    <h4 id="Django-settings-how-tos-allauth">AllAuth</h4>
+    <p>
+        See all of the changes on the 
+        <a 
+            class="text-link"
+            href="https://docs.allauth.org/en/latest/installation/quickstart.html#post-installation"
+            title="Go to the AllAuth installation guide"
+            aria-label="Go to the AllAuth installation guide"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            AllAuth installation guide
+        </a>
+        that you will need to make to your settings.py file.
+    </p>
+
+    <!--Translation-->
+    <h4 id="Django-settings-how-tos-translation">Translation</h4>
+    <p>
+        Add the relevant imports to the top of the file.
+    </p>
+    {% include 'django_app/settings/includes/code_snippets/translation_imports.html' %}
+    <p>
+        In the Internationalization section, add a LANGUAGES variable which will be a list of tuples. The tuples will 
+        be the language code as a string and the gettext_lazy of the language name. Then update your LANGUAGE_CODE 
+        variable to show the default language that you want for your website and add a LOCALE_PATHS to have the pathway 
+        of the stored location. We have not created this folder yet but the accepted name is 'locale'.
+    </p>
+    {% include 'django_app/settings/includes/code_snippets/translation_languages.html' %}
+    <p>
+        Add locale middleware to middleware. It needs to go after sessions (.SessionMiddleware) because it will run in 
+        a session but above common (.CommonMiddleware) because common deals with the URL and we will set up the URLs 
+        depending on the language.
+    </p>
+    {% include 'django_app/settings/includes/code_snippets/translation_middleware.html' %}
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-apps-code-snippets-app-level-urls{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">from django.urls import path, include
+
+urlpatterns = [
+    path('HTML/', include('HTML.urls')),
+]
+
+In your app named HTML would have a urls.py file with:
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.html_home, name="html _home"),
+    path(
+        'introducing_elements/',
+        views.HTML_introducing_elements,
+        name="HTML_introducing_elements"
+    ),
+]
+
+</code></pre>
+{% endblock %}

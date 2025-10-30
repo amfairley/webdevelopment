@@ -1,0 +1,28 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-templates-code-snippets-testing-forms{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">from django.test import TestCase
+from .forms import ItemForm
+
+class TestItemForm(TestCase):
+    def test_form_exists(self):
+        form = ItemForm()
+        self.assertIsInstance(form, ItemForm)
+
+    def test_name_field_is_required(self):
+        form = ItemForm(&#123;'name': ''&#125;)
+        self.assertFalse(form.is_valid())
+        self.assertIn('name', form.errors.keys())
+        self.assertEqual(form.errors['name'][0], 'This field is required')
+
+    def test_meta_fields(self):
+        self.assertEqual(ItemForm.Meta.fields, ['name', 'done'])
+</code></pre>
+{% endblock %}

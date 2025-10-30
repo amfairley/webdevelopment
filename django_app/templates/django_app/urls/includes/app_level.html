@@ -1,0 +1,37 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-urls-app-level{% endblock %}
+
+<!--Section title-->
+{% block text_title %}App Level{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        In each app, you can create a urls.py file to define the specific pages (views) for that app.
+    </p>
+    {% include 'django_app/urls/includes/code_snippets/app_level_urls.html' %}
+    <p>
+        The first path has an empty '' referring to the base URL for this app. This is defined in the project level 
+        urls.py file; in our example it is 'app_name/'.  The second path has a further defined path of 'example_url/'. 
+        This will take the base URL 'app_name/' and append 'example_url/' to it. This results in the two URLs:
+    </p>
+    <ul>
+        <li>https://www.website_name.com/app_name/</li>
+        <li>https://www.website_name.com/app_name/example_url/</li>
+    </ul>
+    <p>
+        The second parameters given refer to the views. We import the app views at the top and access each defined 
+        function with dot notation. For example a function in our app's views.py may be called 'view_function_1' and 
+        would render the homepage. 'view_function_2' may render a contact page.
+    </p>
+    <p>
+        Finally the third parameter is used to assign a name/variable to the URL. This is used mainly in the templating 
+        language to define internal hyperlinks. For example if you had
+        <code class="written-code">name='django_home'</code>
+        in an anchor tag directing to this URL, you would put
+        <code class="written-code">href="{% url 'django_home' %}"</code>.
+    </p>
+{% endblock %}

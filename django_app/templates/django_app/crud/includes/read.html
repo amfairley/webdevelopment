@@ -1,0 +1,41 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-crud-read{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Read{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        <dfn title="Retrieving">Reading</dfn> records means fetching data from the database and rendering it in a 
+        template.
+    </p>
+    <p>
+        <strong>Step 1:</strong>
+        Query the Database
+    </p>
+    <p>
+        In views.py:
+    </p>
+    {% include 'django_app/crud/includes/code_snippets/read_view.html' %}
+    <p>
+        <strong>Step 2:</strong>
+        Create the Template
+    </p>
+    <p>
+        In todo_list.html:
+    </p>
+    {% include 'django_app/crud/includes/code_snippets/read_template.html' %}
+    <p>
+        <strong>Step 3:</strong>
+        Add URL
+    </p>
+    <p>
+        In urls.py:
+    </p>
+    {% include 'django_app/crud/includes/code_snippets/read_url.html' %}
+
+{% endblock %}

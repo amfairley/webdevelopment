@@ -1,0 +1,35 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-admin-setup{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Setup{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        First ensure that you have created a superuser. Creating a super user to access this interface is 
+        straightforward, simply run the following command in the terminal:
+    </p>
+    {% include 'django_app/admin/includes/code_snippets/create_superuser.html' %}
+    <p>
+        The first check that is made is whether the User model is set up and migrated correctly. This was done in our 
+        initial migration step and should fly by unless the migrations haven't been previously migrated.
+    </p>
+    <p>
+        It will prompt you for a username or to leave blank to use the suggested username taken from the user in the 
+        project pathway, then an email address, and then a password and a password confirmation. If the password does 
+        not meet Django's default security requirements you may have to enter a stronger password.
+    </p>
+    <p>
+        To log into the admin page, run the website again using
+        <code class="written-code">python manage.py runserver</code>
+        and open the website link and add /admin to the end of the URL.  This works because your project folder urls.py 
+        has, by default, a /admin route, allowing the admin page to be accessed from the app with the addition /admin 
+        to the end of the URL. Log in with your chosen details and have a little look around. It's pretty bare at the 
+        moment but by clicking on the 'Users' link you should see your superuser details along with a green tick 
+        under the staff status.
+    </p>
+{% endblock %}

@@ -1,0 +1,397 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-templating-language-syntax{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Syntax{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <!--Variables-->
+    <h4 id="Django-templating-language-syntax-variables">Variables</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Action
+                </th>
+                <th>
+                    Syntax
+                </th>
+                <th>
+                    Description
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Display a variable
+                </td>
+                <td>
+                    <code class="written-code">&#123;&#123; variable_name &#125;&#125;</code>
+                </td>
+                <td>
+                    Renders a variable passed from the view context
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Nested attribute
+                </td>
+                <td>
+                    <code class="written-code">&#123;&#123; user.first_name &#125;&#125;</code>
+                </td>
+                <td>
+                    Access attributes of objects
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    List index (0-based)
+                </td>
+                <td>
+                    <code class="written-code">&#123;&#123; my_list.0 &#125;&#125;</code>
+                </td>
+                <td>
+                    Access list items by index
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Dictionary key
+                </td>
+                <td>
+                    <code class="written-code">&#123;&#123; my_dict.key_name &#125;&#125;</code>
+                </td>
+                <td>
+                    Access dictionary value using dot notation
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!--For Loops-->
+    <h4 id="Django-templating-language-syntax-for-loops">For Loops</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Action
+                </th>
+                <th>
+                    Syntax
+                </th>
+                <th>
+                    Description
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Loop over a list
+                </td>
+                <td>
+                    <code class="written-code">&#123;% for item in items %&#125; ... &#123;% endfor %&#125;</code>
+                </td>
+                <td>
+                    Iterates over items
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Show fallback if list empty
+                </td>
+                <td>
+                    <code class="written-code">&#123;% for item in items %&#125;&#123;% empty %&#125;No items.&#123;% endfor %&#125;</code>
+                </td>
+                <td>
+                    Displays message if list is empty
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Loop metadata (counter, etc.)
+                </td>
+                <td>
+                    <code class="written-code">&#123;&#123; forloop.counter &#125;&#125;</code>
+                </td>
+                <td>
+                    Starts at 1, use forloop.counter0 for 0-based
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!--If Statements-->
+    <h4 id="Django-templating-language-syntax-if-statements">If Statements</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Condition Type
+                </th>
+                <th>
+                    Syntax
+                </th>
+                <th>
+                    Notes
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Basic if
+                </td>
+                <td>
+                    <code class="written-code">&#123;% if condition %&#125; ... &#123;% endif %&#125;</code>
+                </td>
+                <td>
+                    Checks truthiness of variable or condition
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    If / else
+                </td>
+                <td>
+                    <code class="written-code">&#123;% if condition %&#125; ... &#123;% else %&#125; ... &#123;% endif %&#125;</code>
+                </td>
+                <td>
+                    Two-branch logic
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    If / elif / else
+                </td>
+                <td>
+                    <code class="written-code">&#123;% if a %&#125; ... &#123;% elif b %&#125; ... &#123;% else %&#125; ... &#123;% endif %&#125;</code>
+                </td>
+                <td>
+                    Multi-branch condition
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Compare values
+                </td>
+                <td>
+                    <code class="written-code">&#123;% if value == 10 %&#125;</code>
+                </td>
+                <td>
+                    You can use ==, !=, &gt;, &lt;, &gt;=, &lt;=
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Check existence
+                </td>
+                <td>
+                    <code class="written-code">&#123;% if my_list %&#125;</code>
+                </td>
+                <td>
+                    True if list has any items
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Logical AND / OR
+                </td>
+                <td>
+                    <code class="written-code">&#123;% if a and b %&#125; / &#123;% if a or b %&#125;</code>
+                </td>
+                <td>
+                    Basic logic supported
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Negation
+                </td>
+                <td>
+                    <code class="written-code">&#123;% if not user.is_authenticated %&#125;</code>
+                </td>
+                <td>
+                    "not" also supported
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!--Filters-->
+    <h4 id="Django-templating-language-syntax-filters">Filters</h4>
+    <p>
+        Filters follow the variable wrapped in the double curly brackets by a pipe (|). For example in the capitalise 
+        row of the table below the full syntax would be &#123;&#123; variable | capfirst &#125;&#125; and the rest 
+        follow this &#123;&#123; variable | filter name &#125;&#125; syntax.
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Filter
+                </th>
+                <th>
+                    Filter Name
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Capitalise
+                </td>
+                <td>
+                    capfirst
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Lowercase
+                </td>
+                <td>
+                    lower
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Uppercase
+                </td>
+                <td>
+                    upper
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Default fallback
+                </td>
+                <td>
+                    default:"Unknown"
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Length of list/string
+                </td>
+                <td>
+                    length
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Date formatting
+                </td>
+                <td>
+                    date:"F j, Y"
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Safe HTML
+                </td>
+                <td>
+                    safe
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Truncate chars/words
+                </td>
+                <td>
+                    truncatechars:20 or truncatewords:10
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        Tags and blocks:
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Action
+                </th>
+                <th>
+                    Syntax
+                </th>
+                <th>
+                    Usage
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Load static files
+                </td>
+                <td>
+                    <code class="written-code">&#123;% load static %&#125;</code>
+                </td>
+                <td>
+                    Used at the top of templates for static files
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Static file reference
+                </td>
+                <td>
+                    <code class="written-code">&lt;img src="&#123;% static 'img/logo.png' %&#125;"&gt;</code>
+                </td>
+                <td>
+                    Load images, CSS, JS
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Template inheritance
+                </td>
+                <td>
+                    <code class="written-code">&#123;% extends "base.html" %&#125;</code>
+                </td>
+                <td>
+                    Inherit from a base template
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Define block in base
+                </td>
+                <td>
+                    <code class="written-code">&#123;% block content %&#125;&#123;% endblock %&#125;</code>
+                </td>
+                <td>
+                    Mark sections to be filled by child templates
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Include a template
+                </td>
+                <td>
+                    <code class="written-code">&#123;% include "includes/navbar.html" %&#125;</code>
+                </td>
+                <td>
+                    Insert reusable chunks like navbars
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Comment out code
+                </td>
+                <td>
+                    <code class="written-code">&#123;# This is a comment #&#125;</code>
+                </td>
+                <td>
+                    Won't be rendered in output
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

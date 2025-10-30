@@ -1,0 +1,322 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-forms-utilising-forms{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Utilising Forms{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <!--Creating the Form Class-->
+    <h4 id="Django-forms-utilising-forms-creating-the-form-class">Creating the Form Class</h4>
+    <ul>
+        <li>
+            For a form based on a model, in the forms.py file of your app, import forms from django along with your 
+            model from .models
+        </li>
+        <li>
+            Create a form class inheriting from forms.ModelForm
+        </li>
+        <li>Add a child class of Meta that defines the model that you are using and fields that will be available in 
+            the form. ModelForm creates fields automatically based on your model
+        </li>
+        <li>
+            The Meta class in where custom widgets, labels, help_texts or excluded fields are defined
+        </li>
+    </ul>
+    {% include 'django_app/forms/includes/code_snippets/create_modelform.html' %}
+    <p>
+        To create a form not based on a model you can use:
+    </p>
+    {% include 'django_app/forms/includes/code_snippets/create_form.html' %}
+
+    <!--Adding Extra Fields-->
+    <h4 id="Django-forms-utilising-forms-adding-extra-fields">Adding Extra Fields</h4>
+    <p>
+        To add an extra field to your form that is not in your model or you are excluding from your fields variable, you
+        can define it above the Meta class. By default these extra fields will appear in your form after those defined 
+        in the fields variable.
+    </p>
+    {% include 'django_app/forms/includes/code_snippets/add_extra_fields.html' %}
+
+    <!--Add the Form to your View-->
+    <h4 id="Django-forms-utilising-forms-add-the-form-to-your-view">Add the Form to your View</h4>
+    <p>
+        Now that the form is defined, it can be imported in your views.py file.
+    </p>
+    {% include 'django_app/forms/includes/code_snippets/import_form.html' %}
+    <p>
+        Then a view can be created or updated to use the form. The key points are:
+    </p>
+    <ul>
+        <li>
+            The view will assume that the request method is GET by default. To handle form submission we will need to 
+            split the function into and if check if the request method is POST and 'else'. Everything already in the 
+            function should go into the 'else' part such as defined variables.
+        </li>
+        <li>
+            Define the form variable and add it to both the POST section with the information from the submitted form 
+            and in the else section in order to display the form on the page. Add the form to the context so that is 
+            rendered.
+        </li>
+        <li>
+            Validate the form fields against their types, requirements, and validation rules using 
+            <code class="written-code">form.is_valid()</code>
+            and if it is, then save it before redirecting the user.
+        </li>
+    </ul>
+    {% include 'django_app/forms/includes/code_snippets/form_view.html' %}
+
+    <!--Add the Form to your Template-->
+    <h4 id="Django-forms-utilising-forms-add-the-form-to-your-template">Add the Form to your Template</h4>
+    <ul>
+        <li>
+            Add the form to your template with a method of POST and the action to be the url associated with your above 
+            defined view function.
+        </li>
+        <li>
+            It is imported to include 
+            <code class="written-code">{% csrf_token %}</code>
+            as the first thing inside your form for security reasons. Django will not process the form if this is 
+            missing.
+        </li>
+        <li>
+            Render the form using the variable defined within your context. You can change the layout of your form using:
+            <ul>
+                <li>&#123;&#123; form.as_p &#125;&#125;</li>
+                <li>&#123;&#123; form.as_table &#125;&#125;</li>
+                <li>&#123;&#123; form.as_ul &#125;&#125;</li>
+            </ul>
+        <li>
+            Add in a submit button to your form.
+        </li>
+    </ul>
+    {% include 'django_app/forms/includes/code_snippets/form_template.html' %}
+
+    <!--Widgets-->
+    <h4 id="Django-forms-utilising-forms-widgets">Widgets</h4>
+    <p>
+        Widgets in Django forms control how a field is rendered in HTML by describing the element (&lt;input&gt;, 
+        &lt;textarea&gt; etc.), and attributes such as class, id, or placeholder. For ModelForms, the widgets are 
+        defined as a dictionary inside the Meta class using the field name as the key and the element and attribute 
+        options as the value.
+    </p>
+    {% include 'django_app/forms/includes/code_snippets/modelform_widget.html' %}
+    <p>
+        In a form not based on a ModelForm you would add the widgets in the view.
+    </p>
+    {% include 'django_app/forms/includes/code_snippets/form_widget.html' %}
+    <p>
+        Here is a quick reference of common built-in widgets.
+    </p>
+    <p>
+        Text Input Widgets
+    </p>
+    <ul>
+        <li><code class="written-code">forms.TextInput</code> → &lt;input type="text"&gt;</li>
+        <li><code class="written-code">forms.EmailInput</code> → &lt;input type="email"&gt;</li>
+        <li><code class="written-code">forms.URLInput</code> → &lt;input type="url"&gt;</li>
+        <li><code class="written-code">forms.PasswordInput</code> → &lt;input type="password"&gt;</li>
+        <li><code class="written-code">forms.HiddenInput</code> → &lt;input type="hidden"&gt;</li>
+    </ul>
+    <p>
+        Text Area
+    </p>
+    <ul>
+        <li><code class="written-code">forms.Textarea</code> → &lt;textarea&gt;&lt;/textarea&gt;</li>
+    </ul>
+    <p>
+        Numeric Inputs
+    </p>
+    <ul>
+        <li><code class="written-code">forms.NumberInput</code> → &lt;input type="number"&gt;</li>
+        <li><code class="written-code">forms.RangeInput</code> → &lt;input type="range"&gt;</li>
+    </ul>
+    <p>
+        Date and Time Inputs
+    </p>
+    <ul>
+        <li><code class="written-code">forms.DateInput</code> → &lt;input type="date"&gt;</li>
+        <li><code class="written-code">forms.DateTimeInput</code> → &lt;input type="datetime-local"&gt;</li>
+        <li><code class="written-code">forms.TimeInput</code> → &lt;input type="time"&gt;</li>
+    </ul>
+    <p>
+        Choice Inputs
+    </p>
+    <ul>
+        <li><code class="written-code">forms.Select</code> → &lt;select&gt; (dropdown)</li>
+        <li><code class="written-code">forms.SelectMultiple</code> → &lt;select multiple&gt;</li>
+        <li><code class="written-code">forms.RadioSelect</code> → List of radio buttons</li>
+        <li><code class="written-code">forms.CheckboxInput</code> → Single checkbox</li>
+        <li><code class="written-code">forms.CheckboxSelectMultiple</code> → List of checkboxes</li>
+        <li><code class="written-code">forms.NullBooleanSelect</code> → Dropdown with "Unknown / Yes / No"</li>
+    </ul>
+    <p>
+        File Uploads
+    </p>
+    <ul>
+        <li><code class="written-code">forms.FileInput</code> → &lt;input type="file"&gt;</li>
+        <li><code class="written-code">forms.ClearableFileInput</code> → File input with a "clear" checkbox (default for FileField/ImageField).</li>
+    </ul>
+    <p>
+        Common Attributes you can pass:
+    </p>
+    <ul>
+        <li>class: For CSS classes ('form-control')</li>
+        <li>id: For targeting with JavaScript or CSS</li>
+        <li>placeholder: Placeholder text</li>
+        <li>rows/cols: For Textarea</li>
+        <li>style: Inline CSS</li>
+        <li>type: Change the input type (e.g., text, email)</li>
+        <li>multiple: Allow multiple selections for Select</li>
+        <li>disabled: Disable the field</li>
+        <li>readonly: Make it read only</li>
+    </ul>
+
+    <!--Validation-->
+    <h4 id="Django-forms-utilising-forms-validation">Validation</h4>
+    <p>
+        You can define custom validation by adding methods to your form. For best practice, these are defined within 
+        the form rather than the view, as it will help validate the input before submission.
+    </p>
+    <p>
+        For field specific validation, it is best to define a function that follows the syntax of 
+        <code class="written-code">clean_fieldname(self)</code>.
+        This is where custom checks for specific fields are added. These will be run first when the form is submitted. 
+        If you want to check for length of entry, if it has a capital letter, if it is an email etc prior to submission,
+        those checks are covered by the widgets.
+    </p>
+    {% include 'django_app/forms/includes/code_snippets/validate_form.html' %}
+    <p>
+        In the case of ModelForms you can also add validation into a clean(self) function at the bottom of the form.
+    </p>
+    {% include 'django_app/forms/includes/code_snippets/validate_modelform.html' %}
+
+    <!--Summary-->
+    <h4 id="Django-forms-utilising-forms-summary">Summary</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Step
+                </th>
+                <th>
+                    What to do
+                </th>
+                <th>
+                    Notes
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    HTML Form
+                </td>
+                <td>
+                    <code class="written-code">&lt;form method="POST" action="&#123;% url 'add' %&#125;"&gt;&lt;/form&gt;</code>
+                </td>
+                <td>
+                    Use &#123;% url 'name' %&#125; to link to a named route
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    CSRF Token
+                </td>
+                <td>
+                    <code class="written-code">&#123;% csrf_token %&#125;</code>
+                </td>
+                <td>
+                    Must be inside the &lt;form&gt; to avoid CSRF errors
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Create Form
+                </td>
+                <td>
+                    <code class="written-code">class ItemForm(forms.ModelForm):</code>
+                </td>
+                <td>
+                    Located in forms.py
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Meta Class
+                </td>
+                <td>
+                    <code class="written-code">model = Item, fields = ['name', 'done']</code>
+                </td>
+                <td>
+                    Defines form structure
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Add to View
+                </td>
+                <td>
+                    <code class="written-code">form = ItemForm(request.POST)</code>
+                </td>
+                <td>
+                    Use request.POST on POST request
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Validate & Save
+                </td>
+                <td>
+                    <code class="written-code">if form.is_valid(): form.save()</code>
+                </td>
+                <td>
+                    Validates input and saves to DB
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Pass to Template
+                </td>
+                <td>
+                    <code class="written-code">context = &#123;'form': form&#125;</code>
+                </td>
+                <td>
+                    Included in render()
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Use in Template
+                </td>
+                <td>
+                    <code class="written-code">&#123;&#123; form.as_p &#125;&#125;</code>
+                </td>
+                <td>
+                    Or use individual fields: &#123;&#123; form.name &#125;&#125;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Submit Button
+                </td>
+                <td>
+                    <code class="written-code">&lt;button type="submit"&gt;Save&lt;/button&gt;</code>
+                </td>
+                <td>
+                    Must be inside the &lt;form&gt;&lt;/form&gt;
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!--Example Form-->
+    <h4 id="Django-forms-utilising-forms-example-form">Example Form</h4>
+    {% include 'django_app/forms/includes/code_snippets/example_form.html' %}
+
+    {% include 'django_app/forms/includes/troubleshooting/troubleshoot_form.html' %}
+
+{% endblock %}

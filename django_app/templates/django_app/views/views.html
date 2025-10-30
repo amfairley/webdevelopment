@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Django - Views{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Views</h2>
+
+    {% include 'django_app/views/includes/contents.html' %}
+    {% include 'django_app/views/includes/what_do_views_handle.html' %}
+    {% include 'django_app/views/includes/imports.html' %}
+    {% include 'django_app/views/includes/functions.html' %}
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Django - Models{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Models</h2>
+
+    {% include 'django_app/models/includes/contents.html' %}
+    {% include 'django_app/models/includes/using_modelspy.html' %}
+    {% include 'django_app/models/includes/setting_up_modelspy.html' %}
+    {% include 'django_app/models/includes/common_field_types.html' %}
+    {% include 'django_app/models/includes/run_migrations.html' %}
+    {% include 'django_app/models/includes/register_models_in_the_admin_panel.html' %}
+    {% include 'django_app/models/includes/accessing_data_in_viewspy.html' %}
+
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-messages-display-messages-in-your-templates{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Display Messages in your Templates{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Add this block (usually in base.html, right under the navbar or header). This loops through any queued messages 
+        and displays them with classes depending on their level tags (e.g. alert-success, alert-warning).
+    </p>
+    {% include 'django_app/messages/includes/code_snippets/messages_template.html' %}
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Django Message
+                </th>
+                <th>
+                    Bootstrap Class
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    success
+                </td>
+                <td>
+                    alert-success
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    info
+                </td>
+                <td>
+                    alert-info
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    warning
+                </td>
+                <td>
+                    alert-warning
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    error
+                </td>
+                <td>
+                    alert-danger
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        If you use a CSS framework with different naming conventions (like Tailwind), you can override Django's default 
+        tag mappings in the settings.py file. Shown above in the 
+        <a 
+            class="text-link"
+            href="#Django-messages-enabling-messages"
+            title="Go to the Enabling Messages section"
+            aria-label="Go to the Enabling Messages section"
+        >
+            Enabling Messages 
+        </a>
+        section.
+    </p>
+{% endblock %}

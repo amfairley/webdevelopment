@@ -1,0 +1,56 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-crud-delete{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Delete{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Deleting items is easy. Simply add a button to the HTML page linked to a URL that is in turn linked to a view. 
+        It is best practice not to link the first delete link to this URL but instead send it to a new template or 
+        modal with a confirm/cancel button to introduce some defensive programming and prevent accidental deletion of 
+        instances in your database.
+    </p>
+    <p>
+        <strong>Step 1:</strong>
+        Add a Button in Your Template
+    </p>
+    <p>
+        The button will need to pass an identifier through to the URL. In the following case we will delete an instance 
+        of the item, identified by it's ID value.
+    </p>
+    {% include 'django_app/crud/includes/code_snippets/delete_button.html' %}
+    <p>
+        <strong>Step 2:</strong>
+        Create a Delete View
+    </p>
+    <p>
+        The delete view will take the identifying value (here the item ID) and use it to query the database to get the 
+        correct instance. It will then delete the item and redirect the user. 
+    </p>
+    {% include 'django_app/crud/includes/code_snippets/delete_view.html' %}
+    <p>
+        <strong>Step 3:</strong>
+        Add URL
+    </p>
+    <p>
+        In urls.py:
+    </p>
+    {% include 'django_app/crud/includes/code_snippets/delete_url.html' %}
+    <p>
+        Deleting as a form:
+    </p>
+    <p>
+        If you decide that you want to use the delete function as a submission of a form present on a delete.html page. 
+        The form will have the syntax of:
+    </p>
+    {% include 'django_app/crud/includes/code_snippets/delete_form.html' %}
+    <p>
+         You will need to add in a check for the method being POST in the view, with the deletion functionality in the 
+         if statement and the page rendering in the else statement.
+    </p>
+{% endblock %}

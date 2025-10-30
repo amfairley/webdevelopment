@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Django{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Django</h2>
+
+    {% include 'django_app/home/includes/contents.html' %}
+    {% include 'django_app/home/includes/what_is_django.html' %}
+    {% include 'django_app/home/includes/documentation.html' %}
+    {% include 'django_app/home/includes/mvt.html' %}
+    {% include 'django_app/home/includes/common_commands.html' %}
+
+{% endblock %}

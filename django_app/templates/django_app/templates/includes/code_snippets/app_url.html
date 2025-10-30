@@ -1,0 +1,16 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-templates-code-snippets-app-url{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">from . import views
+urlpatterns = [
+    path('what_the_url_will_look_like_in_the_browser/', views.function_name , name='unique_identifier'),
+]
+</code></pre>
+{% endblock %}

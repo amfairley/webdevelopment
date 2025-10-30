@@ -1,0 +1,48 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-languages-adding-a-new-translation{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Adding a New Translation{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Adding a new translation is simple.
+    </p>
+    <ul>
+        <li>
+            In the view or context processor add a new translation 
+            <ul>
+                <li><code class="written-code">'welcome_message': _('Welcome to the website!')</code></li>
+            </ul>
+        </li>
+        <li>
+            Add it to the .po files
+            <ul>
+                <li><code class="written-code">python manage.py makemessages --all -i requirements.txt</code></li>
+            </ul>
+        </li>
+        <li>
+            Go to .po files and find "Welcome to the website!" and add translations
+        </li>
+        <li>
+            Compile the translations
+            <ul>
+                <li><code class="written-code">python manage.py compilemessages</code></li>
+            </ul>
+        </li>
+        <li>
+            Add to template
+            <ul>
+                <li><code class="written-code">&#123;&#123; welcome_message &#125;&#125;</code></li>
+            </ul>
+        </li>
+    </ul>
+    <p>
+        To change an existing translation, simply find it in your .po file, make the change and run
+        <code class="written-code">python manage.py compilemessages</code>
+    </p>
+{% endblock %}

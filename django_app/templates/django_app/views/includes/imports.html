@@ -1,0 +1,109 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-views-imports{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Imports{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        At the top of your views file, you should import any required methods such as:
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Purpose
+                </th>
+                <th>
+                    Import
+                </th>
+                <th>
+                    What is does
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Return plain text or HTML
+                </td>
+                <td>
+                    <code class="written-code">from django.http import HttpResponse</code>
+                </td>
+                <td>
+                    Sends a custom plain text or HTML response directly to the browser.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Render templates
+                </td>
+                <td>
+                    <code class="written-code">from django.shortcuts import render</code>
+                </td>
+                <td>
+                    Loads an HTML template and returns it with an optional context dictionary.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Redirect users
+                </td>
+                <td>
+                    <code class="written-code">from django.shortcuts import redirect</code>
+                </td>
+                <td>
+                    Redirects the user to another URL, either a named URL pattern or path.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Process form data
+                </td>
+                <td>
+                    <code class="written-code">from .forms import YourFormName</code>
+                </td>
+                <td>
+                    Imports a form class from the forms.py file in the same app.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Redirect after POST
+                </td>
+                <td>
+                    <code class="written-code">from django.http import HttpResponseRedirect</code>
+                </td>
+                <td>
+                    Used to redirect after successful form submission.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Query the database
+                </td>
+                <td>
+                    <code class="written-code">from .models import YourModelName</code>
+                </td>
+                <td>
+                    Imports a model from the same app so you can retrieve or save data.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Use messages framework
+                </td>
+                <td>
+                    <code class="written-code">from django.contrib import messages</code>
+                </td>
+                <td>
+                    Enables feedback messages after actions.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-settings-what-is-it-for{% endblock %}
+
+<!--Section title-->
+{% block text_title %}What is it for?{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The settings.py file in your project_name folder holds all the settings for your project, including debug mode, 
+        database configuration, and template locations and should be kept up to date to ensure that your app works well. 
+        Here I have outlined the sections of the file along with some common edits to the settings.py file specifically 
+        to add functionality to your webapp as a repository of information. More information on how the app as a whole 
+        needs to be updated for each functionality can be found in the following pages, often linked from their section 
+        here. For a broader idea of what is happening, check out the other pages in this Django section, but to 
+        troubleshoot issues, these updates to your settings.py file should be one of your first stops.
+    </p>
+    <p>
+        Each section of the settings.py file has a handy link to the Django documentation to help you customise your 
+        webapp.
+    </p>
+{% endblock %}

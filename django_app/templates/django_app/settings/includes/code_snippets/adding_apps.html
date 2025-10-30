@@ -1,0 +1,33 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-settings-code-snippets-adding-apps{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">INSTALLED_APPS = [
+    'django.contrib.admin',  # message
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    # File storage
+    'whitenoise',
+    # Custom apps
+    'core',
+    'homepage',
+    'intro_to_full_stack',
+    'HTML',
+    'CSS',
+    'javascript_app',
+    'python_app',
+    'backend',
+    'flask_app',
+    'analytics',
+]
+</code></pre>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-testing-testing-forms{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Testing Forms{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+
+    {% include 'django_app/testing/includes/code_snippets/testing_forms.html' %}
+  
+{% endblock %}

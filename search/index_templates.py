@@ -60,7 +60,8 @@ async def run():
         Path(settings.BASE_DIR) / 'python_app' / 'templates',
         Path(settings.BASE_DIR) / 'analytics' / 'templates',
         Path(settings.BASE_DIR) / 'backend' / 'templates',
-        Path(settings.BASE_DIR) / 'Flask_app' / 'templates',
+        Path(settings.BASE_DIR) / 'flask_app' / 'templates',
+        Path(settings.BASE_DIR) / 'django_app' / 'templates',
     ]
     print(f"Templates directories to scan: {templates_dirs}")
 
@@ -177,6 +178,9 @@ async def run():
                 section = section.title()
 
             # Rename JavaScript_App section
+            if section == "Intro_To_Full_Stack":
+                section = "Web Development"
+
             if section == "Javascript_App":
                 section = "JavaScript"
 
@@ -185,6 +189,9 @@ async def run():
 
             if section == "Flask_App":
                 section = "Flask"
+
+            if section == "Django_App":
+                section = "Django"
 
             # Ranking based on section type
             sort_order = {
@@ -212,6 +219,7 @@ async def run():
             pretty_title = pretty_title.replace("Js", "JS")
             pretty_title = pretty_title.replace("Python_App", "Python")
             pretty_title = pretty_title.replace("Flask_App", "Flask")
+            pretty_title = pretty_title.replace("Django_App", "Django")
 
             # Update url from x-app to X
             url_local = url_local.replace("javascript-app", "JavaScript")
@@ -220,6 +228,8 @@ async def run():
             url_heroku = url_heroku.replace("python-app", "Python")
             url_local = url_local.replace("flask-app", "Flask")
             url_heroku = url_heroku.replace("flask-app", "Flask")
+            url_local = url_local.replace("django-app", "Django")
+            url_heroku = url_heroku.replace("django-app", "Django")
 
             # Add in extra keywords so that HTML returns HTML home
             extra_keywords = []

@@ -1,0 +1,44 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-models-code-snippets-admin-example{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">from django.contrib import admin
+from .models import Room
+
+class RoomAdmin(admin.ModelAdmin):
+    '''Display options for the room instances in Django admin'''
+	# Choose which column names to display
+    list_display = (
+        'id',
+        'name',
+        'sanitised_name',
+        'amenities',
+        'description',
+        'image_url',
+        'image',
+        'price',
+        'unavailability'
+    )
+
+	# Choose how the instances are ordered, e.g. by 'id' number
+    ordering = ('id',)
+    # Inline editing for selected fields in the list view
+    list_editable = ('price',)
+
+    # Make fields searchable
+    search_fields = ('name', 'description')
+    # Add filters to the sidebar
+    list_filter = ('amenities',)
+    # Set fields as read-only in the form view
+    readonly_fields = ('sanitised_name', 'image_url')
+
+# Register your models here in the from of (ModelName, ModelNameAdmin)
+admin.site.register(Room, RoomAdmin)
+</code></pre>
+{% endblock %}

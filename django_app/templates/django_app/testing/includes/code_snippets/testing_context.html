@@ -1,0 +1,22 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-templates-code-snippets-testing-context{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">def test_available_rooms_context(self):
+        '''Test that the correct data is in the context'''
+	# Simulate a get response with .get(self.url)
+	# Get the test client defined in the setUp
+    response = self.client.get(self.url)
+	# Asserts to check that the variables are in the context of the get response
+    self.assertIn('rooms', response.context)
+    self.assertIn('amenities', response.context)
+    self.assertIn('booking_form', response.context)
+    self.assertIn('booking_form_desktop', response.context)
+</code></pre>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-languages-update-settingspy{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Update settings.py{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Add the relevant imports to the top of the file.
+    </p>
+    {% include 'django_app/languages/includes/code_snippets/language_settings_imports.html' %}
+    <p>
+        In the Internationalization section, add a LANGUAGES variable which will be a list of tuples. The tuples will 
+        be the language code as a string and the gettext_lazy of the language name. Then update your LANGUAGE_CODE 
+        variable to show the default language that you want for your website and add a LOCALE_PATHS to have the pathway 
+        of the stored location. We have not created this folder yet but the accepted name is 'locale'.
+    </p>
+    {% include 'django_app/languages/includes/code_snippets/language_settings_languages.html' %}
+    <p>
+        Add locale middleware to middleware. It needs to go after sessions (.SessionMiddleware) because it will run in 
+        a session but above common (.CommonMiddleware) because common deals with the URL and we will set up the URLs 
+        depending on the language.
+    </p>
+    {% include 'django_app/languages/includes/code_snippets/language_settings_middleware.html' %}
+
+{% endblock %}

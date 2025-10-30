@@ -1,0 +1,23 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}Django-languages-code-snippets-default-language{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="python">def redirect_to_default_language(request):
+    """Force redirect to default language unless another language is explicitly set."""
+    language = get_language_from_request(request) or 'en'
+    
+    # Override browser preference and force default language if no language cookie exists
+    if 'django_language' not in request.COOKIES:
+        language = 'en'  # Force default language
+    
+    response = redirect(f'/&#123;language&#125;/')
+    response.set_cookie('django_language', language)  # Store language preference
+    return response
+</code></pre>
+{% endblock %}

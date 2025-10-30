@@ -1,0 +1,94 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-apps-creating-an-app{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Creating an App{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        To create an app, run the following in the terminal
+    </p>
+    {% include 'django_app/apps/includes/code_snippets/startapp.html' %}
+    <p>
+        This will create a folder in your route directory named app_name. 
+    </p>
+    <p>
+        Go to settings.py and add your app name to the list of
+        <a 
+            class="text-link"
+            href="{% url 'django_settings' %}#Django-settings-how-tos-adding-apps"
+            title="Go to the Installed_Apps section"
+            aria-label="Go to the Installed_Apps section"
+        >
+            INSTALLED_APPS
+        </a>
+    </p>
+    <p>
+        For a project using a backend, go ahead and create a models.py file in the app folder.
+    </p>
+    <p>
+        For apps with templates associated with them (which will be most apps), go ahead and create a folder inside 
+        this app folder named 'templates' and another folder inside this with the same name as the app to hold your 
+        HTML files. An example route would be app_name/templates/app_name/index.html. This is so that when Django looks 
+        for template names, it won't use a template with the same name from another app. We generally want a new 
+        template for each part of CRUD so for example there may be multiple delete.html files across your project. To 
+        render templates in your app, see the section on 
+        <a 
+            class="text-link"
+            href="#"
+            title="Go to the Django Templates page"
+            aria-label="Go to the Django Templates page"
+        >
+            templates 
+        </a>
+        and
+        
+        <a 
+            class="text-link"
+            href="#"
+            title="Go to the Django Views page"
+            aria-label="Go to the Django Views page"
+        >
+            views
+        </a>.
+    </p>
+    <p>
+        Also create a urls.py file to handle the routing, linked to the urls.py file in the project_name folder. For 
+        example project_name/urls.py might have:
+    </p>
+    {% include 'django_app/apps/includes/code_snippets/app_urls.html' %}
+    <p>
+        In your app named HTML would have a urls.py file with:
+    </p>
+    {% include 'django_app/apps/includes/code_snippets/app_level_urls.html' %}
+    <p>
+        In this way, the project_name folder urls.py will set up any HTML app urls with the prefix of HTML/. This gives 
+        the two urls in the HTML app urls.py file final urls of www.website_name.com/HTML/ and 
+        www.website_name.com/HTML/introducing_elements/ respectively.
+    </p>
+    <p>
+        More on that can be seen in the    
+        <a 
+            class="text-link"
+            href="#"
+            title="Go to the Django Templates page"
+            aria-label="Go to the Django Templates page"
+        >
+            templates
+        </a>
+        section and the 
+        <a 
+            class="text-link"
+            href="{% url 'django_urls' %}"
+            title="Go the the Django URLs page"
+            aria-label="Go the the Django URLs page"
+        >
+            urls 
+        </a>
+        section. 
+    </p>
+{% endblock %}
