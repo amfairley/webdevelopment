@@ -30,7 +30,7 @@
                     Checking the current page to keep dropdown open
                     percent if '/intro_to_full_stack' in request.path percent}show{percent endif percent}
                 -->
-                <ul class="collapse list-unstyled ps-3 {% if '/intro_to_full_stack' in request.path %}show{% endif %}" id="full-stack-submenu">
+                <ul class="collapse list-unstyled ps-3 {% if '/intro-to-full-stack' in request.path %}show{% endif %}" id="full-stack-submenu">
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'full_stack_programming_and_the_web' %}active{% endif %}" href="{% url 'full_stack_programming_and_the_web' %}">Programming and the Web</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'full_stack_github' %}active{% endif %}" href="{% url 'full_stack_github' %}">GitHub</a></li>
 
