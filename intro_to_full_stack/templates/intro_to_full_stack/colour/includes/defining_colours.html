@@ -1,0 +1,168 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-colour-defining-colours{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Defining Colours{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        In web design, colour can be defined in multiple ways, and each format offers different advantages. The most 
+        common formats are 
+        <dfn title="A base-16 alphanumeric system">hexadecimal</dfn> 
+        codes, 
+        <dfn title="Red Green Blue">RBG</dfn>,
+        <dfn title="Red Green Blue Alpha">RGBA</dfn>,
+        <dfn title="Hue Saturation Lightness">HSL</dfn>,
+        <dfn title="Hue Saturation Lightness Alpha">HSLA</dfn>,
+        and keyword colour names.
+    </p>
+
+    <!--Hexadecimal Colours-->
+    <h4 id="intro-to-full-stack-colour-defining-colours-hexadecimal-colours">Hexadecimal Colours</h4>
+    <p>
+        Hexadecimal colour codes, or hex codes, are among the most widely used formats in web design. They consist of 
+        six characters prefixed with a hash symbol (#). These six characters are split into three pairs, representing 
+        the red, green, and blue (RGB) colour values respectively. Each pair is a number in base 16 (hexadecimal), 
+        ranging from 00 (minimum intensity) to FF (maximum intensity).
+    </p>
+    <p>
+        For example:
+    </p>
+    <ul>
+        <li>
+            #000000 = black (no colour intensity)
+        </li>
+        <li>
+            #FFFFFF = white (maximum colour intensity for all three components)
+        </li>
+    </ul>
+    <p>
+        Each component pair contributes to the final colour.
+    </p>
+    <ul>
+        <li>
+            #FF0000 = pure red
+        </li>
+        <li>
+            #00FF00 = pure green
+        </li>
+        <li>
+            #0000FF = pure blue
+        </li>
+    </ul>
+    <p>
+        A shorthand version is possible if both numbers in the pairs are the same by defining it once. For instance:
+    </p>
+    <ul>
+        <li>
+            #FFFFFF can be written as #FFF
+        </li>
+        <li>
+            #00FFFF can be written as #0FF
+        </li>
+    </ul>
+    <p>
+        Hex codes can also include opacity values using 8-digit hex notation where the last two characters (00 to FF) 
+        represent the alpha (opacity) channel like so:
+    </p>
+    <ul>
+        <li>
+            #00000000 = fully transparent black
+        </li>
+        <li>
+            #FFFFFFFF = fully opaque white  
+        </li>
+    </ul>
+
+    <!--RGB and RGBA-->
+    <h4 id="intro-to-full-stack-colour-defining-colours-rgb-and-rgba">RGB and RGBA</h4>
+    <p>
+        RGB stands for Red, Green, Blue. This format defines colours based on numeric intensity values ranging from 0 
+        (no intensity) to 255 (full intensity). The syntax is looks like:
+    </p>
+    <p>
+        <code class="written-code">rgb(255, 0, 0); /* bright red */</code>
+    </p>
+    <p>
+        RGBA extends this format by adding Alpha (opacity), a value between 0 (completely transparent) and 1 
+        (fully opaque).
+    </p>
+    <p>
+        <code class="written-code">rgba(255, 0, 0, 0.5); /* semi-transparent red */</code>
+    </p>
+    <p>
+        RGBA is especially useful when layering elements or applying effects like hover or background overlays without 
+        changing the underlying colour entirely.
+    </p>
+
+    <!--HSL and HSLA-->
+    <h4 id="intro-to-full-stack-colour-defining-colours-hsl-and-hsla">HSL and HSLA</h4>
+    <p>
+        HSL stands for Hue, Saturation, and Lightness, offering a more intuitive way to represent colours compared to 
+        RGB. The syntax looks like:
+    </p>
+    <p>
+        <code class="written-code">hsl(hue, saturation%, lightness%);</code>
+    </p>
+    <p>
+        Hue is the type of colour, represented by an angle from 0 to 360.
+    </p>
+    <ul>
+        <li>
+            Red = 0&deg; (or 360&deg;)
+        </li>
+        <li>
+            Green = 120&deg;
+        </li>
+        <li>
+            Blue = 240&deg;
+        </li>
+    </ul>
+    <p>
+        Saturation is the intensity of the colour, expressed as a percentage.
+    </p>
+    <p>
+        Lightness determines how light or dark the colour is (0% = black, 100% = white).
+    </p>
+    <p>
+        Combining these can look like <code class="written-code">hsl(240, 100%, 50%); /* vivid blue */</code>
+    </p>
+    <p>
+        HSLA adds the alpha channel for opacity in much the same way as RGBA adds it to RGB. It ranges from 0 
+        (completely transparent) to 1 (fully opaque). The syntax for this looks like:
+        <code class="written-code">
+            hsla(240, 100%, 50%, 0.3); /* semi-transparent vivid blue */
+        </code>
+    </p>
+    <p>
+        Many designers prefer HSL because it aligns more naturally with how we perceive colour.
+    </p>
+
+    <!--Named Colours-->
+    <h4 id="intro-to-full-stack-colour-defining-colours-named-colours">Named Colours</h4>
+    <p>
+        CSS also supports named colours, also called keyword colours, like red, blue, orange, or lightgreen. These are 
+        simple and readable, but limited in variety compared to other formats. A full list can be found 
+        <a 
+            class="text-link"
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/named-color"
+            title="Go to the Mozilla Developer page of named colours"
+            aria-label="Go to the Mozilla Developer page of named colours"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            here
+        </a>
+        at the Mozilla Developers Docs. The syntax for this looks like:
+        <code class="written-code">color: skyblue;</code>
+    </p>
+    <p>
+        There are 140+ named colours officially supported in CSS. They are useful for quick prototyping, but for brand 
+        consistency or precise design, hex or HSL formats are often preferred.
+    </p>
+
+{% endblock %}

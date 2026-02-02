@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Web Development - Colour{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Colour</h2>
+    
+    {% include 'intro_to_full_stack/colour/includes/contents.html' %}
+    {% include 'intro_to_full_stack/colour/includes/the_use_of_colour_in_web_design.html' %}
+    {% include 'intro_to_full_stack/colour/includes/defining_colours.html' %}
+    {% include 'intro_to_full_stack/colour/includes/the_psychology_of_colour.html' %}
+    {% include 'intro_to_full_stack/colour/includes/colour_contrast_and_accessibility.html' %}
+    {% include 'intro_to_full_stack/colour/includes/colour_in_ui_design_and_branding.html' %}
+
+{% endblock %}

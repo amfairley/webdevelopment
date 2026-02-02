@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Web Development - Sizes{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Sizes</h2>
+    
+    {% include 'intro_to_full_stack/sizes/includes/contents.html' %}
+    {% include 'intro_to_full_stack/sizes/includes/sizes_on_the_web.html' %}
+    {% include 'intro_to_full_stack/sizes/includes/absolute_units.html' %}
+    {% include 'intro_to_full_stack/sizes/includes/relative_units.html' %}
+    {% include 'intro_to_full_stack/sizes/includes/viewport_units.html' %}
+
+{% endblock %}

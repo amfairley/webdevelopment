@@ -1,0 +1,27 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-sizes-relative-units{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Relative Units{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <ul>
+        <li>em</li>
+        <li>rem</li>
+        <li>%</li>
+    </ul>
+    <p>
+        Relative units, on the other hand, are more flexible and adaptable. These include em, rem, and %. The em unit 
+        is based on the font size of the element's parent, while rem is based on the root element's font size (HTML by 
+        default which is 16px). This makes rem particularly useful for creating scalable and accessible designs. 
+        Percentages (%) are also commonly used for widths and heights, relative to the parent element's dimensions, 
+        allowing for fluid and responsive layouts.
+    </p>
+    <p>
+        Relative units are good to use for text sizes and box sizes throughout your webapp.
+    </p>
+{% endblock %}

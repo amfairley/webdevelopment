@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Web Development - Web Development{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Web Development</h2>
+    
+    {% include 'intro_to_full_stack/website_development/includes/contents.html' %}
+    {% include 'intro_to_full_stack/website_development/includes/website_development.html' %}
+    {% include 'intro_to_full_stack/website_development/includes/before_writing_code.html' %}
+    {% include 'intro_to_full_stack/website_development/includes/when_writing_code.html' %}
+    {% include 'intro_to_full_stack/website_development/includes/after_writing_code.html' %}
+
+{% endblock %}

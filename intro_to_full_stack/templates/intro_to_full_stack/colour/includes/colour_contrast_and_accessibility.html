@@ -1,0 +1,32 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-colour-colour-contrast-and-accessibility{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Colour Contrast and Accessibility{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        One of the most critical uses of colour in web design is ensuring accessibility. Colour contrast between 
+        foreground text and the background must be strong enough for all users to read comfortably, including those 
+        with visual impairments like colour blindness.
+    </p>
+    <p>
+        The 
+        <dfn title="Web Content Accessibility Guidelines">WCAG</dfn>
+        suggest the minimum contrast ratios of 4.5:1 for normal text and 3:1 for large text, which they define as a 
+        size of 18pt or bold text of size 14pt. This can be assessed on your website when you validate the 
+        <a 
+            class="text-link"
+            href="{% url 'CSS_css_validation' %}"
+            title="Go to the CSS validation page"
+            aria-label="Go to the CSS validation page"
+        >
+            accessibility
+        </a>
+        levels.
+    </p>
+{% endblock %}

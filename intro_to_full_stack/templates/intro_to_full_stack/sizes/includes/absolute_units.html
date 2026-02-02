@@ -1,0 +1,58 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-sizes-absolute-units{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Absolute Units{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <ul>
+        <li>px</li>
+        <li>pt</li>
+        <li>cm</li>
+        <li>mm</li>
+        <li>in</li>
+    </ul>
+    <p>
+        These include measurements like px (pixels), pt (points), cm (centimeters), mm (millimeters), and in (inches). 
+        Among these, px is by far the most frequently used in web design. A pixel represents a single dot on the screen 
+        and provides a fixed size, ensuring consistent display across most devices. However, because pixel density can 
+        vary between screens (e.g., standard vs. Retina displays), using pixels can sometimes lead to inconsistencies 
+        in scale or readability, particularly on high-resolution displays.
+    </p>
+    <p>
+        Use pixels for 
+        <a 
+            class="text-link"
+            href="{% url 'CSS_responsive_design' %}#CSS-responsive-design-media-queries"
+            title="Go to the CSS media queries section"
+            aria-label="Go to the CSS media queries section"
+        >
+            media queries 
+        </a>
+        cut offs for screen sizes, as they will work well with the built in 
+        <a 
+            class="text-link"
+            href="{% url 'CSS_bootstrap' %}#CSS-bootstrap-bootstrap-grids"
+            title="Go to the CSS bootstrap grids section"
+            aria-label="Go to the CSS bootstrap grids section"
+        >
+            bootstrap grid
+        </a>
+        and 
+        <a 
+            class="text-link"
+            href="https://materializecss.com/"
+            title="Go to the MaterializeCss website"
+            aria-label="Go to the MaterializeCss website"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            MaterializeCSS
+        </a>
+        grid systems.
+    </p>
+{% endblock %}

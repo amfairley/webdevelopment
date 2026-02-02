@@ -1,0 +1,29 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-sizes-viewport-units{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Viewport Units{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <ul>
+        <li>vw</li>
+        <li>vh</li>
+        <li>vmin</li>
+        <li>vmax</li>
+    </ul>
+    <p>
+        Viewport units like vw (viewport width) and vh (viewport height) are measured as percentages of the size of the 
+        browser window. For example, 100vw spans the entire width of the viewport, regardless of the screen size. These 
+        units are ideal for creating full-screen sections or dynamic spacing that adjusts as the user resizes the 
+        browser window. vmin (the smaller of vw or vh), and vmax (the larger or vw or vh) allows you to create 
+        consistent scaling on all screens which is best if you do not know if the website will be viewed in portrait
+        or landscape orientation.
+    </p>
+    <p>
+        The use case for thse are hero banners and images that you want to take up a percentage of the users screen.
+    </p>
+{% endblock %}
