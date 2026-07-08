@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Web Development - 5 Stages of UX/UI Design{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>5 Stages of UX/UI Design</h2>
+    
+    {% include 'intro_to_full_stack/five_stages/includes/contents.html' %}
+    {% include 'intro_to_full_stack/five_stages/includes/planning.html' %}
+    {% include 'intro_to_full_stack/five_stages/includes/stage_1_strategy.html' %}
+    {% include 'intro_to_full_stack/five_stages/includes/stage_2_scope.html' %}
+    {% include 'intro_to_full_stack/five_stages/includes/stage_3_structure.html' %}
+    {% include 'intro_to_full_stack/five_stages/includes/stage_4_skeleton.html' %}
+    {% include 'intro_to_full_stack/five_stages/includes/stage_5_surface.html' %}
+    {% include 'intro_to_full_stack/five_stages/includes/template.html' %}
+{% endblock %}

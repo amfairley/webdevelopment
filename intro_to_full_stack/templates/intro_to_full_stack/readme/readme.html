@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Web Development - README.md{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>README.md</h2>
+    
+    {% include 'intro_to_full_stack/readme/includes/contents.html' %}
+    {% include 'intro_to_full_stack/readme/includes/why_have_a_readme_md_file.html' %}
+    {% include 'intro_to_full_stack/readme/includes/setting_up_the_readme.html' %}
+    {% include 'intro_to_full_stack/readme/includes/readme_sections.html' %}
+    {% include 'intro_to_full_stack/readme/includes/template.html' %}
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Web Development - Features{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Features</h2>
+    
+    {% include 'intro_to_full_stack/features/includes/contents.html' %}
+    {% include 'intro_to_full_stack/features/includes/what_are_features.html' %}
+    {% include 'intro_to_full_stack/features/includes/tracking_features.html' %}
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-testing-what-to-test{% endblock %}
+
+<!--Section title-->
+{% block text_title %}What to Test{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        There should be a slew of tests performed on your website to make sure that everything works and that your 
+        users have a good experience.
+    </p>
+    <p>
+        Manual testing (often called user testing) is where the site is manually tested from the point of view of the 
+        user by actions such as clicking buttons, filling out forms, and testing that all the behind the scenes logic 
+        creates the intended user experience. This involves you loading up your webpage and checking that everything 
+        works as you intend it to.
+    </p>
+    <p>
+        Automated testing involves using scripts and a testing frameworks to test functionality automatically. 
+        Automated testing can be quick, thorough, and allow the developer to pick up errors early on but relies on the 
+        developer asking the right questions and does not test for user experience. 
+    </p>
+    <p>
+        Furthermore, you should test how your website works across various browsers and devices, that your website 
+        meets all accessibility standards, performs well and does not take a long time to load, all of your written 
+        code is validated to the highest standards, and any major bugs you encounter are documented along with their 
+        fix to highlight your development process.
+    </p>
+{% endblock %}

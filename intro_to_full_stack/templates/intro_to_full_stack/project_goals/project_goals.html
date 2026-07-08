@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Web Development - Project Goals{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Project Goals</h2>
+    
+    {% include 'intro_to_full_stack/project_goals/includes/project_goals.html' %}
+
+{% endblock %}

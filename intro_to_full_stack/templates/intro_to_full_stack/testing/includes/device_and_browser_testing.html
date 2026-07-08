@@ -1,0 +1,29 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-testing-device-and-browser-testing{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Device and Browser Testing{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        It is best practice to check that your website works as it should across multiple browsers and devices. I tend 
+        to use Google Chrome for displaying my web apps during development so I also check that they look and work as 
+        expected on Safari, Microsoft Edge, Opera, and Firefox. 
+    </p>
+    <p>
+        For different devices and screen sizes, you can easily simulate these in the 
+        <a 
+            class="text-link"
+            href=""
+            title="Go to the Google Dev Tools page"
+            aria-label="Go to the Google Dev Tools page"
+        >
+            Google Dev Tools
+        </a>
+        system.
+    </p>
+{% endblock %}

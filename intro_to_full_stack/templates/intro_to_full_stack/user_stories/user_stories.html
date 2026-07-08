@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Web Development - User Stories{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>User Stories</h2>
+    
+    {% include 'intro_to_full_stack/user_stories/includes/contents.html' %}
+    {% include 'intro_to_full_stack/user_stories/includes/what_are_user_stories.html' %}
+    {% include 'intro_to_full_stack/user_stories/includes/user_story_syntax.html' %}
+    {% include 'intro_to_full_stack/user_stories/includes/user_story_examples.html' %}
+{% endblock %}

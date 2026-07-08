@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Web Development - Google Dev Tools{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Google DevTools</h2>
+    
+    {% include 'intro_to_full_stack/google_dev_tools/includes/contents.html' %}
+    {% include 'intro_to_full_stack/google_dev_tools/includes/what_is_google_dev_tools.html' %}
+    {% include 'intro_to_full_stack/google_dev_tools/includes/elements.html' %}
+    {% include 'intro_to_full_stack/google_dev_tools/includes/console.html' %}
+    {% include 'intro_to_full_stack/google_dev_tools/includes/lighthouse.html' %}
+    {% include 'intro_to_full_stack/google_dev_tools/includes/performance.html' %}
+{% endblock %}

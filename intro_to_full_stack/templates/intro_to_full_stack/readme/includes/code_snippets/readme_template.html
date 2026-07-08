@@ -1,0 +1,158 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}intro-to-full-stack-readme-code-snippets-readme-template{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="markdown">
+![Website logo](/documentation/site_logo.png)
+---
+A paragraph describing the webapp. Include
+-	The type of website (full stack/ front end etc.)
+-	Purpose
+-	The intended audience(s)
+-	Which languages were used to create the website along with the major tools/frameworks
+-	How it is hosted and how static files are hosted
+-	A description of the type of database if used and the value that the databases add to the user experience
+The live site can be viewed [here](https://deployedwebsiteaddress.com/)
+See [DESIGN.md](/DESIGN.md) for information on the five planes of UX design, site map, database schema, and features. &lt;br&gt;
+See [TESTING.md](/TESTING.md) for information on the test driven development of the website, manual and automated testing of the site, bugs encountered, and website analytics. &lt;br&gt;
+See [DEV.md](/DEV.md) for an overview of the continuous integration and deployment process, how I set up my development environment, and deployment steps.
+
+---
+
+## Table of Contents
+1. [Project Goals](#project-goals)
+    1. [User Goals](#user-goals)
+    2. [Site Owner Goals](#site-owner-goals)
+    3. [Developer Goals](#developer-goals)
+2. [User Stories](#user-stories)
+3. [Security](#security)
+    1. [Defensive Programming](#defensive-programming)
+    2. [Form Validation](#form-validation)
+4. [Future Development](#future-development)
+5. [Technologies Used](#technologies-used)
+    1. [Languages](#languages)
+    2. [Frameworks](#frameworks)
+    3. [Libraries and Packages](#libraries-and-packages)
+    4. [Tools](#tools)
+6. [User Feedback](#user-feedback)
+7. [Credits](#credits)
+    1. [Images](#images)
+8. [Acknowledgements](#acknowledgements)
+
+## Project Goals
+### User Goals
+- A website that is easy to navigate.
+- A website that will display well on different devices.
+- Positive and immediate feedback from the site such as on hover or on click JavaScript animations to ensure a good user experience.
+- Contact information of the developer.
+- Site specific goals.
+### Site Owner Goals
+- Provide a website that is safe for users to sign up to and that their data is handled securely.
+- Site specific goals.
+### Developer Goals
+- A well designed website that catches the attention of the users.
+- A responsive website where the functionality is not impacted by screen size.
+- Easy navigation that is intuitive and responsive.
+- A website designed with accessibility in mind.
+- A finished product that will proudly be displayed within the developer's portfolio.
+- Site specific goals.
+
+## User Stories
+| User Story ID | As A/An | I Want To Be Able To... | So That I Can... |
+|-----|------|-----|-----|
+|&lt;td colspan="4"&gt;**Viewing and Navigation**&lt;/td&gt;|
+| 1 | First Time Visitor | Tell the purpose of the website immediately | Decide whether I want to use the website |
+| 2 | First Time Visitor | Navigate the website easily and intuitively | I can find the content that I need |
+| 3 | First Time Visitor | Know that my interactions on the website have worked | Be sure that the website is resposinsive |
+|&lt;td colspan="4"&gt;**Site Specific e.g. Registration and User Accounts or Searching or Payment **&lt;/td&gt;|
+| 4 | Site User | Have the site content to be safe and secure | Know that I am not open to any malicious activities |
+| 5 | Potential Customer | Filter and sort the products| Find the best product for me |
+| 6 |Customer | Easily enter my payment information | Check out quickly and with no hassles |
+| 7 | Business Owner | See reviews | Improve as a business |
+
+## Security
+Here list the key security methods employed to make your website safe for it's users. An example of this is your .gitignore file
+**.gitignore**&lt;br&gt;
+Describe the reason behind the .gitignore file and then list the 
+One of the security steps taken was to put all sensitive and irrelevant information in the .gitignore file so as to not upload them to the public online repository. Those added to this file were:
+| Inclusion in .gitignore | Reasoning |
+|-----|-----|
+| venv | It has the virtual environment information including paths and configurations that won't work for other developers or environments. So it was added to .gitignore to reduce redundancy and clutter in the repository. |
+| env.py | To hide sensitive information such as… |
+**Django Allauth**&lt;br&gt;
+AllAuth is an open source Django package that I used to handle user authentication on the website. It is open source, so it is backed by millions of developers who keep it up to date and secure, providing a key part in the security of this website and data-security of the users who will create user accounts with us. The client ID and secret keys for the social sign-ins are kept in the secure admin dashboard.
+**crsf tokens**&lt;br&gt;
+These are present in all forms on the website, preventing from Cross-site Request Forgery attacks, confirming that the form is submitted by a real user, not a malicious third party.
+**Password Security**&lt;br&gt;
+Django AllAuth uses the password hashing algorithm PBKDF2 to hash passwords before storing them, allowing them to be stored securely and for the possibility for multiple users to have the same password without impacting site security.
+**Email Validation**&lt;br&gt;
+As a part of Django-allauth, email validation is required to prevent fake accounts, verify ownership of the email address, and to reduce phishing risks.
+**External links**&lt;br&gt;
+All external links open in a new tab and have rel="noopener" to prevent the opened page from accessing the pages on this website, increasing security.
+**Access required**&lt;br&gt;
+On certain pages, the view only loads the page if the user is a superuser or is logged in depending on the requiremnet.
+
+### Defensive Programming
+Here list all the defensive programming steps you implemented such as password confirmation, email login, logout pages, form elements, delete confirmation pop ups etc.
+**Password confirmation**&lt;br&gt;
+The signup form requires a confirmation of the password to prevent the user from making a typo.
+
+### Form validation
+Here describe how your form validation is handled throughout the website. 
+
+## Future Development
+Here you can list all the extras you thought of during development that would build upon your completed website.
+
+## Technologies Used
+Here list the technologies you used including a link to them in possible and what they were used for. The libraries and packages section should also describe everything in your requirements.txt file if you have one.
+
+### Languages
+- [HTML](https://en.wikipedia.org/wiki/HTML)
+    - Markup language used for website structure.
+- [CSS](https://en.wikipedia.org/wiki/CSS)
+    - Used for styling the elements on the webpage.
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+    - Used for dynamic functionality on the website.
+- [Python](https://www.python.org/)
+    - Used for server side scripting and backend development.
+- [SQL](https://en.wikipedia.org/wiki/SQL)
+    - Used for maintenance and querying of database throughout to confirm correct functionality.
+
+### Frameworks
+- [Django](https://www.djangoproject.com/)
+    - Django is a full server-side framework used to build this web app. It is written in python and provides batteries and low-level automation that makes it easier to build a better web app with less code.
+
+### Libraries and Packages
+- [Pip](https://pypi.org/project/pip/)
+    - The package installer for python used to install packages and libraries.
+- [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+    - Used for some styling and site functionality
+
+### Tools
+- [Visual Studio Code](https://code.visualstudio.com/)
+    - This is my IDE of choice for writing my HTML, CSS, JavaScript, and Python code for this project
+- [Git](https://git-scm.com/)
+	- Used for version control.
+- [GitHub](https://github.com/)
+	- Used to store the code in a Repository
+
+## User Feedback
+Include some user feedback from either the business owner or even your friends and family during development. Describe who gave it and list them and whether they were included or not. If not, explain why.
+
+## Credits
+List any videos or tutorials you made use of.
+[Description](https://link.com) and describe how you used the video to help you.
+
+### Images
+List which images were yours and the for others describe where they were used in the website and who has ownership of them, how you got permission to use them and then link the photographer/designer.
+
+## Acknowledgements
+Acknowledge any people, colleagues, friends, or family that helped and supported you.
+</code></pre>
+{% endblock %}

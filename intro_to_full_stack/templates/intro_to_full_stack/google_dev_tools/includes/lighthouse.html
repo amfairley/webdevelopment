@@ -1,0 +1,29 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-google-dev-tools-lighthouse{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Lighthouse{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The Lighthouse panel is where you can create a full audit of your websites performance, accessibility, best 
+        practices, 
+        <dfn title="Search Engine Optimisation">SEO</dfn>
+        and 
+        <dfn title="Progressive Web App">PWA</dfn>
+        compliance.
+    </p>
+    <p>
+        You generally want to use the Navigation mode, and select all of the categories unless you are after specific 
+        results. Then pick between mobile and desktop. It's best to do both so that you can make sure you provide the 
+        best experience for all users.
+    </p>
+    <p>
+        It will generate a score for each category with specific and actionable tips to improve your score. You will 
+        generally want to aim for greens across the board.
+    </p>
+{% endblock %}

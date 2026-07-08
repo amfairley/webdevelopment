@@ -1,0 +1,35 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-user-stories-user-story-syntax{% endblock %}
+
+<!--Section title-->
+{% block text_title %}User Story Syntax{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        There are three key user types that you should keep in mind when building user stories in order to cover most 
+        scenarios. These are:
+    </p>
+    <ul>
+        <li>First time users</li>
+        <li>Continuing user</li>
+        <li>Business owner</li>
+    </ul>
+    <p>
+        Your website may have other types of users too. For instance with a booking website, you may have "guests" or 
+        in a social media website you may have various types of users based on their intentions with your website.
+    </p>
+    <p>
+        When writing user stories, you want them to take the following syntax:
+    </p>
+    <p>
+        <code class="written-code">As an [x] user, I want to be able to do [Y], so that I can [Z]</code>
+    </p>
+    <p>
+        This covers they type of user, the functionality that they want and more importantly the reasoning behind 
+        having that functionality.
+    </p>
+{% endblock %}

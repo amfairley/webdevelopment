@@ -1,0 +1,71 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-features-tracking-features{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Tracking Features{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        It's best practice to track your features in your documentation as you develop them. This provides key points 
+        of "look, I told you I would make this bit" and keeps you focused on meeting your own criteria. I tend to list 
+        mine in order of which page they belong on, starting with "all" from the base template highlighting features in 
+        the header and footer, and then going through each app one by one for a Django project, or each page one by one 
+        for a static website. 
+    </p>
+    <p>
+        The key points you need to show are:
+    </p>
+    <ul>
+        <li>
+            Location of the feature
+        </li>
+        <li>
+            Image of the feature
+        </li>
+        <li>
+            What it is, what it does and why you have included it
+        </li>
+        <li>
+            Which 
+            <a 
+                class="text-link"
+                href="{% url 'full_stack_user_stories' %}"
+                title="Go to the User Stories page"
+                aria-label="Go to the User Stories page"
+            >
+                User Story
+            </a>
+            your feature completes, if any
+        </li>
+    </ul>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Feature Name
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Image or screenshot of the feature
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Details</strong>: What the feature is, what purpose it serves and how the user can interact with it
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>User Stories Covered</strong>: 1, 2, 14
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

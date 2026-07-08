@@ -1,0 +1,118 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}intro-to-full-stack-readme-code-snippets-testing-template{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="markdown">
+![Website logo](/documentation/site_logo.png)
+
+---
+
+# Testing
+Define manual testing, automated testing, and their differences. Explain your philosophy when it came to testing your webapp.
+If using the TDD approach, explain it and give an example. 
+Explain your process when you implement new functionality.
+Describe any testing software that you used.
+
+See [README.md](/README.md) for information on project goals, user stories, security, future developments, technologies used, user feedback, credits, and acknowledgements. &lt;br&gt;
+See [DESIGN.md](/DESIGN.md) for information on the five planes of UX design, site map, database schema, and features. &lt;br&gt;
+See [DEV.md](/DEV.md) for an overview of the continuous integration and deployment process, how I set up my development environment, and deployment steps.
+
+---
+1. [Testing User Stories](#testing-user-stories)
+2. [Manual Testing](#manual-testing)
+3. [Device and Browser Testing](#device-and-browser-testing)
+4. [Automated Testing](#automated-testing)
+    - [Test Driven Development](#test-driven-development)
+    - [Accessibility Testing](#accessibility-testing)
+    - [Performance Testing](#performance-testing)
+    - [HTML Validation](#html-validation)
+    - [CSS Validation](#css-validation)
+    - [JavaScript Validation](#javascript-validation)
+    - [Python Validation](#python-validation)
+5. [Bugs](#bugs)
+    - [Bug 1](#bug-1)
+    - [Bug 2](#bug-2)
+    - [Bug 3](#bug-3)
+    - [Bug 4](#bug-4)
+    - [Bug 5](#bug-5)
+    - [Known Bugs](#known-bugs)
+7. [Analytics](#analytics)
+
+## Testing User Stories
+The [user stories](/README.md#user-stories) have been a driving force for the development of this project. More information on each user story and how the features implemented in this web app meet their criteria can be seen [here](/DESIGN.md#features). Most user stories were met to create a MVP, however future development will include adding form elements to the checkout to allow users without an account create one and save their order.
+
+## Manual Testing
+Here tabulate your features and how you manually tested them from the point of view of a user. You should include what the feature is, the action you performed, what result you expected and whether your test passed. Include some comments if necessary and link it to your bug section if you encountered a bug that you either fixed or still persists. Some may look like:
+| Feature | Action | Expected results | Passed | Comments |
+| ----- | ----- | ----- | ----- | ----- |
+| **base.html** | | | | |
+| Site logo - header | Click | Redirected to the homepage | Y | N/A |
+| Site logo - footer | Click | Redirected to the homepage | Y | N/A |
+| Booking form | Submit with empty fields | Prompt to enter a check in date | Y | N/A |
+| Booking form | Submit with only check in date | Prompt to enter a check out date | Y | N/A |
+| Booking form | Submit with dates and no guests | Prompt to add guests | N | [Bug 1](#bug-1) highlighted and fixed |
+| Booking form | Submit with dates and no guests | Prompt to add guests | Y | N/A |
+| Booking form | Click check in/check out | Calendar widget appears to select dates with a golden halo on the widgets | Y | N/A |
+| Booking form | Open check in/ check out calendar widgets | Dates in the past are disabled | Y | N/A |
+| Booking form | Open check in/ check out calendar widgets | Dates over a year away are disabled | Y | N/A |
+
+## Device and Browser Testing
+Describe your responsiveness testing on your development laptop/desktop and any mobile phones you have. List the emulated screens from Google Chrome Devtools. A good idea here is to go down to the iPhone 5/SE screen size as it is one of the smaller smart phones in use today. List these screen sizes here:
+- iPhone SE (375px x 667px)
+
+## Automated Testing
+### Test Driven Development
+If using TDD, describe it here and explain any libraries used to test your site such as coverage for Django webapps. Include how it was installed, run, and link to any reports it generated.
+Describe any reports; what the results were, and give explanations for areas that did not meet 100%.
+### Accessibility Testing
+Here describe how you kept to the accessibility best practices during development (aria-labels, alt texts, semantic HTML, colour contrasts, hiding text in a way that was still accessible to screen readers etc).
+Describe how accessibility testing was performed (e.g. WAVE). Link to the tester and describe it's use.
+Then go through each page showing any errors or alerts that were thrown up and explain them in they were not fixed. Include a screenshot of the report. An example may look like:
+**Base Template**&lt;br&gt;
+- 2 Low contrast errors: These appear because wave does not recognise the position of the check in/ check out labels being as being form-floating inside the inputs so incorrectly computes the contrast against the header background, not the input background. This error in the wave validation is carried over to every page of the website as they all extend from this base template. These errors do not affect the usability of the website and are ignored when they appear.
+- 1 alert for no heading structure. This is because a H1 element is not used within the base template. As each page inherits from this template, they will have their own H1 headings, so this alert only occurs when testing the base template in isolation and thus is ignored going forward.
+&lt;details&gt;
+&lt;summary&gt;Base template results&lt;/summary&gt;
+&lt;img src="/documentation/testing/wave/base.png"&gt;
+&lt;/details&gt;&lt;br&gt;
+### Performance Testing
+Describe the performance testing e.g. using Lighthouse within the Google Chrome Devtools. List the steps taken during development to ensure the best performance e.g. image optimisation, code minification, caching files, lazy loading etc.
+Include screen shots of the performance reports and explain any areas that did not perform as well as expected.
+### HTML Validation
+Describe and link to your HTML validator and how you used it. Tabulate each page with warning and errors explain; such as:
+| Page | Warnings | Errors |
+| ----- | ------ | ------ |
+| Base template | None | None |
+| Back button | None | None |
+### CSS Validation
+Describe the CSS validator you used and explain the results. Include screenshots of the results for each page similar in style to the accessibility testing results.
+### JavaScript Validation
+Describe the JavaScript linter you used and discuss the results. Provide a description of what code was tested and the setup of the linter in each case and your results. For example for JSLint:
+**Base template**&lt;br&gt;
+- The base.js file was copied into the linter and the postload JavaScript at the bottom of base.html was added to this for the purpose of validation. 
+- The following linter settings were selected: browser, this. 
+- The following variables were added: bootstrap.
+- No warnings.
+- Full results can be seen [here](/documentation/testing/jslint/base_template.pdf)
+### Python Validation
+Describe and link the standard to which your Python code was held to (PEP8). Also describe and link your python linter of choice. For the results; state the file name, describe any errors or alerts and include a screenshot of the results, such as:
+**Project: settings.py**&lt;br&gt;
+- No errors or alerts
+&lt;details&gt;
+&lt;summary&gt;Settings results&lt;/summary&gt;
+&lt;img src="/documentation/testing/python/project_settings.png"&gt;
+&lt;/details&gt;&lt;br&gt;
+
+## Bugs
+Write down major bugs your found during development, how they could be reproduced and how they were fixed. Include code snippets or screenshots where useful. At the end list any current known bugs with how they can be reproduced and your proposed process to fix them going forward.
+
+## Analytics
+Describe any analytics systems used on your webapp and what data they will show you. Mention how this data will be used to aid your continued development and go through the steps you took to set it up.
+</code></pre>
+{% endblock %}

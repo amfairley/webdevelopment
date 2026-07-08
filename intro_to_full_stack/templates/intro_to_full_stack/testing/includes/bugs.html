@@ -1,0 +1,49 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-testing-bugs{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Bugs{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        It can be useful to log the bugs that you come across in your testing, either to remind yourself to fix them 
+        later or purely just to highlight some of the issues you encountered during your development. You should 
+        include what the bug was, how it could be replicated, the cause of the bug and how you fixed it. For example in 
+        a booking form for a hotel management website I had the following bug:
+    </p>
+    <p><strong>Bug 1:</strong></p>
+    <ul>
+        <li>
+            This bug occurred when creating the booking form
+        </li>
+        <li>
+            Initially the choice of guests was put inside a dropdown menu, making a sleek design. However upon 
+            submission of the form with invalid guest numbers; the following error happened:
+        </li>
+        <li>
+            <code class="written-code">
+                An invalid form control with name='adults' is not focusable.
+            </code><br>
+            <code class="written-code">
+                &lt;input type="number" name="adults" onchange="updateGuestCount()" min="1" max="5" required_id="id_adults"&gt;
+            </code>
+        </li>
+        <li>
+            The reason behind this is that since the number of e.g. adults was in a hidden dropdown when the form is 
+            submitted, the error cannot display correctly and the functionality cannot work
+        </li>
+        <li>
+            Multiple JavaScript functions were written to either display the error in the dropdown menu when the number 
+            is first entered (similar to the total guest update function) or to focus and open the dropdown menu when 
+            the form is submitted so that the input is not hidden
+        </li>
+        <li>
+            However, these did not fix the issue in a satisfactory way, so the decision was taken to have the inputs 
+            outside of a dropdown menu, removing this major bug
+        </li>
+    </ul>
+{% endblock %}

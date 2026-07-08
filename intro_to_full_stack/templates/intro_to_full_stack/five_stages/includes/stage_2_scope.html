@@ -1,0 +1,170 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-five-stages-stage-2-scope{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Stage 2: Scope{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Here, we refine the ideas from the Strategy stage and determine the specifics needed to achieve our goals, both 
+        on the front end and back end. This involves breaking the website into sections and organising requirements 
+        across web pages and 
+        <dfn title="Databases store, organize, and manage website data for efficient back-end functionality">databases</dfn>.
+    </p>
+
+    <!--Front-end-->
+    <h4 id="intro-to-full-stack-five-stages-stage-2-scope-front-end">Front-end</h4>
+    <p>
+        Here, you can outline the features needed for each page of the website to meet the requirements identified 
+        during the strategy stage, as well as any additional features you think of along the way. If new ideas come to 
+        mind, don't hesitate to revisit your viability and feasibility matrix to incorporate them.
+    </p>
+    <p>
+        For clarity, organise these features as a list for each proposed template or page. For example, on the homepage 
+        of this website, I planned to include a section introducing users to the site, along with a brief description of 
+        what they can expect from the site. This ensures that every page has a clear purpose and supports the overall 
+        goals of the project.
+    </p>
+    <p>
+        Here is an example of a couple of templates that I proposed in the Scope section of a hotel management website:
+    </p>
+    <ul>
+        <li>
+            <strong>base.html</strong>: This will be the base template that the others call from to ensure a cohesive 
+            structure across the website. It will have:
+            <ul>
+                <li>
+                    All the header meta information
+                </li>
+                <li>
+                    Links to styling and JavaScript scripts
+                </li>
+                <li>
+                    The header with the site logo, a booking form, and account navigation links
+                </li>
+                <li>
+                    The footer with the hotel social media links, hotel contact information, the site logo, and 
+                    developer contact information
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>index.html</strong>: This will act as the website homepage. It will have:
+            <ul>
+                <li>
+                    Navigation links for the different sections on the page
+                </li>
+                <li>
+                    A large hero image and text welcoming the user to the website
+                </li>
+                <li>
+                    A booking form
+                </li>
+                <li>
+                    Resort information and images
+                </li>
+                <li>
+                    Service information and images
+                </li>
+                <li>
+                    Location information with a google maps widget
+                </li>
+                <li>
+                    Hotel FAQs
+                </li>
+                <li>
+                    A carousel of reviews if available
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <!--Back-end-->
+    <h4 id="intro-to-full-stack-five-stages-stage-2-scope-back-end">Back-end</h4>
+    <p>
+        For static websites or those built primarily with JavaScript frameworks that don't rely on server-side 
+        processing, a back end may not be necessary. Static websites are ideal for simple use cases, such as portfolios, 
+        informational pages, or marketing sites, where all the content is preloaded and frequent updates or dynamic 
+        interactions are not required. In these scenarios, everything users see and interact with is rendered directly 
+        in their browser without the need for server-side processing or databases.
+    </p>
+    <p>
+        However, a back end becomes necessary when a website requires more advanced functionality. Here are some common 
+        situations where a back end is needed:
+    </p>
+    <ul>
+        <li>
+            Data Storage and Management:
+            <ul>
+                <li>
+                    If your website needs to store user data, such as account details, preferences, or submitted forms, 
+                    a database is required. The back end serves as the interface between the website and the database, 
+                    ensuring data is securely stored, retrieved, and updated.
+                </li>
+            </ul>
+        </li>
+        <li>
+            Dynamic Content:
+            <ul>
+                <li>
+                    For sites that display personalized or frequently changing content—like user dashboards, news feeds, 
+                    or product catalogues, a back end processes requests and retrieves the necessary data from a 
+                    database to serve to users dynamically.
+                </li>
+            </ul>
+        </li>
+        <li>
+            Authentication and Authorization:
+            <ul>
+                <li>
+                    Websites with login systems, such as social networks, e-commerce platforms, or membership sites, 
+                    require a back end to handle user authentication (verifying identities) and authorisation (managing 
+                    permissions).
+                </li>
+            </ul>
+        </li>
+        <li>
+            Processing and Logic:
+            <ul>
+                <li>
+                    If your website includes complex operations, such as generating reports, running algorithms, or 
+                    processing payments, the back end executes this logic securely and efficiently, ensuring the front 
+                    end remains lightweight.
+                </li>
+            </ul>
+        </li>
+        <li>
+            Integration with APIs and Services:
+            <ul>
+                <li>
+                    When a site needs to interact with third-party services, such as payment gateways (e.g., Stripe), 
+                    social media platforms, or analytics tools, the back end acts as a bridge between the front end and 
+                    these external APIs.
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <p>
+        If a back-end is required for your website, it's crucial to define the structure of your databases and the 
+        relationships between their various components. This ensures that data is organised efficiently and 
+        interactions between different parts of the system are clearly understood. A step towards that starts in your 
+        scope. Here list what models (tables) you will need in your database, what purpose they serve, and what fields 
+        (column titles) they will need. For example User and Profile models may look like:
+    </p>
+    <ul>
+        <li>
+            <strong>User</strong>: A Django model that will be updated using Django AllAuth and consisting of a number 
+            of fields that will not be queried or used in the project. The fields of note will be: ID, email, password, 
+            is_superuser (for admin privileges on the site).
+        </li>
+        <li>
+            <strong>Profile</strong>: This will handle the user profile data. The fields will be: ID, User 
+            (foreign key; one to one), newsletter (True if signed up to a newsletter), and the information fields 
+            required for stripe such as first and last names, address information and contact details etc. 
+        </li>
+    </ul>
+{% endblock %}

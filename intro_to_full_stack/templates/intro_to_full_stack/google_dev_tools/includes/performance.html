@@ -1,0 +1,17 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-google-dev-tools-performance{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Performance{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        I use the Performance panel solely to throttle the network to simulate slower network connections to then run 
+        the audit in the Lighthouse panel. This is especially useful if you have a webapp that people will be using on 
+        the go on their phones, so you can make sure it works well with spotty mobile internet.
+    </p>
+{% endblock %}

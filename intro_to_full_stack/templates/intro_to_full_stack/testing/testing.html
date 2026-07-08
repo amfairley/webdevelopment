@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Web Development - Testing{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Testing</h2>
+    
+    {% include 'intro_to_full_stack/testing/includes/contents.html' %}
+    {% include 'intro_to_full_stack/testing/includes/what_to_test.html' %}
+    {% include 'intro_to_full_stack/testing/includes/manual_testing.html' %}
+    {% include 'intro_to_full_stack/testing/includes/device_and_browser_testing.html' %}
+    {% include 'intro_to_full_stack/testing/includes/automated_testing.html' %}
+    {% include 'intro_to_full_stack/testing/includes/accessibility_testing.html' %}
+    {% include 'intro_to_full_stack/testing/includes/performance_testing.html' %}
+    {% include 'intro_to_full_stack/testing/includes/bugs.html' %}
+{% endblock %}

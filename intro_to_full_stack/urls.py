@@ -28,4 +28,39 @@ urlpatterns = [
         views.full_stack_colour,
         name="full_stack_colour"
     ),
+    path(
+        'project-goals/',
+        views.full_stack_project_goals,
+        name="full_stack_project_goals"
+    ),
+    path(
+        'user-stories/',
+        views.full_stack_user_stories,
+        name="full_stack_user_stories"
+    ),
+    path(
+        'five-stages/',
+        views.full_stack_five_stages,
+        name="full_stack_five_stages"
+    ),
+    path(
+        'features/',
+        views.full_stack_features,
+        name="full_stack_features"
+    ),
+    path(
+        'testing/',
+        views.full_stack_testing,
+        name="full_stack_testing"
+    ),
+    path(
+        'google-dev-tools/',
+        views.full_stack_google_dev_tools,
+        name="full_stack_google_dev_tools"
+    ),
+    path(
+        'readme/',
+        views.full_stack_readme,
+        name="full_stack_readme"
+    ),
 ]

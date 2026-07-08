@@ -1,0 +1,27 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-readme-template{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Template{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <!--README.md-->
+    <h4 id="intro-to-full-stack-readme-template-readme">README.md</h4>
+    {% include 'intro_to_full_stack/readme/includes/code_snippets/readme_template.html' %}
+
+    <!--DESIGN.md-->
+    <h4 id="intro-to-full-stack-readme-template-design">DESIGN.md</h4>
+    {% include 'intro_to_full_stack/readme/includes/code_snippets/design_template.html' %}
+
+    <!--TESTING.md-->
+    <h4 id="intro-to-full-stack-readme-template-testing">TESTING.md</h4>
+    {% include 'intro_to_full_stack/readme/includes/code_snippets/testing_template.html' %}
+
+    <!--README.md-->
+    <h4 id="intro-to-full-stack-readme-template-dev">DEV.md</h4>
+    {% include 'intro_to_full_stack/readme/includes/code_snippets/dev_template.html' %}
+{% endblock %}

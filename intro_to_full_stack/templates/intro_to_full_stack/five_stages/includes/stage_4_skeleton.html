@@ -1,0 +1,56 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-five-stages-stage-4-skeleton{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Stage 4: Skeleton{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        With all proposed features in mind, we create wireframes (Visual blueprints of a website's layout, showing 
+        structure and key features) for key pages and functionalities. Wireframes help visualize the website's layout, 
+        identify any missing elements, and ensure a design that is both visually appealing and user-friendly. I use 
+        <a 
+            class="text-link"
+            href="https://balsamiq.com/"
+            title="Go to the Balsamiq website"
+            aria-label="Go to the Balsamiq website"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Balsamiq
+        </a>
+        but any way you want to make them is valid including using Microsoft paint or even just with pen and paper. The 
+        key takeaway here is that you try to include all of the feasible functionalities and content that you have 
+        proposed in the earlier stages.
+    </p>
+    <p>
+        You will want to make separate wireframes for your desktop site and mobile site, highlighting the 
+        responsiveness of your webapp.
+    </p>
+    <p>
+        Below are some example wireframes for a children's toy based social media site for a page displaying all the 
+        toys in the database.
+    </p>
+    <div class="site-image-container">
+        <h4>Dekstop</h4>
+        <img
+            class="site-image"
+            src="https://i.imgur.com/cQbmRvH.png"
+            alt="Dekstop wireframes for a children's toy based social media site"
+            loading="lazy"
+        >
+    </div>
+    <div class="site-image-container">
+        <h4>Mobile</h4>
+        <img
+            class="site-image"
+            src="https://i.imgur.com/J4deFGO.png"
+            alt="Mobile wireframes for a children's toy based social media site"
+            loading="lazy"
+        >
+    </div>
+{% endblock %}

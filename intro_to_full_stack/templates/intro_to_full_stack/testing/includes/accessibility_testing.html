@@ -1,0 +1,78 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-testing-accessibility-testing{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Accessibility Testing{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You should keep accessibility in mind throughout development and apply best practices across your website 
+        including, but not limited to: 
+    </p>
+    <ul>
+        <li>
+            Ensuring 
+            <dfn title="Accessible Rich Internet Applications">ARIA</dfn> labels were used throughout. ARIA labels 
+            provide clear descriptions for elements that don't naturally convey meaning to assistive technologies, 
+            helping screen-reader users understand the purpose of buttons, icons, inputs, and interactive elements
+        </li>
+        <li>
+            Ensuring alt texts were used on all images. These ensure that images are accessible to users who are blind, 
+            have low vision, or use screen readers. It describes the image's content or function so that no information 
+            is lost
+        </li>
+        <li>
+            Use 
+            <a 
+                class="text-link"
+                href="{% url 'HTML_semantic' %}"
+                title="Go to the HTML semantic page"
+                aria-label="Go to the HTML semantic page"
+            >
+                semantic HTML
+            </a>
+            throughout. Assistive technologies rely on these built-in semantics to help users navigate pages quickly 
+            and understand the hierarchy of content. Additionally, browsers, search engines, and accessibility tools 
+            interpret semantic HTML more accurately, improving 
+            <a 
+                class="text-link"
+                href="{% url 'analytics_seo' %}"
+                title="Go to the SEO analytics page"
+                aria-label="Go to the SEO analytics page"
+            >
+                SEO
+            </a>
+            and usability.
+        </li>
+        <li>
+            Create colour palettes that are easy to see and have good colour contrasts. This benefits users with low 
+            vision, colour blindness, or poor screen quality who depend on strong contrast to read text and understand 
+            interfaces
+        </li>
+        <li>
+            Where hidden text is used, hide it in a way that is still accessible to screen readers
+        </li>
+    </ul>
+    <p>
+        <a 
+            class="text-link"
+            href="{% url 'CSS_css_validation' %}"
+            title="Go to the CSS validation page"
+            aria-label="Go to the CSS validation page"
+        >
+            CSS accessibility
+        </a>
+        testing can be performed using the Wave validator to provide key information about the 
+        accessibility standard of the website.
+    </p>
+    <p>
+        You should document these with a screenshot of the passed test and an explanation of any errors or alerts that 
+        occur. Sometimes these are unavoidable such as floating elements having their contrast compared with the site 
+        background rather than their parent div.
+    </p>
+    {% include 'intro_to_full_stack/testing/includes/troubleshooting/troubleshoot_accessibility_testing.html' %}
+{% endblock %}

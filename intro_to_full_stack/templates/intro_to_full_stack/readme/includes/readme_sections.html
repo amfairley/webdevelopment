@@ -1,0 +1,46 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-readme-readme-sections{% endblock %}
+
+<!--Section title-->
+{% block text_title %}README.md Sections{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The README.md file can contain lots of sections and many may not be applicable to your own application. Listed 
+        and discussed here are the ones that I often find myself including. For larger README.md files, I split them 
+        across smaller specialised files.
+    </p>
+    <ul>
+        <li>
+            README.md - To handle the outline of the project, technologies used, accreditations, and 
+            acknowledgements. Possible sections include:
+            <ul>
+                <li>Project Goals (User Goals, Site Owner Goals, Developer Goals)</li>
+                <li>User Stories</li>
+                <li>Security (Defensive Programming, Validation)</li>
+                <li>Future Development</li>
+                <li>Technologies Used (Languages, Frameworks, Libraries and Packages, Tools)</li>
+                <li>User Feedback</li>
+                <li>Credits (images and other)</li>
+                <li>Acknowledgements</li>
+            </ul>
+        </li>
+        <li>
+            DESIGN.md - To handle the five stages of UI/UX and the site features
+        </li>
+        <li>
+            TESTING.md - To document all the site testing
+        </li>
+        <li>
+            DEV.md - To document the continuous development and deployment of the website
+        </li>
+    </ul>
+    <p>
+        Some things that they all have in common are an image of the website brand at the top, a title, links and 
+        descriptions to the other README files and a contents section.
+    </p>
+{% endblock %}

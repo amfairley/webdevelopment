@@ -1,0 +1,76 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-readme-why-have-a-readme-md-file{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Why have a README.md File?{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        A README.md file is the front-page introduction to a GitHub repository and the first thing visitors see when 
+        they open your repo. For any software, it is really handy to have notes to refer back to highlighting key parts 
+        of your software or webapp along with evidence of all your hard work and testing.  A good README.md helps other 
+        developers quickly understand the webapp, reduces onboarding time, and makes the project more professional and 
+        accessible.
+    </p>
+    <p>
+        It is written in markdown (hence the .md file extension) so follows some similar syntax as HTML; just 
+        simplified. A good description of all the syntax that you will need can be found 
+        <a 
+            class="text-link"
+            href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax"
+            title="Go to the GitHub documentation for markdown syntax"
+            aria-label="Go to the GitHub documentation for markdown syntax"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            here
+        </a>
+        in the GitHub documentation.
+    </p>
+    <p>
+        Some further example syntaxes that I use regularly are:
+    </p>
+    <p>
+        Add in an image with:
+    </p>
+    {% include 'intro_to_full_stack/readme/includes/code_snippets/add_image.html' %}
+    <p>
+        Add in a horizontal rule to split up sections with:
+    </p>
+    {% include 'intro_to_full_stack/readme/includes/code_snippets/horizontal_rule.html' %}
+    <p>
+        External links:
+    </p>
+    {% include 'intro_to_full_stack/readme/includes/code_snippets/external_link.html' %}
+    <p>
+        Internal links to sections with a heading. Here the heading-name is the name of the heading with all spaces 
+        replaced with hyphens. Also, even if it is a heading 2 or heading 3, you only need one pound symbol (#) for 
+        the link.
+    </p>
+    {% include 'intro_to_full_stack/readme/includes/code_snippets/internal_link.html' %}
+    <p>
+        Table:
+    </p>
+    {% include 'intro_to_full_stack/readme/includes/code_snippets/table.html' %}
+    <p>
+        Bold text:
+    </p>
+    {% include 'intro_to_full_stack/readme/includes/code_snippets/bold.html' %}
+    <p>
+        Line break:
+    </p>
+    {% include 'intro_to_full_stack/readme/includes/code_snippets/line_break.html' %}
+    <p>
+        Drop down sections used mainly to hide large images so as to not crowd the document.
+    </p>
+    {% include 'intro_to_full_stack/readme/includes/code_snippets/dropdown.html' %}
+    <p>
+        The general syntax is a summary element nested inside a details element.
+    </p>
+    {% include 'intro_to_full_stack/readme/includes/code_snippets/dropdown_syntax.html' %}
+
+{% endblock %}

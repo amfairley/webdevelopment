@@ -1,0 +1,255 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-five-stages-stage-1-strategy{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Stage 1: Strategy{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        This is where we tackle the big questions: "What value does my website provide?" and "Who is it for?" It's all 
+        about brainstorming, identifying key requirements, and assessing the feasibility of your ideas. Think of it as 
+        laying the foundation for everything to come.
+    </p>
+    <p>
+        Think of this as the blueprint for your website, laying a solid foundation that will influence every decision 
+        that follows. By clearly defining the website's purpose and target audience early on, you ensure that the final 
+        product aligns with your objectives and meets the needs of your users.
+    </p>
+
+    <!--Key Questions-->
+    <h4 id="intro-to-full-stack-five-stages-stage-1-strategy-key-questions">Key Questions</h4>
+    <p>
+        In order to produce a worthwhile and functional website, we must first ask ourselves (and answer) the following 
+        questions.
+    </p>
+    <ol>
+        <li>
+            <strong>What value does the project provide?</strong><br>
+            Consider the core purpose of your website. Does it address a gap in the market, offer a unique solution, or 
+            provide a more user-friendly version of an existing site? Think about what sets it apart and how it 
+            benefits users.
+        </li>
+        <li>
+            <strong>What are the business needs?</strong><br>
+            Is this website for a business or organization? If so, what value will it bring to the business? This could 
+            range from enhancing the company's online presence to driving key business functions. For example, a hotel 
+            website can simplify the booking process, automatically update room availability, and collect valuable 
+            booking data, helping the hotel adapt to demand and address factors that influence its popularity. Consider 
+            how the website's features align with and support the business's core objectives.
+        </li>
+        <li>
+            <strong>Who is the target audience?</strong><br>
+            Think about the specific audience you want to serve. This could be a particular demographic, such as 
+            hobbyists for a niche, hobby-centric site, or a broader audience that spans multiple demographics. Consider 
+            who will find the most value in your website's content, features, and functionality, and keep their needs 
+            and interests in mind when designing your site.
+        </li>
+        <li>
+            <strong>What are the user requirements and expectations?</strong><br>
+            When users access your site, they expect smooth and intuitive interactions. Consider whether features like 
+            an authentication system with user accounts, login/logout functionality, and secure password handling are 
+            necessary for your site's purpose. Security is also key. Ensure data protection and safe handling of 
+            personal information. Additionally, think about smaller interactive elements that improve usability, such 
+            as clickable links that change the mouse cursor on hover, or animated links that adjust in boldness or 
+            colour to indicate they are interactive. These features enhance the user experience, making navigation 
+            intuitive and engaging. Security and usability should go hand in hand, providing both ease of use and 
+            protection for your visitors.
+        </li>
+    </ol>
+    <p>
+        An example of this might look like:
+    </p>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <strong>What values does the project provide?</strong>
+                </td>
+                <td>
+                    The website provides a valuable resource for the developer to layout their knowledge in a 
+                    structured way and proving their knowledge through the creation of the website itself. As a 
+                    secondary function, it provides information about website development concepts through clear, 
+                    structured content for others who are learning the subject.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>What are the business needs?</strong>
+                </td>
+                <td>
+                    Not applicable, this is a website for primarily personal use.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Who is the target audience?</strong>
+                </td>
+                <td>
+                    The primary target audience is the developer themselves to document their knowledge, test their 
+                    skills, and create a personal knowledge base. Additionally, it will be used in their portfolio to 
+                    highlight their website development skills.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>What are the user requirements and expectations?</strong>
+                </td>
+                <td>
+                    Users would expect to find structured and easily navigable content, including well-organized and 
+                    clear explanations and examples to help convey key concepts.<br>
+                    Any external links should open in a separate browser tab, providing good user experience by 
+                    keeping the website open.<br>
+                    Any videos or music should not automatically play, as that provides an annoyance to users who may 
+                    have other music/videos playing in the background or who do not wish to watch or listen to the 
+                    content.<br>
+                    Clickable links should display a clear change when hovered to highlight their interactivity and the 
+                    mouse cursor should change where appropriate.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!--Viability and Feasibility-->
+    <h4 id="intro-to-full-stack-five-stages-stage-1-strategy-viability-and-feasibility">Viability and Feasibility</h4>
+    <p>
+        When deciding what to include in your website, it's essential to weigh the importance of each feature against 
+        how feasible it is to implement. A great way to do this is by creating a table where you rank each feature on a 
+        scale of 1 to 5 for importance and feasibility (1 being low, 5 being high).
+    </p>
+    <p>
+        Here's how you can prioritise features based on their rankings:
+    </p>
+    <ul>
+        <li>High Importance & High Feasibility (5/5): These should be your top priority, as they are crucial and achievable.</li>
+        <li>High Importance & Medium Feasibility (4/3): These are still important, so aim to implement them, but be mindful of any challenges in execution.</li>
+        <li>Low Importance & High Feasibility (1/5): These can be added if they improve the user experience, but they're not a must-have.</li>
+        <li>High Importance & Low Feasibility (5/1): These are essential, but might be difficult to implement. They should be attempted if they are critical to your site's purpose, though be prepared for challenges or the need for external help.</li>
+        <li>Low Importance & Low Feasibility (1/1): Save these for later, if time and resources allow, once more critical features are in place.</li>
+    </ul>
+    <p>
+        This approach ensures you focus on the most impactful features first while managing your resources effectively.
+    </p>
+    <p>
+        An example of this might look like:
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Task/Feature
+                </th>
+                <th>
+                    Importance
+                </th>
+                <th>
+                    Viability/Feasibility
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    A home screen displaying a clear purpose
+                </td>
+                <td>
+                    5
+                </td>
+                <td>
+                    5
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Intuitive web design allowing users to easily use your website
+                </td>
+                <td>
+                    5
+                </td>
+                <td>
+                    5
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    A responsive website that displays well on various size screens and devices
+                </td>
+                <td>
+                    5
+                </td>
+                <td>
+                    5
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    An accessible website that is usable for users with a range of concerns
+                </td>
+                <td>
+                    5
+                </td>
+                <td>
+                    5
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Clear error pages that help direct the user back to the website
+                </td>
+                <td>
+                    5
+                </td>
+                <td>
+                    5
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Safe and secure external links
+                </td>
+                <td>
+                    5
+                </td>
+                <td>
+                    5
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Links that have animations or hover effects to highlight their functionality
+                </td>
+                <td>
+                    5
+                </td>
+                <td>
+                    5
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Loading icons when large pages load
+                </td>
+                <td>
+                    3
+                </td>
+                <td>
+                    3
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Available PDFs highlighting key information per section
+                </td>
+                <td>
+                    2
+                </td>
+                <td>
+                    4
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

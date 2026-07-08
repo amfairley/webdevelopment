@@ -1,0 +1,190 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-five-stages-stage-3-structure{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Stage 3: Structure{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        In this stage, we take the ideas from the Scope and break down the requirements for each page into individual 
+        features that fulfil the page's purpose. If databases are needed, we create blueprints to structure how the 
+        data will be stored and accessed. We also map out the overall site structure, designing a site map that 
+        outlines how users will navigate between pages. Additionally, we consider how users will interact with the 
+        website to ensure a seamless and intuitive experience.
+    </p>
+
+    <!--Templates-->
+    <h4 id="intro-to-full-stack-five-stages-stage-3-structure-templates">Templates</h4>
+    <p>
+        For the front end pages you can list your individual pages or templates and add a bullet point list to each 
+        describing features that are needed and what each feature will consist of. Look back on your Scope and Strategy,
+        highlighting which features in your viability and feasibility table are being included and how requirements 
+        from your Scope are being met. As mentioned before, this is a fluid process so if you think of extra features 
+        that will need to be included, be sure to go back and add them into your Strategy and Scope sections. For 
+        example the structure of a base.html template may look like:
+    </p>
+    <ul>
+        <li>
+            As this is the base template, it will need to include the site-wide navigation bar and footer
+        </li>
+        <li>
+            The navigation bar will meet the requirement for intuitive and responsive navigation, consisting of a site 
+            logo and account links. When logged out the links will be to Sign Up / Login. When logged in the links will 
+            be to Account Settings / Logout. When logged in as a Super User the links will be to Website Administration 
+            / Account Settings / Logout
+        </li>
+        <li>
+            The footer will meet the requirement for the website and developer contact information and will consist of 
+            social media links, contact information for the website and developer, and site logo
+        </li>
+    </ul>
+
+    <!--Information Architecture-->
+    <h4 id="intro-to-full-stack-five-stages-stage-3-structure-information-architecture">Information Architecture</h4>
+    <p>
+        In the Structure section you should also include some information architecture. This is aimed at describing the 
+        layout of the back-end of your webapp. Create an 
+        <dfn title="Entity Relationship Diagram">ERD</dfn>
+        that consists of interconnected 
+        <dfn title="Tables">Models</dfn>
+        (for a relational database) highlighting what fields are required including their name, if they are a primary 
+        or foreign key, and their field type. From here you can link together primary and foreign keys 
+        (for a relational database) for a good visual representation of your database. The individual tables will 
+        generally take the form of:
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="3" class="text-center">
+                    Table/Model Name
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Primary Key
+                </td>
+                <td>
+                    primary_key_name
+                </td>
+                <td>
+                    Integer
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Foreign Key
+                </td>
+                <td>
+                    foreign_key_name
+                </td>
+                <td>
+                    OneToOneField
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    None
+                </td>
+                <td>
+                    example_email_field
+                </td>
+                <td>
+                    EmailField
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        You can create ERDs using 
+        <a 
+            class="text-link"
+            href="https://www.lucidchart.com/"
+            title="Go to the LucidChart website"
+            aria-label="Go to the LucidChart website"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            LucidChart
+        </a>
+        where you can create a new diagram from a template using the Database ER Diagram (Crow's Foot) template for a 
+        quick start. Here is an example of a finished ERD for my hotel management web app.
+    </p>
+    <div class="site-image-container">
+        <img
+            class="site-image"
+            src="http://i.imgur.com/WE5bGMR.png"
+            alt="Entity Relationship Diagram for a hotel management website"
+            loading="lazy"
+        >
+    </div>
+    <p>
+        With the ERD complete, make sure you take some time to write out the explanation of and reasoning behind it. 
+        Make it clear and to the point highlighting key points in each of the models. For example my reasoning behind 
+        the above ERD looks like:
+    </p>
+    <ul>
+        <li>
+            The relational database will consist of 6 relationally linked tables
+        </li>
+        <li>
+            The User model will use the Django user model and AllAuth to store authentication data including the email 
+            address and password
+        </li>
+        <li>
+            The UserProfile model will have a foreign key to the User model set up in a way as to delete the Profile 
+            when the User is deleted. It also has a boolean field for the user to sign up to a newsletter and will have 
+            all the contact information required by stripe to complete the booking reservation form
+        </li>
+        <li>
+            The Trip model will house the information for each trip. It will be linked with the UserProfile model and 
+            Room model via foreign keys in many to one relationships. It will have the data for the start date, end 
+            date, number of each guest type, cost, and a Boolean field to notify whether the user will cancel the trip. 
+            This will be set to False by default
+        </li>
+        <li>
+            The Room model will have all the information for the Rooms, this includes the room name, a sanitised room 
+            name for display on the website, a description of the room, a list of amenities as a list of integers 
+            referring to the ids in the Amenities model, an image of the room, the nightly price, a list of dates in 
+            which the room is unavailable
+        </li>
+        <li>
+            The Amenities model will hold information of the amenities. It is referenced from the Room model but set up 
+            in a simple easy to understand way rather than a many to many relationship. Each amenity has an ID, name, 
+            sanitised name, and an icon which will consist of the HTML for the Font Awesome icon. These amenities can 
+            be accessed by looping through the is numbers in the Room model amenities field
+        </li>
+        <li>
+            The Order model will hold the information for the orders. It has a foreign key relationship to the 
+            UserProfile model in a one to many relationship, allowing multiple orders by the same user. It houses all 
+            the information required by stripe to process the order including address information and a stripe payment 
+            ID
+        </li>
+    </ul>
+
+    <!--Interactive Experience-->
+    <h4 id="intro-to-full-stack-five-stages-stage-3-structure-interactive-experience">Interactive Experience</h4>
+    <p>
+         Another key part of the Structure section is to define how your website will react to interaction by the user. 
+         This usually takes the form of some bullet points detailing interaction key points so that they are kept in 
+         mind when building the website. The main ones will be:
+    </p>
+    <ul>
+        <li>
+            Clickable links will have animated effects on hover or click, providing clear feedback to the user that 
+            they are hovered over a link and that their click has been acknowledged
+        </li>
+        <li>
+            All external links will open in a new tab. This is standard practice for a good experience
+        </li>
+        <li>
+            <dfn title="Having the next piece of content on the page start above the bottom of the viewport so the user knows there is more and will scroll down to view it">Content hinting</dfn>
+            will be used where possible to influence the user to scroll down and uncover new content on the pages
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,134 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}intro-to-full-stack-readme-code-snippets-design-template{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="markdown">
+![Website logo](/documentation/site_logo.png)
+---
+# Design
+See [README.md](/README.md) for information on project goals, user stories, security, future developments, technologies used, user feedback, credits, and acknowledgements. &lt;br&gt;
+See [TESTING.md](/TESTING.md) for information on the test driven development of the website, manual and automated testing of the site, bugs encountered, and website analytics. &lt;br&gt;
+See [DEV.md](/DEV.md) for an overview of the continuous integration and deployment process, how I set up my development environment, and deployment steps.
+
+---
+## Table Of Contents
+1. [Five Planes of UX](#five-planes-of-ux)
+    - [Strategy](#strategy)
+        * [Viability and Feasibility](#viability-and-feasibility)
+    - [Scope](#scope)
+        * [Back-end](#back-end)
+        * [Front-end](#front-end)
+    - [Structure](#structure)
+        * [base.html](#basehtml)
+        * [index.html](#indexhtml)
+        * [allauth](#allauth)
+        * [search_results.html](#search_resultshtml)
+        * [trips.html](#tripshtml)
+        * [cancel_trip.html](#cancel_triphtml)
+        * [checkout.html](#checkouthtml)
+        * [account_settings.html](#account_settingshtml)
+        * [delete_account.html](#delete_accounthtml)
+        * [rooms.html](#roomshtml)
+        * [Information Architecture](#information-architecture)
+        * [Interactive Experience](#interactive-experience)
+    - [Skeleton](#skeleton)
+        * [wireframes](#wireframes)
+    - [Surface](#surface)
+        * [Colour Scheme](#colour-scheme)
+        * [Typography](#typography)
+        * [Images](#images)
+2. [Features](#features)
+
+## Five Planes of UX
+Describe your philosophy when it came to following the five planes of UX/UI and your design process for this webapp. Describe the benefits of doing it this way.
+### Strategy
+- **What value does the project provide?** Answer the question
+- **What are the business needs?** Answer the question
+- **Who is the target audience?** Answer the question
+- **What are the user requirements and expectations?** Answer the question
+#### Viability and Feasibility
+Describe your viability and feasibility analysis of the user stories and user and business needs ranked from 1 (least important/viable) to 5 (most important/viable):
+|   Task |   Importance | Viability/Feasibility |
+| --------- | ------------- | ----------------- |
+| First row example | 5 | 5 |
+Describe the above rankings highlighting key areas you will meet (high importance), those that will be met if there is time (low importance, high viability/feasibility OR mid importance, mid viability/feasibility) and those that are not important or are unfeasible. Give reasons for each.
+
+### Scope
+#### Back-end (If back-end)
+Describe the type of database and if it will meet the requirements for your project.
+List the models or tables required
+- **Example Model**: Describe how it will be implemented, what fields it will have and which will have the function to be queried and why.
+#### Front-end
+Describe how your website will be built and the benefits of doing it that way. Then describe the templates with a list of requirements, refer back to user stories and user and business needs.
+**Templates**
+- **base.html**: This will be the base template that the others call from to ensure a cohesive structure across the website. It will have:
+    - All the header meta information
+    - Links to styling and JavaScript scripts
+    - The header with the site logo, a booking form, and account navigation links
+    - The footer with the hotel social media links, hotel contact information, the site logo, and developer contact information
+
+### Structure
+Here list your pages and describe their features and which requirements they meet. Here is an example for a baste template for a hotel management website. Do this for all of your pages.
+#### base.html
+- As the base template, this will have the site-wide navigation bar and footer
+- The navigation bar will meet the requirement for intuitive and responsive navigation, consisting of a site logo, booking form on large screens, and account links. When logged out the links will be to Sign Up / Login. When logged in the links will be to Trips / Account Settings / Logout. When logged in as a Super User the links will be to Rooms / Trips / Account Settings / Logout.
+- The footer will meet the requirement for the hotel and developer contact information and will consist of the hotel social media links, contact information for the hotel and developer, and site logo.
+#### Information Architecture
+**Back-end**: Entity Relationship Diagram (ERD) &lt;br&gt;
+Include a proposed ERD for your backend. 
+![ Entity relationship diagram](/documentation/entity_relationship_diagram.png)&lt;br&gt;
+**Explanation**
+- Explain how the relational or non-relational database works
+-  Go through each model describing the fields, why they were chosen and how they add value.
+#### Interactive Experience
+List all the functions for interactive experiences for the user that you will include. Some that you should include are:
+- Clickable links will have animated effects on hover or click, providing clear feedback to the user.
+- All external links will open in a new tab. 
+- Content hinting will be used where possible to influence the user to scroll down and uncover new content on the pages.
+
+### Skeleton
+#### Wireframes
+Describe how you produced the wireframes with a link to the software if used. &lt;br&gt;
+Link to a separate page to display all desktop wireframes [here](/documentation/wireframes_desktop.png). &lt;br&gt;
+Where there were major differences, link to a separate Mobile Wireframes page [here](/documentation/wireframes_mobile.png).&lt;br&gt;
+
+### Surface
+#### Colour Scheme
+Describe your colour scheme and the inspiration behind it. Remember to include colours used for success or errors too.
+![Image of your colour palette](/documentation/colour_palette.png)
+Then list your colours and what they are used for. For example:
+**Jasmine #FDD67C**
+- Font colour on Fern Green backgrounds
+- Background to the navigation bar form inputs
+- Button backgrounds (normal)
+- Button text (hover)
+- Golden halo for button hover animations
+- Account menu background (normal)
+- Account menu background (hover)
+
+#### Typography
+Describe the effect you want to portray with your chosen typography. Aim for at least 2-3 fonts. Then list them below like:
+
+**[Font Name](https://fonts.google.com/specimen/chosenfont)**&lt;br&gt;
+![Screenshot of the font](/documentation/typography_fontname.png)&lt;br&gt;
+Describe how this font is used and what about it makes it fit for purpose. Then list the backup fonts e.g. As a sans-serif font, the backup fonts were Arial, Helvetica, and sans-serif.
+
+#### Images
+Here list the images you used, how they were created and give credit where credit is due. Remember to include icons such as those from Font Awesome.
+
+## Features
+Here list all the features on all your pages. Include what they are, what pages they appear on, an image of them, the purpose of them and which user stories are covered. Below is an example of a site logo.
+| **Site Logo** |
+| ----- |
+| **Page: All - Header and Footer** |
+| &lt;details&gt;&lt;summary&gt;Site Logo&lt;/summary&gt;&lt;img src="/documentation/features/site_logo.png"&gt;&lt;/details&gt; |
+| **Details:** The site logo conveys the brand of the website, immediately highlighting which website that the user is on, and acts as a link back to the homepage. |
+| **User Stories Covered:** 1, 2 |
+</code></pre>
+{% endblock %}

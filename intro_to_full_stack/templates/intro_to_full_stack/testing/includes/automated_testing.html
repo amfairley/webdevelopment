@@ -1,0 +1,44 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-testing-automated-testing{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Automated Testing{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        For automated testing of Python or JavaScript code, it is best to take a 
+        <dfn title="Test Driven Development">TDD</dfn>
+        approach. Testing of these are covered in the 
+        <a 
+            class="text-link"
+            href="{% url 'python_unit_testing' %}"
+            title="Go to the Python unit testing page"
+            aria-label="Go to the Python unit testing page"
+        >
+            Python Testing
+        </a>
+        and 
+        <a 
+            class="text-link"
+            href="{% url 'JavaScript_validation' %}"
+            title="Go to the JavaScript Validation page"
+            aria-label="Go to the JavaScript Validation page"
+        >
+            JavaScript Testing
+        </a>
+        sections.
+    </p>
+    <p>
+        Generally, when new functionality is implemented, unit tests local to the specific app or function are run 
+        first. When the function is proved to run without error, all written automated tests are run as an integration 
+        test to ensure that there has not been an impact on other functionality. This type of regression testing allows 
+        bugs to be caught when code interacts in a way that was not intended and ensures that the web app will work as 
+        expected as a whole. A similar process is taken when manual testing; the feature is tested as it is introduced 
+        and then all the features are tested when the web page is complete and when extra features are added in the 
+        future.
+    </p>
+{% endblock %}

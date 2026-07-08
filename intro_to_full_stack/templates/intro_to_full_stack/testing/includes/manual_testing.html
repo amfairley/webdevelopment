@@ -1,0 +1,176 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-testing-manual-testing{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Manual Testing{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        You should try to keep your
+        <a 
+            class="text-link"
+            href="{% url 'full_stack_user_stories' %}"
+            title="Go to the User Stories page"
+            aria-label="Go to the User Stories page"
+        >
+            User Stories
+        </a>
+        in mind during development. These can be tested simply by checking your 
+        <a 
+            class="text-link"
+            href="{% url 'full_stack_features' %}"
+            title="Go to the Features page"
+            aria-label="Go to the Features page"
+        >
+            Features
+        </a>
+        section and making sure that all of your user stories have been sufficiently covered by your implemented 
+        features.
+    </p>
+    <p>
+        Other manual testing will involve you opening your webpage and going through page by page and checking that 
+        everything you built works as expected. This is usually informally done as I go; checking things such as 
+        responsivity of the webpages as I build them along with how the layout looks. But at the end, it is best to go 
+        through with another comprehensive check like this. 
+    </p>
+    <p>
+        These should be catalogued detailing the feature, the action you take, what are the expected results, if your 
+        test passed, and what was done to fix it if it did not pass with it also being logged in your Bugs section. 
+        With things such as submissions and forms, keep in mind what you want to happen when errors occur as well as 
+        when they are successful. This should result in a table with some listings looking like:
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Feature
+                </th>
+                <th>
+                    Action
+                </th>
+                <th>
+                    Expected Results
+                </th>
+                <th>
+                    Passed
+                </th>
+                <th>
+                    Comments
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="5" class="text-center">
+                    base.html
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Site logo - header
+                </td>
+                <td>
+                    Click
+                </td>
+                <td>
+                    Redirected to the homepage
+                </td>
+                <td>
+                    Y
+                </td>
+                <td>
+                    N/A
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Site logo - footer
+                </td>
+                <td>
+                    Click
+                </td>
+                <td>
+                    Redirected to homepage
+                </td>
+                <td>
+                    Y
+                </td>
+                <td>
+                    N/A
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Booking form
+                </td>
+                <td>
+                    Submit with empty fields
+                </td>
+                <td>
+                    Prompt to enter a check in date
+                </td>
+                <td>
+                    Y
+                </td>
+                <td>
+                    N/A
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Booking form
+                </td>
+                <td>
+                    Submit with only check in date
+                </td>
+                <td>
+                    Prompt to enter a check out date
+                </td>
+                <td>
+                    Y
+                </td>
+                <td>
+                    N/A
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Booking form
+                </td>
+                <td>
+                    Submit with dates and no guests
+                </td>
+                <td>
+                    Prompt to add guests
+                </td>
+                <td>
+                    N
+                </td>
+                <td>
+                    Bug 1 (link): Highlighted and fixed
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Booking form
+                </td>
+                <td>
+                    Submit with dates and no guests
+                </td>
+                <td>
+                    Prompt to add guests
+                </td>
+                <td>
+                    Y
+                </td>
+                <td>
+                    N/A
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-google-dev-tools-what-is-google-dev-tools{% endblock %}
+
+<!--Section title-->
+{% block text_title %}What is Google DevTools?{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Google Chrome DevTools is a suite of built-in tools that helps you inspect, debug, test, and optimise websites 
+        directly in the browser during development. As it's name suggest it is available when using the Google 
+        Chrome browser. 
+    </p>
+    <p>
+        It is best to use Google DevTools in incognito mode for 2 key reasons:
+    </p>
+    <ol>
+        <li>
+            It is a coding 
+            "<dfn title="A specially designed, controlled environment used in the manufacturing, testing, and packaging in the pharmaceutical industry">clean room</dfn>"
+            so any Chrome extensions you have are disabled and will not be injecting scripts, adding to your DOM or 
+            changing your CSS. This lets you debug issues that are present in your code
+        </li>
+        <li>
+            There are no stored cookies, stored local data or cached files; so when you test your performance you will 
+            be testing it from the point of a view of a first time visitor to your website
+        </li>
+    </ol>
+    <p>
+        You can open DevTools in several ways:
+    </p>
+    <ul>
+        <li>
+            Right-click &gt; Inspect
+        </li>
+        <li>
+            Keyboard shortcuts:
+            <ul>
+                <li>
+                    <strong>Windows/Linux</strong>: <kbd>Ctrl + Shift + I</kbd> or <kbd>F12</kbd>
+                </li>
+                <li>
+                    <strong>macOS</strong>: <kbd>Cmd + Option + I</kbd>
+                </li>
+            </ul>
+        </li>
+        <li>
+            Chrome menu &gt; More Tools &gt; Developer Tools
+        </li>
+    </ul>
+    <p>
+        DevTools usually opens docked to the right side of the browser, but you can change this layout. Click the 
+        three-dot (&vellip;) menu in DevTools &gt; Dock side, then choose if you'd like it on the right, bottom, left, 
+        or in a new window.
+    </p>
+{% endblock %}

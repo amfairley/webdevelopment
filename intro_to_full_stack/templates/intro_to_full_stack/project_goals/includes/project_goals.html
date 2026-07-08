@@ -1,0 +1,49 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-project-goals-project-goals{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Project Goals{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Before starting your project, it is a very good idea to outline your project goals so that you know what you are
+        working towards and keep yourself on track in order to create a product that is fit for service. You should 
+        consider what you want to create from the point of view of the user, the site owner or person who is tasking 
+        you with creating the website, and from your point of view; the developer. Create a bullet point list for each 
+        about what they would expect your final product to be like. This will obviously differ from project to project 
+        but some may stay the same.
+    </p>
+    <p>
+        User Goals:
+    </p>
+    <ul>
+        <li>A website that is easy to navigate.</li>
+        <li>A website that will display well on different devices.</li>
+        <li>Positive and immediate feedback from the site such as on hover or on click JavaScript animations to ensure a good user experience.</li>
+        <li>Able to create an account to log in and out (for a website with accounts).</li>
+        <li>Have my data and information stored securely.</li>
+    </ul>
+    <p>
+        Site Owner Goals:
+    </p>
+    <ul>
+        <li>
+            Provide a website that is safe for users to sign up to and that their data is handled securely.
+        </li>
+    </ul>
+    <p>
+        Developer Goals:
+    </p>
+    <ul>
+        <li>A well designed website that catches the attention of the users.</li>
+        <li>A responsive website where the functionality is not impacted by screen size.</li>
+        <li>Easy navigation that is intuitive and responsive.</li>
+        <li>A website designed with accessibility in mind.</li>
+        <li>A back end that will handle user details.</li>
+        <li>A finished product that will proudly be displayed within the developer's portfolio.</li>
+    </ul>
+{% endblock %}

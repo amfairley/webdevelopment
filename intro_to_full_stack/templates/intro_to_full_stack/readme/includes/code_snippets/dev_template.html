@@ -1,0 +1,70 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}intro-to-full-stack-readme-code-snippets-dev-template{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="markdown">
+![Website logo](/documentation/site_logo.png)
+
+---
+
+# Development and Deployment
+
+See [README.md](/README.md) for information on project goals, user stories, security, future developments, technologies used, user feedback, credits, and acknowledgements. &lt;br&gt;
+See [DESIGN.md](/DESIGN.md) for information on the five planes of UX design, site map, database schema, and features. &lt;br&gt;
+See [TESTING.md](/TESTING.md) for information on the test driven development of the website, manual and automated testing of the site, bugs encountered, and website analytics. &lt;br&gt;
+
+---
+## Table Of Contents
+1. [CI/CD](#cicd)
+2. [Development Environment](#development-environment)
+    - [Creating a GitHub Repository](#creating-a-github-repository)
+    - [Cloning the GitHub Repository Locally](#cloning-the-github-repository-locally)
+    - [Setting up my IDE](#setting-up-my-ide)
+    - [Project Requirements](#project-requirements)
+    - [Getting the Project up and Running](#getting-the-project-up-and-running)
+    - [Coding in Python and PEP8](#coding-in-python-and-pep8)
+3. [Local Development](#local-development)
+4. [Apps](#apps)
+5. [Deployment](#deployment)
+
+## CI/CD
+Describe your philosophy of continuous integration and continuous deployment.
+Describe what version control you used (Git) and how your code was stored (GitHub). Describe the difference between version control and continuous integration  (Though not strictly continuous integration, version control and continuous integration are synergistic and have a large overlap in terms of project management). Was the repository shared, if so, why?
+Link to any project planning/tracking software used such as GitHub projects.
+
+## Development Environment
+List the steps that you took to set up my local development environment in order to provide guidance to unfamiliar users with how to set up their own local development environment. 
+### Creating a GitHub Repository
+Steps for this
+### Setting up my IDE
+Steps for this
+### Building a Virtual Environment
+Steps for this
+### Project Requirements
+List these and how to install them. Link to your requirements.txt file.
+### Getting the Project up and Running
+Steps for this
+### Coding in Python and PEP8
+State how you kept to PEP8 for Python coding
+
+## Local Development
+Describe how someone could install your project locally such as:
+To install my project locally, you can follow my steps above in the [Development Environment](#development-environment) section, replacing file and folder names with the ones in my project.
+You can also fork the GitHub repository to collaborate by once logged into GitHub by:
+- Go to the repository for this project, [project_name](url).
+- Click the Fork button in the top right corner and create a new fork.
+
+## Apps
+For Django projects list how your functionalities were split into apps in order to maximise the readability and reusability of the code. Describe how the correct guidelines were continuously being met throughout the project such as adopting some checklists for each file I added. Give an example of this.
+Then list your apps and what functionality or features they hold.
+
+## Deployment
+Describe your deployment process
+</code></pre>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-google-dev-tools-elements{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Elements{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        The elements panel of DevTools is used to inspect and edit HTML and CSS in real time. When you make changes 
+        here you will be able to see them in your webapp. Please note that these do not alter your HTML or CSS files, 
+        so if you make a change you like, update your files with these changes to keep them.
+    </p>
+    <p>
+        The main section is the DOM tree where you can view and edit the page structure in your HTML file. Here you 
+        can double-click any element or attribute to change it.
+    </p>
+    <p>
+        Underneath or to the right (depending on your screen size is the styles pane). These show the styles of your 
+        selected element in the DOM tree and you can view and modify the CSS rules applied to this selected element. 
+        At the top of this section there is a hand <kbd>:hov</kbd> button which you can use to change the state of the 
+        element e.g. being focused or hovered. This lets you see and edit your interactive elements. Scrolling to the 
+        bottom of the styles pane shows the box model, which is the visual breakdown of margin, border, padding, and 
+        content size.
+    </p>
+    <p>
+        A tip here to see the contrast of your elements is to click the button at the top left that looks like an 
+        arrow in a dotted line square. With this you can pick out elements directly from the page instead of the DOM 
+        tree. Hovering over these elements, however, will display accessibility information including the contrast.
+    </p>
+{% endblock %}
