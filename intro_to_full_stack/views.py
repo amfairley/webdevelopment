@@ -132,3 +132,14 @@ def full_stack_readme(request):
         'intro_to_full_stack/readme/readme.html',
         context
     )
+
+
+def full_stack_vscode(request):
+    '''Return the introduction to full stack VS Code page'''
+    context = {
+    }
+    return render(
+        request,
+        'intro_to_full_stack/vscode/vscode.html',
+        context
+    )

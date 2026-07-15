@@ -1,0 +1,31 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-vscode-what-is-an-ide{% endblock %}
+
+<!--Section title-->
+{% block text_title %}What is an IDE?{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        <a 
+            class="text-link"
+            href="https://code.visualstudio.com/"
+            title="Go to the VS Code website"
+            aria-label="Go to the VS Code website"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Visual Studio Code
+        </a>
+        is a free code editor created by Microsoft that provides a place for you to write, edit and organise your code. Unlike a basic 
+        text editor such as Notepad,
+        <dfn title="Visual Studio Code">VS Code</dfn>
+        understands programming languages and provides tools that make development much faster and less prone to error. One of the ways 
+        that it does this is by highlighting the syntax in your code and suggesting autocomplete options (such as completing an id or 
+        variable name), both of which allow for a smoother time code writing and debugging. This, combined with a built in terminal, 
+        Git integration and many, many extensions makes it a necessity when writing any code.
+    </p>
+{% endblock %}

@@ -1,0 +1,120 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-vscode-using-vscode{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Using VS Code{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        VS Code is an incredibly versatile tool and all the official documentation can be found 
+        <a 
+            class="text-link"
+            href="https://code.visualstudio.com/docs"
+            title="Go to the VS Code documentation page"
+            aria-label="Go to the VS Code documentation page"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            here
+        </a>.
+        There are also a plethora of handy tutorials inside the official documentation and all over YouTube ranging from 
+        "VS Code in 100 seconds" highlight reels to hour long in depth dives so I encourage you to search for how to use VS Code for your 
+        specific purpose; odds are there will be a tailor made approach that will fit you perfectly. For me, the key things that I needed 
+        to know were:
+    </p>
+    <ul>
+        <li>
+            Creating Workspaces
+        </li>
+        <li>
+            Opening the terminal in VS Code
+            <ul>
+                <li>
+                    Click <kbd>Terminal</kbd> in the menu bar (the bar with <kbd>File</kbd>, <kbd>Edit</kbd>, <kbd>Selection</kbd> etc) at the 
+                    top and select <kbd>New Terminal</kbd>
+                </li>
+                <li>
+                    The shortcut for this on windows is <kbd>Ctrl + '</kbd> or  on OS <kbd>Cmd + '</kbd>
+                </li>
+                <li>
+                    If you have multiple terminals open you can switch between them by clicking on each instance listed to the right of your 
+                    terminal section
+                </li>
+            </ul>
+        </li>
+        <li>
+            Setting up Python on VS Code
+            <ul>
+                <li>
+                    Make sure that you have Python installed to your machine, the process is covered 
+                    <a 
+                        class="text-link"
+                        href="{% url 'python_home' %}#Python-home-installing-and-setting-up"
+                        title="Go to the Python set up section"
+                        aria-label="Go to the Python set up section"
+                    > 
+                        here 
+                    </a>
+                </li>
+                <li>
+                    Install the Python extension inside VS Code from the extensions section on the left hand side and search for Python
+                </li>
+                <li>
+                    Check that it's installed correctly in your VS Code terminal by checking the version with 
+                    <code class="written-code">python --version</code>
+                </li>
+                <li>
+                    Select the 
+                    <dfn title="The program that runs the Python code">interpreter</dfn>
+                    by changing your VS Code search bar into the Command Palette with <kbd>Ctrl + Shift + P</kbd> and search "Python: Select 
+                    Interpreter" and select your installed version
+                </li>
+                <li>
+                    You can now run files in your terminal such as 'example_file.py' using the command <code class="written-code">python example_file.py</code>
+                </li>
+            </ul>
+        </li>
+        <li>
+            Using Git and GitHub in VS Code
+            <ul>
+                <li>
+                    Make sure that you have Git downloaded to your computer
+                </li>
+                <li>
+                    Sign into your GitHub account in the terminal with 
+                </li>
+                <li>
+                    <code class="written-code">git config --global user.name "Your Name"</code> 
+                </li>
+                <li>
+                    <code class="written-code">git config --global user.email your.email@example.com</code>
+                </li>
+            </ul>
+        </li>
+        <li>
+            Downloading your GitHub repository
+            <ul>
+                <li>
+                    Open a new window of VS code using <kbd>File</kbd> > <kbd>New Window</kbd>
+                </li>
+                <li>
+                    One of the options given in the middle of your new window will be "Clone Git Repository" below New File, Open File, and Open Folder
+                </li>
+                <li>
+                    Go to your repository in GitHub and copy the HTTPS link in the 'Code' section of your repo
+                </li>
+                <li>
+                    Go back to VS Code and click that "Clone Git Repository" link
+                </li>
+                <li>
+                    Paste the HTTPS link into what was the search bar at the top of the VS Code and press enter
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+{% endblock %}

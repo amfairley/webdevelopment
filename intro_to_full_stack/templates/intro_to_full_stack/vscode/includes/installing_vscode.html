@@ -1,0 +1,44 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-vscode-installing-vscode{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Installing VS Code{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Download the VS Code installer from its 
+        <a 
+            class="text-link"
+            href="https://code.visualstudio.com/"
+            title="Go to the VS Code website"
+            aria-label="Go to the VS Code website"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            website
+        </a>
+        and click the download button.
+    </p>
+    <p>
+        Select your operating system and once it has downloaded, open it to start the installation wizard.
+    </p>
+    <p>
+        Here you will want to accept the agreement and choose the folder where it will be installed (I use the default folder it chose for me).
+    </p>
+    <p>
+        Select whether you wish to create a desktop shortcut and tick the add "Open with code" action to Window Explorer file context to 
+        allow you to open files directly with VS Code. You will also want to tick "Register Code as an editor for supported files".
+    </p>
+    <p>
+        Tick the "Add to PATH" (which requires a restart). This adds the VS Code command-line tools (specifically the code command) to your 
+        system's PATH environment variable so that after installation, you'll be able to open VS Code or files in VS Code from the Command Prompt, 
+        PowerShell, or Windows Terminal.
+    </p>
+    <p>
+        Check other options that you want and click "Install". Once it is finished VS Code will be able to be launched.
+    </p>
+{% endblock %}

@@ -63,4 +63,9 @@ urlpatterns = [
         views.full_stack_readme,
         name="full_stack_readme"
     ),
+    path(
+        'vscode/',
+        views.full_stack_vscode,
+        name="full_stack_vscode"
+    ),
 ]

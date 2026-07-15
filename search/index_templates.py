@@ -223,6 +223,10 @@ async def run():
             pretty_title = pretty_title.replace("Django_App", "Django")
             # Capitalise UI from Ui. Included the space so that ui's in the middle of words are skipped
             pretty_title = pretty_title.replace(" Ui", " UI")
+            # Change all vscode to VS Code
+            pretty_title = pretty_title.replace("Vscode", "VS Code")
+            # Change all Ide to IDE
+            pretty_title = pretty_title.replace(" Ide", " IDE")
 
             # Update url from x-app to X
             url_local = url_local.replace("javascript-app", "JavaScript")

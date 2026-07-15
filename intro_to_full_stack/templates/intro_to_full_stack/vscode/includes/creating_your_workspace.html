@@ -1,0 +1,23 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-vscode-creating-your-workspace{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Creating your Workspace{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        VS Code organises work into projects rather than individual files, so you will always want to create or open a project folder and use 
+        this as your 
+        <dfn title="Folder that contains everything related to your project such as HTML, CSS, JavaScript, and image files">workspace</dfn>. 
+        Working like this is easier all around and allows you to search project files and integrate Git into your project.
+    </p>
+    <p>
+        Creating a project folder is as easy as creating a folder in the directory of your choice and then opening it in VS Code through 
+        <kbd>File</kbd> > <kbd>Open Folder</kbd> or even right click the folder and click "Open with Code" if you selected that option in 
+        your VS Code installation.
+    </p>
+{% endblock %}
