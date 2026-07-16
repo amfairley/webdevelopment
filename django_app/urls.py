@@ -26,4 +26,5 @@ urlpatterns = [
     path('allauth/', views.django_allauth, name="django_allauth"),
     path('search/', views.django_search, name="django_search"),
     path('languages/', views.django_languages, name="django_languages"),
+    path('envpy/', views.django_envpy, name="django_envpy"),
 ]

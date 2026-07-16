@@ -143,3 +143,14 @@ def full_stack_vscode(request):
         'intro_to_full_stack/vscode/vscode.html',
         context
     )
+
+
+def full_stack_pseudocode(request):
+    '''Return the introduction to full stack Pseudocode'''
+    context = {
+    }
+    return render(
+        request,
+        'intro_to_full_stack/pseudocode/pseudocode.html',
+        context
+    )

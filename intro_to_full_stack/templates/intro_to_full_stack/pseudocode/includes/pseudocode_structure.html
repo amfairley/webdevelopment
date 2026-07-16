@@ -1,0 +1,40 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-pseudocode-pseudocode-structure{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Pseudocode Structure{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        As well as the basic flow of the code, you should specify some programming concepts (where relevant) such as:
+    </p>
+    <ul>
+        <li>
+            Input: Receive information from the user
+        </li>
+        <li>
+            Process: Perform calculations or make decisions
+        </li>
+        <li>
+            Decision Making: Use conditions such as IF, ELSE, or CASE
+        </li>
+        <li>
+            Loops: Repeat actions using constructs like FOR or WHILE
+        </li>
+        <li>
+            Output: Display the result to the user
+        </li>
+    </ul>
+    <p>
+        A simple example may be for a script that would check if an entered number is even or odd. The pseudocode may look like:
+    </p>
+    {% include 'intro_to_full_stack/pseudocode/includes/code_snippets/pseudocode_example.html' %}
+    <p>
+        Just remember to write each step in a clear, logical order, and keep the language simple and easy to read. Overall you will find 
+        that this will break a program or parts of a program into easier manageable steps.
+    </p>
+{% endblock %}

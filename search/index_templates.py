@@ -227,6 +227,9 @@ async def run():
             pretty_title = pretty_title.replace("Vscode", "VS Code")
             # Change all Ide to IDE
             pretty_title = pretty_title.replace(" Ide", " IDE")
+            # change all envpy to env.py
+            pretty_title = pretty_title.replace("envpy", " env.py")
+            pretty_title = pretty_title.replace("Envpy", " env.py")
 
             # Update url from x-app to X
             url_local = url_local.replace("javascript-app", "JavaScript")

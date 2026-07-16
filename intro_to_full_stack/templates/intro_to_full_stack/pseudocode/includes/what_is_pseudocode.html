@@ -1,0 +1,37 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}intro-to-full-stack-pseudocode-what-is-pseudocode{% endblock %}
+
+<!--Section title-->
+{% block text_title %}What is Pseudocode?{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Pseudocode are the simple clear steps you would make when you plan your code. It is often not written in any coding language syntax 
+        and essentially boil down to a bullet list of notes describing what each function/section is needed and what their purpose is,
+        as well as outlining the logic of your code in order.
+    </p>
+    <p>
+        Taking the time to write out your code as pseudocode first will let you:
+    </p>
+    <ul>
+        <li>
+            Get your programming logic clearly laid out so you can check that it makes sense
+        </li>
+        <li>
+            Make less errors by allowing you to identify any problem areas early on
+        </li>
+        <li>
+            Debug quicker and easier because your algorithms have been organised
+        </li>
+        <li>
+            Let you communicate quicker and clearer if you ware working in a team
+        </li>
+        <li>
+            Easily translate into most other programming languages
+        </li>
+    </ul>
+{% endblock %}

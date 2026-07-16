@@ -68,4 +68,9 @@ urlpatterns = [
         views.full_stack_vscode,
         name="full_stack_vscode"
     ),
+    path(
+        'pseudocode/',
+        views.full_stack_pseudocode,
+        name="full_stack_pseudocode"
+    ),
 ]

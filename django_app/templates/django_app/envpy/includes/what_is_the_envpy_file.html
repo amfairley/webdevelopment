@@ -1,0 +1,19 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-envpy-what-is-the-envpy-file{% endblock %}
+
+<!--Section title-->
+{% block text_title %}What Is The env.py File?{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        When developing with Django, it's best practice to keep all your sensitive information such as secret keys, database credentials, 
+        and API keys out of your source code to maintain a good level of security. An env.py file is the most common way to manage these 
+        values by storing them as environment variables that your Django project can securely access. The purpose of this is to improve 
+        security by keeping sensitive information out of your source code and prevent accidental exposure of credentials when sharing or 
+        publishing your project. It is amazing how many credentials are accidentally leaked through public repositories.
+    </p>
+{% endblock %}

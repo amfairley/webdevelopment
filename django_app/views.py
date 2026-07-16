@@ -209,3 +209,14 @@ def django_languages(request):
         'django_app/languages/languages.html',
         context
     )
+
+
+def django_envpy(request):
+    '''Return the env.py page'''
+    context = {
+    }
+    return render(
+        request,
+        'django_app/envpy/envpy.html',
+        context
+    )

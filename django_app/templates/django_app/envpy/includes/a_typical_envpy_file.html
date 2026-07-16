@@ -1,0 +1,54 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}Django-envpy-a-typical-envpy-file{% endblock %}
+
+<!--Section title-->
+{% block text_title %}A Typical env.py File{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        By default there is no env.py file in a Django project so you will need to create one in your root directory and then 
+        <strong>!!! IMMEDIATELY ADD IT TO YOUR .gitingore FILE !!!</strong>
+    </p>
+    <p>
+        At the top of your env.py file you will need to 
+        <code class="written-code">import os</code>
+        in order to manipulate your variables. Then for each variable you want to keep secret you will need to create them using the 
+        following syntax:
+    </p>
+    <!--OS variable syntax-->
+    {% include 'django_app/envpy/includes/code_snippets/variable_syntax.html' %}
+    <p>
+        A key variable to include here would be:
+    </p>
+    <!--Development Variable-->
+    {% include 'django_app/envpy/includes/code_snippets/development_variable.html' %}
+    <p>
+        This will let you to create a check in your settings.py file, keeping your project in development mode when working locally but 
+        when it is hosted it will automatically exit developer mode.
+    </p>
+    <p>
+        For Django projects you will also typically include a SECRET_KEY and other key information for your project. This might include
+        a database (name, username, and password), API keys, email service credentials, or cloud storage credentials.
+    </p>
+    <p>
+        For this project mine looks like:
+    </p>
+    <!--env.py file example-->
+    {% include 'django_app/envpy/includes/code_snippets/envpy_example.html' %}
+    <p>
+        Getting these variables in your settings.py file from your env.py file is outline 
+        <a 
+            class="text-link"
+            href="{% url 'django_settings' %}#Django-settings-how-tos-linking-your-env-file"
+            title="Go to the settings.py page section about linking your env.py file"
+            aria-label="Go to the settings.py page section about linking your env.py file"
+        >
+            here
+        </a>
+        on the settings.py page.
+    </p>
+{% endblock %}

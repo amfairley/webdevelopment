@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Web Development - Pseudocode{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Pseudocode</h2>
+    
+    {% include 'intro_to_full_stack/pseudocode/includes/contents.html' %}
+    {% include 'intro_to_full_stack/pseudocode/includes/what_is_pseudocode.html' %}
+    {% include 'intro_to_full_stack/pseudocode/includes/pseudocode_structure.html' %}
+
+{% endblock %}

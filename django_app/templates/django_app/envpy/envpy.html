@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Django - env.py{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>env.py</h2>
+
+    {% include 'django_app/envpy/includes/contents.html' %}
+    {% include 'django_app/envpy/includes/what_is_the_envpy_file.html' %}
+    {% include 'django_app/envpy/includes/a_typical_envpy_file.html' %}
+
+{% endblock %}
