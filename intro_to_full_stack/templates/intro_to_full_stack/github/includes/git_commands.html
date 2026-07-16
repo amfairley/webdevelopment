@@ -31,6 +31,22 @@
     </p>
     <pre class="bash-container">
         <code class="bash">
+            git config
+            git config --global user.name "Your Name"
+            git config --global user.email your.email@example.com
+        </code>
+    </pre>
+    <p>
+        Git config is the syntax used to view or edit your git configuration. Out of all of its uses, I have only used it in the one case;
+        logging into my GitHub account using the user.name and user.email commands above. The <code class="written-code">--global</code> keyword
+        applies the following command across all of your repositories. <code class="written-code">user.name</code> is to specify your username
+        that will be assigned on your commits and the similar effect with the <code class="written-code">user.email</code>. A nifty trick here
+        could be that if you wanted your work commits to have an identifying name, perhaps on your work computer you would user 
+        <code class="written-code">git config user.name "Work Name"</code>. Omitting global here applies it only to that computer and all 
+        commits made from that machine will be assigned to the work name you have given it.
+    </p>
+    <pre class="bash-container">
+        <code class="bash">
             git init
         </code>
     </pre>
