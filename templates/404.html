@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Error 404{% endblock %}
+
+{% block extra_css %}
+    <!--Error css file-->
+    <link rel="stylesheet" href="{% static 'css/errors.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+
+    
+    <div class="error-div">
+        <h2 class="error-title"><i class="fa-solid fa-exclamation"></i> Error 404 <i class="fa-solid fa-exclamation"></i> Page not found</h2>
+        <p class="error-message">
+            The page you are looking for does not exist. Please click the button below to go back to the homepage.
+        </p>
+        <a 
+            class="text-link error-link"
+            href="/"
+            title="Go back to the homepage"
+            aria-label="Go back to the homepage"
+        >
+            Home
+        </a>
+    </div>
+
+{% endblock %}

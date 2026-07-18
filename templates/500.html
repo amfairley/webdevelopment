@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Error 403{% endblock %}
+
+{% block extra_css %}
+    <!--Error css file-->
+    <link rel="stylesheet" href="{% static 'css/errors.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+
+    
+    <div class="error-div">
+        <h2 class="error-title"><i class="fa-solid fa-exclamation"></i> Error 500 <i class="fa-solid fa-exclamation"></i> Internal Server Error</h2>
+        <p class="error-message">
+            Something went wrong on our end. Please try again later or click the button below to return to the homepage.
+        </p>
+        <a 
+            class="text-link error-link"
+            href="/"
+            title="Go back to the homepage"
+            aria-label="Go back to the homepage"
+        >
+            Home
+        </a>
+    </div>
+
+{% endblock %}
