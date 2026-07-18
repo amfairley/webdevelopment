@@ -230,7 +230,20 @@ async def run():
             # change all envpy to env.py
             pretty_title = pretty_title.replace("envpy", " env.py")
             pretty_title = pretty_title.replace("Envpy", " env.py")
-
+            # change all modelspy to models.py
+            pretty_title = pretty_title.replace("Modelspy", "models.py")
+            # change all settingspy to settings.py
+            pretty_title = pretty_title.replace("Settingspy", "settings.py")
+            # Changes to url variations
+            pretty_title = pretty_title.replace("Urls", "URLs")
+            pretty_title = pretty_title.replace("Url", "URL")
+            # Update Django settings variables
+            pretty_title = pretty_title.replace("Urlconf", "URLCONF")
+            pretty_title = pretty_title.replace("URLconf", "URLCONF")
+            pretty_title = pretty_title.replace("Wsgi", "WSGI")
+            pretty_title = pretty_title.replace("Auth Password Validator", "AUTH_PASSWORD_VALIDATORS")
+            pretty_title = pretty_title.replace("AUTH_PASSWORD_VALIDATORSs", "AUTH_PASSWORD_VALIDATORS")
+            pretty_title = pretty_title.replace("Default Auto Field", "DEFAULT_AUTO_FIELD")
             # Update url from x-app to X
             url_local = url_local.replace("javascript-app", "JavaScript")
             url_heroku = url_heroku.replace("javascript-app", "JavaScript")
