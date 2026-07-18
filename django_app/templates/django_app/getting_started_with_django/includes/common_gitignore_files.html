@@ -49,6 +49,43 @@
                     in the repository.
                 </td>
             </tr>
+            <tr>
+                <td>
+                    env.py
+                </td>
+                <td>
+                    This file commonly contains sensitive information so is added here to prevent it being uploaded to the 
+                    public repository. This should be done immediately after creating an env.py file so it does not exist
+                    at any point in your version control.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    .coverage
+                </td>
+                <td>
+                    Coverage is a handy tool to test how much of your code your automated tests cover. Find more out about it 
+                    <a 
+                        class="text-link"
+                        href="{% url 'django_allauth' %}#Django-testing-coverage"
+                        title="Go to the coverage section on the Django testing page"
+                        aria-label="Go to the coverage section on the Django testing page"
+                    >
+                        here
+                    </a>
+                    on the Django testing page. This is the data file it creates when you run it and since it's generated
+                    automatically and only useful for your current test run, it does not belong in source control.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    htmlcov/
+                </td>
+                <td>
+                    This folder contains all of the reports from the above coverage runs and is equally unrequired 
+                    for your source control.
+                </td>
+            </tr>
         </tbody>
     </table>
 
