@@ -1,0 +1,29 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}JavaScript-emailjs-what-is-emailjs{% endblock %}
+
+<!--Section title-->
+{% block text_title %}What is EmailJS?{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        <a 
+            class="text-link"
+            href="https://www.emailjs.com"
+            title="Go to the EmailJS website"
+            aria-label="Go to the EmailJS website"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            EmailJS
+        </a>
+        is a very handy way of connecting your website to an email provider, allowing submitted forms on your website 
+        to appear in your inbox. When a validated form is submitted, EmailJS takes the contents of the form, packages 
+        it into an email template and sends it to your pre-designated inbox. This is extremely handy for static webpages 
+        because it requires no back-end on your part.
+    </p>
+
+{% endblock %}

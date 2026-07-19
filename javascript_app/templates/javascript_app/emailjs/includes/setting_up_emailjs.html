@@ -1,0 +1,82 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}JavaScript-emailjs-setting-up-emailjs{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Setting up EmailJS{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <!--Setting up your account-->
+    <h4 id="JavaScript-emailjs-setting-up-emailjs-setting-up-your-account">Setting up Your Account</h4>
+    <p>
+        Head over to their 
+        <a 
+            class="text-link"
+            href="https://www.emailjs.com"
+            title="Go to the EmailJS website"
+            aria-label="Go to the EmailJS website"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            website
+        </a>
+        and sign up for a free account. Once in the dashboard you can open the Email Services and Add New Device. The steps 
+        are pretty easy to follow.
+    </p>
+    <p>
+        You will receive a Service ID that looks a bit like: service_abc123
+    </p>
+
+    <!--Creating an email template-->
+    <h4 id="JavaScript-emailjs-setting-up-emailjs-creating-an-email-template">Creating an Email Template</h4>
+    <p>
+        On the dashboard click on Email Templates, then Create New Template. Using a template, tweak the text and 
+        variables (surrounded in double curly brackets) to your requirements. An example may look like:
+    </p>
+    <ul>
+        <li>
+            Subject:
+            <ul>
+                <li>
+                    New message from &#123;&#123;from_name&#125;&#125;
+                </li>
+            </ul>
+        </li>
+        <li>
+            Content:
+            <ul>
+                <li>
+                    Hello,
+                </li>
+                <li>
+                    You got a new message from &#123;&#123;from_name&#125;&#125;
+                </li>
+                <li>
+                    Email ID: &#123;&#123;email_id&#125;&#125;
+                </li>
+                <li>
+                    Message: &#123;&#123;message&#125;&#125;
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <p>
+        Saving it will give you a template ID.
+    </p>
+
+    <!--Getting Your Public Key-->
+    <h4 id="JavaScript-emailjs-setting-up-emailjs-getting-your-public-key">Getting Your Public Key</h4>
+    <p>
+        You can easily find your public key in Account > API Keys.
+    </p>
+
+    <!--Adding the Library-->
+    <h4 id="JavaScript-emailjs-setting-up-emailjs-adding-the-library">Adding the Library</h4>
+    <p>
+        Next include the EmailJS SDK before your closing &lt;/body&gt; tag.
+    </p>
+    {% include 'javascript_app/emailjs/includes/code_snippets/add_library.html' %}
+{% endblock %}

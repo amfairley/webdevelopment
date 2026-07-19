@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: JavaScript - EmailJS{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>EmailJS</h2>
+    {% include 'javascript_app/emailjs/includes/contents.html' %}
+    {% include 'javascript_app/emailjs/includes/what_is_emailjs.html' %}
+    {% include 'javascript_app/emailjs/includes/setting_up_emailjs.html' %}
+    {% include 'javascript_app/emailjs/includes/making_your_form.html' %}
+
+{% endblock %}

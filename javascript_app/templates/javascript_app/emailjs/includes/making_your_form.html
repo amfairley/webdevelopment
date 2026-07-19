@@ -1,0 +1,30 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}JavaScript-emailjs-making-your-form{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Making Your Form{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+
+    <p>
+        There are two parts to making your submittable form on your website; the HTML and then the JavaScript to 
+        handle the submission. Below are the examples of a contact form I have used before. 
+    </p>
+    <p>
+        The key thing to remember here are to include as many inputs that cover the variables (words wrapped in 
+        double curly brackets) in your EmailJS email template. Use these variables as the 'name' attribute for 
+        the respective input. 
+    </p>
+    <p>
+        In the JavaScript, target your contact form, add an event listener for it's submission, then use your 
+        service ID and template ID to send the data.
+    </p>
+    
+    {% include 'javascript_app/emailjs/includes/code_snippets/form_html.html' %}
+    {% include 'javascript_app/emailjs/includes/code_snippets/form_javascript.html' %}
+
+{% endblock %}

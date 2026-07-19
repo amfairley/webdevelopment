@@ -1,0 +1,22 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}JavaScript-emailjs-code-snippets-form-javascript{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="javascript">document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm("SERVICE_ID", "TEMPLATE_ID", this)
+      .then(function() {
+            alert("Message sent successfully!");
+      }, function(error) {
+            alert("Failed to send: " + JSON.stringify(error));
+      });
+});
+</code></pre>
+{% endblock %}

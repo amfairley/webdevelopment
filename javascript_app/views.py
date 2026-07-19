@@ -242,3 +242,14 @@ def JavaScript_validation(request):
         'javascript_app/validation/validation.html',
         context
     )
+
+
+def JavaScript_emailjs(request):
+    '''Return the JavaScript EmailJs page'''
+    context = {
+    }
+    return render(
+        request,
+        'javascript_app/emailjs/emailjs.html',
+        context
+    )

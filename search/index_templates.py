@@ -221,6 +221,8 @@ async def run():
             pretty_title = pretty_title.replace("Python_App", "Python")
             pretty_title = pretty_title.replace("Flask_App", "Flask")
             pretty_title = pretty_title.replace("Django_App", "Django")
+            # Change Emailjs to EmailJS
+            pretty_title = pretty_title.replace("Emailjs", "EmailJS")
             # Capitalise UI from Ui. Included the space so that ui's in the middle of words are skipped
             pretty_title = pretty_title.replace(" Ui", " UI")
             # Change all vscode to VS Code

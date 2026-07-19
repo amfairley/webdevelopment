@@ -109,4 +109,9 @@ urlpatterns = [
         views.JavaScript_validation,
         name="JavaScript_validation"
     ),
+    path(
+        'emailjs/',
+        views.JavaScript_emailjs,
+        name="JavaScript_emailjs"
+    ),
 ]
