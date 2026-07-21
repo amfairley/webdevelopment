@@ -9,3 +9,124 @@
 .todo-tick {
     color: #3A6B35;
 }
+
+/*----------- Contact Form - Layout----------*/
+.homepage-contact-form {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem;
+}
+
+.homepage-contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+.row-contact-form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.row-contact-form label {
+    width: 70px;
+}
+
+.row-contact-form input {
+    flex: 1;
+    padding: 0.5rem;
+}
+
+.text-area-contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.text-area-contact-form label {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.text-area-contact-form textarea {
+    width: 100%;
+    min-height: 180px;
+    padding: 0.75rem;
+    resize: vertical;
+}
+
+/*---------- Contact form - Labels ---------- */
+.homepage-contact-form label {
+    font-family: "Poppins", "Arial", "Helvetica", sans-serif;
+    color: #001F5C;
+}
+
+body.night-mode .homepage-contact-form label {
+    color: #FFD700;
+}
+
+/*---------- Contact form - Inputs ----------*/
+.homepage-contact-form input,
+.homepage-contact-form textarea {
+    color: #001F5C;
+    border: 1px solid #001F5C;
+    background-color: #f5f5f5;
+    border-radius: 0.5rem;
+}
+
+body.night-mode .homepage-contact-form input,
+body.night-mode .homepage-contact-form textarea{
+    color: #FFD700;
+    border-color: #FFD700;
+    background-color: #212529;
+}
+
+/*---------- Contact form - Submit button ----------*/
+
+.homepage-contact-form button {
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+    color: #f5f5f5;
+    background-color: #001F5C;
+    border: 2px solid #f5f5f5;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.15s ease;
+}
+
+body.night-mode .homepage-contact-form button {
+    color: #FFD700;
+    background-color: #212529;
+    border-color: #FFD700;
+}
+
+.homepage-contact-form button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    color: #001F5C;
+    background-color: #f5f5f5;
+    border-color: #001F5C;
+}
+
+body.night-mode .homepage-contact-form button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(256,256,256,0.25);
+    color: #212529;
+    background-color: #FFD700;
+    border-color: #212529; 
+}
+
+.homepage-contact-form button:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #001F5C;
+}
+
+body.night-mode .homepage-contact-form button:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #FFD700;
+}

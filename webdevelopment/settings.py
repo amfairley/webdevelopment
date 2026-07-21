@@ -174,3 +174,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ALGOLIA_APP_ID = os.getenv('ALGOLIA_APP_ID')
 ALGOLIA_SEARCH_KEY = os.getenv('ALGOLIA_SEARCH_KEY')
 ALGOLIA_WRITE_KEY = os.getenv('ALGOLIA_WRITE_KEY')
+

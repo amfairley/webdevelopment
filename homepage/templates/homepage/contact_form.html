@@ -1,0 +1,88 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}contact-form{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Contact me{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        This contact form has been quickly and easily set up with
+        <a 
+            class="text-link"
+            href="https://web3forms.com/"
+            title="Go to the Web3Forms website."
+            aria-label="Go to the Web3Forms website."
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Web3Forms
+        </a>
+        in order to receive any messages from visitors such as yourself. So please get in touch if you want to:
+    </p>
+    <ul>
+        <li>
+            share
+            <ul>
+                <li>feedback about the site.</li>
+                <li>
+                    <dfn title="I'm just one person and even though I have been proof reading and following quality control processes, it is unavoidable that some errors in grammar, syntax, logic, or anything else will have slipped through the cracks; especially as the scope of this site has grown much larger than I had orginally planned.">errors</dfn>
+                    you have found on this site.
+                </li>
+                <li>
+                    technical advice.
+                </li>
+                <li>
+                    career advice.
+                </li>
+                <li>
+                    general advice or a fun fact.
+                </li>
+            </ul>
+        </li>
+        <li>
+            seek any further clarification or advice on anything I have written.
+        </li>
+        <li>
+            discuss 
+            <ul>
+                <li>
+                    collaboration opportunities.
+                </li>
+                <li>
+                    any career opportunities you may feel that I am a good fit for. <strong>I am currently actively seeking employment opportunities.</strong>
+                </li>
+            </ul>
+        </li>
+        <li>
+            just say hi.
+        </li>
+    </ul>
+    <div class="homepage-contact-form">
+        <form action="https://api.web3forms.com/submit" method="POST">
+            
+            <input type="hidden" name="access_key" value="13a64eea-1607-4f00-8475-507a2f82d2fe">
+            <div class="row-contact-form">
+                <label for="name">Name:</label>
+                <input type="text" name="name" required>
+            </div>
+
+            <div class="row-contact-form">
+                <label for="email">Email:</label>
+                <input type="email" name="email" required>
+            </div>
+
+            <div class="text-area-contact-form">
+                <label for="message">Message:</label>
+                <textarea name="message" required></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+{% endblock %}

@@ -79,4 +79,13 @@
         Next include the EmailJS SDK before your closing &lt;/body&gt; tag.
     </p>
     {% include 'javascript_app/emailjs/includes/code_snippets/add_library.html' %}
+    <p>
+        And then connect it your account by using your public key with:
+    </p>
+    {% include '<javascript_app>
+    <emailjs>
+    <includes>
+    <code_snippets>
+    <connect_account></connect_account>.html' %}
+
 {% endblock %}
