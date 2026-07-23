@@ -256,24 +256,9 @@
                 -->
                 <a class="nav-link {% if request.resolver_match.url_name == 'deployment_home' %}active{% endif %}" href="{% url 'deployment_home' %}">Deployment</a>
             </li>
-            <!--Dropdown link example-->
+            <!--Contact-->
             <li class="nav-item">
-                <span class="d-flex align-items-center">
-                    <a class="nav-link" href="#">Dropdown example</a>
-                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#submenu" aria-expanded="false" aria-controls="submenu" aria-label="Open the Example dropdown section">
-                    </button>
-                </span>
-                <ul class="collapse list-unstyled ps-3" id="submenu">
-                    <li><a class="nav-link" href="#">Web Development</a></li>
-                    <li><a class="nav-link" href="#">SEO Optimization</a></li>
-                    <li><a class="nav-link" href="#">Marketing</a></li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Blog very long entry into</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="{% url 'homepage' %}#contact-form">Contact me</a>
             </li>
         </ul>
     </div>
@@ -307,31 +292,42 @@
             <li class="nav-item">
                 <span class="d-flex align-items-center">
                     <a class="nav-link" href="{% url 'full_stack_programming_and_the_web' %}">Web Development</a>
-                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#full-stack-submenu-mobile" aria-expanded="false" aria-controls="full-stack-submenu-mobile" aria-label="Open the full stack dropdown section">
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#full-stack-submenu" aria-expanded="false" aria-controls="full-stack-submenu" aria-label="Open the full stack dropdown section">
                     </button>
                 </span>
                 <!--
                     Checking the current page to keep dropdown open
                     percent if '/intro_to_full_stack' in request.path percent}show{percent endif percent}
                 -->
-                <ul class="collapse list-unstyled ps-3 {% if '/intro_to_full_stack' in request.path %}show{% endif %}" id="full-stack-submenu-mobile">
+                <ul class="collapse list-unstyled ps-3 {% if '/intro-to-full-stack' in request.path %}show{% endif %}" id="full-stack-submenu">
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'full_stack_programming_and_the_web' %}active{% endif %}" href="{% url 'full_stack_programming_and_the_web' %}">Programming and the Web</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'full_stack_github' %}active{% endif %}" href="{% url 'full_stack_github' %}">GitHub</a></li>
-
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'full_stack_vscode' %}active{% endif %}" href="{% url 'full_stack_vscode' %}">Visual Studio Code</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'full_stack_website_development' %}active{% endif %}" href="{% url 'full_stack_website_development' %}">Web Development</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'full_stack_sizes' %}active{% endif %}" href="{% url 'full_stack_sizes' %}">Sizes</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'full_stack_pseudocode' %}active{% endif %}" href="{% url 'full_stack_pseudocode' %}">Pseudocode</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'full_stack_colour' %}active{% endif %}" href="{% url 'full_stack_colour' %}">Colour</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'full_stack_project_goals' %}active{% endif %}" href="{% url 'full_stack_project_goals' %}">Project Goals</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'full_stack_user_stories' %}active{% endif %}" href="{% url 'full_stack_user_stories' %}">User Stories</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'full_stack_five_stages' %}active{% endif %}" href="{% url 'full_stack_five_stages' %}">Five Stages of UX/UI Design</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'full_stack_features' %}active{% endif %}" href="{% url 'full_stack_features' %}">Features</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'full_stack_testing' %}active{% endif %}" href="{% url 'full_stack_testing' %}">Testing</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'full_stack_google_dev_tools' %}active{% endif %}" href="{% url 'full_stack_google_dev_tools' %}">Google DevTools</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'full_stack_readme' %}active{% endif %}" href="{% url 'full_stack_readme' %}">README.md</a></li>
                 </ul>
             </li>
             <!--HTML-->
             <li class="nav-item">
                 <span class="d-flex align-items-center">
                     <a class="nav-link" href="{% url 'HTML_home' %}">HTML</a>
-                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#html-submenu-mobile" aria-expanded="false" aria-controls="html-submenu-mobile" aria-label="Open the HTML dropdown section">
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#html-submenu" aria-expanded="false" aria-controls="html-submenu" aria-label="Open the HTML dropdown section">
                     </button>
                 </span>
                 <!--
                     Checking the current page to keep dropdown open
                     percent if '/HTML' in request.path percent}show{percent endif percent}
                 -->
-                <ul class="collapse list-unstyled ps-3 {% if '/HTML' in request.path %}show{% endif %}" id="html-submenu-mobile">
+                <ul class="collapse list-unstyled ps-3 {% if '/HTML' in request.path %}show{% endif %}" id="html-submenu">
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'HTML_home' %}active{% endif %}" href="{% url 'HTML_home' %}">HTML Home</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'HTML_introducing_elements' %}active{% endif %}" href="{% url 'HTML_introducing_elements' %}">Introducing Elements</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'HTML_common_elements' %}active{% endif %}" href="{% url 'HTML_common_elements' %}">Common Elements</a></li>
@@ -350,10 +346,10 @@
             <li class="nav-item">
                 <span class="d-flex align-items-center">
                     <a class="nav-link" href="{% url 'CSS_home' %}">CSS</a>
-                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#css-submenu-mobile" aria-expanded="false" aria-controls="css-submenu-mobile" aria-label="Open the CSS dropdown section">
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#css-submenu" aria-expanded="false" aria-controls="css-submenu" aria-label="Open the CSS dropdown section">
                     </button>
                 </span>
-                <ul class="collapse list-unstyled ps-3 {% if '/CSS' in request.path %}show{% endif %}" id="css-submenu-mobile">
+                <ul class="collapse list-unstyled ps-3 {% if '/CSS' in request.path %}show{% endif %}" id="css-submenu">
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_home' %}active{% endif %}" href="{% url 'CSS_home' %}">CSS Home</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_selectors' %}active{% endif %}" href="{% url 'CSS_selectors' %}">Selectors</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'CSS_box_model' %}active{% endif %}" href="{% url 'CSS_box_model' %}">CSS Box Model</a></li>
@@ -377,10 +373,10 @@
             <li class="nav-item">
                 <span class="d-flex align-items-center">
                     <a class="nav-link" href="{% url 'JavaScript_home' %}">JavaScript</a>
-                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#javascript-submenu-mobile" aria-expanded="false" aria-controls="javascript-submenu-mobile" aria-label="Open the JavaScript dropdown section">
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#javascript-submenu" aria-expanded="false" aria-controls="javascript-submenu" aria-label="Open the JavaScript dropdown section">
                     </button>
                 </span>
-                <ul class="collapse list-unstyled ps-3 {% if '/JavaScript' in request.path %}show{% endif %}" id="javascript-submenu-mobile">
+                <ul class="collapse list-unstyled ps-3 {% if '/JavaScript' in request.path %}show{% endif %}" id="javascript-submenu">
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'JavaScript_home' %}active{% endif %}" href="{% url 'JavaScript_home' %}">JavaScript Home</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'JavaScript_variables' %}active{% endif %}" href="{% url 'JavaScript_variables' %}">Variables</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'JavaScript_scope' %}active{% endif %}" href="{% url 'JavaScript_scope' %}">Scope</a></li>
@@ -403,18 +399,22 @@
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'JavaScript_jquery' %}active{% endif %}" href="{% url 'JavaScript_jquery' %}">jQuery</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'JavaScript_debugging' %}active{% endif %}" href="{% url 'JavaScript_debugging' %}">Debugging</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'JavaScript_validation' %}active{% endif %}" href="{% url 'JavaScript_validation' %}">Validation</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'JavaScript_emailjs' %}active{% endif %}" href="{% url 'JavaScript_emailjs' %}">EmailJS</a></li>
                 </ul>
             </li>
             <!--Python-->
             <li class="nav-item">
                 <span class="d-flex align-items-center">
                     <a class="nav-link" href="{% url 'python_home' %}">Python</a>
-                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#python-submenu-mobile" aria-expanded="false" aria-controls="python-submenu-mobile" aria-label="Open the Python dropdown section">
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#python-submenu" aria-expanded="false" aria-controls="python-submenu" aria-label="Open the Python dropdown section">
                     </button>
                 </span>
-                <ul class="collapse list-unstyled ps-3 {% if '/Python' in request.path %}show{% endif %}" id="python-submenu-mobile">
+                <ul class="collapse list-unstyled ps-3 {% if '/Python' in request.path %}show{% endif %}" id="python-submenu">
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'python_home' %}active{% endif %}" href="{% url 'python_home' %}">Python Home</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'python_variables' %}active{% endif %}" href="{% url 'python_variables' %}">Variables</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'python_scope' %}active{% endif %}" href="{% url 'python_scope' %}">Scope</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'python_loops' %}active{% endif %}" href="{% url 'python_loops' %}">Loops</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'python_conditionals' %}active{% endif %}" href="{% url 'python_conditionals' %}">Conditionals</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'python_data_types' %}active{% endif %}" href="{% url 'python_data_types' %}">Data Types</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'python_strings' %}active{% endif %}" href="{% url 'python_strings' %}">Strings</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'python_booleans' %}active{% endif %}" href="{% url 'python_booleans' %}">Booleans</a></li>
@@ -422,8 +422,112 @@
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'python_tuples' %}active{% endif %}" href="{% url 'python_tuples' %}">Tuples</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'python_dictionaries' %}active{% endif %}" href="{% url 'python_dictionaries' %}">Dictionaries</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'python_sets' %}active{% endif %}" href="{% url 'python_sets' %}">Sets</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'python_classes' %}active{% endif %}" href="{% url 'python_classes' %}">Classes</a></li>
                     <li><a class="nav-link {% if request.resolver_match.url_name == 'python_regular_expressions' %}active{% endif %}" href="{% url 'python_regular_expressions' %}">Regular Expressions</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'python_functions' %}active{% endif %}" href="{% url 'python_functions' %}">Functions</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'python_input' %}active{% endif %}" href="{% url 'python_input' %}">Input</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'python_os' %}active{% endif %}" href="{% url 'python_os' %}">OS</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'python_math' %}active{% endif %}" href="{% url 'python_math' %}">Math</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'python_datetime' %}active{% endif %}" href="{% url 'python_datetime' %}">Datetime</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'python_pandas' %}active{% endif %}" href="{% url 'python_pandas' %}">Pandas</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'python_numpy' %}active{% endif %}" href="{% url 'python_numpy' %}">Numpy</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'python_csv' %}active{% endif %}" href="{% url 'python_csv' %}">CSV</a></li>                
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'python_json' %}active{% endif %}" href="{% url 'python_json' %}">JSON</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'python_pillow' %}active{% endif %}" href="{% url 'python_pillow' %}">Pillow</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'python_unit_testing' %}active{% endif %}" href="{% url 'python_unit_testing' %}">Unit Testing</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'python_data_and_api_requests' %}active{% endif %}" href="{% url 'python_data_and_api_requests' %}">Data and API Requests</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'python_code_validation' %}active{% endif %}" href="{% url 'python_code_validation' %}">Code Validation</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'python_google_sheets_program' %}active{% endif %}" href="{% url 'python_google_sheets_program' %}">Google Sheets Program</a></li>
                 </ul>
+            </li>
+            <!--Backend-->
+            <li class="nav-item">
+                <span class="d-flex align-items-center">
+                    <a class="nav-link" href="{% url 'backend_home' %}">Back-end</a>
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#backend-submenu" aria-expanded="false" aria-controls="backend-submenu" aria-label="Open the backend dropdown section">
+                    </button>
+                </span>
+                <ul class="collapse list-unstyled ps-3 {% if '/backend' in request.path %}show{% endif %}" id="backend-submenu">
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'backend_home' %}active{% endif %}" href="{% url 'backend_home' %}">Back-end Home</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'backend_databases' %}active{% endif %}" href="{% url 'backend_databases' %}">Relational and Non-Relational Databases</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'backend_designing_a_database' %}active{% endif %}" href="{% url 'backend_designing_a_database' %}">Designing a Database</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'backend_sql' %}active{% endif %}" href="{% url 'backend_sql' %}">SQL</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'backend_postgresql' %}active{% endif %}" href="{% url 'backend_postgresql' %}">PostgreSQL</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'backend_orms' %}active{% endif %}" href="{% url 'backend_orms' %}">ORMs</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'backend_sqlalchemy' %}active{% endif %}" href="{% url 'backend_sqlalchemy' %}">SQLAlchemy</a></li>
+                </ul>
+            </li>
+            <!--Flask-->
+            <li class="nav-item">
+                <span class="d-flex align-items-center">
+                    <a class="nav-link" href="{% url 'flask_home' %}">Flask</a>
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#flask-submenu" aria-expanded="false" aria-controls="flask-submenu" aria-label="Open the Flask dropdown section">
+                    </button>
+                </span>
+                <ul class="collapse list-unstyled ps-3 {% if '/Flask' in request.path %}show{% endif %}" id="flask-submenu">
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'flask_home' %}active{% endif %}" href="{% url 'flask_home' %}">Flask Home</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'flask_basics' %}active{% endif %}" href="{% url 'flask_basics' %}">Putting the Basics in Place</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'flask_database' %}active{% endif %}" href="{% url 'flask_database' %}">Creating the Database</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'flask_template' %}active{% endif %}" href="{% url 'flask_template' %}">Template Inheritance</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'flask_create' %}active{% endif %}" href="{% url 'flask_create' %}">Create Records</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'flask_read' %}active{% endif %}" href="{% url 'flask_read' %}">Read Records</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'flask_update' %}active{% endif %}" href="{% url 'flask_update' %}">Update Records</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'flask_delete' %}active{% endif %}" href="{% url 'flask_delete' %}">Delete Records</a></li>
+                </ul>
+            </li>
+            <!--Django-->
+            <li class="nav-item">
+                <span class="d-flex align-items-center">
+                    <a class="nav-link" href="{% url 'django_home' %}">Django</a>
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#django-submenu" aria-expanded="false" aria-controls="django-submenu" aria-label="Open the Django dropdown section">
+                    </button>
+                </span>
+                <ul class="collapse list-unstyled ps-3 {% if '/Django' in request.path %}show{% endif %}" id="django-submenu">
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_home' %}active{% endif %}" href="{% url 'django_home' %}">Django Home</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_getting_started_with_django' %}active{% endif %}" href="{% url 'django_getting_started_with_django' %}">Getting Started With Django</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_admin' %}active{% endif %}" href="{% url 'django_admin' %}">Admin</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_envpy' %}active{% endif %}" href="{% url 'django_envpy' %}">env.py</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_settings' %}active{% endif %}" href="{% url 'django_settings' %}">settings.py</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_urls' %}active{% endif %}" href="{% url 'django_urls' %}">URLs</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_apps' %}active{% endif %}" href="{% url 'django_apps' %}">Apps</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_templates' %}active{% endif %}" href="{% url 'django_templates' %}">Templates</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_views' %}active{% endif %}" href="{% url 'django_views' %}">Views</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_models' %}active{% endif %}" href="{% url 'django_models' %}">Models</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_forms' %}active{% endif %}" href="{% url 'django_forms' %}">Forms</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_templating_language' %}active{% endif %}" href="{% url 'django_templating_language' %}">Templating Language</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_error_pages' %}active{% endif %}" href="{% url 'django_error_pages' %}">Error Pages</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_crud' %}active{% endif %}" href="{% url 'django_crud' %}">CRUD</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_messages' %}active{% endif %}" href="{% url 'django_messages' %}">Messages</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_static' %}active{% endif %}" href="{% url 'django_static' %}">Static</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_testing' %}active{% endif %}" href="{% url 'django_testing' %}">Testing</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_allauth' %}active{% endif %}" href="{% url 'django_allauth' %}">AllAuth</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_search' %}active{% endif %}" href="{% url 'django_search' %}">Search</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'django_languages' %}active{% endif %}" href="{% url 'django_languages' %}">Languages</a></li>
+                </ul>
+            </li>
+            <!--Analytics-->
+            <li class="nav-item">
+                <span class="d-flex align-items-center">
+                    <a class="nav-link" href="{% url 'analytics_home' %}">Analytics</a>
+                    <button class="btn btn-sm dropdown-toggle navigation-drop-down" type="button" data-bs-toggle="collapse" data-bs-target="#analytics-submenu" aria-expanded="false" aria-controls="analytics-submenu" aria-label="Open the analytics dropdown section">
+                    </button>
+                </span>
+                <ul class="collapse list-unstyled ps-3 {% if '/analytics' in request.path %}show{% endif %}" id="analytics-submenu">
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'analytics_home' %}active{% endif %}" href="{% url 'analytics_home' %}">Google Analytics</a></li>
+                    <li><a class="nav-link {% if request.resolver_match.url_name == 'analytics_seo' %}active{% endif %}" href="{% url 'analytics_seo' %}">SEO</a></li>
+                </ul>
+            </li>
+            <!--Deployment-->
+            <li class="nav-item">
+                <!--
+                    Check the current page and add active class to it
+                    {percent if request.resolver_match.url_name == 'HTML_home' percent}active{percent endif percent}
+                -->
+                <a class="nav-link {% if request.resolver_match.url_name == 'deployment_home' %}active{% endif %}" href="{% url 'deployment_home' %}">Deployment</a>
+            </li>
+            <!--Contact-->
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'homepage' %}#contact-form">Contact me</a>
             </li>
         </ul>
     </div>
