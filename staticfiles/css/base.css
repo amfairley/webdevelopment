@@ -7,7 +7,6 @@ a {
     color: inherit;
 }
 
-
 body {
     background-color: #f5f5f5;
 }
@@ -176,6 +175,17 @@ body.night-mode .top-search-bar .site-seach-form-button {
     color: #1E1E1E;
 }
 
+.top-search-bar .site-seach-form-button:hover {
+    background-color: #f5f5f5;
+    color: #001F5C;
+    border-color: #001F5C;
+}
+
+body.night-mode .top-search-bar .site-seach-form-button:hover {
+    color: #FFD700;
+    background-color: #212529;
+    border-color: #FFD700; 
+}
 
 /* ----------- Day/Night ----------- */
 /* Dropdown button */
@@ -198,11 +208,27 @@ body.night-mode .top-search-bar .site-seach-form-button {
 #day-mode-toggle-dropdown {
     background-color: #001F5C;
     color: #f5f5f5;
+    border: 2px solid #001F5C;
 }
 
 body.night-mode #day-mode-toggle-dropdown {
     background-color: #FFD700;
     color: #1E1E1E;
+    border-color: #FFD700;
+}
+
+#day-mode-toggle-dropdown:hover {
+    color: #001F5C;
+    background-color: #f5f5f5;
+}
+
+body.night-mode #day-mode-toggle-dropdown:hover {
+    color: #FFD700;
+    background-color: #1E1E1E;
+}
+
+#day-night-toggle ul {
+    padding: 0;
 }
 
 /* Dropdown menu */
@@ -210,6 +236,8 @@ body.night-mode #day-mode-toggle-dropdown {
     background-color: #f5f5f5;
     text-align: center;
     border: 1px solid #001F5C;
+    border-radius: 0rem;
+    overflow: hidden;
 }
 
 body.night-mode  .day-mode-dropdown-menu {
@@ -222,25 +250,27 @@ body.night-mode  .day-mode-dropdown-menu {
     color: #001F5C;
 }
 
-.day-mode-dropdown-menu a:hover {
-    font-weight: bolder;
+#day-mode {
+    transition: color 0.75s ease, background-color 0.75s ease;
 }
 
-body.night-mode .day-mode-dropdown-menu a:hover {
-    font-weight: bolder;
-    background-color: inherit;
+#night-mode {
+    transition: color 0.75s ease, background-color 0.75s ease;
 }
 
-.day-mode-dropdown-menu a:active {
-    font-weight: bolder;
-    background-color: inherit;
-    color: inherit;
+#night-mode:hover {
+    color: #FFD700 !important;
+    background-color: #1E1E1E;
 }
 
-body.night-mode .day-mode-dropdown-menu a:active {
-    font-weight: bolder;
-    background-color: inherit;
-    color: inherit;
+body.night-mode #day-mode:hover {
+    color: #001F5C !important;
+    background-color: #f5f5f5;
+    border-color: #001F5C !important;
+}
+
+body.night-mode #night-mode:hover {
+    color: inherit !important;
 }
 
 body.night-mode .day-mode-dropdown-menu a{

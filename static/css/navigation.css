@@ -117,6 +117,7 @@ body.night-mode .offcanvas-navmenu {
     display: block;
     margin-bottom: 0.5rem;
 }
+
 .nav-search-bar {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -131,6 +132,13 @@ body.night-mode .offcanvas-navmenu {
 .nav-search-bar .site-search-form-input {
     max-width: 78%;
     font-family: "Montserrat", Helvetica, Arial, sans-serif;
+    color: #001F5C;
+    background-color: #f5f5f5;
+}
+
+body.night-mode .nav-search-bar .site-search-form-input {
+    background-color: #1E1E1E;
+    color: #FFD700;
 }
 
 .nav-search-bar .site-seach-form-button {
@@ -143,6 +151,18 @@ body.night-mode .nav-search-bar .site-seach-form-button {
     border-radius: 0.5rem;
     background-color: #FFD700;
     color: #1E1E1E;
+}
+
+.nav-search-bar .site-seach-form-button:hover {
+    background-color: #f5f5f5;
+    color: #001F5C;
+    border-color: #001F5C;
+}
+
+body.night-mode .nav-search-bar .site-seach-form-button:hover {
+    color: #FFD700;
+    background-color: #212529;
+    border-color: #FFD700; 
 }
 
 /* ---------- Media Queries ---------- */
