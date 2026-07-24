@@ -1,0 +1,21 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}examples-examples-copy-text-to-clipboard{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Example 7: Copy Text to Clipboard{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Add a little fontawesome copy icon and add functionality to it when it's clicked. The icon will change 
+        colour when hovered and will get a little larger when clicked giving feedback to the user. The text copied 
+        is defined within JavaScript and I find this is generally useful for copying email addresses.
+    </p>
+
+    {% include 'examples/examples/includes/code_snippets/copy_text_to_clipboard_js.html' %}
+    {% include 'examples/examples/includes/html_css_example/copy_text_to_clipboard.html' %}
+
+{% endblock %}

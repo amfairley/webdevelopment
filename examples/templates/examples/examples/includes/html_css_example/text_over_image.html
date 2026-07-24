@@ -1,0 +1,140 @@
+{% extends 'includes/html_css_example.html' %}
+{% load static %}
+
+{% block code_file_id %}examples-examples-html-css-example-text-over-image{% endblock %}
+
+{% block html_css_code_result_content %}
+<!-- Bootstrap 5 class container-fluid has 100% width across all breakpoints -->
+<!-- custom id container-id to apply CSS rules -->
+<div class="container-fluid" id="example-3-container-id">
+    <!-- bootstrap class row to create columns inside with no gutters -->
+    <div class="row g-0">
+        <!-- Make the background image 12 columns -->
+        <div class="col-12 example-3-background-image">
+            <img 
+                src="https://i.imgur.com/31iWCih.jpeg"
+                alt="Windows wallpaper image"
+                loading="lazy"
+            >
+        </div>
+        <!-- Full width on extra small to medium, half width on large -->
+        <!-- Custom text class for CSS -->
+        <div class="col-12 col-lg-6 example-3-text">
+            <h3>Text Title</h3>
+            <p>Text paragraph 1</p>
+            <p>Text paragraph 2</p>
+        </div>
+        <!-- Optional extra column d-none below large and col-6 when displayed on large -->
+        <!-- Custom empty-space class for CSS -->
+        <div class="d-none d-lg-block col-6 example-3-empty-space">
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block html_code_example_content %}
+<pre><code class="HTML">&lt;!-- Bootstrap 5 class container-fluid has 100% width across all breakpoints --&gt;
+&lt;!-- custom id container-id to apply CSS rules --&gt;
+&lt;div class="container-fluid" id="container-id"&gt;
+    &lt;!-- bootstrap class row to create columns inside with no gutters --&gt;
+    &lt;div class="row g-0"&gt;
+        &lt;!-- Make the background image 12 columns --&gt;
+        &lt;div class="col-12 background-image"&gt;
+            &lt;!-- Lazy loading so it only loads just before it appears on screen --&gt;
+            &lt;img 
+                src=""
+                alt=""
+                loading="lazy"
+            &gt;
+        &lt;/div&gt;
+	&lt;!-- Full width on extra small to medium, half width on large --&gt;
+	&lt;!-- Custom text class for CSS --&gt;
+        &lt;div class="col-12 col-lg-6 text"&gt;
+            &lt;h3&gt;Text Title&lt;/h3&gt;
+            &lt;p&gt;Text paragraph 1&lt;/p&gt;
+            &lt;p&gt;Text paragraph 2&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;!-- Optional extra column d-none below large and col-6 when displayed on large --&gt;
+        &lt;!-- Custom empty-space class for CSS --&gt;
+        &lt;div class="d-none d-lg-block col-6 empty-space"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+{% endblock %}
+
+{% block css_code_example_content %}
+<pre><code class="css">/* Container */
+#container-id{
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    /* To be able to make children absolute to this */
+    position: relative;
+    height: fit-content;
+    max-width: 2200px;
+}
+
+/* Image */
+.background-image {
+    position: relative;
+}
+
+.background-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: bottom;
+    max-height: 900px;
+    min-height: 630px;
+}
+
+/* Left and right hand columns */
+.empty-space,
+.text {
+    position: absolute;
+    height: 100%;
+}
+
+.empty-space {
+    right: 0;
+}
+
+.text {
+    left: 0;
+}
+
+/* Text area */
+.text {
+    /* Create a background darker than your font colour so the text is legible and transparent so the image behind is visible */
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    display: inline-block;
+    justify-content: center;
+}
+
+.text h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #F5F5F5;
+    font-size: 3rem;
+    text-align: center;
+    width: 100%;
+    /* Off-black text-shadow to make the letters easy to read */ 
+    text-shadow: 
+        2px 2px 0px #333A3F,
+        -1px -1px 0px #333A3F,
+        -1px 1px 0px #333A3F,
+        1px 1px 0px #333A3F;
+}
+
+.text p {
+    font-family: Arial, Helvetica, sans-serif;
+    /* Off-white colour */
+    color: #f5f5f5;
+    font-weight: 300;
+    font-size: 1rem;
+}
+</code></pre>
+{% endblock %}
+    

@@ -63,6 +63,7 @@ async def run():
         Path(settings.BASE_DIR) / 'flask_app' / 'templates',
         Path(settings.BASE_DIR) / 'django_app' / 'templates',
         Path(settings.BASE_DIR) / 'deployment' / 'templates',
+        Path(settings.BASE_DIR) / 'examples' / 'templates',
     ]
     print(f"Templates directories to scan: {templates_dirs}")
 
@@ -105,6 +106,7 @@ async def run():
                 "tips",
                 "troubleshooting",
                 "html_css_example",
+                "code_files"
             }:
                 original_section = relative_dir.name
                 preserved_part = relative_dir.name.replace("_", "-")  # convert underscores to hyphens
@@ -127,6 +129,8 @@ async def run():
                     section_type = "Troubleshooting"
                 elif original_section == "html_css_example":
                     section_type = "HTML and CSS example"
+                elif original_section == "code_files":
+                    section_type = "Code Files"
 
                 element_id = f"{dir_slug}-{slugify(title)}"
 

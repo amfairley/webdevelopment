@@ -1,0 +1,28 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}examples-examples-photo-gallery{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Example 2: Photo Gallery{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        This is for a gallery page incorporating a modal with a carousel that allows the images to be seen larger and 
+        some JavaScript code to allow the user to use the right and left arrow keys for next/previous. This example 
+        is shown as part of Django project that uses the view to pass the images and the image URLs to the HTML 
+        file. For static websites we can ignore the for loop and add each of the images separately.
+    </p>
+
+    {% include 'examples/examples/includes/code_files/photo_gallery_view.html' %}
+    {% include 'examples/examples/includes/code_files/photo_gallery_html.html' %}
+    {% include 'examples/examples/includes/code_files/photo_gallery_css.html' %}
+
+    <p>
+        For a static website, the HTML file would look like:
+    </p>
+    {% include 'examples/examples/includes/code_snippets/photo_gallery_html.html' %}
+
+{% endblock %}

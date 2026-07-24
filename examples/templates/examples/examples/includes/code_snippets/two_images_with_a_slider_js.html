@@ -1,0 +1,74 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}examples-examples-code-snippets-two-images-with-a-slider-js{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="JavaScript">&lt;script&gt;
+    document.addEventListener("DOMContentLoaded", () => {
+        // Get the elements
+        const slider = document.getElementById("slider");
+        const topImage = document.getElementById("top-image");
+        const divider = document.getElementById("divider");
+
+        // Set a dragging variable to false
+        let isDragging = false;
+
+        // --- Desktop dragging ---
+        // On click, set dragging variable to true
+        divider.addEventListener("mousedown", () => isDragging = true);
+        // When off clicking, set dragging variable to false
+        document.addEventListener("mouseup", () => isDragging = false);
+        // When moving mouse, check if the dragging variable is true
+        document.addEventListener("mousemove", (e) => {
+        if (!isDragging) return;
+            updateSlider(e.clientX);
+        });
+
+        // --- Touch dragging ---
+        // Set dragging to start when divider is touched
+        divider.addEventListener("touchstart", (e) => {
+            // Update dragging variable to true
+            isDragging = true;
+            e.preventDefault(); // prevent scrolling while dragging
+        });
+
+        // Set dragging variable to false when finger lifted
+        document.addEventListener("touchend", () => isDragging = false);
+
+        // If the dragging variable is true when screen is touched, update the divider
+        document.addEventListener("touchmove", (e) => {
+            if (!isDragging) return;
+            // Use the first touch point
+            const touch = e.touches[0];
+            updateSlider(touch.clientX);
+            e.preventDefault(); // prevent scrolling while dragging
+        });
+
+        // --- Update Position Function ---
+        // clientX is the horizontal position of mouse/finger
+        function updateSlider(clientX) {
+            // Rect is getting the position and size of the element
+            const rect = slider.getBoundingClientRect();
+            // X is horizontal offset
+            let x = clientX - rect.left;
+            // If dragged too far left, set to 0
+            if (x < 0) x = 0;
+            // If dragged too far right, set to the width
+            if (x > rect.width) x = rect.width;
+
+            // Convert it to a percent
+            const percent = (x / rect.width) * 100;
+            // Hide part of the element (100 minus percentage)
+            topImage.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+            // Position the divider to the cursor/finger location
+            divider.style.left = `${x}px`;
+        }
+    });
+&lt;/script&gt;
+</code></pre>
+{% endblock %}

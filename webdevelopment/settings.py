@@ -64,6 +64,7 @@ INSTALLED_APPS = [
     'search',
     'django_app',
     'deployment',
+    'examples',
 ]
 
 MIDDLEWARE = [

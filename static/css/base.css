@@ -148,6 +148,23 @@ body.night-mode .site-logo-title {
     margin-bottom: 3px;
 }
 
+#algolia-logo-light {
+    display: inline-block;
+}
+
+#algolia-logo-dark {
+    display: none;
+    padding: 1px;
+}
+
+body.night-mode #algolia-logo-dark {
+    display: inline-block;
+}
+
+body.night-mode #algolia-logo-light {
+    display: none;
+}
+
 .top-search-bar {
     margin-top: 1rem;
     margin-bottom: 1rem;

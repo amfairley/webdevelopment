@@ -1,0 +1,210 @@
+{% extends 'includes/html_css_example.html' %}
+{% load static %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelectorAll(".disabled-link").forEach(link => {
+            link.addEventListener("click", function(event) {
+                event.preventDefault();
+            });
+        });
+    });
+</script>
+{% endblock %}
+
+{% block code_file_id %}examples-examples-html-css-example-social-media-links{% endblock %}
+
+{% block html_css_code_result_content %}
+<ul class="example-5-social-media-list">
+    <li>
+        <a href="" target="_blank" rel="noopener" aria-label="Find me on FaceBook!" class="disabled-link example-5-facebook-link">
+            <i class="fa-brands fa-facebook"></i>
+            <span>Facebook</span>
+        </a>
+    </li>
+    <li>
+        <a href="" target="_blank" rel="noopener" aria-label="Follow us on Instagram" class="disabled-link example-5-instagram-link">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Instagram</span>
+        </a>
+    </li>
+    <li>
+        <a href="" target="_blank" rel="noopener" aria-label="Follow us on Twitter" class="disabled-link example-5-twitter-link">
+        <i class="fa-brands fa-twitter"></i>
+        <span>Twitter</span>
+        </a>
+    </li>
+    <li>
+        <a href="" target="_blank" rel="noopener" aria-label="Follow us on X" class="disabled-link example-5-x-link">
+        <i class="fa-brands fa-x-twitter"></i>
+        <span>X</span>
+        </a>
+    </li>
+    <li>
+        <a href="" target="_blank" rel="noopener" aria-label="View our GitHub" class="disabled-link example-5-github-link">
+        <i class="fa-brands fa-github"></i>
+        <span>GitHub</span>
+        </a>
+    </li>
+    <li>
+        <a href="" target="_blank" rel="noopener" aria-label="Connect on LinkedIn" class="disabled-link example-5-linkedin-link">
+        <i class="fa-brands fa-linkedin"></i>
+        <span>LinkedIn</span>
+        </a>
+    </li>
+</ul>
+{% endblock %}
+
+{% block html_code_example_content %}
+<pre><code class="HTML">&lt;ul class="social-media-list"&gt;
+    &lt;li&gt;
+        &lt;!-- For external sites have them open in a new tab with _blank target --&gt;
+        &lt;a href="" target="_blank" rel="noopener" aria-label="Find me on FaceBook!" class="facebook-link"&gt;
+            &lt;i class="fa-brands fa-facebook"&gt;&lt;/i&gt;
+            &lt;span&gt;Facebook&lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="" target="_blank" rel="noopener" aria-label="Follow us on Instagram" class="instagram-link"&gt;
+            &lt;i class="fa-brands fa-instagram"&gt;&lt;/i&gt;
+            &lt;span&gt;Instagram&lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;
+        &lt;a href="" target="_blank" rel="noopener" aria-label="Follow us on Twitter" class="twitter-link"&gt;
+            &lt;i class="fa-brands fa-twitter"&gt;&lt;/i&gt;
+            &lt;span&gt;Twitter&lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="" target="_blank" rel="noopener" aria-label="Follow us on X" class="x-link"&gt;
+            &lt;i class="fa-brands fa-x-twitter"&gt;&lt;/i&gt;
+            &lt;span&gt;X&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="" target="_blank" rel="noopener" aria-label="View our GitHub" class="github-link"&gt;
+            &lt;i class="fa-brands fa-github"&gt;&lt;/i&gt;
+            &lt;span&gt;GitHub&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="" target="_blank" rel="noopener" aria-label="Connect on LinkedIn" class="linkedin-link"&gt;
+            &lt;i class="fa-brands fa-linkedin"&gt;&lt;/i&gt;
+            &lt;span&gt;LinkedIn&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+{% endblock %}
+
+{% block css_code_example_content %}
+<pre><code class="css">/* List rules */
+.social-media-list {
+    text-align: center;
+    padding: 0;
+}
+
+/* Common rules */
+.facebook-link,
+.instagram-link,
+.twitter-link,
+.x-link,
+.github-link,
+.linkedin-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Segoe UI', sans-serif;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-weight: bold;
+    /* Default white font colour */
+    color: white;
+    /* Default hover transition */
+    transition: transform 0.2s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    margin-bottom: 0.5rem;
+}
+
+/* Social media icons */
+.facebook-link i,
+.instagram-link i,
+.twitter-link i,
+.x-link i,
+.github-link i,
+.linkedin-link i {
+    font-size: 1.2rem;
+}
+
+/* Facebook */
+.facebook-link {
+    /* Facebook blue */
+    background-color: #1877F2;
+}
+
+.facebook-link:hover {
+    transform: scale(1.05);
+    /* Slightly darker blue */
+    background-color: #145dbf;
+    box-shadow: 0 0 8px rgba(24, 119, 242, 0.6);
+}
+
+/* Instagram */
+.instagram-link {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.instagram-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(220, 39, 67, 0.5);
+}
+
+/* Twitter (classic blue + white bird) */
+.twitter-link {
+    background-color: #1DA1F2;
+}
+
+.twitter-link:hover {
+    transform: scale(1.05);
+    background-color: #0d8ddb;
+    box-shadow: 0 0 8px rgba(29,161,242,0.6);
+}
+
+/* X */
+.x-link {
+    background-color: #000;
+    color: white;
+}
+.x-link:hover {
+    transform: scale(1.05);
+    background-color: #111;
+    box-shadow: 0 0 8px rgba(0,0,0,0.6);
+}
+
+/* GitHub */
+.github-link {
+    background-color: #24292e; /* GitHub dark */
+}
+
+.github-link:hover {
+    transform: scale(1.05);
+    background-color: #000;
+    box-shadow: 0 0 8px rgba(36,41,46,0.6);
+}
+
+/* LinkedIn */
+.linkedin-link {
+    background-color: #0077B5;
+}
+
+.linkedin-link:hover {
+    transform: scale(1.05);
+    background-color: #005582;
+    box-shadow: 0 0 8px rgba(0,119,181,0.6);
+}
+</code></pre>
+{% endblock %}
+    

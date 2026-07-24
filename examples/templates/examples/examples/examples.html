@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}: Examples{% endblock %}
+
+{% block extra_css %}
+    <!--No full stack file-->
+{% endblock extra_css %}
+
+{% block content %}
+    <h2>Examples</h2>
+    {% include 'examples/examples/includes/examples_intro.html' %}
+    {% include 'examples/examples/includes/contents.html' %}
+    {% include 'examples/examples/includes/hero_image_carousel.html' %}
+    {% include 'examples/examples/includes/photo_gallery.html' %}
+    {% include 'examples/examples/includes/text_over_image.html' %}
+    {% include 'examples/examples/includes/google_maps.html' %}
+    {% include 'examples/examples/includes/social_media_links.html' %}
+    {% include 'examples/examples/includes/two_images_with_a_slider.html' %}
+    {% include 'examples/examples/includes/copy_text_to_clipboard.html' %}
+
+
+{% endblock %}

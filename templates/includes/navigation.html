@@ -256,6 +256,10 @@
                 -->
                 <a class="nav-link {% if request.resolver_match.url_name == 'deployment_home' %}active{% endif %}" href="{% url 'deployment_home' %}">Deployment</a>
             </li>
+            <!--Examples-->
+            <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'examples' %}active{% endif %}" href="{% url 'examples' %}">Examples</a>
+            </li>
             <!--Contact-->
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'homepage' %}#contact-form">Contact me</a>
@@ -524,6 +528,10 @@
                     {percent if request.resolver_match.url_name == 'HTML_home' percent}active{percent endif percent}
                 -->
                 <a class="nav-link {% if request.resolver_match.url_name == 'deployment_home' %}active{% endif %}" href="{% url 'deployment_home' %}">Deployment</a>
+            </li>
+            <!--Examples-->
+            <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'examples' %}active{% endif %}" href="{% url 'examples' %}">Examples</a>
             </li>
             <!--Contact-->
             <li class="nav-item">

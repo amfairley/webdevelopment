@@ -1,0 +1,21 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}examples-examples-social-media-links{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Example 5: Social Media Links{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        It is nice to have social media links that match the colours and fonts of the external website so that users 
+        can immediately recognise them. Where possible, font awesome icons of the social media website along with the 
+        name are used. Of course, you may want to have the colour scheme match your website's theme, in which case 
+        you can update the colours used.
+    </p>
+
+    {% include 'examples/examples/includes/html_css_example/social_media_links.html' %}
+
+{% endblock %}

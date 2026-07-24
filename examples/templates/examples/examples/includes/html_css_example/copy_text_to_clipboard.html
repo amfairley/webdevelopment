@@ -1,0 +1,46 @@
+{% extends 'includes/html_css_example.html' %}
+{% load static %}
+
+{% block extra_js %}
+<script>
+    // ------------------------ Copy email -----------------------
+    document.addEventListener("DOMContentLoaded", () => {
+        document.querySelector(".example-7-copy").addEventListener("click", function () {
+            const variableName = "example@email.com";
+            navigator.clipboard.writeText(variableName)
+        });
+    });
+</script>
+{% endblock %}
+
+{% block code_file_id %}examples-examples-html-css-example-copy-text-to-clipboard{% endblock %}
+
+{% block html_css_code_result_content %}
+<p>
+    Copy "example@email.com" <i class="fa-solid fa-copy example-7-copy" title="Copy the text"></i>
+</p>
+{% endblock %}
+
+{% block html_code_example_content %}
+<pre><code class="HTML">&lt;p&gt;
+    Some text &lt;i class="fa-solid fa-copy copy" title="Copy the text"&gt;&lt;/i&gt;
+&lt;/p&gt;
+</code></pre>
+{% endblock %}
+
+{% block css_code_example_content %}
+<pre><code class="css">.copy {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.copy:hover {
+    color: #CA5500;
+}
+
+.copy:active {
+    transform: scale(1.1)
+}
+</code></pre>
+{% endblock %}
+    

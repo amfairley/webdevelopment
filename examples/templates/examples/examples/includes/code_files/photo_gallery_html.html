@@ -1,0 +1,94 @@
+{% extends 'includes/code_file.html' %}
+{% load static %}
+
+<!--ID for the code file-->
+{% block code_file_id %}examples-examples-code-files-photo-gallery-html{% endblock %}
+
+<!--File name-->
+{% block code_snippet_file_name %}page_template.html{% endblock %}
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="HTML">    &lt;!--Image gallery--&gt;
+    &lt;main class="content-gallery"&gt;
+        &lt;div class="gallery-container"&gt;
+            &lt;div&gt;
+                &lt;h2 class="gallery-title"&gt;{{ site_header_photo }}&lt;/h2&gt;
+                &lt;div class="container"&gt;
+                    &lt;div class="row"&gt;
+                        {% for image in images %}
+			&lt;!--Class gallery-grid is custom, the rest are bootstrap to resize depending on screen size--&gt;
+                        &lt;div class="gallery-grid col-6 col-md-4 col-lg-3"&gt;
+                            &lt;img
+                                # Django check to use the local route in debug mode and hosted route when deployed
+                                src="{% if DEBUG %}{{ MEDIA_URL }}{{ image.local }}{% else %}{{ MEDIA_URL }}{{ image.host }}{% endif %}"
+                            &gt;
+				&lt;!-- img-fluid class sets max-width 100% and height auto --&gt;
+				&lt;!-- thumbnail custom class for targetting with JavaScript --&gt;
+				class="img-fluid thumbnail"
+				&lt;!-- Toggles a modal when clicked --&gt;
+				data-bs-toggle="modal"
+				&lt;!-- ID of the modal to open --&gt;
+				data-bs-target="#galleryModal"
+				&lt;-- For carousels inside modals, this sets which image of the carousel is opened --&gt;
+				data-bs-slide-to="{{ forloop.counter0 }}"
+				&lt;!-- Set the cursor style to a clicky finger --&gt;
+				style="cursor:pointer;" 
+				&lt;!-- The image alt text --&gt;
+				alt="{{ image.alt }}"
+			    &gt;
+                        &lt;/div&gt;
+                        {% endfor %}
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/main&gt;
+
+    &lt;!--Image Modal--&gt;
+    &lt;!-- Class modal to set up bootstrap modal, fade to add animation when opened and closed --&gt;
+    &lt;!-- ID matching the data-bs-target of the images --&gt;
+    &lt;!-- tabindex set to -1 so a user cannot tab to it, making it only accessible via JavaScript --&gt;
+    &lt;!-- aria-hidden set to true to tell screen readers it is hidden --&gt;
+    &lt;div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true"&gt;
+	&lt;!-- Bootstrap classes. modal-dialog required wrapper inside modal. modal-dialog-centered vertically centres the modal. modal-xl makes it a large modal --&gt;
+        &lt;div class="modal-dialog modal-dialog-centered modal-xl"&gt;
+	    &lt;!-- Bootstrap classes. modal-content required inside modal-dialog. bg-dark sets a dark background --&gt;
+            &lt;div class="modal-content bg-dark"&gt;
+		&lt;!-- Bootstrap classes. Defines the modal body and sets padding to 0 --&gt;
+                &lt;div class="modal-body p-0"&gt;
+		    &lt;!-- ID for the carousel --&gt;
+		    &lt;!-- Bootstrap classes for a carousel and slide transition --&gt;
+		    &lt;!-- data-bs-ride and data-bs-interval set to false to stop automatic cycling through --&gt;
+                    &lt;div id="carouselGallery" class="carousel slide" data-bs-ride="false" data-bs-interval="false"&gt;
+			&lt;!-- carousel-inner bootstrap class --&gt;
+                        &lt;div class="carousel-inner"&gt;
+			    &lt;!-- Loop through the images creating a carousel item for each of them --&gt;
+                            {% for image in images %}
+			    &lt;!-- add the active class for the first item in the list --&gt;
+                            &lt;div class="carousel-item {% if forloop.first %}active{% endif %}"&gt;
+                                &lt;img 
+                                    src="{% if DEBUG %}{{ MEDIA_URL }}{{ image.local }}{% else %}{{ MEDIA_URL }}{{ image.host }}{% endif %}"
+                                    class="d-block w-100" 
+                                    alt="{{ image.alt }}"
+				&gt;
+                            &lt;/div&gt;
+                            {% endfor %}
+                        &lt;/div&gt;
+			&lt;!-- carousel buttons targetting the carouselGallery --&gt;
+                        &lt;button class="carousel-control-prev" type="button" data-bs-target="#carouselGallery" data-bs-slide="prev"&gt;
+                            &lt;span class="carousel-control-prev-icon"&gt;&lt;/span&gt;
+                            &lt;span class="visually-hidden"&gt;Previous&lt;/span&gt;
+                        &lt;/button&gt;
+                        &lt;button class="carousel-control-next" type="button" data-bs-target="#carouselGallery" data-bs-slide="next"&gt;
+                            &lt;span class="carousel-control-next-icon"&gt;&lt;/span&gt;
+                            &lt;span class="visually-hidden"&gt;Next&lt;/span&gt;
+                        &lt;/button&gt;
+			&lt;!-- Close button --&gt;
+                        &lt;button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</code></pre>
+{% endblock %}

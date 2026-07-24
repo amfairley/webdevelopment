@@ -1,0 +1,27 @@
+{% extends 'includes/code_snippet.html' %}
+{% load static %}
+
+<!--ID for the code snippet-->
+{% block code_snippet_id %}examples-examples-code-snippets-google-maps{% endblock %}
+
+<!--File name-->
+
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="HTML">&lt;!--Map--&gt;
+&lt;div&gt;
+    &lt;!-- Use a custom ID for CSS rules --&gt;
+    &lt;!-- Style the border to 0 to remove the default iframe border --&gt;
+    &lt;!-- Allows it to be expanded to full screen --&gt;
+    &lt;!-- For the referrerpolicy, if target is HTTP instead of HTTPS, the referrer (URL) is not sent --&gt;
+    &lt;iframe
+    id="location-map"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d75.49608059359034!2d-135.00039534030145!3d72.37685215718112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4f9344da9515b951%3A0x4518d0c4d5c68876!2sNorth%20Pole!5e0!3m2!1sen!2sge!4v1784886461619!5m2!1sen!2sge"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"&gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+</code></pre>
+{% endblock %}

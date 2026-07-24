@@ -1,0 +1,28 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}examples-examples-text-over-image{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Example 3: Responsive Text Over Image{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        Here, the text goes over the whole background. In this example on larger screens the text will only cover 
+        the left hand side of the image, with a second, empty column covering the right hand side. On smaller 
+        screens the text covers the whole image (col-12) and the right hand column is removed (d-none). On larger 
+        screens the right hand column appears by turning the display on (d-lg-block) and setting it to half the 
+        horizontal space (col-6). Of course this can be easily altered to just have the left hand column be col-12 
+        the whole time and remove the right hand column to keep the text covering the whole image on any screen size.
+    </p>
+    <p>
+        The text has a dark background with an opacity of 0.2 so that the lighter coloured font can be read whilst 
+        still being able to see the background image. This is done as any light areas of the background the image 
+        would obscure light coloured text (or dark areas would obscure dark coloured text).
+    </p>
+
+    {% include 'examples/examples/includes/html_css_example/text_over_image.html' %}
+
+{% endblock %}

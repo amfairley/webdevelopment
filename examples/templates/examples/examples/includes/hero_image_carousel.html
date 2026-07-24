@@ -1,0 +1,25 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}examples-examples-hero-image-carousel{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Example 1: A Hero Image Carousel with Slightly Zooming Images{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        In this example we have a carousel that can be used for the hero section of the website. It contains a 
+        website title and welcome message whilst cycling through images with a slight zoom effect.
+    </p>
+    <p>
+        This is achieved by placing the text on top of a carousel of images allowing the site title and message 
+        to be continually visible to the user whilst the carousel automatically cycles in the background or is 
+        manually progressed. 
+    </p>
+    <p>
+        This uses Bootstrap 5 and requires the bootstrap JavaScript to run the carousel, so ensure you have that set up correctly.
+    </p>
+    {% include 'examples/examples/includes/html_css_example/hero_image_carousel.html' %}
+{% endblock %}

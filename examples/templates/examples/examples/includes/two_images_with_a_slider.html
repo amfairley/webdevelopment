@@ -1,0 +1,22 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}examples-examples-two-images-with-a-slider{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Example 6: Two Images With a Slider{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        This is a fun example of having 2 overlapping image with a slider between them to show more or less of 
+        one than the other. In this example, the images are set to circles using equal widths and heights and a 
+        border radius of 50%. A handle is given to the divider between the images using a pseudo element so that 
+        extra HTML is not needed.
+    </p>
+
+    {% include 'examples/examples/includes/code_snippets/two_images_with_a_slider_js.html' %}
+    {% include 'examples/examples/includes/html_css_example/two_images_with_a_slider.html' %}
+
+{% endblock %}

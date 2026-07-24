@@ -1,0 +1,236 @@
+{% extends 'includes/html_css_example.html' %}
+{% load static %}
+
+{% block code_file_id %}examples-examples-html-css-example-hero-image-carousel{% endblock %}
+
+{% block html_css_code_result_content %}
+<div class="example-1-carousel-container position-relative">
+    <!--Overlay for Text to stay in the same place-->
+    <div class="example-1-carousel-overlay">
+        <h1 id="example-1-hero-title">Example Hero Title</h1>
+        <h2 id="example-1-hero-message">Example Hero Message</h2>
+    </div>
+
+    <!--Carousel-->
+    <!-- id used purely for the target -->
+    <!-- carousel bootstrap class -->
+    <!-- slide bootstrap class enables JavaScript sliding behaviour-->
+    <!-- carousel-fade bootstrap class makes the animation fade instead of slide -->
+    <!-- update the data-bs-interval to change how long it takes to automatically move to the next slide -->
+    <div id="example-1-heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="7000">
+
+        <div class="carousel-indicators">
+	    <!-- Ensure the data-bs-target is the id of this carousel -->
+	    <!-- data-bs-slide-to is the 0 index of the slide -->
+	    <!-- Make sure the first slide has a class of active -->
+	    <!-- Make sure the first slide has aria-current true -->
+	    <!-- Add aria labels to the slides for screen readers -->
+            <button type="button" data-bs-target="#example-1-heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#example-1-heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#example-1-heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#example-1-heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+
+	<!-- Carousel content -->
+        <div class="carousel-inner">
+	    <!-- Carousel item 1 -->
+	    <!-- Add active class to first item -->
+            <div class="carousel-item active">
+		<!-- Add a custom class to set up the zoom effect -->
+                <div class="example-1-zoom-wrapper">
+		    <!-- d-block bootstrap class makes it display as as a block -->
+		    <!-- w-100 bootstrap class makes it 100 percent width -->
+                    <img src="https://i.imgur.com/31iWCih.jpeg" class="d-block w-100" alt="Windows wallpaper image">
+                </div>
+            </div>
+	    <!-- Add the remaining items, ensure the quantity matches the buttons in the indicators -->
+            <div class="carousel-item">
+                <div class="example-1-zoom-wrapper">
+                    <img src="https://i.imgur.com/abK3A5z.jpeg" class="d-block w-100" alt="Windows wallpaper image">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="example-1-zoom-wrapper">
+                    <img src="https://i.imgur.com/31iWCih.jpeg" class="d-block w-100" alt="Windows wallpaper image">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="example-1-zoom-wrapper">
+                    <img src="https://i.imgur.com/abK3A5z.jpeg" class="d-block w-100" alt="Windows wallpaper image">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block html_code_example_content %}
+<pre><code class="HTML">&lt;div class="custom-class-carousel-container position-relative"&gt;
+    &lt;!--Overlay for Text to stay in the same place--&gt;
+    &lt;div class="custom-class-carousel-overlay"&gt;
+        &lt;h1 id="custom-class-hero-title"&gt;Example Hero Title&lt;/h1&gt;
+        &lt;h2 id="custom-class-hero-message"&gt;Example Hero Message&lt;/h2&gt;
+    &lt;/div&gt;
+
+    &lt;!--Carousel--&gt;
+    &lt;!-- id used purely for the target --&gt;
+    &lt;!-- carousel bootstrap class --&gt;
+    &lt;!-- slide bootstrap class enables JavaScript sliding behaviour--&gt;
+    &lt;!-- carousel-fade bootstrap class makes the animation fade instead of slide --&gt;
+    &lt;!-- update the data-bs-interval to change how long it takes to automatically move to the next slide --&gt;
+    &lt;div id="custom-class-heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="7000"&gt;
+
+        &lt;div class="carousel-indicators"&gt;
+	    &lt;!-- Ensure the data-bs-target is the id of this carousel --&gt;
+	    &lt;!-- data-bs-slide-to is the 0 index of the slide --&gt;
+	    &lt;!-- Make sure the first slide has a class of active --&gt;
+	    &lt;!-- Make sure the first slide has aria-current true --&gt;
+	    &lt;!-- Add aria labels to the slides for screen readers --&gt;
+            &lt;button type="button" data-bs-target="#custom-class-heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"&gt;&lt;/button&gt;
+            &lt;button type="button" data-bs-target="#custom-class-heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"&gt;&lt;/button&gt;
+            &lt;button type="button" data-bs-target="#custom-class-heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"&gt;&lt;/button&gt;
+            &lt;button type="button" data-bs-target="#custom-class-heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"&gt;&lt;/button&gt;
+        &lt;/div&gt;
+
+	&lt;!-- Carousel content --&gt;
+        &lt;div class="carousel-inner"&gt;
+	    &lt;!-- Carousel item 1 --&gt;
+	    &lt;!-- Add active class to first item --&gt;
+            &lt;div class="carousel-item active"&gt;
+		&lt;!-- Add a custom class to set up the zoom effect --&gt;
+                &lt;div class="custom-class-zoom-wrapper"&gt;
+		    &lt;!-- d-block bootstrap class makes it display as as a block --&gt;
+		    &lt;!-- w-100 bootstrap class makes it 100 percent width --&gt;
+                    &lt;img src="https://i.imgur.com/31iWCih.jpeg" class="d-block w-100" alt="Windows wallpaper image"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+	    &lt;!-- Add the remaining items, ensure the quantity matches the buttons in the indicators --&gt;
+            &lt;div class="carousel-item"&gt;
+                &lt;div class="custom-class-zoom-wrapper"&gt;
+                    &lt;img src="https://i.imgur.com/abK3A5z.jpeg" class="d-block w-100" alt="Windows wallpaper image"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="carousel-item"&gt;
+                &lt;div class="custom-class-zoom-wrapper"&gt;
+                    &lt;img src="https://i.imgur.com/31iWCih.jpeg" class="d-block w-100" alt="Windows wallpaper image"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="carousel-item"&gt;
+                &lt;div class="custom-class-zoom-wrapper"&gt;
+                    &lt;img src="https://i.imgur.com/abK3A5z.jpeg" class="d-block w-100" alt="Windows wallpaper image"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+{% endblock %}
+
+{% block css_code_example_content %}
+<pre><code class="css">
+/* Complete div */
+.custom-class-carousel-container {
+  position: relative;
+}
+
+/* Hero text overlay */
+.custom-class-carousel-overlay {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    /* Put the title at the top and message at the bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#custom-class-hero-title {
+  text-align: center;
+  color: #F5F5F5;
+  font-size: 5rem;
+  text-transform: uppercase;
+  /* Added text-shadow so that the white-ish text is visible on lighter parts of the image or if the images do not load */
+  text-shadow: 
+      2px 2px 0px #333A3F,
+      -1px -1px 0px #333A3F,
+      -1px 1px 0px #333A3F,
+      1px 1px 0px #333A3F;
+  /*Stretch the text vertically*/
+  transform: scaleY(1.2);
+  display: inline-block;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  /* Off-set it from the top slightly */
+  padding-top: 1.5rem;
+}
+
+#custom-class-hero-message {
+    text-align: center;
+    color: #f5f5f5;
+    font-family: "Brush Script MT", 'Lucida Handwriting', cursive;
+    font-size: 3.5rem;
+    /* Added text-shadow so that the white-ish text is visible on lighter parts of the image or if the images do not load */
+    text-shadow: 
+        2px 2px 0px #333A3F,
+        -1px -1px 0px #333A3F,
+        -1px 1px 0px #333A3F,
+        1px 1px 0px #333A3F;
+    /* Off-set it from the bottom slightly */
+    margin-bottom: 2.5rem;
+}
+
+/* Carousel */
+/* Carousel indicators */
+/* Put the indicators above the images */
+#custom-class-heroCarousel .carousel-indicators {
+    z-index: 400;
+}
+
+/* Ensure that the carousel z-index is lower than the overlay */
+#custom-class-heroCarousel .carousel-inner,
+#custom-class-heroCarousel .carousel-inner .carousel-item,
+#custom-class-heroCarousel .carousel-inner .carousel-item img {
+  position: relative;
+  z-index: 1;
+}
+
+/* Carousel images */
+#custom-class-heroCarousel .carousel-inner {
+    max-height: 75vh;
+    align-items: center;
+}
+
+#custom-class-heroCarousel .carousel-item img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Carousel zoom */
+.custom-class-zoom-wrapper {
+  overflow: hidden;
+}
+
+.custom-class-zoom-wrapper img {
+  /* Use a custom animation e.g. zoomFade */
+  animation: zoomFade 7s ease-in-out forwards;
+  transform-origin: center center;
+}
+
+/* Define your custom animation */
+@keyframes zoomFade {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+</code></pre>
+{% endblock %}
+    

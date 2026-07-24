@@ -146,3 +146,377 @@ body.night-mode .html-code-example {
         border-bottom: #569CD6;
     }
 }
+
+/* ---------- Different Code Examples --------- */
+
+/* ---------- Examples - Example 1 - Hero section --------- */
+
+/* Complete div */
+.example-1-carousel-container {
+  position: relative;
+}
+
+/* Hero text overlay */
+.example-1-carousel-overlay {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    /* Put the title at the top and message at the bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#example-1-hero-title {
+  text-align: center;
+  color: #F5F5F5;
+  font-size: 5rem;
+  text-transform: uppercase;
+  /* Added text-shadow so that the white-ish text is visible on lighter parts of the image or if the images do not load */
+  text-shadow: 
+      2px 2px 0px #333A3F,
+      -1px -1px 0px #333A3F,
+      -1px 1px 0px #333A3F,
+      1px 1px 0px #333A3F;
+  /*Stretch the text vertically*/
+  transform: scaleY(1.2);
+  display: inline-block;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  /* Off-set it from the top slightly */
+  padding-top: 1.5rem;
+}
+
+#example-1-hero-message {
+    text-align: center;
+    color: #f5f5f5;
+    font-family: "Brush Script MT", 'Lucida Handwriting', cursive;
+    font-size: 3.5rem;
+    /* Added text-shadow so that the white-ish text is visible on lighter parts of the image or if the images do not load */
+    text-shadow: 
+        2px 2px 0px #333A3F,
+        -1px -1px 0px #333A3F,
+        -1px 1px 0px #333A3F,
+        1px 1px 0px #333A3F;
+    /* Off-set it from the bottom slightly */
+    margin-bottom: 2.5rem;
+}
+
+/* Carousel */
+/* Carousel indicators */
+/* Put the indicators above the images */
+#example-1-heroCarousel .carousel-indicators {
+    z-index: 400;
+}
+
+/* Ensure that the carousel z-index is lower than the overlay */
+#example-1-heroCarousel .carousel-inner,
+#example-1-heroCarousel .carousel-inner .carousel-item,
+#example-1-heroCarousel .carousel-inner .carousel-item img {
+  position: relative;
+  z-index: 1;
+}
+
+/* Carousel images */
+#example-1-heroCarousel .carousel-inner {
+    max-height: 75vh;
+    align-items: center;
+}
+
+#example-1-heroCarousel .carousel-item img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Carousel zoom */
+.example-1-zoom-wrapper {
+  overflow: hidden;
+}
+
+.example-1-zoom-wrapper img {
+  /* Use a custom animation e.g. zoomFade */
+  animation: zoomFade 7s ease-in-out forwards;
+  transform-origin: center center;
+}
+
+/* Define your custom animation */
+@keyframes zoomFade {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 991px) {
+    #example-1-hero-title {
+    font-size: 1rem;
+    }
+
+    #example-1-hero-message {
+        font-size: 1rem;
+    }
+
+}
+
+/* ---------- Examples - Example 3 - Text Over Image --------- */
+/* Container */
+#example-3-container-id{
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    /* To be able to make children absolute to this */
+    position: relative;
+    height: fit-content;
+    max-width: 2200px;
+}
+
+/* Image */
+.example-3-background-image {
+    position: relative;
+}
+
+.example-3-background-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: bottom;
+    height: 30rem;
+}
+
+/* Left and right hand columns */
+.example-3-empty-space,
+.example-3-text {
+    position: absolute;
+    height: 100%;
+}
+
+.example-3-empty-space {
+    right: 0;
+}
+
+.example-3-text {
+    left: 0;
+}
+
+/* Text area */
+.example-3-text {
+    /* Create a background darker than your font colour so the text is legible and transparent so the image behind is visible */
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    display: inline-block;
+    justify-content: center;
+}
+
+.example-3-text h3 {
+    font-family: Arial, Helvetica, sans-serif;    
+    color: #F5F5F5 !important;
+    font-size: 3rem;
+    text-align: center;
+    width: 100%;
+    /* Off-black text-shadow to make the letters easy to read */ 
+    text-shadow: 
+        2px 2px 0px #333A3F,
+        -1px -1px 0px #333A3F,
+        -1px 1px 0px #333A3F,
+        1px 1px 0px #333A3F;
+}
+
+.example-3-text p {
+    font-family: Arial, Helvetica, sans-serif;
+    /* Off-white colour */
+    color: #f5f5f5 !important;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+/* ---------- Examples - Example 5 - Social Media Links--------- */
+/* List rules */
+.example-5-social-media-list {
+    text-align: center;
+    padding: 0;
+}
+
+/* Common rules */
+.example-5-facebook-link,
+.example-5-instagram-link,
+.example-5-twitter-link,
+.example-5-x-link,
+.example-5-github-link,
+.example-5-linkedin-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Segoe UI', sans-serif;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-weight: bold;
+    /* Default white font colour */
+    color: white;
+    /* Default hover transition */
+    transition: transform 0.2s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    margin-bottom: 0.5rem;
+}
+
+/* Social media icons */
+.example-5-facebook-link i,
+.example-5-instagram-link i,
+.example-5-twitter-link i,
+.example-5-x-link i,
+.example-5-github-link i,
+.example-5-linkedin-link i {
+    font-size: 1.2rem;
+}
+
+/* Facebook */
+.example-5-facebook-link {
+    /* Facebook blue */
+    background-color: #1877F2;
+}
+
+.example-5-facebook-link:hover {
+    transform: scale(1.05);
+    /* Slightly darker blue */
+    background-color: #145dbf;
+    box-shadow: 0 0 8px rgba(24, 119, 242, 0.6);
+}
+
+/* Instagram */
+.example-5-instagram-link {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.example-5-instagram-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(220, 39, 67, 0.5);
+}
+
+/* Twitter (classic blue + white bird) */
+.example-5-twitter-link {
+    background-color: #1DA1F2;
+}
+
+.example-5-twitter-link:hover {
+    transform: scale(1.05);
+    background-color: #0d8ddb;
+    box-shadow: 0 0 8px rgba(29,161,242,0.6);
+}
+
+/* X */
+.example-5-x-link {
+    background-color: #000;
+    color: white;
+}
+.example-5-x-link:hover {
+    transform: scale(1.05);
+    background-color: #111;
+    box-shadow: 0 0 8px rgba(0,0,0,0.6);
+}
+
+/* GitHub */
+.example-5-github-link {
+    background-color: #24292e; /* GitHub dark */
+}
+
+.example-5-github-link:hover {
+    transform: scale(1.05);
+    background-color: #000;
+    box-shadow: 0 0 8px rgba(36,41,46,0.6);
+}
+
+/* LinkedIn */
+.example-5-linkedin-link {
+    background-color: #0077B5;
+}
+
+.example-5-linkedin-link:hover {
+    transform: scale(1.05);
+    background-color: #005582;
+    box-shadow: 0 0 8px rgba(0,119,181,0.6);
+}
+
+/* ---------- Examples - Example 6 - Two Images With a Slider--------- */
+
+/* Image click and drag */
+/* Prevent image selection */
+.example-6-circle-slider,
+.example-6-circle-slider img,
+.example-6-divider {
+  user-select: none;   /* prevent text/image selection */
+  -webkit-user-drag: none; /* prevent image drag ghost */
+}
+
+.example-6-circle-slider {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.example-6-circle-slider img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Top image reveals with clip-path */
+.example-6-circle-slider .example-5-top-image {
+    /* To change percentage coverage update from 90% */
+    clip-path: inset(0 90% 0 0);
+}
+
+
+/* Divider handle */
+.example-6-divider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: white;
+    /* To change percentage coverage update from 10% */
+    left: 10%;
+    transform: translateX(-50%);
+    /* Set the cursor to the resize image */
+    cursor: ew-resize;
+    z-index: 2;
+}
+
+/* Knob for grabbing */
+.example-6-divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #333;
+}
+
+/* ---------- Examples - Example 7 - Copy to Clipboard--------- */
+.example-7-copy {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.example-7-copy:hover {
+    color: #CA5500;
+}
+
+.example-7-copy:active {
+    transform: scale(1.1)
+}

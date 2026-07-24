@@ -1,0 +1,23 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}examples-examples-google-maps{% endblock %}
+
+<!--Section title-->
+{% block text_title %}Example 4: Google Maps{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        To add an interactive section of Google Maps to your website, first go to Google Maps to the location that you 
+        want to show (at the desired zoom level), then right click and select "share this location". Click on the 
+        "Embed a map" option and it will provide you the HTML. Simply copy the provided 
+        <dfn title="An iframe element embeds an external webpage inside your site">&lt;iframe&gt;&lt;/iframe&gt;</dfn> 
+        element into your HTML file. It will come with pre-set height and width dimensions but you can target it with 
+        your own custom CSS rules.
+    </p>
+
+    {% include 'examples/examples/includes/code_snippets/google_maps.html' %}
+
+{% endblock %}

@@ -1,0 +1,78 @@
+{% extends 'includes/code_file.html' %}
+{% load static %}
+
+<!--ID for the code file-->
+{% block code_file_id %}examples-examples-code-files-photo-gallery-css{% endblock %}
+
+<!--File name-->
+{% block code_snippet_file_name %}page_template.css{% endblock %}
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="CSS">/ * Page set up */
+.content-gallery {
+    /* Make the minimum height fill the page minus the header and footer */
+    min-height: calc(100vh - 376px);
+    background-color: #FAF3DF;
+    border-top: 1px  solid #B88C26;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.gallery-container {
+    display: block;
+    width: 90%;
+    max-width: 2200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    height: 100%;
+    background-color: #f3e9ce;
+}
+
+.gallery-title {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    color: #333A3F;
+    text-align: center;
+    padding: 1rem;
+}
+
+.gallery-grid {
+    margin-bottom: 2rem;
+}
+
+/* Images */
+.gallery-grid img{
+    display: block;
+    margin: 1rem auto;
+    height: auto;
+    max-height: 20rem;
+}
+
+/* Modals */
+.modal-dialog.modal-xl {
+    max-width: 95vw !important;
+    width: 95vw;
+}
+
+.modal-content {
+    max-height: 100vh;
+    overflow: hidden;
+    /* Allows horizontal swipe on phones */
+    touch-action: pan-y;
+}
+
+.modal-body img {
+    height: 80vh;
+    padding: 1rem 5rem;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+}
+
+.modal .btn-close {
+    /* Ensure the close button is always on top */
+    z-index: 1000;
+}
+</code></pre>
+{% endblock %}
