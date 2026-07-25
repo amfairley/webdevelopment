@@ -1,0 +1,48 @@
+{% extends 'includes/code_file.html' %}
+{% load static %}
+
+<!--ID for the code file-->
+{% block code_file_id %}analytics-seo-code-files-structured-data{% endblock %}
+
+<!--File name-->
+{% block code_snippet_file_name %}structured_data.html{% endblock %}
+<!--Code content-->
+{% block code_snippet_content %}
+<pre><code class="HTML">&lt;script type="application/ld+json"&gt;
+    &#123;
+        "@context": "https://schema.org",
+        "@type": "&#123;&#123; schema_type &#125;&#125;",
+        "name": "&#123;&#123; page_title &#125;&#125;",
+        "articleSection": "&#123;&#123; section &#125;&#125;",
+        "headline": "&#123;&#123; page_title &#125;&#125;",
+        "description": "&#123;&#123; page_description &#125;&#125;",
+        "keywords":  "&#123;&#123; keywords &#125;&#125;",
+        "about": &#123;
+            "@type": "Thing",
+            "name": "&#123;&#123; about_name &#125;&#125;"
+        &#125;,
+        "isPartOf": &#123;
+            "@type": "CreativeWorkSeries",
+            "name": "&#123;&#123; isPartOf_name &#125;&#125;"
+        &#125;,
+        "author": &#123;
+            "@type": "Person",
+            "name": "My name",
+            "sameAs": [
+                "github.com/mygithub"
+            ]
+        &#125;,
+        "publisher": &#123;
+            "@type": "Person",
+            "name": "My name"
+        &#125;,
+        "mainEntityOfPage": &#123;
+            "@type": "WebPage",
+            "@id": "&#123;&#123; request.build_absolute_uri &#125;&#125;"
+        &#125;,
+        "inLanguage": "en-GB",
+        "url": "&#123;&#123; request.build_absolute_uri &#125;&#125;"
+    &#125;
+&lt;/script&gt;
+</code></pre>
+{% endblock %}

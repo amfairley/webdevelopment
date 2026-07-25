@@ -250,6 +250,8 @@ async def run():
             pretty_title = pretty_title.replace("Auth Password Validator", "AUTH_PASSWORD_VALIDATORS")
             pretty_title = pretty_title.replace("AUTH_PASSWORD_VALIDATORSs", "AUTH_PASSWORD_VALIDATORS")
             pretty_title = pretty_title.replace("Default Auto Field", "DEFAULT_AUTO_FIELD")
+            # Update Seo to SEO
+            pretty_title = pretty_title.replace("Seo", "SEO")
             # Update url from x-app to X
             url_local = url_local.replace("javascript-app", "JavaScript")
             url_heroku = url_heroku.replace("javascript-app", "JavaScript")

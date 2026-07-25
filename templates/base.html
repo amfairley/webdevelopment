@@ -16,6 +16,8 @@
         <!--Block for page specific extra meta information-->
         {% block extra_meta %}
         {% endblock %}
+
+        {% include "includes/structured_data.html" %}
         <!--Page title for the browser tab with a block to add page specific titles-->
         <title>WebDevGrad{% block extra_title %}{% endblock %}</title>
         <!--CSS block-->

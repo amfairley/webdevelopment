@@ -1,0 +1,63 @@
+{% extends 'includes/text_box.html' %}
+{% load static %}
+
+<!--Section ID to link in contents-->
+{% block text_section_id %}analytics-seo-seo-example{% endblock %}
+
+<!--Section title-->
+{% block text_title %}SEO Example{% endblock %}
+
+<!--Section content-->
+{% block text_content %}
+    <p>
+        For this website (built with Django) I created a structured_data.html file in my root directory templates folder
+        and included it in my base.html template underneath an extra meta block with
+        <code class="written-code">&#123;% include "includes/structured_data.html" %&#125;</code>
+    </p>
+
+    <p>
+        structured_data.html took the form of a 
+        <code class="written-code">&lt;script&gt;</code>
+        element with 
+        <code class="written-code">type="application/ld+json"</code>
+        and then using the 
+        <a 
+            class="text-link"
+            href="{% url 'django_templating_language' %}"
+            title="Go to the Django Templating Language page"
+            aria-label="Go to the Django Templating Language page"
+        >
+            Django templating language
+        </a>
+        I can add in variables for each page.
+    </p>
+    {% include 'analytics/seo/includes/code_files/structured_data.html' %}
+    <p>
+        These variables were defined in an seo.py file in each app (sitting on the same level next to the urls.py, 
+        views.py etc files). In this file I created a library (e.g. HTML_SEO for the HTML app) that contained dictionaries 
+        for each page.
+    </p>
+    {% include 'analytics/seo/includes/code_files/seo.html' %}
+    <p>
+        Then in my views.py I imported this and set up the context for each page to include these variables. The keywords 
+        were defined as a list in the seo.py file so in the view they are joined to fit the required JSON syntax so that 
+        they appear as one concatenated string rather than a list of strings.
+    </p>
+    {% include 'analytics/seo/includes/code_files/views.html' %}
+    <p>
+        For each page, the populated
+        <code class="written-code">&lt;script&gt;</code> 
+        element was taken from inspecting in Google Dev Tools and put through Google's 
+        <a 
+            class="text-link"
+            href="https://search.google.com/test/rich-results"
+            title="Go to the Google Rich Results Test page"
+            aria-label="Go to the Google Rich Results Test page"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            rich results test
+        </a>
+        to ensure that they were valid and would work as intended.
+    </p>
+{% endblock %}

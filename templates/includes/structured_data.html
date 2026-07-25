@@ -1,0 +1,37 @@
+<script type="application/ld+json">
+
+{
+    "@context": "https://schema.org",
+    "@type": "{{ schema_type }}",
+    "name": "{{ page_title }}",
+    "articleSection": "{{ section }}",
+    "headline": "{{ page_title }}",
+    "description": "{{ page_description }}",
+    "keywords":  "{{ keywords }}",
+    "about": {
+        "@type": "Thing",
+        "name": "{{ about_name }}"
+    },
+    "isPartOf": {
+        "@type": "CreativeWorkSeries",
+        "name": "{{ isPartOf_name }}"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Adam Fairley",
+        "sameAs": [
+            "https://github.com/amfairley"
+        ]
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "Adam Fairley"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ request.build_absolute_uri }}"
+    },
+    "inLanguage": "en-GB",
+    "url": "{{ request.build_absolute_uri }}"
+}
+</script>
