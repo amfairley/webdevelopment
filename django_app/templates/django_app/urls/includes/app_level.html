@@ -34,4 +34,12 @@
         in an anchor tag directing to this URL, you would put
         <code class="written-code">href="{% url 'django_home' %}"</code>.
     </p>
+    <p>
+        Finally, the third parameter assigns a name to the URL pattern. This is primarily used with Django's 
+        template language and the 
+        <code class="written-code">&#123;% url %&#125;</code> 
+        tag, for example 
+        <code class="written-code">&#123;% url 'django_home' %&#125;</code> 
+        allowing links to continue working even if the URL itself changes."
+    </p>
 {% endblock %}

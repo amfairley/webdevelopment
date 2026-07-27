@@ -23,7 +23,7 @@
             the form. ModelForm creates fields automatically based on your model
         </li>
         <li>
-            The Meta class in where custom widgets, labels, help_texts or excluded fields are defined
+            The Meta class is where custom widgets, labels, help_texts or excluded fields are defined
         </li>
     </ul>
     {% include 'django_app/forms/includes/code_snippets/create_modelform.html' %}
@@ -53,12 +53,12 @@
     <ul>
         <li>
             The view will assume that the request method is GET by default. To handle form submission we will need to 
-            split the function into and if check if the request method is POST and 'else'. Everything already in the 
+            split the function into an if check if the request method is POST and 'else'. Everything already in the 
             function should go into the 'else' part such as defined variables.
         </li>
         <li>
             Define the form variable and add it to both the POST section with the information from the submitted form 
-            and in the else section in order to display the form on the page. Add the form to the context so that is 
+            and in the else section in order to display the form on the page. Add the form to the context so that it is 
             rendered.
         </li>
         <li>

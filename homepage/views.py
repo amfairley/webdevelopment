@@ -1,11 +1,12 @@
 from django.shortcuts import render
 from django.conf import settings
-
+from .seo import home_SEO
 
 def index(request):
     '''Return the homepage'''
-    context = {
-    }
+    context = home_SEO["home"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'homepage/index.html',

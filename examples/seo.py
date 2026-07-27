@@ -1,0 +1,31 @@
+examples_SEO = {
+    "examples": {
+        "page_title": "HTML, CSS & JavaScript Website Code Examples",
+        "page_description": "Explore practical HTML, CSS, JavaScript, Bootstrap and Django code examples including carousels, galleries, Google Maps, responsive layouts, sliders and interactive UI components.",
+        "schema_type": "TechArticle",
+        "slug": "examples",
+        "section": "Examples",
+        "keywords": [
+            "HTML examples",
+            "CSS examples",
+            "JavaScript examples",
+            "Bootstrap examples",
+            "Django examples",
+            "website code examples",
+            "responsive web design",
+            "hero carousel",
+            "photo gallery",
+            "responsive text overlay",
+            "Google Maps embed",
+            "social media buttons",
+            "image comparison slider",
+            "copy to clipboard JavaScript",
+            "frontend components",
+            "UI examples",
+            "web development tutorial",
+            "HTML CSS JavaScript projects"
+        ],
+        "about_name": "HTML, CSS and JavaScript Code Examples",
+        "isPartOf_name": "Web Development Tutorial",
+    },
+}

@@ -38,7 +38,7 @@ class RoomAdmin(admin.ModelAdmin):
     # Set fields as read-only in the form view
     readonly_fields = ('sanitised_name', 'image_url')
 
-# Register your models here in the from of (ModelName, ModelNameAdmin)
+# Register your models here in the form of (ModelName, ModelNameAdmin)
 admin.site.register(Room, RoomAdmin)
 </code></pre>
 {% endblock %}

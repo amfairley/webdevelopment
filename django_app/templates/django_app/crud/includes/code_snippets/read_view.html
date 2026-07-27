@@ -17,7 +17,7 @@ def get_todo_list(request):
 	# Add to context
 	context = {
 		'items': items,
-}
+	}
     return render(request, 'todo/todo_list.html', context)
 </code></pre>
 {% endblock %}

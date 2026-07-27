@@ -1,11 +1,12 @@
 from django.shortcuts import render
 from django.conf import settings
-
+from .seo import python_SEO
 
 def python_home(request):
     '''Return the Python homepage'''
-    context = {
-    }
+    context = python_SEO["home"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'python_app/home/home.html',
@@ -15,8 +16,9 @@ def python_home(request):
 
 def python_variables(request):
     '''Return the Python variables page'''
-    context = {
-    }
+    context = python_SEO["variables"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'python_app/variables/variables.html',
@@ -26,8 +28,9 @@ def python_variables(request):
 
 def python_data_types(request):
     '''Return the Python data types page'''
-    context = {
-    }
+    context = python_SEO["data-types"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'python_app/data_types/data_types.html',
@@ -37,8 +40,9 @@ def python_data_types(request):
 
 def python_strings(request):
     '''Return the Python strings page'''
-    context = {
-    }
+    context = python_SEO["strings"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'python_app/strings/strings.html',
@@ -48,8 +52,9 @@ def python_strings(request):
 
 def python_booleans(request):
     '''Return the Python booleans page'''
-    context = {
-    }
+    context = python_SEO["booleans"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'python_app/booleans/booleans.html',
@@ -59,8 +64,9 @@ def python_booleans(request):
 
 def python_lists(request):
     '''Return the Python lists page'''
-    context = {
-    }
+    context = python_SEO["lists"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'python_app/lists/lists.html',
@@ -70,8 +76,9 @@ def python_lists(request):
 
 def python_tuples(request):
     '''Return the Python tuples page'''
-    context = {
-    }
+    context = python_SEO["tuples"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'python_app/tuples/tuples.html',
@@ -81,8 +88,9 @@ def python_tuples(request):
 
 def python_dictionaries(request):
     '''Return the Python dictionaries page'''
-    context = {
-    }
+    context = python_SEO["dictionaries"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'python_app/dictionaries/dictionaries.html',
@@ -92,8 +100,9 @@ def python_dictionaries(request):
 
 def python_sets(request):
     '''Return the Python sets page'''
-    context = {
-    }
+    context = python_SEO["sets"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'python_app/sets/sets.html',
@@ -103,8 +112,9 @@ def python_sets(request):
 
 def python_regular_expressions(request):
     '''Return the Python regular expressions page'''
-    context = {
-    }
+    context = python_SEO["regular-expressions"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'python_app/regular_expressions/regular_expressions.html',
@@ -114,8 +124,9 @@ def python_regular_expressions(request):
 
 def python_functions(request):
     '''Return the Python functions page'''
-    context = {
-    }
+    context = python_SEO["functions"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'python_app/functions/functions.html',
@@ -125,8 +136,9 @@ def python_functions(request):
 
 def python_input(request):
     '''Return the Python input page'''
-    context = {
-    }
+    context = python_SEO["input"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'python_app/input/input.html',
@@ -136,8 +148,9 @@ def python_input(request):
 
 def python_os(request):
     '''Return the Python OS page'''
-    context = {
-    }
+    context = python_SEO["os"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'python_app/os/os.html',
@@ -147,8 +160,9 @@ def python_os(request):
 
 def python_math(request):
     '''Return the Python math page'''
-    context = {
-    }
+    context = python_SEO["math"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'python_app/math/math.html',
@@ -158,8 +172,9 @@ def python_math(request):
 
 def python_datetime(request):
     '''Return the Python datetime page'''
-    context = {
-    }
+    context = python_SEO["datetime"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'python_app/datetime/datetime.html',
@@ -169,8 +184,9 @@ def python_datetime(request):
 
 def python_pandas(request):
     '''Return the Python pandas page'''
-    context = {
-    }
+    context = python_SEO["pandas"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'python_app/pandas/pandas.html',
@@ -180,8 +196,9 @@ def python_pandas(request):
 
 def python_numpy(request):
     '''Return the Python numpy page'''
-    context = {
-    }
+    context = python_SEO["numpy"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'python_app/numpy/numpy.html',
@@ -191,8 +208,9 @@ def python_numpy(request):
 
 def python_csv(request):
     '''Return the Python csv page'''
-    context = {
-    }
+    context = python_SEO["csv"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'python_app/csv/csv.html',
@@ -202,8 +220,9 @@ def python_csv(request):
 
 def python_json(request):
     '''Return the Python json page'''
-    context = {
-    }
+    context = python_SEO["json"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'python_app/json/json.html',
@@ -213,8 +232,9 @@ def python_json(request):
 
 def python_pillow(request):
     '''Return the Python pillow page'''
-    context = {
-    }
+    context = python_SEO["pillow"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'python_app/pillow/pillow.html',
@@ -224,8 +244,9 @@ def python_pillow(request):
 
 def python_scope(request):
     '''Return the Python scope page'''
-    context = {
-    }
+    context = python_SEO["scope"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'python_app/scope/scope.html',
@@ -235,8 +256,9 @@ def python_scope(request):
 
 def python_loops(request):
     '''Return the Python loops page'''
-    context = {
-    }
+    context = python_SEO["loops"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'python_app/loops/loops.html',
@@ -246,8 +268,9 @@ def python_loops(request):
 
 def python_conditionals(request):
     '''Return the Python conditionals page'''
-    context = {
-    }
+    context = python_SEO["conditionals"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'python_app/conditionals/conditionals.html',
@@ -257,8 +280,9 @@ def python_conditionals(request):
 
 def python_classes(request):
     '''Return the Python classes page'''
-    context = {
-    }
+    context = python_SEO["classes"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'python_app/classes/classes.html',
@@ -268,8 +292,9 @@ def python_classes(request):
 
 def python_unit_testing(request):
     '''Return the Python unit testing page'''
-    context = {
-    }
+    context = python_SEO["unit-testing"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'python_app/unit_testing/unit_testing.html',
@@ -279,8 +304,9 @@ def python_unit_testing(request):
 
 def python_data_and_api_requests(request):
     '''Return the Python data and API requests page'''
-    context = {
-    }
+    context = python_SEO["data-and-api-requests"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'python_app/data_and_api_requests/data_and_api_requests.html',
@@ -290,8 +316,9 @@ def python_data_and_api_requests(request):
 
 def python_code_validation(request):
     '''Return the Python code validation page'''
-    context = {
-    }
+    context = python_SEO["code-validation"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'python_app/code_validation/code_validation.html',
@@ -301,8 +328,9 @@ def python_code_validation(request):
 
 def python_google_sheets_program(request):
     '''Return the Python google sheets program page'''
-    context = {
-    }
+    context = python_SEO["google-sheets-program"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'python_app/google_sheets_program/google_sheets_program.html',

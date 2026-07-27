@@ -12,7 +12,7 @@
     <!--Imports-->    
     <h4 id="Django-settings-layout-of-the-settings-file-imports">Imports</h4>
     <p>
-        The top of the file has only one import from the inbuilt python library pathlib, that Django uses in order to 
+        The top of the file has only one import from the built-in Python library pathlib, that Django uses in order to 
         locate files and directories without the need for using strings for the paths. This provides various 
         functionalities to the user including checking the existence of a path and checking if it is a path to a file 
         or directory. This section will expand as you find the need for more libraries as your project grows but it is 
@@ -112,7 +112,7 @@
     <h4 id="Django-settings-layout-of-the-settings-file-installed-apps">Installed Apps</h4>
     <p>
         The INSTALLED_APPS section defines the list of applications that are active in your Django project and include 
-        built-in Django apps, third part apps or custom apps. Apps will be discussed more in their own section 
+        built-in Django apps, third-party apps or custom apps. Apps will be discussed more in their own section 
         <a 
             class="text-link"
             href="{% url 'django_apps' %}"
@@ -176,11 +176,11 @@
             BACKEND:
             <ul>
                 <li>
-                    Defines which template engine should use, with the default being 
+                    Defines which template engine Django should use, with the default being 
                     django.template.backends.django.DjangoTemplates which is the built-in template engine.
                 </li>
                 <li>
-                    You can add third-part engines here such as Jinja2 with by replacing it with
+                    You can add third-part engines here such as Jinja2 by replacing it with
                     django.template.backends.jinja2.Jinja2
                 </li>
             </ul>

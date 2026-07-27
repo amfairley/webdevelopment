@@ -1,11 +1,12 @@
 from django.shortcuts import render
 from django.conf import settings
-
+from .seo import flask_SEO
 
 def flask_home(request):
     '''Return the Flask homepage'''
-    context = {
-    }
+    context = flask_SEO["home"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'flask_app/home/home.html',
@@ -15,8 +16,9 @@ def flask_home(request):
 
 def flask_basics(request):
     '''Return the Flask setting up the basics page'''
-    context = {
-    }
+    context = flask_SEO["basics"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'flask_app/basics/basics.html',
@@ -26,8 +28,9 @@ def flask_basics(request):
 
 def flask_database(request):
     '''Return the Flask creating the database page'''
-    context = {
-    }
+    context = flask_SEO["database"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'flask_app/database/database.html',
@@ -37,8 +40,9 @@ def flask_database(request):
 
 def flask_template(request):
     '''Return the Flask template inheritance page'''
-    context = {
-    }
+    context = flask_SEO["template"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'flask_app/template/template.html',
@@ -48,8 +52,9 @@ def flask_template(request):
 
 def flask_create(request):
     '''Return the Flask create records page'''
-    context = {
-    }
+    context = flask_SEO["create"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'flask_app/create/create.html',
@@ -59,8 +64,9 @@ def flask_create(request):
 
 def flask_read(request):
     '''Return the Flask read records page'''
-    context = {
-    }
+    context = flask_SEO["read"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'flask_app/read/read.html',
@@ -70,8 +76,9 @@ def flask_read(request):
 
 def flask_update(request):
     '''Return the Flask update records page'''
-    context = {
-    }
+    context = flask_SEO["update"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'flask_app/update/update.html',
@@ -81,8 +88,9 @@ def flask_update(request):
 
 def flask_delete(request):
     '''Return the Flask delete records page'''
-    context = {
-    }
+    context = flask_SEO["delete"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'flask_app/delete/delete.html',

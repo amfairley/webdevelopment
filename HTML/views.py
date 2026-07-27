@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from django.conf import settings
-from .seo import HTML_SEO
+from .seo import html_SEO
 
 
 def HTML_home(request):
     '''Return the HTML homepage'''
-    context = HTML_SEO["home"].copy()
+    context = html_SEO["home"].copy()
     context["keywords"] = ", ".join(context["keywords"])
     return render(
         request,
@@ -16,7 +16,7 @@ def HTML_home(request):
 
 def HTML_introducing_elements(request):
     '''Return the HTML introducing elements page'''
-    context = HTML_SEO["introducing-elements"].copy()
+    context = html_SEO["introducing-elements"].copy()
     context["keywords"] = ", ".join(context["keywords"])
     return render(
         request,
@@ -27,7 +27,7 @@ def HTML_introducing_elements(request):
 
 def HTML_common_elements(request):
     '''Return the HTML common elements page'''
-    context = HTML_SEO["common-elements"].copy()
+    context = html_SEO["common-elements"].copy()
     context["keywords"] = ", ".join(context["keywords"])
 
     return render(
@@ -39,7 +39,7 @@ def HTML_common_elements(request):
 
 def HTML_lists(request):
     '''Return the HTML lists page'''
-    context = HTML_SEO["lists"].copy()
+    context = html_SEO["lists"].copy()
     context["keywords"] = ", ".join(context["keywords"])
 
     return render(
@@ -51,7 +51,7 @@ def HTML_lists(request):
 
 def HTML_tables(request):
     '''Return the HTML tables page'''
-    context = HTML_SEO["tables"].copy()
+    context = html_SEO["tables"].copy()
     context["keywords"] = ", ".join(context["keywords"])
 
     return render(
@@ -63,7 +63,7 @@ def HTML_tables(request):
 
 def HTML_forms(request):
     '''Return the HTML forms page'''
-    context = HTML_SEO["forms"].copy()
+    context = html_SEO["forms"].copy()
     context["keywords"] = ", ".join(context["keywords"])
 
     return render(
@@ -75,7 +75,7 @@ def HTML_forms(request):
 
 def HTML_links(request):
     '''Return the HTML links page'''
-    context = HTML_SEO["links"].copy()
+    context = html_SEO["links"].copy()
     context["keywords"] = ", ".join(context["keywords"])
 
     return render(
@@ -87,7 +87,7 @@ def HTML_links(request):
 
 def HTML_media(request):
     '''Return the HTML media page'''
-    context = HTML_SEO["media"].copy()
+    context = html_SEO["media"].copy()
     context["keywords"] = ", ".join(context["keywords"])
 
     return render(
@@ -99,7 +99,7 @@ def HTML_media(request):
 
 def HTML_buttons(request):
     '''Return the HTML buttons page'''
-    context = HTML_SEO["buttons"].copy()
+    context = html_SEO["buttons"].copy()
     context["keywords"] = ", ".join(context["keywords"])
 
     return render(
@@ -111,7 +111,7 @@ def HTML_buttons(request):
 
 def HTML_semantic(request):
     '''Return the HTML semantics page'''
-    context = HTML_SEO["semantic-html"].copy()
+    context = html_SEO["semantic-html"].copy()
     context["keywords"] = ", ".join(context["keywords"])
 
     return render(
@@ -123,7 +123,7 @@ def HTML_semantic(request):
 
 def HTML_accessibility(request):
     '''Return the HTML accessibility page'''
-    context = HTML_SEO["html-accessibility-validation"].copy()
+    context = html_SEO["html-accessibility-validation"].copy()
     context["keywords"] = ", ".join(context["keywords"])
 
     return render(
@@ -135,7 +135,7 @@ def HTML_accessibility(request):
 
 def HTML_example(request):
     '''Return the HTML example page'''
-    context = HTML_SEO["html-example"].copy()
+    context = html_SEO["html-example"].copy()
     context["keywords"] = ", ".join(context["keywords"])
 
     return render(

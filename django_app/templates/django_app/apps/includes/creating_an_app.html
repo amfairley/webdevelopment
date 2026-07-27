@@ -14,7 +14,7 @@
     </p>
     {% include 'django_app/apps/includes/code_snippets/startapp.html' %}
     <p>
-        This will create a folder in your route directory named app_name. 
+        This will create a folder in your root directory named app_name. 
     </p>
     <p>
         Go to settings.py and add your app name to the list of
@@ -33,7 +33,7 @@
     <p>
         For apps with templates associated with them (which will be most apps), go ahead and create a folder inside 
         this app folder named 'templates' and another folder inside this with the same name as the app to hold your 
-        HTML files. An example route would be app_name/templates/app_name/index.html. This is so that when Django looks 
+        HTML files. An example directory structure would be app_name/templates/app_name/index.html. This is so that when Django looks 
         for template names, it won't use a template with the same name from another app. We generally want a new 
         template for each part of CRUD so for example there may be multiple delete.html files across your project. To 
         render templates in your app, see the section on 
@@ -63,7 +63,7 @@
     </p>
     {% include 'django_app/apps/includes/code_snippets/app_urls.html' %}
     <p>
-        In your app named HTML would have a urls.py file with:
+        In your app named HTML you would have a urls.py file with:
     </p>
     {% include 'django_app/apps/includes/code_snippets/app_level_urls.html' %}
     <p>

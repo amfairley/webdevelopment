@@ -11,7 +11,7 @@
 {% block text_content %}
     <p>
         When something goes wrong on your site such as a missing page, a server error, or a permission problem, you 
-        will want to display error page that keep your site's styling and are on brand for your webapp. You can easily 
+        will want to display error pages that keep your site's styling and are on brand for your webapp. You can easily 
         create custom templates for common HTTP error codes in Django.
     </p>
     <p>
@@ -25,11 +25,16 @@
     </ul>
     <p>
         These don't require views or URLs and Django will serve them automatically when those errors occur. Therefore, 
-        you should create your HTML files here and name then using the names given above.
+        you should create your HTML files here and name them using the names given above.
     </p>
     <p>
-        Testing them is not possible in development so your site will need to be deployed in order to show the error 
-        pages you have created when that error is caused.
+        By default, Django does not display custom error templates while 
+        <code class="written-code">DEBUG=True</code>.
+        To test them locally, set 
+        <code class="written-code">DEBUG=False</code>
+        and configure 
+        <code class="written-code">ALLOWED_HOSTS</code>,
+        or test them once deployed.
     </p>
     <p>
         Note that due to the location of the error pages, there are no associated views.py files so if you need to load 

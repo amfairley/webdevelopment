@@ -1,4 +1,4 @@
-HTML_SEO = {
+html_SEO = {
     "home": {
         "page_title": "Learn HTML: Elements, Attributes, Nesting, IDs, Classes and DOCTYPE",
         "page_description": "Learn HTML fundamentals including elements, nesting, attributes, IDs, classes, comments and the HTML5 DOCTYPE with practical examples for building webpages.",

@@ -1,11 +1,12 @@
 from django.shortcuts import render
 from django.conf import settings
-
+from .seo import javascript_SEO
 
 def JavaScript_home(request):
     '''Return the JavaScript homepage'''
-    context = {
-    }
+    context = javascript_SEO["home"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'javascript_app/home/home.html',
@@ -15,8 +16,9 @@ def JavaScript_home(request):
 
 def JavaScript_variables(request):
     '''Return the JavaScript variable page'''
-    context = {
-    }
+    context = javascript_SEO["variables"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'javascript_app/variables/variables.html',
@@ -26,8 +28,9 @@ def JavaScript_variables(request):
 
 def JavaScript_scope(request):
     '''Return the JavaScript scope page'''
-    context = {
-    }
+    context = javascript_SEO["scope"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'javascript_app/scope/scope.html',
@@ -37,8 +40,9 @@ def JavaScript_scope(request):
 
 def JavaScript_data_types(request):
     '''Return the JavaScript data types page'''
-    context = {
-    }
+    context = javascript_SEO["data-types"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'javascript_app/data_types/data_types.html',
@@ -48,8 +52,9 @@ def JavaScript_data_types(request):
 
 def JavaScript_math(request):
     '''Return the JavaScript math page'''
-    context = {
-    }
+    context = javascript_SEO["math"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'javascript_app/math/math.html',
@@ -59,8 +64,9 @@ def JavaScript_math(request):
 
 def JavaScript_arrays(request):
     '''Return the JavaScript arrays page'''
-    context = {
-    }
+    context = javascript_SEO["arrays"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'javascript_app/arrays/arrays.html',
@@ -70,8 +76,9 @@ def JavaScript_arrays(request):
 
 def JavaScript_sets(request):
     '''Return the JavaScript sets page'''
-    context = {
-    }
+    context = javascript_SEO["sets"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'javascript_app/sets/sets.html',
@@ -81,8 +88,9 @@ def JavaScript_sets(request):
 
 def JavaScript_objects(request):
     '''Return the JavaScript objects page'''
-    context = {
-    }
+    context = javascript_SEO["objects"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'javascript_app/objects/objects.html',
@@ -92,8 +100,9 @@ def JavaScript_objects(request):
 
 def JavaScript_console_commands(request):
     '''Return the JavaScript console commands page'''
-    context = {
-    }
+    context = javascript_SEO["console-commands"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'javascript_app/console_commands/console_commands.html',
@@ -103,8 +112,9 @@ def JavaScript_console_commands(request):
 
 def JavaScript_functions(request):
     '''Return the JavaScript functions page'''
-    context = {
-    }
+    context = javascript_SEO["functions"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'javascript_app/functions/functions.html',
@@ -114,8 +124,9 @@ def JavaScript_functions(request):
 
 def JavaScript_conditional_statements(request):
     '''Return the JavaScript conditional statements page'''
-    context = {
-    }
+    context = javascript_SEO["conditional-statements"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'javascript_app/conditional_statements/conditional_statements.html',
@@ -125,8 +136,9 @@ def JavaScript_conditional_statements(request):
 
 def JavaScript_for_loops(request):
     '''Return the JavaScript for loops page'''
-    context = {
-    }
+    context = javascript_SEO["for-loops"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'javascript_app/for_loops/for_loops.html',
@@ -136,8 +148,9 @@ def JavaScript_for_loops(request):
 
 def JavaScript_while_loops(request):
     '''Return the JavaScript while loops page'''
-    context = {
-    }
+    context = javascript_SEO["while-loops"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'javascript_app/while_loops/while_loops.html',
@@ -147,8 +160,9 @@ def JavaScript_while_loops(request):
 
 def JavaScript_try(request):
     '''Return the JavaScript try page'''
-    context = {
-    }
+    context = javascript_SEO["try"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'javascript_app/try/try.html',
@@ -158,8 +172,9 @@ def JavaScript_try(request):
 
 def JavaScript_nested_loops(request):
     '''Return the JavaScript nested loops page'''
-    context = {
-    }
+    context = javascript_SEO["nested-loops"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'javascript_app/nested_loops/nested_loops.html',
@@ -169,8 +184,9 @@ def JavaScript_nested_loops(request):
 
 def JavaScript_the_dom(request):
     '''Return the JavaScript dom page'''
-    context = {
-    }
+    context = javascript_SEO["the-dom"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'javascript_app/the_dom/the_dom.html',
@@ -180,8 +196,9 @@ def JavaScript_the_dom(request):
 
 def JavaScript_targeting_the_dom(request):
     '''Return the JavaScript targeting the dom page'''
-    context = {
-    }
+    context = javascript_SEO["targeting-the-dom"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'javascript_app/targeting_the_dom/targeting_the_dom.html',
@@ -191,8 +208,9 @@ def JavaScript_targeting_the_dom(request):
 
 def JavaScript_manipulating_the_dom(request):
     '''Return the JavaScript manipulating the dom page'''
-    context = {
-    }
+    context = javascript_SEO["manipulating-the-dom"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'javascript_app/manipulating_the_dom/manipulating_the_dom.html',
@@ -202,8 +220,9 @@ def JavaScript_manipulating_the_dom(request):
 
 def JavaScript_events(request):
     '''Return the JavaScript events page'''
-    context = {
-    }
+    context = javascript_SEO["events"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'javascript_app/events/events.html',
@@ -213,8 +232,9 @@ def JavaScript_events(request):
 
 def JavaScript_jquery(request):
     '''Return the JavaScript jquery page'''
-    context = {
-    }
+    context = javascript_SEO["jquery"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'javascript_app/jquery/jquery.html',
@@ -224,8 +244,9 @@ def JavaScript_jquery(request):
 
 def JavaScript_debugging(request):
     '''Return the JavaScript debugging page'''
-    context = {
-    }
+    context = javascript_SEO["debugging"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'javascript_app/debugging/debugging.html',
@@ -235,8 +256,9 @@ def JavaScript_debugging(request):
 
 def JavaScript_validation(request):
     '''Return the JavaScript validation page'''
-    context = {
-    }
+    context = javascript_SEO["validation"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'javascript_app/validation/validation.html',
@@ -246,8 +268,9 @@ def JavaScript_validation(request):
 
 def JavaScript_emailjs(request):
     '''Return the JavaScript EmailJs page'''
-    context = {
-    }
+    context = javascript_SEO["emailjs"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'javascript_app/emailjs/emailjs.html',

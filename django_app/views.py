@@ -1,11 +1,13 @@
 from django.shortcuts import render
 from django.conf import settings
+from .seo import django_SEO
 
 
 def django_home(request):
     '''Return the Django homepage'''
-    context = {
-    }
+    context = django_SEO["home"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'django_app/home/home.html',
@@ -15,8 +17,9 @@ def django_home(request):
 
 def django_getting_started_with_django(request):
     '''Return the getting started with Django page'''
-    context = {
-    }
+    context = django_SEO["getting-started-with-django"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'django_app/getting_started_with_django/getting_started_with_django.html',
@@ -26,8 +29,9 @@ def django_getting_started_with_django(request):
 
 def django_admin(request):
     '''Return the admin page'''
-    context = {
-    }
+    context = django_SEO["admin"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'django_app/admin/admin.html',
@@ -37,8 +41,9 @@ def django_admin(request):
 
 def django_settings(request):
     '''Return the settings page'''
-    context = {
-    }
+    context = django_SEO["settings"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'django_app/settings/settings.html',
@@ -48,8 +53,9 @@ def django_settings(request):
 
 def django_urls(request):
     '''Return the urls page'''
-    context = {
-    }
+    context = django_SEO["urls"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'django_app/urls/urls.html',
@@ -59,8 +65,9 @@ def django_urls(request):
 
 def django_apps(request):
     '''Return the apps page'''
-    context = {
-    }
+    context = django_SEO["apps"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'django_app/apps/apps.html',
@@ -70,8 +77,9 @@ def django_apps(request):
 
 def django_templates(request):
     '''Return the templates page'''
-    context = {
-    }
+    context = django_SEO["templates"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'django_app/templates/templates.html',
@@ -81,8 +89,9 @@ def django_templates(request):
 
 def django_views(request):
     '''Return the views page'''
-    context = {
-    }
+    context = django_SEO["views"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'django_app/views/views.html',
@@ -92,8 +101,9 @@ def django_views(request):
 
 def django_models(request):
     '''Return the models page'''
-    context = {
-    }
+    context = django_SEO["models"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'django_app/models/models.html',
@@ -103,8 +113,9 @@ def django_models(request):
 
 def django_forms(request):
     '''Return the forms page'''
-    context = {
-    }
+    context = django_SEO["forms"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'django_app/forms/forms.html',
@@ -114,8 +125,9 @@ def django_forms(request):
 
 def django_templating_language(request):
     '''Return the templating language page'''
-    context = {
-    }
+    context = django_SEO["templating-language"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'django_app/templating_language/templating_language.html',
@@ -125,8 +137,9 @@ def django_templating_language(request):
 
 def django_error_pages(request):
     '''Return the error pages page'''
-    context = {
-    }
+    context = django_SEO["error-pages"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'django_app/error_pages/error_pages.html',
@@ -136,8 +149,9 @@ def django_error_pages(request):
 
 def django_crud(request):
     '''Return the crud page'''
-    context = {
-    }
+    context = django_SEO["crud"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'django_app/crud/crud.html',
@@ -147,8 +161,9 @@ def django_crud(request):
 
 def django_messages(request):
     '''Return the messages page'''
-    context = {
-    }
+    context = django_SEO["messages"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'django_app/messages/messages.html',
@@ -158,8 +173,9 @@ def django_messages(request):
 
 def django_static(request):
     '''Return the static page'''
-    context = {
-    }
+    context = django_SEO["static"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'django_app/static/static.html',
@@ -169,8 +185,9 @@ def django_static(request):
 
 def django_testing(request):
     '''Return the testing page'''
-    context = {
-    }
+    context = django_SEO["testing"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'django_app/testing/testing.html',
@@ -180,8 +197,9 @@ def django_testing(request):
 
 def django_allauth(request):
     '''Return the allauth page'''
-    context = {
-    }
+    context = django_SEO["allauth"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'django_app/allauth/allauth.html',
@@ -191,8 +209,9 @@ def django_allauth(request):
 
 def django_search(request):
     '''Return the search page'''
-    context = {
-    }
+    context = django_SEO["search"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'django_app/search/search.html',
@@ -202,8 +221,9 @@ def django_search(request):
 
 def django_languages(request):
     '''Return the languages page'''
-    context = {
-    }
+    context = django_SEO["languages"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'django_app/languages/languages.html',
@@ -213,8 +233,9 @@ def django_languages(request):
 
 def django_envpy(request):
     '''Return the env.py page'''
-    context = {
-    }
+    context = django_SEO["envpy"].copy()
+    context["keywords"] = ", ".join(context["keywords"])
+
     return render(
         request,
         'django_app/envpy/envpy.html',

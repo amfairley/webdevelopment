@@ -12,7 +12,7 @@
   &lt;div class="messages"&gt;
     &#123;% for message in messages %&#125;
       &lt;div class="alert 
-        &#123;% if message.tags %&#125;alert-&#125;&#125; message.tags &#125;&#125;&#123;% endif %&#125;"&gt;
+        &#123;% if message.tags %&#125;alert-&#123;&#123; message.tags &#125;&#125;&#123;% endif %&#125;"&gt;
         &#123;&#123; message &#125;&#125;
       &lt;/div&gt;
     &#123;% endfor %&#125;

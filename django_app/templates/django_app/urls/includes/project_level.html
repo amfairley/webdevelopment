@@ -16,12 +16,12 @@
     {% include 'django_app/urls/includes/code_snippets/project_level_urls.html' %}
     <p>
         The line 
-        <code class="written-code">path('HTML/', include(app_name.urls'))</code>
+        <code class="written-code">path('app_name/', include('app_name.urls'))</code>
         tells Django that "For any URL that starts with /app_name/, check app_name/urls.py for further routing." This 
         allows you to keep your build modular by letting each app manage its own URL patterns.
     </p>
     <p>
-        It is important that the first parameter is given an name ending with a forward slash. This will appear in the 
+        It is important that the first parameter is given a name ending with a forward slash. This will appear in the 
         URL and giving it a '/' allows subsequent child pages to be amended easily.
     </p>
     <p>

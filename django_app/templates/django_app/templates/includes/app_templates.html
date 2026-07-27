@@ -17,7 +17,7 @@
     <p>
         This is done by defining a function typically named the same as the template you wish to direct to, talking 
         request as an argument. Inside this function you want to return render (which you will need to import from 
-        django.shortcuts and pass it arguments of request and the string of the temple it the form of 
+        django.shortcuts and pass it arguments of request and the string of the template it the form of 
         'app_name/file_name.html'). The reason you do not need to define 'app_name/templates/app_name/file_name.html' 
         is because it is relative to the template search paths Django uses, not the actual file system path and in the 
         TEMPLATES variable in settings.py we set 'APP_DIRS' to True letting Django know to look for templates inside 
