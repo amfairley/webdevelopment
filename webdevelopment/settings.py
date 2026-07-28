@@ -33,6 +33,8 @@ else:
     DEBUG = False
 
 ALLOWED_HOSTS = [
+    "webdevgrad.com",
+    "www.webdevgrad.com",
     'localhost',
     '127.0.0.1',
     'webdevgrad-3277133ed051.herokuapp.com'
