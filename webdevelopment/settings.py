@@ -70,7 +70,6 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
-    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -176,3 +175,13 @@ ALGOLIA_APP_ID = os.getenv('ALGOLIA_APP_ID')
 ALGOLIA_SEARCH_KEY = os.getenv('ALGOLIA_SEARCH_KEY')
 ALGOLIA_WRITE_KEY = os.getenv('ALGOLIA_WRITE_KEY')
 
+# Security
+SECURE_SSL_REDIRECT = True
+
+SESSION_COOKIE_SECURE = True
+
+CSRF_COOKIE_SECURE = True
+
+SECURE_CONTENT_TYPE_NOSNIFF = True
+
+X_FRAME_OPTIONS = "DENY"
