@@ -134,6 +134,12 @@ async def run():
 
                 element_id = f"{dir_slug}-{slugify(title)}"
 
+                # Correct element_ids replacing app folder names with correct ID names
+                element_id = element_id.replace("django-app", "Django")
+                element_id = element_id.replace("flask-app", "Flask")
+                element_id = element_id.replace("javascript-app", "JavaScript")
+                element_id = element_id.replace("python-app", "Python")
+
                 # Update with website name 
                 url_local = f"http://127.0.0.1:8000/{relative_url}#{element_id}"
                 url_heroku = f"https://webdevgrad-3277133ed051.herokuapp.com/{relative_url}#{element_id}"
@@ -152,9 +158,16 @@ async def run():
 
                 element_id = f"{dir_slug}-{slugify(title)}"
 
+                # Correct element_ids replacing app folder names with correct ID names
+                element_id = element_id.replace("django-app", "Django")
+                element_id = element_id.replace("flask-app", "Flask")
+                element_id = element_id.replace("javascript-app", "JavaScript")
+                element_id = element_id.replace("python-app", "Python")
+
                 # Update with website name 
                 url_local = f"http://127.0.0.1:8000/{relative_url}#{element_id}"
                 url_heroku = f"https://webdevgrad-3277133ed051.herokuapp.com/{relative_url}#{element_id}"
+                url_deployed = f"https://www.webdevgrad.com/{relative_url}#{element_id}"
 
             else:
                 relative_url = relative_dir.as_posix().replace("_", "-")
@@ -169,6 +182,7 @@ async def run():
 
                 url_local = f"http://127.0.0.1:8000/{relative_url}"
                 url_heroku = f"https://webdevgrad-3277133ed051.herokuapp.com/{relative_url}"
+                url_deployed = f"https://www.webdevgrad.com/{relative_url}"
 
             section = "Other"  # default
             for templates_path in templates_dirs:
@@ -254,14 +268,24 @@ async def run():
             # Update Seo to SEO
             pretty_title = pretty_title.replace("Seo", "SEO")
             # Update url from x-app to X
-            url_local = url_local.replace("javascript-app", "JavaScript")
-            url_heroku = url_heroku.replace("javascript-app", "JavaScript")
-            url_local = url_local.replace("python-app", "Python")
-            url_heroku = url_heroku.replace("python-app", "Python")
-            url_local = url_local.replace("flask-app", "Flask")
-            url_heroku = url_heroku.replace("flask-app", "Flask")
-            url_local = url_local.replace("django-app", "Django")
-            url_heroku = url_heroku.replace("django-app", "Django")
+            url_local = url_local.replace("/javascript-app/", "/javascript/")
+            url_heroku = url_heroku.replace("/javascript-app/", "/javascript/")
+            url_deployed = url_deployed.replace("/javascript-app/", "/javascript/")
+            url_local = url_local.replace("python-app", "python")
+            url_heroku = url_heroku.replace("python-app", "python")
+            url_deployed = url_deployed.replace("python-app", "python")
+            url_local = url_local.replace("flask-app", "flask")
+            url_heroku = url_heroku.replace("flask-app", "flask")
+            url_deployed = url_deployed.replace("flask-app", "flask")
+            url_local = url_local.replace("django-app", "django")
+            url_heroku = url_heroku.replace("django-app", "django")
+            url_deployed = url_deployed.replace("django-app", "django")
+            url_local = url_local.replace("django-app", "django")
+            url_heroku = url_heroku.replace("django-app", "django")
+            url_deployed = url_deployed.replace("django-app", "django")
+            url_local = url_local.replace("/CSS/", "/css/")
+            url_heroku = url_heroku.replace("/CSS/", "/css/")
+            url_deployed = url_deployed.replace("/CSS/", "/css/")
 
             # Add in extra keywords so that HTML returns HTML home
             extra_keywords = []
@@ -281,6 +305,7 @@ async def run():
                     "content": paragraphs,
                     "urlLocal": url_local,
                     "urlHeroku": url_heroku,
+                    "urlDeployed": url_deployed,
                     "rankPriority": rank_priority,
                     "keywords": extra_keywords,
                 })
@@ -292,6 +317,7 @@ async def run():
                     heading_element_id = h["id"]
                     heading_url_local = f"{url_local.split('#')[0]}#{heading_element_id}"
                     heading_url_heroku = f"{url_heroku.split('#')[0]}#{heading_element_id}"
+                    heading_url_deployed = f"{url_deployed.split('#')[0]}#{heading_element_id}"
 
                     records.append({
                         "objectID": object_id,
@@ -304,6 +330,7 @@ async def run():
                         "content": "",
                         "urlLocal": heading_url_local,
                         "urlHeroku": heading_url_heroku,
+                        "urlDeployed": heading_url_deployed,
                         "rankPriority": 2,
                         "keywords": [section],
                     })
