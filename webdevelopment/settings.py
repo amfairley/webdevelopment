@@ -67,6 +67,8 @@ INSTALLED_APPS = [
     'django_app',
     'deployment',
     'examples',
+    # Sitemap
+    'django.contrib.sitemaps',
 ]
 
 MIDDLEWARE = [
@@ -178,7 +180,7 @@ ALGOLIA_SEARCH_KEY = os.getenv('ALGOLIA_SEARCH_KEY')
 ALGOLIA_WRITE_KEY = os.getenv('ALGOLIA_WRITE_KEY')
 
 # Security
-SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False
 
 SESSION_COOKIE_SECURE = True
 
