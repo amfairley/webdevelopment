@@ -137,6 +137,7 @@ async def run():
                 # Update with website name 
                 url_local = f"http://127.0.0.1:8000/{relative_url}#{element_id}"
                 url_heroku = f"https://webdevgrad-3277133ed051.herokuapp.com/{relative_url}#{element_id}"
+                url_deployed = f"https://www.webdevgrad.com/{relative_url}#{element_id}"
 
             elif relative_dir.name == "includes":
                 relative_dir = relative_dir.parent

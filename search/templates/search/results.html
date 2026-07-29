@@ -13,8 +13,8 @@
     <section class="search-result-block">
     {% if results %}
         {% for hit in results %}
-            <!-- Change hit.urlLocal / urlHeroku -->
-            <a class="result-link" href="{{ hit.urlHeroku }}">
+            <!-- Change hit.urlLocal / urlHeroku / urlDeployed -->
+            <a class="result-link" href="{{ hit.urlDeployed }}">
                 <div class="result-container row">
                     <!--Page title-->
                     <div class="col-6">
